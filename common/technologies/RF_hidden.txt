@@ -1,0 +1,106 @@
+
+technologies = {
+
+
+	camel_corps_tech = {
+		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech camel_corps_tech"}
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: camel_corps_tech_effect
+		cavalry = {
+			desert = {
+				attack = 0.15
+				defence = 0.05
+				movement = 0.03
+			}
+			
+		}
+		
+	}
+	
+
+	tech_ski_infantry = {
+		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech tech_ski_infantry"}
+
+		research_cost = 1
+
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these		
+		#Change the custom tooltip too: tech_ski_infantry_effect
+		
+		infantry = {
+			hills = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	prussian_space_marines_jungle = {
+
+        research_cost = 2
+        allow = {
+            always = no
+        }
+        category_all_infantry = {
+            jungle = {
+				attack = 0.15
+				movement = 0.05
+			}
+            river = {
+				attack = 0.15
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.15
+				movement = 0.05
+			}
+            marsh = {
+				attack = 0.15
+				movement = 0.05
+			}
+        }
+    }
+
+	improved_field_hospitals = {
+		on_research_complete = { log = "[GetDateText]: [Root.GetName]: add tech improved_field_hospitals"}
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: improved_field_hospitals_effect
+		field_hospital = {
+			casualty_trickleback = 0.20
+			experience_loss_factor = -0.10
+		}
+	}
+
+
+}

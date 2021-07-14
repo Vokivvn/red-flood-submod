@@ -1,0 +1,655 @@
+﻿#########################
+#	Transbaijkal - Baba	#
+#########################
+
+add_namespace = mo2
+
+country_event = { #The Mongolia Battle Royale
+	id = mo2.1
+	title = mo2.1.t
+	desc = mo2.1.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.1.a
+		ai_chance = { factor = 100 }
+		add_state_claim = 330
+		add_state_claim = 962
+	}
+}
+
+country_event = { #Church Support
+	id = mo2.2
+	title = mo2.2.t
+	desc = mo2.2.d
+	picture = "GFX_church"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.2.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #Minorities
+	id = mo2.3
+	title = mo2.3.t
+	desc = mo2.3.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.3.a
+		ai_chance = { factor = 50 }
+		country_event = { id = mo2.31 }
+	}
+	option = {
+		name = mo2.3.b
+		ai_chance = { factor = 50 }
+		country_event = { id = mo2.4 }
+	}
+}
+
+country_event = { #Minorities Good
+	id = mo2.31
+	title = mo2.31.t
+	desc = mo2.31.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.31.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = MO2_minorities_good
+			days = 730
+		}	
+	}
+}
+
+country_event = { #Minorities Bad
+	id = mo2.4
+	title = mo2.4.t
+	desc = mo2.4.d
+	picture = "GFX_jap_camp"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.4.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = MO2_minorities_bad
+			days = 730
+		}
+	}
+}
+
+country_event = { #Language Reform
+	id = mo2.5
+	title = mo2.5.t
+	desc = mo2.5.d
+	picture = "GFX_CHI_education"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.5.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #Anarchy starting
+	id = mo2.6
+	title = mo2.6.t
+	desc = mo2.6.d
+	picture = "TAI_the_chaos"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.6.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.05
+		country_event = {
+			id = mo2.7 days = 14
+		}
+	}
+}
+
+country_event = { #Anarchy reigned in
+	id = mo2.7
+	title = mo2.7.t
+	desc = mo2.7.d
+	picture = "GFX_militia_training"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.7.a
+		ai_chance = { factor = 100 }
+		swap_ideas = {
+			remove_idea = MO2_wild_far_east
+			add_idea = MO2_wild_far_east2
+		}
+	}
+}
+
+country_event = { #Stability restored
+	id = mo2.8
+	title = mo2.8.t
+	desc = mo2.8.d
+	picture = "MO2_army_event"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.8.a
+		ai_chance = { factor = 100 }
+		swap_ideas = {
+			remove_idea = MO2_wild_far_east2
+			add_idea = MO2_wild_far_east3
+		}
+	}
+}
+
+country_event = { #The Trial
+	id = mo2.9
+	title = mo2.9.t
+	desc = mo2.9.d
+	picture = "MO2_the_trial"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.9.a
+		ai_chance = { factor = 100 }
+		country_event = { id = mo2.91 }
+	}
+	option = {
+		name = mo2.9.b
+		ai_chance = { factor = 0 }
+		country_event = { id = mo2.92 }
+	}
+}
+country_event = { #The Trial pt 2a #Semyonov dies
+	id = mo2.91
+	title = mo2.91.t
+	desc = mo2.91.d
+	picture = "GFX_coup"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.91.a
+		ai_chance = { factor = 100 }
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+	}
+}
+country_event = { #The Trial pt 2b #Semyonov imprisoned
+	id = mo2.92
+	title = mo2.92.t
+	desc = mo2.92.d
+	picture = "GFX_officers"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.92.a
+		ai_chance = { factor = 100 }
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = { #Talks with Harbin
+	id = mo2.10
+	title = mo2.10.t
+	desc = mo2.10.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Add 1 infra and 1 civ to Chita
+		name = mo2.10.a
+		ai_chance = { factor = 100 }
+		563 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		} 
+		
+	}
+	option = { #Add 1 infra and 1 mil to Chita
+		name = mo2.10.b
+		ai_chance = { factor = 0 }
+		563 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		} 
+	}
+}
+
+country_event = { #Elections
+	id = mo2.11
+	title = mo2.11.t
+	desc = mo2.11.d
+	picture = "GFX_democracy_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.11.a
+		ai_chance = { factor = 100 }
+		country_event = { id = mo2.12 }
+		
+	}
+	option = {
+		name = mo2.11.b
+		ai_chance = { factor = 0 }
+		country_event = { id = mo2.13 }
+		
+	}
+}
+
+country_event = { #Taskin Reigns
+	id = mo2.12
+	title = mo2.12.t
+	desc = mo2.12.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.12.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+	}
+}
+
+country_event = { #Sorokin's cons win
+	id = mo2.13
+	title = mo2.13.t
+	desc = mo2.13.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.13.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+	}
+}
+
+country_event = { #New Duma
+	id = mo2.14
+	title = mo2.14.t
+	desc = mo2.14.d
+	picture = "GFX_democracy_2"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.14.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.5
+		}
+	}
+	option = {
+		name = mo2.14.b
+		ai_chance = { factor = 0 }
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.5
+		}
+	}
+}
+
+country_event = { #Cossack Republic
+	id = mo2.15
+	title = mo2.15.t
+	desc = mo2.15.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.15.a
+		ai_chance = { factor = 100 }
+		set_cosmetic_tag = "MO2_swiss_cossacks"
+	}
+}
+
+country_event = { #Far-East Republic
+	id = mo2.16
+	title = mo2.16.t
+	desc = mo2.16.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.16.a
+		ai_chance = { factor = 100 }
+		set_cosmetic_tag = "MO2_republic_far_east"
+	}
+}
+
+country_event = { #Coup Plan
+	id = mo2.17
+	title = mo2.17.t
+	desc = mo2.17.d
+	picture = "GFX_infiltration"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.17.a
+		ai_chance = { factor = 100 }
+		ZHR = {
+			country_event = { id = mo2.171 }
+		}
+	}
+}
+country_event = { #Coup Plan
+	id = mo2.171
+	title = mo2.171.t
+	desc = mo2.171.d
+	picture = "GFX_infiltration"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.171.a
+		ai_chance = { factor = 25 }
+		MO2 = {
+			country_event = { id = mo2.18 }
+		}
+	}
+	option = {
+		name = mo2.171.b
+		ai_chance = { factor = 75 }
+		MO2 = {
+			country_event = { id = mo2.19 }
+		}
+	}
+}
+country_event = { #Fails
+	id = mo2.18
+	title = mo2.18.t
+	desc = mo2.18.d
+	picture = "GFX_civil_war_defeated"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.18.a
+		ai_chance = { factor = 100 }
+		ZHR = {
+			annex_country = {
+			target = MO2
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 964
+			MO2 = {
+				every_unit_leader = {
+					set_nationality = ZHR
+				}
+			}
+		}
+		}
+	}
+	option = {
+		name = mo2.18.b.t
+		ai_chance = { factor = 100 }
+		ZHR = {
+			create_wargoal = {
+				type = annex_everything
+				target = MO2
+			}
+		}
+	}
+}
+
+country_event = { #Succeeds
+	id = mo2.19
+	title = mo2.19.t
+	desc = mo2.19.d
+	picture = "GFX_address_the_troops"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.19.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+			target = ZHR
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			add_state_core = 978
+			add_state_core = 881
+			add_state_core = 912
+			add_state_core = 810
+			add_state_core = 714
+			add_state_core = 761
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			add_state_core = 930
+			add_state_core = 408
+			ZHR = {
+				every_unit_leader = {
+					set_nationality = MO2
+				}
+			}
+		}
+		
+	}
+}
+
+country_event = { #negotiations with harbin
+	id = mo2.20
+	title = mo2.20.t
+	desc = mo2.20.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.20.a
+		ai_chance = { factor = 100 }
+		ZHR = {
+			country_event = {
+				id = mo2.201 days = 1
+			}
+		}
+	}
+}
+country_event = { #negotiations with harbin - ZHR
+	id = mo2.201
+	title = mo2.201.t
+	desc = mo2.201.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.201.a
+		ai_chance = { factor = 100 } #no
+		MO2 = {
+			country_event = {
+				id = mo2.202 days = 1
+			}
+		}
+	}
+	option = {
+		name = mo2.201.b
+		ai_chance = { factor = 100 } #yes
+		MO2 = {
+			country_event = {
+				id = mo2.203 days = 1
+			}
+		}
+	}
+}
+country_event = { #negotiations with harbin - Fails
+	id = mo2.202
+	title = mo2.202.t
+	desc = mo2.202.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.202.a
+		ai_chance = { factor = 100 }
+		MO2 = {
+			create_wargoal = {
+				type = annex_everything
+				target = ZHR
+			}
+		}
+	}
+	
+}
+country_event = { #negotiations with harbin - Succeeds
+	id = mo2.203
+	title = mo2.203.t
+	desc = mo2.203.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.203.a
+		ai_chance = { factor = 100 }
+		annex_country = {
+			target = ZHR
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			add_state_core = 978
+			add_state_core = 881
+			add_state_core = 912
+			add_state_core = 810
+			add_state_core = 714
+			add_state_core = 761
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			add_state_core = 930
+			add_state_core = 408
+			ZHR = {
+				every_unit_leader = {
+					set_nationality = MO2
+				}
+			}
+		}
+	}
+}
+
+country_event = { #plans for zhelto
+	id = mo2.21
+	title = mo2.21.t
+	desc = mo2.21.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.21.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #imperial_pact
+	id = mo2.100
+	title = mo2.100.t
+	desc = mo2.100.d
+	picture = "GFX_the_horsemen"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.100.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+country_event = { #day_1
+	id = mo2.101
+	title = mo2.101.t
+	desc = mo2.101.d
+	picture = "GFX_MO2_intro"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.101.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+country_event = { #change?
+	id = mo2.102
+	title = mo2.102.t
+	desc = mo2.102.d
+	picture = "GFX_MO2_change"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mo2.102.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.05
+		}
+	}
+}

@@ -1,0 +1,574 @@
+focus_tree = {
+	id = MOG
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MOG
+		}
+	}
+	#Focus for Holy War against the Portuguese Man
+	focus = {
+		id = MOG_holy_war_against_the_portuguese_man
+		icon = GFX_focus_holy_war_against_portuguese_man
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_samurai_society }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			MOG = {
+				add_state_core = 1033
+				add_state_core = 500
+				add_state_core = 501
+			}
+		}
+	}
+
+	#Focus for New Dockyards and Ports
+	focus = {
+		id = MOG_new_dockyards_and_ports
+		icon = GFX_focus_new_dockyards_and_ports
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_nescessary_war }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			1033 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Nescessary War
+	focus = {
+		id = MOG_nescessary_war
+		icon = GFX_focus_nescessary_war
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_enact_emergency_measures }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BRR
+			}
+		}
+	}
+
+	#Focus for Urin Plan
+	focus = {
+		id = MOG_urin_plan
+		icon = GFX_focus_urin_plan
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_look_for_plans }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_war_support = 0.10
+		}
+	}
+
+	#Focus for Enact Emergency Measures
+	focus = {
+		id = MOG_enact_emergency_measures
+		icon = GFX_focus_enact_emergency_measures
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_urin_plan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+
+	#Focus for The Emperor's Government
+	focus = {
+		id = MOG_the_emperors_government
+		icon = GFX_focus_the_emperors_government
+		x = 18
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_ancient_traditions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Focus for Ancient Traditions
+	focus = {
+		id = MOG_ancient_traditions
+		icon = GFX_focus_ancient_traditions
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_restore_feudal_societies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_stability = 0.10
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Extensive Conscription
+	focus = {
+		id = MOG_extensive_conscription
+		icon = GFX_focus_extensive_conscription
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_shinto_societies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+	}
+
+	#Focus for Expand the Shindo Remnei
+	focus = {
+		id = MOG_expand_the_shindo_remnei
+		icon = GFX_focus_expand_shindo_remnei
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_loyalty_to_tokyo }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_shindo
+			hidden_effect = {
+				country_event = {
+					id = mog.8
+					days = 10
+				}
+				country_event = { id = mog.1 }
+			}
+		}
+	}
+
+	#Focus for Shinto Societies
+	focus = {
+		id = MOG_shinto_societies
+		icon = GFX_focus_shinto_societies
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_restore_feudal_societies }
+		search_filters = { FOCUS_FILTER_FRA_POLITICAL_VIOLENCE } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_state_shintoism
+		}
+	}
+
+	#Focus for Loyalty to Tokyo
+	focus = {
+		id = MOG_loyalty_to_tokyo
+		icon = GFX_focus_loyalty_to_tokyo
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_a_new_japan }
+		available = {
+			JAP = { exists = yes }
+		}
+		mutually_exclusive = { focus = MOG_bring_refugees_from_the_homeland }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Focus for Civic Nationalism
+	focus = {
+		id = MOG_civic_nationalism
+		icon = GFX_focus_civic_nationalism
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_expand_the_sumeragi }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 43938
+		}
+	}
+
+	#Focus for Protect Japanese First
+	focus = {
+		id = MOG_protect_japanese_first
+		icon = GFX_focus_protect_japanese_first
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_declaration_of_nescessity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_japfirst
+		}
+	}
+
+	#Focus for Expand Fishing Industries
+	focus = {
+		id = MOG_expand_fishing_industries
+		icon = GFX_focus_expand_fishing_industries
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_fortification_efforts }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Declaration of Nescessity
+	focus = {
+		id = MOG_declaration_of_nescessity
+		icon = GFX_focus_declaration_of_nescessity
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_create_consumer_goods }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_neutrality
+		}
+	}
+
+	#Focus for Create Consumer Goods
+	focus = {
+		id = MOG_create_consumer_goods
+		icon = GFX_focus_create_consumer_goods
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_bring_refugees_from_the_homeland }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_consumer
+			hidden_effect = {
+				country_event = {
+					id = mog.3
+					days = 10
+				}
+			}
+		}
+	}
+
+	#Focus for Bring Refugees from the Homeland
+	focus = {
+		id = MOG_bring_refugees_from_the_homeland
+		icon = GFX_focus_bring_refugees_from_homeland
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_a_new_japan }
+		mutually_exclusive = { focus = MOG_loyalty_to_tokyo }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			JPR = { exists = yes }
+		}
+		select_effect = {
+			country_event = {
+				id = mog.7
+				days = 370
+			}
+		}
+		completion_reward = {
+			add_ideas = MOG_immigration
+			hidden_effect = {
+				country_event = {
+					id = mog.12
+					days = 50
+				}
+			}
+		}
+	}
+
+	#Focus for New Japanese Democracy
+	focus = {
+		id = MOG_new_japanese_democracy
+		icon = GFX_focus_new_japanese_democracy
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_bring_refugees_from_the_homeland }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.1
+			}
+			add_Popularity = {
+				ideology = social_democratism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				country_event = {
+					id = mog.2
+					days = 5
+				}
+			}
+		}
+	}
+
+	#Focus for Restore Feudal Societies
+	focus = {
+		id = MOG_restore_feudal_societies
+		icon = GFX_focus_restore_feudal_societies
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_expand_the_shindo_remnei }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_feudalism
+			hidden_effect = {
+				country_event = {
+					id = mog.9
+					days = 15
+				}
+			}
+		}
+	}
+
+	#Focus for War Economy
+	focus = {
+		id = MOG_war_economy
+		icon = GFX_focus_war_economy
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_ancient_traditions }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = war_economy
+			add_war_support = -0.20
+		}
+	}
+
+	#Focus for Fortification Efforts
+	focus = {
+		id = MOG_fortification_efforts
+		icon = GFX_focus_fortification_efforts
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_new_japanese_democracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			1026 = {            
+				add_building_construction = {
+					type = bunker
+					province = 11003
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 1583
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 7636
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11008
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 12972
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Expand the Sumeragi
+	focus = {
+		id = MOG_expand_the_sumeragi
+		icon = GFX_focus_expand_the_sumeragi
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_new_japanese_democracy }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for A New Japan
+	focus = {
+		id = MOG_a_new_japan
+		icon = GFX_focus_a_new_japan
+		x = 9
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Samurai Society
+	focus = {
+		id = MOG_samurai_society
+		icon = GFX_focus_samurai_society
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_expand_the_shindo_remnei }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.25
+			add_stability = 0.20
+		}
+	}
+
+	#Focus for Look for Plans
+	focus = {
+		id = MOG_look_for_plans
+		icon = GFX_focus_look_for_plans
+		x = 9
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MOG_a_new_japan }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = MOG_preparation
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,133 @@
+﻿capital = 778
+
+oob = UPV_1936
+
+set_research_slots = 2
+
+set_convoys = 0
+
+set_country_flag = UPV_initial
+
+add_ideas = {
+UPV_naive_politics
+UPV_christian_government
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gw_artillery = 1
+}
+
+
+
+
+set_politics = {
+
+		ruling_party = social_democratism
+		last_election = "1933.10.25"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	
+	
+	set_popularities = {
+	
+	vanguard_socialism = 0
+	
+	libertarian_marxism = 0
+	
+	revolutionary_anarchism = 0
+	
+	revisionist_socialism = 10
+	
+	liberalism = 10
+	
+	conservatism = 10
+	
+	right_authoritarianism = 15
+	
+	social_democratism = 25
+	
+	despotism = 0
+	
+	reactionism = 25
+	
+	accelerationism = 5
+	
+}
+
+	set_stability = 0.6
+	set_war_support = 0.8
+
+	create_country_leader = {
+		name = "Nazi Boni"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Upper_Volta_Nazi_Boni.tga"
+		expire = "1965.1.1"
+		ideology = left_nationalism
+		traits = {
+			#pee pee poo poo
+		}
+	}
+	create_country_leader = {
+		name = "Blaise Bassoleth"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Upper_Volta_Blaise_Bassoleth.tga"
+		expire = "1965.1.1"
+		ideology = democratic_socialism
+		traits = {
+			#pee pee poo poo
+		}
+	}
+	create_country_leader = {
+		name = "Diongolo Traoré"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Upper_Volta_Diongolo_Traore.tga"
+		expire = "1965.1.1"
+		ideology = social_liberalism
+		traits = {
+			#pee pee poo poo
+		}
+	}
+	create_country_leader = {
+		name = "Joseph Conombo"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Upper_Volta_Joseph_Conombo.tga"
+		expire = "1965.1.1"
+		ideology = social_conservatism
+		traits = {
+			#pee pee poo poo
+		}
+	}
+	create_country_leader = {
+		name = "Sangoulé Lamizana"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Upper_Volta_Sangoule_Lamizana.tga"
+		expire = "1965.1.1"
+		ideology = authoritarian_democratism
+		traits = {
+			#pee pee poo poo
+		}
+	}
+create_corps_commander = {
+	name = "Sangoulé Lamizana"
+	picture = "Portrait_Upper_Volta_Sangoule_Lamizana_general.tga"
+	traits = { infantry_officer politically_connected }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+	#ON START COMPLETED FOCUSES#
+	complete_national_focus = UPV_bonifirstterm
+	complete_national_focus = UPV_edurev
+	complete_national_focus = UPV_indprojects
+	complete_national_focus = UPV_goldmines
+	complete_national_focus = UPV_miloutposts

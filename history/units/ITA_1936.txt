@@ -1,0 +1,305 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = ITA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Motorized Division"
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Tank Brigade"
+	division_names_group = ITA_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Marine Brigade"
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Elite Mountaineers"	
+	division_names_group = ITA_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+    }
+}
+units = {
+	division = {
+		division_name = "1st Infantry Division"
+		}
+		location = 9904
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2nd Infantry Division"
+		}
+		location = 819
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "3rd Infantry Division"
+		}
+		location = 10074
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "4th Infantry Division"
+		}
+		location = 4159
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "5th Infantry Division"
+		}
+		location = 11584
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "6th Infantry Division"
+		}
+		location = 9907
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "7th Infantry Division"
+		}
+		location = 6788
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "8th Infantry Division"
+		}
+		location = 3780
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "9th Infantry Division"
+		}
+		location = 11846
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "10th Infantry Division"
+		}
+		location = 1149
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "11th Infantry Division"
+		}
+		location = 11954
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "12th Infantry Division"
+		}
+		location = 5139
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "13th Infantry Division"
+		}
+		location = 2080
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "14th Infantry Division"
+		}
+		location = 12766
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "15th Infantry Division"
+		}
+		location = 12991
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1st Mountaineer Division"
+		}
+		location = 11721
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2nd Mountaineer Division"
+		}
+		location = 9738
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "3rd Mountaineer Division"
+		}
+		location = 611
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "4th Mountaineer Division"
+		}
+		location = 6661
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1st Marine Division"
+		}
+		location = 925
+		division_template = "Marine Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2nd Marine Division"
+		}
+		location = 925
+		division_template = "Marine Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1st Armoured Division"
+		}
+		location = 9904
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2nd Armoured Division"
+		}
+		location = 6606
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "3rd Armoured Division"
+		}
+		location = 11837
+		division_template = "Tank Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1st Motorized Division"
+		}
+		location = 6780
+		division_template = "Motorized Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2nd Motorized Division"
+		}
+		location = 9582
+		division_template = "Motorized Division"
+		start_experience_factor = 0.20
+	}
+}
+air_wings = {
+	2 = { 
+		CAS_equipment_1 = {
+			owner = "ITA" 
+			amount = 50
+		}
+		fighter_equipment_0 = {
+			owner = "ITA"
+			amount = 75
+		}
+		tac_bomber_equipment_0 =  {	
+			owner = "ITA" 
+			amount = 50
+		}
+	}
+	158 = { 
+		fighter_equipment_0 = {
+			owner = "ITA"
+			amount = 75
+		}
+		tac_bomber_equipment_0 =  {	
+			owner = "ITA" 
+			amount = 25
+		}
+	}
+	160 = { 
+		fighter_equipment_0 = {
+			owner = "ITA"
+			amount = 50
+		}
+		nav_bomber_equipment_1 =  {	
+			owner = "ITA" 
+			amount = 50
+		}
+	}
+}

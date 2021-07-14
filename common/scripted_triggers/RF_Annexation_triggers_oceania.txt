@@ -1,0 +1,33 @@
+#Australasia - annexation_AST_CONQ
+can_release_australasia = {
+	state = 285 #Canberra
+	ROOT = {
+		NOT = {
+			has_country_flag = AST_CONQ
+			country_exists = AST
+		}
+	}
+}
+
+#New Zealand - annexation_NZL_CONQ
+can_release_new_zealand = {
+	state = 284 #North Island
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = NZL_CONQ
+			country_exists = NZL
+		}
+	}
+}
+#Westralia - annexation_WAS_CONQ
+can_release_westralia = {
+	state = 803 #Perth
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = WAS_CONQ
+			country_exists = WAS
+		}
+	}
+}

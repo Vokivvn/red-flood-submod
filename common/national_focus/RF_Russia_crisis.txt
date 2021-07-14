@@ -1,0 +1,427 @@
+focus_tree = {
+	id = rus_crisis
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 1
+			tag = RUS
+		}
+	}
+	continuous_focus_position = { x = 5800 y = 1000 }
+	shared_focus = RUS_anewrussianarmy
+	shared_focus = RUS_transpolarflights
+	shared_focus = RUS_expandpetrogradnavalacademy
+	shared_focus = RUS_unify_empire
+
+	default = no
+
+	focus = {	
+		id = RUS_hollow_victory
+		icon = GFX_focus_RUS_hollow_victory
+
+		available = {
+			OR = {
+				RUS = {
+					exists = no
+				}
+				SRU = {
+					exists = no
+				}
+			}
+		}
+
+		x = 40
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 2
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		completion_reward = {
+			#log = "[GetDateText]: [Root.GetName]: Focus RUS_hollow_victory"
+			add_ideas = {
+				RUS_post_war_famine
+				RUS_civil_war_damage
+				RUS_revolting_peasants
+			}
+			add_stability = -0.15
+			if = {
+				limit = {
+					original_tag = SRU
+				}
+				set_capital = 219
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = RUS
+					}
+					every_state = {
+						limit = {
+							is_core_of = SRU
+						}
+						add_core_of = RUS
+					}
+				}
+				if = {
+					limit = {
+						original_tag = SRU
+					}
+					every_state = {
+						limit = {
+							is_core_of = RUS
+						}
+						add_core_of = SRU
+					}
+				}
+			}
+		}
+	}
+	focus = {	
+		id = RUS_bread_monopoly
+		icon = GFX_focus_RUS_bread_monopoly
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_hollow_victory
+		}
+		relative_position_id = RUS_hollow_victory
+		x = -3
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_bread_monopoly"
+			swap_ideas = {
+    			remove_idea = RUS_post_war_famine
+    			add_idea = RUS_post_war_famine1
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_starving_commission
+		icon = GFX_focus_RUS_starving_commission
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_bread_monopoly
+		}
+		bypass = {
+		}
+		relative_position_id = RUS_bread_monopoly
+		x = -2
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_starving_commission"
+			add_timed_idea = {
+    			idea = RUS_commission_for_starving
+    			days = 210
+			}
+		}
+	}
+	focus = {	
+		id = RUS_food_to_cities
+		icon = GFX_focus_RUS_food_to_cities
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_bread_monopoly
+		}
+		relative_position_id = RUS_bread_monopoly
+		x = 0
+		y = 1
+		cost = 4
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			#log = "[GetDateText]: [Root.GetName]: Focus RUS_food_to_cities"
+			swap_ideas = {
+    			remove_idea = RUS_civil_war_damage
+    			add_idea = RUS_civil_war_damage1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_crush_peasant_riots
+		icon = GFX_focus_RUS_crush_peasant_riots
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_bread_monopoly
+		    focus = RUS_emergency
+		}
+		relative_position_id = RUS_bread_monopoly
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_crush_peasant_riots"
+			remove_ideas = RUS_revolting_peasants
+			add_stability = -0.1
+		}
+	}	
+	focus = {	
+		id = RUS_end_famine
+		icon = GFX_focus_RUS_end_famine
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_starving_commission
+		}	
+		prerequisite = { 
+			focus = RUS_food_to_cities
+		}	
+		prerequisite = { 
+			focus = RUS_crush_peasant_riots
+		}
+		relative_position_id = RUS_food_to_cities
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			#log = "[GetDateText]: [Root.GetName]: Focus RUS_end_famine"
+			remove_ideas = RUS_post_war_famine1
+		}
+	}
+	focus = {	
+		id = RUS_industrial_reconstruction
+		icon = GFX_focus_RUS_industrial_reconstruction
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_end_famine
+		}
+		bypass = {
+		}
+		relative_position_id = RUS_end_famine
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			#log = "[GetDateText]: [Root.GetName]: Focus RUS_industrial_reconstruction"
+			remove_ideas = RUS_civil_war_damage1
+		}
+	}	
+	focus = {	
+		id = RUS_emergency
+		icon = GFX_focus_RUS_emergency
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_hollow_victory
+		}
+		relative_position_id = RUS_hollow_victory
+		x = 3
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_emergency"
+			add_stability = 0.05
+		}
+	}
+	focus = {	
+		id = RUS_crack_down_socialists
+		icon = GFX_focus_RUS_crack_down_socialists
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_emergency
+		}
+		relative_position_id = RUS_emergency
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_crack_down_socialists"
+				country_event = {
+					id = russia.101
+					days = 5
+				}
+				add_popularity = {
+					ideology = vanguard_socialism
+					popularity = -0.15
+				}
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = -0.15
+				}	
+		}
+	}
+	focus = {	
+		id = RUS_special_regulations
+		icon = GFX_focus_RUS_special_regulations
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_crack_down_socialists
+		}
+		relative_position_id = RUS_crack_down_socialists
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_special_regulations"
+			add_timed_idea = {
+    			idea = RUS_special_regulations
+    			days = 210
+			}
+		}
+	}
+	focus = {	
+		id = RUS_purge_traitors
+		icon = GFX_focus_RUS_purge_traitors
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_emergency
+		}
+		relative_position_id = RUS_emergency
+		x = 1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_purge_traitors"
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.02
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.03
+			}
+			add_manpower = -5000
+		}
+	}
+	focus = {	
+		id = RUS_oath_of_loyalty
+		icon = GFX_focus_RUS_oath_of_loyalty
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_purge_traitors
+		}
+		relative_position_id = RUS_purge_traitors
+		x = 0
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_oath_of_loyalty"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.12
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_order_restored
+		icon = GFX_focus_RUS_order_restored
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_special_regulations
+		}
+		prerequisite = { 
+		    focus = RUS_oath_of_loyalty
+		}
+		relative_position_id = RUS_oath_of_loyalty
+		x = -1
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_order_restored"
+			add_stability = 0.1
+		}
+	}
+	focus = {	
+		id = RUS_wind_changes
+		icon = GFX_focus_RUS_wind_changes
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_industrial_reconstruction
+		}
+		prerequisite = { 
+		    focus = RUS_order_restored
+		}
+		relative_position_id = RUS_order_restored
+		x = -3
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_wind_changes"
+			if = {
+				limit = {
+					original_tag = RUS
+				}
+				country_event = {
+					id = russia.11
+				}
+			}
+			else = {
+				country_event = {
+					id = russia.12
+				}
+			}
+		}
+	}
+}

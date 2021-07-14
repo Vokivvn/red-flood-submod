@@ -1,0 +1,158 @@
+guiTypes = {
+	containerWindowType = {
+        name = "steppe_factionalism_gui_window"
+        position = { x = 10 y = 10 }
+		size = { width = 493 height = 610 }
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_bg"
+		}
+
+		instantTextBoxType = {
+			name = "steppe_factionalism_title"
+			position = { x = 50 y = 16 }
+			font = "hoi_24header"
+			text = "STE_factionalism_title_text"
+			maxWidth = 400
+			maxHeight = 24
+			format = center
+		}
+
+		containerWindowType = {
+			name = "steppe_factionalism_kornilovs_division"
+			position = { x = 20 y = 55 }
+			size = { width = 360 height = 30}
+
+			#background = {
+			#	name = "Background"
+			#	quadTextureSprite = "GFX_tiled_bg"
+			#}
+
+			iconType = {
+				name = "kornilovs_division_icon"
+				spriteType = "GFX_kornilovs_division_icon"
+				position = { x = 5 y = 2 }
+				Orientation = "UPPER_LEFT"
+			}
+			#buttonType = {
+			#	name = "kornilovs_division_icon"
+			#	position = { x = 5 y = 0 }
+			#	spriteType = "GFX_kornilovs_division_icon"
+			#	pdx_tooltip = STE_open_decisions_tt_1
+			#}
+
+			instantTextBoxType = {
+				name = "kornilovs_division_text"
+				position = { x = 80 y = 0 }
+				font = "hoi_18mbs"
+				text = "STE_faction_kornilov_text"
+				maxWidth = 400
+				maxHeight = 24
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "steppe_factionalism_ukrainian_council"
+			position = { x = 20 y = 160 }
+			size = { width = 360 height = 30}
+
+			iconType = {
+				name = "ukrainian_council_icon"
+				spriteType = "GFX_ukrainian_council_icon"
+				position = { x = 5 y = 2 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "ukrainian_council_text"
+				position = { x = 80 y = 0 }
+				font = "hoi_18mbs"
+				text = "STE_ukrainian_council_text"
+				maxWidth = 400
+				maxHeight = 24
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "steppe_factionalism_alash_orda"
+			position = { x = 20 y = 264 }
+			size = { width = 360 height = 30}
+
+			iconType = {
+				name = "alash_orda_icon"
+				spriteType = "GFX_alash_orda_icon"
+				position = { x = 5 y = 2 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "alash_orda_text"
+				position = { x = 80 y = 0 }
+				font = "hoi_18mbs"
+				text = "STE_alash_orda_text"
+				maxWidth = 400
+				maxHeight = 24
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "steppe_factionalism_cossacks"
+			position = { x = 20 y = 374 }
+			size = { width = 360 height = 30}
+
+			iconType = {
+				name = "cossacks_icon"
+				spriteType = "GFX_cossacks_icon"
+				position = { x = 5 y = 2 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "cossacks_text"
+				position = { x = 80 y = 0 }
+				font = "hoi_18mbs"
+				text = "STE_cossacks_text"
+				maxWidth = 400
+				maxHeight = 24
+				format = left
+			}
+		}
+
+		containerWindowType = {
+			name = "steppe_factionalism_nomads"
+			position = { x = 20 y = 484 }
+			size = { width = 360 height = 30}
+
+			iconType = {
+				name = "nomads_icon"
+				spriteType = "GFX_nomads_icon"
+				position = { x = 5 y = 2 }
+				Orientation = "UPPER_LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "nomads_text"
+				position = { x = 80 y = 0 }
+				font = "hoi_18mbs"
+				text = "STE_nomads_text"
+				maxWidth = 400
+				maxHeight = 24
+				format = left
+			}
+		}
+
+		#instantTextBoxType = {
+		#	name = "parliament_gui_title"
+		#	position = { x = 35 y = 0 }
+		#	font = "hoi_24header"
+		#	text = "parliament_gui_title"
+		#	maxWidth = 400
+		#	maxHeight = 24
+		#	format = center
+		#}
+    }
+}

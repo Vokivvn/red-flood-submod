@@ -1,0 +1,296 @@
+### events about kavkaz ###
+
+add_namespace = kav
+
+country_event = {
+	id = kav.1
+	title = kav.1.t
+	desc = kav.1.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	    name = kav.1.a
+		ai_chance = { base = 1 }
+		set_country_flag = KAV_khleb_wins
+	}
+	option = {
+		name = kav.1.b
+		ai_chance = { base = 1 }
+		set_country_flag = KAV_maya_wins
+    }
+	option = {
+		name = kav.1.c
+		ai_chance = { base = 1 }
+		set_country_flag = KAV_tolstoy_wins
+	}
+}
+
+country_event = {
+	id = kav.2
+	title = kav.2.t
+	desc = kav.2.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.2.a
+	}
+}
+country_event = {
+	id = kav.3
+	title = kav.3.t
+	desc = kav.3.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.3.a	
+	}
+}
+country_event = {
+	id = kav.4
+	title = kav.4.t
+	desc = kav.4.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.4.a
+	}
+}
+country_event = {
+	id = kav.5
+	title = kav.5.t
+	desc = kav.5.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.5.a
+	}
+}
+country_event = {
+	id = kav.6
+	title = kav.6.t
+	desc = kav.6.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.6.a
+	}
+}
+country_event = {
+	id = kav.7
+	title = kav.7.t
+	desc = kav.7.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.7.a
+	}
+}
+country_event = {
+	id = kav.8
+	title = kav.8.t
+	desc = kav.8.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.8.a
+	}
+}
+country_event = {
+	id = kav.9
+	title = kav.9.t
+	desc = kav.9.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.9.a
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_base_strike
+		}
+	}
+	option = {
+		name = kav.9.b
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_trade_interdiction
+		}
+	}
+	option = {
+		name = kav.9.c
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_fleet_in_being
+		}
+	}
+}
+country_event = {
+	id = kav.10
+	title = kav.10.t
+	desc = kav.10.desc
+	picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.10.a
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_strategic_destruction
+		}
+	}
+	option = {
+		name = kav.10.b
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_battlefield_support
+		}
+	}
+	option = {
+		name = kav.10.c
+		ai_chance = { base = 1 }
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 3
+			category = cat_operational_integrity
+		}
+	}
+}
+country_event = {
+	id = kav.11
+	title = kav.11.t
+	desc = kav.11.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.11.a
+		ai_chance = { base = 9 }
+		add_to_faction = KAV
+	}
+	option = {
+		name = kav.11.b
+		ai_chance = { base = 1 }
+	}
+}
+country_event = {
+	id = kav.12
+	title = kav.12.t
+	desc = kav.12.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.12.a
+		ai_chance = { base = 1 }
+	}
+	option = {
+		name = kav.12.b
+		ai_chance = { base = 9 }
+		trigger = {
+			USA = {
+				is_in_faction = no
+			}
+			KAV = {
+				is_in_faction = no
+			}
+		}
+		KAV = {
+			create_faction = GLOBAL_DEFENCE_INITIATIVE
+			add_to_faction = USA
+		}
+	}
+}
+country_event = {
+	id = kav.13
+	title = kav.13.t
+	desc = kav.13.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.13.a
+		set_cosmetic_tag = KAV_state_of_time
+	}
+}
+country_event = {
+	id = kav.14
+	title = kav.14.t
+	desc = kav.14.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.14.a
+		UKR = {
+			change_tag_from = KAV
+		}
+		UKR = {
+			country_event = {
+				id = kav.15
+				days = 1
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 3
+				UKR = { has_completed_focus = ukraine_kavaz_leaders }
+			}
+		}
+	}
+	option = {
+		name = kav.14.b
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+country_event = {
+	id = kav.15
+	title = kav.15.t
+	desc = kav.15.desc
+	#picture = GFX_news_event_aid_pact
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = kav.15.a
+		annex_country = {
+		    target = KAV
+	  		transfer_troops = yes
+		}
+	}
+}

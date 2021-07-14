@@ -1,0 +1,44 @@
+﻿capital = 1024
+
+oob = "NEU_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_convoys = 10
+
+set_popularities = {
+        accelerationism = 0
+        reactionism = 53
+        despotism = 0
+        right_authoritarianism = 20
+        conservatism = 27
+        liberalism = 0
+        social_democratism = 0
+        libertarian_marxism = 0
+        vanguard_socialism = 0
+        revolutionary_anarchism = 0
+
+}
+
+set_politics = {
+	
+	ruling_party = reactionism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+create_country_leader = {
+	name = "Egon Albrecht-Lemke"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/NEU/Portrait_Egon_Albrecht_Lemke.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+	}
+}
+

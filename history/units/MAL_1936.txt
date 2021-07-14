@@ -1,0 +1,39 @@
+﻿division_template = {
+	name = "Colonial Garrison"
+	division_names_group = ENG_COL_01
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+division= {
+	     name = "Singapur Guard"
+	     location = 12299
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.3
+	     start_equipment_factor = 0.5
+    }
+division= {
+	     name = "1st Malay Infantry Division"
+	     location = 10297
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.3
+	     start_equipment_factor = 0.5
+
+    }
+division= {
+	     name = "1st Borneo Division"
+	     location = 7371
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.3
+	     start_equipment_factor = 0.5
+
+    }
+}

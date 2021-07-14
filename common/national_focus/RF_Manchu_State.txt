@@ -1,0 +1,790 @@
+focus_tree = {
+	id = MNS
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MNS
+		}
+	}
+	
+	continuous_focus_position = { x = 150 y = 4000 }
+	
+	#Focus for Up with the Eight Banners
+	focus = {
+		id = MNS_up_with_the_eight_banners
+		icon = GFX_MNS_up_with_the_eight_banners-82523
+		x = 5
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	#Focus for Army of the Manchu State
+	focus = {
+		id = MNS_army_of_the_manchu_state
+		icon = GFX_MNS_army_of_the_manchu_state-82530
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_up_with_the_eight_banners }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	#Focus for Choice of Doctrine
+	focus = {
+		id = MNS_choice_of_doctrine
+		icon = GFX_MNS_choice_of_doctrine-82531
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_army_of_the_manchu_state }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = land_doctrine }
+		}
+	}
+
+	#Focus for Old Wisdom
+	focus = {
+		id = MNS_old_wisdom
+		icon = GFX_MNS_old_wisdom-82532
+		x = 0
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_choice_of_doctrine }
+		mutually_exclusive = { focus = MNS_new_ways }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = cat_mass_assault }
+		}
+	}
+
+	#Focus for New Ways
+	focus = {
+		id = MNS_new_ways
+		icon = GFX_MNS_new_ways-82533
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_choice_of_doctrine }
+		mutually_exclusive = { focus = MNS_old_wisdom }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = cat_superior_firepower }
+		}
+	}
+
+	#Focus for Good Ol' Human Wave
+	focus = {
+		id = MNS_good_ol_human_wave
+		icon = GFX_MNS_good_ol_human_wave-82534
+		x = 0
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_old_wisdom }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 3 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Shock and Awe
+	focus = {
+		id = MNS_shock_and_awe
+		icon = GFX_MNS_shock_and_awe-82535
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_new_ways }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 4 category = artillery }
+			add_tech_bonus = { bonus = 1 uses = 4 category = air_equipment }
+		}
+	}
+
+	#Focus for Secret Weapons
+	focus = {
+		id = MNS_secret_weapons
+		icon = GFX_MNS_secret_weapons-82536
+		x = 1
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MNS_good_ol_human_wave 
+			focus = MNS_shock_and_awe 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 4 category = electronics }
+			add_tech_bonus = { bonus = 1 uses = 2 category = nuclear }
+			add_tech_bonus = { bonus = 1 uses = 2 category = jet_technology }
+		}
+	}
+
+	#Focus for Back to Harbin
+	focus = {
+		id = MNS_back_to_harbin
+		icon = GFX_MNS_back_to_harbin-82524
+		x = 5
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_up_with_the_eight_banners }
+		available = { 
+			has_full_control_of_state = 978
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_state_core = 978
+			set_capital = 978
+		}
+	}
+
+	#Focus for Who Survives the Banquet?
+	focus = {
+		id = MNS_who_survives_the_banquet
+		icon = GFX_MNS_who_survives_the_banquet-82525
+		x = 5
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_back_to_harbin }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#event for assassination - pick a leader
+			country_event = {
+				id = ZHR.28
+			}
+		}
+	}
+
+	#Focus for The Boy Who Lived
+	focus = {
+		id = MNS_the_boy_who_lived
+		icon = GFX_MNS_the_boy_who_lived-82526
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_who_survives_the_banquet }
+		mutually_exclusive = { focus = MNS_the_fifth_great_beauty }
+		available = { 
+			has_country_flag = MNS_puwei
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			create_country_leader = {
+				name = "Pu Wei"
+				desc = "POLITICS_Meyer_DESC"
+				picture = "Portrait_Pu_Wei.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy
+				traits = {
+					popular_figurehead
+				}
+			}
+		}
+	}
+
+	#Focus for The Fifth Great Beauty
+	focus = {
+		id = MNS_the_fifth_great_beauty
+		icon = GFX_MNS_the_fifth_great_beauty-82527
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_who_survives_the_banquet }
+		mutually_exclusive = { focus = MNS_the_boy_who_lived }
+		available = { 
+			has_country_flag = MNS_yoshiko	
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			create_country_leader = {
+				name = "Yoshika Kawashima"
+				desc = "POLITICS_Meyer_DESC"
+				picture = "Portrait_Yoshiko_Kawashima.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy
+				traits = {
+					dictator
+				}
+			}
+		}
+	}
+
+	#Focus for Purge the Kuomintang Shills
+	focus = {
+		id = MNS_purge_the_kuomintang_shills
+		icon = GFX_MNS_purge_the_kuomintang_shills-82528
+		x = 5
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MNS_the_fifth_great_beauty 
+			focus = MNS_the_boy_who_lived 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_popularities = {
+				social_democratism = 0
+				conservatism = 0
+				liberalism = 0
+				revisionist_socialism = 0
+				libertarian_marxism = 0
+				vanguard_socialism = 0
+			    despotism = 70
+			    reactionism = 30
+			}
+		}
+	}
+
+	#Focus for Back to Normality
+	focus = {
+		id = MNS_back_to_normality
+		icon = GFX_MNS_back_to_normality-82529
+		x = 5
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_purge_the_kuomintang_shills }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Rebuilding the Manchu State
+	focus = {
+		id = MNS_rebuilding_the_manchu_state
+		icon = GFX_MNS_rebuilding_the_manchu_state-82537
+		x = 10
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_up_with_the_eight_banners }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Expand Military Industry
+	focus = {
+		id = MNS_expand_military_industry
+		icon = GFX_MNS_expand_civilian_industry-82540
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_rebuilding_the_manchu_state }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Infrastructure Effort
+	focus = {
+		id = MNS_infrastructure_effort
+		icon = GFX_MNS_infrastructure_effort-82539
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_rebuilding_the_manchu_state }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Expand Civilian Industry
+	focus = {
+		id = MNS_expand_civilian_industry
+		icon = GFX_MNS_expand_civilian_industry-82540
+		x = 12
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_rebuilding_the_manchu_state }
+		available = { 
+			has_full_control_of_state = 978
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Nationalise the KVZhD
+	focus = {
+		id = MNS_nationalise_the_kvzhd
+		icon = GFX_MNS_nationalise_the_kvzhd-82541
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MNS_expand_civilian_industry 
+		}
+		prerequisite = { 
+			focus = MNS_infrastructure_effort 
+		}
+		prerequisite = { 
+			focus = MNS_expand_military_industry 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			978 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Abandon Outer Manchuria
+	focus = {
+		id = MNS_abandon_outer_manchuria
+		icon = GFX_MNS_abandon_outer_manchuria-82544
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_nationalise_the_kvzhd }
+		mutually_exclusive = { 
+			focus = MNS_neutral_but_united 
+		}
+		mutually_exclusive = { 
+			focus = MNS_panasian_connections 
+		}
+		available = { 
+			has_country_flag = MNS_puwei
+		}
+		bypass = { PRI = { exists = no } }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					PRI = {
+						exists = yes
+					}
+				}
+				diplomatic_relation = {
+					country = PRI
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Neutral But United
+	focus = {
+		id = MNS_neutral_but_united
+		icon = GFX_MNS_neutral_but_united-82545
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_nationalise_the_kvzhd }
+		mutually_exclusive = { 
+			focus = MNS_abandon_outer_manchuria 
+		}
+		mutually_exclusive = { 
+			focus = MNS_panasian_connections 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core PRI and GUK
+			create_wargoal = {
+				type = annex_everything
+				target = PRI
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GUK
+			}
+		}
+	}
+
+	#Focus for Pan-Asian Connections
+	focus = {
+		id = MNS_panasian_connections
+		icon = GFX_MNS_panasian_connections-82546
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MNS_nationalise_the_kvzhd }
+		mutually_exclusive = { 
+			focus = MNS_abandon_outer_manchuria 
+		}
+		mutually_exclusive = { 
+			focus = MNS_neutral_but_united 
+		}
+		available = { 
+			has_country_flag = MNS_yoshiko
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core GUK, PRI, MO2, MON
+			add_opinion_modifier = {
+				target = MAN
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = IKR
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = KCK
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = TAN
+				modifier = offered_support
+			}
+			if = {
+				limit = {
+					PRI = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PRI
+				}
+			}
+			if = {
+				limit = {
+					GUK = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GUK
+				}
+			}
+			if = {
+				limit = {
+					MO2 = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MO2
+				}
+			}
+			if = {
+				limit = {
+					MON = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MON
+				}
+			}
+		}
+	}
+
+	#Focus for Invite Japanese Scientists
+	focus = {
+		id = MNS_invite_japanese_scientists
+		icon = GFX_MNS_invite_japanese_scientists-82547
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MNS_panasian_connections 
+			focus = MNS_neutral_but_united 
+			focus = MNS_abandon_outer_manchuria 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Manchu Rule Undisputed
+	focus = {
+		id = MNS_manchu_rule_undisputed
+		icon = GFX_MNS_manchu_rule_undisputed-82549
+		x = 5
+		y = 6
+		cost = 20
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MNS_secret_weapons 
+		}
+		prerequisite = { 
+			focus = MNS_back_to_normality 
+		}
+		prerequisite = { 
+			focus = MNS_invite_japanese_scientists 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+#End of focuses 
+ }

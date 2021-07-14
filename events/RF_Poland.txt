@@ -1,0 +1,877 @@
+add_namespace = poland
+
+country_event = { #Pilsudski's absence
+	id = poland.1
+	title = poland.1.t
+	desc = poland.1.desc
+	picture = GFX_report_event_GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #The nation prays for him 
+		name = poland.1.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = poland.2
+				days = 30
+			}
+		}
+	}
+}
+country_event = { #Death of the marshal
+	id = poland.2
+	title = poland.2.t
+	desc = poland.2.desc
+	picture = GFX_report_event_POL_marshal_death
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = poland.2.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = pilsudski_dies
+		set_country_flag = pilsudski_death
+		add_political_power = -50
+		hidden_effect = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Temporary Government"
+				desc = POLITICS_TEMPORARY_GOVERNMENT_DESC
+				picture = "Portrait_Poland_Temporary_Government.tga"
+				expire = "1965.1.1"
+				ideology = national_rejuvenatism
+				traits = {
+					#
+				}
+			}
+			country_event = {
+				id = poland.3
+				days = 6
+			}
+		}
+		
+	}
+}
+country_event = { #Pilsudski's funeral
+	id = poland.3
+	title = poland.3.t
+	desc = poland.3.desc
+	picture = GFX_report_event_POL_marshal_rest
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #May he rest in peace 
+		name = poland.3.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -15
+		hidden_effect = {
+			country_event = { #A controversial grave
+				id = poland.5
+				days = 60
+			}
+		}
+	}
+}
+country_event = { #Emergency meeting
+	id = poland.4
+	title = poland.4.t
+	desc = poland.4.desc
+	picture = GFX_report_event_POL_marshal_rest
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Socdem 
+		name = poland.4.a
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = DASZYNSKI
+				}
+			}
+		}
+		set_country_flag = POL_has_social_democratism_gov
+	}
+	option = { #Accelerationist
+		name = poland.4.b
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = SZUKALSKI
+				}
+			}
+		}
+		set_country_flag = POL_has_accelerationism_gov
+	}
+	option = { #Despotic
+		name = poland.4.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 5000
+				has_game_rule = {
+					rule = POL_ai_route
+					option = ZYMIERSKI
+				}
+			}
+		}
+		set_country_flag = POL_has_right_authoritarianism_gov
+	}
+}
+country_event = { #Controversial Grave
+	id = poland.5
+	title = poland.5.t
+	desc = poland.5.desc
+	picture = GFX_report_event_POL_controversialgrave
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #That doesn't bode well. 
+		name = poland.5.a
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+country_event = { #artist_riot
+	id = poland.6
+	title = poland.6.t
+	desc = poland.6.desc
+	picture = GFX_report_event_POL_artistriot
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.6.a
+	}
+}
+country_event = { #artist riot acc
+	id = poland.7
+	title = poland.7.t
+	desc = poland.7.desc
+	picture = GFX_report_event_POL_artistriot
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.7.a
+	}
+}
+country_event = { #nationalpantheon
+	id = poland.8
+	title = poland.8.t
+	desc = poland.8.desc
+	picture = GFX_report_event_POL_nationalpantheon
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.8.a
+	}
+}
+country_event = { #dflr
+	id = poland.9
+	title = poland.9.t
+	desc = poland.9.desc
+	picture = GFX_report_event_GFX_democracy_1
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.9.a
+	}
+}
+country_event = { #augustus
+	id = poland.10
+	title = poland.10.t
+	desc = poland.10.desc
+	picture = GFX_report_event_POL_augustus
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.10.a
+	}
+}
+country_event = { #island
+	id = poland.11
+	title = poland.11.t
+	desc = poland.11.desc
+	picture = GFX_report_event_POL_islandofsages
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.11.a
+	}
+}
+country_event = { #findings
+	id = poland.12
+	title = poland.12.t
+	desc = poland.12.desc
+	picture = GFX_report_event_POL_findingsinbiala
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.12.a
+		trigger = {
+			NOT = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+	}
+	option = {
+		name = poland.12.b
+		trigger = {
+			OR = {
+				has_government = despotism
+				has_government = right_authoritarianism
+			}
+		}
+	}
+}
+country_event = { #writing reform
+	id = poland.13
+	title = poland.13.t
+	desc = poland.13.desc
+	picture = GFX_report_event_POL_writingreform
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.13.a
+	}
+}
+country_event = { #join faction
+	id = poland.14
+	title = poland.14.t
+	desc = poland.14.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.14.a
+		POL = { add_to_faction = AUS }
+		if = {
+			limit = {
+				AUS = {
+					has_war_with = YUG
+				}
+				YUG = {
+					has_government = accelerationism
+				}
+			}
+			AUS = {
+				white_peace = YUG
+			}
+		}
+		ai_chance = {
+			base = 75
+
+			modifier = {
+				factor = 0
+				AUS = {
+					is_in_faction = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = poland.14.b
+		POL = {
+			country_event = {
+				id = poland.15
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+}
+country_event = {
+	id = poland.15
+	title = poland.15.t
+	desc = poland.15.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.15.a
+		if = {
+			limit = {
+				YUG = {
+					NOT = {
+						has_government = reactionism
+					}
+				}
+			}
+			POL = {
+				give_guarantee = YUG
+			}
+		}
+	}
+}
+country_event = {
+	id = poland.16
+	title = poland.16.t
+	desc = poland.16.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+	picture = GFX_report_event_POL_dictionary
+
+	trigger = {
+		tag = POL
+		date > 1939.10.01
+		POL = {
+			has_government = accelerationism
+		}
+	}
+
+	option = {
+		name = poland.16.a
+	}
+}
+country_event = {
+	id = poland.17
+	title = poland.17.t
+	desc = poland.17.desc 
+	is_triggered_only = no
+	fire_only_once = yes
+	picture = GFX_report_event_POL_dozynki
+
+	trigger = {
+		tag = POL
+		date > 1938.09.15
+		POL = {
+			has_government = accelerationism
+		}
+	}
+
+	option = {
+		name = poland.17.a
+	}
+}
+country_event = {
+	id = poland.18
+	title = poland.18.t
+	desc = poland.18.desc 
+	picture = GFX_report_event_fra_flying_v
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.11.8
+		tag = POL
+	}
+
+	option = {
+		name = poland.18.a
+		add_ace = {
+			name = "Klaudia"
+			surname = "Ziółkowska"
+			callsign = "Zmorka"
+			type = fighter_unique
+		}
+	}
+}
+country_event = {
+	id = poland.19
+	title = poland.19.t
+	desc = poland.19.desc 
+	picture = GFX_report_event_lacinka
+	fire_only_once = yes
+
+	trigger = {
+		has_government = despotism
+		owns_state = 206
+		tag = POL
+	}
+	mean_time_to_happen = {
+	days = 50
+	}
+
+	option = {
+		name = poland.19.a
+		add_political_power = -25
+		add_stability = 0.07
+	}
+}
+country_event = { #war with lithuania
+	id = poland.100
+	title = poland.100.t
+	desc = poland.100.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #war
+		name = poland.100.a
+		POL = {
+			declare_war_on = {
+			    target = LIT
+			    type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	option = { #annex
+		name = poland.100.b
+		POL = {
+			annex_country = {
+				target = LIT
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+country_event = { #war with belarus
+	id = poland.101
+	title = poland.101.t
+	desc = poland.101.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #war
+		name = poland.101.a
+		POL = {
+			declare_war_on = {
+    			target = BLR
+    			type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = { #annex
+		name = poland.101.b
+		POL = {
+			annex_country = {
+				target = BLR
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+country_event = {
+	id = poland.50
+	title = poland.50.t
+	desc = poland.50.desc 
+	picture = GFX_report_event_POL_bunt
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.50.a
+	}
+}
+country_event = {
+	id = poland.51
+	title = poland.51.t
+	desc = poland.51.desc 
+	picture = GFX_report_event_POL_endlesssky
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = poland.51.a
+	}
+}
+
+country_event = { # Puppeting Russia
+	id = poland.52
+
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		tag = POL
+		OR = {
+			AND = {
+				POL = {
+					has_government = despotism
+				}
+				RUS = {
+					is_puppet_of = POL
+				}
+			}
+			AND = {
+				POL = {
+					has_government = despotism
+				}
+				SRU = {
+					is_puppet_of = POL
+				}
+			}
+			AND = {
+				RUS = {
+					exists = no
+				}
+				SRU = {
+					exists = no
+				}
+				POL = {
+					has_government = despotism
+					OR = {
+						controls_state = 147
+						controls_state = 195
+						controls_state = 208
+						controls_state = 213
+						controls_state = 214
+						controls_state = 215
+						controls_state = 216
+						controls_state = 219
+						controls_state = 244
+						controls_state = 246
+						controls_state = 247
+						controls_state = 248
+						controls_state = 249
+						controls_state = 250
+						controls_state = 251
+						controls_state = 252
+						controls_state = 253
+						controls_state = 254
+						controls_state = 255
+						controls_state = 256
+						controls_state = 262
+						controls_state = 263
+						controls_state = 264
+						controls_state = 351
+						controls_state = 397					
+						controls_state = 398
+						controls_state = 399
+						controls_state = 400
+						controls_state = 573
+						controls_state = 581
+						controls_state = 651
+						controls_state = 653
+						controls_state = 722
+						controls_state = 804
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		RUS = {
+			if = {
+				limit = {
+					POL = {
+						controls_state = 213
+					}
+				}
+				transfer_state = 213
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			set_party_name = { 
+				ideology = despotism 
+				long_name = RUS_despotism_party_alt_long 
+				name = RUS_despotism_party_alt 
+			}
+			create_country_leader = {
+				name = "Kazimierz Sosnkowski"
+				desc = ""
+				picture = "gfx/leaders/POL/Portrait_Kazimierz_Sosnkowski.tga"
+				expire = "1965.1.1"
+				ideology = military_dictatorship
+				traits = {
+				}
+			}
+			set_cosmetic_tag = "RUS_POLISH_PUPPET"
+			if = {
+				limit = {
+					POL = {
+						controls_state = 147
+					}
+				}
+				transfer_state = 147
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 195
+					}
+				}
+				transfer_state = 195
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 208
+					}
+				}
+				transfer_state = 208
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 214
+					}
+				}
+				transfer_state = 214
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 215
+					}
+				}
+				transfer_state = 215
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 216
+					}
+				}
+				transfer_state = 216
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 219
+					}
+				}
+				transfer_state = 219
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 244
+					}
+				}
+				transfer_state = 244
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 246
+					}
+				}
+				transfer_state = 246
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 247
+					}
+				}
+				transfer_state = 247
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 248
+					}
+				}
+				transfer_state = 248
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 249
+					}
+				}
+				transfer_state = 249
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 250
+					}
+				}
+				transfer_state = 250
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 251
+					}
+				}
+				transfer_state = 251
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 252
+					}
+				}
+				transfer_state = 252
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 253
+					}
+				}
+				transfer_state = 253
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 254
+					}
+				}
+				transfer_state = 254
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 255
+					}
+				}
+				transfer_state = 255
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 256
+					}
+				}
+				transfer_state = 256
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 262
+					}
+				}
+				transfer_state = 262
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 263
+					}
+				}
+				transfer_state = 263
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 264
+					}
+				}
+				transfer_state = 264
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 351
+					}
+				}
+				transfer_state = 351
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 397
+					}
+				}
+				transfer_state = 397
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 398
+					}
+				}
+				transfer_state = 398
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 399
+					}
+				}
+				transfer_state = 399
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 400
+					}
+				}
+				transfer_state = 400
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 573
+					}
+				}
+				transfer_state = 573
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 581
+					}
+				}
+				transfer_state = 581
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 651
+					}
+				}
+				transfer_state = 651
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 653
+					}
+				}
+				transfer_state = 653
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 722
+					}
+				}
+				transfer_state = 722
+			}
+			if = {
+				limit = {
+					POL = {
+						controls_state = 804
+					}
+				}
+				transfer_state = 804
+			}
+		}
+		POL = {
+			puppet = RUS
+		}
+	}
+}

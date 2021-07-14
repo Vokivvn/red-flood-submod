@@ -1,0 +1,36 @@
+ideas = {
+     country = {
+	    CHI_shared_economy = {
+		
+		    removal_cost = -1
+            
+            picture = generic_agrarian_society
+            
+			allowed = {
+				original_tag = SZC
+				original_tag = FJN
+				original_tag = YUN
+				original_tag = XSM
+				original_tag = ETS
+				original_tag = JGJ
+				original_tag = BYJ
+				original_tag = SHA
+				original_tag = KMT
+				original_tag = GDP
+				original_tag = SIK
+				original_tag = GXC
+				original_tag = XIA
+				original_tag = MNG
+		    }
+			
+			modifier = {
+			    research_speed_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor  = -0.15
+				conscription_factor = -0.5
+				army_org_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+	}
+}

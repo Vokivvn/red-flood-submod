@@ -1,0 +1,46 @@
+###
+### Ambition Areas
+###
+### Each country has a list of states/regions which it will take in a peace conference even if it
+### doesn't have claims/cores. Other countries in their faction will let them take these areas unless there's a conflict.
+### If they're a minor, or they're in a faction but not the leader, they won't expand outside of this ambition area unless
+### there's no-one involved in the peace conference who can take the land.
+###
+### If a country is NOT in this list, then it only takes cores/claims.
+###
+
+create_ambition_areas = {
+	every_state = {
+		# ENG = United Kingdom
+		if = {
+			limit = {
+				OR = {
+					is_british_colonial_claim = yes
+					is_core_of = ENG
+					is_claimed_by = ENG
+					region = 128 #Egypt
+					region = 196 #Arabia
+					region = 28 #Middle East
+					region = 69 #Eastern Mediterranean
+					region = 29 #Western Mediterranean
+					region = 17 #East Africa
+					region = 185 #South East Africa
+					region = 139 #South Africa
+					region = 140 #Sub-Saharan Africa
+					state = 1017 #Adamaoua
+					region = 121 #Eastern Canada
+					state = 983 #Calais
+					region = 60 #West Indian Ocean
+					region = 85 #South West Indian Ocean
+					region = 71 #East Indian Ocean
+					region = 99 #Far Eastern Indian Ocean
+					state = 733 #Andaman
+					region = 178 #West Polynesia
+					region = 97 #Eastern Micronesia
+				}
+			}
+			set_variable = { ambition_area_@ENG = 1 }
+		}
+
+	}
+}

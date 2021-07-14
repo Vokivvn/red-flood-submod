@@ -1,0 +1,209 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Kazachya Peshaya Diviziya"			# Cossack Infantry
+	division_names_group = DKB_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	#support = {
+		#recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 }		# (semi-mot) Engineer bn
+		#artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	#}
+}
+
+division_template = {
+	name = "Kazachya Diviziya"	# Cossack cavalry
+	division_names_group = DKB_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		#light_armor = { x = 0 y = 0 }	# Tank "rgt" of 64 light tanks, 28 ACs - (removed)
+		#artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Gornaya Diviziya"		# Mountaineer Rifle Division
+	division_names_group = DKB_MNT_01
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 		# Engineer bn
+		artillery = { x = 0 y = 1 } 	# Heavy Arty Regiment had 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Mekhanizirovannaya Diviziya"			# Motorized Division
+	division_names_group = RUS_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+
+units = {
+
+	division = {
+		name = "1. Diviziya Donskogo Kazachyego Voyska"#(HQ-Rostov)
+		location = 9417
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Diviziya Astrakhanskogo Kazachyego Voyska"#(HQ-Astrakhan)
+		location = 9753
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "1. Diviziya Kubanskogo Kazachyego Voyska"#(HQ-Yekaterinodar)
+		location = 3734
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "1. Diviziya Uralskogo Kazachyego Voyska"#(HQ-Guryev)
+		location = 464
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Diviziya Terskogo Kazachyego Voyska"#(HQ-Vladikavkaz)
+		location = 11614
+		division_template = "Gornaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Diviziya Stavropolskogo Kazachyego Voyska"#(HQ-Stavropol)
+		location = 11678
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "20. Pekhotnaya Diviziya"#(HQ-Grozny)
+		location = 3672
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "21. Pekhotnaya Diviziya"#(HQ-Vladikavkaz)
+		location = 11614
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "39. Pekhotnaya Diviziya"#(HQ-Yekaterinodar)
+		location = 3734
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "51. Pekhotnaya Diviziya"#(HQ-Sukhum)
+		location = 11647
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "52. Pekhotnaya Diviziya"#(HQ-Temir-Khan-Shura)
+		location = 9645
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2. Svodnaya Kazachya Diviziya"#(HQ-Yekaterinodar)
+		location = 3734
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1. Kavkazskaya Kazachya Diviziya"#(HQ-Sochi)
+		location = 3698
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "1. Diviziya Gortsev"	
+		location = 6692
+		division_template = "Gornaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "2. Diviziya Gortsev"	
+		location = 9645
+		division_template = "Gornaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6. Mekhanizirovannaya Diviziya"#(HQ-Tsaritsyn)
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 3529
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}
+air_wings = {
+	235 = {
+		fighter_equipment_0 = {
+			owner = "DKB"
+			amount = 50
+		}
+		name = "Kavkazskiy Aviaotryad Istrebiteley"
+	}
+	235 = {
+		tac_bomber_equipment_0 = {
+			owner = "DKB"
+			amount = 35
+		}
+		name = "Kavkazskiy Aviaotryad Bombardirovshchikov"
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+}

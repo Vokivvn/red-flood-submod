@@ -1,0 +1,15 @@
+ideas = {
+	country = {
+		UGD_guerilla_warfare = {
+			removal_cost = -1
+			picture = UGD_guerilla_warfare
+				allowed = {
+					original_tag = UGD
+				}
+				modifier = {
+					army_core_attack_factor = 0.05
+					army_core_defence_factor = 0.05
+				}
+		}
+	}
+}

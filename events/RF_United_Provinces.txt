@@ -1,0 +1,2876 @@
+add_namespace = UPI
+
+country_event = { #Intro event
+	id = UPI.1
+	title = UPI.1.t
+	desc = UPI.1.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.1.a
+		ai_chance = {
+			factor = 1
+		}		
+	}
+}
+country_event = {
+	id = UPI.2
+	title = UPI.2.t
+	desc = UPI.2.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.2.a		
+	}
+}
+country_event = {
+	id = UPI.3
+	title = UPI.3.t
+	desc = UPI.3.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.3.a		
+	}
+}
+country_event = {
+	id = UPI.4
+	title = UPI.4.t
+	desc = UPI.4.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.4.a	
+	}
+}
+country_event = {
+	id = UPI.5
+	title = UPI.5.t
+	desc = UPI.5.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.5.a		
+	}
+}
+country_event = {
+	id = UPI.6
+	title = UPI.6.t
+	desc = UPI.6.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.6.a
+	}
+}
+country_event = {
+	id = UPI.7
+	title = UPI.7.t
+	desc = UPI.7.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.7.a
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = UPI_democraticpath
+	}
+	option = {
+		name = UPI.7.b
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = UPI_doomerpath
+	}
+	option = {
+		name = UPI.7.c
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = UPI_newyoupath
+	}
+}
+
+#Democratic events
+
+country_event = {
+	id = UPI.8
+	title = UPI.8.t
+	desc = UPI.8.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.8.a
+	}
+}
+country_event = {
+	id = UPI.9
+	title = UPI.9.t
+	desc = UPI.9.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.9.a
+	}
+}
+country_event = {
+	id = UPI.10
+	title = UPI.10.t
+	desc = UPI.10.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.10.a
+	}
+}
+country_event = {
+	id = UPI.11
+	title = UPI.11.t
+	desc = UPI.11.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.11.a
+	}
+}
+
+#Churchills campaign
+country_event = {
+	id = UPI.12
+	title = UPI.12.t
+	desc = UPI.12.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.12.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.12.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.12.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.13
+	title = UPI.13.t
+	desc = UPI.13.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.13.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.13.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.13.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.14
+	title = UPI.14.t
+	desc = UPI.14.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.14.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.14.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.14.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.15
+	title = UPI.15.t
+	desc = UPI.15.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.15.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.15.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.15.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.16
+	title = UPI.16.t
+	desc = UPI.16.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.16.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.16.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.16.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.17
+	title = UPI.17.t
+	desc = UPI.17.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.17.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.17.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.17.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.18
+	title = UPI.18.t
+	desc = UPI.18.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.18.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.18.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.18.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.19
+	title = UPI.19.t
+	desc = UPI.19.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.19.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.19.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.19.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.20
+	title = UPI.20.t
+	desc = UPI.20.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.20.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.20.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.20.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.21
+	title = UPI.21.t
+	desc = UPI.21.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.21.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.21.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.21.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.22
+	title = UPI.22.t
+	desc = UPI.22.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.22.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.22.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.22.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.23
+	title = UPI.23.t
+	desc = UPI.23.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.23.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.23.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.23.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.24
+	title = UPI.24.t
+	desc = UPI.24.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.24.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.24.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.24.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.25
+	title = UPI.25.t
+	desc = UPI.25.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.25.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.25.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.25.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.26
+	title = UPI.26.t
+	desc = UPI.26.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.26.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.26.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.26.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+country_event = {
+	id = UPI.27
+	title = UPI.27.t
+	desc = UPI.27.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.27.a
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_tory_win
+				value = 1
+			}
+		add_political_power = -30
+		add_manpower = -216
+	}
+	option = {
+		name = UPI.27.b
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_liberal_win
+				value = 1
+			}
+	}
+	option = {
+		name = UPI.27.c
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = upi_labour_win
+				value = 1
+			}
+	}
+}
+
+country_event = {
+	id = UPI.28
+	title = UPI.28.t
+	desc = UPI.28.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.28.a
+	}
+}
+
+country_event = {
+	id = UPI.29
+	title = UPI.29.t
+	desc = UPI.29.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.29.a
+		hidden_effect = {
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+			kill_country_leader = yes
+		}
+		set_country_flag = UPI_thechaos
+		create_country_leader = {
+			name = "Collapsed Government"
+			#desc = ""
+			picture = "Portrait_UPI_Collapsed_government.tga"
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+			traits = {
+					
+			}
+		}
+		add_ideas = UPI_chaos_idea
+		load_focus_tree = {
+			tree = RF_churchill_election
+			keep_completed = yes
+		}
+		hidden_effect = {
+			set_country_flag = Winston_Churchill_dead
+			set_popularities = {
+				revolutionary_anarchism = 10
+				vanguard_socialism = 15
+				libertarian_marxism = 0
+				revisionist_socialism = 20
+				social_democratism = 15
+				liberalism = 15
+				conservatism = 5
+				right_authoritarianism = 0
+				despotism = 0
+				reactionism = 15
+				accelerationism = 5
+			}
+			delete_unit_template_and_units = {
+			    division_template = "Elite Infantry"
+			}
+			remove_dynamic_modifier = {
+				modifier = UPI_democratization
+				scope = UPI
+			}
+			remove_ideas = {
+				UPI_unificationcomitee
+				UPI_indian_guard
+				UPI_indianimprovementassociation
+				UPI_freedom_assembly
+				UPI_civil_obedience
+				UPI_Winston_Churchill_hog
+				UPI_Maurice_Hallett
+				UPI_Harry_Graham_Haig
+				UPI_Orde_Wingate
+				UPI_Michael_O_Dwyer
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.30
+	title = UPI.30.t
+	desc = UPI.30.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.30.a
+		create_country_leader = {
+			name = "Acharya Narendra Deva"
+			#desc = ""
+			picture = "Portrait_UPI_Narendra_Deva.tga"
+			expire = "1965.1.1"
+			ideology = left_nationalism
+			traits = {			
+			}
+		}
+		set_politics = {
+			ruling_party = social_democratism
+		}
+		load_focus_tree = {
+			tree = RF_churchill_election
+			keep_completed = yes
+		}
+		unlock_national_focus = UPI_old_bastard
+		hidden_effect = {
+			set_popularities = {
+				revisionist_socialism = 10
+				social_democratism = 70
+				liberalism = 10
+				conservatism = 10
+			}
+			remove_ideas = {
+				UPI_Winston_Churchill_hog
+				UPI_Maurice_Hallett
+				UPI_Harry_Graham_Haig
+				UPI_Orde_Wingate
+				UPI_Michael_O_Dwyer
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.31
+	title = UPI.31.t
+	desc = UPI.31.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.31.a
+		hidden_effect = {
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+			kill_country_leader = yes
+		}
+		set_country_flag = UPI_thechaos
+		create_country_leader = {
+			name = "Collapsed Government"
+			#desc = ""
+			picture = "Portrait_UPI_Collapsed_government.tga"
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+			traits = {
+					
+			}
+		}
+		add_ideas = UPI_chaos_idea
+		load_focus_tree = {
+			tree = RF_churchill_election
+			keep_completed = yes
+		}
+		hidden_effect = {
+			set_country_flag = Winston_Churchill_dead
+			set_popularities = {
+				revolutionary_anarchism = 10
+				vanguard_socialism = 15
+				libertarian_marxism = 0
+				revisionist_socialism = 20
+				social_democratism = 15
+				liberalism = 15
+				conservatism = 5
+				right_authoritarianism = 0
+				despotism = 0
+				reactionism = 15
+				accelerationism = 5
+			}
+			delete_unit_template_and_units = {
+			    division_template = "Elite Infantry"
+			}
+			remove_dynamic_modifier = {
+				modifier = UPI_democratization
+				scope = UPI
+			}
+			remove_ideas = {
+				UPI_unificationcomitee
+				UPI_indian_guard
+				UPI_indianimprovementassociation
+				UPI_freedom_assembly
+				UPI_civil_obedience
+				UPI_Winston_Churchill_hog
+				UPI_Maurice_Hallett
+				UPI_Harry_Graham_Haig
+				UPI_Orde_Wingate
+				UPI_Michael_O_Dwyer
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.32
+	title = UPI.32.t
+	desc = UPI.32.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.32.a
+		hidden_effect = {
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = despotism
+			}
+		}
+		set_country_flag = UPI_kalicoup
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Collapsed Government"
+			#desc = ""
+			picture = "Portrait_UPI_Collapsed_government.tga"
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+			traits = {
+					
+			}
+		}
+		add_ideas = UPI_chaos_idea
+		load_focus_tree = {
+			tree = RF_churchill_election
+			keep_completed = yes
+		}
+		hidden_effect = {
+			set_country_flag = Winston_Churchill_dead
+			set_popularities = {
+				revolutionary_anarchism = 10
+				vanguard_socialism = 15
+				libertarian_marxism = 0
+				revisionist_socialism = 20
+				social_democratism = 15
+				liberalism = 15
+				conservatism = 5
+				right_authoritarianism = 0
+				despotism = 0
+				reactionism = 15
+				accelerationism = 5
+			}
+			delete_unit_template_and_units = {
+			    division_template = "Elite Infantry"
+			}
+			remove_dynamic_modifier = {
+				modifier = UPI_democratization
+				scope = UPI
+			}
+			remove_ideas = {
+				UPI_unificationcomitee
+				UPI_indian_guard
+				UPI_indianimprovementassociation
+				UPI_freedom_assembly
+				UPI_civil_obedience
+				UPI_Winston_Churchill_hog
+				UPI_Maurice_Hallett
+				UPI_Harry_Graham_Haig
+				UPI_Orde_Wingate
+				UPI_Michael_O_Dwyer
+			}
+		}
+	}
+}
+
+#Depression path
+country_event = {
+	id = UPI.33
+	title = UPI.33.t
+	desc = UPI.33.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.33.a
+	}
+}
+country_event = {
+	id = UPI.34
+	title = UPI.34.t
+	desc = UPI.34.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.34.a
+	}
+}
+country_event = {
+	id = UPI.35
+	title = UPI.35.t
+	desc = UPI.35.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.35.a
+	}
+}
+country_event = {
+	id = UPI.36
+	title = UPI.36.t
+	desc = UPI.36.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.36.a
+	}
+}
+country_event = {
+	id = UPI.37
+	title = UPI.37.t
+	desc = UPI.37.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.37.a
+	}
+}
+country_event = {
+	id = UPI.38
+	title = UPI.38.t
+	desc = UPI.38.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.38.a
+	}
+}
+country_event = {
+	id = UPI.39
+	title = UPI.39.t
+	desc = UPI.39.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.39.a
+	}
+}
+country_event = {
+	id = UPI.40
+	title = UPI.40.t
+	desc = UPI.40.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.40.a
+		add_timed_idea = {
+			idea = UPI_harsh_repressions
+  			days = 180
+		}
+	}
+}
+country_event = {
+	id = UPI.41
+	title = UPI.41.t
+	desc = UPI.41.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.41.a
+		add_timed_idea = {
+			idea = UPI_repressions
+  			days = 180
+		}
+	}
+}
+country_event = {
+	id = UPI.42
+	title = UPI.42.t
+	desc = UPI.42.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.42.a
+	}
+}
+country_event = {
+	id = UPI.43
+	title = UPI.43.t
+	desc = UPI.43.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.43.a
+	}
+}
+country_event = {
+	id = UPI.44
+	title = UPI.44.t
+	desc = UPI.44.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.44.a
+		add_ideas = UPI_chamicalweapons
+	}
+}
+country_event = {
+	id = UPI.45
+	title = UPI.45.t
+	desc = UPI.45.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.45.a
+		add_war_support = 0.15
+	}
+}
+country_event = {
+	id = UPI.46
+	title = UPI.46.t
+	desc = UPI.46.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = UPI
+		has_completed_focus = UPI_push_ocean
+		has_offensive_war_with = BIH
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = {
+		name = UPI.46.a
+		add_manpower = -20
+	}
+}
+country_event = {
+	id = UPI.47
+	title = UPI.47.t
+	desc = UPI.47.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.47.a
+	}
+}
+country_event = {
+	id = UPI.48
+	title = UPI.48.t
+	desc = UPI.48.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.48.a
+	}
+}
+country_event = {
+	id = UPI.49
+	title = UPI.49.t
+	desc = UPI.49.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.49.a
+	}
+}
+country_event = {
+	id = UPI.50
+	title = UPI.50.t
+	desc = UPI.50.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.50.a
+	}
+}
+country_event = {
+	id = UPI.51
+	title = UPI.51.t
+	desc = UPI.51.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.51.a
+		add_ideas = UPI_siegeofluckow
+		add_stability = -0.1
+		add_war_support = -0.1
+	}
+}
+country_event = {
+	id = UPI.52
+	title = UPI.52.t
+	desc = UPI.52.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.52.a
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = UPI.53
+	title = UPI.53.t
+	desc = UPI.53.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.53.a
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = UPI.54
+	title = UPI.54.t
+	desc = UPI.54.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.54.a
+	}
+}
+country_event = {
+	id = UPI.55
+	title = UPI.55.t
+	desc = UPI.55.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.55.a
+	}
+}
+country_event = {
+	id = UPI.56
+	title = UPI.56.t
+	desc = UPI.56.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.56.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Collapsed Government"
+			#desc = ""
+			picture = "Portrait_UPI_Collapsed_government.tga"
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+			traits = {
+					
+			}
+		}
+		add_ideas = UPI_chaos_idea
+		load_focus_tree = {
+			tree = RF_churchill_election
+			keep_completed = yes
+		}
+		set_country_flag = UPI_thechaos
+		hidden_effect = {
+			set_country_flag = Winston_Churchill_dead
+			add_popularity = {
+				ideology = despotism
+				popularity = -1
+			}
+			delete_unit_template_and_units = {
+			    division_template = "Elite Infantry"
+			}
+			remove_ideas = {
+				UPI_chamicalweapons2
+				UPI_newstrategy
+				UPI_siegeofluckow1
+				UPI_martiallaw1
+				UPI_brutal_putdowns
+				UPI_Winston_Churchill_hog
+				UPI_Maurice_Hallett
+				UPI_Harry_Graham_Haig
+				UPI_Orde_Wingate
+				UPI_Michael_O_Dwyer
+				UPI_expandedconscription1
+			}
+			set_party_name = { 
+				ideology = social_democratism 
+				long_name = UPI_social_democratism_party_long_second 
+				name = UPI_social_democratism_party_second 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.57
+	title = UPI.57.t
+	desc = UPI.57.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.57.a
+	}
+}
+country_event = {
+	id = UPI.58
+	title = UPI.58.t
+	desc = UPI.58.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.58.a
+	}
+}
+country_event = {
+	id = UPI.59
+	title = UPI.59.t
+	desc = UPI.59.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.59.a
+	}
+}
+country_event = {
+	id = UPI.60
+	title = UPI.60.t
+	desc = UPI.60.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.60.a
+	}
+}
+country_event = {
+	id = UPI.61
+	title = UPI.61.t
+	desc = UPI.61.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.61.a
+	}
+}
+country_event = {
+	id = UPI.62
+	title = UPI.62.t
+	desc = UPI.62.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.62.a
+	}
+}
+country_event = {
+	id = UPI.63
+	title = UPI.63.t
+	desc = UPI.63.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.63.a
+	}
+}
+country_event = {
+	id = UPI.64
+	title = UPI.64.t
+	desc = UPI.64.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.64.a
+	}
+}
+country_event = {
+	id = UPI.65
+	title = UPI.65.t
+	desc = UPI.65.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.65.a
+	}
+}
+country_event = {
+	id = UPI.66
+	title = UPI.66.t
+	desc = UPI.66.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = UPI
+		has_offensive_war_with = BIH
+		has_completed_focus = UPI_king_country
+	}
+	
+	option = {
+		name = UPI.66.a
+	}
+}
+country_event = {
+	id = UPI.67
+	title = UPI.67.t
+	desc = UPI.67.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.67.a
+	}
+}
+country_event = {
+	id = UPI.68
+	title = UPI.68.t
+	desc = UPI.68.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.68.a
+	}
+}
+country_event = {
+	id = UPI.69
+	title = UPI.69.t
+	desc = UPI.69.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.69.a
+	}
+}
+country_event = {
+	id = UPI.70
+	title = UPI.70.t
+	desc = UPI.70.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.70.a
+	}
+}
+country_event = {
+	id = UPI.71
+	title = UPI.71.t
+	desc = UPI.71.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.71.a
+	}
+}
+country_event = {
+	id = UPI.72
+	title = UPI.72.t
+	desc = UPI.72.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.72.a
+	}
+}
+country_event = {
+	id = UPI.73
+	title = UPI.73.t
+	desc = UPI.73.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.73.a
+	}
+}
+country_event = {
+	id = UPI.74
+	title = UPI.74.t
+	desc = UPI.74.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.74.a
+	}
+}
+country_event = {
+	id = UPI.75
+	title = UPI.75.t
+	desc = UPI.75.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.75.a
+		load_focus_tree = {
+			tree = RF_churchill_despotic
+			keep_completed = yes
+		}
+		hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Winston Churchill"
+					desc = "UPI_winston_churchill"
+					picture = "Portrait_UPI_Doomer_Churchill_2.tga"
+					expire = "1965.1.1"
+					ideology = military_dictatorship
+					traits = {
+						UPI_brutal_colonizer
+					}
+				}
+		}
+	}
+}
+country_event = {
+	id = UPI.76
+	title = UPI.76.t
+	desc = UPI.76.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.76.a
+	}
+}
+country_event = {
+	id = UPI.77
+	title = UPI.77.t
+	desc = UPI.77.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.77.a
+	}
+}
+country_event = {
+	id = UPI.78
+	title = UPI.78.t
+	desc = UPI.78.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.78.a
+	}
+}
+country_event = {
+	id = UPI.79
+	title = UPI.79.t
+	desc = UPI.79.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.79.a
+	}
+}
+country_event = {
+	id = UPI.80
+	title = UPI.80.t
+	desc = UPI.80.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.80.a
+	}
+}
+country_event = {
+	id = UPI.81
+	title = UPI.81.t
+	desc = UPI.81.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.81.a
+	}
+}
+country_event = {
+	id = UPI.82
+	title = UPI.82.t
+	desc = UPI.82.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.82.a
+	}
+}
+country_event = {
+	id = UPI.83
+	title = UPI.83.t
+	desc = UPI.83.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.83.a
+	}
+}
+country_event = {
+	id = UPI.84
+	title = UPI.84.t
+	desc = UPI.84.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.84.a
+	}
+}
+country_event = {
+	id = UPI.85
+	title = UPI.85.t
+	desc = UPI.85.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.85.a
+	}
+}
+country_event = {
+	id = UPI.86
+	title = UPI.86.t
+	desc = UPI.86.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.86.a
+		ai_chance = {
+			factor = 100
+		}
+		MYS = {
+			add_to_faction = ROOT
+		}
+		declare_war_on = {
+    		target = UPI
+    		type = annex_everything
+		}
+	}
+	option = {
+		name = UPI.86.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+country_event = {
+	id = UPI.87
+	title = UPI.87.t
+	desc = UPI.87.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.87.a
+	}
+}
+country_event = {
+	id = UPI.88
+	title = UPI.88.t
+	desc = UPI.88.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.88.a
+	}
+}
+country_event = {
+	id = UPI.89
+	title = UPI.89.t
+	desc = UPI.89.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.89.a
+	}
+}
+country_event = {
+	id = UPI.90
+	title = UPI.90.t
+	desc = UPI.90.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.90.a
+	}
+}
+country_event = {
+	id = UPI.91
+	title = UPI.91.t
+	desc = UPI.91.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.91.a
+	}
+}
+
+country_event = {
+	id = UPI.300
+	title = UPI.300.t
+	desc = UPI.300.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.300.a
+	}
+}
+country_event = {
+	id = UPI.301
+	title = UPI.301.t
+	desc = UPI.301.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.301.a
+		BIH = {
+			add_state_core = 438
+		}
+		hidden_effect = {
+			add_opinion_modifier = { target = BIH modifier = huge_increase }
+			BIH = {	add_opinion_modifier = { target = UPI modifier = huge_increase }	}
+		}
+	}
+}
+country_event = {
+	id = UPI.302
+	title = UPI.302.t
+	desc = UPI.302.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.302.a
+		BIH = {
+			change_tag_from = UPI
+		}
+		hidden_effect = {
+			BIH = { country_event = { id = UPI.306	days = 1 }	}
+		}
+	}
+}
+country_event = {
+	id = UPI.303
+	title = UPI.303.t
+	desc = UPI.303.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.303.a
+		trigger = { tag = UPI }
+	}
+	option = {
+		name = UPI.303.b
+		trigger = { tag = ARY }
+	}
+}
+country_event = {
+	id = UPI.304
+	title = UPI.304.t
+	desc = UPI.304.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.304.a
+		ARY = {
+			change_tag_from = UPI
+		}
+		hidden_effect = {
+			ARY = { country_event = { id = UPI.307	days = 1 }	}
+		}
+	}
+}
+country_event = {
+	id = UPI.305
+	title = UPI.305.t
+	desc = UPI.305.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.305.a
+		load_focus_tree = {
+			tree = RF_kali_cult
+			keep_completed = yes
+		}
+	}
+}
+
+country_event = {
+	id = UPI.306
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		BIH = {
+			annex_country = {
+			    target = UPI
+			    transfer_troops = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.307
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		ARY = {
+			annex_country = {
+			    target = UPI
+			    transfer_troops = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.401
+	title = UPI.401.t
+	desc = UPI.401.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.401.a
+		UPI = {
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 9000
+    			producer = ENG
+			}
+		}
+	}
+	option = {
+		name = UPI.401.b
+		add_political_power = -20
+	}
+}
+country_event = {
+	id = UPI.402
+	title = UPI.402.t
+	desc = UPI.402.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.402.a
+		438 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		name = UPI.402.b
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = UPI.600
+	title = UPI.600.t
+	desc = UPI.600.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.600.a
+		UPI = {
+			country_event = {
+				id = UPI.601
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ENG = {
+					has_government = conservatism
+				}
+			}
+		}
+	}
+	option = {
+		name = UPI.600.b
+		UPI = {
+			country_event = {
+				id = UPI.602
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ENG = {
+					has_government = social_democratism
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.601
+	title = UPI.601.t
+	desc = UPI.601.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.601.a
+		set_country_flag = UPI_war_w_uk
+	}
+}
+country_event = {
+	id = UPI.602
+	title = UPI.602.t
+	desc = UPI.602.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.602.a
+		set_country_flag = UPI_dominion_uk
+	}
+}
+
+country_event = {
+	id = UPI.603
+	title = UPI.603.t
+	desc = UPI.603.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.603.a
+		UPI = {	set_country_flag = UPI_churchill_impeached	}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				ENG = {
+					has_government = liberalism
+				}
+			}
+		}
+	}
+	option = {
+		name = UPI.603.b
+		UPI = {	set_country_flag = UPI_churchill_stays	}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				ENG = {
+					has_government = conservatism
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.604
+	title = UPI.604.t
+	desc = UPI.604.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.604.a
+		MAD = {
+			change_tag_from = UPI
+		}
+		hidden_effect = {
+			MAD = {
+				country_event = { id = UPI.606	days = 1 }
+			}
+			every_state = {
+				limit = {
+					is_core_of = UPI
+				}
+				add_core_of = MAD
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.605
+	title = UPI.605.t
+	desc = UPI.605.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.605.a
+		UPI = {
+			annex_country = {
+			    target = MAD
+			    transfer_troops = yes
+			}
+			set_cosmetic_tag = "UPI_BRITISH_DOMINION"
+		}
+		ENG = {
+			add_to_faction = UPI
+		}
+		country_event = {
+			id = UPI.701
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = UPI.606
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		MAD = {
+			annex_country = {
+			    target = UPI
+			    transfer_troops = yes
+			}
+		}
+		random_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = news.47
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.699
+	title = UPI.699.t
+	desc = UPI.699.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.699.a
+		declare_war_on = {
+    		target = UPI
+    		type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = UPI.700
+	title = UPI.700.t
+	desc = UPI.700.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = UPI.700.a
+		trigger = {
+			OR = {
+				tag = ENG
+				tag = MAD
+			}
+		}
+	}
+	option = {
+		name = UPI.700.b
+		trigger = {
+			tag = UPI
+			UPI = {
+				surrender_progress < 0.2
+			}
+			MAD = {
+				has_capitulated = yes
+			}
+		}
+		UPI = {
+			annex_country = {
+			    target = MAD
+			    transfer_troops = yes
+			}
+			annex_country = {
+			    target = CEY
+			    transfer_troops = yes
+			}
+			set_cosmetic_tag = "UPI_BRITISH_RAJ"
+		}
+		UPI = {
+			add_state_core = 320
+			add_state_core = 423
+			add_state_core = 424
+			add_state_core = 937
+			add_state_core = 936
+			add_state_core = 422
+		}
+		ENG = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		MAD = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		CAN = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		WAS = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		AST = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		IRE = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		CEY = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		IRQ = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		NZL = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		EGY = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		OMA = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		YEM = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		MAL = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		SAF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		NGA = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		SWF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		WAF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = UPI.700.c
+		trigger = {
+			tag = UPI
+			OR = {
+				AND = {
+					UPI = {
+						surrender_progress < 0.51
+						surrender_progress > 0.19
+					}
+					MAD = {
+						has_capitulated = yes
+					}
+				}
+				AND = {
+					UPI = {
+						surrender_progress < 0.2
+					}
+					MAD = {
+						has_capitulated = no
+					}
+				}
+			}
+		}
+		MAD = {
+			transfer_state = 320
+			transfer_state = 423
+			transfer_state = 424
+			transfer_state = 937
+			transfer_state = 936
+			transfer_state = 425
+			transfer_state = 427
+			transfer_state = 429
+		}
+		UPI = {
+			transfer_state = 444
+			transfer_state = 443
+			transfer_state = 428
+			transfer_state = 895
+			transfer_state = 440
+			transfer_state = 433
+			transfer_state = 437
+			transfer_state = 439
+			transfer_state = 438
+			transfer_state = 435
+			transfer_state = 436
+			transfer_state = 426
+			transfer_state = 431
+			transfer_state = 430
+			transfer_state = 432
+			transfer_state = 434
+			transfer_state = 894
+		}
+		ENG = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		MAD = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		CAN = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		WAS = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		AST = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		IRE = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		CEY = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		IRQ = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		NZL = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		EGY = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		OMA = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		YEM = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		MAL = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		SAF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		NGA = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		SWF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		WAF = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+		MAD = {
+			white_peace = {
+				tag = UPI
+			}
+			set_truce = {
+				target = UPI
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = UPI.700.d
+		trigger = {
+			tag = UPI
+			UPI = {
+				surrender_progress > 0.5
+			}
+		}
+		MAD = {
+			transfer_state = 320
+			transfer_state = 423
+			transfer_state = 424
+			transfer_state = 937
+			transfer_state = 936
+		}
+		MAD = {
+			annex_country = {
+			    target = UPI
+			    transfer_troops = yes
+			}
+		}
+		every_state = {
+			limit = {
+				is_core_of = UPI
+			}
+			add_core_of = MAD
+		}
+	}
+}
+
+country_event = {
+	id = UPI.701
+	title = UPI.701.t
+	desc = UPI.701.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.701.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.46
+					days = 1
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.702
+	title = UPI.702.t
+	desc = UPI.702.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.702.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.46
+					days = 1
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = UPI.703
+	title = UPI.703.t
+	desc = UPI.703.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.703.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.48
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = UPI.704
+	title = UPI.704.t
+	desc = UPI.704.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = UPI.704.a
+		create_wargoal = {
+			type = annex_everything
+			target = MAD
+		}
+		every_state = {
+			limit = {
+				is_core_of = MAD
+			}
+			add_core_of = UPI
+		}
+	}
+}
+
+country_event = {
+	id = UPI.705
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = UPI
+		ENG = { exists = no }
+		has_completed_focus = UPI_contact_british
+		NOT = { has_completed_focus = UPI_false_isles }
+		controls_state = 423
+		controls_state = 320
+		controls_state = 424
+		controls_state = 937
+	}
+	
+	immediate = {
+		UPI = {
+			transfer_state = 423
+			transfer_state = 320
+			transfer_state = 424
+			transfer_state = 937
+			transfer_state = 422
+			set_cosmetic_tag = "UPI_BRITISH_RAJ"
+		}
+		unlock_national_focus = UPI_false_isles
+		unlock_national_focus = UPI_cannot_win
+		unlock_national_focus = UPI_attack
+		unlock_national_focus = UPI_strike_madras
+		unlock_national_focus = UPI_cut_foothold
+		unlock_national_focus = UPI_peace_honour
+	}
+}

@@ -1,0 +1,344 @@
+PRS_anti_communist = {
+	invite_lithuania = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				LIT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+					exists = yes
+				}
+			}
+			LIT = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			LIT = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+	invite_sweden = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				SWE = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+				}
+			}
+			SWE = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			SWE = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+	invite_norway = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				NOR = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+				}
+			}
+			NOR = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			NOR = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+	invite_finland = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				FIN = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+				}
+			}
+			FIN = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			FIN = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+	invite_latvia = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				LAT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+				}
+			}
+			LAT = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			LAT = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+	invite_estonia = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			NOT = {
+				EST = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = accelerationism
+					}
+				}
+			}
+			EST = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			EST = {
+				country_event = {
+					id = prussia.53
+				}
+			}
+		}
+	}
+}
+PRS_nordic_confederation_cat = {
+	threaten_lithuania = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			PRS = {
+				has_war = no
+			}
+		}
+		complete_effect  = {
+			LIT = {
+				country_event = {
+					id = prussia.56
+				}
+			}
+		}
+	}
+	attack_lithuania = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			LIT = {
+				has_country_flag = PRS_refuse_nordconfed
+			}
+		}
+		visible = {
+			LIT = {
+				has_country_flag = PRS_refuse_nordconfed
+			}
+		}
+		days_remove = 15
+		remove_effect  = {
+			create_wargoal = {
+				target = PREV
+				type = annex_everything
+			}
+		}
+	}	
+}
+PRS_beyond_germany = {
+	destroy_russia = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			RUS = {
+				exists = yes
+			}
+		}
+		visible = {
+			RUS = {
+				exists = yes
+			}
+		}
+		days_remove = 15
+		remove_effect  = {
+			create_wargoal = {
+				target = PREV
+				type = annex_everything
+			}
+		}
+	}
+	destroy_france = {
+		cost = 25
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			FRA = {
+				exists = yes
+			}
+		}
+		visible = {
+			FRA = {
+				exists = yes
+			}
+		}
+		days_remove = 15
+		remove_effect  = {
+			create_wargoal = {
+				target = PREV
+				type = annex_everything
+			}
+		}
+	}	
+}
+PRS_finding_allies = {
+	align_france = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		fire_only_once = yes
+		available = {
+			PRS = {
+				is_in_faction = no
+			}
+			FRA = {
+				has_war = no
+				is_faction_leader = yes
+			}
+		}
+		complete_effect  = {
+			FRA = {
+				add_to_faction = PRS
+			}
+		}
+	}
+	align_austria = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		fire_only_once = yes
+		available = {
+			PRS = {
+				is_in_faction = no
+			}
+			AUS = {
+				has_war = no
+				is_faction_leader = yes
+			}
+		}
+		complete_effect  = {
+			AUS = {
+				add_to_faction = PRS
+			}
+		}
+	}
+	align_poland = {
+		cost = 25
+		ai_will_do = {
+			factor = 0.5
+		}
+		fire_only_once = yes
+		available = {
+			PRS = {
+				is_in_faction = no
+			}
+			POL = {
+				has_war = no
+				is_faction_leader = yes
+			}
+		}
+		complete_effect  = {
+			POL = {
+				add_to_faction = PRS
+			}
+		}
+	}
+	
+}

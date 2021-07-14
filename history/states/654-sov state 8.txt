@@ -1,0 +1,24 @@
+
+state={
+	id=654
+	name="STATE_654" #Gorno-Altaysk
+
+	history={
+		owner = ALT
+add_core_of = ALT
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			1779 1
+		}
+	}
+
+	provinces={
+		1702 1779 4800 7680 7822 10531 12528
+	}
+	manpower=403510
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

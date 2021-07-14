@@ -1,0 +1,10 @@
+FIU_demilitarise_veneto_category = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = FIU
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = FIU_Contacts_In_The_Veneto
+	}
+}

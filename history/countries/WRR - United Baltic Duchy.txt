@@ -1,0 +1,73 @@
+capital = 1058
+
+oob = "WRR_1936"
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 5
+	liberalism = 5
+	conservatism = 5
+	right_authoritarianism = 5
+	despotism = 10
+	reactionism = 50
+	accelerationism = 10
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Alfred Rosenberg"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/WRU/Portrait_WRU_Alfred_Rosenberg.tga"
+	expire = "1965.1.1"
+	ideology = esoteric_reactionism
+	traits = {
+
+	}
+}
+
+create_navy_leader = {
+	name = "Alexander von Salza"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.tga"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}

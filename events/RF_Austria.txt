@@ -1,0 +1,1029 @@
+###########################
+#Austrian Events
+###########################
+
+add_namespace = austria
+
+	country_event = {
+		id = austria.coup
+		title = austria.coup.t
+		desc = austria.coup.d
+		picture = GFX_AUS_civilwar
+		is_triggered_only = yes
+
+		fire_only_once = yes
+
+		option = {
+			name = austria.coup.a
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			AUS = {
+				country_event = { days = 1 id = austria.9 }
+				remove_ideas_with_trait = head_of_government
+				add_ideas = AUS_engelbert_dollfuss
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.1
+		title = austria.1.t
+		desc = austria.1.d
+		picture = GFX_AUS_hofburg
+		is_triggered_only = yes
+		fire_only_once = yes
+	
+		option = {
+			name = austria.1.a
+		}
+	}
+
+	# Player wins civil war
+	country_event = {
+		id = austria.2
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.2" }
+		title = austria.2.t
+		desc = austria.2.d
+
+		fire_only_once = yes
+	
+		trigger = {
+			tag = AUS
+			NOT = { country_exists = ASC }
+			has_war = no
+			has_country_flag = AUS_civil_war
+		}
+
+		mean_time_to_happen = {
+			days = 3
+		}
+
+		option = {
+			name = austria.2.a
+			add_stability = 0.10
+			hidden_effect = {
+				#random_other_country = {
+				#	limit = { is_ai = yes }
+				#	news_event = {
+				#		id = worldnews.00 ###Austrian Civil War Result World News
+				#		days = 1
+				#	}
+				#}
+				every_state = {
+					limit = { is_core_of = ASC }
+					remove_core_of = ASC
+				}
+				add_stability = -0.10
+				clr_country_flag = AUS_civil_war
+			}
+		}
+	}
+
+	# Empty Event
+	country_event = {
+		id = austria.3
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.3" }
+		title = austria.3.t
+		desc = austria.3.d
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.3.a
+		}
+	}
+
+	#Anschluss Referendum
+	country_event = {
+		id = austria.4
+		immediate = { log = "[GetDateText]: [Root.GetName]: event austria.4" }
+		title = austria.4.t
+		desc = austria.4.d
+
+		is_triggered_only = yes
+
+		option = {
+			name = austria.4.a
+			AUS = {
+				Transfer_navy = { target = GER }
+				every_owned_state = {
+					limit = {
+						is_core_of = AUS
+					}
+					GER = { add_state_core = PREV }
+				}
+			}
+			GER = {
+				annex_country = {
+					target = AUS
+					transfer_troops = yes
+				}
+			}
+		}
+		option = {
+			name = austria.4.b
+			GER = {
+				add_to_faction = AUS
+			}
+			set_country_flag = AUS_stay_independent
+		}
+	}
+
+	country_event = { #Conservative Revolt
+		id = austria.7
+		title = austria.7.t
+		desc = austria.7.d
+		picture = GFX_AUS_massacare
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		immediate = {
+			hidden_effect = {
+				set_politics = {
+					ruling_party = libertarian_marxism
+				}
+				set_cosmetic_tag = AUS_left
+				create_country_leader = {
+					name = "Wilhelm Reich"
+					desc = "POLITICS_ALEXEI_II_DESC"
+					picture = "gfx/leaders/AUS/Portrait_Wilhelm_Reich.tga"
+					expire = "1965.1.1"
+					ideology = council_communism
+					traits = {
+					}
+				}
+			}
+		}
+		option = {
+			name = austria.7.a
+			AUS_civil_war = yes
+			ASC = {
+				set_politics = {
+					ruling_party = conservatism
+				}
+				set_cosmetic_tag = ASC_right
+				create_country_leader = {
+					name = "Kurt Schuschnigg"
+					picture = "gfx/leaders/AUS/Portrait_Austria_Kurt_Schuschnigg.tga"
+					expire = "1965.1.1"
+					ideology = social_conservatism
+					traits = {
+					}
+				}
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.6
+			}
+			set_country_flag = AUS_civil_war
+		}
+	}
+
+	country_event = { #Socialist Revolt against Moderates
+		id = austria.8
+		title = austria.8.t
+		desc = austria.8.d
+		picture = GFX_AUS_massacare
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+		immediate = {
+			hidden_effect = {
+				create_country_leader = {
+					name = "Kurt Schuschnigg"
+					picture = "Portrait_Austria_Kurt_Schuschnigg.tga"
+					expire = "1965.1.1"
+					ideology = social_conservatism
+					traits = {
+					}
+				}
+			}
+		}
+
+		option = {
+			name = austria.8.a
+			AUS_civil_war = yes
+			ASC = {
+				set_politics = {
+					ruling_party = libertarian_marxism
+				}
+				create_corps_commander = {
+					name = "Otto Bauer"
+					#picture = "Eduard_Dietl.tga"
+					traits = {trait_cautious}
+					skill = 3
+					id = 23
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Richard Bernaschek"
+					#picture = "Erhard_Raus.tga"
+					traits = { career_officer  inflexible_strategist}
+					skill = 3
+					id = 24
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Richard Bernaschek"
+					#picture = "Erhard_Raus.tga"
+					traits = {trait_reckless}
+					skill = 3
+					id = 25
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+			}
+			AUS = {
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.6
+				}
+				set_country_flag = AUS_civil_war
+			}
+		}
+	}
+
+	country_event = { #Socialist Revolt against extremists
+		id = austria.9
+		title = austria.9.t
+		desc = austria.9.d
+		picture = GFX_AUS_civilwar
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+	
+		option = { # Support Nationalists
+			name = austria.9.a
+			AUS_civil_war = yes
+			ASC = {
+				set_politics = {
+					ruling_party = libertarian_marxism
+				}
+				create_corps_commander = {
+					name = "Otto Bauer"
+					#picture = "Eduard_Dietl.tga"
+					traits = {trait_cautious}
+					skill = 3
+					id = 23
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Richard Bernaschek"
+					#picture = "Erhard_Raus.tga"
+					traits = { career_officer  inflexible_strategist}
+					skill = 3
+					id = 24
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Richard Bernaschek"
+					#picture = "Erhard_Raus.tga"
+					traits = {trait_reckless}
+					skill = 3
+					id = 25
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 1
+					logistics_skill = 3
+				}
+			}
+			AUS = {
+				add_popularity = {
+					ideology = despotism
+					popularity = 0.1
+				}
+				load_oob = "AUS_heimat"
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.10
+		title = austria.10.t
+		desc = austria.10.d
+		picture = GFX_report_event_french_resistance_02
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.10.a
+		}
+	}
+
+country_event = {
+	id = austria.11
+	title = austria.11.t
+	desc = austria.11.d
+	picture = GFX_report_event_french_resistance_02
+	is_triggered_only = yes
+
+	
+	fire_only_once = yes
+	
+	option = {
+		name = austria.11.a
+		add_ideas = AUS_despoticsupremacy
+		hidden_effect = {
+			country_event = { days = 34 id = austria.21 }
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = AUS_ai_route
+					option = DOLFUSS
+				}
+			}
+		}
+	}
+	option = {
+		name = austria.11.b
+		add_ideas = AUS_accsupremacy
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		remove_ideas = AUS_engelbert_dollfuss
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = AUS_ai_route
+					option = ROHM
+				}
+			}
+		}
+	}
+}
+	country_event = {
+		id = austria.12
+		title = austria.12.t
+		desc = austria.12.d
+		picture = GFX_report_event_french_resistance_02
+		is_triggered_only = yes
+
+	
+		fire_only_once = yes
+		
+		option = {
+			name = austria.12.a
+		}
+	}
+	
+	###################British protection
+	country_event = {
+		id = austria.13
+		title = austria.13.t
+		desc = austria.13.d
+		picture = GFX_report_event_french_resistance_02
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.13.a
+			give_guarantee = AUS
+			ai_chance = {
+				factor = 5
+			}
+		}
+
+		option = {
+			name = austria.13.b
+			ai_chance = {
+				factor = 5
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.14
+		title = austria.14.t
+		desc = austria.14.d
+		picture = GFX_report_event_french_resistance_02
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.14.a
+			give_guarantee = AUS
+			country_event = { days = 1 id = austria.15 }
+
+		 	PRS = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+			}
+		 	CZE = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+			}
+		 	HOL = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+			}
+		 	DEN = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+			}
+		 	LUX = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+			}
+			SWI = {
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+				add_opinion_modifier = { target = PRS modifier = PRS_austriantreebuff }
+			    add_ideas = AUS_circleofsteel
+
+			}
+			ai_chance = {
+				factor = 70
+			}
+		}
+
+		option = {
+			name = austria.14.b
+			ai_chance = {
+				factor = 1
+			}
+			country_event = { days = 1 id = austria.16 }
+		}
+	}
+
+	country_event = {
+		id = austria.15
+		title = austria.15.t
+		desc = austria.15.d
+		is_triggered_only = yes
+		fire_only_once = yes
+	
+		option = {
+			name = austria.15.a
+		}
+	}
+	country_event = {
+		id = austria.16
+		title = austria.16.t
+		desc = austria.16.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.16.a
+		}
+	}
+
+		#########Germany split suggestion, Pact with prussia focus
+	country_event = {
+		picture = GFX_AUS_Split
+		id = austria.17
+		title = austria.17.t
+		desc = austria.17.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			ai_chance = {
+				factor = 80
+			}
+			name = austria.17.a
+			PRS = {	add_ideas =  AUS_ausprustreaty }
+			AUS = {	add_ideas =  AUS_ausprustreaty}
+			AUS = {country_event = { days = 1 id = austria.19 }}
+		}
+		option = {
+			ai_chance = {
+				factor = 20
+			}
+			name = austria.17.b
+			PRS = {	add_timed_idea = { idea = PRS_alone_against_the_giant  days = 900 } }
+			AUS = {country_event = { days = 1 id = austria.20 }}
+		}
+	}
+
+	country_event = {
+		picture = GFX_AUS_Split
+		id = austria.18
+		title = austria.18.t
+		desc = austria.18.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.18.a
+			custom_effect_tooltip = hitler_coup_tooltip
+			ai_chance = {
+				factor = 40
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = HITLER
+					}
+				}
+			}
+			hidden_effect = {
+				add_ideas = AUS_Final_Compromise
+				kill_country_leader = yes
+				create_country_leader = {
+					name = "Adolf Hitler"
+					picture = "AUS_hitler.dds"
+					expire = "1965.1.1"
+					ideology = reactionary_populism
+					traits = {
+					}
+				}
+				set_politics = {
+					ruling_party = reactionism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = reactionism
+					popularity = 0.55
+				}
+				set_party_name = {
+				ideology = reactionism 
+				long_name = AUS_reactionism_party_adolf_long 
+				name = AUS_reactionism_party_adolf 
+				}
+			}
+		}
+		option = {
+			name = austria.18.b
+			ai_chance = {
+				#factor = 50
+				factor = 60
+				modifier = {
+					factor = 1000
+					OR = {
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = SCHUSCHNIGG
+						}
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = REPUBLIC
+						}
+					}
+				}
+			}
+			add_ideas = AUS_democracyprevailed
+		}
+	}
+
+	country_event = {
+		id = austria.19
+		title = austria.19.t
+		desc = austria.19.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.19.a
+		}
+	}
+
+	country_event = {
+		id = austria.20
+		title = austria.20.t
+		desc = austria.20.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.20.a
+		}
+	}
+
+	country_event = {
+		id = austria.21
+		title = austria.21.t
+		desc = austria.21.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.21.a
+			add_ideas = AUS_Dolfuss_Alone
+		}
+
+		option = {
+			name = austria.21.b
+			country_event = { days = 10 id = austria.22}
+		}
+	}
+
+	country_event = {
+		id = austria.22
+		title = austria.22.t
+		desc = austria.22.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.22.a
+			add_ideas = AUS_franzferdinand
+		}
+
+		option = {
+			name = austria.22.b
+			add_ideas = AUS_ottohabsburg
+		}
+
+		option = {
+			name = austria.22.c
+			add_ideas = AUS_adelheid
+			country_event = { days = 50 id = austria.23}
+		}
+	}
+		
+	country_event = {
+		id = austria.23
+		title = austria.23.t
+		desc = austria.23.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.23.a
+		}
+
+		option = {
+			name = austria.23.b
+			country_event = { days = 100 id = austria.24}
+		}
+	}
+
+	country_event = {
+		id = austria.24
+		title = austria.24.t
+		desc = austria.24.d
+		is_triggered_only = yes
+		fire_only_once = yes
+		
+		option = {
+			name = austria.24.a
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Adelheid I von Habsburg-Lothringen"
+				picture = "Portrait_kaiserin.tga"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy
+				traits = {
+					reichsprotektor_und_kaiserin
+				}
+			}
+			remove_ideas_with_trait = head_of_government
+			add_ideas = AUS_general_staff
+			remove_ideas = AUS_adelheid
+			add_ideas = AUS_despoticmonarchy
+		}
+	}
+
+	country_event = {
+		id = austria.25
+		title = austria.25.t
+		desc = austria.25.d
+		is_triggered_only = yes
+		fire_only_once = yes
+			
+		option = {
+			name = austria.25.a
+			ai_chance = {
+				factor = 6
+			}
+			AUS = { puppet = CZE }
+			CZE = {
+				create_country_leader = {
+					name = "Maximilian Eugen Von Habsburg-Lothringen"
+					desc = "POLITICS_ALEXEI_II_DESC"
+					picture = "gfx/leaders/AUS/AUS_max.tga"
+					expire = "1965.1.1"
+					ideology = reactionary_populism
+					traits = {
+					}
+				}
+				add_ideas = AUS_czesup 
+				set_politics = {
+					ruling_party = reactionism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = reactionism
+					popularity = 0.3
+				}
+				if = {
+					limit = {
+						has_country_flag = dolfuss_in_power
+						has_government = despotism
+					}
+					if = {
+						limit = {
+							CZE = { owns_state = 70 }
+						}
+						set_cosmetic_tag = CZE_AUS_czechoslovakia_protectorate
+					}
+					else = {
+						set_cosmetic_tag = CZE_AUS_protectorate
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							CZE = { owns_state = 70 }
+						}
+						set_cosmetic_tag = CZE_AUS_czechoslovakia_kingdom
+					}
+					else = {
+						set_cosmetic_tag = CZE_AUS_kingdom
+					}
+				}
+			}
+		}
+
+		option = {
+			ai_chance = {
+				factor = 4
+			}
+			name = austria.25.b
+			AUS = {
+				create_wargoal = {
+					type = take_state_focus
+					target = CZE
+				}
+				add_state_core = 9
+				add_state_core = 69
+				add_state_core = 74
+				add_state_core = 75	
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.28
+		title = austria.28.t
+		desc = austria.28.d
+		is_triggered_only = yes
+		fire_only_once = yes
+			
+		option = {
+			name = austria.28.a
+			 AUS = {country_event = { days = 63 id = austria.29}}
+			 add_popularity = {
+				ideology = conservatism
+				popularity = 0.4
+			}
+			 add_popularity = {
+				ideology = liberalism
+				popularity = 0.2
+			}
+			 add_popularity = {
+				ideology = social_democratism
+				popularity = 0.3
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.29
+		title = austria.29.t
+		desc = austria.29.d
+		is_triggered_only = yes
+		fire_only_once = yes
+			
+		option = {
+			name = austria.29.a
+			add_ideas = AUS_conservativesupremacy
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = SCHUSCHNIGG
+					}
+				}
+			}
+		}
+			
+		option = {
+			name = austria.29.b
+			set_politics = {
+				ruling_party = liberalism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.3
+			}
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = REPUBLIC
+					}
+				}
+			}
+		}
+			
+		option = {
+			name = austria.29.c
+			set_politics = {
+				ruling_party = social_democratism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.3
+			}
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = AUS_ai_route
+						option = REPUBLIC
+					}
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.30
+		title = austria.30.t
+		desc = austria.30.d
+		is_triggered_only = yes
+		fire_only_once = yes
+			
+		option = {
+			name = austria.30.a
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Otto I von Habsburg-Lothringen"
+				picture = "AUS_otto.tga"
+				expire = "1965.1.1"
+				ideology = social_conservatism
+				traits = {
+					benevolent
+				}
+			}
+			set_cosmetic_tag = AUS_empire
+		}
+	}
+
+	country_event = {
+		id = austria.64
+		title = austria.64.t
+		desc = austria.64.desc
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.64.a
+			give_guarantee = AUS
+			AUS = {
+				country_event = {
+					id = austria.65
+					days = 1
+				}
+			}
+			ai_chance = {
+				factor = 5
+			}
+		}
+		option = {
+			name = austria.64.b
+			AUS = {
+				country_event = {
+					id = austria.66
+					days = 1
+				}
+			}
+			ai_chance = {
+				factor = 5
+			}
+		}
+	}
+
+	country_event = {
+		id = austria.65
+		title = austria.65.t
+		desc = austria.65.desc
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.65.a
+		}
+	}
+
+	country_event = {
+		id = austria.66
+		title = austria.66.t
+		desc = austria.66.desc
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = austria.66.a
+		}
+	}
+
+###################GERMAN CAPITULATION#####################
+	country_event = {
+		id = austria.911
+		title = austria.911.t
+		desc = austria.911.d
+		fire_only_once = yes
+		trigger = {	
+			always = no
+
+			#AND = {
+			#	PRS = {
+			#		has_war_with = GER
+			#	}
+			#	FRA = {
+			#		has_war_with = GER
+			#	}
+			#	AUS = {
+			#		has_war_with = GER
+			#		#has_idea = AUS_ausprustreaty
+			#	}
+			#	NOT = {
+			#		AUS = {
+			#			has_government = accelerationism
+			#		}
+			#	}
+			#	GER = {
+			#		surrender_progress > 0.9
+			#	}
+			#}
+		}
+		mean_time_to_happen = {
+			days = 1
+		}
+		immediate = {
+			AUS = {
+			    #####add_state_core = 28
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 50
+				transfer_state = 54
+				transfer_state = 991
+				transfer_state = 42
+				transfer_state = 28
+			}
+			PRS = {
+				transfer_state = 55
+				transfer_state = 844
+				transfer_state = 51
+				transfer_state = 57
+				transfer_state = 56
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 64
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 65
+				transfer_state = 66
+				transfer_state = 67
+				transfer_state = 68
+				transfer_state = 58
+				transfer_state = 63
+				transfer_state = 68s
+			}
+			FRA = {
+				transfer_state = 959
+				transfer_state = 958
+			}
+		}
+		option = {
+			name = austria.911.a
+		}
+	}

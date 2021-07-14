@@ -1,0 +1,1037 @@
+#####################
+#	Mantetsu - Baba	#
+#####################
+
+add_namespace = man
+
+country_event = {	#exiles
+	id = man.1
+	title = man.1.t
+	desc = man.1.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = man.1.a
+		ai_chance = { factor = 1 }
+		set_country_flag = MAN_japan
+	}
+}
+country_event = {	#northern intervention
+	id = man.2
+	title = man.2.t
+	desc = man.2.d
+	picture = GFX_report_event_chinese_banditos
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.2.a
+		ai_chance = { factor = 1 }
+		remove_ideas = {
+			MAN_harbin_refugees
+		}
+		881 = {
+			remove_claim_by = MAN
+			add_core_of = MAN
+		}
+	}
+}
+country_event = {	#rip Zhang
+	id = man.3
+	title = man.3.t
+	desc = man.3.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.3.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+	}
+}
+country_event = {
+	id = man.4
+	title = man.4.t
+	desc = man.4.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.4.a
+		ai_chance = { factor = 1 }
+		MAN = { add_to_faction = KMT }
+	}
+	option = {
+		name = man.4.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.5
+	title = man.5.t
+	desc = man.5.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.5.a
+		ai_chance = { factor = 2 }
+		MAN = { add_to_faction = MON }
+	}
+	option = {
+		name = man.5.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.6
+	title = man.6.t
+	desc = man.6.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.6.a
+		ai_chance = { factor = 1 }
+		MAN = { add_to_faction = GDP }
+	}
+	option = {
+		name = man.6.b
+		ai_chance = { factor = 2 }
+		
+	}
+}
+country_event = {
+	id = man.7
+	title = man.7.t
+	desc = man.7.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.7.a
+		ai_chance = { factor = 3 }
+		MAN = { add_to_faction = SHA }
+	}
+	option = {
+		name = man.7.b
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#white terror
+	id = man.8
+	title = man.8.t
+	desc = man.8.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.8.a
+		ai_chance = { factor = 1 }
+		create_wargoal = {
+			type = annex_everything
+			target = XIA
+		}
+	}
+	option = {
+		name = man.8.b
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+	}
+}
+country_event = {	#declaration
+	id = man.9
+	title = man.9.t
+	desc = man.9.d
+	picture = GFX_report_event_textiles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.9.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = MAN_corporate_playground
+			add_idea = MAN_corporate_restraint
+		}
+		remove_ideas = {
+			MAN_kwantung_abuses
+		}
+	}
+}
+country_event = {	#exploitation ends
+	id = man.10
+	title = man.10.t
+	desc = man.10.d
+	picture = GFX_report_event_textiles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.10.a
+		ai_chance = { factor = 1 }
+		remove_ideas = {
+			MAN_corporate_playground
+		}
+		remove_ideas = {
+			MAN_kwantung_abuses
+		}
+	}
+}
+country_event = {	#weihaiwei
+	id = man.11
+	title = man.11.t
+	desc = man.11.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.11.a
+		ai_chance = { factor = 1 }
+		add_opinion_modifier = {
+			target = ENG
+			modifier = offered_support
+		}
+		ENG = {
+			add_opinion_modifier = {
+				target = KOR
+				modifier = offered_support
+			}
+		}
+		add_tech_bonus = { bonus = 1 uses = 2 category = industry }
+	}
+}
+country_event = {	#techno purge 2 electric boogaloo
+	id = man.12
+	title = man.12.t
+	desc = man.12.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.12.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.12
+		}
+	}
+}
+country_event = {	#emperor from japan
+	id = man.13
+	title = man.13.t
+	desc = man.13.d
+	picture = GFX_exhalted_leader
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.13.a #yasu - despot
+		ai_chance = { factor = 1 }
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASUHITO_MAN_DESC"
+			picture = "Portrait_Yasuhito.dds"
+			expire = "1965.1.1"
+			ideology = absolute_monarchy
+		}
+		set_politics = {
+			ruling_party  = despotism
+		}
+		add_political_power = 50
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.2
+		}
+	}
+}
+country_event = {	#new constitution
+	id = man.14
+	title = man.14.t
+	desc = man.14.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.14.a #technocrat path
+		ai_chance = { factor = 1 }
+		add_ideas = MAN_nobuhito
+		add_political_power = 50
+		add_stability = 0.1
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = man.14.b #despot path
+		ai_chance = { factor = 1 }
+		add_ideas = MAN_yasuhito
+		add_political_power = 25
+		add_stability = 0.12
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+}
+country_event = {	#uneasy peace
+	id = man.15
+	title = man.15.t
+	desc = man.15.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.15.a
+		ai_chance = { factor = 1 }
+		add_stability = 0.03
+		add_war_support = 0.03
+	}
+}
+country_event = {	#future of manchuria
+	id = man.16
+	title = man.16.t
+	desc = man.16.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.16.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			is_AI = yes
+		}
+		set_country_flag = MAN_the_impossible_task
+		hidden_effect = {
+			country_event = {	#Fugu plan goes awry
+				id = man.23
+				days = 30
+			}
+			ZHR = {
+				country_event = {	#ZHR intervenes
+					id = ZHR.100
+					days = 37
+				}
+			}
+			BYJ = {
+				country_event = {	#BYJ intervenes
+					id = byj.3
+					days = 42
+				}
+			}
+		}
+		add_stability = -0.1
+	}
+	option = {
+		name = man.16.b
+		ai_chance = { factor = 5 }
+		trigger = {
+			NOT = {
+				has_country_flag = MAN_japan
+			}
+		}
+		hidden_effect = {
+			set_country_flag = MAN_army_stepped_in
+		}
+		custom_effect_tooltip = MAN_army_stepped_in_tooltip
+	}
+	option = {
+		name = man.16.c
+		ai_chance = { factor = 5 }
+		trigger = {
+			has_country_flag = JAP_exiles_MAN
+		}
+		
+	}
+}
+country_event = {	#fengtian clique
+	id = man.17
+	title = man.17.t
+	desc = man.17.d
+	picture = GFX_report_event_trenches
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.17.a
+		ai_chance = { factor = 1 }
+		MAN = {
+			drop_cosmetic_tag = yes
+		}
+		hidden_effect = {
+			set_party_name = { 
+				ideology = despotism 
+				long_name = MAN_FNG_despotism_party_long
+				name = MAN_FNG_despotism_party
+			}
+			set_party_name = {
+				ideology = right_authoritarianism 
+				long_name = MAN_FNG_right_authoritarianism_party_long
+				name = MAN_FNG_right_authoritarianism_party
+			}
+			create_country_leader = {
+				name = "Zhang Xueliang"
+				desc = "POLITICS_XUELIANG_DESC"
+				picture = "Portrait_Zhang_Xueliang.dds"
+				expire = "1965.1.1"
+				ideology = military_junta
+				traits = {
+					#popular_figurehead
+				}
+			}
+			create_country_leader = {
+				name = "Zhang Zuolin"
+				desc = "POLITICS_ZUOLIN_DESC"
+				picture = "Portrait_Zhang_Zuolin1.dds"
+				expire = "1965.1.1"
+				ideology = military_dictatorship
+				traits = {
+					generallissimo
+				}
+			}
+			remove_unit_leader = 1950
+			remove_unit_leader = 1951
+			remove_unit_leader = 1952
+			remove_unit_leader = 1953
+			delete_unit_template_and_units = {
+				division_template = "Infantry Division"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Cavalry Division"
+			}
+			load_oob = "MAN_Fengtian_Army"
+			create_field_marshal = {
+				name = "Zhang Zuolin"
+				picture = "Zhang_Zuolin_g.dds"
+				traits = { old_guard }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Chen Shufan"
+				#picture = ".dds"
+				traits = {  }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Ma Zahanshan"
+				#picture = "Portrait_Ma_Zahanshan.dds"
+				traits = {  }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			set_province_name = {
+				id = 11771
+				name = Shenyang
+			}
+			set_province_name = {
+				id = 4572
+				name = Changchun
+			}
+			set_country_flag = MAN_fengtian_govt
+		}
+		custom_effect_tooltip = MAN_fengtian_takeover
+		custom_effect_tooltip = MAN_decided_tooltip
+	}
+}
+country_event = {	#corp review - Jap despots
+	id = man.18
+	title = man.18.t
+	desc = man.18.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.18.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#corp review techno +feng
+	id = man.181
+	title = man.181.t
+	desc = man.181.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.181.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#siege of mukden
+	id = man.19
+	title = man.19.t
+	desc = man.19.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.19.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = man.17
+			}
+		}
+		remove_ideas = {
+			MAN_kwantung_abuses
+		}
+	}
+	option = {
+		name = man.19.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = man.17
+			}
+		}
+		remove_ideas = {
+			MAN_kwantung_abuses
+		}
+	}
+}
+country_event = {	#aristorcracy
+	id = man.20
+	title = man.20.t
+	desc = man.20.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.20.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+		add_stability = 0.12
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = man.20.b
+		ai_chance = { factor = 1 }
+		add_political_power = -25
+		add_stability = 0.07
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.07
+		}
+	}
+	option = {
+		name = man.20.c
+		ai_chance = { factor = 1 }
+		add_political_power = 5
+		add_stability = 0.2
+		add_popularity = {
+			ideology = despotism
+			popularity= -0.1
+		}
+	}
+}
+country_event = {	#status of manchus
+	id = man.21
+	title = man.21.t
+	desc = man.21.d
+	picture = GFX_report_event_chinese_banditos
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.21.a
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+		add_stability = 0.05
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = man.21.b
+		ai_chance = { factor = 1 }
+		add_political_power = 75
+		add_stability = -0.1
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.05
+		}
+	}
+	option = {
+		name = man.21.c
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		add_stability = 0.07
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.07
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.07
+		}
+	}
+}
+country_event = {	#coup BYJ
+	id = man.22
+	title = man.22.t
+	desc = man.22.d
+	picture = GFX_report_event_forbidden_city
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.22.a
+		ai_chance = { factor = 50 }
+		declare_war_on = {
+			target = BYJ
+			type = annex_everything
+		}
+	}
+	option = {
+		name = man.22.b
+		ai_chance = { factor = 50 }
+		annex_country = {
+			target = BYJ
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			MAN = {				
+				add_state_core = 611
+				add_state_core = 612
+				add_state_core = 746
+				add_state_core = 614
+				add_state_core = 872
+				add_state_core = 615
+				add_state_core = 866
+				add_state_core = 860
+				add_state_core = 622
+				add_state_core = 792
+				add_state_core = 871
+				add_state_core = 607
+				add_state_core = 744
+				add_state_core = 917
+				add_state_core = 620
+				
+			}
+			BYJ = {
+				every_unit_leader = {
+					set_nationality = MAN
+				}
+			}
+		}
+	}
+}
+country_event = {	#The loss of the Fugu colony
+	id = man.23
+	title = man.23.t
+	desc = man.23.d
+	picture = GFX_CHI_troops_gen
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.23.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#Prose for Dogs
+	id = man.24
+	title = man.24.t
+	desc = man.24.d
+	picture = GFX_exhalted_leader
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.24.a
+		ai_chance = { factor = 1 }
+		
+	}
+	option = {
+		name = man.24.b
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = man.241
+			days = 7
+		}
+	}
+}
+country_event = {	#Week in Le Soleil
+	id = man.241
+	title = man.241.t
+	desc = man.241.d
+	picture = GFX_exhalted_leader
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.241.a
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.12
+		}
+	}
+	option = {
+		name = man.241.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.06
+		}
+	}
+}
+country_event = {	#zhili to help vs hunan? northern coalition
+	id = man.25
+	title = man.25.t
+	desc = man.25.d
+	picture = GFX_CHI_winter_soldiers
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes - annex
+		name = man.25.a
+		ai_chance = { factor = 1 }
+		annex_country = {
+			target = SHA
+			transfer_troops = yes
+		}
+		hidden_effect = {
+			MAN = {
+				add_state_core = 597
+				add_state_core = 918
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 870
+				add_state_core = 598
+				add_state_core = 878
+				add_state_core = 879
+				add_state_core = 606
+				add_state_core = 868
+				add_state_core = 893
+				add_state_core = 743				
+			}
+			SHA = {
+				every_unit_leader = {
+					set_nationality = MAN
+				}
+			}
+		}
+	}
+	option = {	#yes - puppet
+		name = man.25.b
+		ai_chance = { factor = 1 }
+		MAN = {
+			puppet = SHA
+		}
+	}
+	option = {	#no
+		name = man.25.c
+		ai_chance = { factor = 2 }
+		add_political_power = -25
+	}
+}
+country_event = { #MAN returned home
+	id = man.26
+	title = man.26.t
+	desc = man.26.d
+	picture = GFX_fireworks
+	
+	fire_only_once = yes
+	trigger = {
+		MAN = {
+			has_full_control_of_state = 282
+		}
+		JPR = {
+			exists = no
+		}
+	}
+	
+	option = {	#homeland reclaimed
+		name = man.26.a
+		ai_chance = { factor = 1 }
+		set_country_flag = MAN_returned_home
+		hidden_effect = {
+			country_event = {
+				id = news.104
+				days = 2
+			}
+			every_state = {
+				limit = {
+					is_owned_by = MAN
+					is_core_of = JPR
+				}
+				add_core_of = MAN
+			}
+			set_capital = 282
+		}
+		if = {
+			limit = {
+				has_government = despotism
+			}
+			set_cosmetic_tag = MAN_JAP_reclaimed
+		}
+		
+	}
+}
+country_event = {	#befriend IKR if they exist
+	id = man.27
+	title = man.27.t
+	desc = man.27.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	trigger = {
+		tag = MAN
+		MAN = {
+			has_country_flag = MAN_japan
+		}
+		IKR = {
+			exists = yes
+			is_puppet = no
+			has_war = no
+		}
+	}
+	
+	option = {	#send them a missive
+		name = man.27.a
+		ai_chance = { factor = 100 }
+		IKR = {
+			country_event = {
+				id = man.28
+			}
+		}
+	}
+	option = {	#they're on their own
+		name = man.27.b
+		ai_chance = { factor = 0 }
+		
+	}
+}
+country_event = {	#IKR - MAN wants to help us
+	id = man.28
+	title = man.28.t
+	desc = man.28.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#k
+		name = man.28.a
+		ai_chance = { factor = 99 }
+		MAN = {
+			diplomatic_relation = {
+				country = IKR
+				relation = guarantee
+				active = yes
+			}
+		}
+		IKR = {
+			diplomatic_relation = {
+				country = MAN
+				relation = guarantee
+				active = yes
+			}
+		}
+		add_opinion_modifier = {
+			target = IKR
+			modifier = offered_support
+		}
+		IKR = {
+			add_opinion_modifier = {
+				target = MAN
+				modifier = offered_support
+			}
+		}
+		MAN = {
+			country_event = {
+				id = man.29
+			}
+		}
+	}
+	option = {	#no - why tho?
+		name = man.28.b
+		ai_chance = { factor = 1 }
+		MAN = {
+			country_event = {
+				id = man.30
+			}
+		}
+	}
+}
+country_event = {
+	id = man.29
+	title = man.29.t
+	desc = man.29.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.29.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.30
+	title = man.30.t
+	desc = man.30.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.30.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.31
+	title = man.31.t
+	desc = man.31.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.31.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.32
+	title = man.32.t
+	desc = man.32.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.32.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.33
+	title = man.33.t
+	desc = man.33.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.33.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.34
+	title = man.34.t
+	desc = man.34.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.34.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {
+	id = man.35
+	title = man.35.t
+	desc = man.35.d
+	picture = GFX_exiles_MAN
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = man.35.a
+		ai_chance = { factor = 1 }
+		
+	}
+}

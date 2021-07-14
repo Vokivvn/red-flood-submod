@@ -1,0 +1,205 @@
+shared_focus = {
+	id = ITA_transforismo_36
+	icon = GFX_focus_ITA_transforismo_36
+	cost = 5
+	x = 4
+	y = 0
+	completion_reward = {
+		country_event = {
+			id = italy.1
+		}
+	}
+}
+	
+shared_focus = {
+	id = ITA_partido_radical
+	icon = GFX_focus_ITA_partido_radical
+	cost = 5
+	relative_position_id = ITA_transforismo_36
+	prerequisite = {
+		focus = ITA_transforismo_36
+	}
+	available = {
+		has_country_flag = ITA_pri_victory
+	}
+	mutually_exclusive = {
+		focus = ITA_forgone_conclusion
+	}
+	mutually_exclusive = {
+		focus = ITA_christian_socialism
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		load_focus_tree = ITA_soc_lib
+		set_party_name = { 
+			ideology = liberalism 
+			long_name = ITA_liberalism_party_dynamic_long 
+			name = ITA_liberalism_party_dynamic 
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Francesco Saverio Nitti"
+			desc = ""
+			picture = "Portrait_ITA_Francesco_Nitti.tga"
+			expire = "1965.1.1"
+			ideology = social_liberalism
+			traits = {
+			}
+		}
+		hidden_effect = {
+			add_ideas = {
+				ITA_hog_Francesco_Nitti
+				ITA_for_Ugo_La_Malfa
+				ITA_eco_Bruno_Visentini
+				ITA_sec_Ferruccio_Parri
+			}
+		}
+	}
+}
+	
+shared_focus = {
+	id = ITA_forgone_conclusion
+	icon = GFX_focus_ITA_forgone_conclusion
+	cost = 5
+	relative_position_id = ITA_transforismo_36
+	prerequisite = {
+		focus = ITA_transforismo_36
+	}
+	available = {
+		has_country_flag = ITA_pudi_stays
+	}
+	mutually_exclusive = {
+		focus = ITA_partido_radical
+	}
+	mutually_exclusive = {
+		focus = ITA_christian_socialism
+	}
+	x = 2
+	y = 1
+	completion_reward = {
+		country_event = {
+			id = italy.2
+		}
+	}
+}
+	
+shared_focus = {
+	id = ITA_trasformato
+	icon = GFX_focus_ITA_transforismo_36
+	cost = 2
+	relative_position_id = ITA_transforismo_36
+	prerequisite = {
+		focus = ITA_forgone_conclusion
+	}
+	x = 2
+	y = 2
+	completion_reward = {
+		country_event = {
+			id = italy.3
+		}
+		load_focus_tree = { 
+			tree = ITA_soc_con 
+			keep_completed = yes
+		}
+	}
+}
+	
+shared_focus = {
+	id = ITA_the_economy
+	icon = GFX_focus_ITA_the_economy
+	cost = 1
+	relative_position_id = ITA_trasformato
+	prerequisite = {
+		focus = ITA_trasformato
+	}
+	x = -2
+	y = 1
+	completion_reward = {
+		add_political_power = 15
+		custom_effect_tooltip = "Unlocks the economic policy focus tree."
+	}
+}
+	
+shared_focus = {
+	id = ITA_the_empire
+	icon = GFX_focus_ITA_the_empire
+	cost = 1
+	relative_position_id = ITA_trasformato
+	prerequisite = {
+		focus = ITA_trasformato
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		add_political_power = 15
+		custom_effect_tooltip = "ITA_THE_EMPIRE_TT"
+	}
+}
+	
+shared_focus = {
+	id = ITA_foreign_relations
+	icon = GFX_focus_ITA_foreign_relations
+	cost = 1
+	relative_position_id = ITA_trasformato
+	prerequisite = {
+		focus = ITA_trasformato
+	}
+	x = 2
+	y = 1
+	completion_reward = {
+		add_political_power = 15
+		custom_effect_tooltip = "Unlocks the foreign policy focus tree."
+	}
+}
+
+shared_focus = {
+	id = ITA_christian_socialism
+	icon = GFX_focus_ITA_christian_socialist_italy
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = {
+		focus = ITA_transforismo_36
+	}
+	available = {
+		has_country_flag = ITA_ln_victory
+	}
+	mutually_exclusive = {
+		focus = ITA_partido_radical
+	}
+	mutually_exclusive = {
+		focus = ITA_forgone_conclusion
+	}
+	completion_reward = {
+		retire_country_leader = yes
+		load_focus_tree = { 
+			tree = ITA_natrej_starter 
+			keep_completed = yes
+		}
+		hidden_effect = {
+			set_rule = {
+				can_join_factions = no
+			}
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+			set_party_name = { 
+				ideology = liberalism 
+				long_name = ITA_liberalism_party_dynamic_long 
+				name = ITA_liberalism_party_dynamic 
+			}
+			create_country_leader = {
+				name = "Francesco Saverio Nitti"
+				desc = ""
+				picture = "Portrait_ITA_Francesco_Nitti.tga"
+				expire = "1965.1.1"
+				ideology = social_liberalism
+				traits = {
+				}
+			}
+			add_ideas = ITA_hog_Luigi_Struzo
+		}
+	}
+}

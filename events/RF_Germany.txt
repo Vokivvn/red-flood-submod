@@ -1,0 +1,525 @@
+add_namespace = germany
+
+#Levi's Decision
+country_event = {
+	id = germany.1
+	title = germany.1.t
+	desc = germany.1.desc
+	picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #Thank you for everthing, Comrade Levi
+		name = germany.1.a
+		add_political_power = -15
+		hidden_effect = {
+			country_event = {
+				id = germany.2
+				days = 10
+			}
+		}
+	}
+}
+#Levi's Decision
+country_event = {
+	id = germany.2
+	title = germany.2.t
+	desc = germany.2.desc
+	picture = GFX_report_event_GER_politburo
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = germany.3
+				days = 15
+			}
+		}
+	}
+	option = { #Mann
+		name = germany.2.a
+		set_country_flag = mann_leader
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = GER_ai_route
+							option = KPD
+						}
+						has_game_rule = {
+							rule = GER_ai_route
+							option = RANDOM
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #Brecht
+		name = germany.2.b
+		set_country_flag = brecht_leader
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = GER_ai_route
+							option = KPD
+						}
+						has_game_rule = {
+							rule = GER_ai_route
+							option = RANDOM
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #Seghers
+		name = germany.2.c
+		set_country_flag = seghers_leader
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = GER_ai_route
+							option = KPD
+						}
+						has_game_rule = {
+							rule = GER_ai_route
+							option = RANDOM
+						}
+					}
+				}
+			}
+		}
+	}
+	option = { #None
+		name = germany.2.d
+		set_country_flag = kpd_split
+		add_political_power = 10
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = GER_ai_route
+					option = KPD
+				}
+			}
+		}
+	}
+}
+#Der Reichsrätekongress
+country_event = {
+	id = germany.3
+	title = germany.3.t
+	desc = germany.3.desc
+	picture = GFX_report_event_GER_politburo
+	
+	is_triggered_only = yes
+	
+	option = { #NMAPD
+		name = germany.3.a
+		set_country_flag = nmapd_victory
+		ai_chance = {
+			base = 40
+			modifier = {
+				factor = 200
+				has_game_rule = {
+					rule = GER_ai_route
+					option = NMAPD
+				}
+			}
+		}
+	}
+	option = { #USPD
+		name = germany.3.b
+		set_country_flag = uspd_victory
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 500
+				has_game_rule = {
+					rule = GER_ai_route
+					option = USPD
+				}
+			}
+		}
+	}
+	option = { #KPD
+		name = germany.3.c
+		trigger = {
+			NOT = {
+				has_country_flag = kpd_split
+			}
+		}
+		set_country_flag = kpd_victory
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 400
+				has_game_rule = {
+					rule = GER_ai_route
+					option = KPD
+				}
+			}
+		}
+	}
+	option = { #KPD/A
+		name = germany.3.d
+		trigger = {
+			has_country_flag = kpd_split
+		}
+		set_country_flag = kpda_victory
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 400
+				has_game_rule = {
+					rule = GER_ai_route
+					option = KPDA
+				}
+			}
+		}
+	}
+	option = { #KPD/S
+		name = germany.3.e
+		trigger = {
+			has_country_flag = kpd_split
+		}
+		set_country_flag = kpds_victory
+		ai_chance = {
+			base = 25
+			modifier = {
+				factor = 600
+				has_game_rule = {
+					rule = GER_ai_route
+					option = KPDS
+				}
+			}
+		}
+	}
+}
+#NMAPD Victory
+country_event = {
+	id = germany.4
+	title = germany.4.t
+	desc = germany.4.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.4.a
+		add_political_power = 15
+	}
+}
+#NMAPD Split
+country_event = {
+	id = germany.444
+	title = germany.444.t
+	desc = germany.444.desc
+	is_triggered_only = yes
+
+	option = {
+		#Goebbels Stay
+		name = germany.444.a
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		set_party_name = { 
+			ideology = vanguard_socialism 
+			long_name = GER_vanguard_socialism_party_long_nmapdL
+			name = GER_vanguard_socialism_party_nmapdL  
+		}
+		set_country_flag = nmapd_goebbels
+		create_country_leader = {
+			name = "Paul Joseph Goebbels"
+			desc = "POLITICS_Goebbels_DESC"
+			picture = "Portrait_GER_Joseph_Goebbels.tga"
+			expire = "1965.1.1"
+			ideology = national_vanguardism
+			traits = {
+
+			}
+		}
+		hidden_effect = {
+			set_cosmetic_tag = GER_nmapd
+		}
+		country_event = {
+			id = germany.4
+			days = 3
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = GER_ai_route
+					option = NMAPD
+				}
+			}
+		}
+	}
+
+	option = {
+		#Reventlow Succeeds
+		name = germany.444.b
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = vanguard_socialism
+		}
+		set_party_name = { 
+			ideology = vanguard_socialism 
+			long_name = GER_vanguard_socialism_party_long_nmapdR
+			name = GER_vanguard_socialism_party_nmapdR
+		}
+		set_country_flag = nmapd_reventlow
+		create_country_leader = {
+			name = "Ernst Graf zu Reventlow"
+			desc = "POLITICS_Reventlow_DESC"
+			picture = "Portrait_GER_Ernst_zu_Reventlow.tga"
+			expire = "1965.1.1"
+			ideology = national_vanguardism
+			traits = {
+			}
+		}
+		hidden_effect = {
+			set_cosmetic_tag = GER_heidnischer_sozialismus
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 10000
+				has_game_rule = {
+					rule = GER_ai_route
+					option = PAGANBOL
+				}
+			}
+		}
+	}
+}
+
+#USPD Victory
+country_event = {
+	id = germany.5
+	title = germany.5.t
+	desc = germany.5.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.5.a
+		add_political_power = 15	
+	}
+}
+#KPD Victory
+country_event = {
+	id = germany.6
+	title = germany.6.t
+	desc = germany.6.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.6.a
+		add_political_power = 15	
+	}
+}
+#KPD/A Victory
+country_event = {
+	id = germany.7
+	title = germany.7.t
+	desc = germany.7.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.7.a
+		add_political_power = 15	
+	}
+}
+#KPD/S Victory
+country_event = {
+	id = germany.8
+	title = germany.8.t
+	desc = germany.8.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.8.a
+		add_political_power = 15	
+	}
+}
+
+#The Bavaria Question
+country_event = {
+	id = germany.bavaria
+	title = germany.bavaria.t
+	desc = germany.bavaria.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.bavaria.a
+		remove_ideas = GER_backward_south
+		add_stability = 0.05
+		add_political_power = -100
+	}
+	option = { #
+		name = germany.bavaria.b
+		remove_ideas = GER_backward_south
+		add_stability = -0.05
+		add_political_power = 100
+	}
+}
+#Weltkongress
+country_event = {
+	id = germany.9
+	title = germany.9.t
+	desc = germany.9.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.9.a
+		add_political_power = 15	
+	}
+}
+#Joint expeditions
+country_event = {
+	id = germany.10
+	title = germany.10.t
+	desc = germany.10.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #
+		name = germany.10.a
+		add_political_power = 50
+		navy_experience = 50
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = naval_doctrine
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = huge_decrease
+		}
+		ai_chance = { factor = 0 }
+	}
+	option = { #
+		name = germany.10.b
+		add_political_power = -75
+		navy_experience = 25
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = naval_doctrine
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = huge_increase
+		}
+		GER = {
+			navy_experience = 25
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		ai_chance = { factor = 1}	
+	}
+	option = { #
+		name = germany.10.c
+		add_political_power = 50
+		add_opinion_modifier = {
+			target = GER
+			modifier = huge_decrease
+		}
+	}
+}
+
+country_event = {
+	id = germany.11
+	title = germany.11.t
+	desc = germany.11.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = germany.11.a
+		trigger = {
+			has_government = vanguard_socialism
+		}
+		add_political_power = -25
+		add_stability = -0.05
+	}
+	option = {
+		name = germany.11.b
+		add_stability = 0.05
+		add_political_power = 50
+	}
+	option = {
+		name = germany.11.c
+		trigger = {
+			OR = {
+				has_government = libertarian_marxism
+				has_government = social_democratism
+				has_completed_focus = GER_kpdavictory
+				has_completed_focus = GER_heidnischersozialismus
+			}
+		}
+		add_political_power = -25
+		add_stability = 0.05
+		if ={
+			limit = {
+				has_government = social_democratism
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+		if ={
+			limit = {
+				has_government = libertarian_marxism
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.05
+			}
+		}
+		if ={
+			limit = {
+				has_government = vanguard_socialism
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.05
+			}
+		}
+	}
+}

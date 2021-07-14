@@ -1,0 +1,1013 @@
+	focus_tree = {
+	id = TUA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TUA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+	#Focus for The Free Territory
+	focus = {
+		id = TUA_the_free_territory
+		icon = GFX_TUA_the_free_territory-21646
+		x = 15
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		completion_reward = {
+			country_event = 
+			{
+				days = 1
+				id = tuareg.1
+			}
+		}
+	}
+
+	#Focus for Eternally Fighting Clans
+	focus = {
+		id = TUA_eternally_fighting_clans
+		icon = GFX_TUA_eternally_fighting_clans-21649
+		x = 13
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_free_territory }
+		completion_reward = {
+			country_event = 
+			{
+			days = 1
+			id = tuareg.2
+			}
+		}
+	}
+
+	#Focus for Saharan Slave Trade
+	focus = {
+		id = TUA_saharan_slave_trade
+		icon = GFX_TUA_saharan_slave_trade-21651
+		x = 13
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_eternally_fighting_clans }
+		completion_reward = {
+			country_event = 
+			{
+				days = 1
+				id = tuareg.3
+			}
+		}
+	}
+
+	#Focus for Unshakeable Faith in Allah
+	focus = {
+		id = TUA_unshakeable_faith_in_allah
+		icon = GFX_TUA_unshakeable_faith_in_allah-21650
+		x = 17
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_free_territory }
+		completion_reward = {
+			country_event = 
+			{
+				days = 1
+				id = tuareg.4
+			}
+		}
+	}
+
+	#Focus for Former French Rule
+	focus = 
+	{
+		id = TUA_former_french_rule
+		icon = GFX_TUA_former_french_rule-21652
+		x = 17
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_unshakeable_faith_in_allah }
+		completion_reward = 
+		{
+			country_event = 
+			{
+				days = 1
+				id = tuareg.5
+			}
+		}
+	}
+
+	#Focus for Shifting Sands
+	focus = 
+	{
+		id = TUA_shifting_sands
+		icon = GFX_TUA_shifting_sands-21653
+		x = 15
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TUA_former_french_rule 
+		}
+		prerequisite = { 
+			focus = TUA_saharan_slave_trade 
+		}
+		completion_reward = {
+			country_event = 
+			{
+				days = 1
+				id = tuareg.6
+			}
+		}
+	}
+
+	#Focus for The Unifier
+	focus = {
+		id = TUA_the_unifier
+		icon = GFX_TUA_the_unifier-21657
+		x = 9
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_shifting_sands }
+		available = {
+			has_country_flag = TUA_unifier
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "Ag Mohammed Wau Teguidda Kaocen"
+				desc = "POLITICS_AG_MOHAMMED_DESC"
+				picture = "Portrait_Tuareg_Ag_Mohammed.dds"
+				expire = "1965.1.1"
+				ideology = religious_fundamentalism
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = reactionism
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 1
+			}
+			clr_country_flag = anarchist_army
+		}
+	}
+
+	#Focus for The Liberator
+	focus = 
+	{
+		id = TUA_the_liberator
+		icon = GFX_TUA_the_liberator-21658
+		x = 15
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_shifting_sands }
+		available = {
+			has_country_flag = TUA_liberator
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "Hamani Diori"
+				desc = "POLITICS_HAMANI_DIORI_DESC"
+				picture = "Portrait_Tuareg_Hamani_Diori.dds"
+				expire = "1965.1.1"
+				ideology = national_conservatism
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = conservatism
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 1
+			}
+			clr_country_flag = anarchist_army
+		}
+	}
+
+	#Focus for The Wrath
+	focus = 
+	{
+		id = TUA_the_wrath
+		icon = GFX_TUA_the_wrath-21659
+		x = 21
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_shifting_sands }
+		available = {
+			has_country_flag = TUA_wraith
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "Raymond Coche"
+				desc = "POLITICS_RAYMOND_COCHE_DESC"
+				picture = "Portrait_Tuareg_Raymond_Coche.dds"
+				expire = "1965.1.1"
+				ideology = ethno_futurism
+				traits = {
+				}
+			}
+			set_politics = {
+				ruling_party = accelerationism
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 1
+			}
+			clr_country_flag = anarchist_army
+		}
+	}
+
+	#Focus for Amenukal of Tuaregs
+	focus = {
+		id = TUA_amenukal_of_tuaregs
+		icon = GFX_TUA_amenukal_of_tuaregs-21661
+		x = 9
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_unifier }
+		completion_reward = {
+			add_country_leader_trait = TUA_amenukal
+		}
+	}
+
+	#Focus for Keep Traditions Safe
+	focus = {
+		id = TUA_keep_traditions_safe
+		icon = GFX_TUA_keep_traditions_safe-21662
+		x = 7
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_amenukal_of_tuaregs }
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for What a Tuareg Is...
+	focus = {
+		id = TUA_what_a_tuareg_is
+		icon = GFX_TUA_what_a_tuareg_is-21674
+		x = 7
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_keep_traditions_safe }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TUA_saharan_slave_trade
+				add_idea = TUA_tuareg_identity
+		}
+		}
+	}
+
+	#Focus for ...Without His Slaves?
+	focus = {
+		id = TUA_without_his_slaves
+		icon = GFX_TUA_without_his_slaves-21677
+		x = 7
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_what_a_tuareg_is }
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Ensure Clan Loyalty
+	focus = {
+		id = TUA_ensure_clan_loyalty
+		icon = GFX_TUA_ensure_clan_loyalty-21665
+		x = 9
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = {  focus = TUA_amenukal_of_tuaregs
+		}
+		completion_reward = {
+			country_event = {
+			id = tuareg.7
+		}
+		}
+	}
+
+	#Focus for Faith in Allah
+	focus = {
+		id = TUA_faith_in_allah
+		icon = GFX_TUA_faith_in_allah-21675
+		x = 9
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_ensure_clan_loyalty }
+		completion_reward = {
+			add_ideas = {
+			TUA_islamic_faith
+		}
+		}
+	}
+
+	#Focus for Is Faith in Amenukal
+	focus = {
+		id = TUA_is_faith_in_amenukal
+		icon = GFX_TUA_is_faith_in_amenukal-21678
+		x = 9
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_faith_in_allah }
+		completion_reward = {
+			swap_ideas = {
+remove_idea = TUA_islamic_faith
+add_idea = TUA_faith_in_amenukal
+}
+hidden_effect = {
+country_event = {
+id = tuareg.16
+days = 5
+}
+}
+		}
+	}
+
+	#Focus for Warrior Spirit
+	focus = {
+		id = TUA_warrior_spirit
+		icon = GFX_TUA_warrior_spirit-21673
+		x = 11
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_amenukal_of_tuaregs }
+		completion_reward = {
+			add_ideas = TUA_warrior_culture
+		}
+	}
+
+	#Focus for Raiders of Sands
+	focus = {
+		id = TUA_raiders_of_sands
+		icon = GFX_TUA_raiders_of_sands-21676
+		x = 11
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_warrior_spirit }
+		completion_reward = {
+			swap_ideas = {
+remove_idea = TUA_warrior_culture
+add_idea = TUA_warrior_culture_1  
+}
+		}
+	}
+
+	#Focus for Ikelan Meat Shields
+	focus = {
+		id = TUA_ikelan_meat_shields
+		icon = GFX_TUA_ikelan_meat_shields-21679
+		x = 11
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_raiders_of_sands }
+		completion_reward = {
+			add_manpower = 19538
+		}
+	}
+
+	#Focus for Clans United Under Amenukal
+	focus = {
+		id = TUA_clans_united_under_amenukal
+		icon = GFX_TUA_clans_united_under_amenukal-21680
+		x = 9
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TUA_without_his_slaves 
+		}
+		prerequisite = { 
+			focus = TUA_is_faith_in_amenukal 
+		}
+		prerequisite = { 
+			focus = TUA_ikelan_meat_shields 
+		}
+		completion_reward = {
+			remove_ideas = {
+TUA_statelesness
+}
+		}
+	}
+
+	#Focus for Dictatorial Democracy
+	focus = {
+		id = TUA_dictatorial_democracy
+		icon = GFX_TUA_dictatorial_democracy-21681
+		x = 15
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_liberator }
+		completion_reward = {
+			add_country_leader_trait = TUA_democratic_dictator
+		}
+	}
+
+	#Focus for Create Bureaucracy
+	focus = {
+		id = TUA_create_bureaucracy
+		icon = GFX_TUA_create_bureaucracy-21682
+		x = 13
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_dictatorial_democracy }
+		completion_reward = {
+			country_event = {
+id = tuareg.8
+}
+		}
+	}
+
+	#Focus for ...And Corrupt It
+	focus = {
+		id = TUA_and_corrupt_it
+		icon = GFX_TUA_and_corrupt_it-21685
+		x = 13
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_create_bureaucracy }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TUA_bureaucracy
+				add_idea = TUA_corrupted_bureaucracy
+			}
+		}
+	}
+
+	#Focus for Capitalism With Slave Trade
+	focus = {
+		id = TUA_capitalism_with_slave_trade
+		icon = GFX_TUA_capitalism_with_slave_trade-21688
+		x = 13
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_and_corrupt_it }
+		completion_reward = {
+			random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 2 add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+		}
+	}
+} #This may not be in the right place. If your focus tree is having issues, check the above focus, as this closing brace was added to close the focus.
+
+	#Focus for One Party
+	focus = {
+		id = TUA_one_party
+		icon = GFX_TUA_one_party-21683
+		x = 15
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_dictatorial_democracy }
+		completion_reward = {
+			add_ideas = TUA_one_party
+		}
+	}
+
+	#Focus for And One President
+	focus = {
+		id = TUA_and_one_president
+		icon = GFX_TUA_and_one_president-21686
+		x = 15
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_one_party }
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Crush all Protests
+	focus = {
+		id = TUA_crush_all_protests
+		icon = GFX_TUA_crush_all_protests-21689
+		x = 15
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_and_one_president }
+		completion_reward = {
+			add_stability = 0.50
+add_manpower = -20431
+		}
+	}
+
+	#Focus for Take Soldiers from the Clans
+	focus = {
+		id = TUA_take_soldiers_from_the_clans
+		icon = GFX_TUA_take_soldiers_from_the_clans-21684
+		x = 17
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_dictatorial_democracy }
+		completion_reward = {
+			939 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Crush Resistance
+	focus = {
+		id = TUA_crush_resistance
+		icon = GFX_TUA_crush_resistance-21690
+		x = 17
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_take_soldiers_from_the_clans }
+		completion_reward = {
+			add_war_support = 0.10
+			add_manpower = -14392
+		}
+	}
+
+	#Focus for Mandatory Military
+	focus = 
+	{
+		id = TUA_mandatory_military
+		icon = GFX_TUA_mandatory_military-21691
+		x = 17
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_crush_resistance }
+		completion_reward = 
+		{
+			random_owned_controlled_state = { limit = { free_building_slots = { building = arms_factory size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			add_ideas = extensive_conscription
+		}
+	}
+ #This may not be in the right place. If your focus tree is having issues, check the above focus, as this closing brace was added to close the focus.
+
+	#Focus for I am your Saviour
+	focus = {
+		id = TUA_i_am_your_saviour
+		icon = GFX_TUA_i_am_your_saviour-21692
+		x = 15
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TUA_mandatory_military 
+		}
+		prerequisite = { 
+			focus = TUA_crush_all_protests 
+		}
+		prerequisite = { 
+			focus = TUA_capitalism_with_slave_trade 
+		}
+		completion_reward = {
+			remove_ideas = {
+				TUA_statelesness
+			}
+		}
+	}
+
+	#Focus for Man from the Future
+	focus = {
+		id = TUA_man_from_the_future
+		icon = GFX_TUA_man_from_the_future-21693
+		x = 21
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_wrath }
+		completion_reward = {
+			add_country_leader_trait = TUA_man_from_the_future
+		}
+	}
+
+	#Focus for All that is Inside the State
+	focus = {
+		id = TUA_all_that_is_inside_the_state
+		icon = GFX_TUA_all_that_is_inside_the_state-21694
+		x = 19
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_man_from_the_future }
+		completion_reward = {
+			add_stability = -0.1
+			939 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes	
+				}
+			}
+		}
+	}
+
+	#Focus for ...Belongs to It
+	focus = {
+		id = TUA_belongs_to_it
+		icon = GFX_TUA_belongs_to_it-21698
+		x = 19
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_all_that_is_inside_the_state }
+		completion_reward = {
+			939 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes	
+				}
+			}
+			939 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes	
+				}
+			}
+			781 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes	
+				}
+			}
+		}
+	}
+
+	#Focus for Planned Economy with no Economy
+	focus = {
+		id = TUA_planned_economy_with_no_economy
+		icon = GFX_TUA_planned_economy_with_no_economy-21699
+		x = 19
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_belongs_to_it }
+		completion_reward = {
+			add_ideas = { TUA_planned_economy }
+		}
+	}
+
+	#Focus for We are Something New
+	focus = {
+		id = TUA_we_are_something_new
+		icon = GFX_TUA_we_are_something_new-21695
+		x = 21
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_man_from_the_future }
+		completion_reward = {
+			add_political_power = 300
+		}
+	}
+
+	#Focus for Esoteric Practices
+	focus = {
+		id = TUA_esoteric_practices
+		icon = GFX_TUA_esoteric_practices-21700
+		x = 21
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_we_are_something_new }
+		completion_reward = {
+			country_event = tuareg.9
+		}
+	}
+
+	#Focus for Chosen of Jabrail
+	focus = {
+		id = TUA_chosen_of_jabrail
+		icon = GFX_TUA_chosen_of_jabrail-21703
+		x = 21
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_esoteric_practices }
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	#Focus for The Black Order
+	focus = {
+		id = TUA_the_black_order
+		icon = GFX_TUA_the_black_order-21696
+		x = 23
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_man_from_the_future }
+		completion_reward = {
+			add_ideas = {
+				TUA_black_order_of_coche
+			}
+		}
+	}
+
+	#Focus for Raiders of Tomorrow
+	focus = {
+		id = TUA_raiders_of_tomorrow
+		icon = GFX_TUA_raiders_of_tomorrow-21701
+		x = 23
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_the_black_order }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TUA_black_order_of_coche
+				add_idea = TUA_future_raiders
+			}
+		}
+	}
+
+	#Focus for Crush Escadron Influence in the Military
+	focus = {
+		id = TUA_crush_escadron_influence_in_the_military
+		icon = GFX_TUA_crush_escadron_influence_in_the_military-21702
+		x = 23
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_raiders_of_tomorrow }
+		completion_reward = 
+		{
+			add_manpower = -121
+			add_stability = 0.20
+		}
+	}
+
+	#Focus for Realm of Coche
+	focus = {
+		id = TUA_realm_of_coche
+		icon = GFX_TUA_realm_of_coche-21704
+		x = 21
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TUA_planned_economy_with_no_economy 
+		}
+		prerequisite = { 
+			focus = TUA_chosen_of_jabrail 
+		}
+		prerequisite = { 
+			focus = TUA_crush_escadron_influence_in_the_military 
+		}
+		completion_reward = 
+		{
+			remove_ideas = {
+				TUA_statelesness
+				TUA_clan_military
+			}
+
+			country_event = {
+			id = tuareg.10
+			}
+		}
+	}
+
+	#Focus for Never Changing Desert
+	focus = 
+	{
+		id = TUA_never_changing_desert
+		icon = GFX_TUA_never_changing_desert-21660
+		x = 27
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_shifting_sands }
+		available = {
+			has_country_flag = TUA_neverchange
+		}
+		completion_reward = {
+			country_event = 
+			{
+				days = 1
+				id = tuareg.11
+			}
+		}
+	}
+
+	#Focus for A Territory Truly Free
+	focus = {
+		id = TUA_a_territory_truly_free
+		icon = GFX_TUA_a_territory_truly_free-21705
+		x = 27
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_never_changing_desert }
+		completion_reward = {
+			add_ideas = {
+				TUA_truly_free
+			}
+		}
+	}
+
+	#Focus for Socialism?
+	focus = {
+		id = TUA_socialism
+		icon = GFX_TUA_socialism-21706
+		x = 25
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_a_territory_truly_free }
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.2
+			}
+		}
+	}
+
+	#Focus for Futurism?
+	focus = {
+		id = TUA_futurism
+		icon = GFX_TUA_futurism-21709
+		x = 25
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_socialism }
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+		}
+	}
+
+	#Focus for That's not the Tuareg Spirit
+	focus = {
+		id = TUA_thats_not_the_tuareg_spirit
+		icon = GFX_TUA_thats_not_the_tuareg_spirit-21710
+		x = 25
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_futurism }
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Tribal Society
+	focus = {
+		id = TUA_tribal_society
+		icon = GFX_TUA_tribal_society-21707
+		x = 27
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_a_territory_truly_free }
+		completion_reward = {
+			939 = {
+				add_building_construction = {
+					type = infrastructure
+					level = -2
+					instant_build = yes
+				}
+			}
+			781 = {
+				add_building_construction = {
+					type = infrastructure
+					level = -2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for What is here to Change?
+	focus = {
+		id = TUA_what_is_here_to_change
+		icon = GFX_TUA_what_is_here_to_change-21711
+		x = 27
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_tribal_society }
+		completion_reward = {
+			add_war_support = -0.15
+			add_manpower = 14305
+		}
+	}
+
+	#Focus for Keep calm and have Faith in Allah
+	focus = {
+		id = TUA_keep_calm_and_have_faith_in_allah
+		icon = GFX_TUA_keep_calm_and_have_faith_in_allah-21714
+		x = 27
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_what_is_here_to_change }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	#Focus for Clan Military
+	focus = {
+		id = TUA_clan_military
+		icon = GFX_TUA_clan_military-21708
+		x = 29
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_a_territory_truly_free }
+		completion_reward = {
+			add_manpower = 14921
+		}
+	}
+
+	#Focus for And Slaves as Workers
+	focus = {
+		id = TUA_and_slaves_as_workers
+		icon = GFX_TUA_and_slaves_as_workers-21712
+		x = 29
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_clan_military }
+		completion_reward = {
+			add_ideas = {				
+			TUA_slave_workers
+			}
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for Like Before Muhammad
+	focus = {
+		id = TUA_like_before_muhammad
+		icon = GFX_TUA_like_before_muhammad-21713
+		x = 29
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TUA_and_slaves_as_workers }
+		completion_reward = {
+			add_war_support = -0.1
+		}
+	}
+
+	#Focus for True Conservatism
+	focus = {
+		id = TUA_true_conservatism
+		icon = GFX_TUA_true_conservatism-21715
+		x = 27
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TUA_thats_not_the_tuareg_spirit 
+		}
+		prerequisite = { 
+			focus = TUA_keep_calm_and_have_faith_in_allah 
+		}
+		prerequisite = { 
+			focus = TUA_like_before_muhammad 
+		}
+		completion_reward = {
+			country_event = {
+			id = tuareg.12
+		}
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,574 @@
+KAV_diplomatic_decisions = {
+	KAV_join_league_solar = {
+		cost = 100
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_join_league_solar
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = KAV_join_fiumefrench_alliance
+		}
+		available = {
+			OR = {
+				FRA = { exists = yes }
+				FIU = { exists = yes }
+			}
+			KAV = {
+				is_in_faction = no
+				is_puppet = no
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = {
+						is_faction_leader = yes
+					}
+				}
+				FRA = {
+					country_event = {
+						id = kav.11
+						days = 2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					FIU = {
+						is_faction_leader = yes
+					}
+				}
+				FIU = {
+					country_event = {
+						id = kav.11
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	KAV_alliance_with_united_technates = {
+		cost = 100
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_form_the_gdi
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = KAV_alliance_with_the_technate
+		}
+		available = {
+			USA = {
+				is_puppet = no
+				has_government = accelerationism
+			}
+			KAV = {
+				is_in_faction = no
+				is_puppet = no
+			}
+		}
+		complete_effect = {
+			USA = {
+				country_event = {
+					id = kav.12
+					days = 2
+				}
+			}
+		}
+	}
+}
+KAV_something_greater = {
+	KAV_proclaim_greater_utopia = {
+		ai_will_do = {
+			factor = 0.5
+		}
+		cost = 100
+		allowed = { tag = KAV }
+		icon = GFX_KAV_proclaim_greater_utopia
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = KAV_welcome_georgian_talents
+		}
+		available = {
+			NOT = {
+				any_state = {
+					is_core_of = KAV
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = PER
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = AFG
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+			}
+			KAV = {
+				controls_state = 260
+				controls_state = 859
+				controls_state = 228
+				controls_state = 227
+				controls_state = 200
+				controls_state = 196
+				controls_state = 137
+				controls_state = 853
+				controls_state = 221
+				controls_state = 240
+				controls_state = 220
+				controls_state = 258
+				controls_state = 259
+				controls_state = 225
+				controls_state = 854
+				controls_state = 224
+				controls_state = 222
+
+				controls_state = 571
+				controls_state = 588
+				controls_state = 590
+				controls_state = 583
+				controls_state = 404
+				controls_state = 589
+				controls_state = 842
+				controls_state = 586
+				controls_state = 794
+
+				controls_state = 406
+				controls_state = 402
+				controls_state = 652
+				controls_state = 582
+				controls_state = 732
+				controls_state = 572
+
+				controls_state = 1043
+				controls_state = 852
+
+				controls_state = 405
+				controls_state = 585
+
+				controls_state = 852
+
+				controls_state = 849
+				controls_state = 587
+
+				controls_state = 851
+				controls_state = 840
+				controls_state = 742
+
+				controls_state = 584
+				controls_state = 850
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = "KAV_greater_utopia"
+			add_war_support = 0.3
+			add_stability = 0.3
+			every_owned_state = {
+                limit = {
+                    NOT = { is_core_of = KAV }
+                    is_claimed_by = KAV
+                }
+                add_core_of = KAV
+            }
+		}
+	}
+	KAV_proclaim_greater_eurasia = {
+		cost = 100
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_proclaim_greater_eurasia
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = KAV_russification_over_all
+		}
+		available = {
+			NOT = {
+				any_state = {
+					is_core_of = KAV
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = PER
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = AFG
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+			}
+			KAV = {
+				controls_state = 260
+				controls_state = 859
+				controls_state = 228
+				controls_state = 227
+				controls_state = 200
+				controls_state = 196
+				controls_state = 137
+				controls_state = 853
+				controls_state = 221
+				controls_state = 240
+				controls_state = 220
+				controls_state = 258
+				controls_state = 259
+				controls_state = 225
+				controls_state = 854
+				controls_state = 224
+				controls_state = 222
+
+				controls_state = 571
+				controls_state = 588
+				controls_state = 590
+				controls_state = 583
+				controls_state = 404
+				controls_state = 589
+				controls_state = 842
+				controls_state = 586
+				controls_state = 794
+
+				controls_state = 406
+				controls_state = 402
+				controls_state = 652
+				controls_state = 582
+				controls_state = 732
+				controls_state = 572
+
+				controls_state = 1043
+				controls_state = 852
+
+				controls_state = 405
+				controls_state = 585
+
+				controls_state = 852
+
+				controls_state = 849
+				controls_state = 587
+
+				controls_state = 851
+				controls_state = 840
+				controls_state = 742
+
+				controls_state = 584
+				controls_state = 850
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = "KAV_greater_eurasia"
+			add_war_support = 0.3
+			add_stability = 0.3
+			every_owned_state = {
+                limit = {
+                    NOT = { is_core_of = KAV }
+                    is_claimed_by = KAV
+                }
+                add_core_of = KAV
+            }
+		}
+	}
+	KAV_proclaim_time_state = {
+		cost = 100
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_proclaim_time_state
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = KAV_proclaim_state_of_time
+		}
+		available = {
+			NOT = {
+				any_state = {
+					is_core_of = KAV
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = PER
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+				any_state = {
+					is_core_of = AFG
+					NOT = {
+						is_owned_by = KAV
+					}
+				}
+			}
+			KAV = {
+				controls_state = 260
+				controls_state = 859
+				controls_state = 228
+				controls_state = 227
+				controls_state = 200
+				controls_state = 196
+				controls_state = 137
+				controls_state = 853
+				controls_state = 221
+				controls_state = 240
+				controls_state = 220
+				controls_state = 258
+				controls_state = 259
+				controls_state = 225
+				controls_state = 854
+				controls_state = 224
+				controls_state = 222
+
+				controls_state = 571
+				controls_state = 588
+				controls_state = 590
+				controls_state = 583
+				controls_state = 404
+				controls_state = 589
+				controls_state = 842
+				controls_state = 586
+				controls_state = 794
+
+				controls_state = 406
+				controls_state = 402
+				controls_state = 652
+				controls_state = 582
+				controls_state = 732
+				controls_state = 572
+
+				controls_state = 1043
+				controls_state = 852
+
+				controls_state = 405
+				controls_state = 585
+
+				controls_state = 852
+
+				controls_state = 849
+				controls_state = 587
+
+				controls_state = 851
+				controls_state = 840
+				controls_state = 742
+
+				controls_state = 584
+				controls_state = 850
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = "KAV_state_of_time"
+			add_war_support = 0.3
+			add_stability = 0.3
+			country_event = {
+				id = kav.13
+			}
+			every_owned_state = {
+                limit = {
+                    NOT = { is_core_of = KAV }
+                    is_claimed_by = KAV
+                }
+                add_core_of = KAV
+            }
+		}
+	}
+}
+KAV_rainbow_war_plans = {
+	KAV_warplan_pink = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_pink
+		fire_only_once = yes
+		available = {
+			is_neighbor_of = AFG
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = AFG
+			}
+			every_state = {
+				limit = {
+					is_owned_by = AFG
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+	KAV_warplan_blue = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_blue
+		fire_only_once = yes
+		available = {
+			is_neighbor_of = ETS
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ETS
+			}
+			every_state = {
+				limit = {
+					is_owned_by = ETS
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+	KAV_warplan_green = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_green
+		fire_only_once = yes
+		available = {
+			OR = {
+				is_neighbor_of = ALT
+				is_neighbor_of = SIK
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = ALT
+					}
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+	KAV_warplan_red = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_red
+		fire_only_once = yes
+		available = {
+			OR = {
+				is_neighbor_of = AQT
+				is_neighbor_of = TUC
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = AQT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = AQT
+						is_owned_by = TUC
+					}
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+	KAV_warplan_orange = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_orange
+		fire_only_once = yes
+		available = {
+			OR = {
+				is_neighbor_of = KHW
+				is_neighbor_of = BKR
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = KHW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BKR
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = KHW
+						is_owned_by = BKR
+					}
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+	KAV_warplan_yellow = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { tag = KAV }
+		icon = GFX_KAV_warplan_yellow
+		fire_only_once = yes
+		available = {
+			OR = {
+				is_neighbor_of = TRK
+				is_neighbor_of = TUK
+				is_neighbor_of = KOK
+			}
+		}
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = TRK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KOK
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_owned_by = TRK
+						is_owned_by = TUK
+						is_owned_by = KOK
+					}
+				}
+				add_claim_by = KAV
+			}
+		}
+	}
+}

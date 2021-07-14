@@ -1,0 +1,1510 @@
+###########################
+# United Kingdom Events
+###########################
+
+add_namespace = eng
+
+country_event = {
+	id = eng.1
+	title = eng.1.t
+	desc = eng.1.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.1.a
+	}
+}
+
+#Parliament Recess for election
+country_event = {
+	id = eng.2
+	title = eng.2.t
+	desc = eng.2.d
+	picture = news_event_fall_of_calais
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.2.a
+	}
+}
+##1936 Election
+country_event = {
+	id = eng.3
+	title = eng.3.t
+	desc = eng.3.d
+	picture = news_event_fall_of_calais
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.3.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ENG_ai_route
+					option = LABOR
+				}
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+	        name = "Mark Sykes"
+	        desc = "POLITICS_Mark_Sykes_DESC"
+	        picture = "Portrait_mark_sykes.dds"
+	        expire = "1965.1.1"
+	        ideology = social_conservatism
+        }
+		set_politics = {
+	        ruling_party = social_democratism
+        }
+        add_ideas = { 
+            herbert_morrison
+            stafford_cripps
+            john_strachey
+            richard_tawney
+            }
+        add_popularity = {
+            ideology = social_democratism
+            popularity = 0.05
+        }
+        add_timed_idea = {
+            idea = ENG_political_honeymoon
+            days = 120
+        }
+        complete_national_focus = ENG_Snap_Election
+	}
+	option = {
+		name = eng.3.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ENG_ai_route
+					option = LIBERAL
+				}
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+	        name = "Mark Sykes"
+	        desc = "POLITICS_Mark_Sykes_DESC"
+	        picture = "Portrait_mark_sykes.dds"
+	        expire = "1965.1.1"
+	        ideology = social_conservatism
+        }
+		set_politics = {
+	        ruling_party = liberalism
+        }
+        add_ideas = { 
+            christopher_addison
+            john_simon
+            eng_reginald_mckenna
+            eng_herbert_asquith
+            }
+        add_popularity = {
+            ideology = liberalism
+            popularity = 0.05
+        }
+        add_timed_idea = {
+            idea = ENG_political_honeymoon
+            days = 120
+        }
+        complete_national_focus = ENG_Snap_Election
+	}
+	option = {
+		name = eng.3.c
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ENG_ai_route
+					option = TORIES
+				}
+			}
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+	        name = "Mark Sykes"
+	        desc = "POLITICS_Mark_Sykes_DESC"
+	        picture = "Portrait_mark_sykes.dds"
+	        expire = "1965.1.1"
+	        ideology = social_conservatism
+        }
+        set_politics = {
+	        ruling_party = conservatism
+	    }
+	    add_ideas = { 
+            mark_sykes
+            neville_chamberlain
+            ecm_john_anderson
+            stanley_baldwin
+            }
+	    add_popularity = {
+            ideology = conservatism
+            popularity = 0.05
+        }
+        add_timed_idea = {
+            idea = ENG_political_honeymoon
+            days = 120
+        }
+        complete_national_focus = ENG_Snap_Election
+    }
+}
+
+country_event = {
+	id = eng.4
+	title = eng.4.t
+	desc = eng.4.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.4.a
+		add_political_power = -40
+	}
+}
+
+##Riot in Calais
+country_event = {
+	id = eng.5
+	title = eng.5.t
+	desc = eng.5.d
+	picture = news_event_fall_of_calais
+
+	fire_only_once = yes
+	trigger = {
+		938 = {
+			is_owned_and_controlled_by = ENG 
+		}
+	}
+
+	option = {
+		name = eng.5.a
+	}
+}
+#####################
+## Military Focues ##
+#####################
+country_event = {
+	id = eng.6
+	title = eng.6.t
+	desc = eng.6.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.6.a
+	}
+}
+
+country_event = {
+	id = eng.7
+	title = eng.7.t
+	desc = eng.7.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.7.a
+	}
+}
+
+##Learn From the Somme
+country_event = {
+	id = eng.8
+	title = eng.8.t
+	desc = eng.8.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.8.a
+		ai_chance = {
+			factor = 1
+		}
+		complete_national_focus = ENG_fullers_plan
+	}
+	option = {
+		name = eng.8.b
+		ai_chance = {
+			factor = 1
+		}
+		complete_national_focus = ENG_brooke_plan
+	}
+	option = {
+		name = eng.8.c
+		ai_chance = {
+			factor = 1
+		}
+		complete_national_focus = ENG_hart_plan
+	}
+}
+
+country_event = {
+	id = eng.9
+	title = eng.9.t
+	desc = eng.9.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.9.a
+	}
+}
+
+country_event = {
+	id = eng.10
+	title = eng.10.t
+	desc = eng.10.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.10.a
+	}
+}
+
+#####################
+##  Britain at war ##
+#####################
+country_event = {
+	id = eng.11
+	title = eng.11.t
+	desc = eng.11.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.11.a
+	}
+}
+
+country_event = {
+	id = eng.12
+	title = eng.12.t
+	desc = eng.12.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.12.a
+	}
+}
+
+country_event = {
+	id = eng.13
+	title = eng.13.t
+	desc = eng.13.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.13.a
+	}
+}
+
+country_event = {
+	id = eng.14
+	title = eng.14.t
+	desc = eng.14.d
+	picture = news_event_fall_of_calais
+	trigger = {
+		tag = ENG
+		date > 1939.03.25
+		has_completed_focus	= ENG_Britain_At_War
+	}	
+	fire_only_once = yes
+
+	option = {
+		name = eng.14.a
+	}
+}
+
+#####################
+##  Event Chains ##
+#####################
+## Cable Street ##
+country_event = {
+	id = eng.15
+	title = eng.15.t
+	desc = eng.15.d
+	picture = news_event_fall_of_calais
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.15.a
+		country_event = {
+            id = eng.16
+            days = 10
+		}
+	}
+	option = {
+		name = eng.15.b
+		country_event = {
+            id = eng.17
+            days = 10
+		}
+	}
+}
+
+country_event = {
+	id = eng.16
+	title = eng.16.t
+	desc = eng.16.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.16.a
+		add_popularity = {
+            ideology = reactionism
+            popularity = 0.05
+        }
+	}
+}
+
+country_event = {
+	id = eng.17
+	title = eng.17.t
+	desc = eng.17.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.17.a
+		country_event = {
+            id = eng.18
+            days = 10
+            }
+	}
+	option = {
+		name = eng.17.b
+		country_event = {
+            id = eng.19
+            days = 10
+            }
+	}
+}
+
+country_event = {
+	id = eng.18
+	title = eng.18.t
+	desc = eng.18.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.18.a
+	add_popularity = {
+            ideology = reactionism
+            popularity = 0.10
+        }
+    }
+}
+
+country_event = {
+	id = eng.19
+	title = eng.19.t
+	desc = eng.19.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.19.a
+		add_stability = -0.1
+	}
+}
+
+## Uganda War ##
+country_event = {
+	id = eng.20
+	title = eng.20.t
+	desc = eng.20.d
+	picture = news_event_fall_of_calais
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = eng.20.a
+	}
+}
+
+country_event = {
+	id = eng.21
+	title = eng.21.t
+	desc = eng.21.d
+	picture = news_event_fall_of_calais
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.21.a
+	}
+}
+
+country_event = {
+	id = eng.22
+	title = eng.22.t
+	desc = eng.22.d
+	picture = news_event_fall_of_calais
+		
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		has_war_with = UGD
+	}
+
+	mean_time_to_happen = {
+        days = 5
+	}	
+
+	option = {
+		name = eng.22.a
+	}
+}
+
+############################
+## Nancy Mitford PM event ##
+############################
+country_event = {
+	id = eng.23
+	title = eng.23.t
+	desc = eng.23.d
+	picture = news_event_fall_of_calais
+	trigger = {
+		tag = ENG
+		has_idea = ENG_national_unity_government
+		has_government = social_democratism
+		has_country_leader = {
+            name = "Herbert Morrison"
+            ruling_only = yes
+        }
+    }
+	mean_time_to_happen = {
+		days = 60
+	    }	
+	fire_only_once = yes
+
+	option = {
+		name = eng.23.a
+		retire_country_leader = yes
+		create_country_leader = {
+	        name = "Nancy Mitford"
+	        desc = "POLITICS_Nancy_Mitford_DESC"
+	        picture = "ENG_nancy_mitford.dds"
+	        expire = "1965.1.1"
+	        ideology = progressivism
+        }
+	}
+	option = {
+		name = eng.23.b
+	}
+}
+
+# Invergooden Mutiny
+
+country_event = {
+	id = eng.24
+	title = eng.24.t
+	desc = eng.24.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.24.a
+		country_event = {
+            id = eng.25
+            days = 10
+            }
+	}
+}
+
+country_event = {
+	id = eng.25
+	title = eng.25.t
+	desc = eng.25.d
+	picture = news_event_fall_of_calais
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = eng.25.a
+		country_event = {
+            id = eng.26
+            days = 10
+            }
+	}
+}
+
+country_event = {
+	id = eng.26
+	title = eng.26.t
+	desc = eng.26.d
+	picture = news_event_fall_of_calais
+		
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = eng.26.a
+		country_event = {
+            id = eng.27
+            days = 10
+            }
+	}
+	option = {
+		name = eng.26.b
+		country_event = {
+            id = eng.28
+            days = 10
+            }
+	}
+}
+
+country_event = {
+	id = eng.27
+	title = eng.27.t
+	desc = eng.27.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.27.a
+		add_popularity = {
+            ideology = conservatism
+            popularity = 0.05
+        }
+	}
+}
+
+country_event = {
+	id = eng.28
+	title = eng.28.t
+	desc = eng.28.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.28.a
+		add_stability = -0.1
+	}
+}
+##############
+##  Flavour ##
+##############
+
+## Left Book CLub
+country_event = {
+	id = eng.29
+	title = eng.29.t
+	desc = eng.29.d
+	picture = news_event_fall_of_calais
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.29.a
+	}
+}
+
+country_event = {
+	id = eng.30
+	title = eng.30.t
+	desc = eng.30.d
+	picture = news_event_fall_of_calais
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.30.a
+	}
+}
+
+## Britain War France
+country_event = {
+	id = eng.31
+	title = eng.31.t
+	desc = eng.31.d
+	picture = news_event_fall_of_calais
+	trigger = {
+		tag = ENG
+		has_war_with = FRA
+	}
+	mean_time_to_happen = {
+        days = 5
+	}	
+	fire_only_once = yes
+
+	option = {
+		name = eng.31.a
+	}
+}
+## Britain War Germany
+country_event = {
+	id = eng.32
+	title = eng.32.t
+	desc = eng.32.d
+	picture = news_event_fall_of_calais
+	trigger = {
+		tag = ENG
+		has_war_with = GER
+	}
+	mean_time_to_happen = {
+        days = 5
+	}
+	fire_only_once = yes
+
+	option = {
+		name = eng.32.a
+	}
+}
+## Setting Sun
+country_event = {
+	id = eng.33
+	title = eng.33.t
+	desc = eng.33.d
+	picture = news_event_fall_of_calais
+	trigger = {
+		tag = ENG
+		has_war_with = UGD
+	}
+	mean_time_to_happen = {
+        days = 5
+	}	
+	fire_only_once = yes
+
+	option = {
+		name = eng.33.a
+		complete_national_focus = ENG_The_Setting_Sun
+	}
+}
+
+## Edward Marriage events
+
+country_event = {
+	id = eng.34
+	title = eng.34.t
+	desc = eng.34.d
+	picture = news_event_fall_of_calais
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.34.a
+	}
+}
+
+country_event = {
+	id = eng.35
+	title = eng.35.t
+	desc = eng.35.d
+	picture = news_event_fall_of_calais
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.35.a
+	}
+}
+
+country_event = {
+	id = eng.36
+	title = eng.36.t
+	desc = eng.36.d
+	picture = news_event_fall_of_calais
+   
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.36.a
+	}
+}
+
+country_event = {
+	id = eng.37
+	title = eng.37.t
+	desc = eng.37.d
+	picture = news_event_fall_of_calais
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = eng.37.a
+	}
+}
+
+## Public Order Act ##
+country_event = {
+	id = eng.38
+	title = eng.38.t
+	desc = eng.38.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.38.a
+		add_political_power = -30
+	}
+}
+
+country_event = {
+	id = eng.39
+	title = eng.39.t
+	desc = eng.39.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.39.a
+	}
+}
+
+country_event = {
+	id = eng.40
+	title = eng.40.t
+	desc = eng.40.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.40.a
+	}
+}
+
+country_event = {
+	id = eng.41
+	title = eng.41.t
+	desc = eng.41.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.41.a
+	}
+}
+
+country_event = {
+	id = eng.42
+	title = eng.42.t
+	desc = eng.42.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.42.a
+	}
+}
+
+country_event = {
+	id = eng.43
+	title = eng.43.t
+	desc = eng.43.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.43.a
+	}
+}
+
+######## Henry Aisin Gioro's movies ########
+
+country_event = {
+	id = eng.44
+	title = eng.44.t
+	desc = eng.44.d
+	picture = GFX_report_event_ENG_the_happy_eunuch
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.44.a
+		hidden_effect = {
+			country_event = {
+				id = eng.45
+				days = 300
+        	}
+		}
+	}
+}
+
+country_event = {
+	id = eng.45
+	title = eng.45.t
+	desc = eng.45.d
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.45.a
+		hidden_effect = {
+			country_event = {
+				id = eng.46
+				days = 300
+    	    }
+		}
+	}
+}
+
+country_event = {
+	id = eng.46
+	title = eng.46.t
+	desc = eng.46.d
+	picture = GFX_report_event_ENG_the_mime
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.46.a
+		hidden_effect = {
+			country_event = {
+				id = eng.47
+				days = 300
+    	    }
+		}	
+	}
+}
+
+country_event = {
+	id = eng.47
+	title = eng.47.t
+	desc = eng.47.d
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.47.a
+	}
+}
+country_event = {	#ultimatum to Japan
+	id = eng.48
+	title = eng.48.t
+	desc = eng.48.d
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {	#mkay then
+		name = eng.48.a
+		ENG = {
+			diplomatic_relation = {
+				country = ROOT
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		every_country = {
+			limit = {
+				OR = {
+					tag = BYJ
+					tag = SZC
+					tag = SHA
+					tag = KMT
+					tag = XIA
+					tag = FJN
+					tag = GDP
+					tag = YUN
+					tag = SIA
+					tag = PHI
+					tag = MAL
+					tag = DEI
+					tag = DAI
+					tag = ZHR
+				}
+			}
+			PREV = {
+				diplomatic_relation = {
+					country = ROOT
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+		add_war_support = -0.25
+		add_stability = -0.07
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.2
+		}
+	}
+	option = {	#nah, war pls
+		name = eng.48.b
+		add_war_support = 0.05
+		add_political_power = 50
+	}
+}
+
+
+country_event = { #this can't be in numerical order or it breaks, no idea why
+	id = eng.50
+	title = eng.50.t
+	desc = eng.50.d
+	picture = news_event_fall_of_calais
+	is_triggered_only = yes
+
+	option = {
+		name = eng.50.a
+		hidden_effect = {
+			set_technology = {
+				basic_light_tank = 1
+				popup = no
+			}
+		}
+	}
+}
+
+country_event = {	#Protect the straits, support the Greeks 
+	id = eng.49
+	title = eng.49.t
+	desc = eng.49.d
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {	#yeah Proly should if I don't have to get up 
+		name = eng.49.a
+		ai_chance = {	factor = 0}
+		add_political_power = 25
+		GRE = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = ENG
+			}
+		}
+		hidden_effect = {
+		MAR = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_manpower = 10000
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 100
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 100
+				producer = ENG
+			}
+		}
+		}
+	}
+	
+	option = {  #This is important, help the Armenians as well  
+		name = eng.49.b
+		ai_chance = {
+			30
+		}
+		add_political_power = -25
+		GRE = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = ENG
+			}
+		}
+		ARM = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = ENG
+			}
+		}
+		hidden_effect ={
+		MAR = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_manpower = 15000
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = ENG
+			}
+		}
+		ASY ={
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 250  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 250
+				producer = ENG
+			}
+		}
+		}
+	}
+	
+	option = {  #Fuck the turks
+		name = eng.49.c
+		ai_chance = {	factor = 30 }
+		add_political_power = -50
+		GRE = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 350  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 350
+				producer = ENG
+			}
+		}
+		ARM = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 350  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 350
+				producer = ENG
+			}
+		}
+		hidden_effect = {		
+		MAR = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_manpower = 20000
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 350  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 350
+				producer = ENG
+			}
+		ASY ={
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 350  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 350
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 350
+				producer = ENG
+			}
+		}
+		}
+		}
+	}
+	option = {  #Deus Vult, fellow Christians 
+		name = eng.49.e
+		ai_chance = {	factor = 20	}
+		add_political_power = -100
+		
+		GRE = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 500
+				producer = ENG
+			}
+		}
+		ARM = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 500
+				producer = ENG
+			}
+		}
+		hidden_effect ={		
+		MAR = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_manpower = 25000
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 500
+				producer = ENG
+			}
+		ASY = {
+			country_event = {
+				id = eng.50
+				days = 1
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500  
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = ENG
+			}
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 500
+				producer = ENG
+			}
+		}
+		}
+	}
+}
+
+
+country_event = {
+	id = eng.999
+	title = eng.999.t
+	desc = eng.999.desc
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.999.a
+		add_to_faction = FIN
+	}
+	option = {
+		name = eng.999.a
+		add_political_power = -5
+	}
+}
+country_event = {
+	id = eng.1000
+	title = eng.1000.t
+	desc = eng.1000.desc
+	#picture = news_event_fall_of_calais
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = eng.1000.a
+		USA = {
+			country_event = {
+				id = usa.68
+				days = 1
+			}
+		}
+	}
+}

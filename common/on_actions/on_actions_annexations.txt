@@ -1,0 +1,858 @@
+on_actions = {
+	on_startup = {                     ########## 198 ########
+		effect = {
+			### Europe ###
+			#Switzerland
+			3 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SWI.release_event = 2 }
+
+			#France
+			16 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { FRA.release_event = 3 }
+
+			#Germany
+			64 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GER.release_event = 4 }
+
+			#United Kingdom
+			126 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ENG.release_event = 5 }
+
+			#Italy
+			2 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ITA.release_event = 6 }
+
+			#Russian Empire
+			219 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { RUS.release_event = 8 }
+
+			#Poland
+			10 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { POL.release_event = 9 }
+
+			#Austria
+			4 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { AUS.release_event = 10 }
+
+			#Prussia
+			763 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PRS.release_event = 11 }
+
+			#Czechoslovakia
+			9 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CZE.release_event = 12 }
+
+			#Luxembourg
+			8 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { LUX.release_event = 15 }
+
+			#Wallonia
+			34 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { WLL.release_event = 16 }
+
+			#Netherlands
+			7 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { HOL.release_event = 17 }
+
+			#Fiume
+			163 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { FIU.release_event = 18 }
+
+			#Spain
+			41 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SPR.release_event = 19 }
+
+			#Belarus
+			206 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BLR.release_event = 20 }
+
+			#Lithuania
+			96 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { LIT.release_event = 21 }
+
+			#Ukraine
+			202 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { UKR.release_event = 22 }
+			
+			#Bulgaria
+			48 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BUL.release_event = 23 }
+			
+			#Wallachia
+			46 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ROM.release_event = 24 }
+			
+			#Moldova
+			79 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			78 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MOL.release_event = 25 }
+
+			#Transylvania
+			76 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TRS.release_event = 26 }
+			
+			#Yugoslavia
+			107 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			109 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { YUG.release_event = 27 }
+		
+			#Greece
+			47 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GRE.release_event = 28 }
+			
+			#Montenegro
+			105 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MNT.release_event = 29 }
+			
+			#Albania
+			44 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ALB.release_event = 30 }
+			
+			#Hungary
+			43 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { HUN.release_event = 31 }
+			
+			#Slovakia
+			70 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SLO.release_event = 32 }
+			
+			#Finland
+			111 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { FIN.release_event = 33 }
+			
+			#Denmark
+			37 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { DEN.release_event = 34 }
+			
+			#Sweden
+			141= { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SWE.release_event = 35 }
+
+			#Norway
+			142 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NOR.release_event = 36 }
+			
+			#Ireland
+			113 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { IRE.release_event = 37 }
+			
+			#Portugal
+			112 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { POR.release_event = 38 }
+			
+			#Estonia
+			13 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { EST.release_event = 39 }
+			
+			#Latvia
+			190 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { LAT.release_event = 40 }
+			
+			#Occupied Norway
+			110 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NRO.release_event = 41 }
+			
+			#Wales
+			122 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { WAL.release_event = 42 }
+			
+			#Scotland
+			121 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SCO.release_event = 43 }
+			
+			#Novorossyia
+			221 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SRU.release_event = 44 }
+			
+			#Baltics
+			12 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { WRU.release_event = 45 }
+			
+			#Don Kuban
+			234 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { DKB.release_event = 46 }
+
+			#Orenburg
+			652 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ORE.release_event = 61 }
+
+			#Posen
+			86 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 86.release_event = 168 }
+
+			#Upper Silesia
+			67 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			762 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 67.release_event = 169 }
+			set_variable = { 762.release_event = 169 }
+
+			#Galicia
+			91 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			88 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			89 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 91.release_event = 172 }
+			set_variable = { 77.release_event = 172 }
+			set_variable = { 89.release_event = 172 }
+
+			#Masuria
+			85 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 85.release_event = 171 }
+
+			#Rhineland
+			51 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { RHI.release_event = 173 }
+
+			#Bavaria
+			52 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BAV.release_event = 174 }
+
+			#Alsace
+			957 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			28 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 957.release_event = 177 }
+			set_variable = { 28.release_event = 177 }
+
+			#Lorraine
+			959 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			956 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 959.release_event = 175 }
+			set_variable = { 956.release_event = 175 }
+
+			#Schleswig-Holstein
+			796 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			58 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 796.release_event = 176 }
+			set_variable = { 58.release_event = 176 }
+			
+			#West Transylvania
+			911 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			83 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 911.release_event = 178 }
+			set_variable = { 83.release_event = 178 }
+			
+			#Southern Sudetenland
+			913 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 913.release_event = 179 }
+			
+			#Northern Sudetenland
+			69 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			74 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 69.release_event = 180 }
+			set_variable = { 74.release_event = 180 }
+			
+			#South Slovakia
+			664 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 664.release_event = 181 }
+			
+			#Lemkovyna
+			975 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 975.release_event = 182 }
+			
+			#Zaolzie
+			72 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 72.release_event = 183 }
+			
+			#Carpathian Ruthenia
+			73 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 73.release_event = 184 }
+
+			#Eisenstadt
+			901 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 901.release_event = 185 }
+
+			#East Banat
+			923 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			82 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 923.release_event = 186 }
+			set_variable = { 82.release_event = 186 }
+
+			#West Banat
+			1035 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			764 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 1035.release_event = 187 }
+			set_variable = { 764.release_event = 187 }
+
+			#Vojvodina
+			45 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { 45.release_event = 188 }
+			
+			#Slovenia
+			102 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SLV.release_event = 189 }
+			
+			#Serbia
+			107 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SER.release_event = 190 }
+			
+			#Croatia
+			109 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CRO.release_event = 191 }
+			
+			#Iceland
+			100 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ICE.release_event = 192 }
+			
+			#Bosnia
+			921 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BOS.release_event = 194 }
+
+
+
+			### North America ###
+			#United States
+			361 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { USA.release_event = 7 }
+
+			#Canada
+			276 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CAN.release_event = 47 }
+
+			#Greenland
+			101 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GRN.release_event = 193 }
+
+			### Asia ###
+			#Japan
+			282 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { JAP.release_event = 13 }
+
+			#Beiyang
+			608 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BYJ.release_event = 14 }
+
+			#Transbaikal
+			563 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MO2.release_event = 48 }
+			
+			#Altai
+			654 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ALT.release_event = 49 }
+			
+			#Tuva
+			329 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TAN.release_event = 50 }
+			
+			#Mongolia
+			330 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MON.release_event = 51 }
+			
+			#Uyghuristan
+			935 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ETS.release_event = 52 }
+			
+			#Manchuria
+			283 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MAN.release_event = 53 }
+			
+			#Korea
+			829 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KOR.release_event = 54 }
+			
+			#Ma Clique
+			283 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { XSM.release_event = 55 }
+			
+			#Zheltorossia
+			978 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ZHR.release_event = 56 }
+			
+			#Siberia
+			570 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SIB.release_event = 57 }
+			
+			#Yakutia
+			574 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KCK.release_event = 58 }
+			
+			#Steppes
+			590 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { STE.release_event = 59 }
+			
+			#Turkestan
+			852 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TRK.release_event = 60 }
+			
+			#Tibet
+			322 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TIB.release_event = 62 }
+			
+			#Xinjian
+			617 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SIK.release_event = 63 }
+			
+			#Khwarezem
+			849 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KHW.release_event = 64 }
+			
+			#Bukhara
+			1038 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BKR.release_event = 65 }
+			
+			#Shangdong
+			597 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SHA.release_event = 66 }
+			
+			#Yunnan
+			325 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { YUN.release_event = 67 }
+			
+			#Sichuan
+			791 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SZC.release_event = 68 }
+			
+			#Guangdong
+			594 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GDP.release_event = 69 }
+			
+			#Fujian
+			927 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { FJN.release_event = 70 }
+			
+			#Kuomintang
+			613 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KMT.release_event = 71 }
+			
+			#Thailand
+			289 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SIA.release_event = 72 }
+			
+			#Phillipines
+			327 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PHI.release_event = 73 }
+			
+			#Malaysia
+			831 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MAL.release_event = 74 }
+
+			#Taiwan
+			524 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TAI.release_event = 75 }
+
+			#Vietnam
+			814 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { DAI.release_event = 76 }
+
+			#Afganistan
+			267 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { AFG.release_event = 77 }
+
+			### Oceania ###
+			#Australia
+			285 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { AST.release_event = 78 }
+
+			#Westralia
+			803 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { WAS.release_event = 79 }
+
+			#New Zealand
+			284 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NZL.release_event = 80 }
+
+			### Middle East ###
+			#Arabia
+			292 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SAU.release_event = 81 }
+
+			#Armenia
+			230 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ARM.release_event = 82 }
+
+			#Azerbaijan
+			419 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { AZR.release_event = 83 }
+
+			#Centrocaspia
+			229 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CCD.release_event = 84 }
+
+			#Assyria
+			352 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ASY.release_event = 85 }
+
+			#Straits
+			976 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MAR.release_event = 86 }
+
+			#Georgia
+			231 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GEO.release_event = 87 }
+
+			#Kavkaz
+			231 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KAV.release_event = 88 }
+
+			#Iraq
+			291 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { IRQ.release_event = 89 }
+
+			#Kurdistan
+			350 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KUR.release_event = 90  }
+
+			#Syria
+			554 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SYR.release_event = 91 }
+
+			#Oman
+			294 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { OMA.release_event = 92 }
+
+			#Palestine
+			454 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PAL.release_event = 93 }
+
+			#Israel
+			454 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ISR.release_event = 94 }
+
+			#Perisa
+			266 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PER.release_event = 95 }
+
+			#Turkey
+			49 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TUR.release_event = 96 }
+
+			#Yemen
+			293 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { YEM.release_event = 97 }
+
+			### Central America ###
+			#Costa Rica
+			316 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { COS.release_event = 98 }
+
+			#Cuba
+			315 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CUB.release_event = 99 }
+
+			#Dominican Republic
+			319 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { DOM.release_event = 100 }
+
+			#El Salvador
+			314 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ELS.release_event = 101 }
+
+			#Guatemala
+			313 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GUA.release_event = 102 }
+
+			#Haiti
+			318 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { HAI.release_event = 103 }
+
+			#Honduras
+			842 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { HON.release_event = 104 }
+
+			#Mexico
+			277 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MEX.release_event = 105 }
+
+			#Nicaragua
+			317 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NIC.release_event = 106 }
+
+			#Panama
+			304 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PAN.release_event = 107 }
+
+			### South America ###
+			#Argentina
+			278 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ARG.release_event = 108 }
+
+			#Bolivia
+			302 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BOL.release_event = 109 }
+
+			#Brazil
+			500 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BRA.release_event = 111 }
+
+			#Chile
+			279 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CHL.release_event = 112 }
+
+			#Colombia
+			306 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { COL.release_event = 113 }
+
+			#Ecuador
+			305 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ECU.release_event = 114 }
+
+			#Paraguay
+			301 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PAR.release_event = 115 }
+
+			#Peru
+			303 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PRU.release_event = 116 }
+
+			#Uruguay
+			300 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { URG.release_event = 117 }
+
+			#Venezuala
+			849 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { VEN.release_event = 118 }
+
+			#Carribean Federation
+			310 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CYN.release_event = 119 }
+
+			### Africa ###
+			#Algeria
+			459 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ALG.release_event = 121 }
+
+			#Angola
+			540 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ANG.release_event = 121 }
+
+			#Botswana
+			542 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BOT.release_event = 123 }
+
+			#Congo
+			295 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { COG.release_event = 124 }
+
+			#Egypt
+			446 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { EGY.release_event = 125 }
+
+			#Ethiopia
+			271 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ETH.release_event = 126 }
+
+			#Guinea
+			806 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GUN.release_event = 127 }
+
+			#Kenya
+			547 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KEN.release_event = 128 }
+
+			#Liberia
+			298 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { LIB.release_event = 129 }
+
+			#Libya
+			448 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { LBA.release_event = 130 }
+
+			#Madagascar
+			543 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MAG.release_event = 131 }
+
+			#Mali
+			556 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MLI.release_event = 132 }
+
+			#Mauritania
+			557 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MRT.release_event = 133 }
+
+			#Morocco
+			461 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MOR.release_event = 134 }
+
+			#Mozambique
+			950 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MZB.release_event = 135 }
+
+			#Nigeria
+			973 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NGA.release_event = 136 }
+
+			#Senegal
+			802 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SEN.release_event = 137 }
+
+			#Somalia
+			559 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SML.release_event = 138 }
+
+			#South Africa
+			681 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SAF.release_event = 139 }
+
+			#South West Africa
+			950 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { SWF.release_event = 140 }
+
+			#Volkstaat
+			681 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { VOL.release_event = 141 }
+
+			#Tunisia
+			458 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TUN.release_event = 142 }
+
+			#Uganda
+			548 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { UGD.release_event = 143 }
+
+			#Zanzibar
+			813 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ZAN.release_event = 144 }
+
+			#Zimbabwe
+			545 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ZIM.release_event = 145 }
+
+			#Tuareg Free Territory
+			939 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TUA.release_event = 165 }
+			
+			#Upper Volta
+			778 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { UPV.release_event = 166 }
+			
+			#West African Federation
+			779 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { WAF.release_event = 167 }
+			
+			#Chad
+			774 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CHA.release_event = 195 }
+			
+			#Central African Republic
+			660 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CAR.release_event = 196 }
+			
+			#Gabon
+			539 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { GBN.release_event = 197 }
+			
+			#Cameroon
+			773 = { add_to_array = { global.annexation_relevant_states = THIS } } ######################################
+			set_variable = { CMR.release_event = 198 }
+
+			### India ###
+			#Kashmir
+			441 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { KSM.release_event = 146 }
+
+			#Punjab
+			440 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { PNJ.release_event = 147 }
+
+			#Dinia
+			443 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { DIN.release_event = 148 }
+			
+			#Hindustan
+			428 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { RSR.release_event = 149 }
+
+			#Aryanvata
+			439 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ARY.release_event = 150 }
+
+			#United Provinces
+			438 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { UPI.release_event = 153 }
+
+			#Hyderabad
+			429 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { HYD.release_event = 154 }
+
+			#Mysore
+			425 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MYS.release_event = 155 }
+
+			#Travancore
+			936 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { TRA.release_event = 156 }
+
+			#Ceylon
+			422 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { CEY.release_event = 157 }
+
+			#Madras
+			423 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { MAD.release_event = 158 }
+
+			#Orissa
+			426 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ORS.release_event = 159 }
+
+			#Bihar
+			435 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BIH.release_event = 160 }
+
+			#Bangladesh
+			430 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BNG.release_event = 161 }
+
+			#Assam
+			432= { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { ASM.release_event = 162 }
+
+			#Bhutan
+			324 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { BHU.release_event = 163 }
+
+			#Nepal
+			174 = { add_to_array = { global.annexation_relevant_states = THIS } }
+			set_variable = { NEP.release_event = 164 }
+
+			###  ###
+			# = { add_to_array = { global.annexation_relevant_states = THIS } }
+			#set_variable = { .release_event =  }
+
+		}
+	}
+
+	### DO NOT TOUCH ###
+	#ROOT is winner #FROM gets annexed - For civil wars on_civil_war_end is also fired
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = RF_checking_for_possible_annexations }
+					is_subject = no
+				}
+				set_country_flag =  RF_checking_for_possible_annexations
+				country_event = { id = annex.1 days = 1 random_days = 3 }
+			}
+		}
+	}
+
+	### DO NOT TOUCH ###
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = RF_checking_for_possible_annexations }
+					is_subject = no
+				}
+				set_country_flag =  RF_checking_for_possible_annexations
+				country_event = { id = annex.1 days = 1 random_days = 3 }
+			}
+		}
+	}
+
+	### DO NOT TOUCH ###
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					owns_state = FROM.FROM
+					is_in_array = { global.annexation_relevant_states = FROM.FROM }
+					NOT = { has_country_flag = RF_checking_for_possible_annexations }
+					is_subject = no
+				}
+				set_country_flag =  RF_checking_for_possible_annexations
+				country_event = { id = annex.1 days = 1 random_days = 3 }
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+﻿division_template = {
+	name = "Syrian Millitary Division"
+	division_names_group = AUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		artillery = { x = 1 y = 2 }
+
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   # Pioneer Bn
+	}
+}
+
+
+
+
+units = {
+
+	division= {	# "Legion 1"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1056  # Vienna
+		division_template = "Syrian Millitary Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {	# "Legion 2"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 1072  # Vienna
+		division_template = "Syrian Millitary Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+
+	}
+	division= {	# "Legion 3"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 12473  # Vienna
+		division_template = "Syrian Millitary Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "Legion 4"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 7151  # Vienna
+		division_template = "Syrian Millitary Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division= {	# "Legion 4"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 7151  # Vienna
+		division_template = "Syrian Millitary Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.54
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ENG"
+		}
+		requested_factories = 1
+		progress = 0.74
+		efficiency = 100
+	}
+}

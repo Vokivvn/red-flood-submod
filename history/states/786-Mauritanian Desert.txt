@@ -1,0 +1,21 @@
+state={
+	id=786
+	name="STATE_786" # West Mauritanian Desert
+	manpower = 117990
+	
+	state_category = wasteland
+
+
+	history={
+		owner = FRA #MRT after Bataille escapes
+		add_core_of = MRT
+		buildings = {
+			infrastructure = 3
+		}
+
+	}
+
+	provinces={
+		8035 10779 10838
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=573
+	name="STATE_573" # Zlatoust
+	manpower = 477677
+	
+	state_category = pastoral
+	resources={
+		chromium=23 # was: 32
+	}
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = RUS
+	}
+
+	provinces={
+		237 278 361 3280 4758 4874 7320 7824 10136 10142 10216 11223 11307 12117 12659
+	}
+}

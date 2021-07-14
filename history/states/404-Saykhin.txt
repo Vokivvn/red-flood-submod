@@ -1,0 +1,21 @@
+
+state={
+	id=404 #Karaganda
+	name="STATE_404"
+
+	history={
+		owner = STE
+    		add_core_of = STE
+		#add_core_of = KAZ
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1243 1312 1382 1402 4250 4277 4389 4595 12385 4492 12487 10508 7335 10179 10220 12121 12177 12194
+	}
+	manpower=500277
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

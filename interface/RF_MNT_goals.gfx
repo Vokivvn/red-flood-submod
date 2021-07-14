@@ -1,0 +1,318 @@
+spriteTypes = {
+	##### MNT #####
+
+	SpriteType = {
+		name = "GFX_focus_MNT_army_reform"
+		texturefile = "gfx/interface/goals/MNT/MNT_army_reform.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MNT_modern_roman_army"
+		texturefile = "gfx/interface/goals/MNT/MNT_modern_roman_army.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MNT_new_roman_army"
+		texturefile = "gfx/interface/goals/MNT/MNT_new_roman_army.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MNT_naval_expansion"
+		texturefile = "gfx/interface/goals/MNT/MNT_naval_expansion.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MNT_aerial_modernization"
+		texturefile = "gfx/interface/goals/MNT/MNT_aerial_modernization.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_absolute_autocrat"
+		texturefile = "gfx/interface/goals/MNT/MNT_absolute_autocrat.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_absolute_loyalty"
+		texturefile = "gfx/interface/goals/MNT/MNT_absolute_loyalty.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_annihilate_communism"
+		texturefile = "gfx/interface/goals/MNT/MNT_annihilate_communism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_aryan_soul"
+		texturefile = "gfx/interface/goals/MNT/MNT_aryan_soul.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_avoid_caesar_fate"
+		texturefile = "gfx/interface/goals/MNT/MNT_avoid_caesar_fate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_bread_circuses"
+		texturefile = "gfx/interface/goals/MNT/MNT_bread_circuses.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_centralise_senate"
+		texturefile = "gfx/interface/goals/MNT/MNT_centralise_senate.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_class_unity"
+		texturefile = "gfx/interface/goals/MNT/MNT_class_unity.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_crush_workers"
+		texturefile = "gfx/interface/goals/MNT/MNT_crush_workers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_destroy_tribal_leaders"
+		texturefile = "gfx/interface/goals/MNT/MNT_destroy_tribal_leaders.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_free_from_red"
+		texturefile = "gfx/interface/goals/MNT/MNT_free_from_red.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_hard_punishments"
+		texturefile = "gfx/interface/goals/MNT/MNT_hard_punishments.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_imperial_cult"
+		texturefile = "gfx/interface/goals/MNT/MNT_imperial_cult.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_law_above_all"
+		texturefile = "gfx/interface/goals/MNT/MNT_law_above_all.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_loyal_unions"
+		texturefile = "gfx/interface/goals/MNT/MNT_loyal_unions.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_national_solidarity"
+		texturefile = "gfx/interface/goals/MNT/MNT_national_solidarity.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_new_rome"
+		texturefile = "gfx/interface/goals/MNT/MNT_new_rome.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_omnium"
+		texturefile = "gfx/interface/goals/MNT/MNT_omnium.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_order_mountains"
+		texturefile = "gfx/interface/goals/MNT/MNT_order_mountains.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_pax_romana"
+		texturefile = "gfx/interface/goals/MNT/MNT_pax_romana.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_populist_economy"
+		texturefile = "gfx/interface/goals/MNT/MNT_populist_economy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_remove_church_influence"
+		texturefile = "gfx/interface/goals/MNT/MNT_remove_church_influence.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_roman_armour"
+		texturefile = "gfx/interface/goals/MNT/MNT_roman_armour.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_roman_roads"
+		texturefile = "gfx/interface/goals/MNT/MNT_roman_roads.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_silence_monarchist"
+		texturefile = "gfx/interface/goals/MNT/MNT_silence_monarchist.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_slavic_blood"
+		texturefile = "gfx/interface/goals/MNT/MNT_slavic_blood.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_total_state"
+		texturefile = "gfx/interface/goals/MNT/MNT_total_state.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_imperial_ambition"
+		texturefile = "gfx/interface/goals/MNT/MNT_imperial_ambition.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_crusade_barbarism"
+		texturefile = "gfx/interface/goals/MNT/MNT_crusade_barbarism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_banish_pirates"
+		texturefile = "gfx/interface/goals/MNT/MNT_banish_pirates.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_restore_order_albania"
+		texturefile = "gfx/interface/goals/MNT/MNT_restore_order_albania.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_unite_vlachs"
+		texturefile = "gfx/interface/goals/MNT/MNT_unite_vlachs.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_rivalry_for_roman"
+		texturefile = "gfx/interface/goals/MNT/MNT_rivalry_for_roman.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_death_preferable_communism"
+		texturefile = "gfx/interface/goals/MNT/MNT_death_preferable_communism.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_strike_straits"
+		texturefile = "gfx/interface/goals/MNT/MNT_strike_straits.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_struggle_turks"
+		texturefile = "gfx/interface/goals/MNT/MNT_struggle_turks.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_subjugate_greece"
+		texturefile = "gfx/interface/goals/MNT/MNT_subjugate_greece.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_reconquest_gaul"
+		texturefile = "gfx/interface/goals/MNT/MNT_reconquest_gaul.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_eternal_anglo"
+		texturefile = "gfx/interface/goals/MNT/MNT_eternal_anglo.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_equipment_modernization"
+		texturefile = "gfx/interface/goals/MNT/MNT_equipment_modernization.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_cetinje_military_acedemy"
+		texturefile = "gfx/interface/goals/MNT/MNT_cetinje_military_acedemy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_military_examination"
+		texturefile = "gfx/interface/goals/MNT/MNT_military_examination.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_merchant_marine"
+		texturefile = "gfx/interface/goals/MNT/MNT_merchant_marine.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_naval_reforms"
+		texturefile = "gfx/interface/goals/MNT/MNT_naval_reforms.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_adriatic_ports"
+		texturefile = "gfx/interface/goals/MNT/MNT_adriatic_ports.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_a_large_fleet"
+		texturefile = "gfx/interface/goals/MNT/MNT_a_large_fleet.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_experimental_designs"
+		texturefile = "gfx/interface/goals/MNT/MNT_experimental_designs.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_traditional_naval_warfare"
+		texturefile = "gfx/interface/goals/MNT/MNT_traditional_naval_warfare.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_a_mobile_navy"
+		texturefile = "gfx/interface/goals/MNT/MNT_a_mobile_navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_crusier_development"
+		texturefile = "gfx/interface/goals/MNT/MNT_crusier_development.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_submarine_development"
+		texturefile = "gfx/interface/goals/MNT/MNT_submarine_development.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_expand_the_kotor_shipyards"
+		texturefile = "gfx/interface/goals/MNT/MNT_expand_the_kotor_shipyards.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_modern_destroyers"
+		texturefile = "gfx/interface/goals/MNT/MNT_modern_destroyers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_expand_runways"
+		texturefile = "gfx/interface/goals/MNT/MNT_expand_runways.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_aerial_theory"
+		texturefile = "gfx/interface/goals/MNT/MNT_aerial_theory.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_sons_of_jupiter"
+		texturefile = "gfx/interface/goals/MNT/MNT_sons_of_jupiter.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_ground_support"
+		texturefile = "gfx/interface/goals/MNT/MNT_ground_support.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_strategic_destruction"
+		texturefile = "gfx/interface/goals/MNT/MNT_strategic_destruction.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_fighter_advancements"
+		texturefile = "gfx/interface/goals/MNT/MNT_fighter_advancements.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_jupiters_thunder"
+		texturefile = "gfx/interface/goals/MNT/MNT_jupiters_thunder.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_modern_dive_bombers"
+		texturefile = "gfx/interface/goals/MNT/MNT_modern_dive_bombers.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_caelum_nostrum"
+		texturefile = "gfx/interface/goals/MNT/MNT_caelum_nostrum.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_strike_bulgaria"
+		texturefile = "gfx/interface/goals/MNT/MNT_strike_bulgaria.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_MNT_prepare_for_a_new_war"
+		texturefile = "gfx/interface/goals/MNT/MNT_prepare_for_a_new_war.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_retain_old_doctrines"
+		texturefile = "gfx/interface/goals/MNT/MNT_retain_old_doctrines.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_military_buildup"
+		texturefile = "gfx/interface/goals/MNT/MNT_military_buildup.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_war_material_assessment"
+		texturefile = "gfx/interface/goals/MNT/MNT_war_material_assessment.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_artillery_development"
+		texturefile = "gfx/interface/goals/MNT/MNT_artillery_development.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_motorized_logistics"
+		texturefile = "gfx/interface/goals/MNT/MNT_motorized_logistics.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_great_war_armor_studies"
+		texturefile = "gfx/interface/goals/MNT/MNT_great_war_armor_studies.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_mountain_brigade"
+		texturefile = "gfx/interface/goals/MNT/MNT_mountain_brigade.tga"
+	}
+	SpriteType = {
+		name = "GFX_focus_MNT_army_discipline"
+		texturefile = "gfx/interface/goals/MNT/MNT_army_discipline.tga"
+	}
+
+}

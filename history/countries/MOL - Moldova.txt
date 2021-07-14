@@ -1,0 +1,172 @@
+﻿capital = 78
+
+oob = "MOL_1936"
+
+set_research_slots = 3
+set_stability = 0.3
+set_war_support = 0.35
+
+add_ideas = {
+	MOL_slavic_separatism
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+}
+
+1939.1.1 = {
+
+	add_political_power = 1198
+	
+	#generic focuses
+	complete_national_focus = army_effort
+	complete_national_focus = equipment_effort
+	complete_national_focus = motorization_effort
+	complete_national_focus = aviation_effort
+	complete_national_focus = naval_effort
+	complete_national_focus = flexible_navy
+	complete_national_focus = industrial_effort
+	complete_national_focus = construction_effort
+	complete_national_focus = production_effort
+	
+	oob = "MOL_1939"
+	set_technology = {
+		interwar_artillery = 1
+		infantry_weapons1 = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_convoys = 10
+
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 20
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 5
+	liberalism = 10
+	conservatism = 15
+	right_authoritarianism = 0
+	despotism = 30
+	reactionism = 0
+	accelerationism = 20
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Olga Bancic"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_MOL_Olga_Bancic.tga"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+	
+	}
+}
+
+create_country_leader = {
+	name = "Ion Inculet"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_MOL_Ion_Inculet.dds"
+	expire = "1965.1.1"
+	ideology = absolute_monarchy
+	traits = {
+	
+	}
+}
+
+create_field_marshal = {
+	name = "Teodor Cojocaru"
+	portrait_path = "gfx/leaders/MOL/Portrait_MOL_Teodosie_Cojocaru.tga"
+	traits = {
+		career_officer
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Anatolie Popa"
+	portrait_path = "gfx/leaders/MOL/Portrait_MOL_Anatolie_Popa.tga"
+	traits = {
+		inflexible_strategist
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Gherman Pântea"
+	portrait_path = "gfx/leaders/MOL/Portrait_MOL_Gherman_Pantea.tga"
+	traits = {
+		career_officer
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Iona Yakir"
+	portrait_path = "gfx/leaders/MOL/Portrait_MOL_Iona_Yakir.tga"
+	traits = {
+		politically_connected
+		career_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}

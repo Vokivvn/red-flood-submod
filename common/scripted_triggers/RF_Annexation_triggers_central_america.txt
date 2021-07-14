@@ -1,0 +1,120 @@
+#Costa Rica - annexation_COS_CONQ
+can_release_costa_rica = {
+	state = 316 #Costa Rica
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = COS_CONQ
+			country_exists = COS
+		}
+	}
+}
+
+#Cuba - annexation_CUB_CONQ
+can_release_cuba = {
+	state = 315 #Havana
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CUB_CONQ
+			country_exists = CUB
+		}
+	}
+}
+
+#Dominican Republic - annexation_DOM_CONQ
+can_release_dominican_republic = {
+	state = 319 #Eastern Hispaniola
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = HAI
+			has_country_flag = DOM_CONQ
+			country_exists = DOM
+		}
+	}
+}
+
+#El Salvador - annexation_ELS_CONQ
+can_release_el_salvador = {
+	state = 314 #El Salvador
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ELS_CONQ
+			country_exists = ELS
+		}
+	}
+}
+
+#Guatemala - annexation_GUA_CONQ
+can_release_guatemala = {
+	state = 313 #Guatemala
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = GUA_CONQ
+			country_exists = GUA
+		}
+	}
+}
+
+#Haiti - annexation_HAI_CONQ
+can_release_haiti = {
+	state = 318 #Port-au-Prince
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = HAI_CONQ
+			country_exists = HAI
+		}
+	}
+}
+
+#Honduras - annexation_HON_CONQ
+can_release_honduras = {
+	state = 842 #Tegucigalpa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = HON
+			has_country_flag = HON_CONQ
+		}
+	}
+}
+
+#Mexico - annexation_MEX_CONQ
+can_release_mexico = {
+	state = 277 #Mexico City
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = MEX_CONQ
+			country_exists = MEX
+		}
+	}
+}
+
+#Nicaragua - annexation_NIC_CONQ
+can_release_nicaragua = {
+	state = 317 #Nicaragua
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = NIC_CONQ
+			country_exists = NIC
+		}
+	}
+}
+
+#Panama - annexation_PAN_CONQ
+can_release_panama = {
+	state = 304 #Panama City
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = PAN_CONQ
+			country_exists = "PAN"
+		}
+	}
+}

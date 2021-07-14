@@ -1,0 +1,25 @@
+state={
+	id=515
+	name="STATE_515"
+	state_category = rural
+
+	history={
+		owner = NBE
+		add_core_of = NBE
+		add_core_of = CFS
+		add_core_of = KIV
+		add_core_of = PCN
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+		12824 1
+		}
+	}
+
+	provinces={
+		7931 12824 12741 10883
+	}
+	manpower=250661
+	buildings_max_level_factor=1.000
+}

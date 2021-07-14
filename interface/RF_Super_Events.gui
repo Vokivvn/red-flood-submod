@@ -1,0 +1,300 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "Super_Event_Window"
+		size = { width = 581 height = 427 }
+		position = { x= 0 y= 0 }
+		Orientation = center
+		Origo = center
+		clipping = no	
+		moveable = yes
+
+		background = {
+			name = "Background"
+			spriteType =  "GFX_blank_background"
+		}
+
+		iconType = {
+			name ="Super_Event_Image_japanese_invasion_of_china"
+			spriteType = "GFX_SPEVENT_japanese_invasion_of_china"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_brazil_collapse"
+			spriteType = "GFX_SPEVENT_brazil_collapse"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_rosenbaum"
+			spriteType = "GFX_SPEVENT_rusuni_rosenbaum"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_chapayev"
+			spriteType = "GFX_SPEVENT_rusuni_chapayev"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_trotsky"
+			spriteType = "GFX_SPEVENT_rusuni_trotsky"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_gastev"
+			spriteType = "GFX_SPEVENT_rusuni_gastev"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_kerensky"
+			spriteType = "GFX_SPEVENT_rusuni_kerensky"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_blackbloc"
+			spriteType = "GFX_SPEVENT_rusuni_blackbloc"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_novykurs"
+			spriteType = "GFX_SPEVENT_rusuni_novykurs"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_mladorossi"
+			spriteType = "GFX_SPEVENT_rusuni_mladorossi"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_diterikhs"
+			spriteType = "GFX_SPEVENT_rusuni_diterikhs"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_CONGO_PCN"
+			spriteType = "GFX_SPEVENT_CONGO_PCN"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_CONGO_PCN_Brody"
+			spriteType = "GFX_SPEVENT_CONGO_PCN_Brody"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_CONGO_NBE"
+			spriteType = "GFX_SPEVENT_CONGO_NBE"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_CONGO_KIV"
+			spriteType = "GFX_SPEVENT_CONGO_KIV"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_CONGO_CFS"
+			spriteType = "GFX_SPEVENT_CONGO_CFS"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_etat_irreal"
+			spriteType = "GFX_SPEVENT_etat_irreal"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_UPI_Churchill"
+			spriteType = "GFX_SPEVENT_UPI_Churchill"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_UPI_Kali"
+			spriteType = "GFX_SPEVENT_UPI_Kali"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_savinkov"
+			spriteType = "GFX_SPEVENT_rusuni_savinkov"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_ruthenia"
+			spriteType = "GFX_SPEVENT_rusuni_ruthenia"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_dor"
+			spriteType = "GFX_SPEVENT_DOR"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_USA_collapse"
+			spriteType = "GFX_SPEVENT_USA_collapse"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_DEV_civil_war"
+			spriteType = "GFX_SPEVENT_DEV_civil_war"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_SPA_civil_war"
+			spriteType = "GFX_SPEVENT_SPA_civil_war"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_blackhundreds"
+			spriteType = "GFX_SPEVENT_rusuni_blackhundreds"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_solidarists"
+			spriteType = "GFX_SPEVENT_rusuni_solidarists"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_scythia"
+			spriteType = "GFX_SPEVENT_rusuni_scythia"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_eurasia"
+			spriteType = "GFX_SPEVENT_rusuni_eurasia"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_kornilov"
+			spriteType = "GFX_SPEVENT_rusuni_kornilov"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_gulidov"
+			spriteType = "GFX_SPEVENT_rusuni_gulidov"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_ww2"
+			spriteType = "GFX_SPEVENT_ww2"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_ITA_victory"
+			spriteType = "GFX_SPEVENT_italy_victory"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_ITA_balbo"
+			spriteType = "GFX_SPEVENT_italy_balbo"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_ITA_nitti"
+			spriteType = "GFX_SPEVENT_italy_nitti"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_usauni_bodin"
+			spriteType = "GFX_SPEVENT_usauni_bodin"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_usauni_sinclair"
+			spriteType = "GFX_SPEVENT_usauni_sinclair"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_libs"
+			spriteType = "GFX_SPEVENT_rusuni_libs"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_oln"
+			spriteType = "GFX_SPEVENT_rusuni_oln"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_tri"
+			spriteType = "GFX_SPEVENT_rusuni_tri"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_rusuni_kamenev"
+			spriteType = "GFX_SPEVENT_rusuni_kamenev"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		iconType = {
+			name ="Super_Event_Image_YUG_hyperborea"
+			spriteType = "GFX_SPEVENT_YUG_hyperborea"
+			position = { x = 0 y = 0 }
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "Pax_Super_Event_Title_textbox"
+			position = { x = 165 y = 348 }
+			font = "FuturaBT"
+			borderSize = {x = 0 y = 0}
+			text = "[get_super_event_title]"
+			maxWidth = 290
+			maxHeight = 20
+			fixedsize = yes	
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "Pax_Super_Event_Quote_textbox"
+			position = { x = 85 y = 390 }
+			font = "FuturaLT"
+			borderSize = {x = 0 y = 0}
+			text = "[get_superevent_quote]"
+			maxWidth = 450
+			maxHeight = 119
+			fixedsize = yes	
+			format = center
+		}
+
+		buttonType = {
+            name = "Super_Event_Close"
+            position = { x = 549 y = 49 }
+            quadTextureSprite ="GFX_closebutton"
+            clicksound = click_scroll
+        }
+	}
+}

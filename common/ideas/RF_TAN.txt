@@ -1,0 +1,506 @@
+ideas = {
+	country = {
+		TAN_religious_tensions = {
+			picture = FRA_scw_intervention_republicans_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				stability_factor = -0.15
+				generate_wargoal_tension = -0.90
+				trade_opinion_factor = -0.1
+				guarantee_tension = 0.75
+			}
+		}
+		
+		TAN_religious_tensions2 = {
+			picture = FRA_scw_intervention_republicans_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				stability_factor = -0.10
+				generate_wargoal_tension = -0.45
+				trade_opinion_factor = -0.05
+				guarantee_tension = 0.50
+			}
+		}
+		
+		TAN_religious_tensions3 = {
+			picture = FRA_scw_intervention_republicans_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				generate_wargoal_tension = -0.20
+				guarantee_tension = 0.25
+			}
+		}
+		
+		TAN_guerilla_army = {
+			picture = chi_army_corruption2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				conscription_factor = -0.5
+				war_support_factor = -0.25
+			}
+		}
+		
+		TAN_guerilla_army2 = {
+			picture = chi_army_corruption2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = -0.25
+				war_support_factor = -0.15
+			}
+		}
+		
+		TAN_guerilla_army3 = {
+			picture = chi_army_corruption2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				army_org_factor = 0.10
+				conscription_factor = -0.1
+				war_support_factor = -0.05
+			}
+		}
+		
+		TAN_eurasian_army = {
+			picture = eng_imperial_conscription
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				army_org_factor = 0.15
+				conscription_factor = 0.5
+				war_support_factor = 0.5
+			}
+		}
+		
+		TAN_divided_tribes = {
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.25
+				surrender_limit = -0.25
+			}
+		}
+		
+		TAN_divided_tribes2 = {
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.1
+				surrender_limit = -0.1
+			}
+		}
+		
+		TAN_industrial_dinosaur = {
+			picture = FRA_factory_strikes
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				research_speed_factor = -0.2
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor  = -0.15
+			}
+		}
+		
+		TAN_industrial_dinosaur2 = {
+			picture = FRA_factory_strikes
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				research_speed_factor = -0.1
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor  = -0.05
+			}
+		}
+		
+		TAN_industrial_dinosaur3 = {
+			picture = FRA_factory_strikes
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor  = 0.10
+			}
+		}
+		
+		TAN_welcome_all = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		
+		TAN_synod = {
+			picture = TAN_synod
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+			}
+		}
+		
+		TAN_synod2 = {
+			picture = TAN_synod
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				political_power_factor = 0.20
+				stability_factor = 0.10
+			}
+		}
+		
+		TAN_synod3 = {
+			picture = TAN_synod
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				political_power_factor = 0.30
+				stability_factor = 0.15
+			}
+		}
+		
+		TAN_Barons_Men = {
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				foreign_minister_cost_factor = -0.10
+				economy_minister_cost_factor = -0.10
+				security_minister_cost_factor = -0.10
+				head_of_intel_cost_factor = -0.10
+				#trade_laws_cost_factor = -0.10
+				#mobilization_laws_cost_factor = -0.10
+				#economy_cost_factor = -0.10
+			}
+		}
+		
+		TAN_Barons_Men2 = {
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				max_command_power = 25
+				promote_cost_factor = 0.2
+				command_power_gain_mult = 0.1
+			}
+		}
+		
+		TAN_Barons_Men3 = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				conscription = 0.05
+				non_core_manpower = 0.25
+			}
+		}
+		
+		TAN_Mahakala_Path = {
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				generate_wargoal_tension = -0.5
+			}
+		}
+		
+		TAN_Mahakala_Path2 = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		TAN_Uyighur_defectors = {
+			picture = prc_low_popular_support2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				offence = 0.1
+				defence = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		
+		TAN_Propaganda = {
+			picture = FRA_national_mobilization_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.5
+			}
+		}
+		
+		TAN_Mongol_Training = {
+			picture = generic_intel_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				training_time_army_factor = -0.15
+				cavalry_attack_factor = 0.03
+				cavalry_defence_factor = 0.03
+			}
+		}
+		
+		TAN_Russian_Banners = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				monthly_population = 1
+				despotism_drift = 0.03
+			}
+		}
+		TAN_express = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TAN
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				repair_speed_infrastructure_factor = 0.15
+				army_speed_factor = 0.1
+				army_armor_speed_factor = 0.1
+			}
+		}
+	}
+#Gov't
+	head_of_government = {
+		TAN_Roman_von_Ungern-Sternberg_hog = {
+			picture = Baron_Ungern
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				head_of_government
+				hog_spiritual_leader
+			}
+		}
+	}
+	
+	foreign_minister = {
+		TAN_Ferdynand_Antoni_Ossendowski_for = {
+			picture = Ferdynand_Antoni_Ossendowski
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	
+	economy_minister = {
+		TAN_Gombozozhavyn_Luvsantseveen_eco = {
+			picture = Gombozhavyn_Luvsantseveen
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_industrialiser
+			}
+		}
+	}
+	
+	security_minister = {
+		TAN_Nikolai_Kazagrandi_sec = {
+			picture = Nikolai_Kazagrandi
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+	
+	head_of_intel = {
+		TAN_Boris_Rezukhin_int = {
+			picture = Boris_Rezukhin
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	
+#Military
+	chief_of_staff = {
+		TAN_Roman_von_Ungern-Sternberg_cof = {
+			picture = Baron_Ungern
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				army_chief_maneuver_2
+			}
+		}
+	}
+	
+	chief_of_army = {
+		TAN_Roman_von_Ungern-Sternberg_coa = {
+			picture = Baron_Ungern
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				army_chief_offensive_2
+			}
+		}
+	}
+	
+	chief_of_navy = {
+		TAN_Roman_von_Ungern-Sternberg_con = {
+			picture = Baron_Ungern
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				navy_chief_decisive_battle_2
+			}
+		}
+	}
+	
+	chief_of_air_force = {
+		TAN_Roman_von_Ungern-Sternberg_coaf = {
+			picture = Baron_Ungern
+			allowed = {
+				original_tag = TAN
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = reactionism
+					}
+				}
+			}
+			traits = { 
+				air_chief_ground_support_2
+			}
+		}
+	}
+}

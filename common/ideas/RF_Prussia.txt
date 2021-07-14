@@ -1,0 +1,754 @@
+ideas = {
+	country = {
+		PRS_bloody_january = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					stability_weekly = -0.01
+					war_support_weekly = -0.01
+					MONTHLY_POPULATION = -0.2
+					right_authoritarianism_drift = -0.05
+				}
+				picture = PRS_bloody_january
+		}
+		PRS_bloody_january_aftermath = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					stability_factor = -0.1
+					war_support_factor = -0.1
+					MONTHLY_POPULATION = -0.1
+					right_authoritarianism_drift = -0.05
+				}
+				picture = PRS_bloody_january_aftermath
+		}
+		PRS_junkerstaat = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					war_support_factor = 0.1
+					political_power_gain = -0.15
+				}
+				picture = PRS_junkerstaat
+		}
+		PRS_disloyal_proletariat = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					 industrial_capacity_factory = -0.1
+					 industrial_capacity_dockyard = -0.1
+					 stability_factor = -0.1
+				}
+				picture = PRS_disloyal_proletariat
+		}
+		PRS_worker_surpression = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					 industrial_capacity_factory = -0.2
+					 industrial_capacity_dockyard = -0.2
+					 stability_factor = -0.2
+					 weekly_manpower = -2000
+					 revolutionary_anarchism_drift = -0.01
+					 vanguard_socialism_drift = -0.01
+					 libertarian_marxism_drift = -0.01
+					 revisionist_socialism_drift = -0.01
+					 social_democratism_drift = -0.01
+				}
+				picture = PRS_worker_surpression
+		}
+		PRS_hampered_proletariat = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					 industrial_capacity_factory = -0.7
+					 industrial_capacity_dockyard = -0.7
+					 stability_factor = -0.7
+				}
+				picture = PRS_disloyal_proletariat
+		}
+		PRS_beaten_proletariat = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					 industrial_capacity_factory = -0.3
+					 industrial_capacity_dockyard = -0.3
+					 stability_factor = -0.3
+				}
+				picture = PRS_disloyal_proletariat
+		}
+		PRS_pragmatic_tariffs = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					 industrial_capacity_factory = -0.05
+					 industrial_capacity_dockyard = -0.05
+					 production_factory_efficiency_gain_factor = 0.2
+				}
+				picture = PRS_pragmatic_tariffs
+		}
+		PRS_power_of_freikorps = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_org_factor = 0.1
+					army_attack_factor = 0.05
+				}
+				picture = PRS_power_of_freikorps
+		}
+		PRS_freikorps_domination = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_org_factor = 0.1
+					army_core_attack_factor = 0.15
+					army_core_defence_factor = 0.05
+					conscription_factor = 0.05
+					stability_factor = -0.05
+				}
+				picture = PRS_power_of_freikorps
+		}
+		PRS_uncooperative_freikorps = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_org_factor = 0.05
+					army_attack_factor = 0.05
+					political_power_gain = -0.2
+					conscription_factor = -0.15
+				}
+				picture = PRS_uncooperative_freikorps
+		}
+		PRS_hamstrung_freikorps = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_core_defence_factor = 0.05
+					army_org_factor = 0.05
+					political_power_gain = 0.1
+				}
+				picture = PRS_hamstrung_freikorps
+		}
+		PRS_dissenting_officers = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					war_support_factor = -0.05
+					army_org_factor = -0.25
+					experience_gain_army = -0.01
+				}
+				picture = PRS_dissenting_officers
+		}
+		PRS_officers_purged = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					chief_of_staff_cost_factor = -0.1
+					max_planning = -0.1
+					war_support_factor = -0.1
+					army_org_factor = -0.15
+					experience_gain_army_factor = -0.25
+				}
+				picture = PRS_officers_purged
+		}
+		PRS_uncertain_succession = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					political_power_gain = -0.2
+					stability_factor = -0.1
+				}
+				picture = PRS_uncertain_succession
+		} 
+		PRS_permanent_junta = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					war_support_factor = 0.05
+					army_core_attack_factor = 0.05
+					max_planning = 0.1
+					conscription_factor = 0.1
+					political_power_gain = -0.1
+				}
+				picture = PRS_permanent_junta
+		}
+		PRS_panzertruppe = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_speed_factor = 0.05
+					offence = 0.05
+					army_armor_speed_factor = 0.05
+					army_armor_attack_factor = 0.05
+					army_morale_factor = 0.1
+				}
+				picture = PRS_panzertruppe
+		}
+		PRS_funding_loyalists = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					training_time_factor = 0.25
+					experience_gain_army_factor = -0.25
+					industrial_capacity_factory = -0.03
+					production_speed_buildings_factor = -0.03
+				}
+				picture = PRS_funding_loyalists
+		}
+		PRS_bavaria_connection = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				picture = PRS_bavaria_connection
+		}
+		PRS_london_treaty = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+			modifier = {
+				production_cost_max_ship_hull_cruiser = 6000
+				production_cost_max_ship_hull_heavy = 12000
+				production_cost_max_ship_hull_carrier = 10500
+			}
+			picture = PRS_london_treaty
+		}
+		PRS_wilhelm_august = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					political_power_gain = -0.1
+					war_support_factor = 0.05
+				}
+				picture = PRS_wilhelm_august
+		}
+		PRS_aftermath_coup = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					stability_factor = -0.25
+					war_support_factor = -0.25
+					conscription_factor = -0.5
+					production_speed_buildings_factor = -0.25
+				}
+				picture = PRS_aftermath_coup
+		}
+		PRS_rough_transition = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					stability_factor = -0.1
+					war_support_factor = -0.1
+					despotism_drift = -0.05
+				}
+				picture = PRS_rough_transition
+		}
+		PRS_shadow_junta = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					political_power_gain = -0.15
+					war_support_factor = 0.05
+				}
+				picture = PRS_shadow_junta
+		}
+		PRS_return_democracy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					right_authoritarianism_drift = -0.03
+					political_power_gain = 0.05
+					war_support_factor = -0.1
+				}
+				picture = PRS_return_democracy
+		}
+		PRS_fledgling_democracy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					right_authoritarianism_drift = -0.05
+					political_power_gain = 0.08
+					war_support_factor = -0.05
+				}
+				picture = PRS_fledgling_democracy
+		}
+		PRS_democracy_all = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					right_authoritarianism_drift = -0.05
+					political_power_gain = 0.15
+					war_support_factor = -0.05
+					stability_factor = -0.05
+				}
+				picture = PRS_democracy_all
+		}
+		PRS_prussian_democracy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					right_authoritarianism_drift = -0.05
+					political_power_gain = 0.05
+					conscription_factor = 0.03
+				}
+				picture = PRS_prussian_democracy
+		}
+		PRS_traditional_democracy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					right_authoritarianism_drift = -0.01
+					political_power_gain = -0.05
+					war_support_factor = 0.05
+					stability_factor = 0.05
+				}
+				picture = PRS_traditional_democracy
+		}
+		PRS_mechanised_farming = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.2
+					conscription_factor = 0.1
+				}
+				picture = PRS_mechanised_farming
+		}
+		PRS_industrial_flexibility = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					conversion_cost_civ_to_mil_factor = -0.2
+					production_factory_efficiency_gain_factor = 0.1
+					industry_repair_factor = 0.25
+				}
+				picture = PRS_industrial_flexibility
+		}
+		PRS_danzig_profits = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					consumer_goods_factor = -0.03
+					industrial_capacity_factory = 0.05
+				}
+				picture = PRS_danzig_profits
+		}
+		PRS_crusade_against_communism = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					army_morale_factor = 0.05
+					conscription = 0.02
+					vanguard_socialism_drift = -0.05
+					libertarian_marxism_drift = -0.05
+					revisionist_socialism_drift = -0.05
+				}
+				targeted_modifier = { 
+					tag = GER attack_bonus_against = 0.05 
+				}
+				targeted_modifier = { 
+					tag = GER defense_bonus_against = 0.06
+				} 
+				picture = PRS_crusade_against_communism
+		}
+		PRS_baltic_ambitions = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					attrition = -0.1
+					land_reinforce_rate = 0.05
+					non_core_manpower = 0.1
+				}
+				targeted_modifier = { 
+					tag = RUS attack_bonus_against = 0.05 
+				}
+				targeted_modifier = { 
+					tag = RUS defense_bonus_against = 0.05 
+				} 
+				picture = PRS_baltic_ambitions
+		}
+		PRS_great_reich = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					mobilization_speed = 0.2
+					army_core_defence_factor = 0.05
+					army_org_factor = 0.05
+					training_time_army_factor = -0.1
+				}
+				picture = PRS_great_reich
+		}
+		PRS_british_advice = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					navy_capital_ship_attack_factor = 0.05
+					navy_capital_ship_defence_factor = 0.05
+				}
+				research_bonus = {
+					naval_doctrine = 0.1
+				}
+				picture = PRS_great_reich
+		}
+		PRS_schnee_debt = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					consumer_goods_factor = 0.05
+					industrial_capacity_factory = -0.1
+				}
+				picture = PRS_schnee_debt
+		}
+		PRS_schnee_debt_eng = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					industrial_capacity_factory = 0.1
+				}
+				picture = PRS_schnee_debt
+		}
+		PRS_colonial_societies_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					research_speed_factor = 0.05
+					conscription_factor = 0.03
+					liberalism_drift = 0.01
+					conservatism_drift = 0.01
+				}
+				picture = PRS_colonial_societies_idea
+		}
+		
+		PRS_social_state = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.1
+					political_power_gain = -0.1
+					stability_factor = 0.05
+				}
+				picture = PRS_social_state
+		}
+		PRS_social_state_1 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.1
+					political_power_gain = -0.2
+					consumer_goods_factor = 0.05
+					stability_factor = 0.1
+					production_factory_max_efficiency_factor = 0.1
+				}
+				picture = PRS_social_state
+		}
+		PRS_steady_change = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					social_democratism_drift = 0.05
+					stability_weekly = 0.001
+					political_power_gain = -0.2
+				}
+				picture = PRS_steady_change
+		}
+		PRS_military_factories = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					production_speed_arms_factory_factor = 0.15
+				}
+				picture = PRS_military_factories
+		}
+		PRS_border_exercises = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					max_planning = 0.2
+					planning_speed = 0.2
+					training_time_army_factor = -0.2
+				}
+				picture = PRS_border_exercises
+		}
+		PRS_prussian_defiance = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					offensive_war_stability_factor = 0.5
+					surrender_limit = 0.5
+					army_core_defence_factor = 0.1
+				}
+				picture = PRS_prussian_defiance
+		}
+		PRS_prussian_crown = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					political_power_gain = -0.25
+					war_support_factor = 0.05
+					stability_factor = -0.05
+				}
+				picture = PRS_prussian_crown
+		}
+		PRS_women_auxiliaries = {
+			removal_cost = -1
+				allowed = {
+					original_tag = PRS
+				}
+				modifier = {
+					conscription_factor = 0.1
+					supply_consumption_factor = -0.05
+					stability_factor = -0.03
+				}
+				picture = PRS_women_auxiliaries
+		}
+	} 
+	head_of_government = {
+
+		PRS_otto_braun_socdem_hog = {
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = { 
+				hog_reformist_soldier
+				head_of_government
+			}
+		}
+
+		PRS_heinz_guderian_hog = {
+			picture = PRS_heinz_guderian
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = { 
+				hog_reformist_soldier
+				head_of_government
+			}
+		}
+		PRS_fritz_schulenburg_hog = {
+			picture = PRS_fritz_schulenburg
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = { 
+				hog_naive_optimist
+				head_of_government
+			}
+		}
+		PRS_heinrich_schnee_hog = {
+			picture = PRS_heinrich_schnee
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = { 
+				hog_silent_workhorse
+				head_of_government
+			}
+		}
+		PRS_rudiger_goltz_hog = {
+			picture = PRS_rudiger_goltz
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				always = no
+			}
+			traits = { 
+				hog_flamboyant_tough_guy
+				head_of_government
+			}
+		}
+		PRS_erwin_planck_hog = {
+			picture = PRS_erwin_planck_hog
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = head_of_government_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = { 
+				hog_political_protege
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		PRS_konstantin_neurath_for = {
+			picture = PRS_konstantin_neurath_for
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = { 
+				for_great_compromiser
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		PRS_hjalmar_schacht_eco = {
+			picture = PRS_hjalmar_schacht_eco
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = { 
+				eco_bank_president
+				economy_minister
+			}
+		}
+	}
+	security_minister = {
+		PRS_wilhelm_groener_sec = {
+			picture = PRS_wilhelm_groener_sec
+			allowed = {
+				original_tag = PRS
+			}
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					always = no
+				}
+			}
+			cancel_if_invalid = no
+			traits = { 
+				sec_prince_of_terror
+				security_minister
+			}
+		}
+	}
+	industrial_concern = {		
+		krupp = {
+			allowed = {
+				original_tag = PRS
+			}
+			traits = {
+				industrial_manufacturer
+				regular
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				production_speed_industrial_complex_factor = 0.08
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+}

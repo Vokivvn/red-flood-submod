@@ -1,0 +1,239 @@
+capital = 107
+
+oob = "YUG_1936"
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_naval_oob = "YUG_1936_naval_legacy_mtg"
+	else = {
+		set_naval_oob = "YUG_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+	YUG_ante_trumbic
+	YUG_milos_crnjanski
+	YUG_jovan_karamata
+	YUG_jovan_bijelic
+	YUG_petar_dobrovic
+}
+
+country_event = { id = yugoslavia.2 days = 30 }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gw_artillery = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 3
+	revolutionary_anarchism = 1
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 14
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 6
+	reactionism = 15
+	accelerationism = 61
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Dimitrije Ljotić"
+	picture = "Portrait_YUG_Dimitrije_Ljotic.tga"
+	expire = "1955.1.1"
+	ideology = esoteric_reactionism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Dragutin Dimitrijević Apis"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_YUG_Dragutin_Dimitrijevic.tga"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+
+create_corps_commander = {
+	name = "Ivan Gošnjak"
+	portrait_path = "gfx/leaders/YUG/YUG_ivan_gosnjak.tga"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mihailo Apostolski"
+	portrait_path = "gfx/leaders/YUG/YUG_mihailo_apostolski.tga"
+	traits = { cavalry_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Vladimir Cukavac"
+	portrait_path = "gfx/leaders/YUG/YUG_vladimir_cukavac.tga"
+	traits = { trait_reckless }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Dobroslav Jevđević"
+	portrait_path = "gfx/leaders/YUG/YUG_dobroslav_jedevic.tga"
+	traits = { trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Danilo Kalafatović"
+	portrait_path = "gfx/leaders/YUG/YUG_danilo_kalafatovic.tga"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Dubrovnik Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Dalmacija Class"
+		type = heavy_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+	}
+
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Hrabri Class"				
+		type = ship_hull_submarine_2
+		name_group = YUG_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Dubrovnik Class"				
+		type = ship_hull_light_2
+		name_group = YUG_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Cruisers #
+	create_equipment_variant = {
+		name = "Dalmacija Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = YUG_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			fixed_ship_secondaries_slot = empty
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

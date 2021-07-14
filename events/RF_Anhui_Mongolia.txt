@@ -1,0 +1,339 @@
+﻿#########################
+#	Anhui Events
+#########################
+
+	add_namespace = anhui
+
+	#Gov't Change Leader_1
+	country_event = {
+		id = anhui.1
+		title = anhui.1.t
+		desc = anhui.1.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.1.a
+			ai_chance = { factor = 1 }
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+			add_stability = -0.1
+			add_war_support = -0.05
+		}
+	}
+	# Gov't Change Leader_3
+	country_event = {
+		id = anhui.3
+		title = anhui.3.t
+		desc = anhui.3.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.3.a
+			ai_chance = { factor = 1 }
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.5
+			}
+			add_stability = 0.2
+		}
+	}
+	# Gov't Change Leader_2
+	country_event = {
+		id = anhui.2
+		title = anhui.2.t
+		desc = anhui.2.d
+		picture = GFX_report_event_asian_politicians
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.2.a
+			ai_chance = { factor = 1 }
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.5
+			}
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+	}
+	#Chinese Economic Policy Choice
+	country_event = {
+		id = anhui.4
+		title = anhui.4.t
+		desc = anhui.4.d
+		picture = GFX_report_event_asian_politicians
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.4.a
+			add_ideas = {
+				MON_agrarianreform
+			}
+		}
+		option = {
+			name = anhui.4.b
+			add_ideas = {
+				MON_rapidindustrialisation
+			}
+		}
+		option = {
+			name = anhui.4.c
+			ai_chance = { factor = 1 }
+			add_ideas = {
+				MON_progressiveindustry
+			}
+		}
+	}
+	# KMT Anschluss?
+	country_event = {
+		id = anhui.5
+		title = anhui.5.t
+		desc = anhui.5.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = { # Accept
+			name = anhui.5.a
+			ai_chance = {
+				base = 10
+				modifier = {
+					add = -25
+					MON = { has_army_size = { size < 30 } }
+				}
+				modifier = {
+					add = 100
+					MON = { has_army_size = { size > 30 } }
+				}
+				modifier = {
+					add = 20
+					is_in_faction_with = MON
+				}
+			}
+			MON = {
+				country_event = { hours = 6 id = anhui.7 }
+			}
+			custom_effect_tooltip = GAME_OVER_TT
+		}
+		option = { # Refuse
+			name = anhui.5.b
+			ai_chance = {
+				base = 20			
+				modifier = {
+					MON = { has_army_size = { size > 29 } }
+					factor = -10
+				}
+				modifier = {
+					add = -20
+					MON = { has_army_size = { size < 20 } }
+				}
+				modifier = {
+					factor = 2
+					is_in_faction = yes
+					NOT = { is_in_faction_with = MON }
+				}
+				modifier = {
+					any_other_country = {
+						has_guaranteed = KMT
+					}
+					factor = 5
+				}
+			}
+			MON = {
+				country_event = { hours = 6 id = anhui.6 }
+				if = { limit = { is_in_faction_with = KMT }
+					remove_from_faction = KMT
+				}
+			}
+		}
+	}
+	# KMT refuses Anschluss
+	country_event = {
+		id = anhui.6
+		title = anhui.6.t
+		desc = anhui.6.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.6.a
+			add_state_claim = 600
+			add_state_claim = 749
+			add_state_claim = 613
+			add_state_claim = 929
+			add_state_claim = 861
+			add_state_claim = 863
+			add_state_claim = 596
+			create_wargoal = {
+				type = annex_everything
+				target = KMT
+			}
+		}
+	}
+	# KMT Anschluss Completed
+	country_event = {
+		id = anhui.7
+		title = anhui.7.t
+		desc = anhui.7.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.7.a
+			every_state = {
+				limit = {
+					is_owned_by = KMT
+				}
+				MON = { add_state_core = PREV }
+			}
+			KMT = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+			}
+			annex_country = { target = KMT transfer_troops = yes }
+			add_political_power = 25
+			set_country_flag = KMT_annexed
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}
+	# GDP Anschluss?
+	country_event = {
+		id = anhui.11
+		title = anhui.11.t
+		desc = anhui.11.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = { # Accept
+			name = anhui.11.a
+			ai_chance = {
+				base = 30
+				modifier = {
+					add = -25
+					MON = { has_army_size = { size < 30 } }
+				}
+				modifier = {
+					add = 100
+					MON = { has_army_size = { size > 30 } }
+				}
+				modifier = {
+					add = 20
+					is_in_faction_with = MON
+				}
+			}
+			MON = {
+				country_event = { hours = 6 id = anhui.13 }
+			}
+			custom_effect_tooltip = GAME_OVER_TT
+		}
+		option = { # Refuse
+			name = anhui.11.b
+			ai_chance = {
+				base = 10
+				modifier = {
+					MON = { has_army_size = { size > 29 } }
+					factor = 0.5
+				}
+				modifier = {
+					add = 20
+					MON = { has_army_size = { size < 20 } }
+				}
+				modifier = {
+					factor = 2
+					is_in_faction = yes
+					NOT = { is_in_faction_with = MON }
+				}
+				modifier = {
+					any_other_country = {
+						has_guaranteed = GDP
+					}
+					factor = 5
+				}
+			}
+			MON = {
+				country_event = { hours = 6 id = anhui.12 }
+				if = { limit = { is_in_faction_with = GDP }
+					remove_from_faction = GDP
+				}
+			}
+		}
+	}
+	# GDP refuses Anschluss
+	country_event = {
+		id = anhui.12
+		title = anhui.12.t
+		desc = anhui.12.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = anhui.12.a
+			add_state_claim = 594
+			add_state_claim = 876
+			add_state_claim = 599
+			add_state_claim = 836
+			add_state_claim = 925
+			add_state_claim = 593
+			add_state_claim = 592
+			add_state_claim = 594
+			add_state_claim = 926
+			add_state_claim = 877
+			add_state_claim = 728
+			add_state_claim = 591
+			create_wargoal = {
+				type = annex_everything
+				target = GDP
+			}
+		}
+	}
+	# GDP Anschluss Completed
+	country_event = {
+		id = anhui.13
+		title = anhui.13.t
+		desc = anhui.13.d
+		picture = GFX_report_event_chinese_japanese_handshake
+		
+		is_triggered_only = yes
+
+		option = {
+			name = anhui.13.a
+			every_state = {
+				limit = {
+					is_owned_by = GDP
+				}
+				MON = { add_state_core = PREV }
+			}
+			GDP = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+			}
+			annex_country = { target = GDP transfer_troops = yes }
+			add_political_power = 25
+			set_country_flag = GDP_annexed
+			add_war_support = -0.05
+			add_stability = -0.05
+		}
+	}

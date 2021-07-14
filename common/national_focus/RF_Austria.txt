@@ -1,0 +1,3287 @@
+focus_tree = { 
+	id = AUS_Focus
+	country = { 
+		factor = 0 
+		modifier = { 
+			add = 10 
+			tag = AUS 
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 300 y = 1100 }
+
+	#Focus for The Worker's Front
+	focus = { 
+		id = AUS_theworkersfront
+		icon = GFX_theworkersfront
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_prewarindustry } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_ideas = AUS_worker_front
+		}
+	} 
+
+	#Focus for Weaken The Government
+	focus = { 
+		id = AUS_weakenthegovernment
+		icon = GFX_weakenthegovernment
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_parliamentaryconflict } 
+		mutually_exclusive = { focus = AUS_strengthentheultranationalists focus = AUS_powertothemoderates}
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = AUS_weakenthegovernment_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = AUS_socialistswon
+						}
+					}
+					country_event = { days = 25 id = austria.7}
+				}
+			}
+		}
+	} 
+
+	#Focus for Parliamentary Conflict
+	focus = { 
+		id = AUS_parliamentaryconflict
+		icon = GFX_parliamentaryconflict
+		x = 12
+		y = 0
+		cost = 3
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 4
+		 } 
+		completion_reward = {
+			add_political_power = 120
+			AUS = {country_event = { days = 1 id = austria.1 }}
+		}
+	} 
+
+	#Focus for Power to The Moderates
+	focus = { 
+		id = AUS_powertothemoderates
+		icon = GFX_powertothemoderates
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_parliamentaryconflict } 
+		mutually_exclusive = { focus = AUS_strengthentheultranationalists focus = AUS_weakenthegovernment}
+		ai_will_do = { 
+			factor = 40
+		}
+		completion_reward = {		
+			custom_effect_tooltip = AUS_powertothemoderates_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = AUS_conservativeswon
+						}
+					}
+					country_event = { days = 25 id = austria.8 }
+				}
+			}
+		}
+	} 
+
+	#Focus for Unite the people
+	focus = { 
+		id = AUS_unitethepeople
+		icon = GFX_unitethepeople
+		x = 6
+		y = 2
+		cost = 3
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_strengthentheultranationalists } 
+		ai_will_do = { 
+			factor = 2
+		}
+		available = {
+			has_war = no
+			NOT = { has_country_flag = AUS_civilwar }
+			NOT = { has_country_flag = AUS_socialistswon }
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			hidden_effect = {
+				country_event = { days = 3 id = austria.11 }
+			}
+		}
+	} 
+
+	#Focus for Pan-Germanic Supremacy
+	focus = { 
+		id = AUS_pangermanicsupremacy
+		icon = GFX_pangermanicsupremacy
+		x = 3
+		y = 3
+		ai_will_do = { 
+			 factor = 2
+		 } 
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_unitethepeople } 
+		mutually_exclusive = { focus = AUS_austriannationalistsupremacy } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		available = {
+			has_idea = AUS_accsupremacy
+		}
+		bypass = {
+			has_idea = AUS_accsupremacy
+		}
+	}
+
+	#Focus for Strengthen the Ultranationalists
+	focus = { 
+		id = AUS_strengthentheultranationalists
+		icon = GFX_strengthentheultranationalists
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_parliamentaryconflict } 
+		mutually_exclusive = {
+			focus = AUS_weakenthegovernment
+			focus = AUS_powertothemoderates
+		}
+		ai_will_do = { 
+			factor = 40
+		} 
+		bypass = {
+			has_government = right_authoritarianism
+			has_government = despotism
+			has_government = reactionism
+			has_government = accelerationism
+		}
+		completion_reward = {
+			country_event = { days = 1 id = austria.coup }
+			country_event = { days = 15 id = austria.12 }
+		}
+	}
+
+	#Focus for Seek british protection
+	focus = { 
+		id = AUS_seekbritishprotection
+		icon = GFX_seekbritishprotection
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_austriannationalistsupremacy focus = AUS_reactionarysupremacy }
+		ai_will_do = { 
+			factor = 2
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			ENG = {
+				country_event = { id = austria.13 days = 1 }
+				add_opinion_modifier = { target = AUS modifier = AUS_britainlove }
+			}
+		}
+	 } 
+
+	#Focus for Austrian Nationalist Supremacy
+	focus = { 
+		id = AUS_austriannationalistsupremacy
+		icon = GFX_austriannationalistsupremacy
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_unitethepeople } 
+		mutually_exclusive = { focus = AUS_pangermanicsupremacy } 
+		ai_will_do = { 
+			factor = 2
+		 } 
+		available = {
+			has_idea = AUS_despoticsupremacy
+		}
+		bypass = {
+			has_idea = AUS_despoticsupremacy
+		}
+		completion_reward = {
+			set_country_flag = dolfuss_in_power
+		}
+	 }
+
+	#Focus for Economic Rehabilitation
+	focus = { 
+		id = AUS_economicrehabilitation
+		icon = GFX_economicrehabilitation
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_powertothemoderates } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		available = {
+			has_war = no
+			NOT = { has_country_flag = AUS_civilwar }
+			NOT = { has_country_flag = AUS_socialistswon }
+		}
+		completion_reward = {
+			remove_ideas = AUS_nationalist_millitarism
+			add_ideas = AUS_Improved_Economy
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = AUS_conservativeswon
+						}
+					}
+					country_event = { days = 7 id = austria.18 }
+				}
+			}
+		}
+	} 
+
+	#Focus for Pact with Prussia
+	focus = { 
+		id = AUS_pactwithprussia
+		icon = GFX_pactwithprussia
+		x = 7
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_austriannationalistsupremacy focus = AUS_pangermanicsupremacy } 
+		ai_will_do = { 
+			factor = 2
+		}
+		available = {
+			is_subject = no
+		}
+		 completion_reward = {
+			PRS = {country_event = { days = 1 id = austria.17 }}
+			
+			hidden_effect = {
+				ASC = {
+					remove_state_core = 4
+					remove_state_claim = 4
+					remove_state_core = 151
+					remove_state_claim = 151
+					remove_state_core = 152
+					remove_state_claim = 152
+					remove_state_core = 153
+					remove_state_claim = 153
+					remove_state_core = 913
+					remove_state_claim = 913
+					remove_state_core = 901
+					remove_state_claim = 901
+					remove_state_core = 102
+					remove_state_claim = 102
+				}
+			}
+		}
+	}
+
+	#Focus for Rousing Speeches
+	focus = { 
+		id = AUS_rousingspeeches
+		icon = GFX_rousingspeeches
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_reactionarysupremacy } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 
+		completion_reward = {
+			hidden_effect = {
+				ASC = {
+					remove_state_core = 4
+					remove_state_claim = 4
+					remove_state_core = 151
+					remove_state_claim = 151
+					remove_state_core = 152
+					remove_state_claim = 152
+					remove_state_core = 153
+					remove_state_claim = 153
+					remove_state_core = 913
+					remove_state_claim = 913
+					remove_state_core = 901
+					remove_state_claim = 901
+					remove_state_core = 102
+					remove_state_claim = 102
+				}
+			}
+		}
+	} 
+
+	#Focus for Defend reactionary ideas
+	focus = { 
+		id = AUS_defendreactionaryideas
+		icon = GFX_defendreactionaryideas
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_seekbritishprotection } 
+		ai_will_do = { 
+			 factor = 2
+		 } 
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			 FRA = {
+				country_event = { id = austria.10 days = 1 }
+				add_opinion_modifier = { target = AUS modifier = AUS_reactionaryscum }
+			}
+			every_other_country = {
+				limit = {
+					has_government = reactionism
+					has_government = right_authoritarianism
+				}
+				add_opinion_modifier = { target = AUS modifier = AUS_reactionaryembraced }
+			}
+		}	
+	} 
+
+	#Focus for Rommel's Fortifications
+	focus = { 
+		id = AUS_rommelsfortifications
+		icon = GFX_rommelsfortifications
+		x = 8
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_consolidatethealps } 
+		prerequisite = { focus = AUS_defendreactionaryideas } 
+		ai_will_do = { 
+			 factor = 5
+		 } 
+		 available = {
+			has_full_control_of_state = 846
+			has_full_control_of_state = 3
+			has_full_control_of_state = 151
+		}
+		completion_reward = {
+			custom_effect_tooltip = AUS_rommelsfortifications_tooltip
+			846 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3612
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11590
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6666
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9622
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6683
+							instant_build = yes
+						}
+					}
+				}
+			}
+			3 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9638
+							instant_build = yes
+						}
+					}
+				}
+			}
+			151 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 663
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11623
+							instant_build = yes
+						}
+					}
+				}
+			}
+			153 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6680
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 6678
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 9636
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 673
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 11634
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 5
+							province = 3675
+							instant_build = yes
+						}
+					}
+				}
+			}
+			152 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 688
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6708
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 3703
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 732
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	 } 
+
+	#Focus for Reactionary Supremacy
+	focus = { 
+		id = AUS_reactionarysupremacy
+		icon = GFX_reactionarysupremacy
+		available = {
+			has_idea = AUS_Final_Compromise
+		}
+		x = 12
+		y = 3
+		cost = 2
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_economicrehabilitation } 
+		mutually_exclusive = { focus = AUS_sticktoourvalues } 
+		ai_will_do = { 
+			factor = 1
+		} 
+	}
+
+	#Focus for Stick to our values
+	focus = { 
+		id = AUS_sticktoourvalues
+		icon = GFX_sticktoourvalues
+		available = {
+			has_idea = AUS_democracyprevailed
+		}
+		x = 19
+		y = 3
+		cost = 2
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_economicrehabilitation } 
+		mutually_exclusive = { focus = AUS_reactionarysupremacy } 
+		ai_will_do = { 
+			factor = 1
+		}
+	} 
+
+	#Focus for Paramillitary Divisions
+	focus = { 
+		id = AUS_paramillitarydivisions
+		icon = GFX_paramillitarydivisions
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_austriannationalistsupremacy focus = AUS_pangermanicsupremacy } 
+		ai_will_do = { 
+			 factor = 3
+		 } 
+		 completion_reward = {
+			add_ideas = AUS_paramillitary_conscription
+		}
+	}
+
+	#Focus for Retake Bavaria
+	focus = { 
+		id = AUS_retakebavaria
+		icon = GFX_retakebavaria
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_circleofsteel } 
+		ai_will_do = { 
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1939.07.07
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GER
+			}
+			add_state_core = 52
+			add_state_core = 53
+			add_state_core = 50
+			add_state_core = 54
+			add_state_core = 28
+			add_state_core = 959
+			add_state_core = 42
+			add_state_core = 991
+		}
+	}
+
+	#Focus for Consolidate the alps
+	focus = { 
+		id = AUS_consolidatethealps
+		icon = GFX_consolidatethealps
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_conquerczechoslovakia focus = AUS_influenceczechoslovakia } 
+		ai_will_do = { 
+			factor = 3
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SWI
+			}
+			add_state_core = 151
+			add_state_core = 845
+			add_state_core = 3
+			add_state_core = 846
+		}
+	} 
+
+	#Focus for Influence Czechoslovakia
+	focus = { 
+		id = AUS_influenceczechoslovakia
+		icon = GFX_influenceczechoslovakia
+		x = 8
+		y = 5
+		cost = 10
+		available = {
+			NOT = {
+				has_government = accelerationism
+			}
+			is_subject = no
+		}
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_pactwithprussia } 
+		mutually_exclusive = { focus = AUS_conquerczechoslovakia } 
+		ai_will_do = { 
+			factor = 3
+		}
+		completion_reward = {
+			CZE = { 		
+				country_event = { days = 1 id = austria.25}
+			}
+		}
+	}
+
+	#Focus for Conquer Czechoslovakia
+	focus = { 
+		id = AUS_conquerczechoslovakia
+		icon = GFX_conquerczechoslovakia
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_pactwithprussia } 
+		mutually_exclusive = { focus = AUS_influenceczechoslovakia } 
+		ai_will_do = { 
+			factor = 2
+		}
+		available = {
+			is_subject = no
+		}
+		 completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = cze
+			}
+			add_state_core = 69
+			add_state_core = 9
+			add_state_core = 75
+			add_state_core = 74
+		}
+	}
+
+	#Focus for Circle of steel
+	focus = { 
+		id = AUS_circleofsteel
+		icon = GFX_circleofsteel
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_pactwithprussia } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			PRS = {
+				country_event = { id = austria.14 days = 1 }
+			}
+		}
+	}
+
+	#Focus for Challange Yugoslavia
+	focus = { 
+		id = AUS_challangeyugoslavia
+		icon = GFX_challangeyugoslavia
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_pactwithprussia } 
+		bypass = {
+			YUG = {
+				is_puppet_of = AUS
+			}
+		}
+		available = {
+			NOT = {
+				is_in_faction_with = POL
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				date < 1939.07.07
+			}
+		} 
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+			}
+		}
+	}
+
+	#Focus for Seek french protection
+	focus = { 
+		id = AUS_seekfrenchprotection
+		icon = GFX_seekfrenchprotection
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_pangermanicsupremacy } 
+		ai_will_do = { 
+			factor = 2
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = austria.64
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for The question of wheat
+	focus = { 
+		id = AUS_thequestionofwheat
+		icon = GFX_thequestionofwheat
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_seekfrenchprotection } 
+		ai_will_do = { 
+			factor = 1
+		} 
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Learn from Escadron
+	focus = { 
+		id = AUS_learnfromescadron
+		icon = GFX_learnfromescadron
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_thequestionofwheat } 
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = AUS_new_austrian_army
+		}
+	}
+
+	#Focus for Glorious Victory
+	focus = { 
+		id = AUS_gloriousvictory
+		icon = GFX_gloriousvictory
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_challangeyugoslavia } 
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+
+	#Focus for Pre-War industry
+	focus = { 
+		id = AUS_prewarindustry
+		icon = GFX_prewarindustry
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_rousingspeeches } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+			4 = {
+				if = {
+					limit = { 
+						is_controlled_by = AUS
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			152 = {
+				if = {
+					limit = { 
+						is_controlled_by = AUS
+						free_building_slots = {
+							building = arms_factory
+							size > 3
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	 } 
+
+	#Focus for The Anti-French Wall
+	focus = { 
+		id = AUS_theantifrenchwall
+		icon = GFX_theantifrenchwall
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_finishofftheswiss } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 available = {
+			has_full_control_of_state = 846
+			has_full_control_of_state = 3
+			has_full_control_of_state = 151
+		}
+			completion_reward = {
+			custom_effect_tooltip = AUS_antifrenchwall_tooltip
+				3 = {
+					if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 9638
+								instant_build = yes
+							}
+						}
+					}
+				}
+				151 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						hidden_effect = {
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 663
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 11623
+								instant_build = yes
+							}
+						}
+					}
+				}
+				846 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						hidden_effect = {
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 3612
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 11590
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 6666
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 9622
+								instant_build = yes
+							}
+							add_building_construction = {
+								type = bunker
+								level = 10
+								province = 6683
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+	 } 
+
+	#Focus for Whatever the cost may be.
+	focus = { 
+		id = AUS_whateverthecostmaybe
+		icon = GFX_whateverthecostmaybe
+		x = 12
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_theantigermanwall focus = AUS_theantifrenchwall } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_ideas = AUS_whatever_the_cost_focus
+		} 
+	}
+
+	#Focus for Finish off the Swiss
+	focus = { 
+		id = AUS_finishofftheswiss
+		icon = GFX_finishofftheswiss
+		x = 11
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_rousingspeeches } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		available = {
+			is_subject = no
+		}
+		 completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SWI
+			}
+			add_state_core = 151
+			add_state_core = 845
+			add_state_core = 3
+			add_state_core = 846
+		}
+	 } 
+
+	#Focus for The Anti-German Wall
+	focus = { 
+		id = AUS_theantigermanwall
+		icon = GFX_theantigermanwall
+		x = 13
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_prewarindustry } 
+		ai_will_do = { 
+			factor = 1
+		 } 
+		completion_reward = {
+			custom_effect_tooltip = AUS_antigermanwall_tooltip
+
+			153 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 6680
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 6678
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 9636
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 673
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 11634
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 3675
+							instant_build = yes
+						}
+					}
+				}
+			}
+			152 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 688
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 6708
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 3703
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 10
+							province = 732
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+
+	 }
+
+	#Focus for Join our brothers
+	focus = { 
+		id = AUS_joinourbrothers
+		icon = GFX_joinourbrothers
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_weakenthegovernment } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			has_socialist_government = yes
+			has_war = no
+			NOT = { has_country_flag = AUS_civilwar }
+			NOT = { has_country_flag = AUS_conservativeswon }
+		}
+		completion_reward = {
+			country_event = { id = austria.4 }
+		}
+	}
+
+	#Focus for Call for early elections
+	focus = { 
+		id = AUS_callforearlyelections
+		icon = GFX_callforearlyelections
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_sticktoourvalues } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		completion_reward = {
+			country_event = { days = 3 id = austria.28 }
+		} 
+	 } 
+
+	#Focus for Emergency Conscription
+	focus = { 
+		id = AUS_emergencyconscription
+		icon = GFX_emergencyconscription
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_rousingspeeches } 
+		ai_will_do = { 
+			 factor = 1
+		 }
+			completion_reward = {
+				add_ideas = AUS_emergency_conscription
+			} 
+
+	 } 
+
+	#Focus for Glory to the Republic!
+	focus = { 
+		available = {
+			OR = {
+				has_government = social_democratism
+				has_government = liberalism
+			}
+
+		}
+		bypass = {
+				has_government = social_democratism
+				has_government = liberalism
+		 }
+		id = AUS_glorytotherepublic
+		icon = GFX_glorytotherepublic
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_callforearlyelections } 
+		mutually_exclusive = { focus = AUS_stickwithschuschnigg } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+
+	 } 
+
+	#Focus for Something Greater!
+	focus = {
+		id = AUS_somethinggreater
+		icon = GFX_somethinggreater
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_retakebavaria } 
+		available = {
+			is_subject = no
+			owns_state = 53
+			owns_state = 52
+			owns_state = 50
+		}
+		ai_will_do = { 
+			factor = 10
+		} 
+
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 64
+					#PRS = { exists = no }
+					OR = {
+						has_government = despotism
+						has_government = accelerationism
+					}
+				}
+				set_cosmetic_tag = AUS_germany
+			}
+			else = {
+				set_cosmetic_tag = AUS_SGF
+				add_ideas = AUS_thesouthernreich
+			}
+		}
+	}
+	 
+
+	#Focus for Declaration of Neutrality
+	focus = { 
+		id = AUS_declarationofneutrality
+		icon = GFX_declarationofneutrality
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_glorytotherepublic } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+			add_ideas = AUS_neutrallity
+		}
+	 } 
+
+	#Focus for Unrelenting Progress
+	focus = { 
+		id = AUS_unrelentingprogress
+		icon = GFX_unrelentingprogress
+		x = 22
+		y = 8
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_militarizethesouth focus = AUS_militarizethenorth } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+			add_ideas = AUS_unrelenting_progress
+		} 
+	 } 
+
+	#Focus for Industrialize the North
+	focus = { 
+		id = AUS_industrializethenorth
+		icon = GFX_industrializethenorth
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_glorytotherepublic } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+				152 = {
+					if = {
+						limit = { 
+							is_controlled_by = AUS
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+		}
+	 } 
+
+	#Focus for Militarize the South
+	focus = { 
+		id = AUS_militarizethesouth
+		icon = GFX_militarizethesouth
+		x = 23
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_industrializethesouth } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+				4 = {
+					if = {
+						limit = { 
+							is_controlled_by = AUS
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+		}
+	 } 
+
+	#Focus for Stick With Schuschnigg
+	focus = { 
+		id = AUS_stickwithschuschnigg
+		icon = GFX_stickwithschuschnigg
+		available = {
+			has_idea = AUS_conservativesupremacy
+		}
+		bypass = {
+			has_idea = AUS_conservativesupremacy
+		}
+		x = 17
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_callforearlyelections } 
+		mutually_exclusive = { focus = AUS_glorytotherepublic } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+
+	 } 
+
+	#Focus for Industrialize the South
+	focus = { 
+		id = AUS_industrializethesouth
+		icon = GFX_industrializethesouth
+		x = 23
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_glorytotherepublic } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+			completion_reward = {
+				4 = {
+					if = {
+						limit = { 
+							is_controlled_by = AUS
+							free_building_slots = {
+								building = industrial_complex
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+		}
+
+	 } 
+
+	#Focus for Militarize the North
+	focus = { 
+		id = AUS_militarizethenorth
+		icon = GFX_militarizethenorth
+		x = 21
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_industrializethenorth } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		 completion_reward = {
+				152 = {
+					if = {
+						limit = { 
+							is_controlled_by = AUS
+							free_building_slots = {
+								building = arms_factory
+								size > 1
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+
+		}
+	 } 
+
+	#Focus for Stabilize the Country
+	focus = { 
+		id = AUS_stabilizethecountry
+		icon = GFX_stabilizethecountry
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_stickwithschuschnigg } 
+		ai_will_do = { 
+			factor = 1
+		 } 
+			 completion_reward = {
+				add_ideas = AUS_stable_once_more
+			} 
+
+	 } 
+
+	#Focus for Elect a Von Habsburg!
+	focus = { 
+		id = AUS_electavonhabsburg
+		icon = GFX_electavonhabsburg
+		x = 17
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_stabilizethecountry } 
+		ai_will_do = { 
+			 factor = 1
+		 } 
+		completion_reward = {
+			country_event = {
+				id = austria.30
+				days = 1
+			}
+		}
+	} 
+
+	#Focus for The Czechs Must Submitt!
+	focus = { 
+		id = AUS_theczechsmustsubmitt
+		icon = GFX_theczechsmustsubmitt
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_electavonhabsburg } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = cze
+			}
+			add_state_core = 69
+			add_state_core = 9
+			add_state_core = 75
+			add_state_core = 74
+		}
+	} 
+
+	#Focus for Glory to The Fatherland!
+	focus = { 
+		id = AUS_glorytothefatherland
+		icon = GFX_glorytothefatherland
+		x = 15
+		y = 10
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_influencehungary focus = AUS_strikethereds } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = AUS_for_the_fatherland
+		}
+	} 
+
+	#Focus for Brothers to the North
+	focus = { 
+		id = AUS_brotherstothenorth
+		icon = GFX_brotherstothenorth
+		x = 19
+		y = 8
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_electavonhabsburg } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			give_guarantee = PRS
+		}
+	} 
+
+	#Focus for Treaty with the Italians
+	focus = { 
+		id = AUS_treatywiththeitalians
+		icon = GFX_treatywiththeitalians
+		x = 19
+		y = 9
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_brotherstothenorth }
+		available = {
+			always = no
+			is_subject = no
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = ITA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	} 
+
+	#Focus for Influence Hungary
+	focus = { 
+		available = {
+			has_full_control_of_state = 664
+			has_full_control_of_state = 9
+		}
+		id = AUS_influencehungary
+		icon = GFX_influencehungary
+		x = 17
+		y = 9
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_theczechsmustsubmitt } 
+		mutually_exclusive = { focus = AUS_strikethereds } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			HUN  = {
+				add_ideas = AUS_huntorture
+			}
+		}
+	}
+
+	#Focus for Strike the Reds!
+	focus = { 
+		id = AUS_strikethereds
+		icon = GFX_strikethereds
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = AUS_theczechsmustsubmitt } 
+		mutually_exclusive = { focus = AUS_influencehungary } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HUN
+			}
+			add_state_core = 45
+			add_state_core = 923
+			add_state_core = 1035
+			add_state_core = 911
+			add_state_core = 154
+			add_state_core = 43
+			add_state_core = 155
+			hidden_effect = {
+				add_state_claim = 70
+				add_state_claim = 664
+				add_state_claim = 73
+				add_state_claim = 76
+			}
+		}
+	} 
+	 ######################################################
+	 ######Generic extension###############################
+	 ######################################################
+
+
+	 focus = {
+		id = AUS_army_effort
+		icon = GFX_focus_army
+		x = 28
+		y = 0
+		cost = 10
+		ai_will_do = { 
+		 factor = 1
+	    } 
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_equipment_effort
+		icon = GFX_focus_equipment_1
+		prerequisite = { focus = AUS_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = AUS_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_motorization_effort
+		icon = GFX_focus_motorization
+		prerequisite = { focus = AUS_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = AUS_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_doctrine_effort
+		icon = GFX_focus_doctrine_1
+		prerequisite = { focus = AUS_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_equipment_effort_2
+		icon = GFX_focus_equipment_2
+		prerequisite = { focus = AUS_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_mechanization_effort
+		icon = GFX_focus_mechanized
+		prerequisite = { focus = AUS_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_doctrine_effort_2
+		icon = GFX_focus_doctrine_2
+		prerequisite = { focus = AUS_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+
+	focus = {
+		id = AUS_equipment_effort_3
+		icon = GFX_focus_equipment_3
+		prerequisite = { focus = AUS_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = AUS_equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_armor_effort
+		icon = GFX_focus_armor
+		prerequisite = { focus = AUS_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_special_forces
+		icon = GFX_focus_special_forces
+		prerequisite = { focus = AUS_equipment_effort_3 }
+		prerequisite = { focus = AUS_doctrine_effort_2 }
+		prerequisite = { focus = AUS_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = AUS_equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AUS_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_aviation_effort
+		icon = GFX_focus_aviation1
+		x = 32
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = AUS_aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = AUS_aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = AUS_aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_fighter_focus
+		icon = GFX_focus_fighter
+		prerequisite = { focus = AUS_aviation_effort }
+		mutually_exclusive = { focus = AUS_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = AUS_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_bomber_focus
+		icon = GFX_focus_bomber
+		prerequisite = { focus = AUS_aviation_effort }
+		mutually_exclusive = { focus = AUS_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = AUS_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_aviation_effort_2
+		icon = GFX_focus_aviation2
+		prerequisite = { focus = AUS_bomber_focus focus = AUS_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = AUS_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = AUS_aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = AUS_aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = AUS_aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_CAS_effort
+		icon = GFX_focus_CASeffort
+		prerequisite = { focus = AUS_aviation_effort_2 }
+		prerequisite = { focus = AUS_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = AUS_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_rocket_effort
+		icon = GFX_focus_rocket_effort
+		prerequisite = { focus = AUS_aviation_effort_2 }
+		prerequisite = { focus = AUS_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = AUS_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_NAV_effort
+		icon = GFX_focus_naveffort
+		prerequisite = { focus = AUS_aviation_effort_2 }
+		prerequisite = { focus = AUS_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = AUS_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_naval_effort
+		icon = GFX_focus_navaleffort
+		x = 36
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = AUS_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = AUS_naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = AUS_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = AUS_naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = AUS_flexible_navy
+		icon = GFX_focus_flexible_navy
+		prerequisite = { focus = AUS_naval_effort }
+		mutually_exclusive = { focus = AUS_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = AUS_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_large_navy
+		icon = GFX_focus_large
+		prerequisite = { focus = AUS_naval_effort }
+		mutually_exclusive = { focus = AUS_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = AUS_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_submarine_effort
+		icon = GFX_focus_submarine
+		prerequisite = { focus = AUS_flexible_navy focus = AUS_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = AUS_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_cruiser_effort
+		icon = GFX_focus_cruisers
+		prerequisite = { focus = AUS_large_navy focus = AUS_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = AUS_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_destroyer_effort
+		icon = GFX_focus_destroyers
+		prerequisite = { focus = AUS_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = AUS_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_capital_ships_effort
+		icon = GFX_focus_capitalships
+		prerequisite = { focus = AUS_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = AUS_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_industrial_effort
+		icon = GFX_focus_industry
+		x = 40
+		y = 0
+		cost = 10
+		ai_will_do = { 
+			 factor = 2
+		 } 
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_construction_effort
+		icon = GFX_focus_construction_1
+		prerequisite = { focus = AUS_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = AUS_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_production_effort
+		icon = GFX_focus_production_1
+		prerequisite = { focus = AUS_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = AUS_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_construction_effort_2
+		icon = GFX_focus_construction_2
+		prerequisite = { focus = AUS_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = AUS_construction_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_production_effort_2
+		icon = GFX_focus_production_2
+		prerequisite = { focus = AUS_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = AUS_production_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_infrastructure_effort
+		icon = GFX_focus_infrastructure_1
+		prerequisite = { focus = AUS_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = AUS_construction_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_production_effort_3
+		icon = GFX_focus_production_3
+		prerequisite = { focus = AUS_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = AUS_production_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_infrastructure_effort_2
+		icon = GFX_focus_infrastructure_2
+		prerequisite = { focus = AUS_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = AUS_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_construction_effort_3
+		icon = GFX_focus_construction_3
+		prerequisite = { focus = AUS_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = AUS_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_nuclear_effort
+		icon = GFX_focus_Nuclear_Effort
+		prerequisite = { focus = AUS_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = AUS_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_extra_tech_slot
+		icon = GFX_focus_extra_tech1
+		prerequisite = { focus = AUS_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = AUS_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = AUS_extra_tech_slot_2
+		icon = GFX_focus_extra_tech2
+		prerequisite = { focus = AUS_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = AUS_extra_tech_slot
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = AUS_secret_weapons
+		icon = GFX_focus_Secret_Weapons
+		prerequisite = { focus = AUS_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = AUS_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	#End of focuses 
+ }

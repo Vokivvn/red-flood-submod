@@ -1,0 +1,420 @@
+ideologies = {
+
+	revolutionary_anarchism = {
+
+		types = {
+
+			social_anarchism = {
+			}
+
+			individualist_anarchism = {
+			}
+
+			national_anarchism = {
+			}
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 164 148 110 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		ai_communist = yes # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		}
+		can_collaborate = yes
+	}
+	
+	
+	vanguard_socialism = {
+
+		types = {
+
+			totalism = {
+			}
+
+			national_vanguardism = {
+			}
+
+			orthodox_leninism = {
+			}
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 195 53 10 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		ai_communist = yes # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		conscription = 0.005
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		}
+		can_collaborate = yes
+
+	}
+
+	libertarian_marxism = {
+
+		types = {
+
+			de_leonism = {
+			}
+
+			council_communism = {
+			}
+
+			agrarian_councilism = {
+			}
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+
+		color = { 236 73 76 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		ai_communist = yes # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		non_core_manpower = 0.1
+		}
+		can_collaborate = yes
+	}
+
+	revisionist_socialism = {
+
+		types = {
+
+			democratic_socialism = {
+			}
+
+			religious_socialism = {
+			}
+
+			agrarian_socialism = {
+			}
+		}
+
+		dynamic_faction_names = {
+		}
+
+
+		color = { 255 174 67 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		ai_communist = yes # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		}
+		can_collaborate = yes
+	}
+
+	social_democratism = {
+
+		types = {
+
+			progressivism = {
+			}
+
+			left_nationalism = {
+			}
+
+			liberal_socialism = {
+			}
+
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 248 127 157 }
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		war_impact_on_world_tension = -1.0
+		faction_impact_on_world_tension = -0.1
+
+		modifiers = {
+		}
+		can_collaborate = yes
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+
+
+	liberalism = {
+
+		types = {
+
+			social_liberalism = {
+			}
+
+			objectivism = {
+				can_be_randomly_selected = no
+			}
+
+			market_liberalism = {
+			}
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 246 232 111 }
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		war_impact_on_world_tension = -1.0
+		faction_impact_on_world_tension = -0.1
+
+		modifiers = {
+		}
+
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+
+	conservatism = {
+
+		types = {
+
+			social_conservatism = {
+			}
+
+			traditional_conservatism = {
+			}
+
+			national_conservatism = {
+			}
+
+
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 113 151 255 }
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		war_impact_on_world_tension = -1.0
+		faction_impact_on_world_tension = -0.1
+
+		modifiers = {
+		}
+
+		ai_democratic = yes # uses the democratic AI behaviour
+	}
+
+	right_authoritarianism = {
+
+		types = {
+
+			authoritarian_democratism = {
+			}
+                        
+            authoritarian_conservatism = {
+			}
+
+			military_junta = {
+			}
+
+			oligarchy = {
+			}
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 110 110 110 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+
+	despotism = {
+
+		types = {
+
+			absolute_monarchy = {
+			}
+
+			constitutional_dictatorship = {
+			}
+
+			military_dictatorship = {
+			}
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 41 41 41 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+
+
+	reactionism = {
+
+		types = {
+
+			reactionary_populism = {
+			}
+
+			religious_fundamentalism = {
+			}
+
+			esoteric_reactionism = {
+			}
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 128 70 164 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_join_factions = no
+		}
+
+		modifiers = {
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+
+	accelerationism = {
+
+		types = {
+
+			national_rejuvenatism = {
+			}
+
+			ethno_futurism = {
+			}
+
+			technocratism = {
+			}
+		}
+
+		dynamic_faction_names = {
+		}
+
+		color = { 248 248 248 }
+
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.5
+
+		rules = {
+			can_force_government = yes
+			can_puppet = yes
+			can_join_factions = no
+			can_send_volunteers = yes
+		}
+
+		modifiers = {
+		join_faction_tension = 0.80
+		generate_wargoal_tension = 0.25
+		research_speed_factor = 0.03
+		political_power_factor = -0.05
+		stability_factor = -0.05
+
+		}
+
+		ai_communist = yes # uses the commie AI behaviour
+	}
+
+}

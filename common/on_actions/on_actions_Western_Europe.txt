@@ -1,0 +1,62 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = FRA_ai_route
+							option = RANDOM
+						}
+					}
+					random_list = {
+						40 = { FRA = { set_country_flag = FRA_ai_path_1 } }
+						40 = { FRA = { set_country_flag = FRA_ai_path_2 } }
+						20 = { FRA = { set_country_flag = FRA_ai_path_3 } }
+					}
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { original_tag = GER }
+					
+					tag = FRA
+					NOT = {
+						has_global_flag = ww2_Super_Event_Visible
+					}
+					ROOT = { is_ai = no }
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.100
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = { original_tag = ENG }
+					tag = FRA
+					NOT = {
+						has_global_flag = ww2_Super_Event_Visible
+					}
+					ROOT = { is_ai = no }
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.101
+					}
+				}
+			}
+		}
+	}
+}

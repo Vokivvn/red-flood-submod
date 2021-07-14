@@ -1,0 +1,915 @@
+spriteTypes = { 
+	##Icon For: Pan-Asian Connections"
+	SpriteType = { 
+		name = "GFX_MNS_panasian_connections-82546"
+		texturefile = "gfx/interface/goals/GFX_MNS_panasian_connections-82546.dds"
+	}
+
+	##Icon Shine For: Pan-Asian Connections"
+	SpriteType = { 
+		name = "GFX_MNS_panasian_connections-82546_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_panasian_connections-82546.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_panasian_connections-82546.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_panasian_connections-82546.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Neutral But United"
+	SpriteType = { 
+		name = "GFX_MNS_neutral_but_united-82545"
+		texturefile = "gfx/interface/goals/GFX_MNS_neutral_but_united-82545.dds"
+	}
+
+	##Icon Shine For: Neutral But United"
+	SpriteType = { 
+		name = "GFX_MNS_neutral_but_united-82545_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_neutral_but_united-82545.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_neutral_but_united-82545.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_neutral_but_united-82545.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Abandon Outer Manchuria"
+	SpriteType = { 
+		name = "GFX_MNS_abandon_outer_manchuria-82544"
+		texturefile = "gfx/interface/goals/GFX_MNS_abandon_outer_manchuria-82544.dds"
+	}
+
+	##Icon Shine For: Abandon Outer Manchuria"
+	SpriteType = { 
+		name = "GFX_MNS_abandon_outer_manchuria-82544_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_abandon_outer_manchuria-82544.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_abandon_outer_manchuria-82544.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_abandon_outer_manchuria-82544.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Nationalise the KVZhD"
+	SpriteType = { 
+		name = "GFX_MNS_nationalise_the_kvzhd-82541"
+		texturefile = "gfx/interface/goals/GFX_MNS_nationalise_the_kvzhd-82541.dds"
+	}
+
+	##Icon Shine For: Nationalise the KVZhD"
+	SpriteType = { 
+		name = "GFX_MNS_nationalise_the_kvzhd-82541_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_nationalise_the_kvzhd-82541.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_nationalise_the_kvzhd-82541.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_nationalise_the_kvzhd-82541.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Expand Civilian Industry"
+	SpriteType = { 
+		name = "GFX_MNS_expand_civilian_industry-82540"
+		texturefile = "gfx/interface/goals/GFX_MNS_expand_civilian_industry-82540.dds"
+	}
+
+	##Icon Shine For: Expand Civilian Industry"
+	SpriteType = { 
+		name = "GFX_MNS_expand_civilian_industry-82540_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_expand_civilian_industry-82540.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_expand_civilian_industry-82540.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_expand_civilian_industry-82540.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Infrastructure Effort"
+	SpriteType = { 
+		name = "GFX_MNS_infrastructure_effort-82539"
+		texturefile = "gfx/interface/goals/GFX_MNS_infrastructure_effort-82539.dds"
+	}
+
+	##Icon Shine For: Infrastructure Effort"
+	SpriteType = { 
+		name = "GFX_MNS_infrastructure_effort-82539_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_infrastructure_effort-82539.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_infrastructure_effort-82539.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_infrastructure_effort-82539.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Expand Military Industry"
+	SpriteType = { 
+		name = "GFX_MNS_expand_military_industry-82538"
+		texturefile = "gfx/interface/goals/GFX_MNS_expand_military_industry-82538.dds"
+	}
+
+	##Icon Shine For: Expand Military Industry"
+	SpriteType = { 
+		name = "GFX_MNS_expand_military_industry-82538_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_expand_military_industry-82538.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_expand_military_industry-82538.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_expand_military_industry-82538.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Rebuilding the Manchu State"
+	SpriteType = { 
+		name = "GFX_MNS_rebuilding_the_manchu_state-82537"
+		texturefile = "gfx/interface/goals/GFX_MNS_rebuilding_the_manchu_state-82537.dds"
+	}
+
+	##Icon Shine For: Rebuilding the Manchu State"
+	SpriteType = { 
+		name = "GFX_MNS_rebuilding_the_manchu_state-82537_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_rebuilding_the_manchu_state-82537.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_rebuilding_the_manchu_state-82537.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_rebuilding_the_manchu_state-82537.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Fifth Great Beauty"
+	SpriteType = { 
+		name = "GFX_MNS_the_fifth_great_beauty-82527"
+		texturefile = "gfx/interface/goals/GFX_MNS_the_fifth_great_beauty-82527.dds"
+	}
+
+	##Icon Shine For: The Fifth Great Beauty"
+	SpriteType = { 
+		name = "GFX_MNS_the_fifth_great_beauty-82527_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_the_fifth_great_beauty-82527.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_the_fifth_great_beauty-82527.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_the_fifth_great_beauty-82527.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Purge the Kuomintang Shills"
+	SpriteType = { 
+		name = "GFX_MNS_purge_the_kuomintang_shills-82528"
+		texturefile = "gfx/interface/goals/GFX_MNS_purge_the_kuomintang_shills-82528.dds"
+	}
+
+	##Icon Shine For: Purge the Kuomintang Shills"
+	SpriteType = { 
+		name = "GFX_MNS_purge_the_kuomintang_shills-82528_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_purge_the_kuomintang_shills-82528.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_purge_the_kuomintang_shills-82528.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_purge_the_kuomintang_shills-82528.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Back to Normality"
+	SpriteType = { 
+		name = "GFX_MNS_back_to_normality-82529"
+		texturefile = "gfx/interface/goals/GFX_MNS_back_to_normality-82529.dds"
+	}
+
+	##Icon Shine For: Back to Normality"
+	SpriteType = { 
+		name = "GFX_MNS_back_to_normality-82529_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_back_to_normality-82529.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_back_to_normality-82529.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_back_to_normality-82529.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Boy Who Lived"
+	SpriteType = { 
+		name = "GFX_MNS_the_boy_who_lived-82526"
+		texturefile = "gfx/interface/goals/GFX_MNS_the_boy_who_lived-82526.dds"
+	}
+
+	##Icon Shine For: The Boy Who Lived"
+	SpriteType = { 
+		name = "GFX_MNS_the_boy_who_lived-82526_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_the_boy_who_lived-82526.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_the_boy_who_lived-82526.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_the_boy_who_lived-82526.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Back to Harbin"
+	SpriteType = { 
+		name = "GFX_MNS_back_to_harbin-82524"
+		texturefile = "gfx/interface/goals/GFX_MNS_back_to_harbin-82524.dds"
+	}
+
+	##Icon Shine For: Back to Harbin"
+	SpriteType = { 
+		name = "GFX_MNS_back_to_harbin-82524_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_back_to_harbin-82524.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_back_to_harbin-82524.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_back_to_harbin-82524.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Who Survives the Banquet?"
+	SpriteType = { 
+		name = "GFX_MNS_who_survives_the_banquet-82525"
+		texturefile = "gfx/interface/goals/GFX_MNS_who_survives_the_banquet-82525.dds"
+	}
+
+	##Icon Shine For: Who Survives the Banquet?"
+	SpriteType = { 
+		name = "GFX_MNS_who_survives_the_banquet-82525_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_who_survives_the_banquet-82525.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_who_survives_the_banquet-82525.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_who_survives_the_banquet-82525.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Secret Weapons"
+	SpriteType = { 
+		name = "GFX_MNS_secret_weapons-82536"
+		texturefile = "gfx/interface/goals/GFX_MNS_secret_weapons-82536.dds"
+	}
+
+	##Icon Shine For: Secret Weapons"
+	SpriteType = { 
+		name = "GFX_MNS_secret_weapons-82536_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_secret_weapons-82536.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_secret_weapons-82536.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_secret_weapons-82536.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Old Wisdom"
+	SpriteType = { 
+		name = "GFX_MNS_old_wisdom-82532"
+		texturefile = "gfx/interface/goals/GFX_MNS_old_wisdom-82532.dds"
+	}
+
+	##Icon Shine For: Old Wisdom"
+	SpriteType = { 
+		name = "GFX_MNS_old_wisdom-82532_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_old_wisdom-82532.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_old_wisdom-82532.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_old_wisdom-82532.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: New Ways"
+	SpriteType = { 
+		name = "GFX_MNS_new_ways-82533"
+		texturefile = "gfx/interface/goals/GFX_MNS_new_ways-82533.dds"
+	}
+
+	##Icon Shine For: New Ways"
+	SpriteType = { 
+		name = "GFX_MNS_new_ways-82533_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_new_ways-82533.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_new_ways-82533.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_new_ways-82533.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Good Ol' Human Wave"
+	SpriteType = { 
+		name = "GFX_MNS_good_ol_human_wave-82534"
+		texturefile = "gfx/interface/goals/GFX_MNS_good_ol_human_wave-82534.dds"
+	}
+
+	##Icon Shine For: Good Ol' Human Wave"
+	SpriteType = { 
+		name = "GFX_MNS_good_ol_human_wave-82534_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_good_ol_human_wave-82534.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_good_ol_human_wave-82534.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_good_ol_human_wave-82534.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Shock and Awe"
+	SpriteType = { 
+		name = "GFX_MNS_shock_and_awe-82535"
+		texturefile = "gfx/interface/goals/GFX_MNS_shock_and_awe-82535.dds"
+	}
+
+	##Icon Shine For: Shock and Awe"
+	SpriteType = { 
+		name = "GFX_MNS_shock_and_awe-82535_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_shock_and_awe-82535.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_shock_and_awe-82535.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_shock_and_awe-82535.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Choice of Doctrine"
+	SpriteType = { 
+		name = "GFX_MNS_choice_of_doctrine-82531"
+		texturefile = "gfx/interface/goals/GFX_MNS_choice_of_doctrine-82531.dds"
+	}
+
+	##Icon Shine For: Choice of Doctrine"
+	SpriteType = { 
+		name = "GFX_MNS_choice_of_doctrine-82531_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_choice_of_doctrine-82531.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_choice_of_doctrine-82531.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_choice_of_doctrine-82531.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Up with the Eight Banners"
+	SpriteType = { 
+		name = "GFX_MNS_up_with_the_eight_banners-82523"
+		texturefile = "gfx/interface/goals/GFX_MNS_up_with_the_eight_banners-82523.dds"
+	}
+
+	##Icon Shine For: Up with the Eight Banners"
+	SpriteType = { 
+		name = "GFX_MNS_up_with_the_eight_banners-82523_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_up_with_the_eight_banners-82523.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_up_with_the_eight_banners-82523.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_up_with_the_eight_banners-82523.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Army of the Manchu State"
+	SpriteType = { 
+		name = "GFX_MNS_army_of_the_manchu_state-82530"
+		texturefile = "gfx/interface/goals/GFX_MNS_army_of_the_manchu_state-82530.dds"
+	}
+
+	##Icon Shine For: Army of the Manchu State"
+	SpriteType = { 
+		name = "GFX_MNS_army_of_the_manchu_state-82530_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_army_of_the_manchu_state-82530.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_army_of_the_manchu_state-82530.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_army_of_the_manchu_state-82530.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Manchu Rule Undisputed"
+	SpriteType = { 
+		name = "GFX_MNS_manchu_rule_undisputed-82549"
+		texturefile = "gfx/interface/goals/GFX_MNS_manchu_rule_undisputed-82549.dds"
+	}
+
+	##Icon Shine For: Manchu Rule Undisputed"
+	SpriteType = { 
+		name = "GFX_MNS_manchu_rule_undisputed-82549_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_manchu_rule_undisputed-82549.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_manchu_rule_undisputed-82549.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_manchu_rule_undisputed-82549.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Invite Japanese Scientists"
+	SpriteType = { 
+		name = "GFX_MNS_invite_japanese_scientists-82547"
+		texturefile = "gfx/interface/goals/GFX_MNS_invite_japanese_scientists-82547.dds"
+	}
+
+	##Icon Shine For: Invite Japanese Scientists"
+	SpriteType = { 
+		name = "GFX_MNS_invite_japanese_scientists-82547_shine"
+		texturefile = "gfx/interface/goals/GFX_MNS_invite_japanese_scientists-82547.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_invite_japanese_scientists-82547.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_MNS_invite_japanese_scientists-82547.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+ 
+ }

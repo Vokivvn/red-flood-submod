@@ -1,0 +1,47 @@
+PRS_anti_communist = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = PRS
+	}
+	priority = 200
+	visible = {
+		#has_country_flag = PRS_anti_communism
+		#has_completed_focus = PRS_NorthernCrusade
+		always = no
+	}
+}
+PRS_nordic_confederation_cat = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = PRS
+	}
+	priority = 200
+	visible = {
+		#has_country_flag = PRS_nordic_confederation
+		#has_completed_focus = PRS_NorthernCrusade
+		always = no
+	}
+}
+PRS_beyond_germany = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = PRS
+	}
+	priority = 200
+	visible = {
+		#has_country_flag = PRS_greater_reich
+		#has_completed_focus = PRS_GreaterReich
+		always = no
+	}
+}
+PRS_finding_allies = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = PRS
+	}
+	priority = 200
+	visible = {
+		#has_completed_focus = PRS_find_allies
+		always = no
+	}
+}

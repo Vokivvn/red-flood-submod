@@ -1,0 +1,76 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = RUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = RUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = { 
+		name =  "1st Infantry Division"
+		location = 10414
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+	division = { 
+		name =  "2nd Infantry Division"
+		location = 10414
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+	division = { 
+		name =  "1st Cavalry Brigade"
+		location = 1573
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { 
+		name =  "2nd Cavalry Brigade"
+		location = 1573
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { 
+		name =  "3rd Cavalry Brigade"
+		location = 10671
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.2
+
+	}
+	division = { 
+		name =  "4th Cavalry Brigade"
+		location = 4542
+		division_template = "Cavalry Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.1
+
+	}
+}

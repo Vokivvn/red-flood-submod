@@ -1,0 +1,25 @@
+
+state={
+	id=561
+	name="STATE_561" # Amur
+	manpower = 884281
+
+	state_category = rural
+
+	history={
+		owner = ZHR
+		victory_points = {
+			10678 1
+		}
+		add_core_of = ZHR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		1730 1739 1845 4731 4847 7691 7754 7785 7851 10678 12543 12657 12660
+	}
+}

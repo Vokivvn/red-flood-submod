@@ -1,0 +1,32 @@
+
+state={
+	id=461
+	name="STATE_461"
+	manpower = 3197719
+	
+	state_category = rural
+	
+	history={
+		owner = SPR
+
+		victory_points = {
+			4108 10 
+		}
+		victory_points = {
+			10070 4 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 4
+			7069 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = MOR
+	}
+
+	provinces={
+		1079  1194 4084  4139 7069 7100 10023 10070  
+	}
+}

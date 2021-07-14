@@ -1,0 +1,2246 @@
+#####################
+#	Korea - Baba	#
+#####################
+
+focus_tree = {
+	id = KOR_republic
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = KOR
+		}
+	}
+
+	continuous_focus_position = { x = 150 y = 2000 }
+
+	#Focus for Nationalism
+	focus = {
+		id = KOR_nationalism
+		icon = GFX_focus_KOR_nationalism
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_popular_rule }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#replace popular rule with korean nationalism
+			swap_ideas = {
+				remove_idea = KOR_popular_idea
+				add_idea = KOR_nationalism_idea
+			}
+		}
+	}
+
+	#Focus for Not until the Reds are gone!
+	focus = {
+		id = KOR_not_until_the_reds_are_gone
+		icon = GFX_focus_KOR_no_until_the_reds_are_gone
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_echo_the_three_principles }
+		mutually_exclusive = {
+			focus = KOR_go_ahead_with_elections
+		}
+		available = { 
+			JKR = {
+				exists = yes
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#fortify the border, boost con + right_auth
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.08
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.08
+			}	
+		}
+	}
+
+	#Focus for Dig into the Taebek Mountains
+	focus = {
+		id = KOR_dig_into_the_taebek_mountains
+		icon = GFX_focus_KOR_dig_into_the_tabek_mountains
+		x = 3
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_rally_the_masses 
+		}
+		prerequisite = { 
+			focus = KOR_everything_for_the_liberation_effort 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#entrenchment speed temp idea
+			add_timed_idea = {
+				idea = KOR_taebek
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Rally the Masses!
+	focus = {
+		id = KOR_rally_the_masses
+		icon = GFX_focus_KOR_rally_the_masses
+		x = 2
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_korean_revolution }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#gives IKR a nasty resistance penalty
+			IKR = {
+				add_timed_idea = {
+					idea = KOR_masses_rally
+					days = 180
+				}
+			}
+		}
+	}
+
+	#Focus for Korean Revolution
+	focus = {
+		id = KOR_korean_revolution
+		icon = GFX_focus_KOR_korean_revolution
+		x = 3
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Ferry in the Liberation Army
+	focus = {
+		id = KOR_ferry_in_the_liberation_army
+		icon = GFX_focus_KOR_ferry_in_the_liberation_army
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_korean_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#in 2 weeks troops arrive from China - 2 divs
+			random_owned_controlled_state = {
+				prioritize = { 829 }
+				create_unit = {
+					division = "name = \"Republican Army\" division_template = \"Republican Army\" start_experience_factor = 0.45"
+					owner = KOR
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 829 }
+				create_unit = {
+					division = "name = \"Republican Army\" division_template = \"Republican Army\" start_experience_factor = 0.45"
+					owner = KOR
+				}
+			}
+		}
+	}
+
+	#Focus for Everything for the Liberation Effort
+	focus = {
+		id = KOR_everything_for_the_liberation_effort
+		icon = GFX_focus_KOR_everything_for_the_liberation_effort
+		x = 4
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_korean_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#production bonus
+			add_timed_idea = {
+				idea = KOR_liberation_effort
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Mobilise the Dongnipgun
+	focus = {
+		id = KOR_mobilise_the_dongnipgun
+		icon = GFX_focus_KOR_mobilise_dongnipgun
+		x = 6
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_korean_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#temp idea - mobilisation - conscription, production
+			add_timed_idea = {
+				idea = KOR_dongnipgun
+				days = 90
+			}
+		}
+	}
+
+	#Focus for Call on the KMT
+	focus = {
+		id = KOR_call_on_the_kmt
+		icon = GFX_focus_KOR_call_on_the_kmt
+		x = 0
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_ferry_in_the_liberation_army }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add two offmap factories
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 650
+				producer = KMT
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 75
+				producer = YUN
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 35
+				producer = GDP
+			}
+		}
+	}
+
+	#Focus for Prepare for a Guerilla War
+	focus = {
+		id = KOR_prepare_for_a_guerilla_war
+		icon = GFX_focus_KOR_prepare_for_the_guerilla_war
+		x = 6
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_mobilise_the_dongnipgun }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#attrition idea
+			add_timed_idea = {
+				idea = KOR_guerilla_war
+				days = 180
+			}
+		}
+	}
+
+	#Focus for National Mobilisation
+	focus = {
+		id = KOR_national_mobilisation
+		icon = GFX_focus_KOR_national_mobilisation
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_rally_the_masses }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#total mob economy
+			add_ideas = {
+				war_economy
+			}
+		}
+	}
+
+	#Focus for Delegitimise the Nobles
+	focus = {
+		id = KOR_delegitimise_the_nobles
+		icon = GFX_focus_KOR_delegitimise_the_nobles
+		x = 5
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_everything_for_the_liberation_effort }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#hashtag fuck Yi Un
+			country_event = {
+				id = kor.1
+			}
+		}
+	}
+
+	#Focus for Question of Manpower
+	focus = {
+		id = KOR_question_of_manpower
+		icon = GFX_focus_KOR_question_of_manpower
+		x = 3
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_dig_into_the_taebek_mountains }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#change to extensive conscription
+			add_ideas = {
+				extensive_conscription
+			}
+		}
+	}
+
+	#Focus for Stand up and Fight!
+	focus = {
+		id = KOR_stand_up_and_fight
+		icon = GFX_focus_KOR_stand_up_and_fight
+		x = 3
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_national_mobilisation 
+		}
+		prerequisite = { 
+			focus = KOR_delegitimise_the_nobles 
+		}
+		available = {
+			OR = {
+				has_war_with = IKR
+				has_war_with = JKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#temp army stat boost
+			add_timed_idea = {
+				idea = KOR_stand_up
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Appoint Rhee as Prime Minister
+	focus = {
+		id = KOR_appoint_rhee_as_prime_minister
+		icon = GFX_focus_KOR_appoint_rhee_emergency_president
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_not_until_the_reds_are_gone }
+		mutually_exclusive = {
+			focus = KOR_confidence_in_the_conservatives
+		}
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#Rhee as HoG
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+		}
+	}
+
+	#Focus for Echo the Three Principles
+	focus = {
+		id = KOR_echo_the_three_principles
+		icon = GFX_focus_KOR_echo_the_three_principles
+		x = 16
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#boost relations with KMT tags, boost stab and democratic popularity
+			add_opinion_modifier = {
+				target = KMT
+				modifier = offered_support
+			}
+			KMT = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = offered_support
+				}
+			}
+			add_opinion_modifier = {
+				target = FJN
+				modifier = offered_support
+			}
+			FJN = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = offered_support
+				}
+			}
+			add_opinion_modifier = {
+				target = GDP
+				modifier = offered_support
+			}
+			GDP = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = offered_support
+				}
+			}
+			add_ideas = {
+				KOR_echo_three
+			}
+		}
+	}
+
+	#Focus for Go ahead with Elections
+	focus = {
+		id = KOR_go_ahead_with_elections
+		icon = GFX_focus_KOR_go_ahead_with_elections
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_echo_the_three_principles }
+		mutually_exclusive = {
+			focus = KOR_not_until_the_reds_are_gone
+		}
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#event - elections
+			country_event = {
+				id = kor.29
+			}
+		}
+	}
+
+	#Focus for Kim's Presidency
+	focus = {
+		id = KOR_kims_presidency
+		icon = GFX_focus_KOR_kims_presidency
+		x = 9
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_go_ahead_with_elections }
+		available = { 
+			has_country_flag = KOR_libs_elected
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#libs win
+			set_politics = {
+				ruling_party = liberalism
+			}
+			hidden_effect = {
+				country_event = {
+					id = kor.291
+					days = 1460
+				}
+			}
+		}
+	}
+	
+
+	#Focus for The Moderates
+	focus = {
+		id = KOR_the_moderates
+		icon = GFX_focus_KOR_the_moderates
+		x = 12
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_go_ahead_with_elections }
+		available = { 
+			has_country_flag = KOR_succ_dems_elected
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#Yuh wins
+			set_politics = {
+				ruling_party = social_democratism
+			}
+			hidden_effect = {
+				country_event = {
+					id = kor.291
+					days = 1460
+				}
+			}
+		}
+	}
+
+	#Focus for Changho Stays in Power
+	focus = {
+		id = KOR_changho_stays_in_power
+		icon = GFX_focus_KOR_changho_stays_in_power
+		x = 16
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_go_ahead_with_elections }
+		available = { 
+			has_country_flag = KOR_cons_elected
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#cons win
+			set_politics = {
+				ruling_party = conservatism
+			}
+			hidden_effect = {
+				country_event = {
+					id = kor.291
+					days = 1460
+				}
+			}
+		}
+	}
+
+	#Focus for Confidence in the Conservatives
+	focus = {
+		id = KOR_confidence_in_the_conservatives
+		icon = GFX_focus_KOR_confidence_in_the_conservatives
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_not_until_the_reds_are_gone }
+		mutually_exclusive = { focus = KOR_appoint_rhee_as_prime_minister }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#cons dominate the coalition
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for The New White Terror
+	focus = {
+		id = KOR_the_new_white_terror
+		icon = GFX_focus_KOR_the_new_white_terror
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_appoint_rhee_as_prime_minister 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#anti imp and red purges, Yuh flees north
+			add_timed_idea = {
+				idea = KOR_white_terror
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Exploit the New Age Religions
+	focus = {
+		id = KOR_exploit_the_new_age_religions
+		icon = GFX_focus_KOR_exploit_the_new_age_religions
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_confidence_in_the_conservatives
+			focus = KOR_appoint_rhee_as_prime_minister
+		}
+		available = { 
+			
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#unlock faith tree
+			set_country_flag = new_age_faith
+			custom_effect_tooltip = KOR_new_age_religion
+		}
+	}
+
+	#Focus for Support Patriotic Organisations
+	focus = {
+		id = KOR_support_patriotic_organisations
+		icon = GFX_focus_KOR_support_patriotic_organisations
+		x = 18
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = KOR_confidence_in_the_conservatives
+			focus = KOR_appoint_rhee_as_prime_minister
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#research bonus for MPs, add stab
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = military_police_tech
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Empower the KCIA
+	focus = {
+		id = KOR_empower_the_kcia
+		icon = GFX_focus_KOR_empower_the_kcia
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_the_new_white_terror }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#resistance and compliance bonus
+			add_ideas = {
+				KOR_KCIA
+			}
+		}
+	}
+
+	#Focus for New Age Faith
+	focus = {
+		id = KOR_new_age_faith
+		icon = GFX_focus_KOR_new_age_faith
+		x = 27
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+			has_country_flag = new_age_faith
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_cheondo
+			}
+		}
+	}
+	
+	#Focus for Western Faith
+	focus = {
+		id = KOR_western_faith
+		icon = GFX_focus_KOR_western_faith
+		x = 25
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+			has_country_flag = western_faith
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_christian
+			}
+		}
+	}
+
+	#Focus for Strengthen the Jinbohoe
+	focus = {
+		id = KOR_strengthen_the_jinbohoe
+		icon = GFX_focus_KOR_strengthen_the_jinbohoe
+		x = 27
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_new_age_faith }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_cheondo
+				add_idea = KOR_cheondo1
+			}
+		}
+	}
+
+	#Focus for Open New Churches
+	focus = {
+		id = KOR_open_new_churches
+		icon = GFX_focus_KOR_open_new_churches
+		x = 25
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_western_faith }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_christian
+				add_idea = KOR_christian1
+			}
+		}
+	}
+
+	#Focus for The Tian Principle
+	focus = {
+		id = KOR_the_tian_principle
+		icon = GFX_focus_KOR_the_tian_principle
+		x = 26
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_open_new_churches
+			focus = KOR_strengthen_the_jinbohoe 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			
+		}
+	}
+
+	#Focus for The Teachings of Christ
+	focus = {
+		id = KOR_the_teachings_of_christ
+		icon = GFX_focus_KOR_the_teachings_of_christ
+		x = 24
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_open_new_churches }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_christian1
+				add_idea = KOR_christian2
+			}
+		}
+	}
+
+	#Focus for The Legacy of Gang Il-Sun
+	focus = {
+		id = KOR_the_legacy_of_gang_ilsun
+		icon = GFX_focus_KOR_the_legacy_of_gang_il_sun
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_strengthen_the_jinbohoe }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_cheondo1
+				add_idea = KOR_cheondo2
+			}
+		}
+	}
+
+	#Focus for Minjung Theology
+	focus = {
+		id = KOR_minjung_theology
+		icon = GFX_focus_KOR_minjung_theology
+		x = 24
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_the_teachings_of_christ }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_christian2
+				add_idea = KOR_christian3
+			}
+		}
+	}
+
+	#Focus for All in the Name of Heaven
+	focus = {
+		id = KOR_all_in_the_name_of_heaven
+		icon = GFX_focus_KOR_all_in_the_name_of_heaven
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_the_tian_principle }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 75
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for The Supreme Enlightened God
+	focus = {
+		id = KOR_the_supreme_enlightened_god
+		icon = GFX_focus_KOR_the_supreme_enlightened_god
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_the_legacy_of_gang_ilsun }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_cheondo2
+				add_idea = KOR_cheondo3
+			}
+		}
+	}
+
+	#Focus for Embrace Modernity
+	focus = {
+		id = KOR_embrace_modernity
+		icon = GFX_focus_KOR_embrace_modernity
+		x = 27
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_the_supreme_enlightened_god 
+		}
+		prerequisite = { 
+			focus = KOR_all_in_the_name_of_heaven 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = industry  }
+			add_tech_bonus = { bonus = 1 uses = 2 category = electronics  }
+		}
+	}
+
+	#Focus for New Spiritual Awakening
+	focus = {
+		id = KOR_new_spiritual_awakening
+		icon = GFX_focus_KOR_new_spiritual_awakening
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_all_in_the_name_of_heaven 
+		}
+		prerequisite = { 
+			focus = KOR_minjung_theology 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.2
+			
+		}
+	}
+
+	#Focus for Union under Syncretism
+	focus = {
+		id = KOR_union_under_syncretism
+		icon = GFX_focus_KOR_union_under_syncretism
+		x = 26
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_embrace_modernity 
+		}
+		prerequisite = { 
+			focus = KOR_new_spiritual_awakening 
+		}
+		available = { 
+		
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			remove_ideas = { KOR_christian3 }
+			remove_ideas = { KOR_cheondo3 }
+			add_ideas = { KOR_syncretism }
+		}
+	}
+
+	#Focus for Democracy with Korean Characteristics
+	focus = {
+		id = KOR_democracy_with_korean_characteristics
+		icon = GFX_focus_KOR_democracy_with_korean_characteristics
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_changho_stays_in_power 
+			focus = KOR_the_moderates 
+			focus = KOR_kims_presidency 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#ideology defence, pp gain
+			add_ideas = {
+				KOR_korean_dem
+			}
+		}
+	}
+
+	#Focus for Popular Rule
+	focus = {
+		id = KOR_popular_rule
+		icon = GFX_focus_KOR_popular_rule
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_democracy_with_korean_characteristics }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#popularity, pp, stability
+			swap_ideas = {
+				remove_idea = KOR_korean_dem
+				add_idea = KOR_popular_idea
+			}
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Extend the Liberalisation
+	focus = {
+		id = KOR_extend_the_liberalisation
+		icon = GFX_focus_KOR_extend_the_liberalisation
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_kims_presidency }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#lib boost, consoom, factory build speed
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.12
+			}
+			add_ideas = {
+				KOR_liberalisation
+			}
+		}
+	}
+
+	#Focus for Steady the Course
+	focus = {
+		id = KOR_steady_the_course
+		icon = GFX_focus_KOR_steady_the_course
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_changho_stays_in_power }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#boost cons, stab, 
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.12
+			}
+			add_stability = 0.08
+		}
+	}
+	
+	#Focus for Work with Christian Groups
+	focus = {
+		id = KOR_work_with_christian_groups
+		icon = GFX_focus_KOR_work_with_christian_groups
+		x = 17
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_reach_out_to_the_west 
+			focus = KOR_american_exchange_programs 
+		}
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#unlocks western faith
+			set_country_flag = western_faith
+			custom_effect_tooltip = KOR_christianity
+		}
+	}
+
+	#Focus for American Exchange Programs
+	focus = {
+		id = KOR_american_exchange_programs
+		icon = GFX_focus_KOR_american_exchange_programs
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_aegukga
+			focus = KOR_gyeongseong_university 
+		}
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#relations with USA, research bonuses
+			add_opinion_modifier = {
+				target = USA
+				modifier = KOR_exchange_program_USA
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_exchange_program_USA
+				}
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = { 
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+			add_tech_bonus = { 
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#Focus for Against the Left
+	focus = {
+		id = KOR_against_the_left
+		icon = GFX_focus_KOR_against_the_left
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_the_moderates }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#not too prole - boost soc-dem pop, boost ideological defence, worsen relations with JKR
+			add_ideas = {
+				KOR_centrism_1
+			}
+		}
+	}
+
+	#Focus for Against the Right
+	focus = {
+		id = KOR_against_the_right
+		icon = GFX_focus_KOR_against_the_right
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_against_the_left }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#not too bourgoise - boost soc-dem pop, boost ideological defence, improve relations with JKR
+			swap_ideas = {
+				remove_idea = KOR_centrism_1
+				add_idea = KOR_centrism_2
+			}
+		}
+	}
+
+	#Focus for Rehabilitate the Communists
+	focus = {
+		id = KOR_rehabilitate_the_communists
+		icon = GFX_focus_KOR_rehabilitate_the_communists
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_against_the_right }
+		available = { 
+			JKR = {
+				exists = yes
+			}
+			NOT = {
+				has_war_with = JKR
+			}
+			is_puppet = no
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#attempt to reintegrate the north event chain.
+			JKR = {
+				country_event = {
+					id = kor.30
+				}
+			}
+		}
+	}
+
+	#Focus for Suppress the Leftists
+	focus = {
+		id = KOR_suppress_the_leftists
+		icon = GFX_focus_KOR_suppress_the_leftists
+		x = 18
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_support_patriotic_organisations }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#counter-demonstrations, arrest leftists
+			country_event = {
+				id = kor.19
+			}
+		}
+	}
+
+	#Focus for Reach Out to the West
+	focus = {
+		id = KOR_reach_out_to_the_west
+		icon = GFX_focus_KOR_reach_out_to_the_west
+		x = 18
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_suppress_the_leftists }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#relations with UK, USA, CAN, HOL, ITA, POR, AST, NZL
+			add_opinion_modifier = {
+				target = ENG
+				modifier = KOR_reach_out
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = KOR_reach_out
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = CAN
+				modifier = KOR_reach_out
+			}
+			CAN = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = HOL
+				modifier = KOR_reach_out
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = DEI
+				modifier = KOR_reach_out
+			}
+			HOL = {
+				add_opinion_modifier = {
+					target = DEI
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = KOR_reach_out
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = POR
+				modifier = KOR_reach_out
+			}
+			POR = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = AST
+				modifier = KOR_reach_out
+			}
+			AST = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = WAS
+				modifier = KOR_reach_out
+			}
+			WAS = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+			add_opinion_modifier = {
+				target = NZL
+				modifier = KOR_reach_out
+			}
+			NZL = {
+				add_opinion_modifier = {
+					target = KOR
+					modifier = KOR_reach_out
+				}
+			}
+		}
+	}
+
+	#Focus for Emphasis on Education
+	focus = {
+		id = KOR_emphasis_on_education
+		icon = GFX_focus_KOR_emphasis_on_education
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_the_moderates
+			focus = KOR_kims_presidency 
+			focus = KOR_changho_stays_in_power 
+		}
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#research bonuses
+			add_ideas = {
+				KOR_education
+			}
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = industry }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = naval_doctrine }
+		}
+	}
+
+	#Focus for Gyeongseong University
+	focus = {
+		id = KOR_gyeongseong_university
+		icon = GFX_focus_KOR_gyeongsesong_university
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_emphasis_on_education }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_research_slot = 1
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Establish the Chaebols
+	focus = {
+		id = KOR_establish_the_chaebols
+		icon = GFX_focus_KOR_establish_the_chaebols
+		x = 8
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_extend_the_liberalisation }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#industiral companies unlocked
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Overseas Trade Ties
+	focus = {
+		id = KOR_overseas_trade_ties
+		icon = GFX_focus_KOR_overseas_trade_ties
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_establish_the_chaebols }
+		available = { 
+			
+		}
+		bypass = { }   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#trade opinion and stuff
+			swap_ideas = {
+				remove_idea = KOR_liberalisation
+				add_idea = KOR_trade_ties
+			}
+		}
+	}
+
+	#Focus for Aegukga
+	focus = {
+		id = KOR_aegukga
+		icon = GFX_focus_KOR_aegukga
+		x = 16
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_steady_the_course }
+		available = { 
+			
+		}
+		bypass = { }    
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#national anthem
+			add_war_support = 0.25
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Guard the Skies
+	focus = {
+		id = KOR_guard_the_skies
+		icon = GFX_focus_KOR_guard_the_skies
+		x = 46
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 3 category = air_doctrine }
+		}
+	}
+
+	#Focus for National Defence
+	focus = {
+		id = KOR_national_defence
+		icon = GFX_focus_KOR_national_defence
+		x = 32
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 3 uses = 1 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Guard the Seas
+	focus = {
+		id = KOR_guard_the_seas
+		icon = GFX_focus_KOR_guard_the_seas
+		x = 39
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = dd_tech }
+			navy_experience = 15
+		}
+	}
+
+	#Focus for New Arsenals
+	focus = {
+		id = KOR_new_arsenals
+		icon = GFX_focus_KOR_new_arsenals
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_armoury_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Busan Fleet
+	focus = {
+		id = KOR_busan_fleet
+		icon = GFX_focus_KOR_busan_fleet
+		x = 39
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cl_tech category = ca_tech }
+		}
+	}
+
+	#Focus for Legacy of Yi Sun-sin
+	focus = {
+		id = KOR_legacy_of_yi_sunsin
+		icon = GFX_focus_KOR_legacy_of_yi_sun_sin
+		x = 39
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_busan_fleet }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = bb_tech }
+		}
+	}
+
+	#Focus for Busan Shipyard
+	focus = {
+		id = KOR_busan_shipyard
+		icon = GFX_focus_KOR_busan_shipyards
+		x = 37
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_seas }
+		available = { 
+			has_full_control_of_state = 828
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			828 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Contest the Sea of Japan
+	focus = {
+		id = KOR_contest_the_sea_of_japan
+		icon = GFX_focus_KOR_contest_the_sea_of_japan
+		x = 41
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for Busan Naval Academy
+	focus = {
+		id = KOR_busan_naval_academy
+		icon = GFX_focus_KOR_busan_naval_academy
+		x = 37
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_busan_shipyard }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+
+	#Focus for Turtle Ships
+	focus = {
+		id = KOR_turtle_ships
+		icon = GFX_focus_KOR_turtle_ships
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_legacy_of_yi_sunsin }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_turtle
+			}
+		}
+	}
+
+	#Focus for Combined Arms
+	focus = {
+		id = KOR_combined_arms
+		icon = GFX_focus_KOR_combined_arms
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_lessons_from_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = land_doctrine category = air_doctrine }
+		}
+	}
+
+	#Focus for New Air Wings
+	focus = {
+		id = KOR_new_air_wings
+		icon = GFX_focus_KOR_new_air_wings
+		x = 46
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Air Defence Network
+	focus = {
+		id = KOR_air_defence_network
+		icon = GFX_focus_KOR_air_defence_network
+		x = 43
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_camouflage }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Women in the Air
+	focus = {
+		id = KOR_women_in_the_air
+		icon = GFX_focus_KOR_women_in_the_air
+		x = 45
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_new_air_wings }
+		mutually_exclusive = { focus = KOR_martyrs_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_manpower = 25000
+		}
+	}
+
+	#Focus for Pilot Schools
+	focus = {
+		id = KOR_pilot_schools
+		icon = GFX_focus_KOR_pilot_schools
+		x = 46
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = KOR_women_in_the_air 
+			focus = KOR_martyrs_in_the_air 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+
+	#Focus for Camouflage
+	focus = {
+		id = KOR_camouflage
+		icon = GFX_focus_KOR_camouflage
+		x = 43
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_air_camouflage
+			}
+		}
+	}
+
+	#Focus for Harass the Bombers
+	focus = {
+		id = KOR_harass_the_bombers
+		icon = GFX_focus_KOR_harass_the_bombers
+		x = 49
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_harassment
+			}
+		}
+	}
+
+	#Focus for Armoury of the Republic
+	focus = {
+		id = KOR_armoury_of_the_republic
+		icon = GFX_focus_KOR_armoury_of_republic
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Promote Partisan Leaders
+	focus = {
+		id = KOR_promote_partisan_leaders
+		icon = GFX_focus_KOR_promote_partisan_leaders
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_army_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_corps_commander = {
+				name = "Kim Hong-il"
+				picture = "Portrait_Kim_Hong-il.dds"
+				traits = { career_officer }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Ji Cheong-cheon"
+				picture = "Portrait_Ji_Cheong_cheon.dds"
+				traits = { cavalry_officer }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			add_ideas = {
+				KOR_promote_pl
+			}
+		}
+	}
+
+	#Focus for Army of the Republic
+	focus = {
+		id = KOR_army_of_the_republic
+		icon = GFX_focus_KOR_army_of_republic
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	#Focus for Establish a Marine Corps
+	focus = {
+		id = KOR_establish_a_marine_corps
+		icon = GFX_focus_KOR_establish_a_marine_corps
+		x = 41
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_contest_the_sea_of_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = marine_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = tp_tech }
+		}
+	}
+
+	#Focus for Lessons from Japan
+	focus = {
+		id = KOR_lessons_from_japan
+		icon = GFX_focus_KOR_lessons_from_japan
+		x = 34
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_light_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_heavy_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	#Focus for Politicise the Army
+	focus = {
+		id = KOR_politicise_the_army
+		icon = GFX_focus_KOR_politicise_army
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_promote_partisan_leaders }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_command_power = 35
+		}
+	}
+
+	#Focus for Martyrs in the Air
+	focus = {
+		id = KOR_martyrs_in_the_air
+		icon = GFX_focus_KOR_martyrs_in_the_air
+		x = 47
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_new_air_wings }
+		mutually_exclusive = { focus = KOR_women_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+
+	#Focus for Dogfighting Pedigree
+	focus = {
+		id = KOR_dogfighting_pedigree
+		icon = GFX_focus_KOR_dogfighting_pedigree
+		x = 49
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = KOR_harass_the_bombers }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				KOR_dogfighting
+			}
+		}
+	}
+
+#End of focuses 
+ }

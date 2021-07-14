@@ -1,0 +1,162 @@
+capital = 3
+
+oob = SWI_1936
+
+set_research_slots = 3 
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = liberalism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 1
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 29
+	liberalism = 48
+	conservatism = 1
+	right_authoritarianism = 5
+	despotism = 1
+	reactionism = 5
+	accelerationism = 10
+}
+
+set_stability = 0.5
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_revan.tga"
+	expire = "1965.1.1"
+	ideology = social_anarchism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_vansoc.tga"
+	expire = "1965.1.1"
+	ideology = orthodox_leninism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_libmarx.tga"
+	expire = "1965.1.1"
+	ideology = de_leonism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_revsoc.tga"
+	expire = "1965.1.1"
+	ideology = democratic_socialism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_socdem.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_lib.tga"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_con.tga"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_rwauth.tga"
+	expire = "1965.1.1"
+	ideology = oligarchy
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_desp.tga"
+	expire = "1965.1.1"
+	ideology = constitutional_dictatorship
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_reac.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Swiss Federal Council"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_SWI_Federal_council_accel.tga"
+	expire = "1965.1.1"
+	ideology = technocratism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_field_marshal = {
+	name = "Henri Guisan"
+	picture = "Portrait_SWI_Henri_Guisan.dds"
+	traits = { fast_planner brilliant_strategist unyielding_defender}
+	skill = 5
+	attack_skill = 3
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 5
+}

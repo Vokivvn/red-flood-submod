@@ -1,0 +1,29 @@
+Austria_Dolfuss_Rohm = {
+	name = "Austrian Path 1"
+	desc = "Dolfuss and Rohm Austria"
+
+	enable = {
+		original_tag = AUS
+		OR = {
+			has_game_rule = {
+				rule = AUS_ai_route
+				option = DOLFUSS
+			}
+			has_game_rule = {
+				rule = AUS_ai_route
+				option = ROHM
+			}
+			has_country_flag = AUS_ai_path_1
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		AUS_parliamentaryconflict
+		AUS_strengthentheultranationalists
+		AUS_unitethepeople
+	}
+}

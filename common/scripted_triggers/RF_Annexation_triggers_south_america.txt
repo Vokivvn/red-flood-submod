@@ -1,0 +1,131 @@
+#Argentina - annexation_ARG_CONQ
+can_release_argentina = {
+	state = 278 #Buenos Aires
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ARG_CONQ
+			country_exists = ARG
+		}
+	}
+}
+
+#Bolivia - annexation_BOL_CONQ
+can_release_bolivia = {
+	state = 302 #La Paz
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BOL_CONQ
+			country_exists = BOL
+		}
+	}
+}
+
+#Brazil - annexation_BRA_CONQ
+can_release_brazil = {
+	state = 500 #Rio de Janeiro
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BRA_CONQ
+			country_exists = BRA
+		}
+	}
+}
+
+#Chile - annexation_CHL_CONQ
+can_release_chile = {
+	state = 279 #Santiago
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CHL_CONQ
+			country_exists = CHL
+		}
+	}
+}
+
+#Colombia - annexation_COL_CONQ
+can_release_colombia = {
+	state = 306 #Bogota
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = COL_CONQ
+			country_exists = COL
+		}
+	}
+}
+
+#Ecuador - annexation_ECU_CONQ
+can_release_ecuador = {
+	state = 305 #Quito
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ECU_CONQ
+			country_exists = ECU
+		}
+	}
+}
+
+#Paraguay - annexation_PAR_CONQ
+can_release_paraguay = {
+	state = 301 #Paraguay
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = PAR_CONQ
+			country_exists = PAR
+		}
+	}
+}
+
+#Peru - annexation_PRU_CONQ
+can_release_peru = {
+	state = 303 #Lima
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = PRU_CONQ
+			country_exists = PRU
+		}
+	}
+}
+
+#Uruguay - annexation_URG_CONQ
+can_release_uruguay = {
+	state = 300 #Uruguay
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = URG_CONQ
+			country_exists = URG
+		}
+	}
+}
+
+#Venezuala - annexation_VEN_CONQ
+can_release_venezuela = {
+	state = 849 #Caracas
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = VEN_CONQ
+			country_exists = VEN
+		}
+	}
+}
+
+#Carribean Federation - annexation_CYN_CONQ
+can_release_carribean = {
+	state = 310 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CYN_CONQ
+			country_exists = CYN
+		}
+	}
+}

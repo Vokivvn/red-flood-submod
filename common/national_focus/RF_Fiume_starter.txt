@@ -1,0 +1,211 @@
+focus_tree = {
+	id = FIU_starter
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	focus = {
+		id = FIU_The_Endeavour
+		icon = GFX_focus_FIU_The_Endeavour
+		x = 6
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 80
+			###hidden_effect = {	country_event = {	id = fiume.3	days = 45	}	}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Fifteenth_Arengo
+		icon = GFX_focus_FIU_The_Fifteenth_Arengo
+		prerequisite = { focus = FIU_The_Endeavour }
+
+		x = 6
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 80
+			hidden_effect = {
+				country_event = {
+					id = fiume.4
+					days = 100
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Addressing_the_Slump
+		icon = GFX_focus_FIU_Addressing_the_Slump
+		prerequisite = { focus = FIU_The_Fifteenth_Arengo }
+
+		x = 4
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			remove_ideas = FIU_the_slump
+			country_event = {
+				id = fiume.5
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Eastern_Border
+		icon = GFX_focus_FIU_The_Eastern_Border
+		prerequisite = { focus = FIU_The_Fifteenth_Arengo }
+
+		x = 8
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			163 = {
+				add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11564
+				instant_build = yes
+				}
+				add_building_construction = {
+				type = bunker
+				level = 2
+				province = 591
+				instant_build = yes
+				}
+				add_building_construction = {
+				type = bunker
+				level = 2
+				province = 11901
+				instant_build = yes
+				}
+				add_building_construction = {
+				type = bunker
+				level = 2
+				province = 3943
+				instant_build = yes
+				}
+			}
+			country_event = {
+				id = fiume.6
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Sixteenth_Arengo
+		icon = GFX_focus_FIU_The_Sixteenth_Arengo
+		prerequisite = { focus = FIU_The_Eastern_Border }
+		prerequisite = { focus = FIU_Addressing_the_Slump}
+				
+		x = 6
+		y = 3
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		select_effect = {
+			country_event = {
+				id = fiume.7
+				days = 40
+			}
+			country_event = {
+				id = fiume.1
+				days = 120
+			}
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = "The Arengo meets to discuss the situation."
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

@@ -1,0 +1,91 @@
+capital = 13
+
+oob = "EST_1936"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+set_politics = {
+	ruling_party = social_democratism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 10
+	libertarian_marxism = 10
+	revolutionary_anarchism = 10
+	revisionist_socialism = 10
+	social_democratism = 20
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 0
+	reactionism = 0
+	accelerationism = 10
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Eestimaa Päästekomitee"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_EST_Eestimaa_Paastekomitee.tga"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	traits = {
+
+	}
+}
+
+create_corps_commander = {
+	name = "Johan Laidoner"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Johan_Laidoner.tga"
+	traits = { winter_specialist }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Karl Pärnoja"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Karl_Parnoja.tga"
+	traits = { trickster }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_navy_leader = {
+	name = "Alexander von Salza"
+	portrait_path = "gfx/leaders/EST/Portrait_EST_Alexander_von_Salza.tga"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 2
+}

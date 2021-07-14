@@ -1,0 +1,40 @@
+﻿capital = 322
+
+oob = "TIB_1936"
+set_research_slots = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 96
+	accelerationism = 4
+}
+
+create_country_leader = {
+	name = "Jamphel Yeshe Gyaltsen"
+	desc = "POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC"
+	picture = "GyaltsenGIMP.dds"
+	expire = "1965.1.1"
+	ideology = religious_fundamentalism
+	traits = {
+		#
+	}
+}

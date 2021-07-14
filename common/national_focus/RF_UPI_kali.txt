@@ -1,0 +1,753 @@
+focus_tree = {
+	id = RF_kali_cult
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UPI
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = KAL_avatar
+		icon = GFX_focus_KAL_avatar
+		cost = 5
+		x = 10
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = KAL_fire_burn
+		icon = GFX_focus_KAL_fire_burn
+		cost = 5
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = KAL_avatar
+		}
+		relative_position_id = KAL_avatar
+		completion_reward = {
+			add_ideas = UPI_holy_flames
+		}
+	}
+	focus = {
+		id = KAL_scorch_cities
+		icon = GFX_focus_KAL_scorch_cities
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = KAL_fire_burn
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_holy_flames
+				add_idea = UPI_holy_flames1
+			}
+		}
+	}
+	focus = {
+		id = KAL_warrior_priests
+		icon = GFX_focus_KAL_warrior_priests
+		cost = 5
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = KAL_scorch_cities
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			add_ideas = UPI_warrior_priests_idea
+		}
+	}
+	focus = {
+		id = KAL_lambs_slaughter
+		icon = GFX_focus_KAL_lambs_slaughter
+		cost = 5
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = KAL_warrior_priests
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_holy_flames1
+				add_idea = UPI_holy_flames2
+			}
+		}
+	}
+	focus = {
+		id = KAL_forced_marches
+		icon = GFX_focus_KAL_forced_marches
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = KAL_fire_burn
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			add_ideas = UPI_marches
+		}
+	}
+	focus = {
+		id = KAL_seize_air
+		icon = GFX_focus_KAL_seize_air
+		cost = 5
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = KAL_forced_marches
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			add_ideas = UPI_chemical_weapons_kali
+			country_event = {
+				id = UPI.88
+			}
+		}
+	}
+	focus = {
+		id = KAL_legions_unending
+		icon = GFX_focus_KAL_legions_unending
+		cost = 5
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = KAL_seize_air
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			add_ideas = UPI_endless_legions
+			country_event = {
+				id = UPI.89
+			}
+		}
+	}
+	focus = {
+		id = KAL_don_mundamala
+		icon = GFX_focus_KAL_don_mundamala
+		cost = 5
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = KAL_legions_unending
+		}
+		prerequisite = {
+			focus = KAL_lambs_slaughter
+		}
+		relative_position_id = KAL_fire_burn
+		completion_reward = {
+			add_war_support = 0.3
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = KAL_annihilate_anglo
+		icon = GFX_focus_KAL_annihilate_anglo
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = KAL_avatar
+		}
+		relative_position_id = KAL_avatar
+		completion_reward = {
+			438 = {
+				add_manpower = -15000
+			}
+			add_stability = 0.15
+			set_province_name = {
+				id = 12137
+				name = "Lakhanpur"
+			}
+			438 = {
+				set_state_name = "Uttar Pradesh"
+			}
+		}
+	}
+	focus = {
+		id = KAL_seize_weapons
+		icon = GFX_focus_KAL_seize_weapons
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = KAL_annihilate_anglo
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			438 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 9000
+    			producer = UPI
+			}
+		}
+	}
+	focus = {
+		id = KAL_invoke_gods
+		icon = GFX_focus_KAL_invoke_gods
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = KAL_annihilate_anglo
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			add_war_support = 0.5
+		}
+	}
+	focus = {
+		id = KAL_divine_mission
+		icon = GFX_focus_KAL_divine_mission
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = KAL_invoke_gods
+		}
+		prerequisite = {
+			focus = KAL_seize_weapons
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			add_ideas = UPI_divine_mission_idea
+		}
+	}
+	focus = {
+		id = KAL_end_time
+		icon = GFX_focus_KAL_end_time
+		cost = 5
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = KAL_divine_mission
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			add_ideas = UPI_end_of_time_idea
+		}
+	}
+	focus = {
+		id = KAL_end_space
+		icon = GFX_focus_KAL_end_space
+		cost = 5
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = KAL_divine_mission
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			add_ideas = UPI_end_of_space_idea
+		}
+	}
+	focus = {
+		id = KAL_end_evil
+		icon = GFX_focus_KAL_end_evil
+		cost = 5
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = KAL_end_space
+		}
+		prerequisite = {
+			focus = KAL_end_time
+		}
+		relative_position_id = KAL_annihilate_anglo
+		completion_reward = {
+			remove_ideas = {
+				UPI_end_of_time_idea
+				UPI_end_of_space_idea
+			}
+			swap_ideas = {
+				remove_idea = UPI_divine_mission_idea
+				add_idea = UPI_divine_mission_idea1
+			}
+		}
+	}
+	focus = {
+		id = KAL_renewed_faith
+		icon = GFX_focus_KAL_renewed_faith
+		cost = 5
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = KAL_avatar
+		}
+		relative_position_id = KAL_avatar
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = KAL_mitahara
+		icon = GFX_focus_KAL_mitahara
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = KAL_renewed_faith
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			add_ideas = UPI_mitahara_idea
+		}
+	}
+	focus = {
+		id = KAL_human_sacrifice
+		icon = GFX_focus_KAL_human_sacrifice
+		cost = 5
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = KAL_mitahara
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			add_ideas = UPI_human_sacrifice_idea
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			country_event = {
+				id = UPI.90
+			}
+		}
+	}
+	focus = {
+		id = KAL_warrior_goddess
+		icon = GFX_focus_KAL_warrior_goddess
+		cost = 5
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = KAL_human_sacrifice
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			add_ideas = UPI_warrior_godess_idea
+		}
+	}
+	focus = {
+		id = KAL_kali_ungettered
+		icon = GFX_focus_KAL_kali_ungettered
+		cost = 5
+		x = -1
+		y = 4
+		prerequisite = {
+			focus = KAL_warrior_goddess
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_warrior_godess_idea
+				add_idea = UPI_warrior_godess_idea1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = KAL_himsa
+		icon = GFX_focus_KAL_himsa
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = KAL_renewed_faith
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			add_ideas = UPI_himsa_idea
+		}
+	}
+	focus = {
+		id = KAL_goddess_blood
+		icon = GFX_focus_KAL_goddess_blood
+		cost = 5
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = KAL_himsa
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			add_ideas = UPI_godess_of_blood_idea
+			country_event = {
+				id = UPI.91
+			}
+		}
+	}
+	focus = {
+		id = KAL_fear_death
+		icon = GFX_focus_KAL_fear_death
+		cost = 5
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = KAL_goddess_blood
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_godess_of_blood_idea
+				add_idea = UPI_godess_of_blood_idea1
+			}
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+	focus = {
+		id = KAL_blood_cleanses
+		icon = GFX_focus_KAL_blood_cleanses
+		cost = 5
+		x = 1
+		y = 4
+		prerequisite = {
+			focus = KAL_fear_death
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_godess_of_blood_idea1
+				add_idea = UPI_godess_of_blood_idea2
+			}
+		}
+	}
+	focus = {
+		id = KAL_death_knell
+		icon = GFX_focus_KAL_death_knell
+		cost = 5
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = KAL_blood_cleanses
+		}
+		prerequisite = {
+			focus = KAL_kali_ungettered
+		}
+		relative_position_id = KAL_renewed_faith
+		completion_reward = {
+			hidden_effect = {
+				ENG = {
+					set_autonomy = {
+    					target = MAD
+    					autonomy_state = autonomy_free
+					}
+				}
+				MAD = {
+					leave_faction = yes
+				}
+				UPI = {
+					declare_war_on = {
+						target = DIN
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PNJ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = RSR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARY
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = BIH
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = BNG
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ASM
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = HYD
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ORS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MYS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = TRA
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MAD
+						type = annex_everything
+					}
+				}
+				320 = {	add_core_of = UPI }
+				423 = {	add_core_of = UPI }
+				424 = {	add_core_of = UPI }
+				425 = {	add_core_of = UPI }
+				426 = {	add_core_of = UPI }
+				427 = {	add_core_of = UPI }
+				428 = {	add_core_of = UPI }
+				429 = {	add_core_of = UPI }
+				430 = {	add_core_of = UPI }
+				431 = {	add_core_of = UPI }
+				432 = {	add_core_of = UPI }
+				433 = {	add_core_of = UPI }
+				434 = {	add_core_of = UPI }
+				435 = {	add_core_of = UPI }
+				436 = {	add_core_of = UPI }
+				437 = {	add_core_of = UPI }
+				438 = {	add_core_of = UPI }
+				439 = {	add_core_of = UPI }
+				440 = {	add_core_of = UPI }
+				443 = {	add_core_of = UPI }
+				444 = {	add_core_of = UPI }
+				894 = {	add_core_of = UPI }
+				895 = {	add_core_of = UPI }
+				936 = {	add_core_of = UPI }
+				937 = {	add_core_of = UPI }
+				remove_ideas = { UPI_wargoal_block }
+			}
+			custom_effect_tooltip = "UPI_DEATH_KNELL_TOOLTIP"
+		}
+	}
+	focus = {
+		id = KAL_end_kali
+		icon = GFX_focus_KAL_end_kali
+		cost = 5
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = KAL_don_mundamala
+		}
+		prerequisite = {
+			focus = KAL_end_evil
+		}
+		prerequisite = {
+			focus = KAL_death_knell
+		}
+		relative_position_id = KAL_avatar
+		available = {
+			DIN = { exists = no }
+			PNJ = { exists = no }
+			RSR = { exists = no }
+			ARY = { exists = no }
+			BIH = { exists = no }
+			BNG = { exists = no }
+			ASM = { exists = no }
+			HYD = { exists = no }
+			ORS = { exists = no }
+			MYS = { exists = no }
+			TRA = { exists = no }
+			MAD = { exists = no }
+		}
+		completion_reward = {
+			every_state = {
+				add_claim_by = UPI
+			}
+			create_wargoal = {
+				target = PER
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = RPR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AFG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KSM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ETS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TIB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = NEP
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SIK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = XSM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BUR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SIA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = YUN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SZC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BYJ
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MAN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SHA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = XIA
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KMT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = FJN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = GDP
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TAI
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DAI
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SMC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KOR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = IKR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = JKR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SMC
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = KAL_birth_new
+		icon = GFX_focus_KAL_birth_new
+		cost = 5
+		x = 0
+		y = 8
+		prerequisite = {
+			focus = KAL_end_kali
+		}
+		available = {
+			AFG = { exists = no }
+			PER = { exists = no }
+			RPR = { exists = no }
+			KSM = { exists = no }
+			NEP = { exists = no }
+			TIB = { exists = no }
+			ETS = { exists = no }
+			SIK = { exists = no }
+			MON = { exists = no }
+			MAN = { exists = no }
+			KOR = { exists = no }
+			IKR = { exists = no }
+			JKR = { exists = no }
+			BYJ = { exists = no }
+			MNG = { exists = no }
+			JGJ = { exists = no }
+			SHA = { exists = no }
+			XSM = { exists = no }
+			KMT = { exists = no }
+			XIA = { exists = no }
+			SZC = { exists = no }
+			GDP = { exists = no }
+			DAI = { exists = no }
+			SIA = { exists = no }
+			BUR = { exists = no }
+			YUN = { exists = no }
+			TAN = { exists = no }
+		}
+		relative_position_id = KAL_avatar
+		completion_reward = {
+			set_cosmetic_tag = "UPI_REALM_OF_AVATAR"
+			remove_ideas = {
+				UPI_holy_flames2
+				UPI_marches
+				UPI_chemical_weapons_kali
+				UPI_divine_mission_idea1
+			}
+			add_ideas = UPI_annihilation_of_evil
+			country_event = {
+				id = UPI.703
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+﻿capital = 1025
+
+oob = "PRP_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_convoys = 10
+
+set_popularities = {
+        accelerationism = 0
+        reactionism = 0
+        despotism = 0
+        right_authoritarianism = 90
+        conservatism = 10
+        liberalism = 0
+        social_democratism = 0
+        libertarian_marxism = 0
+        vanguard_socialism = 0
+        revolutionary_anarchism = 0
+
+}
+
+set_politics = {
+	
+	ruling_party = right_authoritarianism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Ivan Boberski"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/PRP/Portrait_Ivan_Boberski.tga"
+	expire = "1965.1.1"
+	ideology = oligarchy
+	traits = {
+	}
+}
+

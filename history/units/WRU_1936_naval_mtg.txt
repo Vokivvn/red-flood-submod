@@ -1,0 +1,28 @@
+units = {
+	fleet = {
+		name = "Baltic Sea Fleet"
+		naval_base = 9340
+		task_force = {
+			name = "Destroyer Fleet"
+			location = 9262
+			ship = { name = "KL1" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "KL2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "KL3" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "KL4" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = WRU } } }
+		}
+		task_force = {
+			name = "Cruiser Fleet"
+			location = 9340
+			ship = { name = "Nevsky" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "Petrovich" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = WRU } } }
+		}
+		task_force = {
+			name = "Submarine Fleet"
+			location = 3152
+			ship = { name = "PL1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "PL2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "PL3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU } } }
+			ship = { name = "PL4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = WRU } } }
+		}
+	}
+}

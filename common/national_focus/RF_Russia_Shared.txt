@@ -1,0 +1,2661 @@
+	#Focus for A New Russian Army
+	shared_focus = {
+		id = RUS_anewrussianarmy
+		icon = GFX_focus_RUS_anewrussianarmy
+		
+		x = 52
+		y = 0
+		
+		cost = 7
+		
+		available_if_capitulated = no
+		available = {
+			OR = {
+				has_completed_focus = RUS_kolchak_continues
+				has_completed_focus = RUS_thrushes
+				has_completed_focus = RUS_union_of_young_russia
+				has_completed_focus = RUS_shtabs_kapitans
+			}
+		}
+		prerequisite = { }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+
+	#Focus for Regimental Supports
+	shared_focus = {
+		id = RUS_regimentalsupports
+		icon = GFX_focus_RUS_regimentalsupports
+		
+		x = 49
+		y = 1
+		
+		cost = 7
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_anewrussianarmy }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	#Focus for Renew Infantry Equipment
+	shared_focus = {
+		id = RUS_renewinfantryequipment
+		icon = GFX_focus_RUS_renewinfantryequipment
+		
+		x = 52
+		y = 1
+		
+		cost = 7
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_anewrussianarmy }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = RUS
+			}
+		}
+	}
+
+	#Focus for Ordnance Updates
+	shared_focus = {
+		id = RUS_ordnanceupdates
+		icon = GFX_focus_RUS_ordnanceupdates
+		
+		x = 55
+		y = 1
+		
+		cost = 7
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_anewrussianarmy }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+
+	#Focus for Reorganize the Stavka
+	shared_focus = {
+		id = RUS_reorganizethestavka
+		icon = GFX_focus_RUS_reorganizethestavka
+		
+		x = 52
+		y = 2
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_renewinfantryequipment }
+		prerequisite = { focus = RUS_ordnanceupdates }
+		prerequisite = { focus = RUS_regimentalsupports }
+		
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			army_experience = 15
+			add_ideas = RUS_reorganized_stavka
+			swap_ideas = {
+				remove_idea = victor_in_the_velikaya_voyna
+				add_idea = victor_in_the_velikaya_voyna_1
+			}
+		}
+	}
+
+
+	#Focus for Adopt Proven Strategies
+	shared_focus = {
+		id = RUS_adoptprovenstrategies
+		icon = GFX_focus_RUS_adoptprovenstrategies
+		
+		x = 50
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_reorganizethestavka }
+		mutually_exclusive = { focus = RUS_adoptnewstrategies }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 50
+			army_experience = 10
+		}
+	}
+
+	##markov Branch
+	#Focus for Markov's Plan
+	shared_focus = {
+		id = RUS_markovsplan
+		icon = GFX_focus_RUS_kuliksplan
+		
+		x = 47
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_adoptprovenstrategies }
+		mutually_exclusive = { focus = RUS_kornilovsplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_markovsplan
+				bonus = 1.0
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	#Focus for Concentrated Support
+	shared_focus = {
+		id = RUS_concentratedsupport
+		icon = GFX_focus_RUS_concentratedsupport
+		
+		x = 47
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_markovsplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_concentratedsupport
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Logistic Network
+	shared_focus = {
+		id = RUS_logisticnetwork
+		icon = GFX_focus_RUS_logisticnetwork
+		
+		x = 47
+		y = 6
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_concentratedsupport }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	#Focus for Autonomy for Frontline Commanders
+	shared_focus = {
+		id = RUS_autonomyforfrontlinecommanders
+		icon = GFX_focus_RUS_autonomyforfrontlinecommanders
+		
+		x = 47
+		y = 7
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_logisticnetwork }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_autonomy_for_frontline_commanders
+		}
+	}
+
+	#Focus for Symphony of Steel
+	shared_focus = {
+		id = RUS_symphonyofsteel
+		icon = GFX_focus_RUS_symphonyofsteel
+		
+		x = 47
+		y = 8
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_autonomyforfrontlinecommanders }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_symphony_of_steel
+		}
+	}
+
+	##Kornilov's Plan
+	#Focus for Kornilov's Plan
+	shared_focus = {
+		id = RUS_kornilovsplan
+		icon = GFX_focus_RUS_kornilovsplan
+		
+		x = 50
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_adoptprovenstrategies }
+		mutually_exclusive = { focus = RUS_markovsplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_kornilovsplan
+				bonus = 1.0
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	#Focus for Strengthen the Command Structure
+	shared_focus = {
+		id = RUS_strengthenthecommandstructure
+		icon = GFX_focus_RUS_strengthenthecommandstructure
+		
+		x = 50
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_kornilovsplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_central_command_structure
+		}
+	}
+
+
+	#Focus for Expand the Cadet Corps
+	shared_focus = {
+		id = RUS_expandthecadetcorps
+		icon = GFX_focus_RUS_expandthecadetcorps
+		
+		x = 50
+		y = 6
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_strengthenthecommandstructure }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_expanded_cadet_corps
+		}
+	}
+
+
+	#Focus for Military Infrastructures
+		shared_focus = {
+		id = RUS_militaryinfrastructures
+		icon = GFX_focus_RUS_militaryinfrastructures
+		
+		x = 50
+		y = 7
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				AND = {
+					owns_state = 195
+					controls_state = 195
+				}
+				AND = {
+					owns_state = 208
+					controls_state = 208
+				}
+				AND = {
+					owns_state = 219
+					controls_state = 219
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_expandthecadetcorps }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 195
+					controls_state = 195
+				}
+				195 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 208
+					controls_state = 208
+				}
+				208 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns_state = 219
+					controls_state = 219
+				}
+				219 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+
+	#Focus for Always Prepared
+	shared_focus = {
+		id = RUS_alwaysprepared
+		icon = GFX_focus_RUS_alwaysprepared
+		
+		x = 50
+		y = 8
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_militaryinfrastructures }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_always_prepared
+		}
+	}
+
+
+
+	#Focus for Adopt New Strategies
+	shared_focus = {
+		id = RUS_adoptnewstrategies
+		icon = GFX_focus_RUS_adoptnewstrategies
+		
+		x = 54
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_reorganizethestavka }
+		mutually_exclusive = { focus = RUS_adoptprovenstrategies }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = -25
+			army_experience = 20
+		}
+	}
+
+	#Focus for Triandafillov's Plan
+	shared_focus = {
+		id = RUS_triandafillovsplan
+		icon = GFX_focus_RUS_tukhachevskysplan
+		
+		x = 54
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_adoptnewstrategies }
+		mutually_exclusive = { focus = RUS_wrangelsplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_triandafillovsplan
+				bonus = 1.0
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	#Focus for Standardized Weapon Design
+	shared_focus = {
+		id = RUS_standardizedweapondesign
+		icon = GFX_focus_RUS_standardizedweapondesign
+		
+		x = 54
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_triandafillovsplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_standardized_weapon_design
+		}
+	}
+
+
+	#Focus for Neo-Brusilovian Doctrine
+	shared_focus = {
+		id = RUS_neobrusiloviandoctrine
+		icon = GFX_focus_RUS_neobrusiloviandoctrine
+		
+		x = 54
+		y = 6
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_standardizedweapondesign }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_neo_brusilovian_doctrine
+		}
+	}
+
+	#Focus for Treadnoughts & Treadestroyers
+	shared_focus = {
+		id = RUS_treadnoughtstreadestroyers
+		icon = GFX_focus_RUS_treadnoughtstreadestroyers
+		
+		x = 54
+		y = 7
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_neobrusiloviandoctrine }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_treadnoughtstreadestroyers
+				bonus = 1
+				uses = 2
+				category = cat_heavy_armor
+			}
+		}
+	}
+
+	#Focus for Deep Battle
+	shared_focus = {
+		id = RUS_deepbattle
+		icon = GFX_focus_RUS_deepbattle
+		
+		x = 54
+		y = 8
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_treadnoughtstreadestroyers }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_deep_battle
+		}
+	}
+
+	###Wrangel's path
+
+	#Focus for Wrangel's Plan
+	shared_focus = {
+		id = RUS_wrangelsplan
+		icon = GFX_focus_RUS_triandafilovsplan
+		
+		x = 57
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_adoptnewstrategies }
+		mutually_exclusive = { focus = RUS_triandafillovsplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_wrangelsplan
+				bonus = 1.0
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	#Focus for Motorization Experiments
+	shared_focus = {
+		id = RUS_motorizationexperiments
+		icon = GFX_focus_RUS_motorizationexperiments
+		
+		x = 57
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_wrangelsplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_motorizationexperiments
+				bonus = 1.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+
+	#Focus for Kazan Tank School
+	shared_focus = {
+		id = RUS_kazantankschool
+		icon = GFX_focus_RUS_kazantankschool
+		
+		x = 57
+		y = 6
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_motorizationexperiments }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_motorizationexperiments
+				bonus = 1
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+
+	#Focus for Mobilize the Automobile Industry
+	shared_focus = {
+		id = RUS_mobilizetheautomobileindustry
+		icon = GFX_focus_RUS_mobilizetheautomobileindustry
+		
+		x = 57
+		y = 7
+		
+		cost = 10
+		
+		available = {
+			has_tech = motorised_infantry
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_kazantankschool }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = RUS
+			}
+		}
+	}
+
+
+	#Focus for Fast and Deadly
+	shared_focus = {
+		id = RUS_fastanddeadly
+		icon = GFX_focus_RUS_fastanddeadly
+		
+		x = 57
+		y = 8
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_mobilizetheautomobileindustry }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_fast_and_deadly
+		}
+	}
+
+	#Focus for Mighty Army
+	shared_focus = {
+		id = RUS_mightyarmy
+		icon = GFX_focus_RUS_mightyarmy
+		
+		x = 52
+		y = 9
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_symphonyofsteel focus = RUS_alwaysprepared focus = RUS_fastanddeadly focus = RUS_deepbattle }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_war_support = 0.2
+			army_experience = 30
+			remove_ideas = victor_in_the_velikaya_voyna_1
+			add_research_slot = 1
+		}
+	}
+
+	#Air Tree
+	#Focus for Transpolar Flights
+	shared_focus = {
+		id = RUS_transpolarflights
+		icon = GFX_focus_RUS_transpolarflights
+		
+		x = 76
+		y = 0
+		
+		cost = 7
+		
+		available_if_capitulated = no
+		available = {
+			OR = {
+				has_completed_focus = RUS_kolchak_continues
+				has_completed_focus = RUS_thrushes
+				has_completed_focus = RUS_union_of_young_russia
+				has_completed_focus = RUS_shtabs_kapitans
+			}
+		}
+		prerequisite = { }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for National Aviation Committee
+	shared_focus = {
+		id = RUS_nationalaviationcommittee
+		icon = GFX_focus_RUS_nationalaviationcommittee
+		
+		x = 79
+		y = 1
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_transpolarflights }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_national_aviation_committee
+		}
+	}
+
+	#Focus for VDV
+	shared_focus = {
+		id = RUS_vdv
+		icon = GFX_focus_RUS_vdv
+		
+		x = 77
+		y = 2
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_nationalaviationcommittee }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_navalinfantry
+				bonus = 1
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = paratroopers3
+			}
+		}
+	}
+
+	#Focus for Joint Arctic Expeditions
+	shared_focus = {
+		id = RUS_jointarcticexpeditions
+		icon = GFX_focus_RUS_jointarcticexpeditions
+		
+		x = 73
+		y = 1
+		
+		cost = 5
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_expandpetrogradnavalacademy }
+		prerequisite = { focus = RUS_transpolarflights }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			navy_experience = 10
+			air_experience = 10
+		}
+	}
+
+	#Focus for Weather Observatories
+	shared_focus = {
+		id = RUS_weatherobservatories
+		icon = GFX_focus_RUS_weatherobservatories
+		
+		x = 73
+		y = 2
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_jointarcticexpeditions }
+		
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_weather_training
+		}
+	}
+
+
+	#Focus for Extreme Weather Adaptation
+	shared_focus = {
+		id = RUS_extremeweatheradaptation
+		icon = GFX_focus_RUS_extremeweatheradaptation
+		
+		x = 73
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_weatherobservatories }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			every_navy_leader = {
+				add_unit_leader_trait = arctic_water_expert
+			}
+		}
+	}
+
+
+
+	#Focus for Form the Russian Air Force
+	shared_focus = {
+		id = RUS_formtherussianairforce
+		icon = GFX_focus_RUS_formtherussianairforce
+		
+		x = 79
+		y = 2
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_nationalaviationcommittee }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			air_experience = 20
+		}
+	}
+
+	#Focus for Nesterov's Plan
+	shared_focus = {
+		id = RUS_nesterovsplan
+		icon = GFX_focus_RUS_nesterovsplan
+		
+		x = 76
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_formtherussianairforce }
+		mutually_exclusive = { focus = RUS_balancedapproach focus = RUS_bashkosplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = battlefield_support_tree
+			}
+		}
+	}
+
+
+	#Focus for Can-Opener
+	shared_focus = {
+		id = RUS_canopener
+		#icon = GFX_focus_RUS_canopener
+		icon = GFX_focus_RUS_canopener_not_bugged
+		
+		x = 76
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		prerequisite = { focus = RUS_nesterovsplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+
+	#Focus for Knights in the Air
+	shared_focus = {
+		id = RUS_knightsintheair
+		icon = GFX_focus_RUS_knightsintheair
+		
+		x = 76
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_canopener }
+		
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_knights_in_the_air
+		}
+	}
+
+	#Focus for Balanced Approach
+	shared_focus = {
+		id = RUS_balancedapproach
+		icon = GFX_focus_RUS_balancedapproach
+		
+		x = 79
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_formtherussianairforce }
+		mutually_exclusive = { focus = RUS_nesterovsplan focus = RUS_bashkosplan }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = operational_integrity_tree
+			}
+		}
+	}
+
+	#Focus for Fast Bomber Emphasis
+	shared_focus = {
+		id = RUS_fastbomberemphasis
+		icon = GFX_focus_RUS_fastbomberemphasis
+		
+		x = 79
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_balancedapproach }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+			}
+			add_ideas = RUS_fast_bomber_emphasis
+		}
+	}
+
+	#Focus for Anywhere, Anytime
+	shared_focus = {
+		id = RUS_anywhereanytime
+		icon = GFX_focus_RUS_anywhereanytime
+		
+		x = 79
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_fastbomberemphasis }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_anywhere_anytime
+		}
+	}
+
+	#Focus for Bashko's Plan
+	shared_focus = {
+		id = RUS_bashkosplan
+		icon = GFX_focus_RUS_bashkosplan
+		
+		x = 82
+		y = 3
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_formtherussianairforce }
+		mutually_exclusive = { focus = RUS_nesterovsplan focus = RUS_balancedapproach }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = strategic_destruction_tree
+			}
+		}
+	}
+
+	#Focus for Berlin Bombers
+	shared_focus = {
+		id = RUS_berlinbombers
+		icon = GFX_focus_RUS_berlinbombers
+		
+		x = 82
+		y = 4
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_bashkosplan }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	#Focus for Aerial Apocalypse
+	shared_focus = {
+		id = RUS_aerialapocalypse
+		icon = GFX_focus_RUS_aerialapocalypse
+		
+		x = 82
+		y = 5
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_berlinbombers }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_aerial_apocalypse
+		}
+	}
+
+	#Naval Tree
+	#Focus for Expand Petrograd Naval Academy
+	shared_focus = {
+		id = RUS_expandpetrogradnavalacademy
+		icon = GFX_focus_RUS_expandpetrogradnavalacademy
+		
+		x = 65
+		y = 0
+		
+		cost = 7
+		
+		available = {
+			owns_state = 195
+			controls_state = 195
+			OR = {
+				has_completed_focus = RUS_kolchak_continues
+				has_completed_focus = RUS_thrushes
+				has_completed_focus = RUS_union_of_young_russia
+				has_completed_focus = RUS_shtabs_kapitans
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			navy_experience = 20
+			add_ideas = RUS_petrograd_naval_academy
+		}
+	}
+
+	#Focus for Expand Shipyards
+	shared_focus = {
+		id = RUS_expandshipyards
+		icon = GFX_focus_RUS_expandshipyards
+		
+		x = 65
+		y = 1
+		
+		cost = 7
+		
+		available = {
+			owns_state = 195
+			controls_state = 195
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_expandpetrogradnavalacademy }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 214 #Petrograd fills up very quickly, at least w/ Trainman
+					controls_state = 214
+				}
+				214 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Coastal Troops Command
+	shared_focus = {
+		id = RUS_coastaltroopscommand
+		icon = GFX_focus_RUS_coastaltroopscommand
+		
+		x = 62
+		y = 2
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_expandshipyards }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_coastal_troops_command
+		}
+	}
+
+	#Focus for Minelayer Effort
+	shared_focus = {
+		id = RUS_minelayereffort
+		icon = GFX_focus_RUS_minelayereffort
+		
+		x = 62
+		y = 3
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_coastaltroopscommand }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_minelayereffort
+				bonus = 1
+				uses = 2
+				category = naval_minelaying
+			}
+		}
+	}
+
+
+	#Focus for Coastal Artillery
+	shared_focus = {
+		id = RUS_coastalartillery
+		icon = GFX_focus_RUS_coastalartillery
+		
+		x = 62
+		y = 4
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_minelayereffort }
+		mutually_exclusive = { }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_coastal_artillery
+		}
+	}
+	
+	#Focus for Surveiliance Effort
+	shared_focus = {
+		id = RUS_surveilianceeffort
+		icon = GFX_focus_RUS_surveilianceeffort
+		
+		x = 62
+		y = 5
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_coastalartillery }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_surveilianceeffort
+				uses = 2
+				bonus = 1
+				category = radar_tech
+			}
+		}
+	}
+
+	#Focus for Advanced Sensors
+	shared_focus = {
+		id = RUS_advancedsensors
+		icon = GFX_focus_RUS_advancedsensors
+		
+		x = 62
+		y = 6
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_surveilianceeffort }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_advancedsensors
+				bonus = 1
+				uses = 1
+				technology = sonar
+				technology = improved_sonar
+			}
+		}
+	}
+
+	#Focus for Naval Infantry
+	shared_focus = {
+		id = RUS_navalinfantry
+		icon = GFX_focus_RUS_navalinfantry
+		
+		x = 59
+		y = 3
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_coastaltroopscommand }
+		prerequisite = { focus = RUS_renewinfantryequipment }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_navalinfantry
+				bonus = 1
+				uses = 1
+				technology = marines
+				technology = marines2
+				technology = marines3
+			}
+		}
+	}
+
+	#Focus for Baltic Monsters
+	shared_focus = {
+		id = RUS_balticmonsters
+		icon = GFX_focus_RUS_balticmonsters
+		
+		x = 59
+		y = 6
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_navalinfantry }
+		prerequisite = { focus = RUS_motorizationexperiments }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_balticmonsters
+				bonus = 1
+				uses = 1
+				technology = amphibious_mechanized_infantry
+				technology = amphibious_mechanized_infantry_2
+			}
+		}
+	}
+
+
+	#Focus for Molodaya Shkola (Small Fleet Doctrine)
+	shared_focus = {
+		id = RUS_molodayashkola
+		icon = GFX_focus_RUS_molodayashkola
+		
+		x = 66
+		y = 2
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_expandshipyards }
+		mutually_exclusive = { focus = RUS_peterthegreatsdream }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_peterthegreatsdream
+				bonus = 1.0
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+
+	#Focus for Baltic Hunters
+	shared_focus = {
+		id = RUS_baltichunters
+		icon = GFX_focus_RUS_baltichunters
+		
+		x = 66
+		y = 3
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_molodayashkola }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_baltichunters
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	#Focus for Outrun & Outgun
+	shared_focus = {
+		id = RUS_outrunoutgun
+		icon = GFX_focus_RUS_outrunoutgun
+		
+		x = 66
+		y = 4
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_baltichunters }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_outrun_and_outgun
+		}
+	}
+
+	#Focus for Volga Shipyards
+	shared_focus = {
+		id = RUS_arcticseaports
+		icon = GFX_focus_RUS_volgashipyards
+		
+		x = 66
+		y = 5
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_outrunoutgun }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 213 }
+				limit = {
+					is_owned_by = ROOT
+					is_controlled_by = ROOT
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	#Focus for Silent and Deadly
+	shared_focus = {
+		id = RUS_silentanddeadly
+		icon = GFX_focus_RUS_silentanddeadly
+		
+		x = 66
+		y = 6
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_arcticseaports }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_silent_and_deadly
+		}
+	}
+
+
+	#Focus for Peter the Great's Dream
+	shared_focus = {
+		id = RUS_peterthegreatsdream
+		icon = GFX_focus_RUS_peterthegreatsdream
+		
+		x = 70
+		y = 2
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_expandshipyards }
+		mutually_exclusive = { focus = RUS_molodayashkola }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_peterthegreatsdream
+				bonus = 1.0
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+	
+	#Focus for Shield of the Fleet
+	shared_focus = {
+		id = RUS_shieldofthefleet
+		icon = GFX_focus_RUS_shieldofthefleet
+		
+		x = 70
+		y = 3
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_peterthegreatsdream }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_shieldofthefleet
+				bonus = 1.0
+				uses = 2
+				category = cl_tech
+			}
+		}
+	}
+
+	#Focus for Naval Prides
+	shared_focus = {
+		id = RUS_navalprides
+		icon = GFX_focus_RUS_navalprides
+		
+		x = 70
+		y = 4
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_shieldofthefleet }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_war_support = 0.1
+			navy_experience = 20
+		}
+	}
+
+	#Focus for Floating Fortress
+	shared_focus = {
+		id = RUS_floatingfortress
+		icon = GFX_focus_RUS_floatingfortress
+		
+		x = 68
+		y = 5
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_navalprides }
+		mutually_exclusive = { focus = RUS_navalaviation }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_floatingfortress
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+			}
+		}
+	}
+
+
+	#Focus for Coastal Annihilation
+	shared_focus = {
+		#id = RUS_coastalannihilation
+		id = RUS_displayofpower
+		icon = GFX_focus_RUS_coastalannihilation
+		
+		x = 68
+		y = 6
+		
+		cost = 10
+		
+		available_if_capitulated = no
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		prerequisite = { focus = RUS_floatingfortress }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = RUS_display_of_power
+		}
+	}
+
+	#Focus for Naval Aviation
+	shared_focus = {
+		id = RUS_navalaviation
+		icon = GFX_focus_RUS_navalaviation
+		
+		x = 72
+		y = 5
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_navalprides }
+		prerequisite = { focus = RUS_extremeweatheradaptation }
+		mutually_exclusive = { focus = RUS_floatingfortress }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_navalaviation
+				bonus = 2
+				uses = 1
+				category = naval_air
+			}
+		}
+	}
+
+	#Focus for Floating Airfield
+	shared_focus = {
+		id = RUS_floatingairfield
+		icon = GFX_focus_RUS_floatingairfield
+		
+		x = 72
+		y = 6
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_navalaviation }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_floatingairfield
+				bonus = 2
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+
+	#Focus for Russian Thalassocracy
+	shared_focus = {
+		id = RUS_russianthalassocracy
+		icon = GFX_focus_RUS_russianthalassocracy
+		
+		x = 69
+		y = 7
+		
+		cost = 10
+		
+		available = {
+			OR = {
+				any_owned_state = {
+					is_coastal = yes
+				}
+				any_country = {
+					is_subject_of = ROOT
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = { focus = RUS_displayofpower focus = RUS_floatingairfield focus = RUS_silentanddeadly }
+		mutually_exclusive = { }
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_war_support = 0.1
+			navy_experience = 50
+		}
+	}
+
+	####################### Foreign Policy #######################
+
+	shared_focus = {
+		id = RUS_unify_empire
+		icon = GFX_focus_RUS_unify_empire
+		relative_position_id = RUS_mightyarmy
+		x = 0
+		y = 2
+		
+		cost = 5
+		
+		available = {
+			num_divisions > 80
+			has_army_manpower = { size > 1200000 }
+			OR = {
+				has_completed_focus = RUS_black_bloc
+				has_completed_focus = RUS_alt_black_bloc
+				has_completed_focus = RUS_crown_a_tsaritsa
+				has_completed_focus = RUS_hold_zemsky_sobor
+			}
+		}
+		available_if_capitulated = no
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	shared_focus = {
+		id = RUS_reintegrate_baltic
+		icon = GFX_focus_RUS_reintegrate_baltic
+		relative_position_id = RUS_unify_empire
+		x = -5
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_unify_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 857
+			add_state_core = 858
+			add_state_core = 209
+			add_state_core = 191
+			add_state_core = 13
+			add_state_core = 12
+			add_state_core = 210
+			add_state_core = 190
+			add_state_core = 1058
+			if = {
+				limit = {
+					WRU = { exists = yes }
+				}
+				WRU = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					WRT = {
+						exists = yes
+						has_government = vanguard_socialism
+					}
+				}
+				create_wargoal = {
+					target = WRT
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {
+					WRT = {
+						exists = yes
+						has_government = reactionism
+					}
+				}
+				custom_effect_tooltip = "Unlocks decision to puppet Baltic General Governorate."
+				set_country_flag = RUS_puppet_realm_of_truth_decision_unlock
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_subjugate_finland
+		icon = GFX_focus_RUS_subjugate_finland
+		relative_position_id = RUS_reintegrate_baltic
+		x = 0
+		y = 2
+		
+		cost = 5
+		
+		available = {
+			OR = {
+				FIR = { exists = yes }
+				AND = {
+					FIN = { exists = yes }
+					has_completed_focus = FIN_seyns_execution
+				}
+			}
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_reintegrate_baltic
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			create_wargoal = {
+				target = FIN
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = FIR
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_ultimatum_to_south_east
+		icon = GFX_focus_RUS_ultimatum_to_south_east
+		relative_position_id = RUS_unify_empire
+		x = -2
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_unify_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 407
+			add_state_core = 841
+			add_state_core = 236
+			add_state_core = 217
+			add_state_core = 265
+			add_state_core = 245
+			add_state_core = 218
+			add_state_core = 237
+			add_state_core = 855
+			add_state_core = 238
+			add_state_core = 234
+			add_state_core = 1056
+			add_state_core = 1055
+			add_state_core = 235
+			add_state_core = 1053
+			add_state_core = 1057
+			add_state_core = 233
+			add_state_core = 232
+			if = {
+				limit = {
+					DKB = { exists = yes }
+				}
+				DKB = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_ultimatum_to_orenburg
+		icon = GFX_focus_RUS_ultimatum_to_orenburg
+		relative_position_id = RUS_unify_empire
+		x = 2
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_unify_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 572
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 652
+			add_state_core = 402
+			add_state_core = 406
+			if = {
+				limit = {
+					ORE = { exists = yes }
+				}
+				ORE = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_retake_the_steppe
+		icon = GFX_focus_RUS_retake_the_steppe
+		relative_position_id = RUS_unify_empire
+		x = 2
+		y = 2
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_ultimatum_to_orenburg
+			focus = RUS_retake_siberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 571
+			add_state_core = 583
+			add_state_core = 590
+			add_state_core = 588
+			add_state_core = 404
+			add_state_core = 589
+			add_state_core = 842
+			add_state_core = 794
+			add_state_core = 586
+			if = {
+				limit = {
+					STE = { exists = yes }
+				}
+				STE = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_retake_siberia
+		icon = GFX_focus_RUS_retake_siberia
+		relative_position_id = RUS_unify_empire
+		x = 5
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_unify_empire
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 403
+			add_state_core = 580
+			add_state_core = 578
+			add_state_core = 570
+			add_state_core = 40
+			add_state_core = 569
+			add_state_core = 568
+			add_state_core = 567
+			add_state_core = 566
+			add_state_core = 565
+			add_state_core = 575
+			add_state_core = 576
+			add_state_core = 516
+			add_state_core = 577
+			add_state_core = 579
+			if = {
+				limit = {
+					SIB = { exists = yes }
+					NOT = {
+						has_government = accelerationism
+					}
+				}
+				SIB = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					SIB = {
+						has_government = accelerationism
+					}
+				}
+				create_wargoal = {
+					target = SIB
+					type = annex_everything
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_take_turkestan
+		icon = GFX_focus_RUS_take_turkestan
+		relative_position_id = RUS_unify_empire
+		x = 0
+		y = 3
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_ultimatum_to_orenburg
+			focus = RUS_retake_the_steppe
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 852
+			add_state_core = 1043
+			if = {
+				limit = {
+					TRK = { exists = yes }
+				}
+				TRK = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_secure_altay
+		icon = GFX_focus_RUS_secure_altay
+		relative_position_id = RUS_unify_empire
+		x = 4
+		y = 3
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_retake_siberia
+			focus = RUS_retake_the_steppe
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 654
+			add_state_core = 838
+			add_state_core = 898
+			add_state_core = 961
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_ultimatum_to_yakutsk
+		icon = GFX_focus_RUS_ultimatum_to_yakutsk
+		relative_position_id = RUS_retake_siberia
+		x = 1
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_retake_siberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 574
+			add_state_core = 1036
+			add_state_core = 562
+			add_state_core = 637
+			add_state_core = 644
+			if = {
+				limit = {
+					KCK = { exists = yes }
+				}
+				KCK = {
+					country_event = {
+						id = russia.99
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_crush_rogue_officer
+		icon = GFX_focus_RUS_crush_rogue_officer
+		relative_position_id = RUS_retake_siberia
+		x = 3
+		y = 1
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_retake_siberia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 564
+			add_state_core = 964
+			add_state_core = 563
+			create_wargoal = {
+				type = annex_everything
+				target = MO2
+			}
+		}
+	}
+	shared_focus = {
+		id = RUS_finish_zhelto
+		icon = GFX_focus_RUS_finish_zhelto
+		relative_position_id = RUS_retake_siberia
+		x = 2
+		y = 2
+		
+		cost = 5
+		
+		available = {
+			
+		}
+		available_if_capitulated = no
+		prerequisite = {
+			focus = RUS_ultimatum_to_yakutsk
+			focus = RUS_crush_rogue_officer
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			add_state_core = 930
+			add_state_core = 408
+			add_state_core = 657
+			add_state_core = 810
+			add_state_core = 714
+			add_state_core = 912
+			add_state_core = 881
+			add_state_core = 978
+			add_state_core = 761
+			create_wargoal = {
+				type = annex_everything
+				target = ZHR
+			}
+			if = {
+				limit = {
+					PRI = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PRI
+				}
+			}
+			if = {
+				limit = {
+					GUK = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GUK
+				}
+			}
+			if = {
+				limit = {
+					MNS = { exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MNS
+				}
+			}
+		}
+	}

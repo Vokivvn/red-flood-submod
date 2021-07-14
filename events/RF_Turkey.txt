@@ -1,0 +1,227 @@
+﻿###########################
+# Turskish Events
+###########################
+
+add_namespace = turkey
+
+#### Turkey Demands Istanbul
+country_event = {
+	id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_news_event_chinese_soldiers_march
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	#Mar says yes
+	option = {
+		name = turkey.1.a
+		ai_chance = { factor = 90 }
+		TUR = { annex_country = { target = MAR transfer_troops = yes } }
+		hidden_effect = { 
+			news_event = { id = news.tur.01 days = 1 } 
+		}
+	}
+	#Mar says no
+	option = {
+		name = turkey.1.b
+		ai_chance = { factor = 10 } 
+		TUR = { country_event = { id = turkey.101 } }
+	}
+}
+# Mar says no - Turkey
+country_event = {
+	id = turkey.101
+	title = turkey.101.t
+	desc = turkey.101.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	#to war
+	option = {
+		name = turkey.101.a
+		ai_chance = { factor = 70 }
+		declare_war_on = {
+			type = annex_everything
+			target = MAR
+		}
+
+	}
+	#be peacfull
+	option {
+		name = turkey.101.b
+		ai_chance = { factor = 30 }
+		add_war_support = -0.2
+		add_stability = -0.05
+	}
+}
+
+
+
+
+### Turkey demands izmir
+
+country_event {
+	id = turkey.2
+	title = turkey.2.t
+	desc = turkey.2.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # greece votes yes
+		name = turkey.2.a
+		ai_chance = { factor = 60 modifier {
+			GRE = { has_opinion = { target = TUR value < 75 } } 
+			factor = 80
+		} }
+		
+		add_stability = -0.1
+		add_war_support = 0.05
+		TUR = { country_event = { id = turkey.201 hours = 24 } }
+	}
+	option = {  #those assholes vote no
+		name = turkey.2.b
+		ai_chance = { factor = 20 }
+		TUR = { country_event = { id = turkey.202 hours = 24 } }
+		add_stability = 0.1
+		add_war_support = 0.15
+		add_opinion_modifier = {
+		 	target = TUR 
+			modifier = refused_demands 
+		}	
+	}
+}
+
+country_event { #greece voted yes - turkey
+	id = turkey.201
+	title = turkey.201.t
+	desc = turkey.201.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = turkey.201.a
+		add_stability = 0.05
+		transfer_state = 339
+			
+		}
+}
+country_event { #greece voted no - turkey
+	id = turkey.202
+	title = turkey.202.t
+	desc = turkey.202.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #turkey doesnt go to war
+		name = turkey.202.a
+		ai_chance = { factor = 30 }
+		add_political_power = -80
+		add_stability = -0.05
+		add_war_support = 0.04
+	}
+	option = { #we´ll annex those fuckers
+		name = turkey.202.b
+		ai_chance = { factor = 70 }
+		create_wargoal = {
+    		type = annex_everything
+    		target = GRE
+		}
+	}
+}
+
+
+
+
+##### turkey demands antalya
+
+country_event {
+	id = turkey.3
+	title = turkey.3.t
+	desc = turkey.3.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # ita votes ye boi
+		name = turkey.3.a
+		ai_chance = { factor = 60 modifier {
+			ITA = { has_opinion = { target = TUR value < 75 } } 
+			factor = 90
+		} }
+				
+		TUR = { country_event = { id = turkey.301 hours = 24 } }
+	}
+	option = {  #ita votes fuck you
+		name = turkey.2.b
+		ai_chance = { factor = 20 }
+		TUR = { country_event = { id = turkey.302 hours = 24 } }
+		add_stability = 0.1
+		add_war_support = 0.05
+			
+	}
+}
+
+country_event { #ita voted yes - turkey
+	id = turkey.301
+	title = turkey.301.t
+	desc = turkey.301.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = turkey.301.a
+		add_stability = 0.1
+		transfer_state = 342
+		add_opinion_modifier = {
+		 	target = ITA 
+			modifier = gave_back_core_terretory 
+		}
+			
+		}
+}
+country_event { #ita voted no - turkey
+	id = turkey.302
+	title = turkey.302.t
+	desc = turkey.302.d
+	picture = GFX_news_event_chinese_soldiers_march
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #turkey is peacefull
+		name = turkey.302.a
+		ai_chance = { factor = 45 }
+		add_political_power = -40
+		add_war_support = -0.04
+		add_opinion_modifier = {
+		 	target = ITA 
+			modifier = refused_demands 
+		}
+	}
+	option = { #turkey shows them how real pizza is made
+		name = turkey.302.b
+		ai_chance = { factor = 55 }
+		create_wargoal = {
+    		type = annex_everything
+    		target = ITA
+		}
+		add_war_support = 0.15
+		add_opinion_modifier = {
+		 	target = ITA 
+			modifier = refused_demands 
+		}
+	}
+}

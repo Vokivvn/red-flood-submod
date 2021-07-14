@@ -1,0 +1,170 @@
+MNT_unite_balkans = {
+	MNT_create_balkan_state = {
+		icon = generic_operation
+		available = {
+			#starting +albania - proper
+			owns_state = 899
+			owns_state = 44
+			owns_state = 811
+			owns_state = 105
+			owns_state = 922
+			#rest_of_balkans - no constant, Fiume, Slovenia, Vojvodina, West banat
+			owns_state = 103
+			owns_state = 104
+			owns_state = 109
+			owns_state = 921
+			owns_state = 107
+			owns_state = 108
+			owns_state = 106
+			owns_state = 941
+			owns_state = 185
+			owns_state = 47
+			owns_state = 186
+			owns_state = 731
+			owns_state = 184
+			owns_state = 341
+			owns_state = 812
+			owns_state = 48
+			owns_state = 212
+			owns_state = 211
+			owns_state = 764
+			owns_state = 1062
+			owns_state = 1064
+		}
+		visible = {
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+		cost = 100
+		modifier = {
+		}
+		fire_only_once = yes
+		is_good = yes
+		complete_effect = {
+			set_cosmetic_tag = MNT_balkan_state
+			hidden_effect = {
+				103 = {
+					add_core_of = MNT
+				}
+				163 = {
+					add_core_of = MNT
+				}
+				736 = {
+					add_core_of = MNT
+				}
+				102 = {
+					add_core_of = MNT
+				}
+				104 = {
+					add_core_of = MNT
+				}
+				109 = {
+					add_core_of = MNT
+				}
+				921 = {
+					add_core_of = MNT
+				}
+				107 = {
+					add_core_of = MNT
+				}
+				764 = {
+					add_core_of = MNT
+				}
+				108 = {
+					add_core_of = MNT
+				}
+				106 = {
+					add_core_of = MNT
+				}
+				185 = {
+					add_core_of = MNT
+				}
+				47 = {
+					add_core_of = MNT
+				}
+				186 = {
+					add_core_of = MNT
+				}
+				731 = {
+					add_core_of = MNT
+				}
+				184 = {
+					add_core_of = MNT
+				}
+				341 = {
+					add_core_of = MNT
+				}
+				812 = {
+					add_core_of = MNT
+				}
+				48 = {
+					add_core_of = MNT
+				}
+				212 = {
+					add_core_of = MNT
+				}
+				211 = {
+					add_core_of = MNT
+				}
+				77 = {
+					add_core_of = MNT
+				}
+				976 = {
+					add_core_of = MNT
+				}
+				45 = {
+					add_core_of = MNT
+				}
+				1035 = {
+					add_core_of = MNT
+				}
+				1059 = {
+					add_core_of = MNT
+				}
+				1064 = {
+					add_core_of = MNT
+				}
+				1062 = {
+					add_core_of = MNT
+				}
+			}
+			custom_effect_tooltip = MNT_balkan_cores
+		}
+	}
+}
+MNT_national_solidarity_category = {
+	MNT_prepare_civilian_industry = {
+		icon = generic_operation
+		ai_will_do = {
+			factor = 0.5
+		}
+		allowed = { 
+			original_tag = MNT
+		}
+		available = { 
+		has_completed_focus = MNT_national_solidarity
+			NOT = {
+				check_variable = {
+					MNT_national_solidarity_factories > 4
+				}
+			}
+		}
+		cost = 15
+		complete_effect = {
+			add_to_variable = {
+				var = MNT_national_solidarity_factories
+				value = 1
+			}
+		}
+		modifier = {
+			political_power_gain = -1
+		}
+		days_remove = 35
+		remove_effect = {
+			random_owned_state = {
+                    add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+            }
+		}
+	}
+}

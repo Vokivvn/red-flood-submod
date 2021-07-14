@@ -1,0 +1,452 @@
+spriteTypes = { 
+##Icon For: 1307913
+SpriteType = { 
+	name = "GFX_thesterngang" 
+	texturefile = "gfx/interface/goals/ISR/GFX_thesterngang.tga" 
+}
+##Icon For: 1308424
+SpriteType = { 
+	name = "GFX_unionofcultures" 
+	texturefile = "gfx/interface/goals/ISR/GFX_unionofcultures.tga" 
+}
+##Icon For: 1308422
+SpriteType = { 
+	name = "GFX_onepeopleinzion" 
+	texturefile = "gfx/interface/goals/ISR/GFX_onepeopleinzion.tga" 
+}
+##Icon For: 1307876
+SpriteType = { 
+	name = "GFX_coordinatethemillitias" 
+	texturefile = "gfx/interface/goals/ISR/GFX_coordinatethemillitias.tga" 
+}
+##Icon For: 1307893
+SpriteType = { 
+	name = "GFX_thehaganahjoins" 
+	texturefile = "gfx/interface/goals/ISR/GFX_thehaganahjoins.tga" 
+}
+##Icon For: 1307901
+SpriteType = { 
+	name = "GFX_defenceoftheyishuv" 
+	texturefile = "gfx/interface/goals/ISR/GFX_defenceoftheyishuv.tga" 
+}
+##Icon For: 1307905
+SpriteType = { 
+	name = "GFX_mainstreamhebrew" 
+	texturefile = "gfx/interface/goals/ISR/GFX_mainstreamhebrew.tga" 
+}
+##Icon For: 1307906
+SpriteType = { 
+	name = "GFX_benyehudaaproach" 
+	texturefile = "gfx/interface/goals/ISR/GFX_benyehudaaproach.tga" 
+}
+##Icon For: 1307907
+SpriteType = { 
+	name = "GFX_preserveyiddishladinoandaramaic" 
+	texturefile = "gfx/interface/goals/ISR/GFX_preserveyiddishladinoandaramaic.tga" 
+}
+##Icon For: 1307912
+SpriteType = { 
+	name = "GFX_therevisionistzionistsplit" 
+	texturefile = "gfx/interface/goals/ISR/GFX_therevisionistzionistsplit.tga" 
+}
+##Icon For: 1307874
+SpriteType = { 
+	name = "GFX_fightforthezionistcause" 
+	texturefile = "gfx/interface/goals/ISR/GFX_fightforthezionistcause.tga" 
+}
+##Icon For: 1307896
+SpriteType = { 
+	name = "GFX_lehiirgunoperations" 
+	texturefile = "gfx/interface/goals/ISR/GFX_lehiirgunoperations.tga" 
+}
+##Icon For: 1307915
+SpriteType = { 
+	name = "GFX_theisraeliconscriptionlaws" 
+	texturefile = "gfx/interface/goals/ISR/GFX_theisraeliconscriptionlaws.tga" 
+}
+##Icon For: 1307920
+SpriteType = { 
+	name = "GFX_democracyestablished" 
+	texturefile = "gfx/interface/goals/ISR/GFX_democracyestablished.tga" 
+}
+##Icon For: 1435755
+SpriteType = { 
+	name = "GFX_asternruleinzion" 
+	texturefile = "gfx/interface/goals/ISR/GFX_asternruleinzion.tga" 
+}
+##Icon For: 1435759
+SpriteType = { 
+	name = "GFX_einsteinarrivesfromgermany" 
+	texturefile = "gfx/interface/goals/ISR/GFX_einsteinarrivesfromgermany.tga" 
+}
+##Icon For: 1435760
+SpriteType = { 
+	name = "GFX_jabotinskytakesover" 
+	texturefile = "gfx/interface/goals/ISR/GFX_jabotinskytakesover.tga" 
+}
+##Icon For: 1441595
+SpriteType = { 
+	name = "GFX_bengurionascendstopower" 
+	texturefile = "gfx/interface/goals/ISR/GFX_bengurionascendstopower.tga" 
+}
+#PT2
+
+SpriteType = { 
+	name = "GFX_ISR_ACompleteRoadNetwork" 
+	texturefile = "gfx/interface/goals/ISR/ACompleteRoadNetwork.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AGlobalThirdInternational" 
+	texturefile = "gfx/interface/goals/ISR/AGlobalThirdInternational.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AllyTheBritish" 
+	texturefile = "gfx/interface/goals/ISR/AllyTheBritish.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AllyWithTheFrench" 
+	texturefile = "gfx/interface/goals/ISR/AllyWithTheFrench.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AMergetheWiththeLabourParty" 
+	texturefile = "gfx/interface/goals/ISR/AMergetheWiththeLabourParty.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AMiddleEasternSphere" 
+	texturefile = "gfx/interface/goals/ISR/AMiddleEasternSphere.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ANewLevant" 
+	texturefile = "gfx/interface/goals/ISR/ANewLevant.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ArmedNeutrallity" 
+	texturefile = "gfx/interface/goals/ISR/ArmedNeutrallity.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AskforMilitaryAid" 
+	texturefile = "gfx/interface/goals/ISR/AskforMilitaryAid.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_AssistedbyGermany" 
+	texturefile = "gfx/interface/goals/ISR/AssistedbyGermany.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_BenGurionAscendstoPower" 
+	texturefile = "gfx/interface/goals/ISR/BenGurionAscendstoPower.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_BreakupSyria" 
+	texturefile = "gfx/interface/goals/ISR/BreakupSyria.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_BritishThreatsinEgypt" 
+	texturefile = "gfx/interface/goals/ISR/BritishThreatsinEgypt.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ContactsinWestAfrica" 
+	texturefile = "gfx/interface/goals/ISR/ContactsinWestAfrica.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ContainSyrianAggression" 
+	texturefile = "gfx/interface/goals/ISR/ContainSyrianAggression.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_CooperationwiththeBeduins" 
+	texturefile = "gfx/interface/goals/ISR/CooperationwiththeBeduins.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_CulturalRebirth" 
+	texturefile = "gfx/interface/goals/ISR/CulturalRebirth.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_DefensiveOperations" 
+	texturefile = "gfx/interface/goals/ISR/DefensiveOperations.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_DestroyBritishInfluence" 
+	texturefile = "gfx/interface/goals/ISR/DestroyBritishInfluence.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_DeveloptheCities" 
+	texturefile = "gfx/interface/goals/ISR/DeveloptheCities.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_DisarmedNuclearCapabillities" 
+	texturefile = "gfx/interface/goals/ISR/DisarmedNuclearCapabillities.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_EinsteinsNuclearProgram" 
+	texturefile = "gfx/interface/goals/ISR/EinsteinsNuclearProgram.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ExpandtheKibbutz" 
+	texturefile = "gfx/interface/goals/ISR/ExpandtheKibbutz.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_FinishThePurge" 
+	texturefile = "gfx/interface/goals/ISR/FinishThePurge.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_FixCapturedTanks" 
+	texturefile = "gfx/interface/goals/ISR/FixCapturedTanks.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_FixtheInfighting" 
+	texturefile = "gfx/interface/goals/ISR/FixtheInfighting.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ForcingStability" 
+	texturefile = "gfx/interface/goals/ISR/ForcingStability.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_FortifyourLand" 
+	texturefile = "gfx/interface/goals/ISR/FortifyourLand.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_FundtheYishuv" 
+	texturefile = "gfx/interface/goals/ISR/FundtheYishuv.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_GunProduction" 
+	texturefile = "gfx/interface/goals/ISR/GunProduction.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_Housingprojects" 
+	texturefile = "gfx/interface/goals/ISR/Housingprojects.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_IndependentCouncills" 
+	texturefile = "gfx/interface/goals/ISR/IndependentCouncills.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_IndependentProduction" 
+	texturefile = "gfx/interface/goals/ISR/IndependentProduction.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_IndustrialCenters" 
+	texturefile = "gfx/interface/goals/ISR/IndustrialCenters.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_IndustrializetheNegev" 
+	texturefile = "gfx/interface/goals/ISR/IndustrializetheNegev.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_InfluenceOurNeighbors" 
+	texturefile = "gfx/interface/goals/ISR/InfluenceOurNeighbors.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_IntegratethePalmach" 
+	texturefile = "gfx/interface/goals/ISR/IntegratethePalmach.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_LetmediewiththePhilistines" 
+	texturefile = "gfx/interface/goals/ISR/LetmediewiththePhilistines.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_LoyalHighCommand" 
+	texturefile = "gfx/interface/goals/ISR/LoyalHighCommand.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_MilitarizedSociety" 
+	texturefile = "gfx/interface/goals/ISR/MilitarizedSociety.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_MobileForce" 
+	texturefile = "gfx/interface/goals/ISR/MobileForce.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_ModernArtillery" 
+	texturefile = "gfx/interface/goals/ISR/ModernArtillery.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_ModernIndustry" 
+	texturefile = "gfx/interface/goals/ISR/ModernIndustry.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_NationalRebirth" 
+	texturefile = "gfx/interface/goals/ISR/NationalRebirth.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_NegotiateovertheSinai" 
+	texturefile = "gfx/interface/goals/ISR/NegotiateovertheSinai.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_OffensiveOperations" 
+	texturefile = "gfx/interface/goals/ISR/OffensiveOperations.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_OurCommonStruggle" 
+	texturefile = "gfx/interface/goals/ISR/OurCommonStruggle.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_OurProperBorders" 
+	texturefile = "gfx/interface/goals/ISR/OurProperBorders.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_PreparefortheWorst" 
+	texturefile = "gfx/interface/goals/ISR/PreparefortheWorst.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_Prepareforthenextfight" 
+	texturefile = "gfx/interface/goals/ISR/Prepareforthenextfight.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_PressureIraqandJordan" 
+	texturefile = "gfx/interface/goals/ISR/PressureIraqandJordan.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_PromoteArabIntegration" 
+	texturefile = "gfx/interface/goals/ISR/PromoteArabIntegration.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_PurgetheRabbis" 
+	texturefile = "gfx/interface/goals/ISR/PurgetheRabbis.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RaidforSupplies" 
+	texturefile = "gfx/interface/goals/ISR/RaidforSupplies.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RecognitionbyBritain" 
+	texturefile = "gfx/interface/goals/ISR/RecognitionbyBritain.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ReformtheKnesset" 
+	texturefile = "gfx/interface/goals/ISR/ReformtheKnesset.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RehabilitatetheArmyCadets" 
+	texturefile = "gfx/interface/goals/ISR/RehabilitatetheArmyCadets.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RenewedConflict" 
+	texturefile = "gfx/interface/goals/ISR/RenewedConflict.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RestoreOrder" 
+	texturefile = "gfx/interface/goals/ISR/RestoreOrder.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RestoreOldJerusalem" 
+	texturefile = "gfx/interface/goals/ISR/RestoreOldJerusalem.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RevengeonTheHittites" 
+	texturefile = "gfx/interface/goals/ISR/RevengeonTheHittites.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RevisionedEducation" 
+	texturefile = "gfx/interface/goals/ISR/RevisionedEducation.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RevivethePriesthood" 
+	texturefile = "gfx/interface/goals/ISR/RevivethePriesthood.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_ReviveDiplomacy" 
+	texturefile = "gfx/interface/goals/ISR/ReviveDiplomacy.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RewardLargeFamilies" 
+	texturefile = "gfx/interface/goals/ISR/RewardLargeFamilies.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_RomanticizeDeath" 
+	texturefile = "gfx/interface/goals/ISR/RomanticizeDeath.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_SecularTraditionalism" 
+	texturefile = "gfx/interface/goals/ISR/SecularTraditionalism.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_SelfReliantProduction" 
+	texturefile = "gfx/interface/goals/ISR/SelfReliantProduction.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_SocialistMeritocracy" 
+	texturefile = "gfx/interface/goals/ISR/SocialistMeritocracy.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_StateMedia" 
+	texturefile = "gfx/interface/goals/ISR/StateMedia.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_StaticForce" 
+	texturefile = "gfx/interface/goals/ISR/StaticForce.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_StreamlineEducation" 
+	texturefile = "gfx/interface/goals/ISR/StreamlineEducation.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_SupportedbyGermany" 
+	texturefile = "gfx/interface/goals/ISR/SupportedbyGermany.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_SupportTheCanaanistMovement" 
+	texturefile = "gfx/interface/goals/ISR/SupportTheCanaanistMovement.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_The18PrinciplesoftheLehi" 
+	texturefile = "gfx/interface/goals/ISR/The18PrinciplesoftheLehi.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_TheFoundingofaNation" 
+	texturefile = "gfx/interface/goals/ISR/TheFoundingofaNation.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_TheFutureofArialCombat" 
+	texturefile = "gfx/interface/goals/ISR/TheFutureofArialCombat.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_TheHebrewUniversity" 
+	texturefile = "gfx/interface/goals/ISR/TheHebrewUniversity.dds"
+}
+SpriteType = { 
+	name = "GFX_ISR_TheIDFisVictorious" 
+	texturefile = "gfx/interface/goals/ISR/TheIDFisVictorious.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_TheThirdTemple" 
+	texturefile = "gfx/interface/goals/ISR/TheThirdTemple.dds" 
+}
+SpriteType = { 
+	name = "GFX_ISR_UnlimitedPower" 
+	texturefile = "gfx/interface/goals/ISR/UnlimitedPower!.dds" 
+}
+#
+#IDEAS/MINISTERS - HERE FOR SOME REASON#
+spriteType = {
+	name = "GFX_idea_taas"
+	texturefile = "gfx/interface/ministers/ISR/taas.tga"
+}
+spriteType = {
+	name = "GFX_idea_rothschildcompany"
+	texturefile = "gfx/interface/ministers/ISR/rothscild.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_dori"
+	texturefile = "gfx/interface/ministers/ISR/ISR_dori.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_sternchief"
+	texturefile = "gfx/interface/ministers/ISR/ISR_stern.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_dayan"
+	texturefile = "gfx/interface/ministers/ISR/ISR_dayan.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_golda_foreign"
+	texturefile = "gfx/interface/ministers/ISR/ISR_meir.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_gurion_foreign"
+	texturefile = "gfx/interface/ministers/ISR/ISR_gurion.tga"
+}
+spriteType = {
+	name = "GFX_idea_ISR_shamir_foreign"
+	texturefile = "gfx/interface/ministers/ISR/ISR_shamir.tga"
+}
+ }

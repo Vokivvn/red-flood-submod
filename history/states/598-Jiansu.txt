@@ -1,0 +1,21 @@
+state = {
+	id = 598
+	name = "STATE_598" #Yangzhou
+	manpower = 7321900
+	state_category = town
+
+	history = {
+		owner = SHA
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			12067 2
+		}
+	}
+
+	provinces = {
+		1089 4001 4005 4091 4123 7142 7181 9953 10095 11928 12067 13144
+	}
+}

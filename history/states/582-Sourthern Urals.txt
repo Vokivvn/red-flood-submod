@@ -1,0 +1,29 @@
+
+state={
+	id=582
+	name="STATE_582" # Orsk
+	manpower = 432498
+
+	state_category = rural
+
+	resources={
+		steel=40 # was: 72
+		oil=6 # was: 12
+	}
+
+	history={
+		owner = ORE
+		victory_points = {
+			4261 1 
+		}
+		buildings = {
+			infrastructure = 5
+
+		}
+		add_core_of = ORE
+	}
+
+	provinces={
+		1406 4261 4265 4311 4383 7300 7373 10185 12200 10329
+	}
+}

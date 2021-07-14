@@ -1,0 +1,983 @@
+shared_focus = {
+	id = ITA_quest_supremacy
+	icon = GFX_focus_ITA_quest_supremacy
+	x = 20
+	y = 0
+	cost = 2
+	available = {
+		has_completed_focus = ITA_conference_holiness
+	}
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = ITA_national_strategy
+	icon = GFX_focus_ITA_national_strategy
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = {
+		focus = ITA_quest_supremacy
+	}
+	completion_reward = {
+		add_ideas = ITA_balbo_strategy
+	}
+}
+shared_focus = {
+	id = ITA_reforming_forces
+	icon = GFX_focus_ITA_reforming_forces
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = {
+		focus = ITA_national_strategy
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = ITA_ineffective_military
+			add_idea = ITA_ineffective_military_b1
+		}
+	}
+}
+shared_focus = {
+	id = ITA_purge_commanders
+	icon = GFX_focus_ITA_purge_commanders
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 3
+	cost = 5
+	prerequisite = {
+		focus = ITA_reforming_forces
+	}
+	completion_reward = {
+		remove_unit_leader = 200
+		remove_unit_leader = 201
+		swap_ideas = {
+			remove_idea = ITA_ineffective_military_b1
+			add_idea = ITA_ineffective_military_b2
+		}
+		add_timed_idea = {
+			idea = ITA_purged_officers
+			days = 80
+		}
+	}
+}
+shared_focus = {
+	id = ITA_great_conference
+	icon = GFX_focus_ITA_great_conference
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 4
+	cost = 10
+	prerequisite = {
+		focus = ITA_purge_commanders
+	}
+	completion_reward = {
+		country_event = {
+			id = italy.23
+		}
+	}
+}
+shared_focus = {
+	id = ITA_naval_staff
+	icon = GFX_focus_ITA_naval_staff
+	relative_position_id = ITA_quest_supremacy
+	x = -6
+	y = 5
+	cost = 3
+	prerequisite = {
+		focus = ITA_great_conference
+	}
+	completion_reward = {
+		navy_experience = 30
+	}
+}
+shared_focus = {
+	id = ITA_national_shipyards
+	icon = GFX_focus_ITA_national_shipyards
+	relative_position_id = ITA_quest_supremacy
+	x = -8
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_naval_staff
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_national_shipyards_tooltip
+	}
+}
+shared_focus = {
+	id = ITA_necessary_bases
+	icon = GFX_focus_ITA_necessary_bases
+	relative_position_id = ITA_quest_supremacy
+	x = -8
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_national_shipyards
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_necessary_bases_tooltip
+	}
+}
+shared_focus = {
+	id = ITA_examine_doctrines
+	icon = GFX_focus_ITA_examine_doctrines
+	relative_position_id = ITA_quest_supremacy
+	x = -6
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_naval_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = ITA_naval_funds
+	icon = GFX_focus_ITA_naval_funds
+	relative_position_id = ITA_quest_supremacy
+	x = -6
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_examine_doctrines
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = naval_doctrine
+		}
+		add_political_power = -50
+		navy_experience = 20
+	}
+}
+shared_focus = {
+	id = ITA_design_board
+	icon = GFX_focus_ITA_design_board
+	relative_position_id = ITA_quest_supremacy
+	x = -4
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_naval_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = ss_tech
+			category = dd_tech
+		}
+	}
+}
+shared_focus = {
+	id = ITA_next_generation
+	icon = GFX_focus_ITA_next_generation
+	relative_position_id = ITA_quest_supremacy
+	x = -4
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_design_board
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = cv_tech
+			category = cl_tech
+			category = bb_tech
+			category = bc_tech
+		}
+	}
+}
+shared_focus = {
+	id = ITA_army_staff
+	icon = GFX_focus_ITA_army_staff
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 5
+	cost = 3
+	prerequisite = {
+		focus = ITA_great_conference
+	}
+	completion_reward = {
+		army_experience = 30
+	}
+}
+shared_focus = {
+	id = ITA_motor_mechanism
+	icon = GFX_focus_ITA_motor_mechanism
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_army_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = motorized_equipment
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+	}
+}
+shared_focus = {
+	id = ITA_modern_cavalry
+	icon = GFX_focus_ITA_modern_cavalry
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_motor_mechanism
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = armor
+		}
+	}
+}
+shared_focus = {
+	id = ITA_learn_prussians
+	icon = GFX_focus_ITA_learn_prussians
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_army_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.7
+			uses = 2
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = ITA_culture_innovation
+	icon = GFX_focus_ITA_culture_innovation
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_learn_prussians
+	}
+	completion_reward = {
+		add_ideas = ITA_staff_innovations
+	}
+}
+shared_focus = {
+	id = ITA_rifle_cannon
+	icon = GFX_focus_ITA_rifle_cannon
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_army_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = infantry_weapons
+		}
+		add_tech_bonus = {
+			bonus = 0.7
+			uses = 1
+			category = artillery
+		}
+	}
+}
+shared_focus = {
+	id = ITA_specialised_companies
+	icon = GFX_focus_ITA_specialised_companies
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_rifle_cannon
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = support_tech
+		}
+	}
+}
+shared_focus = {
+	id = ITA_air_staff
+	icon = GFX_focus_ITA_air_staff
+	relative_position_id = ITA_quest_supremacy
+	x = 6
+	y = 5
+	cost = 3
+	prerequisite = {
+		focus = ITA_great_conference
+	}
+	completion_reward = {
+		air_experience = 30
+	}
+}
+shared_focus = {
+	id = ITA_air_war
+	icon = GFX_focus_ITA_air_war
+	relative_position_id = ITA_quest_supremacy
+	x = 4
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_air_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = light_fighter
+		}
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = air_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = ITA_aid_above
+	icon = GFX_focus_ITA_aid_above
+	relative_position_id = ITA_quest_supremacy
+	x = 4
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_air_war
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = tactical_bomber
+		}
+		add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = cas_bomber
+		}
+	}
+}
+shared_focus = {
+	id = ITA_believe_bombers
+	icon = GFX_focus_ITA_believe_bombers
+	relative_position_id = ITA_quest_supremacy
+	x = 8
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_air_staff
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = cat_strategic_bomber
+		}
+	}
+}
+shared_focus = {
+	id = ITA_crush_supply_chain
+	icon = GFX_focus_ITA_crush_supply_chain
+	relative_position_id = ITA_quest_supremacy
+	x = 8
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_believe_bombers
+	}
+	completion_reward = {
+		add_ideas = ITA_back_to_stoneage
+	}
+}
+shared_focus = {
+	id = ITA_expanding_forces
+	icon = GFX_focus_ITA_expanding_forces
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 8
+	cost = 4
+	prerequisite = {
+		focus = ITA_crush_supply_chain
+	}
+	prerequisite = {
+		focus = ITA_aid_above
+	}
+	prerequisite = {
+		focus = ITA_specialised_companies
+	}
+	prerequisite = {
+		focus = ITA_crush_supply_chain
+	}
+	prerequisite = {
+		focus = ITA_culture_innovation
+	}
+	prerequisite = {
+		focus = ITA_modern_cavalry
+	}
+	prerequisite = {
+		focus = ITA_next_generation
+	}
+	prerequisite = {
+		focus = ITA_naval_funds
+	}
+	prerequisite = {
+		focus = ITA_necessary_bases
+	}
+	completion_reward = {
+		add_ideas = ITA_swelling_ranks
+	}
+}
+shared_focus = {
+	id = ITA_incentives_serve
+	icon = GFX_focus_ITA_incentives_serve
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 9
+	cost = 5
+	prerequisite = {
+		focus = ITA_expanding_forces
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = ITA_swelling_ranks
+			add_idea = ITA_swelling_ranks_1
+		}
+	}
+}
+shared_focus = {
+	id = ITA_glory_nation
+	icon = GFX_focus_ITA_glory_nation
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 10
+	cost = 5
+	prerequisite = {
+		focus = ITA_incentives_serve
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = ITA_swelling_ranks_1
+			add_idea = ITA_nation_above_all
+		}
+	}
+}
+shared_focus = {
+	id = ITA_expand_facilities
+	icon = GFX_focus_ITA_expand_facilities
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 9
+	cost = 5
+	prerequisite = {
+		focus = ITA_expanding_forces
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+	}
+}
+shared_focus = {
+	id = ITA_total_rearmament
+	icon = GFX_focus_ITA_total_rearmament
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 10
+	cost = 5
+	prerequisite = {
+		focus = ITA_expand_facilities
+	}
+	completion_reward = {
+		add_ideas = war_economy
+	}
+}
+shared_focus = {
+	id = ITA_secure_frontiers
+	icon = GFX_focus_ITA_secure_frontiers
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 11
+	cost = 6
+	prerequisite = {
+		focus = ITA_total_rearmament
+	}
+	prerequisite = {
+		focus = ITA_glory_nation
+	}
+	available = {
+		ITA = {
+			has_war = no
+		}
+	}
+	completion_reward = {
+		if = {
+			limit = {
+				ITA = {
+					controls_state = 735
+				}
+			}
+			735 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9909
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 3959
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 3961
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9736
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 764
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9745
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6609
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11573
+				}
+			}
+		}
+		else = {
+			158 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 611
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 6780
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9738
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11721
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 11891
+				}
+			}
+		}
+		942 = {
+			add_building_construction = {
+				type = bunker
+				level = 5
+				instant_build = yes
+				province = 11767
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_ticino_ultimatum
+	icon = GFX_focus_ITA_ticino_ultimatum
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 12
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_frontiers
+	}
+	available = { FIU = { exists = no } }
+	completion_reward = {
+		845 = {
+			owner = {
+				country_event = {
+					id = italy.26
+					days = 3
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_secure_seas
+	icon = GFX_focus_ITA_secure_seas
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 13
+	cost = 5
+	prerequisite = {
+		focus = ITA_ticino_ultimatum
+	}
+	completion_reward = {
+		add_ideas = ITA_opening_moves
+	}
+}
+shared_focus = {
+	id = ITA_demand_balearics
+	icon = GFX_focus_ITA_demand_balearics
+	relative_position_id = ITA_quest_supremacy
+	x = -4
+	y = 14
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_seas
+	}
+	completion_reward = {
+		177 = {
+			owner = {
+				country_event = {
+					id = italy.27
+					days = 3
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_operation_buonaparte
+	icon = GFX_focus_ITA_operation_buonaparte
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 14
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_seas
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_bounaparte_decisions
+		hidden_effect = {
+			set_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_subjugate_albania
+	icon = GFX_focus_ITA_subjugate_albania
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 14
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_seas
+	}
+	completion_reward = {
+		create_wargoal = {
+			target = ALB
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = ITA_coup_athens
+	icon = GFX_focus_ITA_coup_athens
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 14
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_seas
+	}
+	completion_reward = {
+		GRE = {
+			country_event = {
+				id = italy.30
+				days = 2
+			}
+		}
+		hidden_effect = {
+			add_timed_idea = {
+				idea = ITA_athenes_coup_timer
+				days = 120
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_not_inch
+	icon = GFX_focus_ITA_not_inch
+	relative_position_id = ITA_quest_supremacy
+	x = 4
+	y = 14
+	cost = 5
+	prerequisite = {
+		focus = ITA_secure_seas
+	}
+	completion_reward = {
+		create_wargoal = {
+			target = TUR
+			type = annex_everything
+		}
+	}
+}
+shared_focus = {
+	id = ITA_question_britain
+	icon = GFX_focus_ITA_question_britain
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 15
+	cost = 2
+	prerequisite = {
+		focus = ITA_not_inch
+	}
+	prerequisite = {
+		focus = ITA_coup_athens
+	}
+	prerequisite = {
+		focus = ITA_subjugate_albania
+	}
+	prerequisite = {
+		focus = ITA_operation_buonaparte
+	}
+	prerequisite = {
+		focus = ITA_demand_balearics
+	}
+	completion_reward = {
+		country_event = {
+			id = italy.39
+		}
+	}
+}
+shared_focus = {
+	id = ITA_repair_breach
+	icon = GFX_focus_ITA_repair_breach
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 16
+	cost = 6
+	mutually_exclusive = {
+		focus = ITA_operation_quaternion
+	}
+	prerequisite = {
+		focus = ITA_question_britain
+	}
+	available = {
+		has_country_flag = ITA_repair_breach_with_GBR
+	}
+	completion_reward = {
+		ENG = {
+			country_event = {
+				id = italy.40
+				days = 3
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_operation_quaternion
+	icon = GFX_focus_ITA_operation_quaternion
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 16
+	cost = 1
+	mutually_exclusive = {
+		focus = ITA_repair_breach
+	}
+	prerequisite = {
+		focus = ITA_question_britain
+	}
+	available = {
+		has_country_flag = ITA_attack_GBR
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_quaternion_decisions
+		hidden_effect = {
+			set_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_final_preparations
+	icon = GFX_focus_ITA_final_preparations
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 17
+	cost = 5
+	prerequisite = {
+		focus = ITA_operation_quaternion
+		focus = ITA_repair_breach
+	}
+	available = {
+		OR = {
+			has_country_flag = ITA_quaternion_over
+			has_completed_focus = ITA_repair_breach
+		}
+	}
+	completion_reward = {
+		ITA = {
+			country_event = {
+				id = italy.50
+			}
+		}
+		add_war_support = 0.2
+	}
+}
+shared_focus = {
+	id = ITA_seize_passes
+	icon = GFX_focus_ITA_seize_passes
+	relative_position_id = ITA_quest_supremacy
+	x = -2
+	y = 18
+	cost = 5
+	prerequisite = {
+		focus = ITA_final_preparations
+	}
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = SWI
+		}
+	}
+}
+shared_focus = {
+	id = ITA_certain_austria
+	icon = GFX_focus_ITA_certain_austria
+	relative_position_id = ITA_quest_supremacy
+	x = 2
+	y = 18
+	cost = 5
+	prerequisite = {
+		focus = ITA_final_preparations
+	}
+	completion_reward = {
+		AUS = {
+			country_event = {
+				id = italy.51
+				days = 2
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_mobilize_nation
+	icon = GFX_focus_ITA_mobilize_nation
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 19
+	cost = 7
+	prerequisite = {
+		focus = ITA_certain_austria
+	}
+	prerequisite = {
+		focus = ITA_seize_passes
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = ITA_opening_moves
+			add_idea = ITA_opening_moves_1
+		}
+	}
+}
+shared_focus = {
+	id = ITA_seize_day
+	icon = GFX_focus_ITA_seize_day
+	relative_position_id = ITA_quest_supremacy
+	x = 0
+	y = 20
+	cost = 5
+	prerequisite = {
+		focus = ITA_mobilize_nation
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_balbos_war_tooltip
+	}
+}

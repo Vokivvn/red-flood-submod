@@ -1,0 +1,33 @@
+Austria_Hitler_Schuschnigg_Republic = {
+	name = "Austrian Path 2"
+	desc = "Other Austrias"
+
+	enable = {
+		original_tag = AUS
+		OR = {
+			has_game_rule = {
+				rule = AUS_ai_route
+				option = HITLER
+			}
+			has_game_rule = {
+				rule = AUS_ai_route
+				option = SCHUSCHNIGG
+			}
+			has_game_rule = {
+				rule = AUS_ai_route
+				option = REPUBLIC
+			}
+			has_country_flag = AUS_ai_path_2
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		AUS_parliamentaryconflict
+		AUS_powertothemoderates
+		AUS_economicrehabilitation
+	}
+}

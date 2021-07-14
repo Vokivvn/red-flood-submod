@@ -1,0 +1,485 @@
+#########################
+#	REV JAPAN - Baba	#
+#########################
+ideas = {
+	country = {
+		
+	}
+#################################################################
+
+##############
+# Companies
+##############
+
+	#### General ####
+	industrial_concern = {
+
+		rev_kawasaki = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { industrial_manufacturer }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+
+		rev_sumitomo = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { electronics_manufacturer }
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+				industry = 0.05
+			}
+		}
+
+		rev_idemitsu_kosan = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { chemical_producer }
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.1
+			}
+			research_bonus = {
+				synth_resources = 0.1
+				industry = 0.05
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	weapons_manufacturer = {
+		designer = yes
+
+		rev_nambu_arms = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_offense_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		rev_tokyo_arsenal = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_mass_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		rev_osaka_arsenal = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { infantry_equipment_producer_allround_2 }
+			modifier = {}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+
+		rev_osaka_arsenal_arty = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { artillery_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+		rev_nissan_motor = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { motorised_equipment_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		rev_ishikawajima_motor_works = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { small_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		rev_hino_motors = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { medium_tank_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+
+	#### Air and Naval Manufacturer ####
+	air_naval_manufacturer = {
+		designer = yes
+
+		rev_yokosuka_air = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { fighter_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_mitsubishi = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_nakajima = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+		rev_aichi = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { bomber_producer_mass_1 }
+			modifier = {}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		###################################################
+		
+		rev_maizura = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { capital_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		rev_kure = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { cruiser_producer_defense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		rev_osaka_iron_works = {
+			allowed = { original_tag = JPR }
+			available = {
+				has_completed_focus = JPR_collectivism_policy
+			}
+			traits = { small_ship_producer_offense_1 }
+			modifier = {}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+	}
+#################################################################
+
+##################Gov't################################
+
+	head_of_government = {
+		JPR_nosaka_hog = {
+			picture = nosaka
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			traits = { 
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+		JPR_arahata_hog = {
+			picture = arahata
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = revolutionary_anarchism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+		JPR_toshihiko_hog = {
+			picture = sakai
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+	}
+	foreign_minister = {
+		JPR_nosaka_for = {
+			picture = nosaka
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	economy_minister = {
+		JPR_isoo_eco = {
+			picture = abe
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = social_democratism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		JPR_arahata_eco = {
+			picture = arahata
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = revolutionary_anarchism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_planned_economy_proponent
+			}
+		}
+		JPR_oyama_eco = {
+			picture = oyama
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = revolutionary_anarchism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_reformer
+			}
+		}
+	}
+	security_minister = {
+		JPR_nosaka_sec = {
+			picture = nosaka
+			allowed = {
+				original_tag = JPR
+			}
+			allowed = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = revisionist_socialism
+				}
+			}
+			traits = { 
+				security_minister
+				sec_back_stabber
+			}
+		}
+		JPR_toshihiko_sec = {
+			picture = sakai
+			allowed = {
+				original_tag = JPR
+			}
+			allowed = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+		JPR_tokuda_sec = {
+			picture = tokuda
+			allowed = {
+				original_tag = JPR
+			}
+			allowed = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+				}
+			}
+			traits = { 
+				security_minister
+				sec_silent_lawyer
+			}
+		}
+	}
+	head_of_intel = {
+		JPR_shiga_int = {
+			picture = shiga
+			allowed = {
+				original_tag = JPR
+			}
+			traits = { 
+				head_of_intel
+				int_political_specialist
+			}
+		}
+		JPR_nosaka_int = {
+			picture = nosaka
+			allowed = {
+				original_tag = JPR
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	#Military
+	chief_of_staff = {
+		JPR_cos = {
+			allowed = {
+				original_tag = JPR
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = despotism
+					}
+				}
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	chief_of_army = {
+		JPR_cao = {
+			allowed = {
+				original_tag = JPR
+			}
+			traits = { 
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	chief_of_navy = {
+		JPR_con = {
+			allowed = {
+				original_tag = JPR
+			}
+			traits = { 
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		JPR_caof = {
+			allowed = {
+				original_tag = JPR
+			}
+			traits = { 
+				cair_naval_aviation_doctrine
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+technology_sharing_group = { #Anglotechnology
+	id = anglo_technology
+	name = anglo_technology_name
+	desc = anglo_technology_desc
+	picture = GFX_technology_sharing_default
+
+	research_sharing_per_country_bonus = 0.1
+
+	available = {
+		is_ally_with = ENG
+	}
+}

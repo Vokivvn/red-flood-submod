@@ -1,0 +1,349 @@
+### GLOBAL ON ACTIONS FILE ###
+### COUNTRY-SPECIFIC ACTIONS SHOULD GO INTO THEIR OWN FILES ###
+### DON'T EDIT THIS FILE WITHOUT CHECKING IN THE CODING CHANNEL FIRST ###
+
+on_actions = {
+
+	on_startup = {
+		effect = {
+			#Set MP flag
+			if = {
+				limit = {
+					check_variable = { global.players^num > 1 }
+				}
+				set_global_flag = is_mp
+			}
+			else = {
+				set_global_flag = is_not_mp
+			}
+
+			#UI Setup
+			for_each_scope_loop = {
+				array = global.players
+				set_country_flag = show_welcome_splash
+			}
+
+			#Events
+			random_scope_in_array = {
+				array = global.players
+				country_event = {
+					id = news.9
+					days = 629
+				}
+			}
+
+			#Core Removal
+			random_country = {
+				limit = { is_ai = yes }
+				country_event = rf.political.3
+			}
+		}
+	}
+
+	#ROOT is winner #FROM is loser
+	on_peaceconference_ended = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] (ROOT) on_peaceconference_ended [From.GetName] (FROM)"
+			### civil war tags should always annex each other
+			if = {
+				limit = {
+					OR = {
+					}
+				}
+				annex_country = { target = FROM transfer_troops = no }
+			}
+		}
+	}
+
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has capitulated to [From.GetName]"
+
+			# Remove the force-surrender idea, just in case it's still there
+			remove_ideas = ready_to_surrender
+
+			# Fixes for vanilla bugs
+			restore_control_of_all_non_enemy_states = yes
+			FROM = {
+				every_enemy_country = {
+					limit = {
+						if = {
+							limit = { is_subject = yes }
+							overlord = { tag = faction_leader }
+						}
+						is_in_faction = yes
+						is_faction_leader = no
+						NOT = {
+							faction_leader = { has_war_with = PREV.PREV }
+						}
+					}
+					faction_leader = { save_event_target_as = factionhead }
+					log = "--- [This.GetName] is in a war with [From.GetName] but their faction leader [factionhead.GetName] is not"
+					country_event = { id = rf.political.208 hours = 1 }
+					leave_faction = yes
+				}
+			}
+			if = {
+				limit = { is_faction_leader = yes }
+				every_country = {
+					limit = { is_ally_with = ROOT }
+					every_controlled_state = {
+						limit = {
+							owner = {
+								NOT = { has_war_with = ROOT }
+							}
+						}
+						owner = { set_state_controller = PREV }
+					}
+				}
+			}
+		}
+	}
+
+	# ROOT is previously capitulated country
+	on_uncapitulation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has uncapitulated"
+		}
+	}
+
+	# FROM = country giving access, ROOT = country asking for access
+	on_military_access = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has asked for military access to [From.GetName]"
+		}
+	}
+
+	# FROM = country receiving access, ROOT = country offering access
+	on_offer_military_access = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has offered military access to [From.GetName]"
+		}
+	}
+
+	# FROM = country being called, ROOT = country calling
+	on_call_allies = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] has called its ally [From.GetName] into its war"
+		}
+	}
+
+	# FROM = country being joined, ROOT = country joining
+	on_join_allies = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is joining [From.GetName] in its war"
+		}
+	}
+
+	# FROM = country receiving goods, ROOT = country sending goods
+	on_lend_lease = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is offering a lend lease to [From.GetName]"
+		}
+	}
+
+	# FROM = country requesting goods, ROOT = country sending goods
+	on_incoming_lend_lease = {
+		effect = {
+			log = "[GetDateText] [From.GetName] has requested a lend lease from [From.GetName]"
+		}
+	}
+
+	# FROM = country receiving volunteers, ROOT = country sending volunteers
+	on_send_volunteers = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is sending volunteers to [From.GetName]"
+		}
+	}
+
+	# FROM = country on whom the wargoal is being generated, ROOT = country generating wargoal
+	on_generate_wargoal = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is generating a wargoal on [From.GetName]"
+		}
+	}
+
+	# FROM = country giving control of the state, ROOT = country asking for control of the state
+	on_ask_for_state_control = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is asking for state control from [From.GetName]"
+		}
+	}
+
+	# FROM = country accepting control of the state, ROOT = country giving control of the state
+	on_give_state_control = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] is giving state control to [From.GetName]"
+		}
+	}
+
+	# Ace pilots
+	# country, FROM = ace
+	on_ace_promoted = {
+		random_events = {
+			100 = ace_promoted.1
+			5 = ace_promoted.2
+		}
+	}
+
+	# country, FROM = ace, PREV = enemy ace
+	# This event fires twice, once for each ace.
+	on_aces_killed_each_other = {
+		random_events = {
+			100 = aces_killed_each_other.1
+		}
+	}
+
+	# country, FROM = our ace,
+	# PREV = enemy ace, has killed FROM
+	on_ace_killed_by_ace = {
+		random_events = {
+			100 = ace_killed_by_ace.1
+		}
+	}
+
+	# country, FROM = our ace,
+	# PREV = enemy ace, killed by FROM
+	on_ace_killed_other_ace = {
+		random_events = {
+			100 = ace_killed_other_ace.1
+		}
+	}
+
+	# country, FROM = ace
+	on_ace_killed = {
+		random_events = {
+			100 = ace_died.1
+		}
+	}
+
+	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
+	on_join_faction = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_join_faction FROM = [From.GetName]"
+		}
+	}
+
+	# When a new faction is formed
+	on_faction_formed = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_faction_formed"
+		}
+	}
+
+	on_army_leader_daily = {}
+
+	on_army_leader_promoted = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_army_leader_promoted [From.GetName]"
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}
+	}
+
+	# New Scopes
+	# Scope is the country owner of the PotF, FROM is the country of the killer
+	on_pride_of_the_fleet_sunk = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_pride_of_the_fleet_sunk [From.GetName]"
+
+		}
+	}
+
+	#ROOT is winner #FROM gets annexed - This fires just before FROM gets annexed, meaning the country and everything it owns still exists. It will also fire on_annex and on_civil_war_end
+	on_civil_war_end_before_annexation = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_civil_war_end_before_annexation [From.GetName]"
+
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_civil_war_end [From.GetName]"
+
+		}
+	}
+	on_unit_leader_created = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_unit_leader_created"
+			if = {
+				limit = { is_exiled_leader = yes }
+				From.From = { save_event_target_as = exile_nation }
+				add_unit_leader_trait = exiled_leader
+				unit_leader_event = { id = mtg_exile_leader_added.1 }
+			}
+		}
+	}
+
+	on_government_exiled = {
+		effect = {
+			log = "[GetDateText] [Root.GetName] on_government_exiled"
+		}
+	}
+
+	#Root is exile
+	#From is new host
+	#FromFrom is old host
+	on_host_changed_from_capitulation = {
+		effect = {
+			#Transfer exile leaders to new host
+			From.From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root.From
+				}
+			}
+		}
+	}
+
+	#Root is exile
+	#From is old host
+	on_exile_government_reinstated = {
+		effect = {
+			From = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					set_nationality = Root
+				}
+			}
+			Root = {
+				every_army_leader = {
+					limit = { is_exiled_leader_from = Root }
+					remove_unit_leader_trait = exiled_leader
+					remove_exile_tag = yes
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			log = "[GetDateText]: [From.GetName]: on_war"
+			# Check for puppets at war with their overlord
+			if = {
+				limit = {
+					is_subject = yes
+					any_enemy_country = { has_subject = ROOT }
+				}
+				overlord = {
+					set_autonomy = {
+						target = ROOT
+						autonomy_state = autonomy_free
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT = attacking side
+	#FROM = defending side
+	#fired when two countries end up at war with each other (on_war is fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first)
+	on_war_relation_added = {
+		effect = {
+			log = "[GetDateText]: on_war_relation_added attacker: [Root.GetName] defender: [From.GetName]"
+		}
+	}
+}

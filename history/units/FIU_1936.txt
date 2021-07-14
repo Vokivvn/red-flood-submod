@@ -1,0 +1,76 @@
+﻿division_template = { 
+	name = "Arditi Alpina" 
+	division_names_group = ITA_MNT_01 
+
+	regiments = { 
+		mountaineers = { x = 0 y = 0 } 												# (elite) Alpini Regiment
+		mountaineers = { x = 0 y = 1 } 
+		mountaineers = { x = 1 y = 0 } 
+		mountaineers = { x = 1 y = 1 } 
+	} 
+	support = { 
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	} 
+}
+division_template = {
+	name = "Arditi Motorizzato"
+	division_names_group = ITA_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+	# "Divisione De Arditi" 
+		#"1a Divisione Arditi "Volo Sopra Vienna"
+		location = 3943
+		division_template = "Arditi Alpina"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	
+	}
+	division = {
+	# "Divisione De Arditi" 
+	#name = "2a Divisione Arditi "Guardiani Di Spolatto"
+		location = 11595
+		division_template = "Arditi Alpina"
+		start_experience_factor = 1
+		start_equipment_factor = 0.8
+	}
+		division = {
+	# "Divisione De Arditi" 
+	#name = "3a Divisione Arditi"
+		location = 11564
+		division_template = "Arditi Alpina"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+		division = {
+	# "Divisione De Arditi" 
+	#name = "4a Divisione Arditi "Por L'Tricolore""
+		location = 6626
+		division_template = "Arditi Alpina"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+		division = {
+	# "Arditi Motorizzato" 
+	#name = "8a Divisione Arditi"
+		location = 11564
+		division_template = "Arditi Alpina"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}
+	

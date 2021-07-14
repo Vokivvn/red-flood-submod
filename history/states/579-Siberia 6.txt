@@ -1,0 +1,21 @@
+
+state={
+	id=579
+	name="STATE_579" # Salekhard
+	manpower = 47484
+	
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = SIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SIB
+	}
+
+	provinces={
+		1664 1684 1784 3415 4669 4715 7689 7738 7768 8461 9142 10536 10592 12517 12574
+	}
+}

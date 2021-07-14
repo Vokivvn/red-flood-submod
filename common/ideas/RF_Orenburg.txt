@@ -1,0 +1,521 @@
+ideas = {
+	country = {
+		ORE_kazakh_republic = {
+			picture = ORE_Kazakh_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conscription_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		ORE_kirghiz_nation = {
+			picture = ORE_Kirghiz_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				non_core_manpower = 0.15
+			}
+		}
+		ORE_authentic_education = {
+			picture = ORE_Authentic_Education
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		ORE_centralised_republic = {
+			picture = ORE_Centralized_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conservatism_drift = 0.06
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+			}
+		}
+		ORE_centralised_republic1 = {
+			picture = ORE_Centralized_Republic
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conservatism_drift = 0.06
+				political_power_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		ORE_meritocracy = {
+			picture = ORE_Meritocracy
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				special_forces_cap = 0.1
+			}
+		}
+		ORE_ideya_pravitelnitsa = {
+			picture = ORE_Ideya_Pravitel_nitsa
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				political_power_factor = 0.1
+				surrender_limit = 0.05
+			}
+		}
+		ORE_ruling_class = {
+			picture = ORE_Ruling_Class
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				right_authoritarianism_drift = 0.05
+			}
+		}
+		ORE_mixed_economy = {
+			picture = ORE_Mixed_Economy
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.05
+				}
+			}
+		}
+		ORE_self_governance = {
+			picture = ORE_Peoples_Self_Governance
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		ORE_mestorazvitiye = {
+			picture = ORE_Mestorazvitiye
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		ORE_continuous_russification = {
+			picture = ORE_Continuous_Russification
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				resistance_target = -0.1
+				drift_defence_factor = 0.3
+			}
+		}
+
+		ORE_eurasian_identity = {
+			picture = ORE_Eurasian_Identity
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				political_power_factor = 0.1
+				resistance_target = -0.2
+				non_core_manpower = 0.15
+			}
+		}
+		ORE_mestorazvitiye1 = {
+			picture = ORE_Mestorazvitiye
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				political_power_factor = 0.05
+				justify_war_goal_time = -0.2
+			}
+		}
+		ORE_corporative_industrialism = {
+			picture = ORE_corporative_industrialism
+			allowed = {
+				original_tag = ORE
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				despotism_drift = 0.04
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+	}
+#Ministers
+	head_of_government = {
+		ORE_Khalel_Dosmuchamedov_hog = {
+			picture = ORE_Khalel_Dosmuchamedov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+		ORE_Pyotr_Savickij_hog = {
+			picture = ORE_Pyotr_Savickij
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+		ORE_Ivan_Akulinin_hog = {
+			picture = ORE_Ivan_Akulinin
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+		}
+	}
+
+	foreign_minister = {
+		ORE_Baktigerey_Kulmanov_for = {
+			picture = ORE_Baktigerey_Kulmanov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		ORE_Georges_Florovsky_for = {
+			picture = ORE_Georges_Florovsky
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = { 
+				foreign_minister
+				for_iron_fisted_brute
+			}
+		}
+		ORE_Gavriil_Yenborisov_hog = {
+			picture = ORE_Gavriil_Yenborisov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+
+	economy_minister = {
+		ORE_Nurgali_Ipmagambetov_eco = {
+			picture = ORE_Nurgali_Ipmagambetov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				economy_minister
+				eco_balanced_budget_economy
+			}
+		}
+		ORE_Sergei_Efron_eco = {
+			picture = ORE_Sergei_Efron
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = { 
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		ORE_Matvei_Martynov_eco = {
+			picture = ORE_Matvei_Martynov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				economy_minister
+				eco_infantry_proponent
+			}
+		}
+	}
+
+	security_minister = {
+		ORE_Otynshy_Alzhanov_sec = {
+			picture = ORE_Otynshy_Alzhanov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				security_minister
+				sec_crime_fighter
+			}
+		}
+		ORE_Anton_Kartashev_sec = {
+			picture = ORE_Anton_Kartashev
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = { 
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+		ORE_Aleksandr_Kravtsov_sec = {
+			picture = ORE_Alexandr_Kravtsov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+
+	head_of_intel = {
+		ORE_Karash_Gumar_int = {
+			picture = ORE_Karash_Gumar
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				head_of_intel
+				int_political_specialist
+			}
+		}
+		ORE_Pyotr_Suvchinsky_int = {
+			picture = ORE_Pyotr_Suvchinsky
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		ORE_Ivan_Shivtsov_int = {
+			picture = ORE_Ivan_Shivtsov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+	}
+#Military
+	chief_of_staff = {
+		ORE_Gavriil_Yenborisov_cof = {
+			picture = ORE_Gavriil_Yenborisov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_manoeuvre
+			}
+		}
+		ORE_Matvei_Martynov_cof = {
+			picture = ORE_Matvei_Martynov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+
+	chief_of_army = {
+		ORE_Aleksandr_Kravtsov_coa = {
+			picture = ORE_Alexandr_Kravtsov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+		ORE_Ivan_Shivtsov_coa = {
+			picture = ORE_Ivan_Shivtsov
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	chief_of_navy = {
+		ORE_Caspian_Coastal_Patrol_con = {
+			picture = ORE_Caspian_Coastal_Patrol
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cnav_open_seas_doctrine
+			}
+		}
+		ORE_Aral_Coastal_Patrol_con = {
+			picture = ORE_Aral_Coastal_Patrol
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		ORE_Nikolay_Ragozin_coaf = {
+			picture = ORE_Nikolay_Ragozin
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cair_air_superiority_doctrine
+			}
+		}
+		ORE_Bakhtyuras_Besikbayev_coaf = {
+			picture = ORE_Bakhtyuras_Besikbayev
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	
+	theorist = {
+		ORE_Ivan_Akulinin_theorist = {
+			picture = ORE_Ivan_Akulinin
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				land_doctrine_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+		ORE_Nikolay_Ragozin_theorist = {
+			picture = ORE_Nikolay_Ragozin
+			allowed = {
+				original_tag = ORE
+			}
+			available = {
+				
+			}
+			traits = { 
+				heavy_fighter_theorist
+			}
+			research_bonus = {
+				cat_strategic_destruction = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,1153 @@
+##############################
+# South Eastern Union Events #
+##############################
+
+add_namespace = dkb
+
+country_event = {
+	id = dkb.1
+	title = dkb.1.t
+	desc = dkb.1.desc
+	#picture = GFX_report_event_DKB_gathering
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.1.a
+		country_event = {
+			id = dkb.2
+			days = 2
+		}
+	}
+}
+
+country_event = { # Currency issue
+	id = dkb.2
+	title = dkb.2.t
+	desc = dkb.2.desc
+	#picture = GFX_report_event_DKB_currency
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.2.a
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_lineytsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.3
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = DKB_ai_route
+					option = DKB_LINEYTSY
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.2.b
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_chernomortsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.3
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_CHERNOMORTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COALITION
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.2.c
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_scythists_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.3
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_SCYTHIA
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COLLAPSE
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Military issue
+	id = dkb.3
+	title = dkb.3.t
+	desc = dkb.3.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.3.a
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_lineytsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.4
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_LINEYTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COALITION
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.3.b
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_chernomortsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.4
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_LINEYTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COLLAPSE
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.3.c
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_scythists_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.4
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = DKB_ai_route
+					option = DKB_SCYTHIA
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Education issue
+	id = dkb.4
+	title = dkb.4.t
+	desc = dkb.4.desc
+	#picture = GFX_report_event_DKB_education
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.4.a
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_lineytsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.5
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = DKB_ai_route
+					option = DKB_LINEYTSY
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.4.b
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_chernomortsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.5
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_CHERNOMORTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COALITION
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.4.c
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_scythists_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.5
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_SCYTHIA
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COLLAPSE
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Autonomy issue
+	id = dkb.5
+	title = dkb.5.t
+	desc = dkb.5.desc
+	#picture = GFX_report_event_DKB_autonomy
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.5.a
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_lineytsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.6
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_LINEYTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COALITION
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.5.b
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_chernomortsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.6
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_LINEYTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COLLAPSE
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.5.c
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_scythists_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.6
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = DKB_ai_route
+					option = DKB_SCYTHIA
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Refugee issue
+	id = dkb.6
+	title = dkb.6.t
+	desc = dkb.6.desc
+	#picture = GFX_report_event_DKB_refugees
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.6.a
+		add_manpower = 3156
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_lineytsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.7
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = DKB_ai_route
+					option = DKB_LINEYTSY
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.6.b
+		add_manpower = 1218
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_chernomortsy_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.7
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_CHERNOMORTSY
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COALITION
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = dkb.6.c
+		add_manpower = 2089
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_to_variable = {
+			var = dkb_scythists_win
+			value = 1
+		}
+		country_event = {
+			id = dkb.7
+			days = 2
+		}
+
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_SCYTHIA
+					}
+					has_game_rule = {
+						rule = DKB_ai_route
+						option = DKB_COLLAPSE
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Counting the votes
+	id = dkb.7
+	title = dkb.7.t
+	desc = dkb.7.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.7.a
+		country_event = {
+			id = dkb.8
+			days = 2
+		}
+	}
+}
+
+country_event = { # Gathering over
+	id = dkb.8
+	title = dkb.8.t
+	desc = dkb.8.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { # Chernomortsy alone
+		name = dkb.8.a
+		trigger = {
+			check_variable = { dkb_chernomortsy_win > 2 }
+			check_variable = { dkb_lineytsy_win < 2 }
+			check_variable = { dkb_scythists_win < 2 }
+		}
+		set_country_flag = DKB_chernomortsy_alone
+	}
+	option = { # Lineytsy alone
+		name = dkb.8.b
+		trigger = {
+			check_variable = { dkb_lineytsy_win > 2 }
+			check_variable = { dkb_chernomortsy_win < 2 }
+			check_variable = { dkb_scythists_win < 2 }
+		}
+		set_country_flag = DKB_lineytsy_alone
+	}
+	option = { # Scythists alone
+		name = dkb.8.c
+		trigger = {
+			check_variable = { dkb_scythists_win > 2 }
+			check_variable = { dkb_lineytsy_win < 2 }
+			check_variable = { dkb_chernomortsy_win < 2 }
+		}
+		set_country_flag = DKB_scythists_alone
+	}
+	option = { # Chernomortsy-Lineytsy coalition
+		name = dkb.8.d
+		trigger = {
+			OR = {
+				AND = {
+					check_variable = { dkb_chernomortsy_win = dkb_lineytsy_win }
+					check_variable = { dkb_chernomortsy_win > dkb_scythists_win }
+					check_variable = { dkb_lineytsy_win > dkb_scythists_win }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 3 }
+					check_variable = { dkb_lineytsy_win = 2 }
+					check_variable = { dkb_scythists_win = 0 }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 2 }
+					check_variable = { dkb_lineytsy_win = 3 }
+					check_variable = { dkb_scythists_win = 0 }
+				}
+			}
+		}
+		set_country_flag = DKB_chernomortsy_lineytsy_coalition
+	}
+	option = { # Chernomortsy-Scythists coalition
+		name = dkb.8.e
+		trigger = {
+			OR = {
+				AND = {
+					check_variable = { dkb_chernomortsy_win = dkb_scythists_win }
+					check_variable = { dkb_chernomortsy_win > dkb_lineytsy_win }
+					check_variable = { dkb_scythists_win > dkb_lineytsy_win }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 3 }
+					check_variable = { dkb_lineytsy_win = 0 }
+					check_variable = { dkb_scythists_win = 2 }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 2 }
+					check_variable = { dkb_lineytsy_win = 0 }
+					check_variable = { dkb_scythists_win = 3 }
+				}
+			}
+		}
+		set_country_flag = DKB_chernomortsy_scythists_coalition
+	}
+	option = { # Lineytsy-Scythists duel
+		name = dkb.8.f
+		trigger = {
+			OR = {
+				AND = {
+					check_variable = { dkb_lineytsy_win = dkb_scythists_win }
+					check_variable = { dkb_lineytsy_win > dkb_chernomortsy_win }
+					check_variable = { dkb_scythists_win > dkb_chernomortsy_win }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 0 }
+					check_variable = { dkb_lineytsy_win = 3 }
+					check_variable = { dkb_scythists_win = 2 }
+				}
+				AND = {
+					check_variable = { dkb_chernomortsy_win = 0 }
+					check_variable = { dkb_lineytsy_win = 2 }
+					check_variable = { dkb_scythists_win = 3 }
+				}
+			}
+		}
+		country_event = {
+			id = dkb.9
+			days = 1
+		}
+	}
+}
+
+country_event = { # Grabbe-Gorgulov duel
+	id = dkb.9
+	title = dkb.9.t
+	desc = dkb.9.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.9.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.10
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = dkb.9.b
+		hidden_effect = {
+			country_event = {
+				id = dkb.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Gorgulov wins the duel
+	id = dkb.10
+	title = dkb.10.t
+	desc = dkb.10.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.10.a
+		set_country_flag = DKB_gorgulov_wins
+	}
+}
+
+country_event = { # Grabbe wins the duel
+	id = dkb.11
+	title = dkb.11.t
+	desc = dkb.11.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.11.a
+		set_country_flag = DKB_grabbe_wins
+	}
+}
+
+country_event = { # Coalitions collapse
+	id = dkb.12
+	title = dkb.12.t
+	desc = dkb.12.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.12.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.13
+				days = 3
+			}
+		}
+		add_stability = -0.4
+		add_war_support = -0.4
+	}
+}
+country_event = { # Kaledin missing
+	id = dkb.13
+	title = dkb.13.t
+	desc = dkb.13.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.13.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.14
+				days = 2
+			}
+		}
+		add_country_leader_trait = DKB_missing
+	}
+}
+country_event = { # Gorgulov storms krug
+	id = dkb.14
+	title = dkb.14.t
+	desc = dkb.14.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.14.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.15
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Gorgulov dies
+	id = dkb.15
+	title = dkb.15.t
+	desc = dkb.15.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.15.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.16
+				days = 1
+			}
+		}
+	}
+}
+country_event = { # Collapse of National Peasant Party
+	id = dkb.16
+	title = dkb.16.t
+	desc = dkb.16.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.16.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.17
+				days = 1
+			}
+			set_global_flag = "DKB_collapse_flag"
+		}
+	}
+}
+country_event = { # Mountaineers break off
+	id = dkb.17
+	title = dkb.17.t
+	desc = dkb.17.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.17.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.18
+				days = 1
+			}
+		}
+		MTR = {
+			add_state_core = 233
+			add_state_core = 232
+			add_state_core = 1053
+			add_state_core = 1055
+			transfer_state = 233
+			transfer_state = 232
+		}
+	}
+}
+country_event = { # Tereks break off
+	id = dkb.18
+	title = dkb.18.t
+	desc = dkb.18.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.18.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.19
+				days = 1
+			}
+		}
+		TER = {
+			add_state_core = 1057
+			add_state_core = 1053
+			add_state_core = 233
+			transfer_state = 1057
+			transfer_state = 1053
+		}
+	}
+}
+country_event = { # Stavropol breaks off
+	id = dkb.19
+	title = dkb.19.t
+	desc = dkb.19.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.19.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.20
+				days = 1
+			}
+		}
+		STA = {
+			add_state_core = 235
+			transfer_state = 235
+		}
+	}
+}
+country_event = { # Ural host breaks off
+	id = dkb.20
+	title = dkb.20.t
+	desc = dkb.20.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.20.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.21
+				days = 1
+			}
+		}
+		URA = {
+			add_state_core = 407
+			transfer_state = 407
+		}
+	}
+}
+country_event = { # Kalmakya breaks off
+	id = dkb.21
+	title = dkb.21.t
+	desc = dkb.21.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.21.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.22
+				days = 1
+			}
+		}
+		KLM = {
+			add_state_core = 237
+			add_state_core = 855
+			transfer_state = 237
+			transfer_state = 855
+		}
+	}
+}
+country_event = { # Tsaritsyn breaks off
+	id = dkb.22
+	title = dkb.22.t
+	desc = dkb.22.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.22.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.23
+				days = 1
+			}
+		}
+		TSY = {
+			add_state_core = 217
+			transfer_state = 217
+		}
+	}
+}
+country_event = { # Astrakhan breaks off
+	id = dkb.23
+	title = dkb.23.t
+	desc = dkb.23.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.23.a
+		hidden_effect = {
+			country_event = {
+				id = dkb.24
+				days = 1
+			}
+		}
+		ASK = {
+			add_state_core = 236
+			add_state_core = 841
+			add_state_core = 237
+			add_state_core = 217
+			transfer_state = 236
+			transfer_state = 841
+		}
+	}
+}
+country_event = { # Death
+	id = dkb.24
+	title = dkb.24.t
+	desc = dkb.24.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #play Don
+		name = dkb.24.a
+		DON = {
+			add_state_core = 238
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 265
+			add_state_core = 855
+			transfer_state = 238
+			transfer_state = 218
+			transfer_state = 245
+			transfer_state = 265
+		}
+		KUB = {
+			add_state_core = 234
+			add_state_core = 1056
+			add_state_core = 1055
+			transfer_state = 234
+			transfer_state = 1056
+			transfer_state = 1055
+		}
+		DON = {
+			change_tag_from = DKB
+		}
+	}
+	option = { #play Kuban
+		name = dkb.24.b
+		DON = {
+			add_state_core = 238
+			add_state_core = 218
+			add_state_core = 245
+			add_state_core = 265
+			add_state_core = 855
+			transfer_state = 238
+			transfer_state = 218
+			transfer_state = 245
+			transfer_state = 265
+		}
+		KUB = {
+			add_state_core = 234
+			add_state_core = 1056
+			add_state_core = 1055
+			transfer_state = 234
+			transfer_state = 1056
+			transfer_state = 1055
+		}
+		KUB = {
+			change_tag_from = DKB
+		}
+	}
+}
+
+country_event = {
+	id = dkb.96
+	title = dkb.96.t
+	desc = dkb.96.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dkb.96.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				#country_event = { #Scythian Superevent
+				#	id = news.
+				#}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dkb.97
+	title = dkb.97.t
+	desc = dkb.97.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = {
+		name = dkb.97.a
+		add_to_faction = DKB
+	}
+	option = {
+		name = dkb.97.b
+	}
+}
+
+country_event = {
+	id = dkb.98
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	immediate = {
+		annex_country = {
+		    target = DKB
+		    transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = DKB
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+country_event = {
+	id = dkb.99
+	title = dkb.99.t
+	desc = dkb.99.desc
+	#picture = GFX_report_event_fiu_annuzio_death
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		tag = DKB
+		RUS = {
+			has_war_with = SRU
+		}
+	}
+	
+	option = {
+		name = dkb.99.a
+		if = {
+			limit = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			set_cosmetic_tag = "DKB_INDEPENDENT"
+			RUS = {
+				end_puppet = DKB
+			}
+			set_autonomy = {
+			    target = DKB
+			    autonomy_state = autonomy_free
+			}
+			remove_ideas = RUS_warlord_indifference
+		}
+	}
+}
+
+country_event = {
+	id = dkb.100
+	hidden = yes
+	is_triggered_only = no
+	fire_only_once = yes
+
+	trigger = {
+		ORE = { exists = no }
+		DKB = {
+			owns_state = 402
+			owns_state = 652
+			owns_state = 582
+			owns_state = 572
+			owns_state = 732
+			owns_state = 406
+		}
+	}
+	immediate = {
+		DKB = {
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 572
+			add_state_core = 732
+			add_state_core = 406
+		}
+	}
+}

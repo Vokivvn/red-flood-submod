@@ -1,0 +1,60 @@
+﻿capital = 435
+
+oob = "BIH_1936"
+
+set_research_slots = 2
+
+set_convoys = 175
+
+add_ideas = {
+RAJ_shared_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+
+}
+
+
+
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 10
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 60
+	social_democratism = 20
+	liberalism = 0
+	conservatism = 10
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Subhas Chandra Bose"
+	desc = "POLITICS_Chandra_Bose_DESC"
+	picture = "Portrait_Chandra_Bose.dds"
+	expire = "1965.1.1"
+	ideology = religious_socialism
+	traits = {
+		popular_figurehead
+	}
+}

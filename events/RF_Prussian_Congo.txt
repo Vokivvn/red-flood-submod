@@ -1,0 +1,220 @@
+add_namespace = pcn
+
+##Event: Future of the Congo
+country_event = {
+	id = pcn.1
+	title = pcn.1.title
+	desc = pcn.1.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = pcn.1.a
+			ai_chance = { factor = 1}
+			complete_national_focus = PCN_appointhuttig
+			remove_ideas = PCN_Ernst_Junger_hog
+			add_ideas = PCN_Hans_Huttig_hog
+			set_country_flag = PCN_appointhuttig
+		}
+	
+	option = {
+		name = pcn.1.b
+			ai_chance = { factor = 1}
+			complete_national_focus = PCN_appointbrody
+			remove_ideas = PCN_Ernst_Junger_hog
+			add_ideas = PCN_Louis_Brody_hog
+			set_country_flag = PCN_appointbrody
+		}
+}
+
+##Event: Protests by the Prime Minister
+country_event = {
+	id = pcn.2
+	title = pcn.2.title
+	desc = pcn.2.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_vienna_award_negotiations
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pcn.2.a
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = social_democratism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.4
+		}
+		complete_national_focus = PCN_brodysavesthecongo
+		hidden_effect = {
+			clr_country_flag = PCN_appointhuttig
+			set_country_flag = PCN_appointbrody
+			remove_ideas = PCN_Hans_Huttig_hog
+			add_ideas = PCN_Louis_Brody_hog
+		}
+	}
+	
+	option = {
+		name = pcn.2.b
+		ai_chance = { factor = 1}
+		set_politics = {
+		ruling_party = reactionism
+		elections_allowed = no
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.5
+			}
+		complete_national_focus = PCN_huttigseizespower
+		hidden_effect = {
+			clr_country_flag = PCN_appointbrody
+			set_country_flag = PCN_appointhuttig
+			remove_ideas = PCN_Louis_Brody_hog
+			add_ideas = PCN_Hans_Huttig_hog
+		}
+	}
+	
+	option = {
+		name = pcn.2.c
+		ai_chance = { factor = 1}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.2 
+			}
+		complete_national_focus = PCN_jngercomesoutontop
+		hidden_effect = {
+			remove_ideas = PCN_Hans_Huttig_hog
+			remove_ideas = PCN_Louis_Brody_hog
+			clr_country_flag = PCN_appointhuttig
+			clr_country_flag = PCN_appointbrody
+			add_ideas = PCN_Ernst_Junger_hog
+		}
+	}
+}
+
+##Event: Soccer Stadium Opened Up in Äquatorstadt
+country_event = {
+	id = pcn.3
+	title = pcn.3.title
+	desc = pcn.3.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_sweden_tank
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = pcn.3.a
+		ai_chance = { factor = 1}
+	}
+}
+
+##Event: Local village creates Prussian military rally
+country_event = {
+	id = pcn.4
+	title = pcn.4.title
+	desc = pcn.4.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_worker_protests
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = pcn.4.a
+		ai_chance = { factor = 1}
+		add_stability = 0.03
+	}
+}
+
+##Event: Forbidden Love?
+country_event = {
+	id = pcn.5
+	title = pcn.5.title
+	desc = pcn.5.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_research_lab
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = pcn.5.a
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+	}
+	option = {
+		name = pcn.5.b
+		ai_chance = { factor = 1}
+		add_stability = -0.02
+	}
+}
+
+##Event: The Ultimatum
+country_event = {
+	id = pcn.6
+	title = pcn.6.title
+	desc = pcn.6.desc
+	picture = GFX_/media/get//hoi4/event_gfx/event_test
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = pcn.6.a
+		ai_chance = { factor = 1}
+		complete_national_focus = PCN_truedemocracy
+	}
+	
+	option = {
+		name = pcn.6.b
+		ai_chance = { factor = 1}
+		complete_national_focus = PCN_newjerusalemofafrica
+	}
+}
+## Event: Reaching the Ocean
+country_event = {
+	id = pcn.7
+	title = pcn.7.title
+	desc = pcn.7.desc
+	picture = GFX_report_event_NEU_junker
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = PCN
+		PCN = {
+			controls_state	= 295 
+		}
+	}	
+	option = {
+		name = pcn.7.a
+		295 = {	
+			add_manpower = 2928
+			add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				instant_build = yes
+				province = 10968
+			}
+		}
+		538 = {
+			add_manpower = 1894
+		}
+		PCN = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_manpower = 2497
+			}
+		}	
+	}
+}

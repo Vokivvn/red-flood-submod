@@ -1,0 +1,604 @@
+focus_tree = {
+	id = RF_Steppe_Ukrainian
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			original_tag = STE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = STE_army_effort
+	shared_focus = STE_aviation_effort
+	shared_focus = STE_naval_effort
+	shared_focus = STE_industrial_effort
+
+	############### UKRAINIAN COUNCIL ###############
+
+	focus = {
+		id = STE_ukrainian_council_elected
+		icon = GFX_goal_STE_ukrainian_council_elected
+		cost = 5
+		x = 7
+		y = 0
+		completion_reward = {
+			set_politics = {
+				ruling_party = revisionist_socialism
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.2
+			}
+			hidden_effect = {
+				remove_ideas = {
+					STE_Vasiliy_Scheglov
+					STE_Nikolay_Babiyev
+					STE_Vladimir_Yakunin
+					STE_Sergey_Biryukov
+					STE_Vladimir_Indeykin
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_continue_internal_colonization
+		icon = GFX_goal_STE_continue_internal_colonization
+		cost = 10
+		relative_position_id = STE_ukrainian_council_elected
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_council_elected
+		}
+		completion_reward = {
+			40 = {
+				add_manpower = -104290
+			}
+			651 = {
+				add_manpower = -53255
+			}
+			570 = {
+				add_manpower = 42455
+			}
+
+			571 = {
+				add_manpower = 44690
+			}
+			590 = {
+				add_manpower = 60308
+			}
+			586 = {
+				add_manpower = 59303
+			}
+			588 = {
+				add_manpower = 35699
+			}
+		}
+	}
+	focus = {
+		id = STE_ukrainian_villages
+		icon = GFX_goal_STE_ukrainian_villages
+		cost = 10
+		relative_position_id = STE_continue_internal_colonization
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_continue_internal_colonization
+		}
+		completion_reward = {
+			571 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			588 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			590 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			583 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			586 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			794 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = STE_promote_farming_cooperatives
+		icon = GFX_goal_STE_promote_farming_cooperatives
+		cost = 10
+		relative_position_id = STE_ukrainian_villages
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_villages
+		}
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.1
+				ideology = revisionist_socialism
+			}
+			add_ideas = STE_cooperatives
+		}
+	}
+
+	focus = {
+		id = STE_military_of_grey_ukraine
+		icon = GFX_goal_STE_military_of_grey_ukraine
+		cost = 10
+		relative_position_id = STE_ukrainian_council_elected
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_council_elected
+		}
+		completion_reward = {
+			army_experience = 10
+			add_tech_bonus = {
+                bonus = 1
+                uses = 1
+                category = land_doctrine
+            }
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = infantry_weapons
+                category = support_tech
+            }
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 2
+                category = light_air
+                category = medium_air
+            }
+            create_corps_commander = {
+				name = "Fedir Kol'chuk"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Fedir_Kolchuk.tga"
+				traits = { inflexible_strategist }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Petro Grigorenko"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Petro_Grigorenko.tga"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Luka Kondratovych"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Luka_Kondratovych.tga"
+				traits = { war_hero }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Kyrylo Moskalenko"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Kyrylo_Moskalenko.tga"
+				traits = { brilliant_strategist }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 2
+			}
+		}
+	}
+	focus = {
+		id = STE_ukrainize_existing_divisions
+		icon = GFX_goal_STE_ukrainize_existing_divisions
+		cost = 10
+		relative_position_id = STE_military_of_grey_ukraine
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_military_of_grey_ukraine
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			hidden_effect = {
+				delete_unit = { id = 1000 }
+				load_oob = "STE_ukrainized"
+			}
+			custom_effect_tooltip = "Divisions will recieve ukrainian names."
+		}
+	}
+	focus = {
+		id = STE_update_military_industry
+		icon = GFX_goal_STE_update_military_industry
+		cost = 10
+		relative_position_id = STE_ukrainize_existing_divisions
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainize_existing_divisions
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+                bonus = 0.4
+                uses = 3
+                category = infantry_weapons
+                category = armor
+                category = artillery
+                category = air_doctrine
+            }
+		}
+	}
+	focus = {
+		id = STE_new_general_staff
+		icon = GFX_goal_STE_new_general_staff
+		cost = 10
+		relative_position_id = STE_update_military_industry
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_promote_farming_cooperatives
+		}
+		prerequisite = {
+			focus = STE_update_military_industry
+		}
+		prerequisite = {
+			focus = STE_restrict_former_elites
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = STE_open_politics_further
+		icon = GFX_goal_STE_open_politics_further
+		cost = 10
+		relative_position_id = STE_ukrainian_council_elected
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_council_elected
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			hidden_effect = {
+				add_ideas = {
+					STE_Mykola_Skrypnyk
+					STE_Mykola_Voronyi
+					STE_Volodymyr_Zatonskyi
+					STE_Vsevolod_Petriv
+					STE_Oleksandr_Ossietzky
+				}
+			}
+		}
+	}
+	focus = {
+		id = STE_form_local_councils
+		icon = GFX_goal_STE_form_local_councils
+		cost = 10
+		relative_position_id = STE_open_politics_further
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_open_politics_further
+		}
+		completion_reward = {
+			add_ideas = STE_decentralization
+		}
+	}
+	focus = {
+		id = STE_restrict_former_elites
+		icon = GFX_goal_STE_restrict_former_elites
+		cost = 10
+		relative_position_id = STE_form_local_councils
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_form_local_councils
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.3
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.3
+			}
+			swap_ideas = {
+				remove_idea = STE_decentralization
+				add_idea = STE_decentralization1
+			}
+		}
+	}
+	focus = {
+		id = STE_demsoc
+		icon = GFX_goal_STE_demsoc
+		cost = 10
+		relative_position_id = STE_restrict_former_elites
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_update_military_industry
+		}
+		prerequisite = {
+			focus = STE_restrict_former_elites
+		}
+		prerequisite = {
+			focus = STE_ultimatum_to_orenburg
+		}
+		completion_reward = {
+			add_ideas = STE_demsoc_idea
+		}
+	}
+
+	focus = {
+		id = STE_assert_our_independence
+		icon = GFX_goal_STE_assert_our_independence
+		cost = 10
+		relative_position_id = STE_ukrainian_council_elected
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_council_elected
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+			add_opinion_modifier = { target = UKR modifier = large_increase }
+			UKR = { add_opinion_modifier = { target = STE modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = STE_seek_foreign_investment
+		icon = GFX_goal_STE_seek_foreign_investment
+		cost = 10
+		relative_position_id = STE_assert_our_independence
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_assert_our_independence
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_opinion_modifier = { target = ZHR modifier = large_increase }
+			ZHR = { add_opinion_modifier = { target = STE modifier = large_increase } }
+			add_opinion_modifier = { target = POL modifier = large_increase }
+			POL = { add_opinion_modifier = { target = STE modifier = large_increase } }
+			add_opinion_modifier = { target = GER modifier = large_increase }
+			GER = { add_opinion_modifier = { target = STE modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = STE_ultimatum_to_orenburg
+		icon = GFX_goal_STE_ultimatum_to_orenburg
+		cost = 10
+		relative_position_id = STE_seek_foreign_investment
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_seek_foreign_investment
+		}
+		completion_reward = {
+			add_state_core = 406
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 572
+		}
+	}
+	focus = {
+		id = STE_push_borders_to_maximum
+		icon = GFX_goal_STE_push_borders_to_maximum
+		cost = 10
+		relative_position_id = STE_ultimatum_to_orenburg
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_restrict_former_elites
+		}
+		prerequisite = {
+			focus = STE_ultimatum_to_orenburg
+		}
+		prerequisite = {
+			focus = STE_culture_of_socialist_future
+		}
+		completion_reward = {
+			add_state_core = 1043
+			add_state_core = 852
+			add_state_core = 838
+			add_state_core = 654
+			add_state_core = 898
+			add_war_support = 0.15
+			diplomatic_relation = {
+    			country = AQT
+    			relation = non_aggression_pact
+  				active = yes
+			}
+		}
+	}
+
+	focus = {
+		id = STE_education_in_ukrainian
+		icon = GFX_goal_STE_education_in_ukrainian
+		cost = 10
+		relative_position_id = STE_ukrainian_council_elected
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = STE_ukrainian_council_elected
+		}
+		completion_reward = {
+			add_ideas = STE_ukrainian_education
+			add_opinion_modifier = { target = UKR modifier = huge_increase }
+			UKR = { add_opinion_modifier = { target = STE modifier = huge_increase } }
+		}
+	}
+	focus = {
+		id = STE_invite_ukrainian_intellectuals
+		icon = GFX_goal_STE_invite_ukrainian_intellectuals
+		cost = 10
+		relative_position_id = STE_education_in_ukrainian
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_education_in_ukrainian
+		}
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = STE_ukrainian_education
+				add_idea = STE_ukrainian_education1
+			}
+		}
+	}
+	focus = {
+		id = STE_culture_of_socialist_future
+		icon = GFX_goal_STE_culture_of_socialist_future
+		cost = 10
+		relative_position_id = STE_invite_ukrainian_intellectuals
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_invite_ukrainian_intellectuals
+		}
+		completion_reward = {
+			590 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			586 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = STE_ukrainian_education1
+				add_idea = STE_ukrainian_education2
+			}
+		}
+	}
+	
+	focus = {
+		id = STE_an_ukrainian_republic
+		icon = GFX_goal_STE_an_ukrainian_republic
+		cost = 10
+		relative_position_id = STE_demsoc
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_new_general_staff
+		}
+		prerequisite = {
+			focus = STE_demsoc
+		}
+		prerequisite = {
+			focus = STE_push_borders_to_maximum
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_demsoc_idea
+				add_idea = STE_demsoc_idea1
+			}
+		}
+	}
+}

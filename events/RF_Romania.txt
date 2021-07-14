@@ -1,0 +1,79 @@
+﻿add_namespace = romania
+
+#A stable republic
+country_event = {
+	id = romania.1
+	title = romania.1.t
+	desc = romania.1.desc
+	is_triggered_only = yes
+	
+	###IronGuard Takeover
+	option = { 
+		name = romania.1.a
+		set_country_flag = ig_victory
+	}
+	
+	####Republic Collapse
+	option = {
+		name = romania.1.b
+		set_country_flag = republic_collapse
+	}
+}
+
+#IG Takeover
+country_event = {
+	id = romania.2
+	title = romania.2.t
+	desc = romania.2.desc
+
+	is_triggered_only = yes
+
+	option = { 
+		name = romania.2.a
+		set_politics = {
+			ruling_party = reactionism
+		}
+	}
+}
+#Republic Collapse
+country_event = {
+	id = romania.3
+	title = romania.3.t
+	desc = romania.3.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = romania.3.a
+		set_country_flag = german_interference
+		
+	}
+	option = {
+		name = romania.3.b
+		set_country_flag = military_rule	
+	}
+	option = {
+		name = romania.3.c
+		set_country_flag = restore_democracy
+	}
+	
+}
+
+#Restore Democracy
+country_event = {
+	id = romania.4
+	title = romania.4.t
+	desc = romania.4.desc
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = romania.4.a
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = yes
+		}
+		
+	}		
+	
+}

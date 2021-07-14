@@ -1,0 +1,93 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	### Black Sea Fleet -- Sevastopol
+	fleet = {
+		name = "Chernomorskiy Flot"
+		naval_base = 3686 # Sevastopopl
+		task_force = {				
+			name = "Chernomorskiy Flot"
+			location = 3686 # Sevastopopl
+			ship = { name = "Petropavlovsk" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SRU version_name = "Marat Class" } } }
+			ship = { name = "Kavkaz" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SRU version_name = "Chervona Ukraina Class" } } }
+			ship = { name = "Krym" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SRU version_name = "Chervona Ukraina Class" } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot"
+			location = 3686 # Sevastopopl
+			# 9iy Podvodniy Flot	
+			ship = { name = "Shch-123" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SRU version_name = "Series V Shchuka" } } }			
+			ship = { name = "Shch-124" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SRU version_name = "Series V Shchuka" } } }			
+			# 17iy  Podvodniy Flot
+			ship = { name = "L-4" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SRU version_name = "Series II Alekseivich" } } }			
+			ship = { name = "L-5" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SRU version_name = "Series II Alekseivich" } } }			
+			ship = { name = "L-6" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = SRU version_name = "Series II Alekseivich" } } }			
+		}	
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Ships Under Construction Notes ###
+	# DD: Petrograd variant (x4) ("Petrograd" "Moskva" "Kharkov" "Minsk")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SRU"
+			version_name = "Petrograd Class"
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "SRU"
+			version_name = "Petrograd Class"
+		}
+		requested_factories = 1
+		progress = 0.60
+		amount = 2
+	}
+	#CA Berens Class (Berens)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "SRU"
+			version_name = "Berens Class"
+		}
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+	}
+	#CA Berens Class (Voroshilov)
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "SRU"
+			version_name = "Berens Class"
+		}
+		requested_factories = 1
+		progress = 0.10
+		amount = 1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "SRU"
+			version_name = "Series IX Srednyaya"
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 5
+	}
+}
+
+#####################

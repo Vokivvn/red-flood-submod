@@ -1,0 +1,12 @@
+Russia_path_3 = {
+	enable = {
+        original_tag = SRU
+		has_game_rule = {
+			rule = RUS_ai_route
+			option = NOVYKURS
+		}
+	}
+	ai_national_focuses = {
+		RUS_novy_kurs
+	}
+}

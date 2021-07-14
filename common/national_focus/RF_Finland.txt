@@ -1,0 +1,3065 @@
+focus_tree = {
+	id = FIN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1200 }
+
+	#Focus for Russian Overlordship
+	focus = {
+		id = FIN_russian_overlordship
+		icon = GFX_FIN_russian_overlordship-26517
+		x = 17
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = -0.01
+		}
+	}
+
+	#Focus for Continue Russification
+	focus = {
+		id = FIN_continue_russification
+		icon = GFX_FIN_continue_russification-26518
+		x = 15
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_russian_overlordship }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_timed_idea = {
+				idea = FIN_russification
+				days = 156
+			}
+		}
+	}
+
+	#Focus for Promote Russian Settlement
+	focus = {
+		id = FIN_promote_russian_settlement
+		icon = GFX_FIN_promote_russian_settlement-26520
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_russian_overlordship }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = -4323
+			add_war_support = 0.05
+		}
+	}
+
+	#Focus for Storm in Central Russia
+	focus = {
+		id = FIN_storm_in_central_russia
+		icon = GFX_FIN_storm_in_central_russia-26521
+		x = 17
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_storm }
+		prerequisite = { 
+			focus = FIN_continue_russification 
+		}
+		prerequisite = { 
+			focus = FIN_promote_russian_settlement 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.2
+				days = 1
+			}
+		}
+	}
+
+	################## Democratic Path ##################
+
+	#Focus for Democratic Coup
+	focus = {
+		id = FIN_democratic_coup
+		icon = GFX_FIN_democratic_coup-26540
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_storm_in_central_russia }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.30
+				}
+				add_popularity = {
+				ideology = social_democratism
+				popularity = 0.20
+				}
+				add_popularity = {
+				ideology = conservatism
+				popularity = 0.20
+				}
+		}
+	}
+
+	#Focus for Elections of the new Government
+	focus = {
+		id = FIN_elections_of_the_new_government
+		icon = GFX_FIN_elections_of_the_new_government-26543
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_democratic_coup }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.88
+				days = 1
+			}
+			hidden_effect = {
+				remove_ideas = {
+					FIN_senate_hog
+					FIN_senate_for
+					FIN_senate_eco
+					FIN_senate_int
+					FIN_senate_ntl
+				}
+				add_ideas = {
+					FIN_ragnarfuruhjelm
+					FIN_ristoheikki
+					FIN_heikkiritavuori
+					FIN_ernsttandefelt
+					FIN_anttitulenheimo
+				}
+			}
+		}
+	}
+
+	#Focus for Open up in a Moderate Pace
+	focus = {
+		id = FIN_open_up_in_a_moderate_pace
+		icon = GFX_FIN_open_up_in_a_moderate_pace-26544
+		x = 0
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Expand Finnish Trading Company
+	focus = {
+		id = FIN_expand_finnish_trading_company
+		icon = GFX_FIN_expand_finnish_trading_company-26953
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_open_up_in_a_moderate_pace }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FIN_tradingcompany
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Slowly Reverse Russification
+	focus = {
+		id = FIN_slowly_reverse_russification
+		icon = GFX_FIN_slowly_reverse_russification-26545
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_province_name = {
+				id = 11105
+				name = Helsinki
+				}
+				add_stability = 0.10
+		}
+	}
+
+	#Focus for Finns in High Positions
+	focus = {
+		id = FIN_finns_in_high_positions
+		icon = GFX_FIN_finns_in_high_positions-26952
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_slowly_reverse_russification }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.07
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Start Army Separation
+	focus = {
+		id = FIN_start_army_separation
+		icon = GFX_FIN_start_army_separation-26949
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = FIN_separationofarmy
+				days = 100
+			}
+			add_stability = 0.20
+			add_political_power = 100
+			add_war_support = -0.10
+		}
+	}
+
+	#Focus for Military Complex owned by Finns
+	focus = {
+		id = FIN_military_complex_owned_by_finns
+		icon = GFX_FIN_military_complex_owned_by_finns-26951
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_start_army_separation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = arms_factory 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Begin Liberalisation
+	focus = {
+		id = FIN_begin_liberalisation
+		icon = GFX_FIN_begin_liberalisation-26950
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_elections_of_the_new_government }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+
+	#Focus for Tax Foreign Nobility
+	focus = {
+		id = FIN_tax_foreign_nobility
+		icon = GFX_FIN_tax_foreign_nobility-26954
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_begin_liberalisation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 100
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1 
+				add_building_construction = { 
+					type = industrial_complex 
+					level = 1 
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for We are part of Russia... For now
+	focus = {
+		id = FIN_we_are_part_of_russia_for_now
+		icon = GFX_FIN_we_are_part_of_russia_for_now-26955
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_military_complex_owned_by_finns 
+		}
+		prerequisite = { 
+			focus = FIN_tax_foreign_nobility 
+		}
+		prerequisite = { 
+			focus = FIN_finns_in_high_positions 
+		}
+		prerequisite = { 
+			focus = FIN_expand_finnish_trading_company 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.10
+				days = 10
+			}
+			add_stability = 0.1
+		}
+	}
+
+	################## Kekkonen Path ##################
+
+	#Focus for Seyn's Execution
+	focus = {
+		id = FIN_seyns_execution
+		icon = GFX_FIN_seyns_execution-26522
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_storm_in_central_russia }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 100
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.10
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+			hidden_effect = {
+				remove_ideas = {
+					FIN_senate_hog
+					FIN_senate_for
+					FIN_senate_eco
+					FIN_senate_int
+					FIN_senate_ntl
+				}
+			}
+		}
+	}
+
+	#Focus for Karelian Academic Society
+	focus = {
+		id = FIN_karelian_academic_society
+		icon = GFX_FIN_karelian_academic_society-26974
+		x = 13
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		available = { has_government = reactionism }
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	#Focus for Limitless Militarisation
+	focus = {
+		id = FIN_limitless_militarisation
+		icon = GFX_FIN_limitless_militarisation-26975
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			random_owned_controlled_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			add_stability = -0.20
+		}
+	}
+
+	#Focus for Sons of Iku-Turso
+	focus = {
+		id = FIN_sons_of_ikuturso
+		icon = GFX_FIN_sons_of_ikuturso-26978
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_limitless_militarisation }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_ikuturso
+		}
+	}
+
+	#Focus for Suojelijan Kuoleman Henki
+	focus = {
+		id = FIN_suojelijan_kuoleman_henki
+		icon = GFX_FIN_suojelijan_kuoleman_henki-26979
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_sons_of_ikuturso }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIN_ikuturso
+				add_idea = FIN_suojel
+			}
+		}
+	}
+
+	#Focus for Finno-Ugric Supremacy
+	focus = {
+		id = FIN_finnougric_supremacy
+		icon = GFX_FIN_finnougric_supremacy-26976
+		x = 13
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_manpower = 43232
+			add_ideas = FIN_finnougric
+			set_province_name = {
+			id = 11105
+			name = Helsinki
+			}
+			set_province_name = {
+			id = 3083
+			name = Turku
+			}
+			set_province_name = {
+			id = 3137
+			name = Tampere
+			}
+			set_province_name = {
+			id = 9206
+			name = Viipuri
+			}
+			set_province_name = {
+			id = 3122
+			name = Vaasa
+			}
+		}
+	}
+
+	#Focus for Empower the Vihan Veljet
+	focus = {
+		id = FIN_empower_the_vihan_veljet
+		icon = GFX_FIN_empower_the_vihan_veljet-26981
+		x = 13
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_finnougric_supremacy }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_vihanveljet
+		}
+	}
+
+	#Focus for Our enemies will Never receive Forgiveness
+	focus = {
+		id = FIN_our_enemies_will_never_receive_forgiveness
+		icon = GFX_FIN_our_enemies_will_never_receive_forgiveness-26995
+		x = 13
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_empower_the_vihan_veljet }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = FIN_ruthless
+		}
+	}
+
+	#Focus for Päällikkö Kekkonen
+	focus = {
+		id = FIN_pllikk_kekkonen
+		icon = GFX_FIN_pllikk_kekkonen-26977
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_karelian_academic_society }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_country_leader_trait = FIN_paallikko
+		}
+	}
+
+	#Focus for And his loyal People
+	focus = {
+		id = FIN_and_his_loyal_people
+		icon = GFX_FIN_and_his_loyal_people-26996
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pllikk_kekkonen }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for All praise Kekkonen, all praise the Saviour
+	focus = {
+		id = FIN_all_praise_kekkonen_all_praise_the_saviour
+		icon = GFX_FIN_all_praise_kekkonen_all_praise_the_saviour-26997
+		x = 16
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_and_his_loyal_people }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Carve out a Land just for Finns
+	focus = {
+		id = FIN_carve_out_a_land_just_for_finns
+		icon = GFX_FIN_carve_out_a_land_just_for_finns-26998
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_suojelijan_kuoleman_henki 
+		}
+		prerequisite = { 
+			focus = FIN_our_enemies_will_never_receive_forgiveness 
+		}
+		available = {
+			is_subject = no
+		}
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = EST
+		prerequisite = { 
+			focus = FIN_all_praise_kekkonen_all_praise_the_saviour 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					WRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRU
+				}
+			}
+			if = {
+				limit = {
+					WRT = {
+						exists = yes 
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRT
+				}
+			}
+			if = {
+				limit = {
+					WRR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRR
+				}
+			}
+			if = {
+				limit = {
+					EST = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = EST
+				}
+			}
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = RUS
+				}
+			}
+			if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SRU
+				}
+			}
+			hidden_effect = {
+				add_state_claim = 13
+				add_state_claim = 191
+				add_state_claim = 208
+				add_state_claim = 195
+				add_state_claim = 244
+				add_state_claim = 264
+				add_state_claim = 216
+				add_state_claim = 215
+				add_state_claim = 147
+				add_state_claim = 213
+				add_state_claim = 722
+				add_state_claim = 214
+				add_state_claim = 351
+				add_state_claim = 400
+				add_state_claim = 398
+				add_state_claim = 397
+				add_state_claim = 262
+				add_state_claim = 399
+			}
+			custom_effect_tooltip = "FIN_CARVE_TOOLTIP"
+		}
+	}
+
+	################## Monarchist Path ##################
+
+	#Focus for Prepare the Crown
+	focus = {
+		id = FIN_prepare_the_crown
+		icon = GFX_FIN_prepare_the_crown-27006
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			has_country_leader = {
+    			name = "Ilmari I"
+			}
+		}
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_stability = 0.07
+			add_popularity = {
+				popularity = 0.10
+				ideology = despotism
+			}
+			country_event = {
+				id = fin.9191
+				days = 2
+			}
+			hidden_effect = {
+				country_event = {
+					id = fin.8
+					days = 10
+				}
+			}
+		}
+	}
+
+	#Focus for Rally up the Monarchists
+	focus = {
+		id = FIN_rally_up_the_monarchists
+		icon = GFX_FIN_rally_up_the_monarchists-26963
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_kinglives }
+		prerequisite = { focus = FIN_prepare_the_crown }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_monarchistrally
+		}
+	}
+
+	#Focus for Supreme Reaction
+	focus = {
+		id = FIN_supreme_reaction
+		icon = GFX_FIN_supreme_reaction-26965
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_rally_up_the_monarchists }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_supremereaction
+		}
+	}
+
+	#Focus for German Glory
+	focus = {
+		id = FIN_german_glory
+		icon = GFX_FIN_german_glory-26964
+		x = 25
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		available = { has_country_flag = FIN_kinglives }
+		prerequisite = { focus = FIN_prepare_the_crown }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_germanglory
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for And Finnish Power
+	focus = {
+		id = FIN_and_finnish_power
+		icon = GFX_FIN_and_finnish_power-26966
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_german_glory }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = FIN_monarchistsisu
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for Question of Nations
+	focus = {
+		id = FIN_question_of_nations
+		icon = GFX_FIN_question_of_nations-26967
+		x = 19
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_supreme_reaction }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.13
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Question of Borders
+	focus = {
+		id = FIN_question_of_borders
+		icon = GFX_FIN_question_of_borders-26970
+		x = 27
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_and_finnish_power }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.14
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Question of Power
+	focus = {
+		id = FIN_question_of_power
+		icon = GFX_FIN_question_of_power-26969
+		x = 23
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_supreme_reaction 
+			focus = FIN_and_finnish_power 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+			id = fin.432
+			days = 1
+			}
+		}
+	}
+
+	#Focus for Alliance of Force
+	focus = {
+		id = FIN_alliance_of_force
+		icon = GFX_FIN_alliance_of_force-26971
+		x = 21
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_question_of_power 
+		}
+		prerequisite = { 
+			focus = FIN_question_of_nations 
+		}
+		available = {
+			has_country_flag = FIN_englishallies
+		}
+		mutually_exclusive = { focus = FIN_alliance_of_brotherhood }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = eng.999
+					days = 1
+				}
+			}
+		}
+	}
+
+	#Focus for Alliance of Brotherhood
+	focus = {
+		id = FIN_alliance_of_brotherhood
+		icon = GFX_FIN_alliance_of_brotherhood-26972
+		x = 25
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_question_of_power 
+		}
+		prerequisite = { 
+			focus = FIN_question_of_borders 
+		}
+		available = {
+			has_country_flag = FIN_prussianallies
+		}
+		mutually_exclusive = { focus = FIN_alliance_of_force }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_faction = "prusso_finnish_alliance"
+			PRS = {
+				country_event = {
+					id = prussia.999
+					days = 1
+				}
+			}
+		}
+	}
+
+	#Focus for King Ilmari Ascended
+	focus = {
+		id = FIN_king_ilmari_ascended
+		icon = GFX_FIN_king_ilmari_ascended-30154
+		x = 23
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_alliance_of_force 
+			focus = FIN_alliance_of_brotherhood 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.30
+			}
+			add_stability = 0.20
+			add_war_support = 0.20
+		}
+	}
+
+	################## Egyptian Path ##################
+
+	#Focus for Dreams of Old Fatherland
+	focus = {
+		id = FIN_dreams_of_old_fatherland
+		icon = GFX_FIN_dreams_of_old_fatherland-26524
+		x = 36
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		available = { has_government = accelerationism }
+		prerequisite = { focus = FIN_seyns_execution }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+			add_stability = 0.15
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Restore broken Connections
+	focus = {
+		id = FIN_restore_broken_connections
+		icon = GFX_FIN_restore_broken_connections-26525
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_dreams_of_old_fatherland }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.11
+				days = 5
+			}
+			hidden_effect = {
+				EGY = {
+					country_event = {
+						id = fin.11
+						days = 5
+					}
+				}
+			}
+			add_ideas = FIN_nationalmyth
+		}
+	}
+
+	#Focus for Great Pyramids of Helsinki
+	focus = {
+		id = FIN_great_pyramids_of_helsinki
+		icon = GFX_FIN_great_pyramids_of_helsinki-26527
+		x = 32
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_restore_broken_connections }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			111 = { add_extra_state_shared_building_slots =  4 add_building_construction = { type = infrastructure level = 4 instant_build = yes } }
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Rebirth of Mummification Traditions
+	focus = {
+		id = FIN_rebirth_of_mummification_traditions
+		icon = GFX_FIN_rebirth_of_mummification_traditions-26531
+		x = 30
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_great_pyramids_of_helsinki }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.07
+			}
+		}
+	}
+
+	#Focus for Society of Thoth
+	focus = {
+		id = FIN_society_of_thoth
+		icon = GFX_FIN_society_of_thoth-26529
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_restore_broken_connections }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = FIN_societyofthoth			
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			}
+		}
+	}
+
+	#Focus for Finnish Hieroglyphy
+	focus = {
+		id = FIN_finnish_hieroglyphy
+		icon = GFX_FIN_finnish_hieroglyphy-26532
+		x = 33
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_society_of_thoth }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.07
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.07
+			}
+			set_province_name = {
+				id = 11105
+				name = tAiAbty
+			}
+			set_province_name = {
+				id = 3083
+				name = xtSAs
+				}
+			set_province_name = {
+				id = 3137
+				name = itrwsp
+				}
+			set_province_name = {
+				id = 9206
+				name = tAkmXAt
+				}
+			set_province_name = {
+				id = 3122
+				name = pHty
+			}
+		}
+	}
+
+	#Focus for Pharaoh of Finland
+	focus = {
+		id = FIN_pharaoh_of_finland
+		icon = GFX_FIN_pharaoh_of_finland-26526
+		x = 38
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_dreams_of_old_fatherland }
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				kill_country_leader = yes
+				create_country_leader = {
+					name = "Sihathor Wahneferhotep-Ankhkhaf"
+					desc = "POLITICS_ASPA_DESC"
+					picture = "portrait_sihathor.tga"
+					expire = "1965.1.1"
+					ideology = national_rejuvenatism
+					traits = { }
+				}
+			}
+		custom_effect_tooltip = "ASPA_EGYPT_TOOLTIP"
+		add_country_leader_trait = FIN_pharaoh
+		add_stability = 0.1
+		set_cosmetic_tag = FIN_EGY
+		}
+	}
+
+	#Focus for Baltic-Nubian Mercenaries
+	focus = {
+		id = FIN_balticnubian_mercenaries
+		icon = GFX_FIN_balticnubian_mercenaries-26533
+		x = 38
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pharaoh_of_finland }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.100
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Modern Carriage of Amun-Ra
+	focus = {
+		id = FIN_modern_carriage_of_amunra
+		icon = GFX_FIN_modern_carriage_of_amunra-26535
+		x = 39
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_balticnubian_mercenaries }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {		
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#Focus for Allies from Beyond Uat-Ur
+	focus = {
+		id = FIN_allies_from_beyond_uatur
+		icon = GFX_FIN_allies_from_beyond_uatur-26534
+		x = 41
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_pharaoh_of_finland }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.110
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Unification of Lands of Set
+	focus = {
+		id = FIN_unification_of_lands_of_set
+		icon = GFX_FIN_unification_of_lands_of_set-26537
+		x = 42
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = FIN_allies_from_beyond_uatur }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = WRR
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		completion_reward = {
+			if = {
+				limit = {
+					WRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRU
+				}
+			}
+			if = {
+				limit = {
+					WRT = {
+						exists = yes 
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRT
+				}
+			}
+			if = {
+				limit = {
+					WRR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = WRR
+				}
+			}
+			if = {
+				limit = {
+					EST = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = EST
+				}
+			}
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = RUS
+				}
+			}
+			if = {
+				limit = {
+					SRU = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = SRU
+				}
+			}
+			hidden_effect = {
+				add_state_claim = 13
+				add_state_claim = 191
+				add_state_claim = 208
+				add_state_claim = 195
+				add_state_claim = 244
+				add_state_claim = 264
+				add_state_claim = 216
+				add_state_claim = 215
+				add_state_claim = 147
+				add_state_claim = 213
+				add_state_claim = 722
+				add_state_claim = 214
+				add_state_claim = 351
+				add_state_claim = 400
+				add_state_claim = 398
+				add_state_claim = 397
+				add_state_claim = 262
+				add_state_claim = 399
+			}
+			custom_effect_tooltip = "FIN_LANDS_SET_TOOLTIP"
+		}
+	}
+
+	#Focus for Sail to our Ancestral Lands
+	focus = {
+		id = FIN_sail_to_our_ancestral_lands
+		icon = GFX_FIN_sail_to_our_ancestral_lands-26539
+		x = 36
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = FIN_rebirth_of_mummification_traditions 
+		}
+		prerequisite = { 
+			focus = FIN_finnish_hieroglyphy 
+		}
+		prerequisite = { 
+			focus = FIN_modern_carriage_of_amunra 
+		}
+		prerequisite = { 
+			focus = FIN_unification_of_lands_of_set 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = fin.999
+				days = 1
+			}
+			set_cosmetic_tag = FIN_EGY_FINAL
+		}
+	}
+
+	# Generic #
+	
+	focus = {
+		id = FIN_army_effort
+		icon = GFX_focus_army
+		x = 45
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_equipment_effort
+		icon = GFX_focus_equipment_1
+		prerequisite = { focus = FIN_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = FIN_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_motorization_effort
+		icon = GFX_focus_motorization
+		prerequisite = { focus = FIN_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = FIN_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_doctrine_effort
+		icon = GFX_focus_doctrine_1
+		prerequisite = { focus = FIN_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_equipment_effort_2
+		icon = GFX_focus_equipment_2
+		prerequisite = { focus = FIN_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_mechanization_effort
+		icon = GFX_focus_mechanized
+		prerequisite = { focus = FIN_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_doctrine_effort_2
+		icon = GFX_focus_doctrine_2
+		prerequisite = { focus = FIN_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_equipment_effort_3
+		icon = GFX_focus_equipment_3
+		prerequisite = { focus = FIN_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = FIN_equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_armor_effort
+		icon = GFX_focus_armor
+		prerequisite = { focus = FIN_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_special_forces
+		icon = GFX_focus_special_forces
+		prerequisite = { focus = FIN_equipment_effort_3 }
+		prerequisite = { focus = FIN_doctrine_effort_2 }
+		prerequisite = { focus = FIN_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = FIN_equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FIN_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_aviation_effort
+		icon = GFX_focus_aviation1
+		x = 49
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = FIN_aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = FIN_aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = FIN_aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_fighter_focus
+		icon = GFX_focus_fighter
+		prerequisite = { focus = FIN_aviation_effort }
+		mutually_exclusive = { focus = FIN_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = FIN_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_bomber_focus
+		icon = GFX_focus_bomber
+		prerequisite = { focus = FIN_aviation_effort }
+		mutually_exclusive = { focus = FIN_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = FIN_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_aviation_effort_2
+		icon = GFX_focus_aviation2
+		prerequisite = { focus = FIN_bomber_focus focus = FIN_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = FIN_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = FIN_aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = FIN_aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = FIN_aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_CAS_effort
+		icon = GFX_focus_CASeffort
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = FIN_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_rocket_effort
+		icon = GFX_focus_rocket_effort
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = FIN_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_NAV_effort
+		icon = GFX_focus_naveffort
+		prerequisite = { focus = FIN_aviation_effort_2 }
+		prerequisite = { focus = FIN_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = FIN_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_naval_effort
+		icon = GFX_focus_navaleffort
+		x = 53
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = FIN_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = FIN_naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = FIN_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = FIN_naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = FIN_flexible_navy
+		icon = GFX_focus_flexible_navy
+		prerequisite = { focus = FIN_naval_effort }
+		mutually_exclusive = { focus = FIN_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = FIN_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_large_navy
+		icon = GFX_focus_large
+		prerequisite = { focus = FIN_naval_effort }
+		mutually_exclusive = { focus = FIN_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = FIN_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_submarine_effort
+		icon = GFX_focus_submarine
+		prerequisite = { focus = FIN_flexible_navy focus = FIN_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = FIN_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_cruiser_effort
+		icon = GFX_focus_cruisers
+		prerequisite = { focus = FIN_large_navy focus = FIN_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = FIN_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_destroyer_effort
+		icon = GFX_focus_destroyers
+		prerequisite = { focus = FIN_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = FIN_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_capital_ships_effort
+		icon = GFX_focus_capitalships
+		prerequisite = { focus = FIN_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = FIN_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_industrial_effort
+		icon = GFX_focus_industry
+		x = 57
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = FIN_construction_effort
+		icon = GFX_focus_construction_1
+		prerequisite = { focus = FIN_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = FIN_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_production_effort
+		icon = GFX_focus_production_1
+		prerequisite = { focus = FIN_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = FIN_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 10		
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_construction_effort_2
+		icon = GFX_focus_construction_2
+		prerequisite = { focus = FIN_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = FIN_construction_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_production_effort_2
+		icon = GFX_focus_production_2
+		prerequisite = { focus = FIN_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = FIN_production_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_infrastructure_effort
+		icon = GFX_focus_infrastructure_1
+		prerequisite = { focus = FIN_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = FIN_construction_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_production_effort_3
+		icon = GFX_focus_production_3
+		prerequisite = { focus = FIN_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = FIN_production_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_infrastructure_effort_2
+		icon = GFX_focus_infrastructure_2
+		prerequisite = { focus = FIN_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = FIN_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_construction_effort_3
+		icon = GFX_focus_construction_3
+		prerequisite = { focus = FIN_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = FIN_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = FIN_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_nuclear_effort
+		icon = GFX_focus_Nuclear_Effort
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = FIN_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = FIN_extra_tech_slot
+		icon = GFX_focus_extra_tech1
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = FIN_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = FIN_extra_tech_slot_2
+		icon = GFX_focus_extra_tech2
+		prerequisite = { focus = FIN_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = FIN_extra_tech_slot
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = FIN_secret_weapons
+		icon = GFX_focus_Secret_Weapons
+		prerequisite = { focus = FIN_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = FIN_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	#End of focuses 
+}

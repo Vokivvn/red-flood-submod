@@ -1,0 +1,103 @@
+﻿division_template = {
+	name = "Cavalry Division" # Cavalry
+	division_names_group = RAJ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Militia" 	# Militia
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	    infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Razakar"		
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+units = {
+	division= {	
+		location = 4353
+		division_template = "Militia"
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4472
+		division_template = "Militia"
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7177
+		division_template = "Militia"
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7013
+		division_template = "Razakar"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
+	}
+	division= {	
+		location = 7119
+		division_template = "Razakar"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
+	}
+	division= {	
+		location = 1405
+		division_template = "Razakar"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
+	}
+	division= {	
+		location = 7232
+		division_template = "Razakar"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
+	}
+	division= {	
+		location = 10210
+		division_template = "Razakar"
+		start_equipment_factor = 0.9
+		start_experience_factor = 0.2
+	}
+	division= {	
+		location = 1349
+		division_template = "Cavalry Division"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+	division= {	
+		location = 8087
+		division_template = "Cavalry Division"
+		start_equipment_factor = 0.7
+		start_experience_factor = 0.1
+	}
+}
+air_wings = {
+	429 = { 
+		fighter_equipment_0 = {
+			owner = "HYD"
+			amount = 40
+		}
+	}
+}

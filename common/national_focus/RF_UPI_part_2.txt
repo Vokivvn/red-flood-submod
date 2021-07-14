@@ -1,0 +1,1185 @@
+focus_tree = {
+	id = RF_churchill_despotic
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UPI
+		}
+	}
+	continuous_focus_position = { x = 30 y = 1900 }
+	
+	default = no
+
+	focus = {
+		id = UPI_wounded_lion
+		icon = GFX_focus_UPI_wounded_lion
+		cost = 5
+		x = 8
+		y = 0
+		completion_reward = {
+			add_political_power = -100
+			hidden_effect = {
+				set_popularities = {
+					vanguard_socialism = 0
+					libertarian_marxism = 20
+					revolutionary_anarchism = 15
+					revisionist_socialism = 15
+					social_democratism = 0
+					liberalism = 0
+					conservatism = 0
+					right_authoritarianism = 0
+					despotism = 40
+					reactionism = 10
+					accelerationism = 0
+				}
+			}
+			country_event = {
+				id = UPI.76
+			}
+		}
+	}
+	focus = {
+		id = UPI_punish_army
+		icon = GFX_focus_UPI_punish_army
+		cost = 10
+		x = -1
+		y = 1
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_wounded_lion
+		}
+		mutually_exclusive = {
+			focus = UPI_punish_police
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = UPI_punished_army
+				days = 180
+			}
+			country_event = {
+				id = UPI.77
+			}
+		}
+	}
+	focus = {
+		id = UPI_punish_police
+		icon = GFX_focus_UPI_punish_police
+		cost = 10
+		x = 1
+		y = 1
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_wounded_lion
+		}
+		mutually_exclusive = {
+			focus = UPI_punish_army
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = UPI_punished_police
+				days = 180
+			}
+			country_event = {
+				id = UPI.78
+			}
+		}
+	}
+	focus = {
+		id = UPI_punish_indians
+		icon = GFX_focus_UPI_punish_indians
+		cost = 10
+		x = 0
+		y = 2
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_punish_police
+			focus = UPI_punish_army
+		}
+		completion_reward = {
+			remove_ideas = UPI_new_british_india3
+			every_owned_state = {
+				add_manpower = -15000
+			}
+			country_event = {
+				id = UPI.79
+			}
+		}
+	}
+	focus = {
+		id = UPI_labour_camps
+		icon = GFX_focus_UPI_labour_camps
+		cost = 10
+		x = 0
+		y = 3
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_punish_indians
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_production_quotas
+				add_idea = UPI_labor_camps
+			}
+		}
+	}
+	focus = {
+		id = UPI_enforced_supremacy
+		icon = GFX_focus_UPI_enforced_supremacy
+		cost = 10
+		x = 0
+		y = 4
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_labour_camps
+		}
+		completion_reward = {
+			add_ideas = UPI_racial_segregation
+			country_event = {
+				id = UPI.80
+			}
+		}
+	}
+	focus = {
+		id = UPI_rooting_dissent
+		icon = GFX_focus_UPI_rooting_dissent
+		cost = 10
+		x = 0
+		y = 5
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_enforced_supremacy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_censorship
+				add_idea = UPI_crackdowns
+			}
+			add_stability = 0.05
+			country_event = {
+				id = UPI.81
+			}
+		}
+	}
+	focus = {
+		id = UPI_begin_preparations
+		icon = GFX_focus_UPI_begin_preparations
+		cost = 5
+		x = 0
+		y = 6
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_rooting_dissent
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_heavy_policing
+		icon = GFX_focus_UPI_heavy_policing
+		cost = 5
+		x = -2
+		y = 7
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_begin_preparations
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_crackdowns
+				add_idea = UPI_terror
+			}
+			country_event = {
+				id = UPI.82
+			}
+		}
+	}
+	focus = {
+		id = UPI_bring_gas
+		icon = GFX_focus_UPI_bring_gas
+		cost = 5
+		x = 0
+		y = 7
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_begin_preparations
+		}
+		completion_reward = {
+			add_ideas = UPI_chamicalweapons
+			country_event = {
+				id = UPI.83
+			}
+		}
+	}
+	focus = {
+		id = UPI_public_executions
+		icon = GFX_focus_UPI_public_executions
+		cost = 5
+		x = 2
+		y = 7
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_begin_preparations
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_brutal_putdowns
+				add_idea = UPI_brutal_putdowns1
+			}
+		}
+	}
+	focus = {
+		id = UPI_crush
+		icon = GFX_focus_UPI_crush
+		cost = 5
+		x = 0
+		y = 8
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_public_executions
+		}
+		prerequisite = {
+			focus = UPI_bring_gas
+		}
+		prerequisite = {
+			focus = UPI_heavy_policing
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.05
+			}
+			random_owned_controlled_state = {
+				add_manpower = -1000
+			}
+			random_owned_controlled_state = {
+				add_manpower = -1000
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = UPI_strike_neighbours
+		icon = GFX_focus_UPI_strike_neighbours
+		cost = 5
+		x = 0
+		y = 9
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_crush
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = PNJ
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BNG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ASM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KSM
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = UPI_consolidate_gains
+		icon = GFX_focus_UPI_consolidate_gains
+		cost = 15
+		x = 0
+		y = 10
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_strike_neighbours
+		}
+		available = {
+			PNJ = { exists = no }
+			BNG = { exists = no }
+			ASM = { exists = no }
+			KSM = { exists = no }
+		}
+		completion_reward = {
+			add_state_core = 431
+			add_state_core = 436
+			add_state_core = 430
+			add_state_core = 432
+			add_state_core = 440
+			add_state_core = 434
+			add_state_core = 894
+			add_state_core = 441
+			add_state_core = 798
+			add_state_core = 787
+		}
+	}
+	focus = {
+		id = UPI_internal_strife
+		icon = GFX_focus_UPI_internal_strife
+		cost = 2
+		x = 0
+		y = 11
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_consolidate_gains
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_indian_savage
+		icon = GFX_focus_UPI_indian_savage
+		cost = 5
+		x = -1
+		y = 12
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_internal_strife
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.1
+			}
+			add_war_support = 0.08
+			country_event = {
+				id = UPI.84
+			}
+		}
+	}
+	focus = {
+		id = UPI_bizzare_rituals
+		icon = GFX_focus_UPI_bizzare_rituals
+		cost = 5
+		x = 1
+		y = 12
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_internal_strife
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.05
+			}
+			add_war_support = 0.08
+			add_stability = 0.05
+			hidden_effect = {
+				country_event = {
+					id = UPI.502
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_resistance_crushed
+		icon = GFX_focus_UPI_resistance_crushed
+		cost = 5
+		x = 0
+		y = 13
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_bizzare_rituals
+		}
+		prerequisite = {
+			focus = UPI_indian_savage
+		}
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_popularity = {
+					ideology = despotism
+					popularity = 1
+				}
+				swap_ideas = {
+					remove_idea = UPI_terror
+					add_idea = UPI_terror1
+				}
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = "UPI_RESISTANCE_CRUSHED_TOOLTIP"
+			country_event = {
+				id = UPI.85
+			}
+		}
+	}
+	focus = {
+		id = UPI_annihilate_socialists
+		icon = GFX_focus_UPI_annihilate_socialists
+		cost = 5
+		x = 0
+		y = 14
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_resistance_crushed
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = RSR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = UPI_united_front
+		icon = GFX_focus_UPI_united_front
+		cost = 5
+		x = 0
+		y = 15
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_annihilate_socialists
+		}
+		available = {
+			RSR = { exists = no }
+		}
+		completion_reward = {
+			hidden_effect = {
+				MYS = {
+					create_faction = INDIAN_UNITED_FRONT
+					declare_war_on = {
+    					target = UPI
+    					type = annex_everything
+					}
+				}
+				TRA = {
+					country_event = {
+						id = UPI.86
+					}
+				}
+				ORS = {
+					country_event = {
+						id = UPI.86
+					}
+				}
+				HYD = {
+					country_event = {
+						id = UPI.86
+					}
+				}
+				DIN = {
+					country_event = {
+						id = UPI.86
+					}
+				}
+				UPI = {
+					create_wargoal = {
+						target = MYS
+						type = annex_everything
+					}
+					create_wargoal = {
+						target = TRA
+						type = annex_everything
+					}
+					create_wargoal = {
+						target = HYD
+						type = annex_everything
+					}
+					create_wargoal = {
+						target = ORS
+						type = annex_everything
+					}
+					create_wargoal = {
+						target = DIN
+						type = annex_everything
+					}
+				}
+				add_state_claim = 444
+				add_state_claim = 895
+				add_state_claim = 443
+				add_state_claim = 429
+				add_state_claim = 427
+				add_state_claim = 426
+				add_state_claim = 425
+				add_state_claim = 936
+			}
+			custom_effect_tooltip = "UPI_UNITED_FRONT_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_bloody_bruised
+		icon = GFX_focus_UPI_bloody_bruised
+		cost = 5
+		x = 0
+		y = 16
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_united_front
+		}
+		available = {
+			ORS = { exists = no }
+			HYD = { exists = no }
+			MYS = { exists = no }
+			TRA = { exists = no }
+			DIN = { exists = no }
+		}
+		completion_reward = {
+			add_state_core = 437
+			add_state_core = 433
+			add_state_core = 428
+			add_state_core = 444
+			add_state_core = 895
+			add_state_core = 443
+			add_state_core = 429
+			add_state_core = 427
+			add_state_core = 426
+			add_state_core = 425
+			add_state_core = 936
+		}
+	}
+	focus = {
+		id = UPI_contact_british
+		icon = GFX_focus_UPI_contact_british
+		cost = 5
+		x = 0
+		y = 17
+		relative_position_id = UPI_wounded_lion
+		prerequisite = {
+			focus = UPI_bloody_bruised
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					ENG = {
+						exists = no
+					}
+				}
+				country_event = {
+					id = UPI.704
+				}
+			}
+			else = {
+				ENG = {
+					country_event = {
+						id = UPI.600
+						days = 4
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_false_isles
+		icon = GFX_focus_UPI_false_isles
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = UPI_contact_british
+		mutually_exclusive = {
+			focus = UPI_dominion_india
+		}
+		prerequisite = {
+			focus = UPI_contact_british
+		}
+		available = {
+			has_country_flag = UPI_war_w_uk
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = UPI.699
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_cannot_win
+		icon = GFX_focus_UPI_cannot_win
+		cost = 5
+		x = -3
+		y = 2
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_false_isles
+		}
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+	focus = {
+		id = UPI_defense
+		icon = GFX_focus_UPI_defense
+		cost = 5
+		x = -4
+		y = 3
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_cannot_win
+		}
+		mutually_exclusive = {
+			focus = UPI_attack
+		}
+		completion_reward = {
+			add_ideas = UPI_defend_defend
+		}
+	}
+	focus = {
+		id = UPI_fortifications
+		icon = GFX_focus_UPI_fortifications
+		cost = 5
+		x = -4
+		y = 4
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_defense
+		}
+		completion_reward = {
+			hidden_effect = {
+			426 = {
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10088
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10060
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 11924
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 7090
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 12241
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 7428
+					instant_build = yes
+				}
+			}
+			427 = {
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 4280
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 1275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 1317
+					instant_build = yes
+				}
+			}
+			425 = {
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10259
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10799
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 5032
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 8100
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 12734
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 8011
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 12146
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 4315
+					instant_build = yes
+				}
+			}
+			936 = {
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 12275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10274
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 10130
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 7288
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 7402
+					instant_build = yes
+				}
+			}
+			}
+			custom_effect_tooltip = "Our border with Madras Presidency will be heavily fortified."
+		}
+	}
+	focus = {
+		id = UPI_grind
+		icon = GFX_focus_UPI_grind
+		cost = 5
+		x = -4
+		y = 5
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_fortifications
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_defend_defend
+				add_idea = UPI_defend_defend1
+			}
+			hidden_effect = {
+				country_event = {
+					id = UPI.87
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_attack
+		icon = GFX_focus_UPI_attack
+		cost = 5
+		x = -2
+		y = 3
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_cannot_win
+		}
+		mutually_exclusive = {
+			focus = UPI_defense
+		}
+		completion_reward = {
+			add_ideas = UPI_attack_attack
+		}
+	}
+	focus = {
+		id = UPI_strike_madras
+		icon = GFX_focus_UPI_strike_madras
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_attack
+		}
+		completion_reward = {
+			hidden_effect = {
+			426 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10088
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10060
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11924
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7090
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12241
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7428
+					instant_build = yes
+				}
+			}
+			427 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4280
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 1317
+					instant_build = yes
+				}
+			}
+			425 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10259
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10799
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 5032
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8100
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12734
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 8011
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12146
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 4315
+					instant_build = yes
+				}
+			}
+			936 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 12275
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10274
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10130
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7288
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 7402
+					instant_build = yes
+				}
+			}
+			}
+			custom_effect_tooltip = "Fortifications will be built on our border with Madras Presidency."
+		}
+	}
+	focus = {
+		id = UPI_cut_foothold
+		icon = GFX_focus_UPI_cut_foothold
+		cost = 5
+		x = -2
+		y = 5
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_strike_madras
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_attack_attack
+				add_idea = UPI_attack_attack1
+			}
+			every_state = {
+				limit = {
+					is_owned_by = MAD
+				}
+				add_core_of = UPI
+			}
+		}
+	}
+	focus = {
+		id = UPI_peace_honour
+		icon = GFX_focus_UPI_peace_honour
+		cost = 15
+		x = -3
+		y = 6
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_cut_foothold
+			focus = UPI_grind
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.700
+			}
+			hidden_effect = {
+				ENG = {
+					country_event = {
+						id = UPI.700
+					}
+				}
+				MAD = {
+					country_event = {
+						id = UPI.700
+					}
+				}
+				remove_ideas = {
+					UPI_attack_attack1
+					UPI_defend_defend1
+				}
+			}
+			custom_effect_tooltip = "UPI_PEACE_WITH_HONOR_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_churchill_empire
+		icon = GFX_focus_UPI_churchill_empire
+		cost = 5
+		x = -3
+		y = 7
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_peace_honour
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.702
+			}
+		}
+	}
+	focus = {
+		id = UPI_dominion_india
+		icon = GFX_focus_UPI_dominion_india
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = UPI_contact_british
+		mutually_exclusive = {
+			focus = UPI_false_isles
+		}
+		prerequisite = {
+			focus = UPI_contact_british
+		}
+		available = {
+			has_country_flag = UPI_dominion_uk
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = medium_increase }
+			ENG = { add_opinion_modifier = { target = UPI modifier = medium_increase } }
+		}
+	}
+	focus = {
+		id = UPI_english_visit
+		icon = GFX_focus_UPI_english_visit
+		cost = 5
+		x = 3
+		y = 2
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_dominion_india
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = UPI.603
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_horror
+		icon = GFX_focus_UPI_horror
+		cost = 5
+		x = 2
+		y = 3
+		relative_position_id = UPI_contact_british
+		mutually_exclusive = {
+			focus = UPI_cover_up
+		}
+		prerequisite = {
+			focus = UPI_english_visit
+		}
+		available = {
+			has_country_flag = UPI_churchill_impeached
+		}
+		completion_reward = {
+			ENG = {
+				remove_opinion_modifier = { target = UPI modifier = medium_increase }
+				add_opinion_modifier = { target = UPI modifier = large_decrease }
+			}
+		}
+	}
+	focus = {
+		id = UPI_cover_up
+		icon = GFX_focus_UPI_cover_up
+		cost = 5
+		x = 4
+		y = 3
+		relative_position_id = UPI_contact_british
+		mutually_exclusive = {
+			focus = UPI_horror
+		}
+		prerequisite = {
+			focus = UPI_english_visit
+		}
+		available = {
+			has_country_flag = UPI_churchill_stays
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = UPI_india_beautiful
+		icon = GFX_focus_UPI_india_beautiful
+		cost = 5
+		x = 3
+		y = 4
+		relative_position_id = UPI_contact_british
+		prerequisite = {
+			focus = UPI_cover_up
+			focus = UPI_horror
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = UPI_horror
+				}
+				country_event = {
+					id = UPI.604
+				}
+			}
+			else = {
+				country_event = {
+					id = UPI.605
+				}
+			}
+		}
+	}
+}

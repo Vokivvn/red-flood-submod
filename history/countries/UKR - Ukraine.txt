@@ -1,0 +1,679 @@
+capital = 202
+
+oob = "UKR_1936"
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "UKR_1936_naval_mtg"
+	else = {
+		set_naval_oob = "UKR_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+
+country_event = {
+	id = ukraine.19
+	days = 1111
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_politics = {
+	ruling_party = social_democratism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 1
+	libertarian_marxism = 1
+	revolutionary_anarchism = 1
+	revisionist_socialism = 10
+	social_democratism = 60
+	liberalism = 10
+	conservatism = 5
+	right_authoritarianism = 5
+	despotism = 5
+	reactionism = 1
+	accelerationism = 1
+}
+
+set_stability = 0.5
+
+UKR = {
+	add_opinion_modifier = {
+		target = LIT
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = BLR
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = POL
+		modifier = intermarium_friendship
+	}
+}
+
+##Country Leaders##
+
+create_country_leader = {
+	name = "Symon Petliura"
+	desc = "UKR_Symon_Petliura_DESC"
+	picture = "gfx/leaders/UKR/UKR_Symon_Petlura.tga"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	traits = {
+		#popular_figurehead
+		}
+	}
+	
+create_country_leader = {
+	name = "Mishka Yaponchik"
+	desc = "UKR_Mishka_Yaponchik_desc"
+	picture = "gfx/leaders/UKR/Portrait_Mishka_Yaponchik.dds"
+	expire = "1965.1.1"
+	ideology = social_anarchism
+	traits = {
+		}
+	}
+	
+create_country_leader = {
+	name = "Vasyl Shakhrai"
+	desc = "UKR_Vasyl_Shakhrai_desc"
+	picture = "gfx/leaders/UKR/Portrait_Vasyl_Shakhrai.dds"
+	expire = "1965.1.1"
+	ideology = orthodox_leninism
+	traits = {
+		}
+	}
+
+create_country_leader = {
+	name = "Volodymyr Vynnychenko"
+	desc = "UKR_Volodymyr_Vynnychenko_desc"
+	picture = "gfx/leaders/UKR/Portrait_Volodymyr_Vynnychenko.dds"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+		}
+	}
+
+create_country_leader = {
+	name = "Mykhailo Hrushevs'kyi"
+	desc = "UKR_Mykhailo_Hrushevskyi_desc"
+	picture = "gfx/leaders/UKR/Portrait_Mykhailo_Hrushevskyi.dds"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+	traits = {
+		}
+	}
+	
+create_country_leader = {
+	name = "Dmytro Doroshenko"
+	desc = "UKR_Dmytro_Doroshenko_desc"
+	picture = "gfx/leaders/UKR/Portrait_Dmytro_Doroshenko.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+		}
+	}	
+
+create_country_leader = {
+	name = "Vyacheslav Lypynsky"
+	desc = "UKR_Vyacheslav_Lypynsky_desc"
+	picture = "gfx/leaders/UKR/Portrait_Vyacheslav_Lypynsky.dds"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {
+		}
+	}
+	
+create_country_leader = {
+	name = "Pavlo Skoropads'kyi"
+	desc = "UKR_Pavlo_Skoropadskyi_desc"
+	picture = "gfx/leaders/UKR/Portrait_Pavlo_Skoropadskyi.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		}
+	}	
+	
+create_country_leader = {
+	name = "Pavlo Skoropads'kyi"
+	desc = "UKR_Pavlo_Skoropadskyi_desc"
+	picture = "gfx/leaders/UKR/Portrait_Pavlo_Skoropadskyi.dds"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+		}
+	}		
+	
+create_country_leader = {
+	name = "Ivan Poltavets"
+	desc = "UKR_Ivan_Poltavets_desc"
+	picture = "gfx/leaders/UKR/Portrait_Ivan_Poltavets.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		}
+	}	
+	
+create_country_leader = {
+	name = "Petro Bolbochan"
+	desc = "UKR_Petro_Bolbochan_desc"
+	picture = "gfx/leaders/UKR/Portrait_Petro_Bolbochan.dds"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+		}
+	}
+
+##Military Leaders##
+
+create_corps_commander = {
+name = "Hnat Vasyl'chenko"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Hnat_Vasylchenko.dds"
+traits = { infantry_officer }
+skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+name = "Oleksandr Lignau"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Oleksandr_Lignau.dds"
+traits = { brilliant_strategist }
+skill = 4
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+name = "Andriy Vovk"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Andriy_Vovk.dds"
+traits = { harsh_leader }
+skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+name = "Serhiy Dyadyusha"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Serhiy_Dyadyusha.dds"
+traits = { inflexible_strategist }
+skill = 3
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+name = "Volodymyr Oskilko"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Volodymyr_Oskilko.dds"
+traits = { armor_officer }
+skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+name = "Oleksandr Hrekiv"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Oleksandr_Hrekiv.dds"
+traits = { infantry_officer }
+skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+name = "Oleksandr Slyvyns'kyi"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Oleksandr_Slyvynsky.dds"
+traits = { armor_officer }
+skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+name = "Levko Drozdovs'kyi"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Levko_Drozdovsky.dds"
+traits = { harsh_leader }
+skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+name = "Mykola Kakurin"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Mykola_Kakurin.dds"
+traits = { old_guard }
+skill = 3
+	attack_skill = 1
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+name = "Mykhailo Omelyanovych-Pavlenko"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Mykhailo_Omelyanovych_Pavlenko.dds"
+traits = { war_hero }
+skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+name = "Ivan Omelyanovych-Pavlenko"
+portrait_path = "gfx/leaders/UKR/UKR_general_Ivan_Omelyanovych_Pavlenko.tga"
+traits = { cavalry_officer }
+skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+name = "Yevhen Myshkovs'kyi"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Yevhen_Myshkovsky.dds"
+traits = { infantry_officer }
+skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+name = "Pavlo Skoropads'kyi"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Skoropadsky.dds"
+traits = { cavalry_officer }
+skill = 5
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+name = "Petro Bolbochan"
+portrait_path = "gfx/leaders/UKR/Military/Portrait_Petro_Bolbochan.dds"
+traits = { brilliant_strategist }
+skill = 5
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 5
+	logistics_skill = 2
+}
+create_navy_leader = {
+	name = "Svyatoslav Shramchenko"
+	portrait_path = "gfx/leaders/UKR/Military/Portrait_Syvatoslav_Shramchenko.dds"
+	traits = { bold ironside old_guard_navy }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 5
+}
+create_navy_leader = {
+	name = "Andriy Pokrovs'kyi"
+	portrait_path = "gfx/leaders/UKR/Military/Portrait_Andriy_Pokrovskyi.dds"
+	traits = { aviation_enthusiast navy_career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+create_navy_leader = {
+	name = "Mykhailo Bilyns'kyi"
+	portrait_path = "gfx/leaders/UKR/Military/Portrait_Myhailo_Bilynskyi.dds"
+	traits = { seawolf gentlemanly }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Oleksandr Hadd"
+	portrait_path = "gfx/leaders/UKR/Military/Portrait_Oleksandr_Hadd.dds"
+	traits = { gentlemanly }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Series I Alekseivich"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series IX Srednyaya"
+		type = submarine_2
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Petrograd Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {			
+		name = "AG Class"
+		type = ship_hull_submarine_1
+		name_group = RUS_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series I Alekseivich"			# represents Alekseivich, B class, L-55 sub
+		type = ship_hull_submarine_1
+		name_group = RUS_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_torpedo_sub_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series II Alekseivich"				# represents Alexandrovsky series II, XI
+		type = ship_hull_submarine_2
+		name_group = RUS_SS_LENINETS
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	create_equipment_variant = {
+		name = "Series V Shchuka"				# represents Shchuka series III, V, V-bis, V-bis-2
+		type = ship_hull_submarine_1
+		name_group = RUS_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Series IX Srednyaya"				# 'Stalinets', series IX, IX-bis, IX-bis-2 and P-class
+		type = ship_hull_submarine_2
+		name_group = RUS_SS_STALINETS
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Series X Shchuka"				
+		type = ship_hull_submarine_1
+		name_group = RUS_SS_SHCHUKA
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Orfey Class"						# represents Yakov Sverdlov, Frunze, and Orfey classes
+		type = ship_hull_light_1
+		name_group = RUS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Kazan Class"						# represents Fidonisi and Izyaslav classes
+		type = ship_hull_light_1
+		name_group = RUS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Petrograd Class"				
+		type = ship_hull_light_2
+		name_group = RUS_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Dnipro Class"					# minelayer
+		type = ship_hull_light_1
+		name_group = RUS_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Brusilovsky Class"
+		type = ship_hull_cruiser_1
+		name_group = RUS_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Chervona Ukraina Class"
+		type = ship_hull_cruiser_1
+		name_group = RUS_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Marti Class"
+		type = ship_hull_cruiser_1				# minelayer
+		name_group = RUS_MINELAYERS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Heavy Cruisers #
+		create_equipment_variant = {
+			name = "Berens Class"
+			type = ship_hull_cruiser_1
+			name_group = RUS_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_medium_battery_1
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_armor_slot = ship_armor_cruiser_1
+				mid_1_custom_slot = ship_airplane_launcher_1
+				mid_2_custom_slot = ship_anti_air_1
+				rear_1_custom_slot = ship_medium_battery_1
+			}
+		}
+	# Battleships #
+	create_equipment_variant = {
+		name = "Marat Class"					
+		type = ship_hull_heavy_1
+		name_group = RUS_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

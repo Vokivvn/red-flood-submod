@@ -1,0 +1,1594 @@
+WRT_black_horse_category = {
+	WRT_mobilize_the_retinues = {
+		icon = generic_military
+		cost = 30
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_black_horse
+			NOT = {
+				check_variable = {
+				    var = WRT_decision_limit_1
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 45
+		complete_effect = {
+			add_to_variable = {
+       			var = WRT_decision_limit_1
+        		value = 1
+			}
+			add_manpower = 4000
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_crush_the_black_eagle = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_punish_prussia
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = PRS
+				type = puppet_wargoal_focus
+			}
+			add_state_core = 188
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_kill_poland = {
+		icon = generic_prepare_civil_war
+		cost = 70
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_anti_polish_crusade
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = POL
+				type = puppet_wargoal_focus
+			}
+			add_state_core = 97
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+WRT_white_horse_category = {
+	WRT_purge_russophobic_elements = {
+		icon = oppression
+		cost = 75
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_white_horse
+			NOT = {
+				check_variable = {
+				    var = WRT_decision_limit_2
+				    value = 2
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 200 
+		complete_effect = {
+			add_timed_idea = {
+				idea = WRT_enemies_of_russia_purged
+				days = 150
+			}
+			add_to_variable = {
+       			var = WRT_decision_limit_2
+        		value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_spread_anti_republican_propaganda = {
+		icon = eng_propaganda_campaigns
+		cost = 50
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_outlaw_republicanism
+			NOT = {
+				check_variable = {
+				    var = WRT_decision_limit_3
+				    value = 5
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 60 
+		complete_effect = {
+			RUS = {
+					add_popularity = {
+						ideology = social_democratism
+						popularity = -0.1
+					}
+					add_popularity = {
+						ideology = liberalism
+						popularity = -0.1
+					}
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = -0.1
+					}
+					add_popularity = {
+						ideology = conservatism
+						popularity = -0.1
+					}
+				}
+			add_to_variable = {
+       			var = WRT_decision_limit_3
+        		value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_rearm_motorized_infantry = {
+		allowed = { tag = WRT }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = WRT_renovate_the_russo_balt
+		}
+		cost = 0
+		custom_cost_text = WRT_decision_cost_tooltip_1
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 44
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -45
+			}
+			add_equipment_to_stockpile = {
+  				type = motorized_equipment
+   				amount = 1000
+    			producer = WRT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+WRT_red_horse_category = {
+	WRT_against_councilism = {
+		icon = eng_propaganda_campaigns
+		cost = 30
+		allowed = { tag = WRT }
+		visible = {
+			has_completed_focus = WRT_red_horse
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_war_support = 0.1
+			RUS = {
+				add_opinion_modifier = { target = WRT modifier = large_increase }
+			}
+			SRU = {
+				add_opinion_modifier = { target = WRT modifier = large_increase }
+			}
+			GER = {
+				add_opinion_modifier = { target = WRT modifier = large_decrease }
+			}
+			HUN = {
+				add_opinion_modifier = { target = WRT modifier = large_decrease }
+			}
+			ZHR = {
+				add_opinion_modifier = { target = WRT modifier = large_decrease }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_organize_strike_breakers = {
+		allowed = { tag = WRT }
+		icon = generic_police_action
+		visible = {
+			has_completed_focus = WRT_punish_red_devil
+			NOT = {
+				check_variable = {
+				    var = WRT_decision_limit_4
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = WRT_decision_cost_tooltip_1
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 44
+		}
+		fire_only_once = yes
+		days_remove = 60
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -45
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_assimilate_remaining_savages = {
+		allowed = { tag = WRT }
+		icon = oppression
+		visible = {
+			has_completed_focus = WRT_baltic_russian_identity
+		}
+		cost = 0
+		custom_cost_text = WRT_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 14
+			has_political_power > 79
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+				add_political_power = -80
+			}
+			add_stability = 0.1
+			add_manpower = -4000
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+WRT_constituent_republics = {
+	WRT_latvian_ssr = {
+		icon = gre_faction_management_category
+		cost = 100
+		allowed = { tag = WRT }
+		fire_only_once = yes
+		days_remove = 70
+		remove_effect = {
+			1058 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			190 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			12 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_estonian_ssr = {
+		icon = gre_faction_management_category
+		cost = 75
+		allowed = { tag = WRT }
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			13 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			191 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_baltic_german_ssr = {
+		icon = gre_faction_management_category
+		cost = 75
+		allowed = { tag = WRT }
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			13 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			13 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_belarusian_ssr = {
+		icon = gre_faction_management_category
+		cost = 80
+		allowed = { tag = WRT }
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			857 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRT_russian_ssr = {
+		icon = gre_faction_management_category
+		cost = 80
+		allowed = { tag = WRT }
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			209 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			210 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			858 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+WRR_pact_of_iron = {
+	WRR_invite_finland = {
+		cost = 50
+		allowed = { tag = WRR }
+		icon = hol_exchange_intelligence_data
+		visible = {
+			has_completed_focus = WRR_get_scandinavian_help
+			NOT = {
+				has_country_flag = WRR_befriended_sweden
+			}
+		}
+		available = {
+			FIN = {
+				is_puppet = no
+				has_government = reactionism
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FIN = {
+				country_event = {
+					id = wru.44
+				}
+			}
+		}
+	}
+	WRR_invite_sweden = {
+		cost = 50
+		allowed = { tag = WRR }
+		icon = hol_exchange_intelligence_data
+		visible = {
+			has_completed_focus = WRR_get_scandinavian_help
+			NOT = {
+				has_country_flag = WRR_befriended_finland
+			}
+		}
+		available = {
+			SWE = {
+				is_puppet = no
+				has_government = reactionism
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			SWE = {
+				country_event = {
+					id = wru.45
+				}
+			}
+		}
+	}
+	WRR_invite_belarus = {
+		cost = 50
+		allowed = { tag = WRR }
+		icon = hol_exchange_intelligence_data
+		visible = {
+			has_completed_focus = WRR_be_certain_of_belarus
+		}
+		available = {
+			BLR = {
+				is_puppet = no
+				has_government = reactionism
+				is_in_faction = no
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			BLR = {
+				country_event = {
+					id = wru.46
+				}
+			}
+		}
+	}
+	WRR_crush_belarus = {
+		cost = 50
+		allowed = { tag = WRR }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = WRR_be_certain_of_belarus
+		}
+		available = {
+			BLR = {
+				OR = {
+					NOT = { has_government = reactionism }
+					is_puppet = yes
+					is_in_faction = yes
+				}
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BLR
+			}
+		}
+	}
+}
+WRR_reichskomissariats_category = {
+	WRR_reichsprotektoriat_polen = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			POL = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			10 = { owner = { is_in_faction_with = WRR } }
+			97 = { owner = { is_in_faction_with = WRR } }
+			98 = { owner = { is_in_faction_with = WRR } }
+			87 = { owner = { is_in_faction_with = WRR } }
+			90 = { owner = { is_in_faction_with = WRR } }
+			92 = { owner = { is_in_faction_with = WRR } }
+			88 = { owner = { is_in_faction_with = WRR } }
+			89 = { owner = { is_in_faction_with = WRR } }
+			91 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				POL = {
+					create_country_leader = {
+						name = "Andrzej Świetlicki"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/POL/Portrait_POL_Andrzej_Swetlicki.tga"
+						expire = "1965.1.1"
+						ideology = esoteric_reactionism
+						traits = {
+						}
+					}
+				}
+			}
+			POL = {
+				transfer_state = 10
+				transfer_state = 97
+				transfer_state = 98
+				transfer_state = 87
+				transfer_state = 90
+				transfer_state = 92
+				transfer_state = 88
+				transfer_state = 89
+				transfer_state = 91
+				set_cosmetic_tag = POL_REICHSKOMMISSARIAT
+			}
+			puppet = POL
+			POL = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichsprotektoriat_belarus = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			BLR = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			94 = { owner = { is_in_faction_with = WRR } }
+			95 = { owner = { is_in_faction_with = WRR } }
+			995 = { owner = { is_in_faction_with = WRR } }
+			207 = { owner = { is_in_faction_with = WRR } }
+			206 = { owner = { is_in_faction_with = WRR } }
+			204 = { owner = { is_in_faction_with = WRR } }
+			194 = { owner = { is_in_faction_with = WRR } }
+			241 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+			}
+			BLR = {
+				transfer_state = 94
+				transfer_state = 95
+				transfer_state = 995
+				transfer_state = 207
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 194
+				transfer_state = 241
+				set_cosmetic_tag = BLR_REICHSKOMMISSARIAT
+			}
+			puppet = BLR
+						BLR = {
+			load_focus_tree = generic_focus
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WRR_reichsprotektoriat_bohmen = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			CZE = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			75 = { owner = { is_in_faction_with = WRR } }
+			9 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+			}
+			CZE = {
+				transfer_state = 75
+				transfer_state = 9
+				set_cosmetic_tag = CZE_REICHSKOMMISSARIAT
+			}
+			puppet = CZE
+			CZE = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichsprotektoriat_slovakei = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			SLO = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			70 = { owner = { is_in_faction_with = WRR } }
+			71 = { owner = { is_in_faction_with = WRR } }
+			72 = { owner = { is_in_faction_with = WRR } }
+			975 = { owner = { is_in_faction_with = WRR } }
+			664 = { owner = { is_in_faction_with = WRR } }
+			73 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+			}
+			SLO = {
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 72
+				transfer_state = 975
+				transfer_state = 664
+				transfer_state = 73
+				set_cosmetic_tag = SLO_REICHSKOMMISSARIAT
+			}
+			puppet = SLO
+			SLO = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichskomissariat_moskovien = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+			NOT = {
+				RUS = {
+					is_subject_of = WRR
+				}
+			}
+		}
+		available = {
+			RUS = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			SRU = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			208 = {	owner = {	is_in_faction_with = WRR	}	}
+			263 = {	owner = {	is_in_faction_with = WRR	}	}
+			246 = {	owner = {	is_in_faction_with = WRR	}	}
+			242 = {	owner = {	is_in_faction_with = WRR	}	}
+			243 = {	owner = {	is_in_faction_with = WRR	}	}
+			222 = {	owner = {	is_in_faction_with = WRR	}	}
+			224 = {	owner = {	is_in_faction_with = WRR	}	}
+			220 = {	owner = {	is_in_faction_with = WRR	}	}
+			240 = {	owner = {	is_in_faction_with = WRR	}	}
+			859 = {	owner = {	is_in_faction_with = WRR	}	}
+			258 = {	owner = {	is_in_faction_with = WRR	}	}
+			260 = {	owner = {	is_in_faction_with = WRR	}	}
+			257 = {	owner = {	is_in_faction_with = WRR	}	}
+			223 = {	owner = {	is_in_faction_with = WRR	}	}
+			205 = {	owner = {	is_in_faction_with = WRR	}	}
+			219 = {	owner = {	is_in_faction_with = WRR	}	}
+			248 = {	owner = {	is_in_faction_with = WRR	}	}
+			247 = {	owner = {	is_in_faction_with = WRR	}	}
+			264 = {	owner = {	is_in_faction_with = WRR	}	}
+			244 = {	owner = {	is_in_faction_with = WRR	}	}
+			195 = {	owner = {	is_in_faction_with = WRR	}	}
+			351 = {	owner = {	is_in_faction_with = WRR	}	}
+			255 = {	owner = {	is_in_faction_with = WRR	}	}
+			239 = {	owner = {	is_in_faction_with = WRR	}	}
+			401 = {	owner = {	is_in_faction_with = WRR	}	}
+			250 = {	owner = {	is_in_faction_with = WRR	}	}
+			249 = {	owner = {	is_in_faction_with = WRR	}	}
+			251 = {	owner = {	is_in_faction_with = WRR	}	}
+			651 = {	owner = {	is_in_faction_with = WRR	}	}
+			398 = {	owner = {	is_in_faction_with = WRR	}	}
+			214 = {	owner = {	is_in_faction_with = WRR	}	}
+			216 = {	owner = {	is_in_faction_with = WRR	}	}
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				RUS = {
+					create_country_leader = {
+						name = "Siegfried Kasche"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/WRU/Portrait_WRU_Siegfried_Kasche.tga"
+						expire = "1965.1.1"
+						ideology = esoteric_reactionism
+						traits = {
+						}
+					}
+				}
+			}
+			transfer_state = 208
+			transfer_state = 263
+			RUS = {
+				transfer_state = 246
+				transfer_state = 242
+				transfer_state = 243
+				transfer_state = 222
+				transfer_state = 224
+				transfer_state = 220
+				transfer_state = 240
+				transfer_state = 859
+				transfer_state = 258
+				transfer_state = 260
+				transfer_state = 257
+				transfer_state = 254
+				transfer_state = 223
+				transfer_state = 205
+				transfer_state = 219
+				transfer_state = 253
+				transfer_state = 248
+				transfer_state = 247
+				transfer_state = 264
+				transfer_state = 244
+				transfer_state = 195
+				transfer_state = 351
+				transfer_state = 400
+				transfer_state = 252
+				transfer_state = 255
+				transfer_state = 239
+				transfer_state = 401
+				transfer_state = 250
+				transfer_state = 256
+				transfer_state = 249
+				transfer_state = 251
+				transfer_state = 399
+				transfer_state = 651
+				transfer_state = 398
+				transfer_state = 573
+				transfer_state = 653
+				transfer_state = 804
+				transfer_state = 581
+				transfer_state = 397
+				transfer_state = 262
+				transfer_state = 214
+				transfer_state = 216
+				transfer_state = 147
+				transfer_state = 215
+				transfer_state = 213
+				transfer_state = 722
+				set_capital = 219
+				set_cosmetic_tag = RUS_REICHSKOMMISSARIAT
+			}
+			puppet = RUS
+			set_autonomy = {
+				target = RUS
+				autonomous_state = autonomy_colony
+			}
+			RUS = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichskomissariat_ukraine = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			UKR = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			93 = {	owner = {	is_in_faction_with = WRR	}	}
+			199 = {	owner = {	is_in_faction_with = WRR	}	}
+			201 = {	owner = {	is_in_faction_with = WRR	}	}
+			198 = {	owner = {	is_in_faction_with = WRR	}	}
+			192 = {	owner = {	is_in_faction_with = WRR	}	}
+			202 = {	owner = {	is_in_faction_with = WRR	}	}
+			203 = {	owner = {	is_in_faction_with = WRR	}	}
+			197 = {	owner = {	is_in_faction_with = WRR	}	}
+			226 = {	owner = {	is_in_faction_with = WRR	}	}
+			193 = {	owner = {	is_in_faction_with = WRR	}	}
+			854 = {	owner = {	is_in_faction_with = WRR	}	}
+			225 = {	owner = {	is_in_faction_with = WRR	}	}
+			259 = {	owner = {	is_in_faction_with = WRR	}	}
+			221 = {	owner = {	is_in_faction_with = WRR	}	}
+			853 = {	owner = {	is_in_faction_with = WRR	}	}
+			227 = {	owner = {	is_in_faction_with = WRR	}	}
+			228 = {	owner = {	is_in_faction_with = WRR	}	}
+			200 = {	owner = {	is_in_faction_with = WRR	}	}
+			196 = {	owner = {	is_in_faction_with = WRR	}	}
+			137 = {	owner = {	is_in_faction_with = WRR	}	}
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+			}
+			UKR = {
+				transfer_state = 93
+				transfer_state = 199
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 192
+				transfer_state = 202
+				transfer_state = 203
+				transfer_state = 197
+				transfer_state = 226
+				transfer_state = 193
+				transfer_state = 854
+				transfer_state = 225
+				transfer_state = 259
+				transfer_state = 221
+				transfer_state = 853
+				transfer_state = 227
+				transfer_state = 228
+				transfer_state = 200
+				transfer_state = 196
+				transfer_state = 137
+				set_cosmetic_tag = UKR_REICHSKOMMISSARIAT
+			}
+			puppet = UKR
+			set_autonomy = {
+				target = UKR
+				autonomous_state = autonomy_colony
+			}
+			UKR = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichskomissariat_kaukasien = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			DKB = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			265 = {	owner = {	is_in_faction_with = WRR	}	}
+			217 = {	owner = {	is_in_faction_with = WRR	}	}
+			236 = {	owner = {	is_in_faction_with = WRR	}	}
+			841 = {	owner = {	is_in_faction_with = WRR	}	}
+			407 = {	owner = {	is_in_faction_with = WRR	}	}
+			218 = {	owner = {	is_in_faction_with = WRR	}	}
+			245 = {	owner = {	is_in_faction_with = WRR	}	}
+			238 = {	owner = {	is_in_faction_with = WRR	}	}
+			855 = {	owner = {	is_in_faction_with = WRR	}	}
+			237 = {	owner = {	is_in_faction_with = WRR	}	}
+			234 = {	owner = {	is_in_faction_with = WRR	}	}
+			1056 = {	owner = {	is_in_faction_with = WRR	}	}
+			1055 = {	owner = {	is_in_faction_with = WRR	}	}
+			235 = {	owner = {	is_in_faction_with = WRR	}	}
+			1053 = {	owner = {	is_in_faction_with = WRR	}	}
+			1057 = {	owner = {	is_in_faction_with = WRR	}	}
+			233 = {	owner = {	is_in_faction_with = WRR	}	}
+			232 = {	owner = {	is_in_faction_with = WRR	}	}
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				DKB = {
+					create_country_leader = {
+						name = "Anatol Furst von Lieven"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/WRU/Portrait_WRU_Anatol_von_Lieven_kommissar.tga"
+						expire = "1965.1.1"
+						ideology = reactionary_populism
+						traits = {
+						}
+					}
+				}
+			}
+			DKB = {
+				transfer_state = 265
+				transfer_state = 217
+				transfer_state = 236
+				transfer_state = 841
+				transfer_state = 407
+				transfer_state = 218
+				transfer_state = 245
+				transfer_state = 238
+				transfer_state = 855
+				transfer_state = 237
+				transfer_state = 234
+				transfer_state = 1056
+				transfer_state = 1055
+				transfer_state = 235
+				transfer_state = 1053
+				transfer_state = 1057
+				transfer_state = 233
+				transfer_state = 232
+				set_cosmetic_tag = DKB_REICHSKOMMISSARIAT
+			}
+			puppet = DKB
+			set_autonomy = {
+				target = DKB
+				autonomous_state = autonomy_colony
+			}
+			DKB = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichskomissariat_sibirien = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			SIB = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			653 = { owner = { is_in_faction_with = WRR } }
+		
+			403 = { owner = { is_in_faction_with = WRR } }
+			580 = { owner = { is_in_faction_with = WRR } }
+			578 = { owner = { is_in_faction_with = WRR } }
+			570 = { owner = { is_in_faction_with = WRR } }
+			40 = { owner = { is_in_faction_with = WRR } }
+			569 = { owner = { is_in_faction_with = WRR } }
+			568 = { owner = { is_in_faction_with = WRR } }
+			567 = { owner = { is_in_faction_with = WRR } }
+			566 = { owner = { is_in_faction_with = WRR } }
+			565 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				SIB = {
+					create_country_leader = {
+						name = "Hinrich Lohse"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/WRU/Portrait_WRU_Hinrich_Lohse.tga"
+						expire = "1965.1.1"
+						ideology = esoteric_reactionism
+						traits = {
+						}
+					}
+				}
+			}
+			SIB = {
+				transfer_state = 653
+				transfer_state = 804
+				transfer_state = 403
+				transfer_state = 580
+				transfer_state = 578
+				transfer_state = 570
+				transfer_state = 40
+				transfer_state = 569
+				transfer_state = 568
+				transfer_state = 567
+				transfer_state = 566
+				transfer_state = 565
+				transfer_state = 575
+				transfer_state = 576
+				transfer_state = 516
+				transfer_state = 577
+				transfer_state = 579
+				set_cosmetic_tag = SIB_REICHSKOMMISSARIAT
+			}
+			puppet = SIB
+			set_autonomy = {
+				target = SIB
+				autonomous_state = autonomy_colony
+			}
+			SIB = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_reichskomissariat_turkestan = {
+		icon = ger_reichskommissariats
+		allowed = { tag = WRR }
+		cost = 0
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+		}
+		available = {
+			ORE = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+			652 = { owner = { is_in_faction_with = WRR } }
+			402 = { owner = { is_in_faction_with = WRR } }
+			582 = { owner = { is_in_faction_with = WRR } }
+			572 = { owner = { is_in_faction_with = WRR } }
+			732 = { owner = { is_in_faction_with = WRR } }
+			406 = { owner = { is_in_faction_with = WRR } }
+			583 = { owner = { is_in_faction_with = WRR } }
+			571 = { owner = { is_in_faction_with = WRR } }
+			404 = { owner = { is_in_faction_with = WRR } }
+			590 = { owner = { is_in_faction_with = WRR } }
+			588 = { owner = { is_in_faction_with = WRR } }
+			589 = { owner = { is_in_faction_with = WRR } }
+			842 = { owner = { is_in_faction_with = WRR } }
+			794 = { owner = { is_in_faction_with = WRR } }
+			586 = { owner = { is_in_faction_with = WRR } }
+			1043 = { owner = { is_in_faction_with = WRR } }
+			852 = { owner = { is_in_faction_with = WRR } }
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				ORE = {
+					create_country_leader = {
+						name = "Woldemar Rummel"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/WRU/Portrait_WRU_Woldemar_Rummel.tga"
+						expire = "1965.1.1"
+						ideology = reactionary_populism
+						traits = {
+						}
+					}
+				}
+			}
+			ORE = {
+				transfer_state = 652
+				transfer_state = 402
+				transfer_state = 582
+				transfer_state = 572
+				transfer_state = 732
+				transfer_state = 406
+				transfer_state = 583
+				transfer_state = 571
+				transfer_state = 404
+				transfer_state = 590
+				transfer_state = 588
+				transfer_state = 589
+				transfer_state = 842
+				transfer_state = 794
+				transfer_state = 586
+				transfer_state = 1043
+				transfer_state = 852
+				set_cosmetic_tag = ORE_REICHSKOMMISSARIAT
+			}
+			puppet = ORE
+			set_autonomy = {
+				target = ORE
+				autonomous_state = autonomy_colony
+			}
+			ORE = {
+			load_focus_tree = generic_focus
+			}
+		}
+	}
+	WRR_split_russia = {
+		icon = eng_trade_unions_support
+		allowed = { tag = WRR }
+		cost = 50
+		visible = {
+			has_completed_focus = WRR_question_of_reichskommissariats
+			OR = {
+				is_in_faction_with = FIN
+				AND = {
+					is_in_faction_with = SWE
+					FIN = { exists = no }
+				}
+			}
+		}
+		available = {
+			OR = {
+				is_in_faction_with = FIN
+				AND = {
+					is_in_faction_with = SWE
+					FIN = { exists = no }
+				}
+			}
+			208 = {	owner = {	is_in_faction_with = WRR	}	}
+			263 = {	owner = {	is_in_faction_with = WRR	}	}
+			246 = {	owner = {	is_in_faction_with = WRR	}	}
+			242 = {	owner = {	is_in_faction_with = WRR	}	}
+			243 = {	owner = {	is_in_faction_with = WRR	}	}
+			222 = {	owner = {	is_in_faction_with = WRR	}	}
+			224 = {	owner = {	is_in_faction_with = WRR	}	}
+			220 = {	owner = {	is_in_faction_with = WRR	}	}
+			240 = {	owner = {	is_in_faction_with = WRR	}	}
+			859 = {	owner = {	is_in_faction_with = WRR	}	}
+			258 = {	owner = {	is_in_faction_with = WRR	}	}
+			260 = {	owner = {	is_in_faction_with = WRR	}	}
+			257 = {	owner = {	is_in_faction_with = WRR	}	}
+			223 = {	owner = {	is_in_faction_with = WRR	}	}
+			205 = {	owner = {	is_in_faction_with = WRR	}	}
+			219 = {	owner = {	is_in_faction_with = WRR	}	}
+			248 = {	owner = {	is_in_faction_with = WRR	}	}
+			247 = {	owner = {	is_in_faction_with = WRR	}	}
+			264 = {	owner = {	is_in_faction_with = WRR	}	}
+			244 = {	owner = {	is_in_faction_with = WRR	}	}
+			195 = {	owner = {	is_in_faction_with = WRR	}	}
+			351 = {	owner = {	is_in_faction_with = WRR	}	}
+			255 = {	owner = {	is_in_faction_with = WRR	}	}
+			239 = {	owner = {	is_in_faction_with = WRR	}	}
+			401 = {	owner = {	is_in_faction_with = WRR	}	}
+			250 = {	owner = {	is_in_faction_with = WRR	}	}
+			249 = {	owner = {	is_in_faction_with = WRR	}	}
+			251 = {	owner = {	is_in_faction_with = WRR	}	}
+			651 = {	owner = {	is_in_faction_with = WRR	}	}
+			398 = {	owner = {	is_in_faction_with = WRR	}	}
+			214 = {	owner = {	is_in_faction_with = WRR	}	}
+			216 = {	owner = {	is_in_faction_with = WRR	}	}
+		}
+		custom_cost_text = WRR_decision_cost_tooltip_2
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 50
+		}
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -50
+				RUS = {
+					create_country_leader = {
+						name = "Siegfried Kasche"
+						desc = "POLITICS_ALEXEI_II_DESC"
+						picture = "gfx/leaders/WRU/Portrait_WRU_Siegfried_Kasche.tga"
+						expire = "1965.1.1"
+						ideology = esoteric_reactionism
+						traits = {
+						}
+					}
+				}
+			}
+			transfer_state = 208
+			transfer_state = 263
+			RUS = {
+				transfer_state = 220
+				transfer_state = 240
+				transfer_state = 859
+				transfer_state = 260
+				transfer_state = 257
+				transfer_state = 254
+				transfer_state = 219
+				transfer_state = 253
+				transfer_state = 248
+				transfer_state = 247
+				transfer_state = 252
+				transfer_state = 255
+				transfer_state = 239
+				transfer_state = 401
+				transfer_state = 250
+				transfer_state = 256
+				transfer_state = 249
+				transfer_state = 251
+				transfer_state = 651
+				transfer_state = 205
+				transfer_state = 222
+				transfer_state = 223
+				transfer_state = 224
+				transfer_state = 242
+				transfer_state = 243
+				transfer_state = 246
+				transfer_state = 258
+				set_cosmetic_tag = RUS_REICHSKOMMISSARIAT
+			}
+			puppet = RUS
+			set_autonomy = {
+				target = RUS
+				autonomous_state = autonomy_colony
+			}
+			RUS = {
+			load_focus_tree = generic_focus
+			}
+			if = {
+				limit = {
+					is_in_faction_with = BLR
+				}
+				BLR = {
+					transfer_state = 241
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction_with = FIN
+				}
+				FIN = {
+					transfer_state = 195
+					transfer_state = 264
+					transfer_state = 244
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 147
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 400
+					transfer_state = 398
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 399
+					transfer_state = 653
+					transfer_state = 804
+					transfer_state = 573
+					transfer_state = 581
+				}
+			}
+			if = {
+				limit = {
+					is_in_faction_with = SWE
+				}
+				SWE = {
+					transfer_state = 195
+					transfer_state = 264
+					transfer_state = 244
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 147
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 400
+					transfer_state = 398
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 399
+					transfer_state = 653
+					transfer_state = 804
+					transfer_state = 573
+					transfer_state = 581
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						SIB = {
+							is_subject_of = WRR
+						}
+					}
+					SIB = {
+						transfer_state = 653
+						transfer_state = 804
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+WRR_hvm_category = {
+	WRR_settle_unemployed_german_workers_1 = {
+		icon = eng_trade_unions_demand
+		cost = 70
+		allowed = { tag = WRR }
+		visible = {
+			has_completed_focus = WRR_der_ostarbeiter
+			check_variable = {
+				var = WRR_decision_limit_1
+				value = 0
+				compare = equals
+			}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			add_to_variable = {
+       			var = WRR_decision_limit_1
+        		value = 1
+			}
+			190 = {
+				add_manpower = -10249
+				add_manpower = 24950
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRR_settle_unemployed_german_workers_2 = {
+		icon = eng_trade_unions_demand
+		cost = 70
+		allowed = { tag = WRR }
+		visible = {
+			has_completed_focus = WRR_der_ostarbeiter
+			check_variable = {
+				var = WRR_decision_limit_1
+				value = 1
+				compare = equals
+			}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			add_to_variable = {
+       			var = WRR_decision_limit_1
+        		value = 1
+			}
+			210 = {
+				add_manpower = -15245
+				add_manpower = 30576
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRR_settle_unemployed_german_workers_3 = {
+		icon = eng_trade_unions_demand
+		cost = 70
+		allowed = { tag = WRR }
+		visible = {
+			has_completed_focus = WRR_der_ostarbeiter
+			check_variable = {
+				var = WRR_decision_limit_1
+				value = 2
+				compare = equals
+			}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			add_to_variable = {
+       			var = WRR_decision_limit_1
+        		value = 1
+			}
+			209 = {
+				add_manpower = -25346
+				add_manpower = 50975
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	WRR_settle_unemployed_german_workers_4 = {
+		icon = eng_trade_unions_demand
+		cost = 70
+		allowed = { tag = WRR }
+		visible = {
+			has_completed_focus = WRR_der_ostarbeiter
+			check_variable = {
+				var = WRR_decision_limit_1
+				value = 3
+				compare = equals
+			}
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			add_to_variable = {
+       			var = WRR_decision_limit_1
+        		value = 1
+			}
+			858 = {
+				add_manpower = -36755
+				add_manpower = 55688
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+WRR_terra_mariana_category = {
+	WRR_spawn_terra_mariana = {
+		allowed = { tag = WRR }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = WRR_aircraft_carrier_terra_mariana
+		}
+		available = {
+			has_tech = basic_carrier
+		}
+		cost = 0
+		custom_cost_text = WRR_decision_cost_tooltip_1
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 49
+		}
+		fire_only_once = yes
+		days_remove = 90
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -50
+				create_equipment_variant = {
+					name = "Terra Mariana"
+					type = carrier_2
+					parent_version = 0
+					upgrades = {
+						ship_reliability_upgrade = 1
+						ship_engine_upgrade = 1
+						ship_armor_upgrade = 1
+						ship_gun_upgrade = 1
+					}
+				}
+				add_equipment_production = {
+					equipment = {
+						type = carrier_2
+						creator = "WRR" 
+					}
+					requested_factories = 1
+					progress = 0.99
+					amount = 1
+				}
+			}
+			custom_effect_tooltip = "Spawns one 'Terra Mariana' Aircraft Carrier"
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

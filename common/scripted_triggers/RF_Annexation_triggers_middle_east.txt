@@ -1,0 +1,231 @@
+#Arabia - annexation_SAU_CONQ
+can_release_arabia = {
+	OR = {
+		state = 292 #Nejd
+		state = 915 #Hail
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SAU_CONQ
+			country_exists = SAU
+		}
+	}
+}
+
+#Armenia - annexation_ARM_CONQ
+can_release_armenia = {
+	state = 230 #Yerevan
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			has_country_flag = ARM_CONQ
+			country_exists = ARM
+		}
+	}
+}
+
+#Azerbaijan - annexation_AZR_CONQ
+can_release_azerbaijan = {
+	state = 419 #Baku
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			tag = CCD
+			has_country_flag = AZR_CONQ
+			country_exists = AZR
+		}
+	}
+}
+#Centrocaspia - annexation_CCD_CONQ
+can_release_centrocaspia = {
+	state = 229 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			has_country_flag = CCD_CONQ
+			country_exists = CCD
+		}
+	}
+}
+
+#Assyria - annexation_ASY_CONQ
+can_release_assyria = {
+	state = 352 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ASY_CONQ
+			country_exists = ASY
+		}
+	}
+}
+#Straits - annexation_MAR_CONQ
+can_release_straits = {
+	state = 976 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			has_country_flag = MAR_CONQ
+			country_exists = MAR
+		}
+	}
+}
+
+#Georgia
+can_release_georgia = {
+	state = 231 #Sakartvelo
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_government = accelerationism
+			tag = KAV
+			has_country_flag = GEO_CONQ
+			country_exists = GEO
+		}
+	}
+}
+#Kavkaz Society
+can_release_kavkaz = {
+	state = 231 #Sakartvelo
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		has_government = accelerationism
+		NOT = {
+			tag = GEO
+			has_country_flag = KAV_CONQ
+			country_exists = KAV
+		}
+	}
+}
+
+#Iraq - annexation_IRQ_CONQ
+can_release_iraq = {
+	state = 291 #Baghdad
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = IRQ_CONQ
+			country_exists = IRQ
+		}
+	}
+}
+
+#Kurdistan - annexation_KUR_CONQ
+can_release_kurdistan = {
+	OR = {
+		state = 350 #Diyarbakir
+		state = 352 #Van
+		state = 819 #Kirkuk
+	}
+	is_claim_or_core_of_ROOT = no
+	if = {
+		limit = {
+			OR = {
+				state = 350 #Diyarbakir
+				state = 352 #Van
+			}
+		}
+		NOT = {
+			49 = { #Ankara
+				is_owned_and_controlled_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+		}
+	}
+	ROOT = {
+		NOT = {
+			has_country_flag = KUR_CONQ
+			country_exists = KUR
+		}
+	}
+}
+
+#Syria annexation_SYR_CONQ
+can_release_levant = {
+	state = 554 #Syria
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SYR_CONQ
+			country_exists = SYR
+		}
+	}
+}
+
+#Oman - annexation_OMA_CONQ
+can_release_oman = {
+	state = 294 #Muscat
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = OMA_CONQ
+			country_exists = OMA
+		}
+	}
+}
+
+#Palestine - annexation_PAL_CONQ
+can_release_palestine = {
+	state = 454 #Jerusalem
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = PAL_CONQ
+			country_exists = PAL
+		}
+	}
+}
+#Israel - annexation_ISR_CONQ
+can_release_israel = {
+	state = 454 #Jerusalem
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ISR_CONQ
+			country_exists = ISR
+		}
+	}
+}
+
+#Persia - annexation_PER_CONQ
+can_release_persia = {
+	state = 266 #Tehran
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			has_country_flag = PER_CONQ
+			country_exists = PER
+		}
+	}
+}
+
+#Turkey - annexation_TUR_CONQ
+can_release_turkey = {
+	state = 49 #Ankara
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = KAV
+			has_country_flag = TUR_CONQ
+			country_exists = TUR
+		}
+	}
+}
+
+#Yemen - annexation_YEM_CONQ
+can_release_yemen = {
+	state = 293 #Yemen
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = YEM_CONQ
+			country_exists = YEM
+		}
+	}
+}

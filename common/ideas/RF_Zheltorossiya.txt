@@ -1,0 +1,3861 @@
+ideas = {
+	country = {
+		ZHR_famine = {
+			picture = ZHR_thefamine
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				monthly_population = -1.25
+				war_support_factor = -0.10
+				stability_factor = -0.10
+			}
+		}
+		ZHR_a_new_dawn = {
+			#picture = 
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				
+			}
+		}
+		ZHR_german_instructors = {
+			picture = ZHR_germaninstructors
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		#Kerensky
+
+		ZHR_nra = {
+			picture = ZHR_nationalrepresantativeassembly
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				resistance_target = -0.1
+				compliance_gain = 0.3
+			}
+		}
+		ZHR_speeches = {
+			picture = ZHR_presidentsspeeches
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_weekly = 0.05
+				political_power_factor = 0.3
+				vanguard_socialism_drift = -0.1
+				revolutionary_anarchism_drift = -0.1
+				social_democratism_drift = 0.1
+			}
+		}
+		ZHR_ROSTA = {
+			picture = ZHR_ROSTA
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = 0.02
+				social_democratism_drift = 0.1
+			}
+		}
+		ZHR_directorate = {
+			picture = ZHR_thedirectorate
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+			political_power_cost = -0.10
+			social_democratism_drift = 0.1
+			}
+		}
+		ZHR_IoCR = {
+			picture = ZHR_instituteofrevolutionarycommand
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+			army_attack_factor = 0.10
+			army_defence_factor = 0.10
+			army_morale_factor = 0.10
+			attrition = -0.10
+			command_power_gain = 0.10
+			}
+		}
+
+		#Trotsky
+
+		ZHR_creatingrevolution  = {
+			picture = ZHR_createtherevolution
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				land_reinforce_rate = 0.4
+			}
+		}
+		ZHR_purgebureaucracy = {
+			picture = ZHR_purgeofthebureaucracy
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = -0.02
+			}
+		}
+		ZHR_fiveyearplans = {
+			picture = ZHR_fiveyearplans
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.17
+				consumer_goods_factor = -0.07
+				research_speed_factor = 0.07
+			}
+		}
+		ZHR_soviet_power = {
+			picture = ZHR_sovietpower
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.15
+			}
+		}
+		ZHR_defendrevolution = {
+			picture = ZHR_defendtherevolution
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.05
+				vanguard_socialism_drift = 0.15
+				libertarian_marxism_drift = 0.05
+			}
+		}
+		ZHR_soberup = {
+			picture = ZHR_sobrietycampaigns
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_weekly_factor = 0.02
+				political_power_factor = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+		ZHR_exportingtherevolution = {
+			picture = ZHR_exportingtherevolution
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_size	= 6
+				intel_network_gain = 0.1
+			}
+		}
+		ZHR_labourarmies = {
+			picture = ZHR_labourarmies
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		ZHR_permanent_revolution = {
+			picture = ZHR_exportingtherevolution
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				justify_war_goal_time = -0.3
+				surrender_limit = 0.1
+				mobilization_speed = 0.5
+			}
+		}
+
+		#Chapayev
+		
+		ZHR_folk_socialism = {
+			picture = ZHR_thecommonman
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				consumer_goods_factor = -0.07
+				army_org = 0.10
+				attrition = -0.07
+				war_support_weekly = 0.01
+				revolutionary_anarchism_drift = 0.02
+			}
+		}		
+
+		ZHR_antiintellectualism = {
+			picture = ZHR_antiintellectualism
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				war_support_weekly = 0.01
+			}
+		}
+		ZHR_antiintellectualism1 = {
+			picture = ZHR_antiintellectualism
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = -0.07
+				war_support_weekly = 0.01
+				local_resources_factor = 0.3
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		ZHR_common_man = {
+			picture = ZHR_thecommonman
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+			stability_weekly = 0.001
+			revolutionary_anarchism_drift = 0.02
+			production_speed_buildings_factor = -0.02
+			consumer_goods_factor = -0.03
+			}
+		}
+		ZHR_enforced_anarchy = {
+			picture = ZHR_enforcedanarchy
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.1
+				political_power_gain = -0.04
+				stability_factor = 0.1
+			}
+		}
+		ZHR_wisdom_of_the_mob = {
+			picture = ZHR_wisdomofthemob
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.1
+				conscription = 0.03
+			}
+		}
+
+		#Boldyrev
+
+		ZHR_dictatorship = {
+			picture = ZHR_commissarsdictatorship
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = -0.05
+			}
+		}
+
+		ZHR_deathoftherepublic = {
+			picture = ZHR_deathoftherepublic
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				vanguard_socialism_drift = -0.10
+				revolutionary_anarchism_drift = -0.10
+				libertarian_marxism_drift = -0.10
+				revisionist_socialism_drift = -0.10
+				social_democratism_drift = -0.10
+				liberalism_drift = -0.10
+				accelerationism_drift = -0.10
+				monthly_population = -0.05
+			}
+		}
+
+		#OneState
+
+		ZHR_We = {
+			picture = ZHR_we
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = -0.25
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.2
+			}
+		}
+		ZHR_homo_metallum = {
+			picture = ZHR_homometallum
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				attrition = -0.2
+				army_core_defence_factor = 0.25
+				acclimatization_cold_climate_gain_factor = 0.2
+			}
+		}
+		ZHR_ironhearts = {
+			picture = ZHR_ironhearts
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				army_attack_factor = 0.2
+				local_resources_factor = 0.2
+				no_supply_grace = 480
+			}
+		}
+		ZHR_factory_life = {
+			picture = ZHR_factorylife
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.3
+				line_change_production_efficiency_factor = 0.3
+				conscription_factor = -0.2
+				war_support_factor = -0.3
+				monthly_population = -0.05
+			}
+		}
+		ZHR_guardians = {
+			picture = ZHR_bureauofguardians
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				accelerationism_drift = 0.1
+				stability_weekly = 0.02
+			}
+		}
+		ZHR_childrenofstate = {
+			picture = ZHR_childrenofthestate
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				political_power_gain = 0.5
+				monthly_population = 0.15
+				consumer_goods_factor = -0.1
+			}
+		}
+		ZHR_thefiveyearplan = {
+			picture = ZHR_naturesubmitstofiveyearplan
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industry_repair_factor = 0.5
+				production_speed_buildings_factor = 0.35
+				consumer_goods_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.3
+				conversion_cost_mil_to_civ_factor = -0.2
+			}
+		}
+		###########	0.3	###############################################
+		#Homogenous Socialists
+		
+		ZHR_peoples_soviet = {
+			picture = ZHR_labourarmies 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.2
+				revolutionary_anarchism_drift = 0.07
+				political_power_gain = 0.25
+				
+			}
+		}
+		ZHR_labour_code = {
+			picture = ZHR_sovietpower 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.15
+				libertarian_marxism_drift = 0.07
+				political_power_gain = 0.3
+			}
+		}
+		ZHR_likbez = {
+			picture = ZHR_ROSTA 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				monthly_population = -0.01
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		ZHR_prole_dict = {
+			picture = ZHR_nationalrepresantativeassembly 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				libertarian_marxism_drift = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		ZHR_local_autonomy = {
+			picture = ZHR_thedirectorate 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				monthly_population = 0.05
+				stability_factor = 0.07
+				production_factory_max_efficiency_factor = 0.07
+				production_lack_of_resource_penalty_factor = -0.07
+			}
+		}
+		ZHR_labour_duty = {
+			picture = ZHR_thecommonman 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.08
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		ZHR_oln_farms = {
+			picture = ZHR_wisdomofthemob 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				monthly_population = 0.08
+				production_speed_infrastructure_factor = 0.12
+				recruitable_population_factor = 0.05
+			}
+		}
+		ZHR_federation = {
+			picture = ZHR_defendtherevolution 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				surrender_limit = 0.08
+				political_power_gain = 0.05
+				conscription = 0.02
+			}
+		}
+		ZHR_russian_syndicalism = {
+			picture = UKR_syndicalism
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				army_morale_factor = 0.05
+				conscription = 0.005
+			}
+		}
+		ZHR_russian_councilism = {
+			picture = UKR_syndicalism
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+		
+		#Triumvirate
+		
+		ZHR_ll_reform = {
+			picture = ZHR_thedirectorate 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.06
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		ZHR_ll_reform1 = {
+			picture = ZHR_thedirectorate 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.12
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_industrial_complex_factor = 0.2
+			}
+		}
+		
+		ZHR_ll_reform2 = {
+			picture = ZHR_thedirectorate 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				drift_defence_factor = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.2
+				conversion_cost_civ_to_mil_factor = -0.35
+			}
+		}
+		
+		ZHR_rev_soc_industry = {
+			picture = ZHR_sovietpower 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		
+		ZHR_rev_soc_industry1 = {
+			picture = ZHR_sovietpower 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.12
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_max_efficiency_factor = 0.07
+				political_power_gain = 0.15
+			}
+		}
+		
+		ZHR_rev_soc_industry2 = {
+			picture = ZHR_sovietpower 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_max_efficiency_factor = 0.07
+				production_speed_industrial_complex_factor = 0.15
+				political_power_gain = 0.15
+			}
+		}
+		
+		ZHR_peasant_research = {
+			picture = ZHR_ROSTA 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.15
+				monthly_population = 0.05
+				revisionist_socialism_drift = 0.02
+			}
+		}
+		
+		ZHR_peasant_research1 = {
+			picture = ZHR_ROSTA 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.15
+				monthly_population = 0.05
+				revisionist_socialism_drift = 0.02
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		ZHR_peasant_research2 = {
+			picture = ZHR_ROSTA 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = 0.12
+				stability_factor = 0.17
+				monthly_population = 0.08
+				revisionist_socialism_drift = 0.05
+				research_speed_factor = 0.07
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		#Milyukov
+		
+		ZHR_liberalisation = {
+			picture = ZHR_presidentsspeeches 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				liberalism_drift = 0.05
+				drift_defence_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		
+		ZHR_lib_economy_idea = {
+			picture = ZHR_firmindividualism 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_industrial_complex_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.1
+				stability_factor = 0.05
+			}
+		}
+		
+		ZHR_lib_economy_idea1 = {
+			picture = ZHR_firmindividualism 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.2
+				industry_repair_factor = 0.2
+				stability_factor = 0.1
+			}
+		}
+		
+		ZHR_lib_research_idea = {
+			picture = ZHR_nationalrepresantativeassembly 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				research_speed_factor = 0.06
+				political_power_gain = 0.25
+				despotism_drift = -0.1
+				reactionism_drift = -0.1
+			}
+		}
+		
+		ZHR_lib_compliance = {
+			picture = ZHR_politruks 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				resistance_target = -0.1
+				resistance_activity = -0.1
+				starting_compliance = 0.10
+			}
+		}
+		
+		ZHR_lib_compliance1 = {
+			picture = ZHR_politruks
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				resistance_target = -0.2
+				resistance_activity = -0.2
+				starting_compliance = 0.20
+				recruitable_population_factor = 0.05
+			}
+		}
+		
+		ZHR_lib_consoom_idea = {
+			picture = ZHR_ROSTA 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				monthly_population = 0.02
+				
+			}
+		}
+		
+		ZHR_lib_trade_idea = {
+			picture = ZHR_thedirectorate 
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				license_purchase_cost = -0.5
+				trade_cost_for_target_factor = -0.1
+				trade_opinion_factor = 0.1
+			}
+		}
+		###############################################################
+		#Rosenbaum
+
+		ZHR_no_religion = {
+			picture = ZHR_stateatheism
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.12
+				stability_factor = -0.04
+				consumer_goods_factor = 0.07
+			}
+		}
+		ZHR_blind_to_race = {
+			picture = ZHR_blindtorace
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				monthly_population = 0.2
+				stability_factor = 0.05
+			}
+		}
+		ZHR_firm_individualism = {
+			picture = ZHR_firmindividualism
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_factor = -0.07
+				drift_defence_factor = -0.8
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.08
+				political_power_gain = -0.4
+			}
+		}
+		ZHR_firm_individualism1 = {
+			picture = ZHR_firmindividualism
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_factor = -0.14
+				drift_defence_factor = -1
+				research_speed_factor = 0.15
+				consumer_goods_factor = 0.1
+				political_power_gain = -0.7
+				industry_repair_factor = 0.15
+				production_speed_industrial_complex_factor = 0.25
+			}
+		}
+		ZHR_manchurians = {
+			picture = ZHR_blindtorace
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_factor = -0.1
+				conscription_factor = -0.1
+			}
+		}
+		ZHR_manchurians1 = {
+			picture = ZHR_blindtorace
+			removal_cost = -1
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.1
+				non_core_manpower = 0.05
+			}
+		}
+
+		#Army
+
+		ZHR_boldness = {
+			picture = ZHR_boldnessofnewgeneration
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		ZHR_singlecommandprinciple = {
+			picture = ZHR_singlecommandprinciple
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				max_command_power = -10
+				promote_cost_factor = -0.2
+				command_power_gain_mult = 0.3
+			}
+		}
+
+		ZHR_preventnewnapoleon = {
+			picture = ZHR_newnapoleonprevented
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				max_command_power = 20
+				promote_cost_factor = 0.2
+				command_power_gain_mult = -0.3
+			}
+		}
+
+		ZHR_discipline = {
+			picture = ZHR_disciplinestrengthened
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				army_org = 5
+				army_morale_factor = 0.1
+			}
+		}
+
+		ZHR_soldierscouncils = {
+			picture = ZHR_soldierscouncils
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				max_planning = 0.3
+				invasion_preparation = -0.3
+			}
+		}
+
+		ZHR_politruksinarmy = {
+			picture = ZHR_politruks
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				max_dig_in = -3
+			}
+		}
+		ZHR_IoRC = {
+			picture = ZHR_disciplinestrengthened
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				max_commander_army_size = 30
+				max_commander_army_group_size = 6
+			}
+		}
+		#Diplo
+		ZHR_cooperation_with_britain = {
+			picture = ZHR_collaborationwithbritain
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				license_purchase_cost = -0.5
+			}
+		}
+
+		ZHR_cooperation_with_america = {
+			picture = ZHR_collaborationwithamerica
+			allowed = {
+				original_tag = ZHR
+			}
+			modifier = {
+				license_purchase_cost = -0.5
+			}
+		}
+
+		ZHR_finnish_independence_campaign = {
+			picture = ZHR_finnishindependencecampaign
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				autonomy_gain = 2
+			}
+		}
+
+		ZHR_yellow_russian_sabotage = {
+			picture = ZHR_yellowrussiansabotage
+			allowed = {
+				original_tag = RUS
+			}
+			modifier = {
+				stability_weekly = -0.01
+				industrial_capacity_factory = -0.1
+				resistance_target = 0.1
+			}
+		}
+	}
+	####################################################################################
+	#Ministers#
+	####################################################################################
+
+	head_of_government = {
+		ZHR_Pavel_Milyukov = {
+			picture = ZHR_Pavel_Milyukov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+				has_completed_focus = ZHR_kerenskyprevails
+			}
+		}
+		ZHR_Ivan_Smirnov = {
+			picture = ZHR_Ivan_Smirnov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Peter_Isayev = {
+			picture = ZHR_Peter_Isayev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_theherowedeserve
+			}
+		}
+		ZHR_Vasily_Boldyrev = {
+			picture = ZHR_Vasily_Boldyrev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Alexei_Gastev = {
+			picture = ZHR_Alexei_Gastev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Nikolay_Nekrasov = {
+			picture = ZHR_Nikolay_Nekrasov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_atlasshruggednomore
+			}
+		}
+		ZHR_Yakov_Sverdlov = {
+			picture = ZHR_Yakov_Sverdlov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+				has_completed_focus = ZHR_rsdrp_chairman_kamenev
+			}
+		}
+		ZHR_Boris_Kamkov = {
+			picture = ZHR_Boris_Kamkov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_oln_chairwoman_spiridonova
+			}
+		}
+		ZHR_Venedikt_Myakotin = {
+			picture = ZHR_Venedikt_Myakotin
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}		
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		ZHR_Vladimir_Nabokov = {
+			picture = ZHR_Vladimir_Nabokov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}		
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+		ZHR_Emergency_Directorate_head = {
+			picture = ZHR_Emergency_Directorate
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_country_flag = ZHR_hide_ministers
+			}
+			traits = {
+				head_of_government
+			}
+			cancel = { 
+				NOT = { has_country_flag = ZHR_hide_ministers }
+			}
+			available = {
+			}
+		}
+		#NUMBERS
+
+		ZHR_Pavel_Milyukov_number = {
+			picture = ZHR_Pavel_Milyukov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+			}
+		}
+		ZHR_Ivan_Smirnov_number = {
+			picture = ZHR_Ivan_Smirnov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Peter_Isayev_number = {
+			picture = ZHR_Peter_Isayev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Vasily_Boldyrev_number = {
+			picture = ZHR_Vasily_Boldyrev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_OP_01 = {
+			picture = ZHR_OP_01
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Nikolay_Nekrasov_number = {
+			picture = ZHR_Nekrasov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+			}
+		}
+		ZHR_Yakov_Sverdlov_number = {
+			picture = ZHR_Yakov_Sverdlov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+			}
+		}
+		ZHR_Boris_Kamkov_number = {
+			picture = ZHR_Boris_Kamkov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_oln_chairwoman_spiridonova
+			}
+		}
+		ZHR_Venedikt_Myakotin_number = {
+			picture = ZHR_Venedikt_Myakotin_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		ZHR_Vladimir_Nabokov_number = {
+			picture = ZHR_Vladimir_Nabokov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+	}
+	
+	economy_minister = {
+		ZHR_Nikolaj_Kondratiev = {
+			picture = ZHR_Nikolaj_Kondratiev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}		
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+				has_completed_focus = ZHR_kerenskyprevails
+			}
+		}
+		ZHR_Yevgeny_Preobrazhensky = {
+			picture = ZHR_Yevgeny_Preobrazhensky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = libertarian_marxism
+						has_government = vanguard_socialism
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = libertarian_marxism
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		ZHR_Alexander_Chayanov = {
+			picture = ZHR_Alexander_Chayanov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Andrei_Shingarev = {
+			picture = ZHR_Andrei_Shingarev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = despotism
+						has_government = liberalism
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					AND = {
+						has_government = liberalism
+						has_completed_focus = ZHR_dawn_of_peoples_freedom
+					}
+				}
+			}
+		}
+		ZHR_Stanislav_Strumlin = {
+			picture = ZHR_Stanislav_Strumlin
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}	
+			}
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Mikhail_Tereshchenko = {
+			picture = ZHR_Mikhail_Tereshchenko
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}		
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_atlasshruggednomore
+			}
+		}
+		ZHR_Semyon_Maslov = {
+			picture = ZHR_Semyon_Maslov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}		
+			}
+			traits = {
+				economy_minister
+				eco_efficient_director
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		ZHR_Emergency_Directorate_foreign = {
+			picture = ZHR_Emergency_Directorate
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_country_flag = ZHR_hide_ministers
+			}
+			traits = {
+				economy_minister
+			}
+			cancel = { 
+				NOT = { has_country_flag = ZHR_hide_ministers }
+			}
+			available = {
+			}
+		}
+		
+		#NUMBERS
+
+		ZHR_Nikolaj_Kondratiev_number = {
+			picture = ZHR_Nikolaj_Kondratiev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+			}
+		}
+		ZHR_Yevgeny_Preobrazhensky_number = {
+			picture = ZHR_Yevgeny_Preobrazhensky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = libertarian_marxism
+						has_government = vanguard_socialism
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = libertarian_marxism
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		ZHR_Alexander_Chayanov_number = {
+			picture = ZHR_Alexander_Chayanov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Andrei_Shingarev_number = {
+			picture = ZHR_Andrei_Shingarev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber		
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = despotism
+						has_government = liberalism
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					AND = {
+						has_government = liberalism
+						has_completed_focus = ZHR_dawn_of_peoples_freedom
+					}
+				}
+			}
+		}
+		ZHR_Stanislav_Strumlin_number = {
+			picture = ZHR_Stanislav_Strumlin_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Mikhail_Tereshchenko_number = {
+			picture = ZHR_Mikhail_Tereshchenko_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber	
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_atlasshruggednomore
+			}
+		}
+		ZHR_Semyon_Maslov_number = {
+			picture = ZHR_Semyon_Maslov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber		
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				economy_minister
+				eco_efficient_director
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+	}
+
+	foreign_minister = {
+		ZHR_Mikhail_Tereshchenko2 = {
+			picture = ZHR_Mikhail_Tereshchenko2
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+				has_completed_focus = ZHR_kerenskyprevails
+			}
+		}
+		ZHR_Christian_Rakovsky = {
+			picture = ZHR_Christian_Rakovsky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Dmitry_Furmanov = {
+			picture = ZHR_Dmitry_Furmanov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_theherowedeserve
+			}
+		}
+		ZHR_Nikolay_Lvov = {
+			picture = ZHR_Nikolay_Lvov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Osip_Yermansky = {
+			picture = ZHR_Osip_Yermansky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Ariadna_Tyrkova_Williams = {
+			picture = ZHR_Ariadna_Tyrkova_Williams
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_atlasshruggednomore
+			}
+		}
+		ZHR_Anastasia_Bitsenko = {
+			picture = ZHR_Anastasia_Bitsenko
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+		ZHR_Alexander_Gukovsky = {
+			picture = ZHR_Alexander_Gukovsky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		ZHR_Konstantin_Nabokov = {
+			picture = ZHR_Konstantin_Nabokov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+		ZHR_Emergency_Directorate_economy = {
+			picture = ZHR_Emergency_Directorate
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_country_flag = ZHR_hide_ministers
+			}
+			traits = {
+				foreign_minister
+			}
+			cancel = { 
+				NOT = { has_country_flag = ZHR_hide_ministers }
+			}
+			available = {
+			}
+		}
+		#NUMBERS
+
+		ZHR_Mikhail_Tereshchenko2_number = {
+			picture = ZHR_Mikhail_Tereshchenko2_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+			}
+		}
+		ZHR_Christian_Rakovsky_number = {
+			picture = ZHR_Christian_Rakovsky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Dmitry_Furmanov_number = {
+			picture = ZHR_Dmitry_Furmanov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Nikolay_Lvov_number = {
+			picture = ZHR_Nikolay_Lvov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Osip_Yermansky_number = {
+			picture = ZHR_Osip_Yermansky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Ariadna_Tyrkova_Williams_number = {
+			picture = ZHR_Ariadna_Tyrkova_Williams_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+			}
+		}
+		ZHR_Anastasia_Bitsenko_number = {
+			picture = ZHR_Anastasia_Bitsenko_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+		ZHR_Alexander_Gukovsky_number = {
+			picture = ZHR_Alexander_Gukovsky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		ZHR_Konstantin_Nabokov_number = {
+			picture = ZHR_Konstantin_Nabokov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+	}
+
+	security_minister = {
+		ZHR_Alexei_Nikitin = {
+			picture = ZHR_Alexei_Nikitin
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revisionist_socialism
+						has_government = social_democratism
+					}
+				}
+			}
+			available = {
+				OR = {
+					AND = {
+						has_government = social_democratism
+						has_completed_focus = ZHR_kerenskyprevails
+					}
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		ZHR_Alexander_Beloborodov = {
+			picture = ZHR_Alexander_Beloborodov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel = {
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Grigory_Rogov = {
+			picture = ZHR_Grigory_Rogov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_theherowedeserve
+			}
+		}
+		ZHR_Sergei_Voytsekhovsky = {
+			picture = ZHR_Sergei_Voytsekhovsky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Viktor_Pertsov = {
+			picture = ZHR_Viktor_Pertsov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Innokentiy_Yeremeyev = {
+			picture = ZHR_Innokentiy_Yeremeyev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_preserver_of_culture
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_atlasshruggednomore
+			}
+		}
+		ZHR_Grigory_Zinoviev = {
+			picture = ZHR_Grigory_Zinoviev
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+		ZHR_Ivan_Yefremov = {
+			picture = ZHR_Ivan_Yefremov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+		ZHR_Emergency_Directorate_security = {
+			picture = ZHR_Emergency_Directorate
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_country_flag = ZHR_hide_ministers
+			}
+			traits = {
+				security_minister
+			}
+			cancel = { 
+				NOT = { has_country_flag = ZHR_hide_ministers }
+			}
+			available = {
+			}
+		}
+		
+		#NUMBERS
+
+		ZHR_Alexei_Nikitin_number = {
+			picture = ZHR_Alexei_Nikitin_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revisionist_socialism
+						has_government = social_democratism
+					}
+				}
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		ZHR_Alexander_Beloborodov_number = {
+			picture = ZHR_Alexander_Beloborodov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Grigory_Rogov_number = {
+			picture = ZHR_Grigory_Rogov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Sergei_Voytsekhovsky_number = {
+			picture = ZHR_Sergei_Voytsekhovsky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Viktor_Pertsov_number = {
+			picture = ZHR_Viktor_Pertsov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Innokentiy_Yeremeyev_number = {
+			picture = ZHR_Innokentiy_Yeremeyev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_preserver_of_culture
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+			}
+		}
+		ZHR_Grigory_Zinoviev_number = {
+			picture = ZHR_Grigory_Zinoviev_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+		ZHR_Ivan_Yefremov_number = {
+			picture = ZHR_Ivan_Yefremov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_dawn_of_peoples_freedom
+			}
+		}
+	}
+
+	head_of_intel = {
+		ZHR_Sergei_Melgunov = {
+			picture = ZHR_Sergei_Melgunov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revisionist_socialism
+						has_government = social_democratism
+					}
+				}
+			}
+			available = {
+				OR = {
+					AND = {
+						has_government = social_democratism
+						has_completed_focus = ZHR_kerenskyprevails
+					}
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		ZHR_Lev_Sosnovsky = {
+			picture = ZHR_Lev_Sosnovsky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Nestor_kalandarishvili = {
+			picture = ZHR_Nestor_kalandarishvili
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+				has_completed_focus = ZHR_theherowedeserve
+			}
+		}
+		ZHR_Victorin_Molchanov = {
+			picture = ZHR_Victorin_Molchanov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Vladimir_Nemtsov = {
+			picture = ZHR_Vladimir_Nemtsov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Alexander_Bublikov = {
+			picture = ZHR_Alexander_Bublikov
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+			}
+		}
+		ZHR_Vyacheslav_Menzhinsky = {
+			#picture = ZHR_Vyacheslav_Menzhinsky
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+		ZHR_Emergency_Directorate_intel = {
+			picture = ZHR_Emergency_Directorate
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_country_flag = ZHR_hide_ministers
+			}
+			traits = {
+				head_of_intel
+			}
+			cancel = { 
+				NOT = { has_country_flag = ZHR_hide_ministers }
+			}
+			available = {
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Sergei_Melgunov_number = {
+			picture = ZHR_Sergei_Melgunov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+			available = {
+				has_government = social_democratism
+			}
+		}
+		ZHR_Lev_Sosnovsky_number = {
+			picture = ZHR_Lev_Sosnovsky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		ZHR_Nestor_kalandarishvili_number = {
+			picture = ZHR_Nestor_kalandarishvili_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+		ZHR_Victorin_Molchanov_number = {
+			picture = ZHR_Victorin_Molchanov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		ZHR_Vladimir_Nemtsov_number = {
+			picture = ZHR_Vladimir_Nemtsov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		ZHR_Alexander_Bublikov_number = {
+			picture = ZHR_Alexander_Bublikov_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+			available = {
+				has_government = liberalism
+			}
+		}
+		ZHR_Vyacheslav_Menzhinsky_number = {
+			#picture = ZHR_Vyacheslav_Menzhinsky_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+				NOT = {
+					has_country_flag = ZHR_hide_ministers
+				}
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			cancel = { 
+				NOT = {
+					OR = {
+						has_government = revolutionary_anarchism
+						has_government = libertarian_marxism
+					}
+				}
+			}
+			available = {
+				has_completed_focus = ZHR_homogeneous_socialist_government
+			}
+		}
+	}
+
+	chief_of_staff = {
+		ZHR_Mikhail_Frunze_staff = {
+			picture = ZHR_Mikhail_Frunze_staff
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cos_school_of_manoeuvre
+			}
+		}
+		ZHR_Semyon_Budyonny_staff = {
+			picture = ZHR_Semyon_Budyonny_staff
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
+		ZHR_Vasily_Boldyrev_staff = {
+			picture = ZHR_Vasily_Boldyrev_staff
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ZHR_revolutionaryorder
+				}
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Mikhail_Frunze_staff_number = {
+			picture = ZHR_Mikhail_Frunze_staff
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cos_school_of_manoeuvre
+			}
+		}
+		ZHR_Semyon_Budyonny_staff_number = {
+			picture = ZHR_Semyon_Budyonny_staff_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
+		ZHR_Vasily_Boldyrev_staff_number = {
+			picture = ZHR_Vasily_Boldyrev_staff_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+			available = {
+				NOT = {
+					has_completed_focus = ZHR_revolutionaryorder
+				}
+			}
+		}
+	}
+
+	chief_of_army = {
+		ZHR_Boris_Shaposhnikov_army = {
+			picture = ZHR_Boris_Shaposhnikov_army
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+		ZHR_Mikhail_Tukhachevsky_army = {
+			picture = ZHR_Mikhail_Tukhachevsky_army
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+		ZHR_Sergey_Wojciechowski_army = {
+			picture = ZHR_Sergey_Wojciechowski_army
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				carm_static_defence_doctrine
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Boris_Shaposhnikov_army_number = {
+			picture = ZHR_Boris_Shaposhnikov_army_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+		ZHR_Mikhail_Tukhachevsky_army_number = {
+			picture = ZHR_Mikhail_Tukhachevsky_army_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+		ZHR_Sergey_Wojciechowski_army_number = {
+			picture = ZHR_Sergey_Wojciechowski_army_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				carm_static_defence_doctrine
+			}
+			available = {
+				has_completed_focus = ZHR_discussionofcommand
+			}
+		}
+	}
+
+	chief_of_navy = {
+		ZHR_Andrej_Maksimov_navy = {
+			picture = ZHR_Andrej_Maksimov_navy
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		ZHR_Mikhail_Viktorov_navy = {
+			picture = ZHR_Mikhail_Viktorov_navy
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+		ZHR_Vladimir_Orlov_navy = {
+			picture = ZHR_Vladimir_Orlov_navy
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Andrej_Maksimov_navy_number = {
+			picture = ZHR_Andrej_Maksimov_navy_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		ZHR_Mikhail_Viktorov_navy_number = {
+			picture = ZHR_Mikhail_Viktorov_navy_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+		ZHR_Vladimir_Orlov_navy_number = {
+			picture = ZHR_Vladimir_Orlov_navy_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		ZHR_Aleksandr_Senatorov_air = {
+			picture = ZHR_Aleksandr_Senatorov_air
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		ZHR_Nikolaj_Papivin_air = {
+			picture = ZHR_Nikolaj_Papivin_air
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+		ZHR_Pavel_Zhigarev_air = {
+			picture = ZHR_Pavel_Zhigarev_air
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Aleksandr_Senatorov_air_number = {
+			picture = ZHR_Aleksandr_Senatorov_air_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		ZHR_Nikolaj_Papivin_air_number = {
+			picture = ZHR_Nikolaj_Papivin_air_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+		ZHR_Pavel_Zhigarev_air_number = {
+			picture = ZHR_Pavel_Zhigarev_air_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		ZHR_Aleksandr_Vekman_theorist = {
+			picture = ZHR_Aleksandr_Vekman_theorist
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				supperior_firepower_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+		ZHR_Igor_Kurchatov_theorist = {
+			picture = ZHR_Igor_Kurchatov_theorist
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				nuclear_theorist
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+		ZHR_Pavel_Petrov_theorist = {
+			picture = ZHR_Pavel_Petrov_theorist
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				NOT = {
+					has_completed_focus = ZHR_justanothernumber	
+				}
+			}
+			traits = {
+				trade_interdiction_theorist
+			}
+			research_bonus = {
+				cat_trade_interdiction = 0.1
+			}
+		}
+
+		#NUMBERS
+
+		ZHR_Aleksandr_Vekman_theorist_number = {
+			picture = ZHR_Aleksandr_Vekman_theorist_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				supperior_firepower_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+		ZHR_Igor_Kurchatov_theorist_number = {
+			picture = ZHR_Igor_Kurchatov_theorist_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				nuclear_theorist
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+		ZHR_Pavel_Petrov_theorist_number = {
+			picture = ZHR_Pavel_Petrov_theorist_number
+			allowed = {
+				original_tag = ZHR
+			}
+			visible = {
+				has_completed_focus = ZHR_justanothernumber
+			}
+			traits = {
+				trade_interdiction_theorist
+			}
+			research_bonus = {
+				cat_trade_interdiction = 0.1
+			}
+		}
+	}
+	#####################################################################
+	#						Companies
+	#####################################################################
+	#### General ####
+	industrial_concern = {
+		Tereshchenkos_Consortium_Industrial_Concern = {
+			picture = ZHR_Tereshchenkos_Consortium_Industrial_Concern
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				industrial_manufacturer
+				regular
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.03
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		
+		Harbin_Radioelectronics_Institute = {
+			#name = Harbin_Radioelectronics_Institute
+			picture = ZHR_Harbin_Radioelectronics_Institute
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				electronics_manufacturer
+				regular
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	weapons_manufacturer = {
+		designer = yes
+
+		Harbin_Arsenal = {
+			picture = ZHR_Harbin_Arsenal
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				infantry_equipment_producer_offense_0
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		Grabins_Ordnance_Factories_Inc = {
+			picture = ZHR_Grabins_Ordnance_Factories_Inc
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+
+		Kotin-Mikulin_Engines = {
+			#name = Kotin-Mikulin_Engines
+			picture = ZHR_Kotin-Mikulin_Engines
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				small_tank_producer_offense_0
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		
+		Khabarovsk_Motorcar_Factory = {
+			#name = Khabarovsk_Motorcar_Factory
+			picture = ZHR_Khabarovsk_Motorcar_Factory
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				motorised_equipment_producer_mass_0
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	#### Air and Naval Manufacturer ####
+	air_naval_manufacturer = {
+		designer = yes
+
+		Khabarovsk_Hydroaeronautics_Bureau = {
+			#name = Khabarovsk_Hydroaeronautics_Bureau
+			picture = ZHR_Khabarovsk_Hydroaeronautics_Bureau
+			allowed = {
+				original_tag = ZHR
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			research_bonus = {
+				naval_bomber = 0.15
+			}
+		}
+		
+		Union_of_Pacific_Shipyards = {
+			#name = Union_of_Pacific_Shipyards
+			picture = ZHR_Union_of_Pacific_Shipyards
+			allowed = {
+				original_tag = ZHR
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				capital_ship_producer_offense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		Nikolayevsk_Aeronautics_Factory = {
+			#name = Nikolayevsk_Aeronautics_Factory
+			picture = ZHR_Nikolayevsk_Aeronautics_Factory
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				bomber_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		Aerograd_Inc = {
+			#name = Aerograd_Inc
+			picture = ZHR_Aerograd_Inc
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				fighter_producer_offense_0
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		Harbin_Strategic_Aircraft_Bureau = {
+			#name = Harbin_Strategic_Aircraft_Bureau
+			picture = ZHR_Harbin_Strategic_Aircraft_Bureau
+			allowed = {
+				original_tag = ZHR
+			}
+			traits = {
+				bomber_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+	}
+}

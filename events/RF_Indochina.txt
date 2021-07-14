@@ -1,0 +1,87 @@
+#####################################
+#	Indochina EVENTS - BABA + ARIEL	#
+#####################################
+
+add_namespace = dainam
+
+country_event = {
+	id = dainam.1
+	title = dainam.1.t
+	desc = dainam.1.desc
+	picture = GFX_sunset_crash
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.1.a
+		ai_chance = { factor = 100 }
+		set_cosmetic_tag = DAI_UAF
+		kill_country_leader = yes
+		set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+		SMC = {
+			transfer_state = 982
+			transfer_state = 979
+			transfer_state = 286
+			transfer_state = 821
+			transfer_state = 820
+			
+			hidden_effect = {
+				inherit_technology = DAI
+				load_oob = "SMC_civil_war"
+				
+				add_state_core = 982
+				add_state_core = 979
+				add_state_core = 286
+				add_state_core = 821
+				add_state_core = 820
+				
+				add_state_claim = 880
+				add_state_claim = 671
+				add_state_claim = 816
+				add_state_claim = 815
+				add_state_claim = 822
+				add_state_claim = 818
+				add_state_claim = 817
+				add_state_claim = 981
+			}
+			declare_war_on = {
+				target = DAI
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = dainam.99
+	title = dainam.99.t
+	desc = dainam.99.desc
+	#picture = GFX_saigon_protest
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.99.a
+		ai_chance = { factor = 100 }
+	}
+}
+country_event = {
+	id = dainam.100
+	title = dainam.100.t
+	desc = dainam.100.desc
+	picture = GFX_saigon_protest
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = dainam.100.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.05
+		custom_effect_tooltip = "The Indochinese anti-colonial movement grows more powerful..."
+	}
+}

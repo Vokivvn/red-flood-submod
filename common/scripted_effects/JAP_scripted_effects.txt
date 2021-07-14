@@ -1,0 +1,514 @@
+JAP_civil_war = {
+	JPR = { 
+		set_country_flag = red_sun_rising 
+	}
+	536 = {
+		add_core_of = JPR
+	}
+	282 = {
+		add_core_of = JPR
+	}
+	904 = {
+		add_core_of = JPR
+	}
+	903 = {
+		add_core_of = JPR
+	}
+	908 = {
+		add_core_of = JPR
+	}
+	907 = {
+		add_core_of = JPR
+	}
+	531 = {
+		add_core_of = JPR
+	}
+	532 = {
+		add_core_of = JPR
+	}
+	JPR = {
+		set_state_owner = 536
+		set_state_controller = 536
+		set_state_owner = 282
+		set_state_controller = 282
+		set_state_owner = 904
+		set_state_controller = 904
+		set_state_owner = 903
+		set_state_controller = 903
+		set_state_owner = 908
+		set_state_controller = 908
+		set_state_owner = 907
+		set_state_controller = 907
+		set_state_owner = 531
+		set_state_controller = 531
+		set_state_owner = 532
+		set_state_controller = 532
+		declare_war_on = {
+			target = JAP
+			type = annex_everything
+		}
+		hidden_effect = {
+			inherit_technology = JAP
+			load_oob = "JPR_civil_war"
+			every_state = {
+				limit = {
+					is_owned_by = JAP
+					is_core_of = JAP
+				}
+				add_core_of = JPR
+			}
+		}
+	}
+	JAP = {
+		end_puppet = KOR
+		end_puppet = MAN
+		end_puppet = DAI
+		DAI = {
+			drop_cosmetic_tag = yes
+			remove_ideas = DAI_acolonialstate
+			remove_ideas = DAI_united
+			country_event = {
+				id = dainam.1
+				days = 10
+			}
+		}
+		diplomatic_relation = {
+			country = MAN
+			relation = military_access
+			active = yes
+		}
+		diplomatic_relation = {
+			country = BYJ
+			relation = military_access
+			active = yes
+		}
+		diplomatic_relation = {
+			country = KOR
+			relation = military_access
+			active = yes
+		}
+		diplomatic_relation = {
+			country = SMC
+			relation = military_access
+			active = yes
+		}
+		country_event = { days = 7 id = japan.25 }
+		KOR = {
+			country_event = {
+				id = kor.100
+				days = 14
+			}
+		}
+		country_event = {
+			id = news.10
+			days = 2
+		}
+		JAP = {
+			#Capital ships
+			transfer_ship = {
+				type = battleship
+				target = JPR
+			}
+			transfer_ship = {
+				type = battle_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = battleship
+				target = JPR
+			}
+			transfer_ship = {
+				type = battleship
+				target = JPR
+			}
+			transfer_ship = {
+				type = battleship
+				target = JPR
+			}
+			transfer_ship = {
+				type = battleship
+				target = JPR
+			}
+			#HCs
+			transfer_ship = {
+				type = heavy_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = heavy_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = heavy_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = heavy_cruiser
+				target = JPR
+			}
+			#LCs
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = JPR
+			}
+			#destroyers
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JPR
+			}
+			#subs
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+			transfer_ship = {
+				type = submarine
+				target = JPR
+			}
+		}
+	}
+}

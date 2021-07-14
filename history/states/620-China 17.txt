@@ -1,0 +1,21 @@
+state=
+{
+	id=620
+	name="STATE_620" # Hubei
+	manpower = 26553440
+
+	state_category = large_town
+	history=
+	{
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	provinces={
+		4009 7019 7596 7609 7948 8072 10474 12408
+	}
+}

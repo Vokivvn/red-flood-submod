@@ -1,0 +1,1266 @@
+focus_tree = {
+	id = WRU
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = WRU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1400 }
+	focus = {
+		id = WRU_avalov_fief
+		icon = GFX_goal_WRU_avalov_fief
+		x = 15
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_political_power = 75
+			country_event = {
+				id = wru.1
+			}
+		}
+	}
+	focus = {
+		id = WRU_making_gains
+		icon = GFX_goal_WRU_making_gains
+		x = 17
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_avalov_fief }
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = RUS modifier = medium_increase }
+			RUS = { add_opinion_modifier = { target = WRU modifier = medium_increase } }
+			add_opinion_modifier = { target = FIN modifier = medium_increase }
+			FIN = { add_opinion_modifier = { target = WRU modifier = medium_increase } }
+		}
+	}
+	focus = {
+		id = WRU_russification
+		icon = GFX_goal_WRU_russification
+		x = 15
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_avalov_fief }
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = WRU_reward_army_loyalty
+		icon = GFX_goal_WRU_reward_army_loyalty
+		x = 13
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_avalov_fief }
+		available = {
+			
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WRU_reward_freikorps
+		icon = GFX_goal_WRU_reward_freikorps
+		x = 13
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_reward_army_loyalty }
+		available = {
+			
+		}
+		completion_reward = {
+			add_manpower = 5000
+			add_opinion_modifier = { target = PRS modifier = medium_increase }
+			PRS = { add_opinion_modifier = { target = WRU modifier = medium_increase } }
+		}
+	}
+	focus = {
+		id = WRU_army_with_the_state
+		icon = GFX_goal_WRU_army_with_the_state
+		x = 13
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_reward_freikorps }
+		available = {
+			
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = WRU_encourage_settlement
+		icon = GFX_goal_WRU_encourage_settlement
+		x = 15
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_russification }
+		available = {
+			
+		}
+		completion_reward = {
+			add_timed_idea = { idea = WRU_russiansettlement days = 100 }
+		}
+	}
+	focus = {
+		id = WRU_cultural_societies
+		icon = GFX_goal_WRU_cultural_societies
+		x = 15
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_encourage_settlement }
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = WRU_central_gov_contracts
+		icon = GFX_goal_WRU_central_gov_contracts
+		x = 17
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_making_gains }
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = WRU_gov_contracts
+		}
+	}
+	focus = {
+		id = WRU_export_econ
+		icon = GFX_goal_WRU_export_econ
+		x = 17
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_central_gov_contracts }
+		available = {
+			
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRU_gov_contracts
+				add_idea = WRU_gov_contracts_1
+			}
+		}
+	}
+	focus = {
+		id = WRU_mon13
+		icon = GFX_goal_WRU_mon13
+		x = 15
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		
+		}
+		prerequisite = { focus = WRU_export_econ }
+		prerequisite = { focus = WRU_army_with_the_state }
+		prerequisite = { focus = WRU_cultural_societies }
+		completion_reward = {
+			RUS = {
+				end_puppet = WRU
+			}
+			set_cosmetic_tag = WRU_independent
+			country_event = {
+				id = wru.11
+				days = 9
+			}
+		}
+	}
+	focus = {
+		id = WRU_wartime_measures
+		icon = GFX_goal_WRU_wartime_measures
+		x = 18
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_mon13 }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_war_support = 0.02
+		}
+	}
+	focus = {
+		id = WRU_ask_military_support
+		icon = GFX_goal_WRU_ask_military_support
+		x = 15
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_mon13 }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = WRU_wartime_econ
+		icon = GFX_goal_WRU_wartime_econ
+		x = 10
+		y = 5
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_mon13 }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_war_support = 0.03
+			1058 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = WRU_expand_paramilitaries
+		icon = GFX_goal_WRU_expand_paramilitaries
+		x = 18
+		y = 6
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_wartime_measures }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = -25
+			add_ideas = WRU_paramilitary_conscription
+		}
+	}
+	focus = {
+		id = WRU_alliance_w_russian_minorities
+		icon = GFX_goal_WRU_alliance_w_russian_minorities
+		x = 18
+		y = 7
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_expand_paramilitaries }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = WRU_minorities_conscription
+		}
+	}
+	focus = {
+		id = WRU_patrol_the_forests
+		icon = GFX_goal_WRU_patrol_the_forests
+		x = 18
+		y = 8
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_alliance_w_russian_minorities }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = -150
+			swap_ideas = {
+				remove_idea = WRU_minorities_conscription
+				add_idea = WRU_minorities_conscription_1
+			}
+		}
+	}
+	focus = {
+		id = WRU_freikorps_support
+		icon = GFX_goal_WRU_freikorps_support
+		x = 14
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_ask_military_support }
+		mutually_exclusive = { focus = WRU_russian_support }
+		available = {
+			has_country_flag = WRU_freikorps_support_unlock
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = PRS
+			}
+		}
+	}
+	focus = {
+		id = WRU_reward_loyal
+		icon = GFX_goal_WRU_reward_loyal
+		x = 14
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_freikorps_support }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WRU_ask_prussia_help
+		icon = GFX_goal_WRU_ask_prussia_help
+		x = 14
+		y = 8
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_reward_loyal }
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = PRS
+			}
+			add_opinion_modifier = {
+				target = PRS
+				modifier = medium_increase
+			}
+		}
+	}
+	focus = {
+		id = WRU_russian_support
+		icon = GFX_goal_WRU_russian_support
+		x = 16
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_ask_military_support }
+		mutually_exclusive = { focus = WRU_freikorps_support }
+		available = {
+			has_country_flag = WRU_russian_support_unlock
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 1000
+				producer = RUS
+			}
+		}
+	}
+	focus = {
+		id = WRU_united_under_avalov
+		icon = GFX_goal_WRU_united_under_avalov
+		x = 16
+		y = 7
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_russian_support }
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = WRU_call_to_fatherland
+		icon = GFX_goal_WRU_call_to_fatherland
+		x = 16
+		y = 8
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_united_under_avalov }
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 10000
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = WRU_nationalize_union
+		icon = GFX_goal_WRU_nationalize_union
+		x = 8
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_wartime_econ }
+		mutually_exclusive = { focus = WRU_nationalize_riga_shipyard }
+		mutually_exclusive = { focus = WRU_agricultural_communes }
+		available = {
+			has_country_flag = WRU_nationalize_union_unlock
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_radio_for_army
+		icon = GFX_goal_WRU_radio_for_army
+		x = 8
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_nationalize_union }
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 3
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = WRU_nationalize_riga_shipyard
+		icon = GFX_goal_WRU_nationalize_riga_shipyard
+		x = 10
+		y = 6
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_wartime_econ }
+		mutually_exclusive = { focus = WRU_nationalize_union }
+		mutually_exclusive = { focus = WRU_agricultural_communes }
+		available = {
+			has_country_flag = WRU_nationalize_rigas_shipyard_unlock
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_standing_fleet
+		icon = GFX_goal_WRU_standing_fleet
+		x = 10
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_nationalize_riga_shipyard }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+			navy_experience = 10
+		}
+	}
+	focus = {
+		id = WRU_agricultural_communes
+		icon = GFX_goal_WRU_agricultural_communes
+		x = 12
+		y = 6
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_wartime_econ }
+		mutually_exclusive = { focus = WRU_nationalize_riga_shipyard }
+		mutually_exclusive = { focus = WRU_nationalize_union }
+		available = {
+			has_country_flag = WRU_agricultural_communes_unlock
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_food_supplies_for_years_to_come
+		icon = GFX_goal_WRU_food_supplies_for_years_to_come
+		x = 12
+		y = 7
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_agricultural_communes }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = WRU_economic_security
+		icon = GFX_goal_WRU_economic_security
+		x = 10
+		y = 8
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = WRU_food_supplies_for_years_to_come
+			focus = WRU_standing_fleet
+			focus = WRU_radio_for_army
+		}
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = WRU_victory
+		icon = GFX_goal_WRU_victory
+		x = 15
+		y = 9
+		cost = 3
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_ask_prussia_help focus = WRU_call_to_fatherland }
+		prerequisite = { focus = WRU_patrol_the_forests }
+		prerequisite = { focus = WRU_economic_security }
+		available = {
+			has_country_flag = WRU_victory_focus_unlock
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_owned_by = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			hidden_effect = {
+				remove_ideas = {
+					WRU_paramilitary_conscription
+					WRU_minorities_conscription_1
+					WRU_yunarmija
+					WRU_patriotten_squads
+				}
+			}
+			remove_ideas = WRU_collapsed_economy
+			add_ideas = WRU_victorious_armies_of_avalov
+		}
+	}
+	focus = {
+		id = WRU_parade
+		icon = GFX_goal_WRU_parade
+		x = 15
+		y = 10
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_victory }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+			country_event = {
+				id = wru.33
+			}
+		}
+	}
+	focus = {
+		id = WRU_russophiles_in_gov
+		icon = GFX_goal_WRU_russophiles_in_gov
+		x = 21
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_parade }
+		available = {
+			has_country_flag = WRU_russophiles_focus_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		id = WRU_autonomous_communes
+		icon = GFX_goal_WRU_autonomous_communes
+		x = 21
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_russophiles_in_gov }
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRU_revitalized_zemstvo
+		}
+	}
+	focus = {
+		id = WRU_sovet_whatever_zemel
+		icon = GFX_goal_WRU_sovet_whatever_zemel
+		x = 21
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_autonomous_communes }
+		available = {
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					WRU_victorious_armies_of_avalov
+					WRU_revitalized_zemstvo
+				}
+				add_ideas = WRU_council_of_baltic_lands
+			}
+			custom_effect_tooltip = "WRU_SOVIET_OF_BALTIC_LANDS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = WRU_restructuring_state
+		icon = GFX_goal_WRU_restructuring_state
+		x = 21
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_sovet_whatever_zemel }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = WRU_signs_of_relief
+		icon = GFX_goal_WRU_signs_of_relief
+		x = 21
+		y = 15
+		cost = 20
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_restructuring_state }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.25
+		}
+	}
+	focus = {
+		id = WRU_death_of_avalov
+		icon = GFX_goal_WRU_death_of_avalov
+		x = 21
+		y = 16
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_signs_of_relief }
+		available = {
+			has_country_flag = WRU_avalov_has_died
+		}
+		completion_reward = {
+			kill_country_leader = yes
+			hidden_effect = { kill_ideology_leader = despotism }
+			create_country_leader = {
+				name = "Council of Baltic Lands"
+				desc = "POLITICS_ALEXEI_II_DESC"
+				picture = "Portrait_Baltic_Council.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democratism
+				traits = {
+					#popular_figurehead
+				}
+			}
+			remove_unit_leader = 199
+		}
+	}
+	focus = {
+		id = WRU_autonomy_within_russia
+		icon = GFX_goal_WRU_autonomy_within_russia
+		x = 21
+		y = 17
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_death_of_avalov }
+		available = {
+			SRU = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			RUS = {
+				change_tag_from = WRU
+			}
+			every_unit_leader = {
+				set_nationality = RUS
+			}
+			RUS = {
+				annex_country = {
+					target = WRU
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_invite_BORT
+		icon = GFX_goal_WRU_invite_BORT
+		x = 15
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_parade }
+		available = {
+			has_country_flag = WRU_brotherhood_focus_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = wru.34
+			}
+		}
+	}
+	focus = {
+		id = WRU_retvrn_rights_to_german_aristocracy
+		icon = GFX_goal_WRU_retvrn_rights_to_german_aristocracy
+		x = 10
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_parade }
+		available = {
+			has_country_flag = WRU_germanophiles_focus_unlock
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = WRU_purge_partisan_remnants
+		icon = GFX_goal_WRU_purge_partisan_remnants
+		x = 10
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_retvrn_rights_to_german_aristocracy }
+		available = {
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_owned_by = WRU
+				}
+				add_manpower = -1000
+			}
+		}
+	}
+	focus = {
+		id = WRU_visit_to_prussia
+		icon = GFX_goal_WRU_visit_to_prussia
+		x = 10
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_purge_partisan_remnants }
+		available = {
+		}
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = {
+					target = WRU
+					modifier = large_increase
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_grey_pact
+		icon = GFX_goal_WRU_grey_pact
+		x = 10
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_visit_to_prussia }
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = wru.36
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_cement_legitimacy
+		icon = GFX_goal_WRU_cement_legitimacy
+		x = 12
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_grey_pact }
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		id = WRU_german_contracts
+		icon = GFX_goal_WRU_german_contracts
+		x = 8
+		y = 15
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_grey_pact }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 25
+			PRS = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+			WRU = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+		}
+	}
+	focus = {
+		id = WRU_invite_germans
+		icon = GFX_goal_WRU_invite_germans
+		x = 14
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_cement_legitimacy }
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRU_neue_ostsiedlung
+		}
+	}
+	focus = {
+		id = WRU_riga_shipyard_useful
+		icon = GFX_goal_WRU_riga_shipyard_useful
+		x = 6
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_german_contracts }
+		available = {
+		}
+		completion_reward = {
+			1058 = {
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			navy_experience = 20
+		}
+	}
+	focus = {
+		id = WRU_steady_as_it_goes
+		icon = GFX_goal_WRU_steady_as_it_goes
+		x = 10
+		y = 17
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_invite_germans}
+		prerequisite = { focus = WRU_riga_shipyard_useful }
+		available = {
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = WRU_expand_agricultural_sector
+		icon = GFX_goal_WRU_expand_agricultural_sector
+		x = 8
+		y = 18
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_steady_as_it_goes }
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRU_neue_ostsiedlung
+				add_idea = WRU_neue_ostsiedlung_1
+			}
+		}
+	}
+	focus = {
+		id = WRU_modern_agriculture
+		icon = GFX_goal_WRU_modern_agriculture
+		x = 8
+		y = 19
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_steady_as_it_goes }
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = WRU_neue_ostsiedlung_1
+				add_idea = WRU_neue_ostsiedlung_2
+			}
+		}
+	}
+	focus = {
+		id = WRU_prepare_soldiers
+		icon = GFX_goal_WRU_prepare_soldiers
+		x = 10
+		y = 18
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_steady_as_it_goes }
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRU_victorious_armies_of_avalov
+				add_idea = WRU_baltic_german_army
+			}
+		}
+	}
+	focus = {
+		id = WRU_propaganda
+		icon = GFX_goal_WRU_propaganda
+		x = 10
+		y = 19
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_prepare_soldiers }
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRU_baltic_prussian_unity_prop
+		}
+	}
+	focus = {
+		id = WRU_making_profits
+		icon = GFX_goal_WRU_making_profits
+		x = 12
+		y = 18
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_steady_as_it_goes }
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRU_tank_shipments
+		icon = GFX_goal_WRU_tank_shipments
+		x = 12
+		y = 19
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_making_profits }
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 100
+				producer = PRS
+			}
+		}
+	}
+	focus = {
+		id = WRU_teutonic_charge
+		icon = GFX_goal_WRU_teutonic_charge
+		x = 10
+		y = 20
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_tank_shipments }
+		prerequisite = { focus = WRU_propaganda }
+		prerequisite = { focus = WRU_modern_agriculture }
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = "WRU_TEUTONIC_CHARGE_TOOLTIP"
+			hidden_effect = {
+				remove_ideas = {
+					WRU_baltic_prussian_unity_prop
+					WRU_baltic_german_army
+					WRU_neue_ostsiedlung_2
+				}
+				add_ideas = WRU_teutonic_charge_idea
+			}
+			add_war_support = 0.3
+		}
+	}
+	focus = {
+		id = WRU_kettler_the_second
+		icon = GFX_goal_WRU_kettler_the_second
+		x = 10
+		y = 21
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = { focus = WRU_teutonic_charge }
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = 0.3
+			set_cosmetic_tag = WRU_OST
+		}
+	}
+}

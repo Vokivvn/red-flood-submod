@@ -1,0 +1,141 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = ENG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Tank Brigade"
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+	}
+}
+units = {
+    ####Military Units####
+    ####Main Land
+division= {
+	     name = "Prague Division"
+	     location = 11542
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Plzen Division"
+	     location = 6418
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Brno Division"
+	     location = 3569
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Sudeten Division"
+	     location = 6470
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Slovak Division"
+	     location = 6573
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Bratislava Division"
+	     location = 9692
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "East Sudeten Division"
+	     location = 6485
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Cavalry Division"
+	     location = 9541
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Tank Division"
+	     location = 583
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Tank Division"
+	     location = 555
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+}
+air_wings = {
+	### Bohemia -- Prague
+	9 = {
+		fighter_equipment_0 =  {
+			owner = "CZE" 
+			amount = 60
+		}
+	}
+	### Slovakia -- Bratislava
+	70 = {
+		fighter_equipment_0 =  {
+			owner = "CZE" 
+			amount = 40
+		}
+	}
+	## Moravia
+	75 = {
+		fighter_equipment_0 = {
+			owner = "CZE" 
+			amount = 40
+		}
+	}
+}

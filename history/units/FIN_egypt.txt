@@ -1,0 +1,51 @@
+division_template = {
+	name = "Fenno-Egyptian Soldiers"  		# Cavalry Division
+	division_names_group = FIN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+}
+units = {
+	division = {
+		name = "1. Fenno-egyptiläinen Divisioona"
+		location = 4076
+		division_template = "Fenno-Egyptian Soldiers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2. Fenno-egyptiläinen Divisioona"
+		location = 4076
+		division_template = "Fenno-Egyptian Soldiers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "3. Fenno-egyptiläinen Divisioona"
+		location = 12049
+		division_template = "Fenno-Egyptian Soldiers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "4. Fenno-egyptiläinen Divisioona"
+		location = 12049
+		division_template = "Fenno-Egyptian Soldiers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "6. Fenno-egyptiläinen Divisioona"
+		location = 1071
+		division_template = "Fenno-Egyptian Soldiers"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+}

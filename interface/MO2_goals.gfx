@@ -1,0 +1,268 @@
+spriteTypes = {
+	##Icon For:
+	SpriteType = {
+		name = "GFX_focus_abolishthemilitarydistricts"
+		texturefile = "gfx/interface/goals/MO2/abolishthemilitarydistricts.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_aircraftpurchases"
+		texturefile = "gfx/interface/goals/MO2/aircraftpurchases.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_alignthemongolprinces"
+		texturefile = "gfx/interface/goals/MO2/alignthemongolprinces.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_allforataman"
+		texturefile = "gfx/interface/goals/MO2/allforataman.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_andcharge"
+		texturefile = "gfx/interface/goals/MO2/andcharge.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_anewidentity"
+		texturefile = "gfx/interface/goals/MO2/anewidentity.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_anindependentrepublic"
+		texturefile = "gfx/interface/goals/MO2/anindependentrepublic.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_atamanofallmongols"
+		texturefile = "gfx/interface/goals/MO2/atamanofallmongols.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_beginindustrialisation"
+		texturefile = "gfx/interface/goals/MO2/beginindustrialisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_churchsupport"
+		texturefile = "gfx/interface/goals/MO2/churchsupport.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_cossacknationalism"
+		texturefile = "gfx/interface/goals/MO2/cossacknationalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_cossackprotection"
+		texturefile = "gfx/interface/goals/MO2/cossackprotection.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_crushthebandits"
+		texturefile = "gfx/interface/goals/MO2/crushthebandits.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_disciplinethecossacks"
+		texturefile = "gfx/interface/goals/MO2/disciplinethecossacks.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_districtmilitias"
+		texturefile = "gfx/interface/goals/MO2/districtmilitias.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_economyofviolence"
+		texturefile = "gfx/interface/goals/MO2/economyofviolence.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_educationprograms"
+		texturefile = "gfx/interface/goals/MO2/educationprograms.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_electrification"
+		texturefile = "gfx/interface/goals/MO2/electrification.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_expandthelogisticsdepartment"
+		texturefile = "gfx/interface/goals/MO2/expandthelogisticsdepartment.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_expandtherailway"
+		texturefile = "gfx/interface/goals/MO2/expandtherailway.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_fareasttradingcompany"
+		texturefile = "gfx/interface/goals/MO2/fareasttradingcompany.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_fatherlandforall"
+		texturefile = "gfx/interface/goals/MO2/fatherlandforall.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_formthefareastrepublic"
+		texturefile = "gfx/interface/goals/MO2/formthefareastrepublic.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_fundtheschools"
+		texturefile = "gfx/interface/goals/MO2/fundtheschools.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_greatvisionary"
+		texturefile = "gfx/interface/goals/MO2/greatvisionary.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_hunterregiments" 
+		texturefile = "gfx/interface/goals/MO2/hunterregiments.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_imperialpact"
+		texturefile = "gfx/interface/goals/MO2/imperialpact.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_localblackhundredschapter"
+		texturefile = "gfx/interface/goals/MO2/localblackhundredschapter.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_loyalofficers"
+		texturefile = "gfx/interface/goals/MO2/loyalofficers.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_machineandmaneuver"
+		texturefile = "gfx/interface/goals/MO2/machineandmaneuver.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_manofthepeople"
+		texturefile = "gfx/interface/goals/MO2/manofthepeople.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_modernisetheagriculture"
+		texturefile = "gfx/interface/goals/MO2/modernisetheagriculture.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_negotiatewithharbin"
+		texturefile = "gfx/interface/goals/MO2/negotiatewithharbin.dds"
+	}
+		SpriteType = {
+		name = "GFX_focus_northernterror"
+		texturefile = "gfx/interface/goals/MO2/northernterror.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_obstacletoglory"
+		texturefile = "gfx/interface/goals/MO2/obstacletoglory.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_onelanguage"
+		texturefile = "gfx/interface/goals/MO2/onelanguage.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_onetorulethemall"
+		texturefile = "gfx/interface/goals/MO2/onetorulethemall.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_onwardstochina"
+		texturefile = "gfx/interface/goals/MO2/onwardstochina.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_organiseacoup"
+		texturefile = "gfx/interface/goals/MO2/organiseacoup.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_pacificties"
+		texturefile = "gfx/interface/goals/MO2/pacificties.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_penallabour"
+		texturefile = "gfx/interface/goals/MO2/penallabour.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_planswithzheltorossia"
+		texturefile = "gfx/interface/goals/MO2/planswithzheltorossia.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_raceformongolia"
+		texturefile = "gfx/interface/goals/MO2/raceformongolia.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_readyforsiberia"
+		texturefile = "gfx/interface/goals/MO2/readyforsiberia.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_readythecossacks"
+		texturefile = "gfx/interface/goals/MO2/readythecossacks.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_reclaimthedesert"
+		texturefile = "gfx/interface/goals/MO2/reclaimthedesert.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_rejuvenatethecities"
+		texturefile = "gfx/interface/goals/MO2/rejuvenatethecities.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_ridoftheanarchy"
+		texturefile = "gfx/interface/goals/MO2/ridoftheanarchy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_russiandemocracy"
+		texturefile = "gfx/interface/goals/MO2/russiandemocracy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_securechahar"
+		texturefile = "gfx/interface/goals/MO2/securechahar.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_securetherailway"
+		texturefile = "gfx/interface/goals/MO2/securetherailway.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_siberianarmy"
+		texturefile = "gfx/interface/goals/MO2/siberianarmy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_siberiandespot"
+		texturefile = "gfx/interface/goals/MO2/siberiandespot.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_solvethecorruption"
+		texturefile = "gfx/interface/goals/MO2/solvethecorruption.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_solvethepoverty"
+		texturefile = "gfx/interface/goals/MO2/solvethepoverty.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_statewithanarmy"
+		texturefile = "gfx/interface/goals/MO2/statewithanarmy.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_talkswithharbin"
+		texturefile = "gfx/interface/goals/MO2/talkswithharbin.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_territorialsecurity"
+		texturefile = "gfx/interface/goals/MO2/territorialsecurity.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_thefirstelections"
+		texturefile = "gfx/interface/goals/MO2/thefirstelections.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_theminorities"
+		texturefile = "gfx/interface/goals/MO2/theminorities.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_therailwayassociation"
+		texturefile = "gfx/interface/goals/MO2/therailwayassociation.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_theswissmodel"
+		texturefile = "gfx/interface/goals/MO2/theswissmodel.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_thetrial"
+		texturefile = "gfx/interface/goals/MO2/thetrial.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_tohellwithkolchak"
+		texturefile = "gfx/interface/goals/MO2/tohellwithkolchak.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_wagereform"
+		texturefile = "gfx/interface/goals/MO2/wagereform.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_wintersoldiers"
+		texturefile = "gfx/interface/goals/MO2/wintersoldiers.dds"
+	}
+
+}

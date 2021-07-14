@@ -1,0 +1,4796 @@
+focus_tree = {
+id = france
+	country = {
+		factor=0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+	continuous_focus_position = { x = 850 y = 1350 }
+default = no
+
+#Domestic
+	focus = {
+		id = FRA_artistic_state
+		icon = GFX_focus_FRA_artistic_state
+		x = 17
+		y = 0
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	#Internal
+	focus = {
+		id = FRA_secure_internal_stability
+		icon = GFX_focus_FRA_secure_internal_stability
+		x = -10
+		y = 3
+		relative_position_id = FRA_artistic_state
+		prerequisite = {
+			focus = FRA_act_of_confederation
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.32
+			}
+		}
+	}
+	focus = {
+		id = FRA_recognize_minority_languages
+		icon = GFX_focus_FRA_recognize_minority_languages
+		x = 0
+		y = 1
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_secure_internal_stability
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_act_of_confederation_manpower_1
+				add_idea = FRA_act_of_confederation_manpower_2
+			}
+		}
+	}
+	focus = {
+		id = FRA_province_development
+		icon = GFX_focus_FRA_province_development
+		x = 0
+		y = 2
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_recognize_minority_languages
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_act_of_confederation_stability_1
+				add_idea = FRA_act_of_confederation_stability_2
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 1007
+						state = 782
+						state = 514
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						state = 1007
+						state = 782
+						state = 514
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_la_metropole
+		icon = GFX_focus_FRA_la_metropole
+		x = -4
+		y = 3
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_province_development
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.31
+			}
+		}
+	}
+	focus = {
+		id = FRA_four_centers
+		icon = GFX_focus_FRA_four_centers
+		x = -4
+		y = 4
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_la_metropole
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_our_business_is_business
+		}
+	}
+	focus = {
+		id = FRA_dunkerque
+		icon = GFX_focus_FRA_dunkerque
+		x = -7
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_four_centers
+		}
+		cost = 5
+		
+		completion_reward = {
+			29 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = FRA_ensure_protection
+		icon = GFX_focus_FRA_ensure_protection
+		x = -7
+		y = 6
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_dunkerque
+		}
+		cost = 5
+		
+		completion_reward = {
+			29 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 575
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3536
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9500
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_the_city_that_will_never_fall
+		icon = GFX_focus_FRA_the_city_that_will_never_fall
+		x = -7
+		y = 7
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_ensure_protection
+		}
+		cost = 5
+		
+		completion_reward = {
+			29 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 575
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_marseilles
+		icon = GFX_focus_FRA_marseilles
+		x = -5
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_four_centers
+		}
+		cost = 5
+		
+		completion_reward = {
+			21 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = FRA_birthplace_of_the_patron
+		icon = GFX_focus_FRA_birthplace_of_the_patron
+		x = -5
+		y = 6
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_marseilles
+		}
+		cost = 5
+		
+		completion_reward = {
+			21 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 11834
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					instant_build = yes
+					province = 911
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_occitan_heritage
+		icon = GFX_focus_FRA_occitan_heritage
+		x = -5
+		y = 7
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_birthplace_of_the_patron
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_occitan_heritage
+		}
+	}
+	focus = {
+		id = FRA_brest
+		icon = GFX_focus_FRA_brest
+		x = -3
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_four_centers
+		}
+		cost = 5
+		
+		completion_reward = {
+			14 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = FRA_la_celtique
+		icon = GFX_focus_FRA_la_celtique
+		x = -3
+		y = 6
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_brest
+		}
+		cost = 5
+		
+		completion_reward = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = FRA_our_business_is_business
+					}
+					swap_ideas = {
+						remove_idea = FRA_our_business_is_business
+						add_idea = FRA_celtic_support
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = FRA_parisian_support
+					}
+					swap_ideas = {
+						remove_idea = FRA_parisian_support
+						add_idea = FRA_futuristic_centers
+					}
+				}
+			}
+			custom_effect_tooltip = FRA_la_celtique_tooltip
+		}
+	}
+	focus = {
+		id = FRA_celtic_futurism
+		icon = GFX_focus_FRA_celtic_futurism
+		x = -3
+		y = 7
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_la_celtique
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_brest_futurism
+		}
+	}
+	focus = {
+		id = FRA_paris
+		icon = GFX_focus_FRA_paris
+		x = -1
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_four_centers
+		}
+		cost = 5
+		
+		completion_reward = {
+			16 = {
+				add_extra_state_shared_building_slots = 3
+			}
+			hidden_effect ={
+				country_event = {
+					id = france.33
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_centre_of_futurist_world
+		icon = GFX_focus_FRA_centre_of_futurist_world
+		x = -1
+		y = 7
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_paris
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = FRA_our_business_is_business
+				}
+				swap_ideas = {
+					remove_idea = FRA_our_business_is_business
+					add_idea = FRA_parisian_support
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = FRA_celtic_support
+				}
+				swap_ideas = {
+					remove_idea = FRA_celtic_support
+					add_idea = FRA_futuristic_centers
+				}
+			}
+			custom_effect_tooltip = FRA_centre_of_futurist_world_tooltip
+		}
+	}
+	focus = {
+		id = FRA_futurist_paradise
+		icon = GFX_focus_FRA_futurist_paradise
+		x = -4
+		y = 8
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_centre_of_futurist_world
+		}
+		prerequisite = {
+			focus = FRA_celtic_futurism
+		}
+		prerequisite = {
+			focus = FRA_occitan_heritage
+		}
+		prerequisite = {
+			focus = FRA_the_city_that_will_never_fall
+		}
+		cost = 5
+		
+		completion_reward = {
+			remove_ideas = FRA_act_of_confederation_stability_2
+		}
+	}
+	focus = {
+		id = FRA_encourage_settlers
+		icon = GFX_focus_FRA_encourage_settlers
+		x = 3
+		y = 3
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_province_development
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_act_of_confederation_manpower_2
+				add_idea = FRA_act_of_confederation_manpower_3
+			}
+		}
+	}
+	focus = {
+		id = FRA_embrace_local_art
+		icon = GFX_focus_FRA_embrace_local_art
+		x = 1
+		y = 4
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_encourage_settlers
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_act_of_confederation_manpower_3
+				add_idea = FRA_act_of_confederation_manpower_4
+			}
+		}
+	}
+	focus = {
+		id = FRA_destory_native_populism
+		icon = GFX_focus_FRA_destory_native_populism
+		x = 1
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_embrace_local_art
+		}
+		cost = 5
+		
+		completion_reward = {
+			remove_ideas = FRA_act_of_confederation_pp_1
+		}
+	}
+	focus = {
+		id = FRA_les_colonies
+		icon = GFX_focus_FRA_les_colonies
+		x = 3
+		y = 6
+		relative_position_id = FRA_secure_internal_stability
+		prerequisite = {
+			focus = FRA_destory_native_populism
+		}
+		prerequisite = {
+			focus = FRA_forts_in_coastal_cities
+		}
+		prerequisite = {
+			focus = FRA_encourage_local_elites
+		}
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		cost = 5
+		
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					OR = {
+						state = 802
+						state = 459
+						state = 458
+						state = 513
+						state = 460
+						state = 665
+					}
+				}
+				add_core_of = FRA
+			}
+		}
+	}
+	focus = {
+		id = FRA_dakar_airport
+		icon = GFX_focus_FRA_dakar_airport
+		x = 3
+		y = 4
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_encourage_local_elites
+		}
+		cost = 5
+		
+		completion_reward = {
+			802 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = FRA_forts_in_coastal_cities
+		icon = GFX_focus_FRA_forts_in_coastal_cities
+		x = 3
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 694
+					state = 310
+				}
+				OR = {
+					is_owned_by = FRA
+					owner = { is_subject_of = FRA }
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_dakar_airport
+		}
+		cost = 5
+		
+		completion_reward = {
+			802 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 4948
+				}
+			}
+			310 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 12885
+				}
+			}
+			694 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 177
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_guinean_infrastructure
+		icon = GFX_focus_FRA_guinean_infrastructure
+		x = 5
+		y = 4
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 310
+					state = 694
+					state = 997
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_encourage_settlers
+		}
+		cost = 5
+		
+		completion_reward = {
+			310 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			694 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			997 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			802 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_encourage_local_elites
+		icon = GFX_focus_FRA_encourage_local_elites
+		x = 5
+		y = 5
+		relative_position_id = FRA_secure_internal_stability
+		available = {
+			any_state = {
+				OR = {
+					state = 802
+					state = 310
+					state = 694
+					state = 997
+				}
+				OR = {
+					is_owned_by = FRA
+					owner = { is_subject_of = FRA }
+				}
+			}
+		}
+		prerequisite = {
+			focus = FRA_guinean_infrastructure
+		}
+		cost = 5
+		
+		completion_reward = {
+			#remove_ideas = FRA_act_of_confederation_stability_2
+			every_state = {
+				limit = {
+					OR = {
+						state = 310
+						state = 694
+						state = 902
+						state = 997
+					}
+					OR = {
+						is_owned_by = FRA
+						owner = { is_subject_of = FRA }
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	#Acephale
+	focus = {
+		id = FRA_appease_the_acephale
+		icon = GFX_focus_FRA_appease_the_acephale
+		x = 0
+		y = 1
+		relative_position_id = FRA_artistic_state
+		prerequisite = {
+			focus = FRA_artistic_state
+		}
+		mutually_exclusive = {
+			focus = FRA_collaborate_with_the_escadron
+		}
+		mutually_exclusive = {
+			focus = FRA_howling_with_wolves
+		}
+		cost = 5
+		ai_will_do = { 
+		 	factor = 5
+	 	} 
+		completion_reward = {
+			country_event = {
+				id = france.27
+			}
+			add_political_power = 100
+			hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Antonin Artaud"
+					desc = "POLITICS_ANTONIN_ARTAUD_DESC"
+					picture = "Portriat_FRA_Antonin_Artaud_acephale.tga"
+					expire = "1965.1.1"
+					ideology = ethno_futurism
+					traits = {
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_act_of_confederation
+		icon = GFX_focus_FRA_act_of_confederation
+		x = 0
+		y = 1
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_appease_the_acephale
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.30
+				days = 1
+			}
+			remove_ideas = FRA_divided_nation
+		}
+	}
+	focus = {
+		id = FRA_free_trade_policies
+		icon = GFX_focus_FRA_free_trade_policies
+		x = -2
+		y = 2
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_act_of_confederation
+		}
+		mutually_exclusive = {
+			focus = FRA_embrace_black_market
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = free_trade
+			if = {
+				limit = {
+					has_idea = free_trade
+				}
+				add_political_power = 100
+			}
+		}
+	}
+	focus = {
+		id = FRA_expand_exports_of_media
+		icon = GFX_focus_FRA_expand_exports_of_media
+		x = -3
+		y = 3
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_free_trade_policies
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_media_exports
+			hidden_effect = {
+				country_event ={
+					id = france.211
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_french_cinema
+		icon = GFX_focus_FRA_french_cinema
+		x = -3
+		y = 4
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_expand_exports_of_media
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			hidden_effect ={
+				country_event = {
+					id = france.41
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_world_university_dunkerque
+		icon = GFX_focus_FRA_world_university_dunkerque
+		x = -3
+		y = 5
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_french_cinema
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_media_exports
+				add_idea = FRA_international_research
+			}
+		}
+	}
+	focus = {
+		id = FRA_develop_car_industry
+		icon = GFX_focus_FRA_develop_car_industry
+		x = -1
+		y = 3
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_free_trade_policies
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_car_industry
+		}
+	}
+	focus = {
+		id = FRA_sell_agricultural_resources
+		icon = GFX_focus_FRA_sell_agricultural_resources
+		x = -1
+		y = 5
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_develop_car_industry
+		}
+		cost = 5
+		
+		completion_reward = {
+			hidden_effect ={
+				swap_ideas = {
+					remove_idea = FRA_car_industry
+					add_idea = FRA_french_exports
+				}
+			}
+			custom_effect_tooltip = "FRA_sell_agricultural_resources_tooltip"
+		}
+	}
+	focus = {
+		id = FRA_french_things_to_all_continents
+		icon = GFX_focus_FRA_french_things_to_all_continents
+		x = -2
+		y = 6
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_world_university_dunkerque
+		}
+		prerequisite = {
+			focus = FRA_sell_agricultural_resources
+		}
+		cost = 5
+		
+		completion_reward = {
+			remove_ideas = {
+				FRA_french_exports
+				FRA_international_research
+			}
+			add_ideas = FRA_trade_powerhouse
+		}
+	}
+	focus = {
+		id = FRA_embrace_black_market
+		icon = GFX_focus_FRA_embrace_black_market
+		x = 2
+		y = 2
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_act_of_confederation
+		}
+		mutually_exclusive = {
+			focus = FRA_free_trade_policies
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = export_focus
+			if = {
+				limit = {
+					has_idea = export_focus
+				}
+				add_political_power = 100
+			}
+		}
+	}
+	focus = {
+		id = FRA_fund_wars
+		icon = GFX_focus_FRA_fund_wars
+		x = 1
+		y = 3
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_embrace_black_market
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	focus = {
+		id = FRA_develop_cheap_tanks
+		icon = GFX_focus_FRA_develop_cheap_tanks
+		x = 1
+		y = 4
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_fund_wars
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_cheap_tanks
+		}
+	}
+	focus = {
+		id = FRA_entertainment
+		icon = GFX_focus_FRA_entertainment
+		x = 1
+		y = 5
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_develop_cheap_tanks
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = FRA_trade_with_rouge_territories
+		icon = GFX_focus_FRA_trade_with_rouge_territories
+		x = 3
+		y = 3
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_embrace_black_market
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_rogue_states
+		}
+	}
+	focus = {
+		id = FRA_trading_with_the_UFC
+		icon = GFX_focus_FRA_trading_with_the_UFC
+		x = 3
+		y = 4
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_trade_with_rouge_territories
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_rogue_states
+				add_idea = FRA_ufc_trading
+			}
+		}
+	}
+	focus = {
+		id = FRA_connections_all_over_the_world
+		icon = GFX_focus_FRA_connections_all_over_the_world
+		x = 3
+		y = 5
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_trading_with_the_UFC
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_ufc_trading
+				add_idea = FRA_global_connections
+			}
+		}
+	}
+	focus = {
+		id = FRA_law_is_for_pussies
+		icon = GFX_focus_FRA_law_is_for_pussies
+		x = 2
+		y = 6
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_connections_all_over_the_world
+		}
+		prerequisite = {
+			focus = FRA_entertainment
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_global_connections
+				add_idea = FRA_lawless_trade
+			}
+		}
+	}
+	focus = {
+		id = FRA_beyond_marketplace
+		icon = GFX_focus_FRA_beyond_marketplace
+		x = 0
+		y = 7
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_law_is_for_pussies
+			focus = FRA_french_things_to_all_continents
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_hedonist_society
+		}
+	}
+	focus = {
+		id = FRA_most_brutal
+		icon = GFX_focus_FRA_most_brutal
+		x = 0
+		y = 8
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_beyond_marketplace
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.42
+			}
+		}
+	}
+	focus = {
+		id = FRA_freedom_act
+		icon = GFX_focus_FRA_freedom_act
+		x = 0
+		y = 10
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_freedom_love
+		}
+		cost = 5
+		
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = france.43
+					days = 7
+				}
+			}
+			swap_ideas = {
+				remove_idea = FRA_hedonist_society_2
+				add_idea = FRA_hedonist_society_3
+			}
+		}
+	}
+	focus = {
+		id = FRA_freedom_love
+		icon = GFX_focus_FRA_freedom_love
+		x = 0
+		y = 9
+		relative_position_id = FRA_appease_the_acephale
+		prerequisite = {
+			focus = FRA_most_brutal
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_hedonist_society_1
+				add_idea = FRA_hedonist_society_2
+			}
+		}
+	}
+	#Collaberate with the Escadron
+	focus = {
+		id = FRA_collaborate_with_the_escadron
+		icon = GFX_focus_FRA_collaborate_with_the_escadron
+		x = 10
+		y = 1
+		relative_position_id = FRA_artistic_state
+		prerequisite = {
+			focus = FRA_artistic_state
+		}
+		mutually_exclusive = {
+			focus = FRA_appease_the_acephale
+		}
+		mutually_exclusive = {
+			focus = FRA_howling_with_wolves
+		}
+		ai_will_do = { 
+		 	factor = 5
+	 	} 
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = {
+				FRA_eugene_schueller_eco_acc
+			}
+			hidden_effect = {
+				country_event = {
+					id = france.54
+					days = 20
+				}
+				country_event = {
+					id = france.209
+					days = 3
+				}
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Antonin Artaud"
+					desc = "POLITICS_ANTONIN_ARTAUD_DESC"
+					picture = "Portriat_FRA_Antonin_Artaud_escadron.tga"
+					expire = "1965.1.1"
+					ideology = ethno_futurism
+					traits = {
+					}
+				}
+				set_country_flag = fra_escadron
+			}
+		}
+	}
+	focus = {
+		id = FRA_brutes_with_culture
+		icon = GFX_focus_FRA_brutes_with_culture
+		x = -3
+		y = 1
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_collaborate_with_the_escadron
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = FRA_brute_culture_idea_1
+		}
+	}
+	focus = {
+		id = FRA_culture_of_speed
+		icon = GFX_focus_FRA_culture_of_speed
+		x = -3
+		y = 2
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_brutes_with_culture
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_brute_culture_idea_1
+				add_idea = FRA_brute_culture_idea_2
+			}
+			hidden_effect = {
+				country_event = {
+					id = france.28
+					days = 14
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_raise_street_warriors
+		icon = GFX_focus_FRA_raise_street_warriors
+		x = -3
+		y = 3
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_culture_of_speed
+		}
+		cost = 5
+		
+		
+		completion_reward = {
+			hidden_effect = {
+				division_template = {
+					name = "Street Warrior"
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+					}
+				}
+			random_owned_controlled_state = {
+				prioritize = { 16 }
+				create_unit = {
+								division = "name = \"Street Warrior\" division_template = \"Street Warrior\" start_experience_factor = 0.5"
+								owner = FRA
+				}
+				create_unit = {
+								division = "name = \"Street Warrior\" division_template = \"Street Warrior\" start_experience_factor = 0.5"
+								owner = FRA
+				}
+				create_unit = {
+								division = "name = \"Street Warrior\" division_template = \"Street Warrior\" start_experience_factor = 0.5"
+								owner = FRA
+				}
+			}
+			}
+			custom_effect_tooltip = FRA_raise_street_warriors_tooltip
+		}
+	}
+	focus = {
+		id = FRA_expand_our_ranks
+		icon = GFX_focus_FRA_expand_our_ranks
+		x = -3
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_raise_street_warriors
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_brute_culture_idea_2
+				add_idea = FRA_brute_culture_idea_3
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 1000
+				producer = FRA
+			}
+		}
+	}
+	focus = {
+		id = FRA_end_perverted_societies
+		icon = GFX_focus_FRA_end_perverted_societies
+		x = -3
+		y = 5
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_expand_our_ranks
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = FRA_centralise_corporate_structure
+		icon = GFX_focus_FRA_centralise_corporate_structure
+		x = 1
+		y = 1
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_collaborate_with_the_escadron
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_centralised_corporate_1
+			swap_ideas = {
+				remove_idea = FRA_divided_nation
+				add_idea = FRA_corporate_state
+			}
+		}
+	}
+	focus = {
+		id = FRA_state_beyond_labor
+		icon = GFX_focus_FRA_state_beyond_labor
+		x = 1
+		y = 3
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_centralise_corporate_structure
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_centralised_corporate_1
+				add_idea = FRA_centralised_corporate_2
+			}
+		}
+	}
+	focus = {
+		id = FRA_heroic_capitalism
+		icon = GFX_focus_FRA_heroic_capitalism
+		x = 0
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_state_beyond_labor
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_heroic_capitalism_idea
+		}
+	}
+	focus = {
+		id = FRA_all_national_front_of_labour
+		icon = GFX_focus_FRA_all_national_front_of_labour
+		x = 2
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_state_beyond_labor
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_united_labour_front_idea
+				remove_idea = FRA_centralised_corporate_2
+			}
+		}
+	}
+	focus = {
+		id = FRA_united_for_art
+		icon = GFX_focus_FRA_united_for_art
+		x = 1
+		y = 5
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_all_national_front_of_labour
+		}
+		prerequisite = {
+			focus = FRA_heroic_capitalism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = {
+				country_event = {
+					id = 210
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_modernisation_without_mercy
+		icon = GFX_focus_FRA_modernisation_without_mercy
+		x = -1
+		y = 6
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_united_for_art
+		}
+		prerequisite = {
+			focus = FRA_end_perverted_societies
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_brute_culture_idea_4
+				remove_idea = FRA_brute_culture_idea_3
+			}
+			add_manpower = -10000
+		}
+	}
+	focus = {
+		id = FRA_on_ruins_of_old
+		icon = GFX_focus_FRA_on_ruins_of_old
+		x = -1
+		y = 7
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_modernisation_without_mercy
+		}
+		cost = 5
+		
+		completion_reward = {
+			
+			add_ideas = FRA_brute_culture_idea_5
+			remove_ideas = {
+				FRA_brute_culture_idea_4
+				FRA_heroic_capitalism_idea
+				FRA_united_labour_front_idea
+			}
+			hidden_effect = {
+				every_owned_state = {
+					remove_building = {
+						type = infrastructure
+						level = 1
+					}
+					remove_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			custom_effect_tooltip = FRA_on_ruins_of_old_tooltip
+		}
+	}
+	focus = {
+		id = FRA_warrior_priests
+		icon = GFX_focus_FRA_warrior_priests
+		x = -2
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_on_ruins_of_old
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_warrior_priests_idea
+		}
+	}
+	focus = {
+		id = FRA_children_of_the_patron
+		icon = GFX_focus_FRA_children_of_the_patron
+		x = 0
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_on_ruins_of_old
+		}
+		cost = 5
+		completion_reward = {
+			add_ideas = FRA_enfants_du_patron
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = FRA_promote_homoeroticism
+		icon = GFX_focus_FRA_promote_homoeroticism
+		x = -3
+		y = 9
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_children_of_the_patron
+		}
+		prerequisite = {
+			focus = FRA_warrior_priests
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_embrace_countryside
+		}
+		mutually_exclusive = {
+			focus = FRA_state_vandalism
+		}		
+		completion_reward = {
+			add_ideas = FRA_homoeroticism
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = FRA_end_feminism
+		icon = GFX_focus_FRA_end_feminism
+		x = -3
+		y = 10
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_promote_homoeroticism
+			focus = FRA_state_vandalism
+			focus = FRA_embrace_countryside
+		}
+		cost = 5
+		
+		mutually_exclusive = {
+			focus = FRA_dialectics_of_gun_and_boot
+		}
+		mutually_exclusive = {
+			focus = FRA_rebirth_of_gnostic_faith
+		}	
+		completion_reward = {
+			army_experience = 20
+		}
+	}
+	focus = {
+		id = FRA_fast_life
+		icon = GFX_focus_FRA_fast_life
+		x = -3
+		y = 11
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_end_feminism
+			focus = FRA_dialectics_of_gun_and_boot
+			focus = FRA_rebirth_of_gnostic_faith
+		}
+		cost = 5
+		
+		mutually_exclusive = {
+			focus = FRA_militarism_as_a_cure
+		}
+		mutually_exclusive = {
+			focus = FRA_techno_catharism
+		}	
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = FRA_man_of_new_modernity
+		icon = GFX_focus_FRA_man_of_new_modernity
+		x = -3
+		y = 12
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_fast_life
+			focus = FRA_militarism_as_a_cure
+			focus = FRA_techno_catharism
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_citoyen_soldat
+		}
+		mutually_exclusive = {
+			focus = FRA_fast_messiah
+		}	
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_homoeroticism
+				add_idea = FRA_new_man
+			}
+		}
+	}
+	focus = {
+		id = FRA_state_vandalism
+		icon = GFX_focus_FRA_state_vandalism
+		x = -1
+		y = 9
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_children_of_the_patron
+		}
+		prerequisite = {
+			focus = FRA_warrior_priests
+		}
+		mutually_exclusive = {
+			focus = FRA_promote_homoeroticism
+		}
+		mutually_exclusive = {
+			focus = FRA_embrace_countryside
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = FRA_dialectics_of_gun_and_boot
+		icon = GFX_focus_FRA_dialectics_of_gun_and_boot
+		x = -1
+		y = 10
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_promote_homoeroticism
+			focus = FRA_state_vandalism
+			focus = FRA_embrace_countryside
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_rebirth_of_gnostic_faith
+		}
+		mutually_exclusive = {
+			focus = FRA_end_feminism
+		}	
+		
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRA_militarism_as_a_cure
+		icon = GFX_focus_FRA_militarism_as_a_cure
+		x = -1
+		y = 11
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_end_feminism
+			focus = FRA_dialectics_of_gun_and_boot
+			focus = FRA_rebirth_of_gnostic_faith
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_fast_life
+		}
+		mutually_exclusive = {
+			focus = FRA_techno_catharism
+		}	
+		
+		completion_reward = {
+			add_ideas = FRA_militarism
+		}
+	}
+	focus = {
+		id = FRA_citoyen_soldat
+		icon = GFX_focus_FRA_citoyen_soldat
+		x = -1
+		y = 12
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_fast_life
+			focus = FRA_militarism_as_a_cure
+			focus = FRA_techno_catharism
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_man_of_new_modernity
+		}
+		mutually_exclusive = {
+			focus = FRA_fast_messiah
+		}	
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_militarism
+				add_idea = FRA_militarised_citizens
+			}
+		}
+	}
+	focus = {
+		id = FRA_embrace_countryside
+		icon = GFX_focus_FRA_embrace_countryside
+		x = 1
+		y = 9
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_children_of_the_patron
+		}
+		prerequisite = {
+			focus = FRA_warrior_priests
+		}
+		mutually_exclusive = {
+			focus = FRA_promote_homoeroticism
+		}
+		mutually_exclusive = {
+			focus = FRA_state_vandalism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_reclaimed_countryside
+		}
+	}
+	focus = {
+		id = FRA_rebirth_of_gnostic_faith
+		icon = GFX_focus_FRA_rebirth_of_gnostic_faith
+		x = 1
+		y = 10
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_promote_homoeroticism
+			focus = FRA_state_vandalism
+			focus = FRA_embrace_countryside
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_dialectics_of_gun_and_boot
+		}
+		mutually_exclusive = {
+			focus = FRA_end_feminism
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRA_techno_catharism
+		icon = GFX_focus_FRA_techno_catharism
+		x = 1
+		y = 11
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_end_feminism
+			focus = FRA_dialectics_of_gun_and_boot
+			focus = FRA_rebirth_of_gnostic_faith
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_militarism_as_a_cure
+		}
+		mutually_exclusive = {
+			focus = FRA_fast_life
+		}
+		
+		completion_reward = {
+			add_ideas = FRA_techno_catherism_idea
+		}
+	}
+	focus = {
+		id = FRA_fast_messiah
+		icon = GFX_focus_FRA_fast_messiah
+		x = 1
+		y = 12
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_fast_life
+			focus = FRA_militarism_as_a_cure
+			focus = FRA_techno_catharism
+		}
+		cost = 5
+		mutually_exclusive = {
+			focus = FRA_man_of_new_modernity
+		}
+		mutually_exclusive = {
+			focus = FRA_citoyen_soldat
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_techno_catherism_idea
+				add_idea = FRA_religious_futurism
+			}
+		}
+	}
+	focus = {
+		id = FRA_faster
+		icon = GFX_focus_FRA_faster
+		x = -1
+		y = 13
+		relative_position_id = FRA_collaborate_with_the_escadron
+
+		prerequisite = {
+			focus = FRA_citoyen_soldat
+			focus = FRA_man_of_new_modernity
+			focus = FRA_fast_messiah
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = FRA_terminal_velocity
+			remove_ideas = FRA_corporate_state
+		}
+	}
+	focus = {
+		id = FRA_escadron_for_all
+		icon = GFX_focus_FRA_escadron_for_all
+		x = 8
+		y = 1
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_collaborate_with_the_escadron
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = FRA_guerre_de_cultur
+		icon = GFX_focus_FRA_guerre_de_cultur
+		x = 8
+		y = 2
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_escadron_for_all
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_guerre_de_cultur_idea
+		}
+	}
+	focus = {
+		id = FRA_legacy_of_revolution
+		icon = GFX_focus_FRA_legacy_of_revolution
+		x = 5
+		y = 3
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_guerre_de_cultur
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = FRA_culture_of_free_spirits
+		icon = GFX_focus_FRA_culture_of_free_spirits
+		x = 4
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_legacy_of_revolution
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = FRA_oppose_vatican
+		icon = GFX_focus_FRA_oppose_vatican
+		x = 6
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_legacy_of_revolution
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_guerre_de_cultur_idea
+				add_idea = FRA_free_revolution
+			}
+			hidden_effect = {
+				country_event = {
+					id = france.10
+					days = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_communes_of_love
+		icon = GFX_focus_FRA_communes_of_love
+		x = 4
+		y = 5
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_oppose_vatican
+		}
+		prerequisite = {
+			focus = FRA_culture_of_free_spirits
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_free_love
+		}
+	}
+	focus = {
+		id = FRA_invite_new_sects
+		icon = GFX_focus_FRA_invite_new_sects
+		x = 6
+		y = 5
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_oppose_vatican
+		}
+		prerequisite = {
+			focus = FRA_culture_of_free_spirits
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_ideas = FRA_new_sects
+		}
+	}
+	focus = {
+		id = FRA_monopoly_on_reality
+		icon = GFX_focus_FRA_monopoly_on_reality
+		x = 3
+		y = 6
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_communes_of_love
+		}
+		prerequisite = {
+			focus = FRA_invite_new_sects
+		}
+		cost = 5
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_monopoly_on_reality_tooltip
+			hidden_effect = {
+				set_popularities = {
+					accelerationism = 1
+					reactionism = 0
+					despotism = 0 
+					right_authoritarianism = 0
+					conservatism = 0
+					liberalism = 0
+					social_democratism = 0
+					revisionist_socialism = 0
+					revolutionary_anarchism = 0
+					libertarian_marxism = 0
+					vanguard_socialism = 0
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_hear_the_voices
+		icon = GFX_focus_FRA_hear_the_voices
+		x = 5
+		y = 6
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_communes_of_love
+		}
+		prerequisite = {
+			focus = FRA_invite_new_sects
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_war_support = 0.1
+			country_event = {
+				id = france.12
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = FRA_all_knowing_patron
+		icon = GFX_focus_FRA_all_knowing_patron
+		x = 7
+		y = 6
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_communes_of_love
+		}
+		prerequisite = {
+			focus = FRA_invite_new_sects
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_omnipotent_patron
+			hidden_effect = {
+				country_event = {
+					id = france.11
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_ban_individual_existance
+		icon = GFX_focus_FRA_ban_individual_existance
+		x = 5
+		y = 7
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_hear_the_voices
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_united_futurism
+		}
+	}
+	focus = {
+		id = FRA_faster_than_time
+		icon = GFX_focus_FRA_faster_than_time
+		x = 3
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_ban_individual_existance
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_beyond_time
+			hidden_effect = {
+				country_event = {
+					id = france.207
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_collective_dream
+		icon = GFX_focus_FRA_collective_dream
+		x = 5
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_ban_individual_existance
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_dream_of_death
+		}
+	}
+	focus = {
+		id = FRA_speed_beyond_space
+		icon = GFX_focus_FRA_speed_beyond_space
+		x = 7
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_ban_individual_existance
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_beyond_space
+		}
+	}
+	focus = {
+		id = FRA_etat_irreal
+		icon = GFX_focus_FRA_etat_irreal
+		x = 5
+		y = 9
+		relative_position_id = FRA_collaborate_with_the_escadron
+		prerequisite = {
+			focus = FRA_collective_dream
+		}
+		cost = 5
+		
+		completion_reward = {
+			remove_ideas = {
+				FRA_dream_of_death
+				FRA_free_love
+				FRA_free_revolution
+			}
+			add_ideas = FRA_beyond_reality
+			set_cosmetic_tag = FRA_irreal
+		}
+	}
+	focus = {
+		id = FRA_artaud_prophet
+		icon = GFX_focus_FRA_artaud_prophet
+		x = 11
+		y = 3
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_guerre_de_cultur
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_african_recognition
+		}
+	}
+	focus = {
+		id = FRA_pan_islamic_congress
+		icon = GFX_focus_FRA_pan_islamic_congress
+		x = 10
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_artaud_prophet
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = 0.1
+			hidden_effect = {
+				country_event = {
+					id = france.13
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_fast_sword_of_allah
+		icon = GFX_focus_FRA_fast_sword_of_allah
+		x = 12
+		y = 4
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_artaud_prophet
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_futurist_sword_of_islam
+			hidden_effect = {
+				country_event = {
+					id = france.14
+				}
+				division_template = {
+					name = "Colonial Brigade"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						cavalry = { x = 1 y = 2 }
+					}
+				}
+				957 = {
+					create_unit = {
+						division = "name = \"Colonial Brigade\" division_template = \"Colonial Brigade\" start_experience_factor = 0.5"
+						owner = FRA
+					}
+				}
+				17 = {
+					create_unit = {
+						division = "name = \"Colonial Brigade\" division_template = \"Colonial Brigade\" start_experience_factor = 0.5"
+						owner = FRA
+					}
+				}
+				17 = {
+					create_unit = {
+						division = "name = \"Colonial Brigade\" division_template = \"Colonial Brigade\" start_experience_factor = 0.5"
+						owner = FRA
+					}
+				}
+				956 = {
+					create_unit = {
+						division = "name = \"Colonial Brigade\" division_template = \"Colonial Brigade\" start_experience_factor = 0.5"
+						owner = FRA
+					}
+				}
+			}
+			custom_effect_tooltip = FRA_fast_sword_of_allah_tooltip
+		}
+	}
+	focus = {
+		id = FRA_islam_of_the_future
+		icon = GFX_focus_FRA_islam_of_the_future
+		x = 11
+		y = 5
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_artaud_prophet
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_futurist_education
+			hidden_effect = {
+				country_event = {
+					id = france.15
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_comrades_in_faith
+		icon = GFX_focus_FRA_comrades_in_faith
+		x = 11
+		y = 6
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_islam_of_the_future
+		}
+		cost = 5
+		
+		completion_reward = {
+			458 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			459 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_embrace_anti_colonialism
+		icon = GFX_focus_FRA_embrace_anti_colonialism
+		x = 10
+		y = 7
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_comrades_in_faith
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_futurist_education
+				add_idea = FRA_futurist_arab_culture
+			}
+		}
+	}
+	focus = {
+		id = FRA_freedom_under_france
+		icon = GFX_focus_FRA_freedom_under_france
+		x = 12
+		y = 7
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_comrades_in_faith
+		}
+		cost = 5
+		
+		completion_reward = {
+			458 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			459 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_france_salaam
+		icon = GFX_focus_FRA_france_salaam
+		x = 11
+		y = 8
+		relative_position_id = FRA_collaborate_with_the_escadron
+		available = {
+			any_state = {
+				OR = {
+					state = 459
+					state = 458
+					state = 513
+					state = 460
+					state = 665
+				}
+				is_owned_by = FRA
+			}
+		}
+		prerequisite = {
+			focus = FRA_freedom_under_france
+			focus = FRA_embrace_anti_colonialism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_state_core = 458
+			add_state_core = 459
+			add_state_core = 460
+			add_state_core = 665
+			add_state_core = 513
+		}
+	}
+	#Howling with the Wolves
+	focus = {
+		id = FRA_howling_with_wolves
+		icon = GFX_focus_FRA_howling_with_wolves
+		x = 36
+		y = 1
+		relative_position_id = FRA_artistic_state
+		prerequisite = {
+			focus = FRA_artistic_state
+		}
+		mutually_exclusive = {
+			focus = FRA_appease_the_acephale
+			focus = FRA_collaborate_with_the_escadron
+		}
+		cost = 5
+		ai_will_do = { 
+		  factor = 5
+	    } 
+		completion_reward = {
+			add_ideas = FRA_wolves_wake
+			country_event = {
+				id = france.16
+			}
+			hidden_effect = {
+				country_event = {
+					id = france.17
+					days = 12
+				}
+				country_event = {
+					id = france.209
+					days = 3
+				}
+			}
+			add_political_power = 100
+			hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Antonin Artaud"
+					desc = "POLITICS_ANTONIN_ARTAUD_DESC"
+					picture = "Portriat_FRA_Antonin_Artaud_druidist.tga"
+					expire = "1965.1.1"
+					ideology = ethno_futurism
+					traits = {
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_celtic_state
+		icon = GFX_focus_FRA_celtic_state
+		x = -5
+		y = 1
+		relative_position_id = FRA_howling_with_wolves
+		available = {
+			has_country_flag = FRA_celtic_rebirth
+		}
+		prerequisite = {
+			focus = FRA_howling_with_wolves
+		}
+		mutually_exclusive = {
+			focus = FRA_away_with_the_state
+		}
+		cost = 5
+		ai_will_do = { 
+		  factor = 2
+	    } 
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_celtic_rising
+				remove_idea = FRA_wolves_wake
+			}
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = FRA_reconquest_of_the_forests
+		icon = GFX_focus_FRA_reconquest_of_the_forests
+		x = 0
+		y = 1
+		relative_position_id = FRA_celtic_state
+		prerequisite = {
+			focus = FRA_celtic_state
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_forest_kin
+			hidden_effect = {
+				country_event = {
+					id = france.20
+					days = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_igne_natura
+		icon = GFX_focus_FRA_igne_natura
+		x = -3
+		y = 1
+		relative_position_id = FRA_reconquest_of_the_forests
+		prerequisite = {
+			focus = FRA_reconquest_of_the_forests
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_forest_kin
+				add_idea = FRA_druidic_purity
+			}
+		}
+	}
+	focus = {
+		id = FRA_old_gods
+		icon = GFX_focus_FRA_old_gods
+		x = -2
+		y = 1
+		relative_position_id = FRA_igne_natura
+		prerequisite = {
+			focus = FRA_igne_natura
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = FRA_end_catholic_dominion
+		icon = GFX_focus_FRA_end_catholic_dominion
+		x = 0
+		y = 1
+		relative_position_id = FRA_old_gods
+		prerequisite = {
+			focus = FRA_old_gods
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = FRA_ancient_enemies
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = FRA_ancient_enemies
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_unite_with_nature
+		icon = GFX_focus_FRA_unite_with_nature
+		x = 0
+		y = 1
+		relative_position_id = FRA_igne_natura
+		prerequisite = {
+			focus = FRA_igne_natura
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_druidic_purity
+				add_idea = FRA_union_with_nature
+			}
+			swap_ideas = {
+				remove_idea = FRA_divided_nation
+				add_idea = FRA_druidic_nation
+			}
+		}
+	}
+	focus = {
+		id = FRA_hate_the_cities
+		icon = GFX_focus_FRA_hate_the_cities
+		x = 0
+		y = 1
+		relative_position_id = FRA_unite_with_nature
+		prerequisite = {
+			focus = FRA_unite_with_nature
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_union_with_nature
+				add_idea = FRA_return_to_nature
+			}
+		}
+	}
+	focus = {
+		id = FRA_establish_druidist_order
+		icon = GFX_focus_FRA_establish_druidist_order
+		x = 2
+		y = 1
+		relative_position_id = FRA_igne_natura
+		prerequisite = {
+			focus = FRA_igne_natura
+		}
+		cost = 5
+		
+		completion_reward = {
+			set_popularities = {
+				accelerationism = 1
+				reactionism = 0
+				despotism = 0 
+				right_authoritarianism = 0
+				conservatism = 0
+				liberalism = 0
+				social_democratism = 0
+				revisionist_socialism = 0
+				revolutionary_anarchism = 0
+				libertarian_marxism = 0
+				vanguard_socialism = 0
+			}
+			add_manpower = -100000
+		}
+	}
+	focus = {
+		id = FRA_roman_pantheon
+		icon = GFX_focus_FRA_roman_pantheon
+		x = 0
+		y = 1
+		relative_position_id = FRA_establish_druidist_order
+		prerequisite = {
+			focus = FRA_establish_druidist_order
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_old_patrons
+		}
+	}
+	focus = {
+		id = FRA_archeofuturism
+		icon = GFX_focus_FRA_archeofuturism
+		x = 0
+		y = 1
+		relative_position_id = FRA_hate_the_cities
+		prerequisite = {
+			focus = FRA_hate_the_cities
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_ancestral_ties
+		}
+	}
+	focus = {
+		id = FRA_la_fourrure
+		icon = GFX_focus_FRA_la_fourrure
+		x = -2
+		y = 1
+		relative_position_id = FRA_archeofuturism
+		prerequisite = {
+			focus = FRA_archeofuturism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_new_vercingetorix
+		}
+	}
+	focus = {
+		id = FRA_spiritual_revolution
+		icon = GFX_focus_FRA_spiritual_revolution
+		x = 0
+		y = 1
+		relative_position_id = FRA_la_fourrure
+		prerequisite = {
+			focus = FRA_la_fourrure
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_new_vercingetorix
+				add_idea = FRA_druidic_spirit
+			}
+		}
+	}
+	focus = {
+		id = FRA_new_spirit
+		icon = GFX_focus_FRA_new_spirit
+		x = 0
+		y = 1
+		relative_position_id = FRA_spiritual_revolution
+		prerequisite = {
+			focus = FRA_spiritual_revolution
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_druidic_spirit
+				add_idea = FRA_celtic_spirit
+			}
+		}
+	}
+	focus = {
+		id = FRA_decentralise_industry
+		icon = GFX_focus_FRA_decentralise_industry
+		x = 2
+		y = 1
+		relative_position_id = FRA_archeofuturism
+		prerequisite = {
+			focus = FRA_archeofuturism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_self_sufficiency
+		}
+	}
+	focus = {
+		id = FRA_french_factories
+		icon = GFX_focus_FRA_french_factories
+		x = 0
+		y = 1
+		relative_position_id = FRA_decentralise_industry
+		prerequisite = {
+			focus = FRA_decentralise_industry
+		}
+		cost = 5
+		
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					set_building_level = {
+						type = industrial_complex
+						level = 0
+						instant_build = yes
+					}
+				}
+			}
+			custom_effect_tooltip = FRA_french_factories_tooltip
+			swap_ideas = {
+				remove_idea = FRA_self_sufficiency
+				add_idea = FRA_freed_from_industry
+			}
+		}
+	}
+	focus = {
+		id = FRA_tribal_democracy
+		icon = GFX_focus_FRA_tribal_democracy
+		x = 0
+		y = 1
+		relative_position_id = FRA_french_factories
+		prerequisite = {
+			focus = FRA_french_factories
+		}
+		cost = 5
+		
+		completion_reward = {
+			set_stability = 1
+			remove_ideas = FRA_druidic_nation
+		}
+	}
+	focus = {
+		id = FRA_hurray_for_greenshirts
+		icon = GFX_focus_FRA_hurray_for_greenshirts
+		x = 3
+		y = 1
+		relative_position_id = FRA_reconquest_of_the_forests
+		prerequisite = {
+			focus = FRA_reconquest_of_the_forests
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			#spawns 3 milita units
+		}
+	}
+	focus = {
+		id = FRA_compromise_with_dorgeres
+		icon = GFX_focus_FRA_compromise_with_dorgeres
+		x = -2
+		y = 1
+		relative_position_id = FRA_hurray_for_greenshirts
+		prerequisite = {
+			focus = FRA_hurray_for_greenshirts
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.65
+			}
+		}
+	}
+	focus = {
+		id = FRA_victorious_unions
+		icon = GFX_focus_FRA_victorious_unions
+		x = 0
+		y = 1
+		relative_position_id = FRA_compromise_with_dorgeres
+		prerequisite = {
+			focus = FRA_compromise_with_dorgeres
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = FRA_natural_catholicism
+		icon = GFX_focus_FRA_natural_catholicism
+		x = 0
+		y = 1
+		relative_position_id = FRA_hurray_for_greenshirts
+		prerequisite = {
+			focus = FRA_hurray_for_greenshirts
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = -0.15
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.15
+			}
+			#country_event = 
+		}
+	}
+	focus = {
+		id = FRA_le_conseil_grand_du_peuple_francais_libre
+		icon = GFX_focus_FRA_le_conseil_grand_du_peuple_francais_libre
+		x = 0
+		y = 1
+		relative_position_id = FRA_natural_catholicism
+		prerequisite = {
+			focus = FRA_natural_catholicism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 100
+			#add_ideas = FRA_le_pain_le_nature_la_terre_idea #20% pp
+		}
+	}
+	focus = {
+		id = FRA_le_pain_le_nature_la_terre
+		icon = GFX_focus_FRA_le_pain_le_nature_la_terre
+		x = 2
+		y = 1
+		relative_position_id = FRA_hurray_for_greenshirts
+		prerequisite = {
+			focus = FRA_hurray_for_greenshirts
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 25
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_ideas = FRA_le_pain_le_nature_la_terre_idea
+		}
+	}
+	focus = {
+		id = FRA_give_them_the_voice
+		icon = GFX_focus_FRA_give_them_the_voice
+		x = 0
+		y = 1
+		relative_position_id = FRA_le_pain_le_nature_la_terre
+		prerequisite = {
+			focus = FRA_le_pain_le_nature_la_terre
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_ideas = FRA_give_them_the_voice_idea
+		}
+	}
+	focus = {
+		id = FRA_happiness_for_everybody
+		icon = GFX_focus_FRA_happiness_for_everybody
+		x = 0
+		y = 1
+		relative_position_id = FRA_le_conseil_grand_du_peuple_francais_libre
+		prerequisite = {
+			focus = FRA_le_conseil_grand_du_peuple_francais_libre
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRA_hyperborean_mythos
+		icon = GFX_focus_FRA_hyperborean_mythos
+		x = -2
+		y = 1
+		relative_position_id = FRA_happiness_for_everybody
+		prerequisite = {
+			focus = FRA_happiness_for_everybody
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.44
+			}
+		}
+	}
+	focus = {
+		id = FRA_culture_of_the_north
+		icon = GFX_focus_FRA_culture_of_the_north
+		x = 0
+		y = 1
+		relative_position_id = FRA_hyperborean_mythos
+		prerequisite = {
+			focus = FRA_hyperborean_mythos
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_celtic_language
+		}
+	}
+	focus = {
+		id = FRA_return_to_the_tradition
+		icon = GFX_focus_FRA_return_to_the_tradition
+		x = 0
+		y = 1
+		relative_position_id = FRA_culture_of_the_north
+		prerequisite = {
+			focus = FRA_culture_of_the_north
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_celtic_language
+				add_idea = FRA_celtic_culture
+			}
+		}
+	}
+	focus = {
+		id = FRA_burn_old_testament_influence
+		icon = GFX_focus_FRA_burn_old_testament_influence
+		x = 2
+		y = 1
+		relative_position_id = FRA_happiness_for_everybody
+		available = {
+			OR = {
+				has_country_flag = compromised_with_dorgeres_1
+				has_country_flag = compromised_with_dorgeres_2
+				has_country_flag = compromised_with_dorgeres_3
+			}
+		}
+		prerequisite = {
+			focus = FRA_happiness_for_everybody
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = -0.5
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.5
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+			MEX = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+			SPR = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_christian
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_reject_private_property
+		icon = GFX_focus_FRA_reject_private_property
+		x = 0
+		y = 1
+		relative_position_id = FRA_burn_old_testament_influence
+		prerequisite = {
+			focus = FRA_burn_old_testament_influence
+		}
+		available = {
+			OR = {
+				has_country_flag = compromised_with_dorgeres_2
+				has_country_flag = compromised_with_dorgeres_3
+			}
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_communal_property
+			add_political_power = -100
+			add_stability = -0.3
+		}
+	}
+	focus = {
+		id = FRA_we_own_everything
+		icon = GFX_focus_FRA_we_own_everything
+		x = 0
+		y = 1
+		relative_position_id = FRA_reject_private_property
+		prerequisite = {
+			focus = FRA_reject_private_property
+		}
+		available = {
+			OR = {
+				has_country_flag = compromised_with_dorgeres_3
+			}
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 5000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+				producer = FRA
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = FRA
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = { has_full_control_of_state = PREV }
+					is_coastal = yes
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 50
+				producer = FRA
+			}
+		}
+	}
+	focus = {
+		id = FRA_away_with_the_state
+		icon = GFX_focus_FRA_away_with_the_state
+		x = 5
+		y = 1
+		relative_position_id = FRA_howling_with_wolves
+		available = {
+			has_country_flag = FRA_end_the_state
+		}
+		prerequisite = {
+			focus = FRA_howling_with_wolves
+		}
+		mutually_exclusive = {
+			focus = FRA_celtic_state
+		}
+		ai_will_do = { 
+			 factor = 0
+		 } 
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_statelessness
+				remove_idea = FRA_wolves_wake
+			}
+			remove_ideas = FRA_divided_nation
+		}
+	}
+	focus = {
+		id = FRA_burn_down_buildings
+		icon = GFX_focus_FRA_burn_down_buildings
+		x = 0
+		y = 1
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_away_with_the_state
+		}
+		cost = 5
+		
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					set_building_level = {
+						type = infrastructure
+						level = 2
+					}
+				}
+				country_event = {
+					id = france.21
+					days = 5
+				}
+			}
+			custom_effect_tooltip = FRA_burn_down_buildings_tooltip
+		}
+	}
+	focus = {
+		id = FRA_la_revolution_industrielle
+		icon = GFX_focus_FRA_la_revolution_industrielle
+		x = 0
+		y = 2
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_burn_down_buildings
+		}
+		cost = 30
+		
+		completion_reward = {
+			hidden_effect = {
+				every_owned_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+						}
+					}
+					set_building_level = {
+						type = industrial_complex
+						level = 1
+					}
+					set_building_level = {
+						type = arms_factory
+						level = 1
+					}
+					set_building_level = {
+						type = dockyard
+						level = 1
+					}
+				}
+			}
+			add_ideas = closed_economy
+			custom_effect_tooltip = FRA_la_revolution_industrielle_tooltip
+		}
+	}
+	focus = {
+		id = FRA_every_man_a_hunter
+		icon = GFX_focus_FRA_every_man_a_hunter
+		x = -2
+		y = 3
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_la_revolution_industrielle
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_tribal_warriors
+		}
+	}
+	focus = {
+		id = FRA_blood_of_the_wolves
+		icon = GFX_focus_FRA_blood_of_the_wolves
+		x = -2
+		y = 4
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_every_man_a_hunter
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = FRA_wolfen_warriors
+				remove_idea = FRA_tribal_warriors
+			}
+			add_tech_bonus = {
+					name = doctrine_bonus
+					bonus = 1
+					uses = 3
+					category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = FRA_life_as_it_was_meant
+		icon = GFX_focus_FRA_life_as_it_was_meant
+		x = 0
+		y = 3
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_la_revolution_industrielle
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = FRA_animal_passions
+		icon = GFX_focus_FRA_animal_passions
+		x = 0
+		y = 4
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_life_as_it_was_meant
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_animal_drive
+			hidden_effect = {
+				country_event = {
+					id = france.22
+					days = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_no_need_prosperity
+		icon = GFX_focus_FRA_no_need_prosperity
+		x = 2
+		y = 3
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_la_revolution_industrielle
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_ascetic_warriors
+		}
+	}
+	focus = {
+		id = FRA_weapons_from_technocrats
+		icon = GFX_focus_FRA_weapons_from_technocrats
+		x = 2
+		y = 4
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_no_need_prosperity
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.23
+			}
+		}
+	}
+	focus = {
+		id = FRA_this_isnt_working
+		icon = GFX_focus_FRA_this_isnt_working
+		x = 0
+		y = 5
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_weapons_from_technocrats
+		}
+		prerequisite = {
+			focus = FRA_animal_passions
+		}
+		prerequisite = {
+			focus = FRA_blood_of_the_wolves
+		}
+		cost = 5
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_statelessness
+				add_idea = FRA_new_approach
+			}
+		}
+	}
+	focus = {
+		id = FRA_rob_the_innocent
+		icon = GFX_focus_FRA_rob_the_innocent
+		x = -2
+		y = 6
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_this_isnt_working
+		}
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = france.24
+			}
+		}
+	}
+	focus = {
+		id = FRA_mandatory_mating
+		icon = GFX_focus_FRA_mandatory_mating
+		x = -2
+		y = 7
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_rob_the_innocent
+		}
+		cost = 5
+		
+		completion_reward = {
+			set_stability = 0
+			add_ideas = FRA_enforced_mating
+		}
+	}
+	focus = {
+		id = FRA_only_instinct
+		icon = GFX_focus_FRA_only_instinct
+		x = -2
+		y = 8
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_mandatory_mating
+		}
+		cost = 5
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_monopoly_on_reality_tooltip
+			hidden_effect = {
+				set_popularities = {
+					accelerationism = 1
+					reactionism = 0
+					despotism = 0 
+					right_authoritarianism = 0
+					conservatism = 0
+					liberalism = 0
+					social_democratism = 0
+					revisionist_socialism = 0
+					revolutionary_anarchism = 0
+					libertarian_marxism = 0
+					vanguard_socialism = 0
+				}
+			}
+			add_stability = 0.1
+			set_war_support = 1
+				remove_ideas = FRA_new_approach
+				add_ideas = FRA_instinctual_approach
+			
+		}
+	}
+	focus = {
+		id = FRA_raid_the_technocrats
+		icon = GFX_focus_FRA_raid_the_technocrats
+		x = 2
+		y = 6
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_this_isnt_working
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+				producer = FRA
+			}
+			every_neighbor_country = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = primitive_raiders_neighbour
+				}
+			}
+			every_country = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = primitive_raiders
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_top_of_food_chain
+		icon = GFX_focus_FRA_top_of_food_chain
+		x = 2
+		y = 7
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_raid_the_technocrats
+		}
+		will_lead_to_war_with = ENG #We all know how this goes
+		will_lead_to_war_with = GER
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = ITA
+		will_lead_to_war_with = UKR
+		will_lead_to_war_with = SWE
+		will_lead_to_war_with = DEN
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		will_lead_to_war_with = SWI
+		will_lead_to_war_with = IRE
+		will_lead_to_war_with = HUN
+		will_lead_to_war_with = ITA
+		will_lead_to_war_with = FIU
+		will_lead_to_war_with = SPA
+		will_lead_to_war_with = SPR
+		will_lead_to_war_with = DEI
+		will_lead_to_war_with = HOL
+		will_lead_to_war_with = CAN
+		will_lead_to_war_with = AST 
+		cost = 5
+		
+		completion_reward = {
+			add_ideas = FRA_perfect_hunters
+		}
+	}
+	focus = {
+		id = FRA_free_europe_civilisation
+		icon = GFX_focus_FRA_free_europe_civilisation
+		x = 2
+		y = 8
+		relative_position_id = FRA_away_with_the_state
+		prerequisite = {
+			focus = FRA_top_of_food_chain
+		}
+		cost = 5
+		
+		completion_reward = {
+			custom_effect_tooltip = FRA_free_europe_civilisation_tooltip
+			hidden_effect = {
+				add_state_core = 2
+				add_state_core = 3
+				add_state_core = 4
+				add_state_core = 5
+				add_state_core = 6
+				add_state_core = 7
+				add_state_core = 8
+				add_state_core = 9
+				add_state_core = 10
+				add_state_core = 11
+				add_state_core = 12
+				add_state_core = 13
+				add_state_core = 28
+				add_state_core = 34
+				add_state_core = 35
+				add_state_core = 36
+				add_state_core = 37
+				add_state_core = 38
+				add_state_core = 39
+				add_state_core = 41
+				add_state_core = 42
+				add_state_core = 43
+				add_state_core = 44
+				add_state_core = 45
+				add_state_core = 46
+				add_state_core = 47
+				add_state_core = 48
+				add_state_core = 50
+				add_state_core = 51
+				add_state_core = 52
+				add_state_core = 53
+				add_state_core = 54
+				add_state_core = 55
+				add_state_core = 56
+				add_state_core = 57
+				add_state_core = 58
+				add_state_core = 59
+				add_state_core = 60
+				add_state_core = 61
+				add_state_core = 62
+				add_state_core = 63
+				add_state_core = 64
+				add_state_core = 65
+				add_state_core = 66
+				add_state_core = 67
+				add_state_core = 68
+				add_state_core = 69
+				add_state_core = 70
+				add_state_core = 71
+				add_state_core = 72
+				add_state_core = 73
+				add_state_core = 74
+				add_state_core = 75
+				add_state_core = 76
+				add_state_core = 77
+				add_state_core = 78
+				add_state_core = 79
+				add_state_core = 80
+				add_state_core = 81
+				add_state_core = 82
+				add_state_core = 83
+				add_state_core = 84
+				add_state_core = 85
+				add_state_core = 86
+				add_state_core = 87
+				add_state_core = 88
+				add_state_core = 89
+				add_state_core = 90
+				add_state_core = 91
+				add_state_core = 92
+				add_state_core = 93
+				add_state_core = 94
+				add_state_core = 95
+				add_state_core = 96
+				add_state_core = 97
+				add_state_core = 98
+				add_state_core = 99
+				add_state_core = 100
+				add_state_core = 102
+				add_state_core = 103
+				add_state_core = 104
+				add_state_core = 105
+				add_state_core = 106
+				add_state_core = 107
+				add_state_core = 108
+				add_state_core = 109
+				add_state_core = 110
+				add_state_core = 111
+				add_state_core = 112
+				add_state_core = 113
+				add_state_core = 114
+				add_state_core = 115
+				add_state_core = 116
+				add_state_core = 117
+				add_state_core = 118
+				add_state_core = 119
+				add_state_core = 120
+				add_state_core = 121
+				add_state_core = 122
+				add_state_core = 123
+				add_state_core = 124
+				add_state_core = 125
+				add_state_core = 126
+				add_state_core = 127
+				add_state_core = 128
+				add_state_core = 129
+				add_state_core = 130
+				add_state_core = 131
+				add_state_core = 132
+				add_state_core = 133
+				add_state_core = 134
+				add_state_core = 135
+				add_state_core = 136
+				add_state_core = 137
+				add_state_core = 138
+				add_state_core = 139
+				add_state_core = 140
+				add_state_core = 141
+				add_state_core = 142
+				add_state_core = 143
+				add_state_core = 144
+				add_state_core = 145
+				add_state_core = 146
+				add_state_core = 147
+				add_state_core = 148
+				add_state_core = 149
+				add_state_core = 150
+				add_state_core = 151
+				add_state_core = 152
+				add_state_core = 153
+				add_state_core = 154
+				add_state_core = 155
+				add_state_core = 156
+				add_state_core = 157
+				add_state_core = 158
+				add_state_core = 159
+				add_state_core = 160
+				add_state_core = 161
+				add_state_core = 162
+				add_state_core = 163
+				add_state_core = 165
+				add_state_core = 166
+				add_state_core = 167
+				add_state_core = 168
+				add_state_core = 169
+				add_state_core = 170
+				add_state_core = 171
+				add_state_core = 172
+				add_state_core = 173
+				add_state_core = 174
+				add_state_core = 175
+				add_state_core = 176
+				add_state_core = 177
+				add_state_core = 179
+				add_state_core = 180
+				add_state_core = 181
+				add_state_core = 182
+				add_state_core = 184
+				add_state_core = 185
+				add_state_core = 186
+				add_state_core = 187
+				add_state_core = 188
+				add_state_core = 189
+				add_state_core = 190
+				add_state_core = 191
+				add_state_core = 192
+				add_state_core = 193
+				add_state_core = 194
+				add_state_core = 195
+				add_state_core = 196
+				add_state_core = 197
+				add_state_core = 198
+				add_state_core = 199
+				add_state_core = 200
+				add_state_core = 201
+				add_state_core = 202 
+				add_state_core = 203
+				add_state_core = 204
+				add_state_core = 205
+				add_state_core = 206
+				add_state_core = 207
+				add_state_core = 208
+				add_state_core = 209
+				add_state_core = 211
+				add_state_core = 212
+				add_state_core = 213
+				add_state_core = 214
+				add_state_core = 215
+				add_state_core = 216
+				add_state_core = 217
+				add_state_core = 218
+				add_state_core = 219
+				add_state_core = 220
+				add_state_core = 221
+				add_state_core = 222
+				add_state_core = 223
+				add_state_core = 224
+				add_state_core = 225
+				add_state_core = 226
+				add_state_core = 227
+				add_state_core = 228
+				add_state_core = 232
+				add_state_core = 233
+				add_state_core = 234
+				add_state_core = 235
+				add_state_core = 236
+				add_state_core = 237
+				add_state_core = 238
+				add_state_core = 239
+				add_state_core = 240
+				add_state_core = 241
+				add_state_core = 242
+				add_state_core = 243
+				add_state_core = 244
+				add_state_core = 245
+				add_state_core = 246
+				add_state_core = 247
+				add_state_core = 248
+				add_state_core = 249
+				add_state_core = 250
+				add_state_core = 251
+				add_state_core = 252
+				add_state_core = 253
+				add_state_core = 254
+				add_state_core = 255
+				add_state_core = 256
+				add_state_core = 257
+				add_state_core = 258
+				add_state_core = 259
+				add_state_core = 260
+				add_state_core = 262
+				add_state_core = 263
+				add_state_core = 264
+				add_state_core = 265
+				add_state_core = 272
+				add_state_core = 337
+				add_state_core = 338
+				add_state_core = 340
+				add_state_core = 341
+				add_state_core = 351
+				add_state_core = 397
+				add_state_core = 398
+				add_state_core = 399
+				add_state_core = 400
+				add_state_core = 401
+				add_state_core = 407
+				add_state_core = 521
+				add_state_core = 651
+				add_state_core = 652
+				add_state_core = 664
+				add_state_core = 666
+				add_state_core = 698
+				add_state_core = 722
+				add_state_core = 731
+				add_state_core = 736
+				add_state_core = 762
+				add_state_core = 763
+				add_state_core = 764
+				add_state_core = 766
+				add_state_core = 784
+				add_state_core = 788
+				add_state_core = 796
+				add_state_core = 799
+				add_state_core = 811
+				add_state_core = 812
+				add_state_core = 841
+				add_state_core = 844
+				add_state_core = 845
+				add_state_core = 846
+				add_state_core = 847
+				add_state_core = 848
+				add_state_core = 853
+				add_state_core = 854
+				add_state_core = 855
+				add_state_core = 856
+				add_state_core = 857
+				add_state_core = 858
+				add_state_core = 859
+				add_state_core = 899
+				add_state_core = 900
+				add_state_core = 901
+				add_state_core = 911
+				add_state_core = 913
+				add_state_core = 921 
+				add_state_core = 922
+				add_state_core = 923
+				add_state_core = 933
+				add_state_core = 938
+				add_state_core = 940
+				add_state_core = 941
+				add_state_core = 942
+				add_state_core = 958
+				add_state_core = 959
+				add_state_core = 965
+				add_state_core = 966
+				add_state_core = 973
+				add_state_core = 974
+				add_state_core = 975
+				add_state_core = 976
+				add_state_core = 991
+				add_state_core = 995
+				add_state_core = 1002
+				add_state_core = 1009
+				add_state_core = 1010
+				add_state_core = 1011
+				add_state_core = 1012
+				add_state_core = 1013
+				add_state_core = 1014
+				add_state_core = 1035
+				add_state_core = 1053
+				add_state_core = 1056
+				add_state_core = 1057
+				add_state_core = 1058
+				add_state_core = 1059
+				add_state_core = 1062
+				add_state_core = 1063
+				add_state_core = 1064
+				add_state_core = 1069
+			}
+		}
+	}
+	#Full Speed Into the World
+	focus = {
+		id = FRA_full_speed_world
+		icon = GFX_focus_FRA_full_speed_world
+		x = 5
+		y = 13
+		cost = 5
+		ai_will_do = { 
+		 	factor = 2
+	 	}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = FRA_expansionism
+		}
+	}
+	focus = {
+		id = FRA_rattachisme
+		icon = GFX_focus_FRA_rattachisme
+		x = 0
+		y = 1
+		relative_position_id = FRA_full_speed_world
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_full_speed_world
+		}
+		cost = 5
+		ai_will_do = { 
+		  factor = 2
+	    } 
+		completion_reward = {
+			add_state_core = 34
+			#add_state_core = 846
+			country_event = {
+				id = france.200
+			}
+		}
+	}
+	focus = {
+		id = FRA_adventure_in_spain
+		icon = GFX_focus_FRA_adventure_in_spain
+		x = 0
+		y = 2
+		relative_position_id = FRA_full_speed_world
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_rattachisme
+		}
+		available = {
+			has_global_flag = spain_cw
+		}
+		ai_will_do = { 
+		  factor = 100
+	    } 
+		cost = 5
+		
+		completion_reward = {
+			SPA = {
+				add_ideas = FRA_military_mission
+			}
+			country_event = {
+				id = france.165
+			}
+			add_ideas = FRA_military_observation
+		}
+	}
+	focus = {
+		id = FRA_austrian_comrades
+		icon = GFX_focus_FRA_austrian_comrades
+		x = -3
+		y = 3
+		relative_position_id = FRA_full_speed_world
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_adventure_in_spain
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					AUS = {
+						has_government = accelerationism
+					}
+				}
+				AUS = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				AUS = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence Austrian Politics"
+		}
+	}
+	focus = {
+		id = FRA_slavic_barbarians
+		icon = GFX_focus_FRA_slavic_barbarians
+		x = -1
+		y = 1
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_austrian_comrades
+		}
+		mutually_exclusive = {
+			focus = FRA_latin_brothers
+		}
+		cost = 5
+		
+		completion_reward = {
+			YUG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = honourary_slav
+				}
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = honourary_slav
+				}
+			}
+			POL = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = honourary_slav
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_aid_yugoslavia
+		icon = GFX_focus_FRA_aid_yugoslavia
+		x = -1
+		y = 2
+		relative_position_id = FRA_austrian_comrades
+		prerequisite = {
+			focus = FRA_slavic_barbarians
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					YUG = {
+						has_government = accelerationism
+					}
+				}
+				YUG = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				YUG = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence Yugoslavian Politics"
+		}
+	}
+	focus = {
+		id = FRA_allies_in_russia
+		icon = GFX_focus_FRA_allies_in_russia
+		x = -1
+		y = 3
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_aid_yugoslavia
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					RUS = {
+						has_government = accelerationism
+					}
+				}
+				RUS = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				RUS = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence Russian Politics"
+		}
+	}
+	focus = {
+		id = FRA_eternal_friendship_poland
+		icon = GFX_focus_FRA_eternal_friendship_poland
+		x = -1
+		y = 4
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_allies_in_russia
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					POL = {
+						has_government = accelerationism
+					}
+				}
+				POL = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				POL = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence Polish Politics"
+		}
+	}
+	focus = {
+		id = FRA_latin_brothers
+		icon = GFX_focus_FRA_latin_brothers
+		x = 1
+		y = 1
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_austrian_comrades
+		}
+		mutually_exclusive = {
+			focus = FRA_slavic_barbarians
+		}
+		cost = 5
+		
+		completion_reward = {
+			FIU = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = latin_brother
+				}
+			}
+			TUR = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = latin_brother
+				}
+			}
+			USA = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = latin_brother
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_hurray_for_fiume
+		icon = GFX_focus_FRA_hurray_for_fiume
+		x = 1
+		y = 2
+		relative_position_id = FRA_austrian_comrades
+		prerequisite = {
+			focus = FRA_latin_brothers
+		}
+		cost = 5
+		available = {
+			is_subject = no
+			FIU = {
+				exists = yes
+				has_government = accelerationism
+			}
+		}
+		completion_reward = {
+			FIU = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = aided_cause
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_riders_of_turan
+		icon = GFX_focus_FRA_riders_of_turan
+		x = 1
+		y = 3
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_hurray_for_fiume
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					TUR = {
+						has_government = accelerationism
+					}
+				}
+				TUR = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				TUR = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence Turkish Politics"
+		}
+	}
+	focus = {
+		id = FRA_friendship_in_west
+		icon = GFX_focus_FRA_friendship_in_west
+		x = 1
+		y = 4
+		relative_position_id = FRA_austrian_comrades
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_riders_of_turan
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					USA = {
+						has_government = accelerationism
+					}
+				}
+				USA = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				USA = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = "We will be able to influence the Politics of the United States of America"
+		}
+	}
+	focus = {
+		id = FRA_era_french_might
+		icon = GFX_focus_FRA_era_french_might
+		x = 0
+		y = 5
+		relative_position_id = FRA_austrian_comrades
+		prerequisite = {
+			focus = FRA_friendship_in_west
+			focus = FRA_eternal_friendship_poland
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = FRA_question_status_quo
+		icon = GFX_focus_FRA_question_status_quo
+		x = 4
+		y = 3
+		relative_position_id = FRA_full_speed_world
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_adventure_in_spain
+		}
+		ai_will_do = { 
+		  factor = 2
+	    } 
+		cost = 5
+		
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = futurist_scum
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = futurist_scum
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_against_anglo
+		icon = GFX_focus_FRA_against_anglo
+		x = -1
+		y = 1
+		relative_position_id = FRA_question_status_quo
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_question_status_quo
+		}
+		mutually_exclusive = {
+			focus = FRA_against_councilism
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_war_support = 0.1
+			ENG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = ancient_rival
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_aid_revolutions
+		icon = GFX_focus_FRA_aid_revolutions
+		available = {
+			is_subject = no
+		}
+		x = -1
+		y = 2
+		relative_position_id = FRA_question_status_quo
+		prerequisite = {
+			focus = FRA_against_anglo
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_political_power = 100
+			custom_effect_tooltip = "FRA_aid_revolutions_tooltip"
+		}
+	}
+	focus = {
+		id = FRA_celtic_brotherhood
+		icon = GFX_focus_FRA_celtic_brotherhood
+		x = -2
+		y = 1
+		relative_position_id = FRA_aid_revolutions
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_aid_revolutions
+		}
+		cost = 5
+		
+		completion_reward = {
+			ENG = {
+				add_stability = -0.1
+			}
+		}
+	}
+	focus = {
+		id = FRA_friendship_scotland
+		icon = GFX_focus_FRA_friendship_scotland
+		x = -2
+		y = 2
+		relative_position_id = FRA_aid_revolutions
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_celtic_brotherhood
+		}
+		cost = 5
+		completion_reward = {
+			ENG = {
+				add_stability = -0.1
+			}
+			SCO = {
+				add_state_core = 121
+				add_state_core = 133
+				add_state_core = 136
+				add_state_core = 120
+			}
+		}
+	}
+	focus = {
+		id = FRA_deal_with_red_devil
+		icon = GFX_focus_FRA_deal_with_red_devil
+		x = 0
+		y = 2
+		relative_position_id = FRA_aid_revolutions
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_aid_revolutions
+		}
+		cost = 5
+		
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = france.161
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_aid_semites
+		icon = GFX_focus_FRA_aid_semites
+		x = 2
+		y = 1
+		relative_position_id = FRA_aid_revolutions
+		prerequisite = {
+			focus = FRA_aid_revolutions
+		}
+		cost = 5
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			ISR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			ISR = {
+				country_event = {
+					id = france.164
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_friendship_lehi
+		icon = GFX_focus_FRA_friendship_lehi
+		x = 2
+		y = 2
+		relative_position_id = FRA_aid_revolutions
+		prerequisite = {
+			focus = FRA_aid_semites
+		}
+		cost = 5
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			ISR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					ISR = {
+						has_government = accelerationism
+					}
+				}
+				ISR = {
+					add_opinion_modifier = {
+						target = FRA
+						modifier = fellow_futurists
+					}
+				}
+			}
+			else_if = {
+				ISR = {
+					country_event = {
+						id = france.160
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_cuck_for_eternity
+		icon = GFX_focus_FRA_cuck_for_eternity
+		x = 0
+		y = 3
+		relative_position_id = FRA_aid_revolutions
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_friendship_scotland
+		}
+		prerequisite = {
+			focus = FRA_deal_with_red_devil
+		}
+		prerequisite = {
+			focus = FRA_friendship_lehi
+		}
+		will_lead_to_war_with = ENG
+		cost = 5
+		
+		completion_reward = {
+			create_wargoal = {
+				target = ENG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = FRA_against_councilism
+		icon = GFX_focus_FRA_against_councilism
+		x = 5
+		y = 1
+		relative_position_id = FRA_question_status_quo
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_question_status_quo
+		}
+		mutually_exclusive = {
+			focus = FRA_against_anglo
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_war_support = 0.1
+			GER = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = anti_communist_crusade
+				}
+			}
+			custom_effect_tooltip = "FRA_against_councilism_tooltip"
+		}
+	}
+	focus = {
+		id = FRA_side_with_true_germany
+		icon = GFX_focus_FRA_side_with_true_germany
+		x = -2
+		y = 1
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_against_councilism
+		}
+		cost = 5
+		
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = opposes_reds
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_bulgarian_coup
+		icon = GFX_focus_FRA_bulgarian_coup
+		x = 0
+		y = 1
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_against_councilism
+		}
+		cost = 5
+		
+		completion_reward = {
+			if = {
+				limit = {
+					YUG = {
+						NOT = {
+							has_non_aggression_pact_with = BUL
+						}
+						has_government = accelerationism
+					}
+				}
+				YUG = {
+					country_event = {
+						id = yugoslavia.22
+						days = 1
+					}
+				}
+			}
+			else = {
+				BUL = {
+					add_popularity = {
+						ideology = accelerationism
+						popularity = 0.1
+					}
+					add_opinion_modifier = { modifier = large_decrease target = FRA }
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_deal_with_anglo_devil
+		icon = GFX_focus_FRA_deal_with_anglo_devil
+		x = 0
+		y = 2
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_bulgarian_coup
+		}
+		cost = 5
+		
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = france.153
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_arms_to_mayakovsky
+		icon = GFX_focus_FRA_arms_to_mayakovsky
+		x = 2
+		y = 1
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_against_councilism
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					KAV = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -5000
+					producer = FRA
+				}
+				KAV = {
+					country_event = {
+						id = france.157
+					}
+				}
+				hidden_effect = {
+					RUS = {
+						country_event = {
+							id = france.156
+							days = 6
+						}
+						add_opinion_modifier = {
+							target = FRA
+							modifier = supported_rebels
+						}
+					}
+					SRU = {
+						country_event = {
+							id = france.156
+							days = 6
+						}
+						add_opinion_modifier = {
+							target = FRA
+							modifier = supported_rebels
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FRA_support_finland
+		icon = GFX_focus_FRA_support_finland
+		x = -2
+		y = 2
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_side_with_true_germany
+		}
+		cost = 5
+		
+		completion_reward = {
+			FIN = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = opposes_reds
+				}
+			}
+			if = {
+				limit = {
+					FIN = {
+						has_government = accelerationism
+					}
+				}
+				diplomatic_relation = {
+					country = FIN
+					relation = guarantee
+					active = yes
+				}
+			}
+			
+		}
+	}
+	focus = {
+		id = FRA_opportunities_in_india
+		icon = GFX_focus_FRA_opportunities_in_india
+		x = 2
+		y = 2
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_arms_to_mayakovsky
+		}
+		cost = 5
+		
+		completion_reward = {
+			BNG = {
+				add_opinion_modifier = {
+					target = FRA
+					modifier = fellow_futurists
+				}
+			}
+			BNG = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = 10
+		}
+	}
+	focus = {
+		id = FRA_end_communism
+		icon = GFX_focus_FRA_end_communism
+		x = 0
+		y = 3
+		relative_position_id = FRA_against_councilism
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = FRA_opportunities_in_india
+		}
+		prerequisite = {
+			focus = FRA_deal_with_anglo_devil
+		}
+		prerequisite = {
+			focus = FRA_support_finland
+		}
+		will_lead_to_war_with = GER
+		cost = 5
+		
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GER
+			}
+		}
+	}
+}

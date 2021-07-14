@@ -1,0 +1,249 @@
+﻿capital = 112
+
+oob = "POR_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "POR_1936_naval_mtg"
+	else = {
+		set_naval_oob = "POR_1936_naval_legacy"
+	}
+}
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+          POR_divided_republic
+          POR_economic_disaster
+          POR_political_chaos
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+set_politics = {
+	ruling_party = social_democratism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 0
+	revolutionary_anarchism = 5
+	revisionist_socialism = 10
+	social_democratism = 30
+	liberalism = 5
+	conservatism = 20
+	right_authoritarianism = 20
+	despotism = 0
+	reactionism = 5
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "José Mendes Cabeçadas"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = national_conservatism
+}
+
+create_country_leader = {
+	name = "António Maria da Silva"
+	desc = ""
+	picture = "Portrait_antonio.dds"
+	expire = "1965.1.1"
+	ideology = progressivism
+}
+
+create_country_leader = {
+	name = "Antonio Pereira da Rosa"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = market_liberalism
+}
+
+create_country_leader = {
+	name = "Augusto Manuel Farinha Beirão"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+}
+
+create_country_leader = {
+	name = "Bento António Gonçalves"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = orthodox_leninism
+}
+
+create_country_leader = {
+	name = "José Domingues dos Santos"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = council_communism
+}
+
+create_country_leader = {
+	name = "Manuel Joaquim de Sousa"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_anarchism
+}
+
+create_country_leader = {
+	name = "Amílcar Ramada Curto"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = democratic_socialism
+}
+
+create_country_leader = {
+	name = "António de Oliveira Salazar"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+}
+
+create_country_leader = {
+	name = "Alfredo Augusto Lopes Pimenta"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = absolute_monarchy
+}
+
+create_country_leader = {
+	name = "Francisco Rolão Preto"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+}
+set_stability = 0.5
+create_corps_commander = {
+	name = "José Vicente de Freitas"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	traits = {  }
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Delfim Class"				
+		type = ship_hull_submarine_2
+		name_group = POR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Guadiana Class"					
+		type = ship_hull_light_1
+		name_group = POR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Douro Class"	
+		type = ship_hull_light_1
+		name_group = POR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+
+
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 25
+}
+
+
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 10
+}
+
+add_equipment_to_stockpile = {
+	type = nav_bomber_equipment_1
+	amount = 10
+}

@@ -1,0 +1,111 @@
+division_template = {
+	name = "Pikhotna Dyviziya"
+	division_names_group = UKR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleriys'ka Dyviziya"
+	division_names_group = UKR_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	
+	division = {
+		#name = "1. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6743
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "2. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6743
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "3. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3704
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "4. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 3704
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "5. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3407
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "6. Pikhotna Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6600
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+	division = {
+		#name = "1. Kavaleriys'ka Dyviziya"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6600
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+	
+}

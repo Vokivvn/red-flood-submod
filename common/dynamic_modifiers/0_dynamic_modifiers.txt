@@ -1,0 +1,149 @@
+FIU_keller_aint_broken = {
+        icon = "GFX_idea_generic_manpower_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        conscription_factor = keller_aint_broken_conscription_factor
+		consumer_goods_factor = keller_aint_broken_consumer_goods
+		industrial_capacity_factory = keller_aint_broken_factory_output
+		production_factory_max_efficiency_factor = keller_aint_broken_production_cap
+		political_power_gain = keller_aint_broken_political_power_gain
+		stability_weekly = keller_aint_broken_stability_weekly
+		research_speed_factor = keller_aint_broken_research_speed
+}
+FIU_unstoppable_machinery = {
+        icon = "GFX_idea_generic_manpower_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        conscription_factor = unstoppable_machinery_conscription_factor
+		consumer_goods_factor = unstoppable_machinery_consumer_goods
+		industrial_capacity_factory = unstoppable_machinery_factory_output
+		production_factory_max_efficiency_factor = unstoppable_machinery_production_cap
+		political_power_gain = unstoppable_machinery_political_power_gain
+		stability_weekly = unstoppable_machinery_stability_weekly
+		research_speed_factor = unstoppable_machinery_research_speed
+}
+FIU_duel_of_the_fates = {
+        icon = "GFX_idea_generic_manpower_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        conscription_factor = duel_of_the_fates_conscription_factor
+		consumer_goods_factor = duel_of_the_fates_consumer_goods
+		industrial_capacity_factory = duel_of_the_fates_factory_output
+		production_factory_max_efficiency_factor = duel_of_the_fates_production_cap
+		political_power_gain = duel_of_the_fates_political_power_gain
+		stability_weekly = duel_of_the_fates_stability_weekly
+		research_speed_factor = duel_of_the_fates_research_speed
+}
+RUS_neo_stolypinism = {
+        icon = "GFX_idea_generic_pp_unity_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+        production_speed_buildings_factor = RUS_neo_stolypinism_speed_buildings
+		drift_defence_factor = RUS_neo_stolypinism_drift_defense
+		consumer_goods_factor = RUS_neo_stolypinism_consumer_goods
+		production_speed_bunker_factor = RUS_neo_stolypinism_speed_bunker
+		production_speed_industrial_complex_factor = RUS_neo_stolypinism_speed_industrial_complex
+		production_speed_infrastructure_factor = RUS_neo_stolypinism_speed_infrastructure
+		research_speed_factor = RUS_neo_stolypinism_research_speed
+}
+PRS_europe_conquerors = {
+        icon = "GFX_idea_generic_pp_unity_bonus" # optional, will show up in guis if icon is specified
+        enable = { always = yes } #optional, the modifier won't apply if not enabled
+        remove_trigger = { always = no } #optional, will remove the modifier if true
+
+        # list of modifiers
+		conscription_factor = PRS_conscription_factor
+		army_morale_factor = PRS_army_morale_factor
+		winter_attrition_factor = PRS_winter_attrition_factor
+		experience_gain_army_factor = PRS_experience_gain_army_factor
+}
+UPI_democratization = {
+	icon = "GFX_idea_generic_pp_unity_bonus"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_factor = UPI_democratization_pp
+	stability_factor = UPI_democratization_stab
+	army_org_factor = UPI_democratization_org
+	foreign_subversive_activites = UPI_democratization_subv
+	consumer_goods_factor = UPI_democratization_goods
+}
+ITA_six_chairs_idea = {
+	icon = "GFX_idea_generic_pp_unity_bonus"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	non_core_manpower = ITA_six_chairs_idea_manpower
+	consumer_goods_factor = ITA_six_chairs_idea_goods
+	political_power_gain = ITA_six_chairs_idea_pp
+}
+ITA_occupation_resistance_idea = {
+	icon = "GFX_idea_chi_army_corruption3"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	non_core_manpower = ITA_occupation_resistance_idea_manpower
+	stability_weekly = ITA_occupation_resistance_idea_stability
+	attrition = ITA_occupation_resistance_idea_attrition
+	out_of_supply_factor = ITA_occupation_resistance_idea_partisants
+}
+KAV_chairmans_reforms = {
+	icon = "GFX_idea_KAV_chairman_reforms"
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_factor = KAV_chairmans_reforms_pp
+	conversion_cost_civ_to_mil_factor = KAV_chairmans_reforms_conversion
+	conscription_factor = KAV_chairmans_reforms_manpower
+	consumer_goods_factor = KAV_chairmans_reforms_goods
+	attrition = KAV_chairmans_reforms_attrition
+	production_speed_buildings_factor = KAV_chairmans_reforms_construction
+	research_speed_factor = KAV_chairmans_reforms_research
+	encryption_factor = KAV_chairmans_reforms_encryption
+	decryption_factor = KAV_chairmans_reforms_decryption
+	justify_war_goal_time = KAV_chairmans_reforms_wargoal
+}
+
+sabotaged_resources = {
+	remove_trigger = { 
+		has_resistance = no
+	}
+	
+	icon = GFX_modifiers_sabotaged_resource
+	
+	temporary_state_resource_oil = sabotaged_oil
+	temporary_state_resource_aluminium = sabotaged_aluminium
+	temporary_state_resource_rubber = sabotaged_rubber
+	temporary_state_resource_tungsten = sabotaged_tungsten
+	temporary_state_resource_steel = sabotaged_steel
+	temporary_state_resource_chromium = sabotaged_chromium
+}
+
+autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	recruitable_population_factor = -0.5
+	local_building_slots_factor = -0.25
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}
+
+semi_autonomous_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_building_slots_factor = -0.25
+	state_resources_factor = -0.25
+	state_production_speed_buildings_factor = -0.25
+}

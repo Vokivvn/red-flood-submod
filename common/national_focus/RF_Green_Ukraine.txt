@@ -1,0 +1,564 @@
+focus_tree = {
+	id = GUK
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GUK
+		}
+	}
+	
+	continuous_focus_position = { x = 150 y = 4000 }
+	
+	#Focus for Fight For Our Corner
+	focus = {
+		id = GUK_fight_for_our_corner
+		icon = GFX_FightForOurOwnCorner
+		x = 3
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_war_support = 0.25
+		}
+	}
+
+	#Focus for Supremacist Banner Over Vladivostok
+	focus = {
+		id = GUK_supremacist_banner_over_vladivostok
+		icon = GFX_SuprematistBannerOverVladivostok
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_fight_for_our_corner }
+		available = {
+			is_subject = no
+		}     
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core PRI
+			create_wargoal = {
+				type = annex_everything
+				target = PRI
+			}
+		}
+	}
+
+	#Focus for Amass the Troops
+	focus = {
+		id = GUK_amass_the_troops
+		icon = GFX_AmassTheTroops
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_fight_for_our_corner }
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				service_by_requirement
+			}
+		}
+	}
+
+	#Focus for Cubistic Dream
+	focus = {
+		id = GUK_cubistic_dream
+		icon = GFX_CubisticDream
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_fight_for_our_corner }
+      
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Yellow Pyramid Symbols Over Harbin
+	focus = {
+		id = GUK_yellow_pyramid_symbols_over_harbin
+		icon = GFX_YellowPyramidSymbolsOverVladivostok
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_fight_for_our_corner }
+		available = {
+			is_subject = no
+		}
+		bypass = { has_full_control_of_state = 978 }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core MNS
+			#core HAR
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ZHR
+			}
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for Perfect Land with Perfect Shape
+	focus = {
+		id = GUK_perfect_land_with_perfect_shape
+		icon = GFX_PerfectLandWithPerfectShape
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GUK_amass_the_troops 
+		}
+		prerequisite = { 
+			focus = GUK_cubistic_dream 
+		}
+		available = {
+			has_war = no
+			MNS = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			ZHR = {
+				exists = no
+			}
+			has_full_control_of_state = 978
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 810
+			has_full_control_of_state = 714
+			has_full_control_of_state = 761
+			has_full_control_of_state = 561
+			has_full_control_of_state = 560
+			has_full_control_of_state = 409
+			has_full_control_of_state = 930
+			has_full_control_of_state = 408
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+
+	#Focus for All Shall Be Equal
+	focus = {
+		id = GUK_all_shall_be_equal
+		icon = GFX_AllShallBeEqual
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_perfect_land_with_perfect_shape }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_ideas = {
+				free_trade
+				civilian_economy
+			}
+		}
+	}
+
+	#Focus for Under Ukrainian Supremacy
+	focus = {
+		id = GUK_under_ukrainian_supremacy
+		icon = GFX_UnderUkrainianSupremacy
+		x = 2
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_all_shall_be_equal }
+		mutually_exclusive = { focus = GUK_in_the_land_of_equal_cubes }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Focus for In the Land of Equal Cubes
+	focus = {
+		id = GUK_in_the_land_of_equal_cubes
+		icon = GFX_InTheLandOfEqualCubes
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_all_shall_be_equal }
+		mutually_exclusive = { focus = GUK_under_ukrainian_supremacy }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Restore the Society
+	focus = {
+		id = GUK_restore_the_society
+		icon = GFX_RestoreTheSociety
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = GUK_in_the_land_of_equal_cubes 
+			focus = GUK_under_ukrainian_supremacy 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for In the Shape of Our Dreams
+	focus = {
+		id = GUK_in_the_shape_of_our_dreams
+		icon = GFX_InTheShapeOfOurDreams
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_restore_the_society }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.3
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Return to Original Forms
+	focus = {
+		id = GUK_return_to_original_forms
+		icon = GFX_ReturnToOriginalForms
+		x = 0
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_in_the_shape_of_our_dreams }
+		mutually_exclusive = {
+			focus = GUK_empire_of_black_square
+		}
+		mutually_exclusive = {
+			focus = GUK_gain_perfection_in_solitude
+		}
+		mutually_exclusive = {
+			focus = GUK_perfection_with_metal_undertone
+		}
+		available = {
+			UKR = {
+				has_government = accelerationism
+			}
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#decision - if UKR and GUK border UKR annexes GUK and gives all stuff etc. tag switch?
+		}
+	}
+
+	#Focus for Gain Perfection in Solitude
+	focus = {
+		id = GUK_gain_perfection_in_solitude
+		icon = GFX_GainPerfectionInSolitude
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_in_the_shape_of_our_dreams }
+		mutually_exclusive = {
+			focus = GUK_empire_of_black_square
+		}
+		mutually_exclusive = {
+			focus = GUK_perfection_with_metal_undertone
+		}
+		mutually_exclusive = {
+			focus = GUK_return_to_original_forms
+		}
+		available = {
+			is_subject = no
+		}     
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					YDK = {
+						exists = yes
+					}
+				}
+				diplomatic_relation = {
+					country = YDK
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			if = {
+				limit = {
+					KCK = {
+						exists = yes
+					}
+				}
+				diplomatic_relation = {
+					country = KCK
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			
+		}
+	}
+
+	#Focus for Empire of Black Square
+	focus = {
+		id = GUK_empire_of_black_square
+		icon = GFX_EmpireOfBlackSquare
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_in_the_shape_of_our_dreams }
+		mutually_exclusive = {
+			focus = GUK_perfection_with_metal_undertone
+		}
+		mutually_exclusive = {
+			focus = GUK_gain_perfection_in_solitude
+		}
+		mutually_exclusive = {
+			focus = GUK_return_to_original_forms
+		}
+		available = {
+			is_subject = no
+		}     
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core KCK and MO2
+			if = {
+				limit = {
+					MO2 = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MO2
+				}
+			}
+			if = {
+				limit = {
+					KCK = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KCK
+				}
+			}
+		}
+	}
+
+	#Focus for Perfection with Metal Undertone
+	focus = {
+		id = GUK_perfection_with_metal_undertone
+		icon = GFX_PerfectionWithMetalUndertone
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = GUK_in_the_shape_of_our_dreams }
+		mutually_exclusive = {
+			focus = GUK_empire_of_black_square
+		}
+		mutually_exclusive = {
+			focus = GUK_gain_perfection_in_solitude
+		}
+		mutually_exclusive = {
+			focus = GUK_return_to_original_forms
+		}
+		available = { 
+			USA = {
+				has_government = accelerationism
+				is_in_faction = no
+			}
+			is_subject = no
+		}      
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#decisions:
+			#event with USA to form NPTO
+			#event to join GDI with KAV if Khlebnikov is in charge
+		}
+	}
+
+#End of focuses 
+ }

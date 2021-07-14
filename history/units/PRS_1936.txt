@@ -1,0 +1,163 @@
+﻿division_template = {
+	name = "Sturmbattalion"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Kavallerie Division"
+	division_names_group = DEN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Landwehr"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Freikorps"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Marine Brigade"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		division_name = { #"Marinebrigade Erhart"
+		}
+		location = 6332
+		division_template = "Marine Brigade"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Garde-Kavallerie-Schützen-Division" 
+		}
+		location = 11386
+		division_template = "Kavallerie Division"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmbattalion "Stahlhelm" 
+		}
+		location = 6332
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Detachement von Randow" 
+		}
+		location = 362
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmbattalion "Wehrwolf"
+		}
+		location = 362
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Sturmabteilung "Totenkopf"" 
+		}
+		location = 3288
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Garde-Landesschützen-Korps" 
+		}
+		location = 11386
+		division_template = "Sturmbattalion"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps "Schwarze Jäger"" 
+		}
+		location = 362
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps "Hacketau"" 
+		}
+		location = 3380
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freikorps von Petersdorff" 
+		}
+		location = 6332
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Freiwilligen-Regiment Königsberg"
+		}
+		location = 3384
+		division_template = "Freikorps"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { #"Ostrpreußisches Freiwilligenkorps" 
+		}
+		location = 6375
+		division_template = "Landwehr"
+		start_experience_factor = 0.20
+	}
+}
+air_wings = {
+	763 = { 
+		fighter_equipment_0 = {		
+			owner = "PRS" 
+			amount = 75
+		}
+		CAS_equipment_1 =  {		
+			owner = "PRS" 
+			amount = 50
+		}
+	}
+}

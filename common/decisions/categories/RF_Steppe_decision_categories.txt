@@ -1,0 +1,51 @@
+STE_factionalism_decisions = {
+	icon = generic_political_actions
+
+	# picture = 
+
+	allowed = { original_tag = STE }
+
+	priority = 100
+
+	scripted_gui = steppe_factionalism_gui
+	
+	visible = {
+		has_country_flag = STE_factionalism_visible
+	}
+}
+STE_invade_the_neighbors = {
+	icon = infiltration
+	allowed = { original_tag = STE }
+	priority = 100
+	
+	visible = {
+		has_completed_focus = STE_steppe_feudalism
+	}
+}
+STE_sack_the_neighbors = {
+	icon = generic_arms_trade
+	allowed = { original_tag = STE }
+	priority = 100
+	
+	visible = {
+		has_completed_focus = STE_organize_regular_raids
+	}
+}
+STE_kornilovs_ambitions = {
+	icon = military_operation
+	allowed = { original_tag = STE }
+	priority = 100
+	
+	visible = {
+		has_country_flag = STE_kornilov_decision_unlock
+	}
+}
+STE_gulidovs_ambitions = {
+	icon = generic_fascism
+	allowed = { original_tag = STE }
+	priority = 100
+	
+	visible = {
+		has_country_flag = STE_gulidov_decision_unlock
+	}
+}

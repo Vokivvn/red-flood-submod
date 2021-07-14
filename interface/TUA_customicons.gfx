@@ -1,0 +1,2055 @@
+spriteTypes = { 
+	##Icon For: The Free Territory
+	SpriteType = { 
+		name = "GFX_TUA_the_free_territory-21646"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_free_territory-21646.dds"
+	}
+
+	##Icon Shine For: The Free Territory
+	SpriteType = { 
+		name = "GFX_TUA_the_free_territory-21646_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_free_territory-21646.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_free_territory-21646.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_free_territory-21646.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Eternally Fighting Clans
+	SpriteType = { 
+		name = "GFX_TUA_eternally_fighting_clans-21649"
+		texturefile = "gfx/interface/goals/GFX_TUA_eternally_fighting_clans-21649.dds"
+	}
+
+	##Icon Shine For: Eternally Fighting Clans
+	SpriteType = { 
+		name = "GFX_TUA_eternally_fighting_clans-21649_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_eternally_fighting_clans-21649.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_eternally_fighting_clans-21649.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_eternally_fighting_clans-21649.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Saharan Slave Trade
+	SpriteType = { 
+		name = "GFX_TUA_saharan_slave_trade-21651"
+		texturefile = "gfx/interface/goals/GFX_TUA_saharan_slave_trade-21651.dds"
+	}
+
+	##Icon Shine For: Saharan Slave Trade
+	SpriteType = { 
+		name = "GFX_TUA_saharan_slave_trade-21651_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_saharan_slave_trade-21651.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_saharan_slave_trade-21651.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_saharan_slave_trade-21651.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Unshakeable Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_unshakeable_faith_in_allah-21650"
+		texturefile = "gfx/interface/goals/GFX_TUA_unshakeable_faith_in_allah-21650.dds"
+	}
+
+	##Icon Shine For: Unshakeable Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_unshakeable_faith_in_allah-21650_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_unshakeable_faith_in_allah-21650.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_unshakeable_faith_in_allah-21650.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_unshakeable_faith_in_allah-21650.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Former French Rule
+	SpriteType = { 
+		name = "GFX_TUA_former_french_rule-21652"
+		texturefile = "gfx/interface/goals/GFX_TUA_former_french_rule-21652.dds"
+	}
+
+	##Icon Shine For: Former French Rule
+	SpriteType = { 
+		name = "GFX_TUA_former_french_rule-21652_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_former_french_rule-21652.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_former_french_rule-21652.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_former_french_rule-21652.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Shifting Sands
+	SpriteType = { 
+		name = "GFX_TUA_shifting_sands-21653"
+		texturefile = "gfx/interface/goals/GFX_TUA_shifting_sands-21653.dds"
+	}
+
+	##Icon Shine For: Shifting Sands
+	SpriteType = { 
+		name = "GFX_TUA_shifting_sands-21653_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_shifting_sands-21653.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_shifting_sands-21653.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_shifting_sands-21653.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Unifier
+	SpriteType = { 
+		name = "GFX_TUA_the_unifier-21657"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_unifier-21657.dds"
+	}
+
+	##Icon Shine For: The Unifier
+	SpriteType = { 
+		name = "GFX_TUA_the_unifier-21657_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_unifier-21657.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_unifier-21657.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_unifier-21657.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Liberator
+	SpriteType = { 
+		name = "GFX_TUA_the_liberator-21658"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_liberator-21658.dds"
+	}
+
+	##Icon Shine For: The Liberator
+	SpriteType = { 
+		name = "GFX_TUA_the_liberator-21658_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_liberator-21658.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_liberator-21658.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_liberator-21658.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Wrath
+	SpriteType = { 
+		name = "GFX_TUA_the_wrath-21659"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_wrath-21659.dds"
+	}
+
+	##Icon Shine For: The Wrath
+	SpriteType = { 
+		name = "GFX_TUA_the_wrath-21659_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_wrath-21659.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_wrath-21659.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_wrath-21659.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Amenukal of Tuaregs
+	SpriteType = { 
+		name = "GFX_TUA_amenukal_of_tuaregs-21661"
+		texturefile = "gfx/interface/goals/GFX_TUA_amenukal_of_tuaregs-21661.dds"
+	}
+
+	##Icon Shine For: Amenukal of Tuaregs
+	SpriteType = { 
+		name = "GFX_TUA_amenukal_of_tuaregs-21661_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_amenukal_of_tuaregs-21661.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_amenukal_of_tuaregs-21661.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_amenukal_of_tuaregs-21661.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Keep Traditions Safe
+	SpriteType = { 
+		name = "GFX_TUA_keep_traditions_safe-21662"
+		texturefile = "gfx/interface/goals/GFX_TUA_keep_traditions_safe-21662.dds"
+	}
+
+	##Icon Shine For: Keep Traditions Safe
+	SpriteType = { 
+		name = "GFX_TUA_keep_traditions_safe-21662_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_keep_traditions_safe-21662.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_keep_traditions_safe-21662.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_keep_traditions_safe-21662.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: What a Tuareg Is...
+	SpriteType = { 
+		name = "GFX_TUA_what_a_tuareg_is-21674"
+		texturefile = "gfx/interface/goals/GFX_TUA_what_a_tuareg_is-21674.dds"
+	}
+
+	##Icon Shine For: What a Tuareg Is...
+	SpriteType = { 
+		name = "GFX_TUA_what_a_tuareg_is-21674_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_what_a_tuareg_is-21674.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_what_a_tuareg_is-21674.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_what_a_tuareg_is-21674.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: ...Without His Slaves?
+	SpriteType = { 
+		name = "GFX_TUA_without_his_slaves-21677"
+		texturefile = "gfx/interface/goals/GFX_TUA_without_his_slaves-21677.dds"
+	}
+
+	##Icon Shine For: ...Without His Slaves?
+	SpriteType = { 
+		name = "GFX_TUA_without_his_slaves-21677_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_without_his_slaves-21677.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_without_his_slaves-21677.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_without_his_slaves-21677.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Ensure Clan Loyalty
+	SpriteType = { 
+		name = "GFX_TUA_ensure_clan_loyalty-21665"
+		texturefile = "gfx/interface/goals/GFX_TUA_ensure_clan_loyalty-21665.dds"
+	}
+
+	##Icon Shine For: Ensure Clan Loyalty
+	SpriteType = { 
+		name = "GFX_TUA_ensure_clan_loyalty-21665_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_ensure_clan_loyalty-21665.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_ensure_clan_loyalty-21665.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_ensure_clan_loyalty-21665.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_faith_in_allah-21675"
+		texturefile = "gfx/interface/goals/GFX_TUA_faith_in_allah-21675.dds"
+	}
+
+	##Icon Shine For: Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_faith_in_allah-21675_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_faith_in_allah-21675.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_faith_in_allah-21675.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_faith_in_allah-21675.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Is Faith in Amenukal
+	SpriteType = { 
+		name = "GFX_TUA_is_faith_in_amenukal-21678"
+		texturefile = "gfx/interface/goals/GFX_TUA_is_faith_in_amenukal-21678.dds"
+	}
+
+	##Icon Shine For: Is Faith in Amenukal
+	SpriteType = { 
+		name = "GFX_TUA_is_faith_in_amenukal-21678_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_is_faith_in_amenukal-21678.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_is_faith_in_amenukal-21678.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_is_faith_in_amenukal-21678.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Warrior Spirit
+	SpriteType = { 
+		name = "GFX_TUA_warrior_spirit-21673"
+		texturefile = "gfx/interface/goals/GFX_TUA_warrior_spirit-21673.dds"
+	}
+
+	##Icon Shine For: Warrior Spirit
+	SpriteType = { 
+		name = "GFX_TUA_warrior_spirit-21673_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_warrior_spirit-21673.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_warrior_spirit-21673.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_warrior_spirit-21673.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Raiders of Sands
+	SpriteType = { 
+		name = "GFX_TUA_raiders_of_sands-21676"
+		texturefile = "gfx/interface/goals/GFX_TUA_raiders_of_sands-21676.dds"
+	}
+
+	##Icon Shine For: Raiders of Sands
+	SpriteType = { 
+		name = "GFX_TUA_raiders_of_sands-21676_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_raiders_of_sands-21676.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_raiders_of_sands-21676.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_raiders_of_sands-21676.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Ikelan Meat Shields
+	SpriteType = { 
+		name = "GFX_TUA_ikelan_meat_shields-21679"
+		texturefile = "gfx/interface/goals/GFX_TUA_ikelan_meat_shields-21679.dds"
+	}
+
+	##Icon Shine For: Ikelan Meat Shields
+	SpriteType = { 
+		name = "GFX_TUA_ikelan_meat_shields-21679_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_ikelan_meat_shields-21679.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_ikelan_meat_shields-21679.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_ikelan_meat_shields-21679.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Clans United Under Amenukal
+	SpriteType = { 
+		name = "GFX_TUA_clans_united_under_amenukal-21680"
+		texturefile = "gfx/interface/goals/GFX_TUA_clans_united_under_amenukal-21680.dds"
+	}
+
+	##Icon Shine For: Clans United Under Amenukal
+	SpriteType = { 
+		name = "GFX_TUA_clans_united_under_amenukal-21680_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_clans_united_under_amenukal-21680.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_clans_united_under_amenukal-21680.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_clans_united_under_amenukal-21680.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Dictatorial Democracy
+	SpriteType = { 
+		name = "GFX_TUA_dictatorial_democracy-21681"
+		texturefile = "gfx/interface/goals/GFX_TUA_dictatorial_democracy-21681.dds"
+	}
+
+	##Icon Shine For: Dictatorial Democracy
+	SpriteType = { 
+		name = "GFX_TUA_dictatorial_democracy-21681_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_dictatorial_democracy-21681.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_dictatorial_democracy-21681.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_dictatorial_democracy-21681.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Create Bureaucracy
+	SpriteType = { 
+		name = "GFX_TUA_create_bureaucracy-21682"
+		texturefile = "gfx/interface/goals/GFX_TUA_create_bureaucracy-21682.dds"
+	}
+
+	##Icon Shine For: Create Bureaucracy
+	SpriteType = { 
+		name = "GFX_TUA_create_bureaucracy-21682_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_create_bureaucracy-21682.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_create_bureaucracy-21682.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_create_bureaucracy-21682.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: ...And Corrupt It
+	SpriteType = { 
+		name = "GFX_TUA_and_corrupt_it-21685"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_corrupt_it-21685.dds"
+	}
+
+	##Icon Shine For: ...And Corrupt It
+	SpriteType = { 
+		name = "GFX_TUA_and_corrupt_it-21685_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_corrupt_it-21685.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_corrupt_it-21685.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_corrupt_it-21685.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Capitalism With Slave Trade
+	SpriteType = { 
+		name = "GFX_TUA_capitalism_with_slave_trade-21688"
+		texturefile = "gfx/interface/goals/GFX_TUA_capitalism_with_slave_trade-21688.dds"
+	}
+
+	##Icon Shine For: Capitalism With Slave Trade
+	SpriteType = { 
+		name = "GFX_TUA_capitalism_with_slave_trade-21688_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_capitalism_with_slave_trade-21688.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_capitalism_with_slave_trade-21688.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_capitalism_with_slave_trade-21688.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: One Party
+	SpriteType = { 
+		name = "GFX_TUA_one_party-21683"
+		texturefile = "gfx/interface/goals/GFX_TUA_one_party-21683.dds"
+	}
+
+	##Icon Shine For: One Party
+	SpriteType = { 
+		name = "GFX_TUA_one_party-21683_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_one_party-21683.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_one_party-21683.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_one_party-21683.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: And One President
+	SpriteType = { 
+		name = "GFX_TUA_and_one_president-21686"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_one_president-21686.dds"
+	}
+
+	##Icon Shine For: And One President
+	SpriteType = { 
+		name = "GFX_TUA_and_one_president-21686_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_one_president-21686.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_one_president-21686.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_one_president-21686.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Crush all Protests
+	SpriteType = { 
+		name = "GFX_TUA_crush_all_protests-21689"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_all_protests-21689.dds"
+	}
+
+	##Icon Shine For: Crush all Protests
+	SpriteType = { 
+		name = "GFX_TUA_crush_all_protests-21689_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_all_protests-21689.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_all_protests-21689.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_all_protests-21689.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Take Soldiers from the Clans
+	SpriteType = { 
+		name = "GFX_TUA_take_soldiers_from_the_clans-21684"
+		texturefile = "gfx/interface/goals/GFX_TUA_take_soldiers_from_the_clans-21684.dds"
+	}
+
+	##Icon Shine For: Take Soldiers from the Clans
+	SpriteType = { 
+		name = "GFX_TUA_take_soldiers_from_the_clans-21684_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_take_soldiers_from_the_clans-21684.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_take_soldiers_from_the_clans-21684.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_take_soldiers_from_the_clans-21684.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Crush Resistance
+	SpriteType = { 
+		name = "GFX_TUA_crush_resistance-21690"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_resistance-21690.dds"
+	}
+
+	##Icon Shine For: Crush Resistance
+	SpriteType = { 
+		name = "GFX_TUA_crush_resistance-21690_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_resistance-21690.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_resistance-21690.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_resistance-21690.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Mandatory Military
+	SpriteType = { 
+		name = "GFX_TUA_mandatory_military-21691"
+		texturefile = "gfx/interface/goals/GFX_TUA_mandatory_military-21691.dds"
+	}
+
+	##Icon Shine For: Mandatory Military
+	SpriteType = { 
+		name = "GFX_TUA_mandatory_military-21691_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_mandatory_military-21691.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_mandatory_military-21691.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_mandatory_military-21691.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: I am your Saviour
+	SpriteType = { 
+		name = "GFX_TUA_i_am_your_saviour-21692"
+		texturefile = "gfx/interface/goals/GFX_TUA_i_am_your_saviour-21692.dds"
+	}
+
+	##Icon Shine For: I am your Saviour
+	SpriteType = { 
+		name = "GFX_TUA_i_am_your_saviour-21692_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_i_am_your_saviour-21692.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_i_am_your_saviour-21692.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_i_am_your_saviour-21692.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Man from the Future
+	SpriteType = { 
+		name = "GFX_TUA_man_from_the_future-21693"
+		texturefile = "gfx/interface/goals/GFX_TUA_man_from_the_future-21693.dds"
+	}
+
+	##Icon Shine For: Man from the Future
+	SpriteType = { 
+		name = "GFX_TUA_man_from_the_future-21693_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_man_from_the_future-21693.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_man_from_the_future-21693.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_man_from_the_future-21693.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: All that is Inside the State
+	SpriteType = { 
+		name = "GFX_TUA_all_that_is_inside_the_state-21694"
+		texturefile = "gfx/interface/goals/GFX_TUA_all_that_is_inside_the_state-21694.dds"
+	}
+
+	##Icon Shine For: All that is Inside the State
+	SpriteType = { 
+		name = "GFX_TUA_all_that_is_inside_the_state-21694_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_all_that_is_inside_the_state-21694.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_all_that_is_inside_the_state-21694.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_all_that_is_inside_the_state-21694.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: ...Belongs to It
+	SpriteType = { 
+		name = "GFX_TUA_belongs_to_it-21698"
+		texturefile = "gfx/interface/goals/GFX_TUA_belongs_to_it-21698.dds"
+	}
+
+	##Icon Shine For: ...Belongs to It
+	SpriteType = { 
+		name = "GFX_TUA_belongs_to_it-21698_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_belongs_to_it-21698.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_belongs_to_it-21698.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_belongs_to_it-21698.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Planned Economy with no Economy
+	SpriteType = { 
+		name = "GFX_TUA_planned_economy_with_no_economy-21699"
+		texturefile = "gfx/interface/goals/GFX_TUA_planned_economy_with_no_economy-21699.dds"
+	}
+
+	##Icon Shine For: Planned Economy with no Economy
+	SpriteType = { 
+		name = "GFX_TUA_planned_economy_with_no_economy-21699_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_planned_economy_with_no_economy-21699.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_planned_economy_with_no_economy-21699.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_planned_economy_with_no_economy-21699.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: We are Something New
+	SpriteType = { 
+		name = "GFX_TUA_we_are_something_new-21695"
+		texturefile = "gfx/interface/goals/GFX_TUA_we_are_something_new-21695.dds"
+	}
+
+	##Icon Shine For: We are Something New
+	SpriteType = { 
+		name = "GFX_TUA_we_are_something_new-21695_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_we_are_something_new-21695.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_we_are_something_new-21695.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_we_are_something_new-21695.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Esoteric Practices
+	SpriteType = { 
+		name = "GFX_TUA_esoteric_practices-21700"
+		texturefile = "gfx/interface/goals/GFX_TUA_esoteric_practices-21700.dds"
+	}
+
+	##Icon Shine For: Esoteric Practices
+	SpriteType = { 
+		name = "GFX_TUA_esoteric_practices-21700_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_esoteric_practices-21700.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_esoteric_practices-21700.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_esoteric_practices-21700.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Chosen of Jabrail
+	SpriteType = { 
+		name = "GFX_TUA_chosen_of_jabrail-21703"
+		texturefile = "gfx/interface/goals/GFX_TUA_chosen_of_jabrail-21703.dds"
+	}
+
+	##Icon Shine For: Chosen of Jabrail
+	SpriteType = { 
+		name = "GFX_TUA_chosen_of_jabrail-21703_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_chosen_of_jabrail-21703.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_chosen_of_jabrail-21703.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_chosen_of_jabrail-21703.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Black Order
+	SpriteType = { 
+		name = "GFX_TUA_the_black_order-21696"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_black_order-21696.dds"
+	}
+
+	##Icon Shine For: The Black Order
+	SpriteType = { 
+		name = "GFX_TUA_the_black_order-21696_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_the_black_order-21696.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_black_order-21696.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_the_black_order-21696.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Raiders of Tomorrow
+	SpriteType = { 
+		name = "GFX_TUA_raiders_of_tomorrow-21701"
+		texturefile = "gfx/interface/goals/GFX_TUA_raiders_of_tomorrow-21701.dds"
+	}
+
+	##Icon Shine For: Raiders of Tomorrow
+	SpriteType = { 
+		name = "GFX_TUA_raiders_of_tomorrow-21701_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_raiders_of_tomorrow-21701.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_raiders_of_tomorrow-21701.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_raiders_of_tomorrow-21701.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Crush Escadron Influence in the Military
+	SpriteType = { 
+		name = "GFX_TUA_crush_escadron_influence_in_the_military-21702"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_escadron_influence_in_the_military-21702.dds"
+	}
+
+	##Icon Shine For: Crush Escadron Influence in the Military
+	SpriteType = { 
+		name = "GFX_TUA_crush_escadron_influence_in_the_military-21702_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_crush_escadron_influence_in_the_military-21702.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_escadron_influence_in_the_military-21702.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_crush_escadron_influence_in_the_military-21702.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Realm of Coche
+	SpriteType = { 
+		name = "GFX_TUA_realm_of_coche-21704"
+		texturefile = "gfx/interface/goals/GFX_TUA_realm_of_coche-21704.dds"
+	}
+
+	##Icon Shine For: Realm of Coche
+	SpriteType = { 
+		name = "GFX_TUA_realm_of_coche-21704_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_realm_of_coche-21704.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_realm_of_coche-21704.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_realm_of_coche-21704.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Never Changing Desert
+	SpriteType = { 
+		name = "GFX_TUA_never_changing_desert-21660"
+		texturefile = "gfx/interface/goals/GFX_TUA_never_changing_desert-21660.dds"
+	}
+
+	##Icon Shine For: Never Changing Desert
+	SpriteType = { 
+		name = "GFX_TUA_never_changing_desert-21660_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_never_changing_desert-21660.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_never_changing_desert-21660.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_never_changing_desert-21660.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: A Territory Truly Free
+	SpriteType = { 
+		name = "GFX_TUA_a_territory_truly_free-21705"
+		texturefile = "gfx/interface/goals/GFX_TUA_a_territory_truly_free-21705.dds"
+	}
+
+	##Icon Shine For: A Territory Truly Free
+	SpriteType = { 
+		name = "GFX_TUA_a_territory_truly_free-21705_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_a_territory_truly_free-21705.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_a_territory_truly_free-21705.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_a_territory_truly_free-21705.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Socialism?
+	SpriteType = { 
+		name = "GFX_TUA_socialism-21706"
+		texturefile = "gfx/interface/goals/GFX_TUA_socialism-21706.dds"
+	}
+
+	##Icon Shine For: Socialism?
+	SpriteType = { 
+		name = "GFX_TUA_socialism-21706_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_socialism-21706.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_socialism-21706.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_socialism-21706.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Futurism?
+	SpriteType = { 
+		name = "GFX_TUA_futurism-21709"
+		texturefile = "gfx/interface/goals/GFX_TUA_futurism-21709.dds"
+	}
+
+	##Icon Shine For: Futurism?
+	SpriteType = { 
+		name = "GFX_TUA_futurism-21709_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_futurism-21709.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_futurism-21709.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_futurism-21709.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: That's not the Tuareg Spirit
+	SpriteType = { 
+		name = "GFX_TUA_thats_not_the_tuareg_spirit-21710"
+		texturefile = "gfx/interface/goals/GFX_TUA_thats_not_the_tuareg_spirit-21710.dds"
+	}
+
+	##Icon Shine For: That's not the Tuareg Spirit
+	SpriteType = { 
+		name = "GFX_TUA_thats_not_the_tuareg_spirit-21710_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_thats_not_the_tuareg_spirit-21710.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_thats_not_the_tuareg_spirit-21710.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_thats_not_the_tuareg_spirit-21710.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Tribal Society
+	SpriteType = { 
+		name = "GFX_TUA_tribal_society-21707"
+		texturefile = "gfx/interface/goals/GFX_TUA_tribal_society-21707.dds"
+	}
+
+	##Icon Shine For: Tribal Society
+	SpriteType = { 
+		name = "GFX_TUA_tribal_society-21707_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_tribal_society-21707.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_tribal_society-21707.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_tribal_society-21707.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: What is here to Change?
+	SpriteType = { 
+		name = "GFX_TUA_what_is_here_to_change-21711"
+		texturefile = "gfx/interface/goals/GFX_TUA_what_is_here_to_change-21711.dds"
+	}
+
+	##Icon Shine For: What is here to Change?
+	SpriteType = { 
+		name = "GFX_TUA_what_is_here_to_change-21711_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_what_is_here_to_change-21711.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_what_is_here_to_change-21711.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_what_is_here_to_change-21711.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Keep calm and have Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_keep_calm_and_have_faith_in_allah-21714"
+		texturefile = "gfx/interface/goals/GFX_TUA_keep_calm_and_have_faith_in_allah-21714.dds"
+	}
+
+	##Icon Shine For: Keep calm and have Faith in Allah
+	SpriteType = { 
+		name = "GFX_TUA_keep_calm_and_have_faith_in_allah-21714_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_keep_calm_and_have_faith_in_allah-21714.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_keep_calm_and_have_faith_in_allah-21714.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_keep_calm_and_have_faith_in_allah-21714.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Clan Military
+	SpriteType = { 
+		name = "GFX_TUA_clan_military-21708"
+		texturefile = "gfx/interface/goals/GFX_TUA_clan_military-21708.dds"
+	}
+
+	##Icon Shine For: Clan Military
+	SpriteType = { 
+		name = "GFX_TUA_clan_military-21708_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_clan_military-21708.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_clan_military-21708.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_clan_military-21708.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: And Slaves as Workers
+	SpriteType = { 
+		name = "GFX_TUA_and_slaves_as_workers-21712"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_slaves_as_workers-21712.dds"
+	}
+
+	##Icon Shine For: And Slaves as Workers
+	SpriteType = { 
+		name = "GFX_TUA_and_slaves_as_workers-21712_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_and_slaves_as_workers-21712.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_slaves_as_workers-21712.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_and_slaves_as_workers-21712.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Like Before Muhammad
+	SpriteType = { 
+		name = "GFX_TUA_like_before_muhammad-21713"
+		texturefile = "gfx/interface/goals/GFX_TUA_like_before_muhammad-21713.dds"
+	}
+
+	##Icon Shine For: Like Before Muhammad
+	SpriteType = { 
+		name = "GFX_TUA_like_before_muhammad-21713_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_like_before_muhammad-21713.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_like_before_muhammad-21713.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_like_before_muhammad-21713.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: True Conservatism
+	SpriteType = { 
+		name = "GFX_TUA_true_conservatism-21715"
+		texturefile = "gfx/interface/goals/GFX_TUA_true_conservatism-21715.dds"
+	}
+
+	##Icon Shine For: True Conservatism
+	SpriteType = { 
+		name = "GFX_TUA_true_conservatism-21715_shine"
+		texturefile = "gfx/interface/goals/GFX_TUA_true_conservatism-21715.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_true_conservatism-21715.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_TUA_true_conservatism-21715.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+ 
+ }

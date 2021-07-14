@@ -1,0 +1,11 @@
+GER_worldrevolution_decisions = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = GER
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = GER_worldrevolution
+		is_subject = no
+	}
+}

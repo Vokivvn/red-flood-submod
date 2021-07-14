@@ -1,0 +1,38 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		ARY_rss_militias = {
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+			picture = MEX_politicised_army
+		}
+		ARY_ethnic_tensions = {
+			modifier = {
+				stability_factor = -0.20
+                                political_power_factor = -0.30
+				army_morale_factor = -0.1
+				consumer_goods_factor = 0.10
+				#mobilization_laws_cost_factor = 0.25
+			}
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		ARY_abhinav_bharat_society = {
+			modifier = {
+				foreign_subversive_activites = -0.20
+                                subversive_activites_upkeep = -0.20
+			}
+			picture = generic_secret_police
+		}
+	}
+###########
+#MINISTERS#
+###########
+
+	

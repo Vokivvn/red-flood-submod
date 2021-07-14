@@ -1,0 +1,13 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Tran Hung Dao"
+		naval_base = 10309
+		task_force = {				
+			name = "Tran Hung Dao"				
+			location =  10309
+			ship = { name = "Tran Hung Dao" definition = heavy_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = DAI version_name = "Tran Hung Dao Class" } } }			
+		}				
+	}
+}

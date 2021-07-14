@@ -1,0 +1,827 @@
+ideas = {
+
+	#################
+	# Country ideas #
+	#################
+
+	country = {
+		BRA_oligarchic_madness = {
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.1
+			}
+			picture = generic_disjointed_gov
+		}
+		BRA_local_army = {
+			modifier = {
+				max_planning = -0.1
+				army_morale_factor = -0.05
+			}
+			picture = generic_manpower_bonus
+		}
+		BRA_revolutionary_scars = {
+			modifier = {
+				stability_factor = -0.1
+				vanguard_socialism_drift = -0.05
+				libertarian_marxism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+			}
+			picture = officers_purged
+		}
+		BRA_famine = {
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+			}
+			picture = raj_risk_of_famine
+		}
+		BRA_state_authority_collapse = {
+			modifier = {
+				industrial_capacity_factory = -0.9
+				research_speed_factor = -0.7
+				stability_factor = -0.8
+			}
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		BRA_German_Socialist_symapthies = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_German_Socialist_symapthies"}
+			modifier = {
+				stability_factor = -0.03
+				conscription_factor = -0.01 
+				consumer_goods_factor = -0.05 			
+			}
+			picture = generic_constitutional_guarantees
+		}
+		
+		BRA_Agrarian_problems = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_Agrarian_problems"}
+			modifier = {
+			    stability_factor = -0.03	
+			}
+			picture = generic_victors_of_ww1
+		}
+		
+		BRA_london_market_crash = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_london_market_crash"}
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.3
+				production_speed_buildings_factor = -0.15	
+			}
+			picture = great_depression
+		}
+		BRA_christian_socialism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_christian_socialism"}
+			picture = FRA_national_mobilization_focus
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		BRA_catholic_egalitarianism  = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_catholic_egalitarianism"}
+			picture = trotskyite_plot_purged
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.1
+			}
+		}
+		BRA_catholic_egalitarianism_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_catholic_egalitarianism_1"}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = 0.15
+				research_speed_factor = 0.05
+			}
+		}
+		BRA_religious_militias = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_religious_militias"}
+			picture = ast_abandon_the_westminster_system_communism
+			modifier = {
+				conscription = 0.05
+				offence = 0.05
+				defence = 0.1
+				army_org_factor = -0.05
+			}
+		}
+		BRA_social_housing = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea BRA_social_housing"}
+			picture = ast_naval_auxiliary_patrol
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.15
+				MONTHLY_POPULATION = 0.15
+			}
+		}
+		BRA_social_housing_1 = {
+			picture = generic_pp_unity_bonus
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.25
+				MONTHLY_POPULATION = 0.15
+				political_power_gain = 0.05
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		BRA_germanic_communism = {
+			picture = trotskyite_plot
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		BRA_municipal_socialism = {
+			picture = can_patriation
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = -0.2
+				stability_factor = 0.1
+			}
+		}
+		BRA_cooperativism_idea = {
+			picture = saf_soviet_advisers
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_start_efficiency_factor = -0.10
+			}
+		}
+		BRA_culture = {
+			picture = air_support_focus
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.03
+				production_factory_start_efficiency_factor = -0.03
+				production_speed_arms_factory_factor = -0.03
+				stability_factor = 0.25
+				surrender_limit = 0.25
+			}
+		}
+		MOG_feudalism = {
+			picture = imperial_glory_idea
+			modifier = {
+				consumer_goods_factor = -0.07
+				production_factory_efficiency_gain_factor = 0.03
+				stability_factor = 0.05
+				war_support_factor = 0.10
+				monthly_population	= 0.30
+				research_speed_factor = -0.07
+			}
+		}
+		BRA_civil_war = {
+			picture = officers_purged
+			modifier = {
+				ai_get_ally_desire_factor = -1000
+				war_support_factor = -0.1
+				surrender_limit = -0.1
+			}
+			cancel = {
+				BRR = {
+					exists = no
+				}
+			}
+		}
+		BRA_internal_terror_idea = {
+			picture = officers_purged
+			modifier = {
+				stability_factor = -0.15
+				research_speed_factor = 0.10
+				root_out_resistance_effectiveness_factor = 0.30
+				foreign_subversive_activites = -0.20
+				production_factory_start_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.20
+				production_speed_buildings_factor = 0.20
+			}
+		}
+		BRA_hardlinemarxism = {
+			picture = nkvd_2
+			modifier = {
+				vanguard_socialism_drift = 0.10
+				stability_factor = 0.15
+				army_attack_factor = 0.15
+				root_out_resistance_effectiveness_factor = 0.60
+			}
+		}
+		BRA_permanent_scars = {
+			picture = anti_soviet_pact
+			modifier = {
+				stability_factor = -0.05
+				vanguard_socialism_drift = -0.01
+			}
+		}
+		BRA_state_collectives = {
+			picture = anti_soviet_pact
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				stability_factor = -0.05
+				vanguard_socialism_drift = 0.01
+			}
+		}
+		BRA_mass_industry = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_weekly = 0.01
+			}
+			equipment_bonus = {
+				fighter = {
+					reliability = 0.10
+				}
+				armor = {
+					reliability = 0.10
+				}
+				infantry_equipment = {
+					reliability = 0.10
+				}
+			}
+		}
+		BRA_urban_culture_idea = {
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.20
+				industry_air_damage_factor = -0.20
+				decryption_factor = 0.20
+				encryption_factor = 0.2
+				monthly_population = 0.3
+			}
+		}
+		BRA_local_militias = {
+			picture = nkvd
+			modifier = {
+				stability_factor = 0.10
+				conscription_factor = 0.10
+			}
+		}
+		BRA_red_army_idea = {
+			picture = nkvd
+			modifier = {
+				stability_factor = 0.15
+				command_power_gain = 0.20
+				vanguard_socialism_drift = 0.05
+				subversive_activites_upkeep = -0.30
+			}
+		}
+		BRA_indestructible_wave_idea = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				conscription = 0.05
+			}
+		}
+		BRA_militarised_society_idea = {
+			picture = vittoria_mutilata
+			modifier = {
+				industrial_capacity_factory = 0.30
+				production_speed_arms_factory_factor = 0.30
+			}
+		}
+		BRA_asian_insurgencies = {
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				heat_attrition_factor = -0.40
+			}
+		}
+		BRA_pacifism = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				ai_join_ally_desire_factor = -1000
+				ai_call_ally_desire_factor = -1000
+			}
+		}
+		BRA_beacon_of_socialism_idea = {
+			picture = trotskyite_plot_purged
+			modifier = {
+				stability_factor = 0.20
+				revisionist_socialism_drift = 0.05
+				libertarian_marxism_drift = 0.05
+				vanguard_socialism_drift = 0.01
+			}
+		}
+		BRA_volunteer_army_idea = {
+			picture = generic_manpower_bonus
+			modifier = {
+				send_volunteer_divisions_required = -10
+				send_volunteer_size = 24
+			}
+		}
+		BRA_special_forces = {
+			picture = saf_soviet_advisers
+			modifier = {
+				amphibious_invasion = 0.10
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				army_org = 0.15
+				attrition = -0.20
+			}
+		}
+		BRA_germanophillia = {
+			picture = triumphant_will
+			modifier = {
+				training_time_army_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		BRA_embargo = {
+			picture = anti_soviet_pact
+			modifier = {
+				army_attack_factor = -0.05
+				attrition = 0.15
+				army_org = -0.15
+			}
+		}
+		BRA_maxlanguageissues = {
+			picture = anti_soviet_pact
+			modifier = {
+				vanguard_socialism_drift = -0.01
+				stability_factor = -0.05
+				war_support_factor = -0.20
+				surrender_limit = -0.10
+			}
+		}
+		BRA_kill_the_poor_plan = {
+			picture = anti_soviet_pact
+			modifier = {
+				army_org_factor = -0.05
+				conscription = 0.10
+				stability_factor = -0.15
+			}
+		}
+		BRA_klinger_plan = {
+			picture = nkvd
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		
+		BRA_order_and_progress = {
+			picture = generic_morale_bonus
+			modifier = {
+				stability_weekly = 0.01
+				war_support_weekly = 0.05
+			}
+		}
+
+		BRA_black_hole = {
+			picture = nkvd_2
+			modifier = {
+			encryption_factor = 2.50
+			}
+		}
+		
+		BRA_bourgieresistance = {
+			picture = anti_soviet_pact
+			modifier = {
+			right_authoritarianism_drift = 0.01
+			liberalism_drift = 0.01
+			conservatism_drift = 0.01
+			reactionism_drift = 0.01
+			despotism_drift = 0.01
+			}
+		}
+	}
+
+	#############
+	# Ministers #
+	#############
+	
+	head_of_government = {
+		BRA_herzog_hog = {
+			picture = GFX_idea_BRA_herzog_hog
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		BRA_lila_ripoll_hog = {
+			picture = GFX_idea_BRA_lila_ripoll_hog
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			cancel = {
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+			}
+		}
+		BRA_heitor_ferreira_lima_hog = {
+			picture = GFX_idea_BRA_hfl_hog
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				head_of_government
+				hog_totalist_chairman
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		BRA_alberto_pasqualini_hog = {
+			picture = GFX_idea_BRA_alberto_pasqualini_hog
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+	}
+	economy_minister = {
+		BRA_ohlweiler_eco = {
+			picture = GFX_idea_BRA_ohlweiler_eco
+			allowed = { 
+				original_tag = BRA	
+			}
+			traits = {
+			economy_minister
+			eco_mixed_economy
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		BRA_oswald_de_andrade = {
+			picture = GFX_idea_BRA_oswald_de_andrade
+			allowed = { 
+				original_tag = BRA
+				
+			}
+			traits = {
+			economy_minister
+			eco_reformer
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+			}
+		}
+		BRA_amazonas_eco = {
+			picture = GFX_idea_BRA_amazonas_eco
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			economy_minister
+			eco_planned_economy_proponent
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		BRA_pomar_eco = {
+			picture = GFX_idea_BRA_pomar_eco
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			economy_minister
+			eco_theoretical_scientist
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+	}
+	foreign_minister = {
+		BRA_maranhao_fore = {
+			picture = GFX_idea_BRA_maranhao_fore
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			foreign_minister
+			for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		BRA_carvalho_fore = {
+			picture = GFX_idea_BRA_carvalho_fore
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			foreign_minister
+			for_ideological_crusader
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+			}
+		}
+		BRA_cordeiro_fore = {
+			picture = GFX_idea_BRA_cordeiro_fore
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			foreign_minister
+			for_the_cloak_n_dagger_schemer
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		BRA_carlos_andrade_fore = {
+			picture = GFX_idea_BRA_carlos_andrade_fore
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			foreign_minister
+			for_the_cloak_n_dagger_schemer
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+	}
+	security_minister = {
+		BRA_correia_inter = {
+			picture = GFX_idea_BRA_correia_inter
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			security_minister
+			sec_compassionate_gentleman
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		BRA_marighella_inter = {
+			picture = GFX_idea_BRA_marighella_inter
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			security_minister
+			sec_health_and_safety
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+			available = {
+				has_government = libertarian_marxism
+			}
+		}
+		BRA_lopes_inter = {
+			picture = GFX_idea_BRA_lopes_inter
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			security_minister
+			sec_secret_police_chief
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		BRA_castro_inter = {
+			picture = GFX_idea_BRA_castro_inter
+			allowed = { 
+				original_tag = BRA
+			}
+			traits = {
+			security_minister
+			sec_silent_lawyer
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+				}
+			}
+			available = {
+				has_government = revolutionary_anarchism
+			}
+		}
+	}
+	head_of_intel = {
+	}
+	chief_of_army = {
+		BRA_lopes_army = {
+			picture = GFX_idea_BRA_lopes_inter
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_army
+			cos_school_of_mass_combat
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+		BRA_linhares_army = {
+			picture = GFX_idea_BRA_linhares_army
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_army
+			cos_school_of_psychology
+			}
+			cancel = { 
+				NOT = {
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+		}
+		BRA_monnerat_army = {
+			picture = GFX_idea_BRA_monnerat_army
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_army
+			cos_school_of_commando_operations
+			}
+			cancel = { 
+				NOT = {
+					has_government = revolutionary_anarchism
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				OR = {
+					has_government = revolutionary_anarchism
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		BRA_grabois_army = {
+			picture = GFX_idea_BRA_grabois_army
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_army
+			cos_school_of_commando_operations
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				OR = {
+					has_government = libertarian_marxism
+					has_government = vanguard_socialism
+				}
+			}
+		}
+	}
+	chief_of_navy = {
+		BRA_arroyo_nav = {
+			picture = GFX_idea_BRA_arroyo_nav
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_navy
+			cnav_base_control_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		BRA_osorio_air = {
+			picture = GFX_idea_BRA_osorio_air
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_air_force
+			cair_battlefield_support_doctrine
+			}
+			cancel = { 
+				NOT = {
+					has_government = libertarian_marxism
+					has_government = revisionist_socialism
+				}
+			}
+			available = {
+				OR = {
+					has_government = libertarian_marxism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		BRA_osvaldo_costa_air = {
+			picture = GFX_idea_BRA_osvaldo_costa_air
+			allowed = {
+				original_tag = BRA
+			}
+			traits = {
+			chief_of_air_force
+			cair_carpet_bombing_doctrine
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+		}
+	}
+}

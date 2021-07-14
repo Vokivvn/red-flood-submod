@@ -1,0 +1,487 @@
+spriteTypes = {
+
+	SpriteType = { 
+		name = "GFX_statusquo" 
+		texturefile = "gfx/interface/goals/SAF/GFX_statusquo.dds" 
+	}
+	
+	SpriteType = {  
+		name = "GFX_vandievolk" 
+		texturefile = "gfx/interface/goals/SAF/GFX_vandievolk.dds" 
+	}
+	
+	spriteType = { 
+		name = "GFX_crisis" 
+		texturefile = "gfx/interface/goals/SAF/GFX_crisis.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_anewway" 
+		texturefile = "gfx/interface/goals/SAF/GFX_anewway.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_welfaresaf" 
+		texturefile = "gfx/interface/goals/SAF/GFX_welfaresaf.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_federalcommision" 
+		texturefile = "gfx/interface/goals/SAF/GFX_federalcommision.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_economicreformsaf" 
+		texturefile = "gfx/interface/goals/SAF/GFX_economicreformsaf.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_apartheidcommision" 
+		texturefile = "gfx/interface/goals/SAF/GFX_apartheidcommision.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_apartheidreferendum" 
+		texturefile = "gfx/interface/goals/SAF/GFX_apartheidreferendum.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_baasskap" 
+		texturefile = "gfx/interface/goals/SAF/GFX_baasskap.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_completerelocation" 
+		texturefile = "gfx/interface/goals/SAF/GFX_completerelocation.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_volkwithinavolk" 
+		texturefile = "gfx/interface/goals/SAF/GFX_volkwithinavolk.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_skeidingspakket" 
+		texturefile = "gfx/interface/goals/SAF/GFX_skeidingspakket.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_capemanifesto" 
+		texturefile = "gfx/interface/goals/SAF/GFX_capemanifesto.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_economyallpeople" 
+		texturefile = "gfx/interface/goals/SAF/GFX_economyallpeople.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_socialreform" 
+		texturefile = "gfx/interface/goals/SAF/GFX_socialreform.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_repealapartheid" 
+		texturefile = "gfx/interface/goals/SAF/GFX_repealapartheid.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_unbanblackparties" 
+		texturefile = "gfx/interface/goals/SAF/GFX_unbanblackparties.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_republicanreferendum" 
+		texturefile = "gfx/interface/goals/SAF/GFX_republicanreferendum.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_disaster" 
+		texturefile = "gfx/interface/goals/SAF/GFX_disaster.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_emergencyreform" 
+		texturefile = "gfx/interface/goals/SAF/GFX_emergencyreform.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_suspendparliament" 
+		texturefile = "gfx/interface/goals/SAF/GFX_suspendparliament.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandrole" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandrole.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_invitemilitary" 
+		texturefile = "gfx/interface/goals/SAF/GFX_invitemilitary.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_reversedominion" 
+		texturefile = "gfx/interface/goals/SAF/GFX_reversedominion.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_remainasweare" 
+		texturefile = "gfx/interface/goals/SAF/GFX_remainasweare.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_declareindependence" 
+		texturefile = "gfx/interface/goals/SAF/GFX_declareindependence.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandcontrolmilitary" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandcontrolmilitary.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_nominalrepublicanism" 
+		texturefile = "gfx/interface/goals/SAF/GFX_nominalrepublicanism.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_grandcoalition" 
+		texturefile = "gfx/interface/goals/SAF/GFX_grandcoalition.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_economicmobilisation" 
+		texturefile = "gfx/interface/goals/SAF/GFX_economicmobilisation.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_imperialsupport" 
+		texturefile = "gfx/interface/goals/SAF/GFX_imperialsupport.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_imperialimmigration" 
+		texturefile = "gfx/interface/goals/SAF/GFX_imperialimmigration.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_allownativelabour" 
+		texturefile = "gfx/interface/goals/SAF/GFX_allownativelabour.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_allownativefactories" 
+		texturefile = "gfx/interface/goals/SAF/GFX_allownativefactories.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_industrialisecape" 
+		texturefile = "gfx/interface/goals/SAF/GFX_industrialisecape.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_industrialisesouthwestafrica" 
+		texturefile = "gfx/interface/goals/SAF/GFX_industrialisesouthwestafrica.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_industrialiseciskei" 
+		texturefile = "gfx/interface/goals/SAF/GFX_industrialiseciskei.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_industrialiseboerstaat" 
+		texturefile = "gfx/interface/goals/SAF/GFX_industrialiseboerstaat.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_industrialisenatal" 
+		texturefile = "gfx/interface/goals/SAF/GFX_industrialisenatal.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_buyships" 
+		texturefile = "gfx/interface/goals/SAF/GFX_buyships.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_askforanembargo" 
+		texturefile = "gfx/interface/goals/SAF/GFX_askforanembargo.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_conscription" 
+		texturefile = "gfx/interface/goals/SAF/GFX_conscription.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_allownativeregiments" 
+		texturefile = "gfx/interface/goals/SAF/GFX_allownativeregiments.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_requestimperialaircraft" 
+		texturefile = "gfx/interface/goals/SAF/GFX_requestimperialaircraft.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_foreignflightinstructors" 
+		texturefile = "gfx/interface/goals/SAF/GFX_foreignflightinstructors.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_embracesegregatedregiments" 
+		texturefile = "gfx/interface/goals/SAF/GFX_embracesegregatedregiments.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_endsegregatedregiments" 
+		texturefile = "gfx/interface/goals/SAF/GFX_endsegregatedregiments.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_tribalrecruitment" 
+		texturefile = "gfx/interface/goals/SAF/GFX_tribalrecruitment.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_internationalvolunteers" 
+		texturefile = "gfx/interface/goals/SAF/GFX_internationalvolunteers.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_colonialrecruitment" 
+		texturefile = "gfx/interface/goals/SAF/GFX_colonialrecruitment.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_southwestafrica" 
+		texturefile = "gfx/interface/goals/SAF/GFX_southwestafrica.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_completetheintegration" 
+		texturefile = "gfx/interface/goals/SAF/GFX_completetheintegration.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_census" 
+		texturefile = "gfx/interface/goals/SAF/GFX_census.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_germanschools" 
+		texturefile = "gfx/interface/goals/SAF/GFX_germanschools.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_nogermaninschool" 
+		texturefile = "gfx/interface/goals/SAF/GFX_nogermaninschool.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_germanquestion" 
+		texturefile = "gfx/interface/goals/SAF/GFX_germanquestion.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_relocatekhoisa" 
+		texturefile = "gfx/interface/goals/SAF/GFX_relocatekhoisa.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_khoisareservation" 
+		texturefile = "gfx/interface/goals/SAF/GFX_khoisareservation.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_assouthafricanasthecape" 
+		texturefile = "gfx/interface/goals/SAF/GFX_assouthafricanasthecape.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandairbases" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandairbases.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandindustry" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandindustry.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandlocalports" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandlocalports.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_africandominion" 
+		texturefile = "gfx/interface/goals/SAF/GFX_africandominion.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_abetterrelationship" 
+		texturefile = "gfx/interface/goals/SAF/GFX_abetterrelationship.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_evercloserunion" 
+		texturefile = "gfx/interface/goals/SAF/GFX_evercloserunion.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_mpsinwestminster" 
+		texturefile = "gfx/interface/goals/SAF/GFX_mpsinwestminster.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_committothecommonwealth" 
+		texturefile = "gfx/interface/goals/SAF/GFX_committothecommonwealth.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_imperialscienceinafrica" 
+		texturefile = "gfx/interface/goals/SAF/GFX_imperialscienceinafrica.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_imperialarmedforces" 
+		texturefile = "gfx/interface/goals/SAF/GFX_imperialarmedforces.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_greatersouthafricandominion" 
+		texturefile = "gfx/interface/goals/SAF/GFX_greatersouthafricandominion.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expand" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expand.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_threatenportugal" 
+		texturefile = "gfx/interface/goals/SAF/GFX_threatenportugal.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_disrupttrade" 
+		texturefile = "gfx/interface/goals/SAF/GFX_disrupttrade.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_sendsettlers" 
+		texturefile = "gfx/interface/goals/SAF/GFX_sendsettlers.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_marchtomalwiandcongo" 
+		texturefile = "gfx/interface/goals/SAF/GFX_marchtomalwiandcongo.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_petitionbritain" 
+		texturefile = "gfx/interface/goals/SAF/GFX_petitionbritain.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_referendumbotswana" 
+		texturefile = "gfx/interface/goals/SAF/GFX_referendumbotswana.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_referendumzimbabwe" 
+		texturefile = "gfx/interface/goals/SAF/GFX_referendumzimbabwe.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_integratethenorth" 
+		texturefile = "gfx/interface/goals/SAF/GFX_integratethenorth.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_unitethenorth" 
+		texturefile = "gfx/interface/goals/SAF/GFX_unitethenorth.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_greatersouthafrica" 
+		texturefile = "gfx/interface/goals/SAF/GFX_greatersouthafrica.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_isolation" 
+		texturefile = "gfx/interface/goals/SAF/GFX_isolation.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_lookforsupportineurope" 
+		texturefile = "gfx/interface/goals/SAF/GFX_lookforsupportineurope.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_goitalone" 
+		texturefile = "gfx/interface/goals/SAF/GFX_goitalone.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_southafricafirst" 
+		texturefile = "gfx/interface/goals/SAF/GFX_southafricafirst.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandintoportugueselands" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandintoportugueselands.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandtolaketanganyika" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandtolaketanganyika.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_pressurebritain" 
+		texturefile = "gfx/interface/goals/SAF/GFX_pressurebritain.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_pressureportugal" 
+		texturefile = "gfx/interface/goals/SAF/GFX_pressureportugal.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_greatersouthafricarepublic" 
+		texturefile = "gfx/interface/goals/SAF/GFX_greatersouthafricarepublic.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_pacify" 
+		texturefile = "gfx/interface/goals/SAF/GFX_pacify.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_assimilate" 
+		texturefile = "gfx/interface/goals/SAF/GFX_assimilate.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandheavyindustry" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandheavyindustry.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_localreservations" 
+		texturefile = "gfx/interface/goals/SAF/GFX_localreservations.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_expandlocalfarms" 
+		texturefile = "gfx/interface/goals/SAF/GFX_expandlocalfarms.dds" 
+	}
+	
+	SpriteType = { 
+		name = "GFX_centralreservations" 
+		texturefile = "gfx/interface/goals/SAF/GFX_centralreservations.dds" 
+	}
+}

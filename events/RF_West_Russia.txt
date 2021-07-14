@@ -1,0 +1,1842 @@
+#################
+# BALTIC EVENTS #
+#################
+
+add_namespace = wru
+
+# Note in the Docks #
+country_event = {
+	id = wru.1
+	title = wru.1.t
+	desc = wru.1.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.1.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = wru.2 days = 25 }
+		}
+	}
+}
+
+# Russian Colonists #
+country_event = {
+	id = wru.2
+	title = wru.2.t
+	desc = wru.2.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.2.a
+		add_manpower = 3489
+		hidden_effect = {
+			country_event = { id = wru.3 days = 25 }
+		}
+	}
+}
+
+# Murder in the Countryside #
+country_event = {
+	id = wru.3
+	title = wru.3.t
+	desc = wru.3.desc
+	picture = GFX_report_event_WRU_murder_in_countryside
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.3.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = wru.4 days = 1 }
+		}
+	}
+}
+country_event = {
+	id = wru.4
+	title = wru.4.t
+	desc = wru.4.desc
+	picture = GFX_report_event_WRU_murder_in_countryside
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.4.a
+		hidden_effect = {
+			country_event = { id = wru.5 days = 25 }
+		}
+	}
+}
+
+# Germans exploiting native population #
+country_event = {
+	id = wru.5
+	title = wru.5.t
+	desc = wru.5.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.5.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = { id = wru.888 days = 25 }
+		}
+	}
+}
+
+# The murderer #
+country_event = {
+	id = wru.888
+	title = wru.888.t
+	desc = wru.888.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.5.a
+		add_stability = -0.01
+		hidden_effect = {
+			country_event = { id = wru.6 days = 20 }
+		}
+	}
+}
+
+# Rosenberg forms Patriotten squads #
+country_event = {
+	id = wru.6
+	title = wru.6.t
+	desc = wru.6.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.6.a
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = { id = wru.7 days = 20 }
+		}
+	}
+}
+
+# Lost Patrol #
+country_event = {
+	id = wru.7
+	title = wru.7.t
+	desc = wru.7.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.7.a
+		hidden_effect = {
+			country_event = { id = wru.8 days = 25 }
+		}
+	}
+}
+
+# Losing contact with search squads #
+country_event = {
+	id = wru.8
+	title = wru.8.t
+	desc = wru.8.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.8.a
+		hidden_effect = {
+			country_event = { id = wru.9 days = 20 }
+		}
+	}
+}
+
+# Send in the Army #
+country_event = {
+	id = wru.9
+	title = wru.9.t
+	desc = wru.9.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.9.a
+		hidden_effect = {
+			country_event = { id = wru.10 days = 15 }
+		}
+	}
+}
+
+# Trap was closed #
+country_event = {
+	id = wru.10
+	title = wru.10.t
+	desc = wru.10.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.10.a
+	}
+}
+
+# March of 13 November #
+country_event = {
+	id = wru.11
+	title = wru.11.t
+	desc = wru.11.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.11.a
+		add_stability = -0.3
+		hidden_effect = {
+			country_event = { id = wru.12 days = 7 }
+			country_event = { id = wru.13 days = 14 }
+			country_event = { id = wru.14 days = 21 }
+			country_event = { id = wru.15 days = 45 }
+		}
+	}
+}
+
+# Central government retracts contracts #
+country_event = {
+	id = wru.12
+	title = wru.12.t
+	desc = wru.12.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.12.a
+		remove_ideas = WRU_gov_contracts_1
+	}
+}
+
+# Economy is collapsing #
+country_event = {
+	id = wru.13
+	title = wru.13.t
+	desc = wru.13.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.13.a
+		set_country_flag = WRU_nationalize_union_unlock
+		hidden_effect = { add_ideas = WRU_collapsed_economy complete_national_focus = WRU_wartime_econ }
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = wru.13.b
+		set_country_flag = WRU_nationalize_rigas_shipyard_unlock
+		hidden_effect = { add_ideas = WRU_collapsed_economy complete_national_focus = WRU_wartime_econ }
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = wru.13.c
+		set_country_flag = WRU_agricultural_communes_unlock
+		hidden_effect = { add_ideas = WRU_collapsed_economy complete_national_focus = WRU_wartime_econ }
+		add_to_variable = {
+			var = rosenberg_coup
+			value = 1
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_DUCHY
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+	}
+}
+
+# Question Army's Loyality #
+country_event = {
+	id = wru.14
+	title = wru.14.t
+	desc = wru.14.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.14.a
+		set_country_flag = WRU_russian_support_unlock
+		hidden_effect = { complete_national_focus = WRU_ask_military_support }
+		ai_chance = {
+			base = 4
+		}
+	}
+	option = {
+		name = wru.14.b
+		set_country_flag = WRU_freikorps_support_unlock
+		hidden_effect = { complete_national_focus = WRU_ask_military_support }
+		add_to_variable = {
+			var = rosenberg_coup
+			value = 1
+		}
+		ai_chance = {
+			base = 6
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_DUCHY
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+	}
+}
+
+# Civil War #
+country_event = {
+	id = wru.15
+	title = wru.15.t
+	desc = wru.15.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.15.a
+		190 = {
+			set_demilitarized_zone = yes
+		}
+		12 = {
+			set_demilitarized_zone = yes
+		}
+		210 = {
+			set_demilitarized_zone = yes
+		}
+		191 = {
+			set_demilitarized_zone = yes
+		}
+		13 = {
+			set_demilitarized_zone = yes
+		}
+		209 = {
+			set_demilitarized_zone = yes
+		}
+		858 = {
+			set_demilitarized_zone = yes
+		}
+		857 = {
+			set_demilitarized_zone = yes
+		}
+		hidden_effect = {
+			complete_national_focus = WRU_wartime_measures
+			country_event = { id = wru.16 days = 14 }
+		}
+	}
+}
+
+# Support Patriotten? #
+country_event = {
+	id = wru.16
+	title = wru.16.t
+	desc = wru.16.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.16.a
+		add_ideas = WRU_yunarmija
+		hidden_effect = {
+			country_event = { id = wru.17 days = 14 }
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = wru.16.b
+		add_ideas = WRU_patriotten_squads
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+			producer = WRU
+		}
+		add_stability = 0.1
+		add_war_support = 0.1
+		add_to_variable = {
+			var = rosenberg_coup
+			value = 1
+		}
+		hidden_effect = {
+			country_event = { id = wru.18 days = 14 }
+		}
+		ai_chance = {
+			base = 8
+			modifier = {
+				factor = 0
+				NOT = {
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_DUCHY
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+	}
+}
+
+# Guns for loyalists #
+country_event = {
+	id = wru.17
+	title = wru.17.t
+	desc = wru.17.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.17.a
+		load_oob = WRU_avalovs_militia
+		hidden_effect = {
+			country_event = { id = wru.19 days = 14 }
+		}
+	}
+}
+
+# Funding Patriotten #
+country_event = {
+	id = wru.18
+	title = wru.18.t
+	desc = wru.18.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.18.a
+		add_war_support = 0.1
+		hidden_effect = {
+			country_event = { id = wru.19 days = 14 }
+		}
+	}
+}
+
+# Battle for Latgale #
+country_event = {
+	id = wru.19
+	title = wru.19.t
+	desc = wru.19.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.19.a
+		hidden_effect = {
+			country_event = { id = wru.20 days = 14 }
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_ESTLAT
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.19.b
+		hidden_effect = {
+			country_event = { id = wru.26 days = 14 }
+		}
+		ai_chance = {
+			base = 7
+			modifier = {
+				factor = 1000
+				NOT = {
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_ESTLAT
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+	}
+}
+
+# Collapse of Army #
+country_event = {
+	id = wru.20
+	title = wru.20.t
+	desc = wru.20.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.20.a
+		hidden_effect = {
+			country_event = { id = wru.21 days = 14 }
+		}
+	}
+}
+
+# Estonian march on Tallin #
+country_event = {
+	id = wru.21
+	title = wru.21.t
+	desc = wru.21.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.21.a
+		hidden_effect = {
+			country_event = { id = wru.22 days = 7 }
+		}
+	}
+}
+
+# Shootings in approaches of Riga #
+country_event = {
+	id = wru.22
+	title = wru.22.t
+	desc = wru.22.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.22.a
+		hidden_effect = {
+			country_event = { id = wru.23 days = 14 }
+		}
+	}
+}
+
+# Battle for Riga #
+country_event = {
+	id = wru.23
+	title = wru.23.t
+	desc = wru.23.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.23.a
+		hidden_effect = {
+			country_event = { id = wru.24 days = 7 }
+		}
+	}
+}
+
+# Fall of Riga #
+country_event = {
+	id = wru.24
+	title = wru.24.t
+	desc = wru.24.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.24.a
+		hidden_effect = {
+			country_event = { id = wru.25 days = 7 }
+		}
+	}
+}
+
+# Victory for Rebellion #
+country_event = {
+	id = wru.25
+	title = wru.25.t
+	desc = wru.25.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Play Latvia
+		name = wru.25.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			LAT = {
+				add_state_core = 190
+				add_state_core = 12
+				add_state_core = 210
+				add_state_core = 1058
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 210
+				transfer_state = 1058
+				load_oob = LAT_spawn
+				inherit_technology = WRU
+			}
+			EST = {
+				add_state_core = 191
+				add_state_core = 13
+				transfer_state = 191
+				transfer_state = 13
+				load_oob = EST_spawn
+				inherit_technology = WRU
+			}
+			LAT = {
+				change_tag_from = WRU
+			}
+			transfer_ship = {
+				type = destroyer
+				target = LAT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = LAT
+			}
+			transfer_ship = {
+				type = submarine
+				target = LAT
+			}
+			transfer_ship = {
+				type = submarine
+				target = LAT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = LAT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = EST
+			}
+			transfer_ship = {
+				type = destroyer
+				target = EST
+			}
+			transfer_ship = {
+				type = submarine
+				target = EST
+			}
+			transfer_ship = {
+				type = submarine
+				target = EST
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = EST
+			}
+			country_event = {
+				id = wru.37
+				days = 3
+			}
+		}
+	}
+	option = { #Play Estonia
+		name = wru.25.b
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			LAT = {
+				add_state_core = 190
+				add_state_core = 12
+				add_state_core = 210
+				add_state_core = 1058
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 210
+				transfer_state = 1058
+				load_oob = LAT_spawn
+				inherit_technology = WRU
+			}
+			EST = {
+				add_state_core = 191
+				add_state_core = 13
+				transfer_state = 191
+				transfer_state = 13
+				load_oob = EST_spawn
+				inherit_technology = WRU
+			}
+			EST = {
+				change_tag_from = WRU
+			}
+			transfer_ship = {
+				type = destroyer
+				target = LAT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = LAT
+			}
+			transfer_ship = {
+				type = submarine
+				target = LAT
+			}
+			transfer_ship = {
+				type = submarine
+				target = LAT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = LAT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = EST
+			}
+			transfer_ship = {
+				type = destroyer
+				target = EST
+			}
+			transfer_ship = {
+				type = submarine
+				target = EST
+			}
+			transfer_ship = {
+				type = submarine
+				target = EST
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = EST
+			}
+			country_event = {
+				id = wru.37
+				days = 3
+			}
+		}
+	}
+}
+
+# Battle of Ecabstadt #
+country_event = {
+	id = wru.26
+	title = wru.26.t
+	desc = wru.26.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.26.a
+		hidden_effect = {
+			country_event = { id = wru.27 days = 14 }
+		}
+	}
+}
+
+# Collapse of partisan armies #
+country_event = {
+	id = wru.27
+	title = wru.27.t
+	desc = wru.27.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.27.a
+		hidden_effect = {
+			country_event = { id = wru.28 days = 14 }
+		}
+	}
+}
+
+# Cukurs on the Run #
+country_event = {
+	id = wru.28
+	title = wru.28.t
+	desc = wru.28.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.28.a
+		hidden_effect = {
+			country_event = { id = wru.29 days = 7 }
+		}
+	}
+}
+
+# Battle for Tallin #
+country_event = {
+	id = wru.29
+	title = wru.29.t
+	desc = wru.29.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.29.a
+		country_event = { id = wru.30 days = 14 }
+		trigger = {
+			check_variable = {
+				var = rosenberg_coup
+				value = 3
+				compare = greater_than_or_equals
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_DUCHY
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.29.b
+		country_event = { id = wru.31 days = 14 }
+		ai_chance = {
+			base = 4
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_OST
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_RUSSOPHILES
+					}
+					has_game_rule = {
+						rule = WRU_ai_route
+						option = WRU_TRUTH
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.29.c
+		country_event = { id = wru.32 days = 14 }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_SFSR
+				}
+			}
+		}
+	}
+}
+
+# German aristocrats restore duchy #
+country_event = {
+	id = wru.30
+	title = wru.30.t
+	desc = wru.30.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.30.a
+		hidden_effect = {
+			delete_unit = { 
+				state = 1058
+				disband = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			remove_unit_leader = 199
+			WRR = {
+				add_state_core = 190
+				add_state_core = 12
+				add_state_core = 210
+				add_state_core = 1058
+				add_state_core = 191
+				add_state_core = 13
+				add_state_core = 857
+				add_state_core = 209
+				add_state_core = 858
+				transfer_state = 191
+				transfer_state = 13
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 210
+				transfer_state = 1058
+				load_oob = WRR_1936
+				inherit_technology = WRU
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRR
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRR
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRR
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRR
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRR
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRR
+			}
+			every_unit_leader = {
+				set_nationality = WRR
+			}
+			WRR = {
+				change_tag_from = WRU
+			}
+			857 = {
+				create_unit = {
+					division = "name = \"I Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6249
+					owner = WRU
+				}
+			}
+			209 = {
+				create_unit = {
+					division = "name = \"I Kavaleriyskaya Diviziya\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11202
+					owner = WRU
+				}
+			}
+			set_politics = {
+				ruling_party = vanguard_socialism
+			}
+			declare_war_on = {
+				target = WRR
+				type = annex_everything
+			}
+		}
+	}
+}
+
+# Win for Avalov loyalists #
+country_event = {
+	id = wru.31
+	title = wru.31.t
+	desc = wru.31.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.31.a
+		set_country_flag = WRU_victory_focus_unlock
+		add_stability = 0.3
+	}
+}
+
+# Baltic SSR #
+country_event = {
+	id = wru.32
+	title = wru.32.t
+	desc = wru.32.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.32.a
+		hidden_effect = {
+			delete_unit = { 
+				state = 1058
+				disband = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			WRT = {
+				add_state_core = 190
+				add_state_core = 12
+				add_state_core = 210
+				add_state_core = 1058
+				add_state_core = 191
+				add_state_core = 13
+				add_state_core = 857
+				add_state_core = 209
+				add_state_core = 858
+				transfer_state = 191
+				transfer_state = 13
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 210
+				transfer_state = 1058
+				load_oob = WRT_socialists
+				inherit_technology = WRU
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			remove_unit_leader = 199
+			every_unit_leader = {
+				set_nationality = WRT
+			}
+			WRT = {
+				change_tag_from = WRU
+			}
+			WRT = {
+				set_popularities = {
+					vanguard_socialism = 40
+					libertarian_marxism = 20
+					revisionist_socialism = 20
+					social_democratism = 10
+					liberalism = 5
+					accelerationism = 5
+				}
+				load_focus_tree = { 
+					tree = WRT_socialist 
+					keep_completed = yes
+				}
+			}
+			857 = {
+				create_unit = {
+					division = "name = \"I Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6249
+					owner = WRU
+				}
+			}
+			209 = {
+				create_unit = {
+					division = "name = \"I Kavaleriyskaya Diviziya\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11202
+					owner = WRU
+				}
+			}
+			declare_war_on = {
+				target = WRT
+				type = annex_everything
+			}
+		}
+	}
+}
+
+# Victory Parade #
+country_event = {
+	id = wru.33
+	title = wru.33.t
+	desc = wru.33.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.33.a
+		set_country_flag = WRU_germanophiles_focus_unlock
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_OST
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.33.b
+		set_country_flag = WRU_brotherhood_focus_unlock
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_TRUTH
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.33.c
+		set_country_flag = WRU_russophiles_focus_unlock
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = WRU_ai_route
+					option = WRU_RUSSOPHILES
+				}
+			}
+		}
+	}
+}
+
+# Brotherhood of Russian Truth siezes power #
+country_event = {
+	id = wru.34
+	title = wru.34.t
+	desc = wru.34.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.34.a
+		hidden_effect = {
+			delete_unit = { 
+				state = 1058
+				disband = yes
+			}
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				set_demilitarized_zone = no
+			}
+			WRT = {
+				add_state_core = 190
+				add_state_core = 12
+				add_state_core = 210
+				add_state_core = 1058
+				add_state_core = 191
+				add_state_core = 13
+				add_state_core = 857
+				add_state_core = 209
+				add_state_core = 858
+				transfer_state = 191
+				transfer_state = 13
+				transfer_state = 190
+				transfer_state = 12
+				transfer_state = 210
+				transfer_state = 1058
+				load_oob = WRT_brotherhood
+				inherit_technology = WRU
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = destroyer
+				target = WRT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRT
+			}
+			transfer_ship = {
+				type = light_cruiser
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			transfer_ship = {
+				type = submarine
+				target = WRT
+			}
+			remove_unit_leader = 199
+			every_unit_leader = {
+				set_nationality = WRT
+			}
+			WRT = {
+				change_tag_from = WRU
+			}
+			WRT = {
+				remove_unit_leader = 198
+				remove_unit_leader = 197
+				remove_unit_leader = 196
+				remove_unit_leader = 195
+				set_politics = {
+					ruling_party = reactionism
+				}
+				set_popularities = {
+					reactionism = 40
+					despotism = 20
+					right_authoritarianism = 20
+					vanguard_socialism = 10
+					accelerationism = 10
+				}
+				load_focus_tree = { 
+					tree = WRT_truth 
+					keep_completed = yes
+				}
+			}
+			857 = {
+				create_unit = {
+					division = "name = \"I Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 6249
+					owner = WRU
+				}
+			}
+			209 = {
+				create_unit = {
+					division = "name = \"I Kavaleriyskaya Diviziya\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3"
+					allow_spawning_on_enemy_provs = yes
+					prioritize_location = 11202
+					owner = WRU
+				}
+			}
+			set_politics = {
+				ruling_party = vanguard_socialism
+			}
+			declare_war_on = {
+				target = WRT
+				type = annex_everything
+			}
+		}
+	}
+}
+
+# Avalov dies #
+country_event = {
+	id = wru.35
+	title = wru.35.t
+	desc = wru.35.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		tag = WRU
+		date > 1944.3.27
+		has_completed_focus = WRU_signs_of_relief
+	}
+
+	option = {
+		name = wru.35.a
+		complete_national_focus = WRU_death_of_avalov
+	}
+}
+
+# Join Stahlpakt #
+country_event = {
+	id = wru.36
+	title = wru.36.t
+	desc = wru.36.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.36.a
+		create_faction = WRU_BALTIC_GERMAN_PACT
+		add_to_faction = WRU
+	}
+	option = {
+		name = wru.36.b
+	}
+}
+
+country_event = {
+	id = wru.37
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				RUS = { exists = yes }
+			}
+			RUS = {
+				add_state_core = 209
+				add_state_core = 858
+				add_state_core = 857
+				transfer_state = 209
+				transfer_state = 858
+				transfer_state = 857
+			}
+		}
+		else_if = {
+			limit = {
+				RUS = { exists = no }
+			}
+			SRU = {
+				add_state_core = 209
+				add_state_core = 858
+				add_state_core = 857
+				transfer_state = 209
+				transfer_state = 858
+				transfer_state = 857
+			}
+		}
+	}
+}
+
+# Join 3rd International #
+country_event = {
+	id = wru.38
+	title = wru.38.t
+	desc = wru.38.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 99
+		}
+		name = wru.38.a
+		add_to_faction = WRT
+	}
+	option = {
+		ai_chance = {
+			base = 1
+		}
+		name = wru.38.b
+	}
+}
+
+# Ultimatum to Lithuania #
+country_event = {
+	id = wru.39
+	title = wru.39.t
+	desc = wru.39.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.39.a
+		WRT = {
+			change_tag_from = LIT
+		}
+		WRT = {
+			annex_country = {
+				target = LIT
+				transfer_troops = yes
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = libertarian_marxism
+				}
+			}
+		}
+	}
+	option = {
+		name = wru.39.b
+		WRT = {
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_government = libertarian_marxism
+			}
+		}
+	}
+}
+
+# Prussia joins the Duchy #
+country_event = {
+	id = wru.40
+	title = wru.40.t
+	desc = wru.40.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.40.a
+		WRR = {
+			add_to_faction = PRS
+		}
+		hidden_effect = {
+			WRR = {
+				country_event = {
+					id = wru.42
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 3
+		}
+	}
+	option = {
+		name = wru.40.b
+		hidden_effect = {
+			WRR = {
+				country_event = {
+					id = wru.41
+					days = 1
+				}
+			}
+		}
+		ai_chance = {
+			base = 7
+		}
+	}
+}
+
+# Prussia declines #
+country_event = {
+	id = wru.41
+	title = wru.41.t
+	desc = wru.41.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.41.a
+	}
+}
+
+# Prussia accepts #
+country_event = {
+	id = wru.42
+	title = wru.42.t
+	desc = wru.42.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.42.a
+	}
+}
+
+# Backstabbing Prussia #
+country_event = {
+	id = wru.43
+	title = wru.43.t
+	desc = wru.43.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.43.a
+		ai_chance = {
+			base = 1
+		}
+		WRR = {
+			change_tag_from = PRS
+		}
+		every_unit_leader = {
+			set_nationality = WRR
+		}
+		WRR = {
+			annex_country = {
+				target = PRS
+				transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = wru.43.b
+		leave_faction = yes
+		declare_war_on = {
+		    target = WRR
+		    type = annex_everything
+		}
+		ai_chance = {
+			base = 4
+		}
+	}
+}
+
+# Finland - join Duchy #
+country_event = {
+	id = wru.44
+	title = wru.44.t
+	desc = wru.44.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.44.a
+		WRR = {
+			add_to_faction = FIN
+			set_country_flag = WRR_befriended_finland
+		}
+		ai_chance = {
+			base = 7
+		}
+	}
+	option = {
+		name = wru.44.b
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+
+# Sweden - join Duchy #
+country_event = {
+	id = wru.45
+	title = wru.45.t
+	desc = wru.45.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.45.a
+		WRR = {
+			add_to_faction = SWE
+			set_country_flag = WRR_befriended_sweden
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = wru.45.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# Belarus - join Duchy #
+country_event = {
+	id = wru.46
+	title = wru.46.t
+	desc = wru.46.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.46.a
+		WRR = {
+			add_to_faction = BLR
+		}
+		ai_chance = {
+			base = 7
+		}
+	}
+	option = {
+		name = wru.46.b
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+
+# Baltic Duchy - Picking the leader #
+country_event = {
+	id = wru.101
+	title = wru.101.t
+	desc = wru.101.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.101.a
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = {
+				id = wru.102
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = wru.101.b
+		add_war_support = 0.03
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Erhard Kroeger"
+			desc = "POLITICS_ALEXEI_II_DESC"
+			picture = "gfx/leaders/WRU/Portrait_WRU_Erhard_Kroeger.tga"
+			expire = "1965.1.1"
+			ideology = esoteric_reactionism
+			traits = {
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = wru.105
+				days = 3
+			}
+		}
+	}
+}
+
+# Baltic Duchy - Picking the chancellor - Rosenberg wins Head of State #
+country_event = {
+	id = wru.102
+	title = wru.102.t
+	desc = wru.102.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.102.a
+		add_ideas = WRU_alfred_rosenberg_hog
+		hidden_effect = {
+			country_event = {
+				id = wru.103
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = wru.102.b
+		add_ideas = WRU_max_erwin_von_scheubner_richter_hog
+		hidden_effect = {
+			country_event = {
+				id = wru.104
+				days = 3
+			}
+		}
+	}
+}
+
+# Baltic Duchy - Picking the foreign minister - Rosenberg wins Head of State and Head of Government #
+country_event = {
+	id = wru.103
+	title = wru.103.t
+	desc = wru.103.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.103.a
+		add_ideas = WRU_alfred_rosenberg_for
+	}
+	option = {
+		name = wru.103.b
+		add_ideas = WRU_margarete_von_wrangell_for
+	}
+}
+
+# Baltic Duchy - Picking the foreign minister - Rosenberg wins head of state, but not head of government #
+country_event = {
+	id = wru.104
+	title = wru.104.t
+	desc = wru.104.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.104.a
+		add_ideas = WRU_alfred_rosenberg_for
+	}
+	option = {
+		name = wru.104.b
+		add_ideas = WRU_margarete_von_wrangell_for
+	}
+}
+
+# Baltic Duchy - Picking the chancellor - Kroeger wins Head of State #
+country_event = {
+	id = wru.105
+	title = wru.105.t
+	desc = wru.105.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.105.a
+		add_ideas = WRU_alfred_rosenberg_hog
+		hidden_effect = {
+			country_event = {
+				id = wru.106
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = wru.105.b
+		add_ideas = WRU_max_erwin_von_scheubner_richter_hog
+		hidden_effect = {
+			country_event = {
+				id = wru.107
+				days = 3
+			}
+		}
+	}
+}
+
+# Baltic Duchy - Picking the foreign minister - Rosenberg Loses Head of State, but wins Head of Government #
+country_event = {
+	id = wru.106
+	title = wru.106.t
+	desc = wru.106.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.106.a
+		add_ideas = WRU_alfred_rosenberg_for
+	}
+	option = {
+		name = wru.106.b
+		add_ideas = WRU_margarete_von_wrangell_for
+	}
+}
+
+# Baltic Duchy - Picking the foreign minister - Rosenberg wins neither Head of State nor Head of Government #
+country_event = {
+	id = wru.107
+	title = wru.107.t
+	desc = wru.107.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = wru.107.a
+		add_ideas = WRU_alfred_rosenberg_for
+	}
+	option = {
+		name = wru.107.b
+		add_ideas = WRU_margarete_von_wrangell_for
+	}
+}

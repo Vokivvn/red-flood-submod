@@ -1,0 +1,67 @@
+﻿capital = 744
+
+oob = "JGJ_1936"
+
+set_research_slots = 3 
+
+set_convoys = 75
+
+add_ideas = {
+	CHI_shared_economy
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gw_artillery = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 15
+	libertarian_marxism = 7
+	revolutionary_anarchism = 0
+	revisionist_socialism = 45
+	social_democratism = 6
+	liberalism = 4
+	conservatism = 2
+	right_authoritarianism = 5
+	despotism = 13
+	reactionism = 3
+	accelerationism = 0
+}
+
+set_stability = 0.6
+set_war_support = 0.5
+
+create_country_leader = {
+	name = "Feng Yuxiang"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Feng_Yuxiang.dds"
+	expire = "1965.1.1"
+	ideology = religious_socialism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_corps_commander = {
+	name = "Feng Yuxiang"
+	#picture = "Portrait_Feng_Yuxiang_g.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}

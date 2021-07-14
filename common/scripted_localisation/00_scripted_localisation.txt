@@ -1,0 +1,76 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { # Worldwide Futurism descriptions
+	name = FRA_worldwide_futurism_description
+	text = {
+		trigger = {
+			has_completed_focus = FRA_full_speed_world
+			NOT = {
+				has_completed_focus = FRA_austrian_comrades
+				has_completed_focus = FRA_slavic_barbarians
+				has_completed_focus = FRA_latin_brothers
+			}
+		}
+		localization_key = "FRA_worldwide_futurism_start"
+	}
+	text = {
+		trigger = {
+			has_completed_focus = FRA_austrian_comrades
+			NOT = {
+				has_completed_focus = FRA_slavic_barbarians
+				has_completed_focus = FRA_latin_brothers
+			}
+		}
+		localization_key = "FRA_worldwide_futurism_austria"
+	}
+	text = {
+		trigger = {
+			has_completed_focus = FRA_slavic_barbarians
+		}
+		localization_key = "FRA_worldwide_futurism_slavic"
+	}
+	text = {
+		trigger = {
+			has_completed_focus = FRA_latin_brothers
+		}
+		localization_key = "FRA_worldwide_futurism_latin"
+	}
+}
+defined_text = {
+	name = GetSenateElectionOutcome
+	text = {
+		trigger = {
+			check_variable = { senators_for_reelection < 0 }
+		}
+		localization_key = SenateElectionLost
+	}
+	text = {
+		trigger = {
+			check_variable = { var = senators_for_reelection value = 0 compare = greater_than_or_equals }
+		}
+		localization_key = SenateElectionGained
+	}
+}
+defined_text = {
+	name = GetHouseElectionOutcome
+	text = {
+		trigger = {
+			check_variable = { representatives_for_reelection < 0 }
+		}
+		localization_key = HouseElectionLost
+	}
+	text = {
+		trigger = {
+			check_variable = { var = representatives_for_reelection value = 0 compare = greater_than_or_equals }
+		}
+		localization_key = HouseElectionGained
+	}
+}

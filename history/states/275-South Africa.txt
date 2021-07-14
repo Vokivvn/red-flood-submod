@@ -1,0 +1,26 @@
+
+state={
+	id=275
+	name="STATE_275" # Transvaal
+	manpower = 422749
+	
+	state_category = city
+	
+	resources={
+		steel=5 # was: 8
+		chromium=53 # was: 80
+	}
+
+	history={
+		owner = SAF
+		add_core_of = SAF
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		
+	}
+}
+	provinces={
+		2213 13281 13283 13282 13284 5217 13286
+	}
+}

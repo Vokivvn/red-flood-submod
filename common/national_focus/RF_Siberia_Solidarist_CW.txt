@@ -1,0 +1,259 @@
+focus_tree = {
+	id = RF_Siberia_Solidarist_CW
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			original_tag = SIB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = SIB_army_effort
+	shared_focus = SIB_aviation_effort
+	shared_focus = SIB_naval_effort
+	shared_focus = SIB_industrial_effort
+	focus = {
+		id = SIB_radicals_threaten_country
+		icon = GFX_goal_SIB_radicals_threaten_country
+		cost = 5
+		x = 5
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.3
+			add_stability = -0.2
+		}
+	}
+	focus = {
+		id = SIB_call_to_arms
+		icon = GFX_goal_SIB_call_to_arms
+		cost = 5
+		relative_position_id = SIB_radicals_threaten_country
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_radicals_threaten_country
+		}
+		completion_reward = {
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = SIB_emergency_conscription
+		icon = GFX_goal_SIB_emergency_conscription
+		cost = 5
+		relative_position_id = SIB_radicals_threaten_country
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_radicals_threaten_country
+		}
+		completion_reward = {
+			add_manpower = 20000
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = SIB_russia_abandoned_us
+		icon = GFX_goal_SIB_russia_abandoned_us
+		cost = 5
+		relative_position_id = SIB_radicals_threaten_country
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_call_to_arms
+		}
+		prerequisite = {
+			focus = SIB_emergency_conscription
+		}
+		completion_reward = {
+			add_opinion_modifier = {	target = RUS	modifier = large_decrease	}
+			add_opinion_modifier = {	target = SRU	modifier = large_decrease	}
+		}
+	}
+	focus = {
+		id = SIB_breakthrough_irkutsk
+		icon = GFX_goal_SIB_breakthrough_irkutsk
+		cost = 2
+		relative_position_id = SIB_russia_abandoned_us
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_russia_abandoned_us
+		}
+		mutually_exclusive = {
+			focus = SIB_hold_the_line_krasnoyarsk
+			focus = SIB_prepare_for_last_stand
+		}
+		bypass = {
+			MO4 = {
+				exists = no
+			}
+		}
+		available = {
+			MO4 = {
+				surrender_progress > 0.5
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = sib.8
+			}
+		}
+	}
+	focus = {
+		id = SIB_hold_the_line_krasnoyarsk
+		icon = GFX_goal_SIB_hold_the_line_krasnoyarsk
+		cost = 2
+		relative_position_id = SIB_russia_abandoned_us
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_russia_abandoned_us
+		}
+		mutually_exclusive = {
+			focus = SIB_breakthrough_irkutsk
+			focus = SIB_prepare_for_last_stand
+		}
+		bypass = {
+			MO4 = {
+				exists = no
+			}
+		}
+		available = {
+			MO4 = {
+				surrender_progress < 0.5
+			}
+			SIB = {
+				surrender_progress < 0.5
+			}
+		}
+		completion_reward = {
+			set_country_flag = SIB_ceasefire_event
+			effect_tooltip = {
+				country_event = {
+					id = sib.9
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_prepare_for_last_stand
+		icon = GFX_goal_SIB_prepare_for_last_stand
+		cost = 2
+		relative_position_id = SIB_russia_abandoned_us
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = SIB_russia_abandoned_us
+		}
+		mutually_exclusive = {
+			focus = SIB_breakthrough_irkutsk
+			focus = SIB_hold_the_line_krasnoyarsk
+		}
+		available = {
+			SIB = {
+				surrender_progress > 0.5
+			}
+		}
+		bypass = {
+			MO4 = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			add_stability = -1
+			set_war_support = 1
+			MO4 ={
+				change_tag_from = SIB
+			}
+		}
+	}
+	focus = {
+		id = SIB_victory_more_or_less
+		icon = GFX_goal_SIB_victory_more_or_less
+		cost = 2
+		relative_position_id = SIB_russia_abandoned_us
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_breakthrough_irkutsk
+			focus = SIB_hold_the_line_krasnoyarsk
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SIB_solidarist_coup
+		icon = GFX_goal_SIB_solidarist_coup
+		cost = 3
+		relative_position_id = SIB_victory_more_or_less
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_victory_more_or_less
+		}
+		mutually_exclusive = {
+			focus = SIB_return_to_normalcy
+		}
+		completion_reward = {
+			add_political_power = 50
+			load_focus_tree = { 
+				tree = RF_Siberia_Solidarist 
+				keep_completed = yes
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.20
+			}
+			set_politics = {
+				ruling_party = accelerationism
+			}
+			hidden_effect = {
+				remove_ideas = {
+					SIB_workethic2
+					SIB_russification_by_education
+					RUS_warlord_indifference
+				}
+				set_cosmetic_tag = "SIB_independent"
+			}
+		}
+	}
+	focus = {
+		id = SIB_return_to_normalcy
+		icon = GFX_goal_SIB_return_to_normalcy
+		cost = 3
+		relative_position_id = SIB_victory_more_or_less
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_victory_more_or_less
+		}
+		mutually_exclusive = {
+			focus = SIB_solidarist_coup
+		}
+		completion_reward = {
+			add_political_power = 50
+			remove_opinion_modifier = {	target = RUS	modifier = large_decrease	}
+			remove_opinion_modifier = {	target = SRU	modifier = large_decrease	}
+			if = {
+				limit = {
+					SRU = { exists = no }
+				}
+				RUS = { puppet = SIB }
+			}
+			else = {
+				SRU = { puppet = SIB }
+			}
+			set_politics = {
+				ruling_party = despotism
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 1
+			}
+		}
+	}
+}

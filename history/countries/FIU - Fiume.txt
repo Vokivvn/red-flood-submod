@@ -1,0 +1,118 @@
+capital = 163
+
+oob = "FIU_1936"
+
+set_research_slots = 4
+
+set_convoys = 450
+
+country_event = {
+	id = fiume.10
+	days = 20
+}
+
+add_ideas = {
+	FIU_the_slump
+	FIU_Gabrielle_Dannunzio_hog
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	fighter1 = 1
+	CAS1 = 1
+	early_bomber = 1
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1935.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 3
+	libertarian_marxism = 0
+	revolutionary_anarchism = 4
+	revisionist_socialism = 0
+	social_democratism = 2
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 1
+	despotism = 0
+	reactionism = 0
+	accelerationism = 90
+}
+
+
+set_stability = 0.85
+
+create_country_leader = {
+	name = "Consiglio degli Otimi"
+	desc = "POLITICS_CONSIGLIO_DESC"
+	picture = "Portrait_Fiume_Consiglio_Degli_Otimi.dds"
+	expire = "1965.4.5"
+	ideology = ethno_futurism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Gabriele D'Annunzio"
+	desc = "POLITICS_GABRIELE_DESC"
+	picture = "Portrait_Fiume_Gabriele_Dannunzio.tga"
+	expire = "1940.4.5"
+	ideology = ethno_futurism
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Enrico Toti"
+	portrait_path = "gfx/leaders/FIU/FIU_Enrico_Toti.dds"
+	traits = { trait_reckless war_hero }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Reginaldo Giulani"
+	portrait_path = "gfx/leaders/FIU/FIU_Reginaldo_Giuliani_wip.dds"
+	traits = { fast_planner }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Mario Carli"
+	portrait_path = "gfx/leaders/FIU/FIU_Mario_Carli.dds"
+	traits = { career_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Riccardo Gigante"
+	portrait_path = "gfx/leaders/FIU/Portrait_FIU_riccardo_gigante.tga"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+}

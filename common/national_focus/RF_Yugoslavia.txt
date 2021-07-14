@@ -1,0 +1,1957 @@
+focus_tree = {
+	id = YUG
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YUG
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+
+	########### Political tree ###########
+
+	#Focus for All-Belgrade National Congress
+	focus = {
+		id = YUG_allbelgradenationalcongress
+		icon = GFX_goal_YUG_allbelgradenationalcongress
+		x = 10
+		y = 0
+		cost = 6
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					id = yugoslavia.5
+				}
+			}
+		}
+	}
+
+	#Focus for Hey Slavs!
+	focus = {
+		id = YUG_heyslavs
+		icon = GFX_goal_YUG_heyslavs
+		x = 0
+		y = 1
+		relative_position_id = YUG_allbelgradenationalcongress
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_allbelgradenationalcongress }
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			country_event = {
+				id = yugoslavia.4
+				days = 1
+			}
+		}
+	}
+
+	##### Zbor tree #####
+
+	#Focus for Svi u ZBOR
+	focus = {
+		id = YUG_sviuzbor
+		icon = GFX_sviuzbor
+		x = -7
+		y = 1
+		relative_position_id = YUG_heyslavs
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_heyslavs }
+		mutually_exclusive = { 
+			focus = YUG_comradetesla 
+		}
+		mutually_exclusive = { 
+			focus = YUG_progressivepanslavism 
+		}
+		available = {
+			has_country_flag = YUG_zbor
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			add_popularity = { 
+				ideology = reactionism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				remove_ideas = {
+					YUG_ante_trumbic
+					YUG_milos_crnjanski
+					YUG_jovan_karamata
+					YUG_jovan_bijelic
+					YUG_petar_dobrovic
+				}
+				add_ideas = {
+					YUG_dobroslav_jevdevic
+					YUG_punisa_racic
+					YUG_ivan_subasic
+					YUG_milan_acimovic
+					YUG_ilija_trifunovic_bircanin
+				}
+			}
+		}
+	}
+
+	#Focus for Remember the Fallen Heroes
+	focus = {
+		id = YUG_rememberthefallenheroes
+		icon = GFX_rememberthefallenheroes
+		x = -2
+		y = 1
+		relative_position_id = YUG_sviuzbor
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_sviuzbor }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_cult_of_saints
+			add_popularity = { 
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Death to the World
+	focus = {
+		id = YUG_deathtotheworld
+		icon = GFX_deathtotheworld
+		x = 2
+		y = 1
+		relative_position_id = YUG_sviuzbor
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_sviuzbor }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_state_ascetism
+		}
+	}
+
+	#Focus for Resurrection of Slavdom
+	focus = {
+		id = YUG_resurrectionofslavdom
+		icon = GFX_resurrectionofslavdom
+		x = 0
+		y = 2
+		relative_position_id = YUG_sviuzbor
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_rememberthefallenheroes 
+		}
+		prerequisite = { 
+			focus = YUG_deathtotheworld 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_all_for_god
+			add_popularity = { 
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Holy Regency
+	focus = {
+		id = YUG_holyregency
+		icon = GFX_holyregency
+		x = -2
+		y = 1
+		relative_position_id = YUG_resurrectionofslavdom
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_resurrectionofslavdom }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_nothing_outside_of_god
+			add_stability = 0.05
+			add_popularity = { 
+				ideology = reactionism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Council of Saints
+	focus = {
+		id = YUG_councilofsaints
+		icon = GFX_councilofsaints
+		x = 0
+		y = 1
+		relative_position_id = YUG_holyregency
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_holyregency }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_and_nothing_against_him
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Return to Zadruga
+	focus = {
+		id = YUG_returntozadruga
+		icon = GFX_returntozadruga
+		x = 2
+		y = 1
+		relative_position_id = YUG_resurrectionofslavdom
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_resurrectionofslavdom }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for Christian Capitalism
+	focus = {
+		id = YUG_christiancapitalism
+		icon = GFX_christiancapitalism
+		x = 0
+		y = 1
+		relative_position_id = YUG_returntozadruga
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_returntozadruga }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_christian_capitalism
+		}
+	}
+
+	#Focus for God and Slavs
+	focus = {
+		id = YUG_godandslavs
+		icon = GFX_godandslavs
+		x = 0
+		y = 3
+		relative_position_id = YUG_resurrectionofslavdom
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_councilofsaints 
+		}
+		prerequisite = { 
+			focus = YUG_christiancapitalism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			hidden_effect = {
+				remove_ideas = {
+					YUG_all_for_god
+					YUG_nothing_outside_of_god
+					YUG_and_nothing_against_him
+				}
+				add_ideas = YUG_unity_through_faith
+			}
+			custom_effect_tooltip = "YUG_STRENGTH_THROUGH_UNITY_TOOLTIP"
+		}
+	}
+
+	##### Tesla tree #####
+
+	#Focus for Comrade Tesla
+	focus = {
+		id = YUG_comradetesla
+		icon = GFX_comradetesla
+		x = 0
+		y = 1
+		relative_position_id = YUG_heyslavs
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_heyslavs }
+		mutually_exclusive = { 
+			focus = YUG_progressivepanslavism 
+		}
+		mutually_exclusive = { 
+			focus = YUG_sviuzbor 
+		}
+		available = {
+			has_country_flag = YUG_tesla
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+		 		name = "Nikola Tesla"
+				picture = "Portrait_YUG_Nikola_Tesla.tga"
+				expire = "1945.1.1"
+				ideology = technocratism
+				traits = {
+					popular_figurehead
+				}
+			}
+			set_party_name = { 
+				ideology = accelerationism 
+				long_name = YUG_accelerationism_party_long_tesla
+				name = YUG_accelerationism_party_tesla
+			}
+		}
+	}
+
+	#Focus for Yugoslav Technate
+	focus = {
+		id = YUG_yugoslavtechnate
+		icon = GFX_yugoslavtechnate
+		x = 0
+		y = 1
+		relative_position_id = YUG_comradetesla
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_comradetesla }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Modernize the Slavs
+	focus = {
+		id = YUG_modernizetheslavs
+		icon = GFX_modernizetheslavs
+		x = -2
+		y = 1
+		relative_position_id = YUG_yugoslavtechnate
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_yugoslavtechnate }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_rapid_progress
+		}
+	}
+
+	#Focus for Integrate the Socialists
+	focus = {
+		id = YUG_integratethesocialists
+		icon = GFX_integratethesocialists
+		x = 2
+		y = 1
+		relative_position_id = YUG_yugoslavtechnate
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_yugoslavtechnate }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { 
+				ideology = accelerationism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Yugoslav Socialism
+	focus = {
+		id = YUG_yugoslavsocialism
+		icon = GFX_yugoslavsocialism
+		x = 0
+		y = 2
+		relative_position_id = YUG_yugoslavtechnate
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_modernizetheslavs 
+		}
+		prerequisite = { 
+			focus = YUG_integratethesocialists 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Experimental Industry
+	focus = {
+		id = YUG_experimentalindustry
+		icon = GFX_experimentalindustry
+		x = -2
+		y = 1
+		relative_position_id = YUG_yugoslavsocialism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_yugoslavsocialism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_experimental_industry
+		}
+	}
+
+	#Focus for Modern Authoritarianism
+	focus = {
+		id = YUG_modernauthoritarianism
+		icon = GFX_modernauthoritarianism
+		x = 0
+		y = 1
+		relative_position_id = YUG_experimentalindustry
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_experimentalindustry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_scientific_authority
+		}
+	}
+
+	#Focus for Science knows no Morality
+	focus = {
+		id = YUG_scienceknowsnomorality
+		icon = GFX_scienceknowsnomorality
+		x = 2
+		y = 1
+		relative_position_id = YUG_yugoslavsocialism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_yugoslavsocialism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_rapid_progress
+				add_idea = YUG_ruthless_progress
+			}
+		}
+	}
+
+	#Focus for Modern Perun
+	focus = {
+		id = YUG_modernperun
+		icon = GFX_modernperun
+		x = 0
+		y = 1
+		relative_position_id = YUG_scienceknowsnomorality
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_scienceknowsnomorality }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_god_of_electricity
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	#Focus for Techno-Slavia
+	focus = {
+		id = YUG_technoslavia
+		icon = GFX_technoslavia
+		x = 2
+		y = 1
+		relative_position_id = YUG_modernauthoritarianism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_modernauthoritarianism 
+		}
+		prerequisite = { 
+			focus = YUG_modernperun 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_techno_slavia
+			add_war_support = 0.2
+			add_research_slot = 1
+		}
+	}
+
+	##### Natrej tree #####
+
+	#Focus for Progressive Pan-Slavism
+	focus = {
+		id = YUG_progressivepanslavism
+		icon = GFX_progressivepanslavism
+		x = 7
+		y = 1
+		relative_position_id = YUG_heyslavs
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_heyslavs }
+		mutually_exclusive = { 
+			focus = YUG_sviuzbor 
+		}
+		mutually_exclusive = { 
+			focus = YUG_comradetesla 
+		}
+		available = {
+			has_country_flag = YUG_tin
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			create_country_leader = {
+		 		name = "Tin Ujević"
+				picture = "Portrait_YUG_Tin_Ujevic.tga"
+				expire = "1955.1.1"
+				ideology = national_rejuvenatism
+				traits = {
+					popular_figurehead
+				}
+			}
+			set_party_name = { 
+				ideology = accelerationism 
+				long_name = YUG_accelerationism_party_long_tin
+				name = YUG_accelerationism_party_tin
+			}
+		}
+	}
+
+	#Focus for Purge the International Avant-Garde
+	focus = {
+		id = YUG_purgetheinternationalavantgarde
+		icon = GFX_purgetheinternationalavantgarde
+		x = 0
+		y = 1
+		relative_position_id = YUG_progressivepanslavism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_progressivepanslavism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { 
+				ideology = accelerationism
+				popularity = -0.10
+			}
+			add_popularity = { 
+				ideology = vanguard_socialism
+				popularity = -0.15
+			}
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for Nacionalna Avantgarda
+	focus = {
+		id = YUG_nacionalnaavantgarda
+		icon = GFX_nacionalnaavantgarda
+		x = 0
+		y = 1
+		relative_position_id = YUG_purgetheinternationalavantgarde
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_purgetheinternationalavantgarde }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_national_avantgarde
+			add_popularity = { 
+				ideology = accelerationism
+				popularity = 0.15
+			}
+			hidden_effect = {
+				country_event = {
+					id = yugoslavia.1
+					days = 300
+				}
+			}
+		}
+	}
+
+	#Focus for Vedic System
+	focus = {
+		id = YUG_vedicsystem
+		icon = GFX_vedicsystem
+		x = -2
+		y = 1
+		relative_position_id = YUG_nacionalnaavantgarda
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_nacionalnaavantgarda }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_vedic_faith
+		}
+	}
+
+	#Focus for National Mysticism
+	focus = {
+		id = YUG_nationalmysticism
+		icon = GFX_nationalmysticism
+		x = 1
+		y = 1
+		relative_position_id = YUG_vedicsystem
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_vedicsystem }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_vedic_faith
+				add_idea = YUG_vedic_faith1
+			}
+		}
+	}
+
+	#Focus for Slavic Syndicalism
+	focus = {
+		id = YUG_slavicsyndicalism
+		icon = GFX_slavicsyndicalism
+		x = -1
+		y = 1
+		relative_position_id = YUG_nationalmysticism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_nationalmysticism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_yugoslav_syndicalism
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Free Eagles of the Fatherland
+	focus = {
+		id = YUG_freeeaglesofthefatherland
+		icon = GFX_freeeaglesofthefatherland
+		x = 2
+		y = 1
+		relative_position_id = YUG_nacionalnaavantgarda
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_nacionalnaavantgarda }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_illyrian_identity
+		}
+	}
+
+	#Focus for Myth of Barbarians
+	focus = {
+		id = YUG_mythofbarbarians
+		icon = GFX_mythofbarbarians
+		x = -1
+		y = 1
+		relative_position_id = YUG_freeeaglesofthefatherland
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_freeeaglesofthefatherland }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_barbarian_mythos
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Social and National Order
+	focus = {
+		id = YUG_socialandnationalorder
+		icon = GFX_socialandnationalorder
+		x = 1
+		y = 1
+		relative_position_id = YUG_mythofbarbarians
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_mythofbarbarians }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_popularity = { 
+				ideology = accelerationism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Balkan Hyperborea
+	focus = {
+		id = YUG_balkanhyperborea
+		icon = GFX_balkanhyperborea
+		x = 2
+		y = 1
+		relative_position_id = YUG_slavicsyndicalism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_slavicsyndicalism 
+		}
+		prerequisite = { 
+			focus = YUG_socialandnationalorder 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_hyperborea
+			add_stability = 0.05
+			add_war_support = 0.1
+		}
+	}
+
+	########### Military tree ###########
+
+	#Focus for War is Slavic Culture
+	focus = {
+		id = YUG_warisslavicculture
+		icon = GFX_goal_YUG_warisslavicculture
+		x = 23
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	#Focus for Integrate Militant Youth
+	focus = {
+		id = YUG_integratemilitantyouth
+		icon = GFX_goal_YUG_integratemilitantyouth
+		x = -2
+		y = 1
+		relative_position_id = YUG_warisslavicculture
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_warisslavicculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_militant_youth
+		}
+	}
+
+	#Focus for Eagles in the Sky!
+	focus = {
+		id = YUG_eaglesinthesky
+		icon = GFX_goal_YUG_eaglesinthesky
+		x = 1
+		y = 1
+		relative_position_id = YUG_integratemilitantyouth
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_integratemilitantyouth }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 3
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = early_bomber
+				technology = tactical_bomber1
+				technology = tactical_bomber2
+				technology = tactical_bomber3
+			}
+		}
+	}
+
+	#Focus for Karlovac-Osjek Line
+	focus = {
+		id = YUG_karlovacosjekline
+		icon = GFX_goal_YUG_karlovacosjekline
+		x = -1
+		y = 1
+		relative_position_id = YUG_eaglesinthesky
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_eaglesinthesky }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			109 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11577
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6647
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3627
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11594
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9611
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Modern Warfare
+	focus = {
+		id = YUG_modernwarfare
+		icon = GFX_goal_YUG_modernwarfare
+		x = 2
+		y = 1
+		relative_position_id = YUG_warisslavicculture
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_warisslavicculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
+				category = cat_superior_firepower
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	#Focus for Mechanization
+	focus = {
+		id = YUG_mechanization
+		icon = GFX_goal_YUG_mechanization
+		x = -1
+		y = 1
+		relative_position_id = YUG_modernwarfare
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_modernwarfare }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = artillery
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	#Focus for Tank Production
+	focus = {
+		id = YUG_developtanks
+		icon = GFX_goal_YUG_developtanks
+		x = 1
+		y = 1
+		relative_position_id = YUG_mechanization
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_mechanization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		}
+	}
+
+	#Focus for New Guns
+	focus = {
+		id = YUG_newguns
+		icon = GFX_goal_YUG_newguns
+		x = 0
+		y = 1
+		relative_position_id = YUG_warisslavicculture
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_warisslavicculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	#Focus for Underground Production
+	focus = {
+		id = YUG_undergroundproduction
+		icon = GFX_goal_YUG_undergroundproduction
+		x = 0
+		y = 2
+		relative_position_id = YUG_newguns
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_newguns }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_underground_production_idea
+		}
+	}
+
+	########### Economy tree ###########
+
+	#Focus for What is To be Done?
+	focus = {
+		id = YUG_whatistobedone
+		icon = GFX_goal_YUG_whatistobedone
+		x = 31
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Expand University of Zagrzeb
+	#focus = {
+	#	id = YUG_universityofzagrzeb
+	#	icon = GFX_goal_YUG_universityofzagrzeb
+	#	x = 0
+	#	y = 2
+	#	prerequisite = {
+	#		focus = YUG_socialistmodel
+	#		focus = YUG_corporatemodel
+	#	}
+	#	relative_position_id = YUG_whatistobedone
+	#	cost = 10
+	#	available_if_capitulated = yes
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#	completion_reward = {
+	#		add_research_slot = 1
+	#	}
+	#}
+
+	### Corporate economy ###
+
+	#Focus for Corporate Model
+	focus = {
+		id = YUG_corporatemodel
+		icon = GFX_goal_YUG_corporatemodel
+		x = -3
+		y = 1
+		relative_position_id = YUG_whatistobedone
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_whatistobedone }
+		mutually_exclusive = { focus = YUG_socialistmodel }
+		available = {
+			OR = {
+				has_completed_focus = YUG_progressivepanslavism
+				has_completed_focus = YUG_sviuzbor
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_corporate_economy
+		}
+	}
+
+	#Focus for Return to the Soil
+	focus = {
+		id = YUG_returntothesoil
+		icon = GFX_goal_YUG_returntothesoil
+		x = -1
+		y = 1
+		relative_position_id = YUG_corporatemodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_corporatemodel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Urban Reform
+	focus = {
+		id = YUG_urbanreform
+		icon = GFX_goal_YUG_urbanreform
+		x = 0
+		y = 1
+		relative_position_id = YUG_returntothesoil
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_returntothesoil }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Protect Private Capital
+	focus = {
+		id = YUG_protectprivatecapital
+		icon = GFX_goal_YUG_protectprivatecapital
+		x = 1
+		y = 1
+		relative_position_id = YUG_corporatemodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_corporatemodel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_corporate_economy
+				add_idea = YUG_corporate_economy1
+			}
+		}
+	}
+
+	#Focus for Direct it towards National Interest
+	focus = {
+		id = YUG_directittowardsnationalinterest
+		icon = GFX_goal_YUG_directittowardsnationalinterest
+		x = 0
+		y = 1
+		relative_position_id = YUG_protectprivatecapital
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_protectprivatecapital }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_corporate_economy1
+				add_idea = YUG_corporate_economy2
+			}
+		}
+	}
+
+	#Focus for Class Unity and National Brotherhood
+	focus = {
+		id = YUG_classunityandnationalbrotherhood
+		icon = GFX_goal_YUG_classunityandnationalbrotherhood
+		x = 0
+		y = 3
+		relative_position_id = YUG_corporatemodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_urbanreform 
+		}
+		prerequisite = { 
+			focus = YUG_directittowardsnationalinterest 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = 0.1
+		}
+	}
+
+	### Socialist economy ###
+
+	#Focus for Socialist Model
+	focus = {
+		id = YUG_socialistmodel
+		icon = GFX_goal_YUG_socialistmodel
+		x = 3
+		y = 1
+		relative_position_id = YUG_whatistobedone
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_whatistobedone }
+		mutually_exclusive = { focus = YUG_corporatemodel }
+		available = {
+			OR = {
+				has_completed_focus = YUG_progressivepanslavism
+				has_completed_focus = YUG_comradetesla
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = YUG_socialist_economy
+		}
+	}
+
+	#Focus for Draft the Five Year Plans
+	focus = {
+		id = YUG_draftthefiveyearplans
+		icon = GFX_goal_YUG_draftthefiveyearplans
+		x = 1
+		y = 1
+		relative_position_id = YUG_socialistmodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_socialistmodel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_socialist_economy
+				add_idea = YUG_socialist_economy1
+			}
+		}
+	}
+
+	#Focus for Promote ORA
+	focus = {
+		id = YUG_promoteora
+		icon = GFX_goal_YUG_promoteora
+		x = -1
+		y = 1
+		relative_position_id = YUG_socialistmodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_socialistmodel }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Urban Revolution
+	focus = {
+		id = YUG_urbanrevolution
+		icon = GFX_goal_YUG_urbanrevolution
+		x = 0
+		y = 1
+		relative_position_id = YUG_promoteora
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_promoteora }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Cult of Labour
+	focus = {
+		id = YUG_cultoflabour
+		icon = GFX_goal_YUG_cultoflabour
+		x = 0
+		y = 1
+		relative_position_id = YUG_draftthefiveyearplans
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = YUG_draftthefiveyearplans }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = YUG_socialist_economy1
+				add_idea = YUG_socialist_economy2
+			}
+		}
+	}
+
+	#Focus for Unity and Brotherhood
+	focus = {
+		id = YUG_unityandbrotherhood
+		icon = GFX_goal_YUG_unityandbrotherhood
+		x = 0
+		y = 3
+		relative_position_id = YUG_socialistmodel
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = YUG_urbanrevolution 
+		}
+		prerequisite = { 
+			focus = YUG_cultoflabour 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = 0.1
+		}
+	}
+
+	########### Foreign tree ###########
+	
+	focus = {
+		id = YUG_thefutureofyugoslavia
+		icon = GFX_goal_YUG_thefutureofyugoslavia
+		x = 42
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	### Accelerationist path ###
+
+	focus = {
+		id = YUG_revolutionarypanslavism
+		icon = GFX_goal_YUG_revolutionarypanslavism
+		x = -3
+		y = 1
+		relative_position_id = YUG_thefutureofyugoslavia
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_thefutureofyugoslavia
+		}
+		available = {
+			OR = {
+				has_completed_focus = YUG_balkanhyperborea
+				has_completed_focus = YUG_technoslavia
+			}
+			is_subject = no
+		}
+		mutually_exclusive = { 
+			focus = YUG_divinemission
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_approachfrance
+		icon = GFX_goal_YUG_approachfrance
+		x = -2
+		y = 1
+		relative_position_id = YUG_revolutionarypanslavism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_revolutionarypanslavism
+		}
+		available = {
+			is_subject = no
+		}
+		mutually_exclusive = { 
+			focus = YUG_approachpoland
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = FRA modifier = large_increase }
+			FIU = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = FIU modifier = large_increase }
+			KAV = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = KAV modifier = large_increase }
+			FRA = {
+				country_event = {
+					id = yugoslavia.10
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_ourrightstoadriatic
+		icon = GFX_goal_YUG_ourrightstoadriatic
+		x = 0
+		y = 1
+		relative_position_id = YUG_approachfrance
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_approachfrance
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_joinleaguesolar
+		icon = GFX_goal_YUG_joinleaguesolar
+		x = 0
+		y = 1
+		relative_position_id = YUG_ourrightstoadriatic
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_ourrightstoadriatic
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			FRA = {
+				country_event = {
+					id = yugoslavia.11
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_balkandominance
+		icon = GFX_goal_YUG_balkandominance
+		x = 0
+		y = 1
+		relative_position_id = YUG_joinleaguesolar
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_joinleaguesolar
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_bulgarianquestion
+		icon = GFX_goal_YUG_bulgarianquestion
+		x = 2
+		y = 1
+		relative_position_id = YUG_approachfrance
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_approachfrance
+			focus = YUG_approachpoland
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = yugoslavia.14
+				days = 1
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_approachpoland
+		icon = GFX_goal_YUG_approachpoland
+		x = 2
+		y = 1
+		relative_position_id = YUG_revolutionarypanslavism
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_revolutionarypanslavism
+		}
+		available = {
+			is_subject = no
+		}
+		mutually_exclusive = { 
+			focus = YUG_approachfrance
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			POL = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = POL modifier = large_increase }
+			UKR = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = UKR modifier = large_increase }
+			BLR = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = BLR modifier = large_increase }
+			LIT = {	add_opinion_modifier = { target = YUG modifier = large_increase }	}
+			add_opinion_modifier = { target = LIT modifier = large_increase }
+			POL = {
+				country_event = {
+					id = yugoslavia.12
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_slavicbrotherhood
+		icon = GFX_goal_YUG_slavicbrotherhood
+		x = 0
+		y = 1
+		relative_position_id = YUG_approachpoland
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_approachpoland
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_joinintermarium
+		icon = GFX_goal_YUG_joinintermarium
+		x = 0
+		y = 1
+		relative_position_id = YUG_slavicbrotherhood
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_slavicbrotherhood
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			POL = {
+				country_event = {
+					id = yugoslavia.13
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_betweenthreeseas
+		icon = GFX_goal_YUG_betweenthreeseas
+		x = 0
+		y = 1
+		relative_position_id = YUG_joinintermarium
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_joinintermarium
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	### Reactionary path ###
+
+	focus = {
+		id = YUG_divinemission
+		icon = GFX_goal_YUG_divinemission
+		x = 3
+		y = 1
+		relative_position_id = YUG_thefutureofyugoslavia
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_thefutureofyugoslavia
+		}
+		available = {
+			has_completed_focus = YUG_godandslavs
+			is_subject = no
+		}
+		mutually_exclusive = { 
+			focus = YUG_revolutionarypanslavism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = YUG_peacewithaustria
+		icon = GFX_goal_YUG_peacewithaustria
+		x = 0
+		y = 1
+		relative_position_id = YUG_divinemission
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_divinemission
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					AUS = {
+						OR = {
+							has_government = despotism
+							has_government = reactionism
+							has_government = conservatism
+						}
+					}
+				}
+				AUS = {
+					country_event = {
+						id = yugoslavia.20
+						days = 3
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_banishthemuslims
+		icon = GFX_goal_YUG_banishthemuslims
+		x = -1
+		y = 1
+		relative_position_id = YUG_peacewithaustria
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_peacewithaustria
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = yugoslavia.19
+					days = 50
+				}
+			}
+			add_state_claim = 44
+			add_state_claim = 811
+			add_state_claim = 941
+			create_wargoal = {
+    			type = annex_everything
+    			target = ALB
+			}
+		}
+	}
+
+	focus = {
+		id = YUG_secureadriatic
+		icon = GFX_goal_YUG_secureadriatic
+		x = 1
+		y = 1
+		relative_position_id = YUG_peacewithaustria
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_peacewithaustria
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_liberateslavs
+		icon = GFX_goal_YUG_liberateslavs
+		x = 0
+		y = 2
+		relative_position_id = YUG_peacewithaustria
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_banishthemuslims
+		}
+		prerequisite = {
+			focus = YUG_secureadriatic
+		}
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			custom_effect_tooltip = "YUG_DIPLOMACY_DECISIONS_TT"
+		}
+	}
+
+	focus = {
+		id = YUG_avengecarigrad
+		icon = GFX_goal_YUG_avengecarigrad
+		x = 0
+		y = 1
+		relative_position_id = YUG_liberateslavs
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = YUG_liberateslavs
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_core = 976
+			add_state_core = 340
+			create_wargoal = {
+    			type = annex_everything
+    			target = MAR
+			}
+		}
+	}
+}

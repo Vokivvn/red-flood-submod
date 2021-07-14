@@ -1,0 +1,879 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+
+		CAL_aneweconomy = {
+		picture = generic_goods_red_bonus
+			modifier = {
+			production_factory_max_efficiency_factor = 0.10
+			consumer_goods_factor = -0.07
+			}
+		}
+		CAL_astrangearmy = {
+			picture = warrior_traditions_idea
+			modifier = {
+			army_org = 0.10
+			training_time_army_factor = 0.10
+			attrition = -0.15
+			}
+		}
+		CAL_investigatingspiritual = {
+		picture = state_shintoism
+			modifier = {
+			research_speed_factor = 0.08
+			political_power_gain = -0.10
+			stability_weekly = 0.01
+			accelerationism_drift = 0.02
+			}
+		}
+		CAL_protestantism = {
+		picture = ENG_the_war_to_end_all_wars
+			modifier = {
+			research_speed_factor = -0.02
+			production_speed_buildings_factor = 0.08
+			industrial_capacity_factory = 0.06
+			}
+		}
+		CAL_paganism = {
+		picture = generic_research_bonus
+			modifier = {
+			production_speed_buildings_factor = 0.08
+			industrial_capacity_factory = 0.06
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			non_core_manpower = 0.08
+			}
+		}
+		CAL_freecinema = {
+		picture = air_support_focus
+			modifier = {
+			MONTHLY_POPULATION = 0.10
+			trade_opinion_factor = 0.25
+			}
+		}
+		CAL_awakeningtheworld = {
+		picture = air_support_focus
+			modifier = {
+			MONTHLY_POPULATION = 0.20
+			trade_opinion_factor = 0.35
+			consumer_goods_factor = 0.08
+			political_power_gain = -0.02
+			}
+		}
+		CAL_investigationsphysical = {
+		picture = air_support_focus
+			modifier = {
+			MONTHLY_POPULATION = -0.20
+			conscription = 0.03
+			political_power_gain = 0.05
+			}
+		}
+		CAL_harnessingparanormal = {
+		picture = generic_spy_coup
+			modifier = {
+			conscription = 0.04
+			army_org = 0.10
+			offence = 0.13
+			}
+		}
+		CAL_thebellline_idea = {
+		picture = vittoria_mutilata
+			modifier = {
+			accelerationism_drift = 0.02
+			}
+		}
+		CAL_waragainsthidden = {
+		picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+			accelerationism_drift = 0.02
+			MONTHLY_POPULATION = -0.15
+			}
+		}
+		CAL_oranges = {
+		picture = generic_political_support
+			modifier = {
+			MONTHLY_POPULATION = 0.10
+			consumer_goods_factor = -0.07
+			political_power_gain = -0.12
+			}
+		}
+		CAL_unitary = {
+		picture = generic_political_support
+			modifier = {
+			stability_weekly = 0.01
+			conservatism_drift = 0.02
+			}
+		}
+		CAL_democracy = {
+		picture = SOV_scientist_defect
+			modifier = {
+			liberalism_drift = 0.02
+			social_democratism_drift = 0.01
+			conservatism_drift = 0.02
+			}
+		}
+		CAL_individualism = {
+		picture = chi_army_corruption
+			modifier = {
+			research_speed_factor = 0.04
+			}
+		}
+		CAL_dollar = {
+		picture = generic_deal_with_the_devil2
+			modifier = {
+			consumer_goods_factor = -0.03
+			}
+		}
+		CAL_autonomousworkers = {
+		picture = generic_agrarian_society
+			modifier = {
+			consumer_goods_factor = -0.05
+			political_power_gain = 0.12
+			production_speed_buildings_factor = -0.01
+			industrial_capacity_factory = 0.08
+			}
+		}
+		CAL_politicalmachine = {
+		picture = generic_pp_unity_bonus
+			modifier = {
+			stability_weekly = 0.04
+			war_support_weekly = 0.04
+			political_power_gain = 0.12
+			}
+		}
+		CAL_twelveprinciples = {
+		picture = anti_soviet_pact
+			modifier = {
+			revisionist_socialism_drift = 0.02
+			}
+		}
+		CAL_christianwelfare = {
+		picture = generic_manpower_bonus
+			modifier = {
+			consumer_goods_factor = 0.04
+			MONTHLY_POPULATION = 0.40
+			}
+		}
+		CAL_puredemocracy = {
+		picture = generic_victors_of_ww1
+			modifier = {
+			revisionist_socialism_drift = 0.01
+			revolutionary_anarchism_drift = 0.02
+			libertarian_marxism_drift = 0.02
+			social_democratism_drift = 0.02
+			}
+		}
+		CAL_sierranevada = {
+		picture = generic_intel_bonus
+			modifier = {
+			acclimatization_hot_climate_gain_factor = 0.20
+			heat_attrition_factor = -0.20
+			}
+		}
+		CAL_farms = {
+		picture = generic_intel_bonus
+			modifier = {
+			stability_weekly = 0.01
+			consumer_goods_factor = 0.01
+			}
+		}
+		CAL_militias = {
+		picture = chi_army_corruption3
+			modifier = {
+			conscription = 0.03
+			war_support_factor = -0.10
+			army_attack_factor = -0.10
+			}
+		}
+		CAL_army = {
+		picture = soviet_german_friendship
+			modifier = {
+			conscription = 0.01
+			war_support_factor = 0.12
+			}
+		}
+		CAL_militarytraining = {
+		picture = raj_indian_gentlemen_officers
+			modifier = {
+			training_time_army_factor = -0.10
+			training_time_factor = -0.10
+			}
+		}
+		CAL_bayarea = {
+		picture = generic_navy_bonus
+			modifier = {
+			industrial_capacity_dockyard = 0.14
+			}
+		}
+		CAL_volunteers = {
+		picture = FRA_army_of_aggression_focus
+			modifier = {
+			weekly_manpower = 100
+			conscription = -0.01
+			}
+		}
+		CAL_digging = {
+		picture = generic_wall_line
+			modifier = {
+			max_dig_in = 1.1
+			dig_in_speed = 0.10
+			}
+		}
+		CAL_attackdigging = {
+		picture = generic_wall_line
+			modifier = {
+			max_dig_in = 1.1
+			dig_in_speed = 0.25
+			supply_consumption_factor = -0.10
+			}
+		}
+
+		CAL_revealingtheplots = {
+			#picture = 
+			modifier = {
+				weekly_manpower = -15
+			}
+		}
+		CAL_supersoldiers = {
+			#picture = 
+			modifier = {
+				army_org_factor = 0.07
+			}
+		}
+		CAL_drugged_up_soldiers = {
+			#picture = 
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = -0.05
+			}
+		}
+		CAL_entrenchment = {
+			picture = generic_wall_line
+			modifier = {
+				army_defence_factor = 0.05
+				dig_in_speed = 0.1
+				max_dig_in_factor = 0.15
+			}
+		}
+	}#END OF COUNTRY IDEAS
+#MINISTERS
+	head_of_government = {
+		CAL_LRH = {
+			picture = GFX_idea_CAL_LRH
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		CAL_john_mcmaster = {
+			picture = GFX_idea_CAL_john_mcmaster
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Hubbard
+			}
+			traits = {
+				hog_happy_amateur
+				head_of_government
+			}
+		}
+		CAL_ernest_norman = {
+			picture = GFX_idea_CAL_ernest_norman
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Uriel
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		CAL_dorothy_martin = {
+			picture = GFX_idea_CAL_dorothy_martin
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Krishna
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		CAL_israel_regardie = {
+			picture = GFX_idea_CAL_israel_regardie
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Parsons
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		CAL_upton_sinclair = {
+			picture = GFX_idea_CAL_upton_sinclair
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				hog_pragmatic_statesman
+				head_of_government
+			}
+		}
+		CAL_frank_l_shaw = {
+			picture = GFX_idea_CAL_frank_l_shaw
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = {
+				hog_corporate_suit
+				head_of_government
+			}
+		}
+		CAL_john_f_shelley = {
+			picture = CAL_john_f_shelley
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				hog_backroom_backstabber
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		CAL_frank_allyn_edwards = {
+			picture = GFX_idea_CAL_frank_allyn_edwards
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = {
+				for_the_cloak_n_dagger_schemer
+				foreign_minister
+			}
+		}
+		CAL_frank_allyn_edwards = {
+			picture = GFX_idea_CAL_frank_allyn_edwards
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Hubbard
+			}
+			traits = {
+				for_great_compromiser
+				foreign_minister
+			}
+		}
+		CAL_robert_a_heinlein = {
+			picture = GFX_idea_CAL_robert_a_heinlein
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Uriel
+			}
+			traits = {
+				for_biased_intellectual
+				foreign_minister
+			}
+		}
+		CAL_mother_ruth = {
+			picture = GFX_idea_CAL_mother_ruth
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Krishna
+			}
+			traits = {
+				for_ideological_crusader
+				foreign_minister
+			}
+		}
+		CAL_karl_johannes_germer = {
+			picture = GFX_idea_CAL_karl_johannes_germer
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Parsons
+			}
+			traits = {
+				for_the_cloak_n_dagger_schemer
+				foreign_minister
+			}
+		}
+		CAL_melech_epstein = {
+			picture = GFX_idea_CAL_melech_epstein
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				for_ideological_crusader
+				foreign_minister
+			}
+		}
+		CAL_george_christopher = {
+			picture = GFX_idea_CAL_george_christopher
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = {
+				for_apologetic_clerk
+				foreign_minister
+			}
+		}
+		CAL_lyndon_b_johnson = {
+			picture = GFX_idea_CAL_lyndon_b_johnson
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				for_great_compromiser
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		CAL_arthur_leo_zagat = {
+			picture = GFX_idea_CAL_arthur_leo_zagat
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+			    eco_mixed_economy
+				economy_minister
+			}
+		}
+		CAL_paul_twitchell = {
+			picture = GFX_idea_CAL_paul_twitchell
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Hubbard
+			}
+			traits = { 
+			    eco_balanced_budget_economy
+				economy_minister
+			}
+		}
+		CAL_eco_LRH = {
+			picture = GFX_idea_CAL_LRH
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Uriel
+			}
+			traits = { 
+			    eco_administrative_genius
+				economy_minister
+			}
+		}
+		CAL_bishop_nekona = {
+			picture = GFX_idea_CAL_bishop_nekona
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Krishna
+			}
+			traits = { 
+			    eco_planned_economy_proponent
+				economy_minister
+			}
+		}
+		CAL_grady_louis_mcmurtry = {
+			picture = GFX_idea_CAL_grady_louis_mcmurtry
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Parsons
+			}
+			traits = { 
+			    eco_military_entrepreneur
+				economy_minister
+			}
+		}
+		CAL_norman_thomas = {
+			picture = GFX_idea_CAL_norman_thomas
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = { 
+			    eco_planned_economy_proponent
+				economy_minister
+			}
+		}
+		CAL_elmer_robinson = {
+			picture = GFX_idea_CAL_elmer_robinson
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = { 
+			    eco_laissez_faire_capitalist
+				economy_minister
+			}
+		}
+		CAL_ellis_e_patterson = {
+			picture = GFX_idea_CAL_ellis_e_patterson
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+			    eco_bank_president
+				economy_minister
+			}
+		}
+	}
+	security_minister = {
+		CAL_arthur_bell = {
+			picture = GFX_idea_CAL_arthur_bell
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				sec_efficient_sociopath
+				security_minister
+			}
+		}
+		CAL_ruth_norman = {
+			picture = GFX_idea_CAL_ruth_norman
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Uriel
+			}
+			traits = { 
+				sec_compassionate_gentleman
+				security_minister
+			}
+		}
+		CAL_elesha = {
+			picture = GFX_idea_CAL_elesha
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Krishna
+			}
+			traits = { 
+				sec_crime_fighter
+				security_minister
+			}
+		}
+		CAL_kenneth_anger = {
+			picture = GFX_idea_CAL_kenneth_anger
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Parsons
+			}
+			traits = { 
+				sec_media_magnate
+				security_minister
+			}
+		}
+		CAL_sara_northtrup_hollister = {
+			picture = GFX_idea_CAL_sara_northrup_hollister
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Hubbard
+			}
+			traits = { 
+				sec_health_and_safety
+				security_minister
+			}
+		}
+		CAL_JBS_hardman = {
+			picture = GFX_idea_CAL_JBS_hardman
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = { 
+				sec_man_of_the_people
+				security_minister
+			}
+		}
+		CAL_norris_poulson = {
+			picture = GFX_idea_CAL_norris_poulson
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = { 
+				sec_media_magnate
+				security_minister
+			}
+		}
+		CAL_pat_brown = {
+			picture = GFX_idea_CAL_pat_brown
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				sec_health_and_safety
+				security_minister
+			}
+		}
+	}
+	head_of_intel = {
+		CAL_theodore_tinsley = {
+			picture = GFX_idea_CAL_theodore_tinsley
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+		CAL_a_e_van_vogt = {
+			picture = GFX_idea_CAL_a_e_van_vogt
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Hubbard
+			}
+			traits = { 
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+		CAL_jack_parsons = {
+			picture = GFX_idea_CAL_jack_parsons
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				OR = {
+				has_country_flag = CAL_Uriel
+				has_country_flag = CAL_Parsons
+				}
+			}
+			traits = { 
+				int_technical_specialist
+				head_of_intel
+			}
+		}
+		CAL_brother_charles = {
+			picture = GFX_idea_CAL_brother_charles
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = accelerationism
+				has_country_flag = CAL_Krishna
+			}
+			traits = { 
+				int_fortune_teller
+				head_of_intel
+			}
+		}
+		CAL_john_j_ballam = {
+			picture = GFX_idea_CAL_john_j_ballam
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = { 
+				int_industrial_specialist
+				head_of_intel
+			}
+		}
+		CAL_fletcher_bowron = {
+			picture = GFX_idea_CAL_fletcher_bowron
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = { 
+				int_technical_specialist
+				head_of_intel
+			}
+		}
+		CAL_culbert_olson = {
+			picture = GFX_idea_CAL_culbert_olson
+			allowed = {
+				original_tag = CAL
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				int_political_specialist
+				head_of_intel
+			}
+		}
+	}
+	chief_of_staff = {
+		CAL_kenneth_j_houghton = {
+			picture = GFX_idea_CAL_kenneth_j_houghton
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+		CAL_john_william_finn = {
+			picture = GFX_idea_CAL_john_william_finn
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+	chief_of_army = {
+		CAL_robert_t_frederick = {
+			picture = GFX_idea_CAL_robert_t_frederick
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+		CAL_herman_v_wall = {
+			picture = GFX_idea_CAL_herman_v_wall
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	chief_of_navy = {
+		CAL_raymond_murray = {
+			picture = GFX_idea_CAL_raymond_murray
+			allowed = {
+				original_tag = CAL
+			}
+			traits = { cnav_base_control_doctrine }
+		}
+		CAL_jack_hendrick_taylor = {
+			picture = CAL_jack_hendrick_taylor
+			allowed = {
+				original_tag = CAL
+			}
+			traits = { cnav_decisive_battle_doctrine }
+		}
+	}
+	chief_of_air_force = {
+		CAL_brooke_nihart = {
+			picture = GFX_idea_CAL_brooke_nihart
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				cair_naval_aviation_doctrine
+			}
+		}
+		CAL_ted_w_lawson = {
+			picture = GFX_idea_CAL_ted_w_lawson
+			allowed = {
+				original_tag = CAL
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+}#END OF IDEAS

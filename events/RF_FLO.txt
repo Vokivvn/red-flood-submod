@@ -1,0 +1,28 @@
+add_namespace = flo
+
+country_event = { #guarantee from Poland?
+	id = flo.1
+	title = flo.1.t
+	desc = flo.1.desc
+	fire_only_once = yes
+	trigger = {
+		country_exists = FLO
+		country_exists = POL
+		tag = POL
+	}
+
+	option = { #comrades!
+		name = flo.1.a
+		POL = {
+		give_guarantee = FLO
+		add_to_faction = FLO
+		}
+	}
+	option = { #lol what
+		name = flo.1.b
+		POL = {
+		add_political_power = 10
+		add_stability = -0.01
+		}
+	}
+}

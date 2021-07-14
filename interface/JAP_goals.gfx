@@ -1,0 +1,527 @@
+spriteTypes = {
+	##Icon For: 
+	SpriteType = {
+		name = "GFX_focus_imperial_decree" 
+		texturefile = "gfx/interface/goals/JAP/GFX_imperial_decree.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_eigen_restoration" 
+		texturefile = "gfx/interface/goals/JAP/GFX_eigen_restoration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_emperors_cabinet" 
+		texturefile = "gfx/interface/goals/JAP/GFX_emperors_cabinet.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_close_the_imperial_palace" 
+		texturefile = "gfx/interface/goals/JAP/GFX_close_the_imperial_palace.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_cut_out_the_red_tape" 
+		texturefile = "gfx/interface/goals/JAP/GFX_cut_out_the_red_tape.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_puppet_ministers" 
+		texturefile = "gfx/interface/goals/JAP/GFX_puppet_ministers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_elevate_sadao" 
+		texturefile = "gfx/interface/goals/JAP/GFX_elevate_sadao.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_arrest_sadao" 
+		texturefile = "gfx/interface/goals/JAP/GFX_arrest_sadao.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_appoint_a_new_high_command" 
+		texturefile = "gfx/interface/goals/JAP/GFX_appoint_a_new_high_command.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pacify_the_military" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pacify_the_military.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_proclaim_the_japenese_empire" 
+		texturefile = "gfx/interface/goals/JAP/GFX_proclaim_the_japenese_empire.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_crackdown_on_the_zaibatsu" 
+		texturefile = "gfx/interface/goals/JAP/GFX_crackdown_on_the_zaibatsu.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_dorogonsupai" 
+		texturefile = "gfx/interface/goals/JAP/GFX_dorogonsupai.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_lotus_act" 
+		texturefile = "gfx/interface/goals/JAP/GFX_lotus_act.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pacific_hegemony" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pacific_hegemony.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_tokyo_colonization_society" 
+		texturefile = "gfx/interface/goals/JAP/GFX_tokyo_colonization_society.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_korean_referendum"
+		texturefile = "gfx/interface/goals/JAP/GFX_korean_referendum.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_loyalty_tests" 
+		texturefile = "gfx/interface/goals/JAP/GFX_loyalty_tests.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_seoul_development_scheme" 
+		texturefile = "gfx/interface/goals/JAP/GFX_seoul_development_scheme.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_expand_the_rubber_trade" 
+		texturefile = "gfx/interface/goals/JAP/GFX_expand_the_rubber_trade.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_indochinese_management" 
+		texturefile = "gfx/interface/goals/JAP/GFX_indochinese_management.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_fort_saigon" 
+		texturefile = "gfx/interface/goals/JAP/GFX_fort_saigon.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_appoint_a_new_governor_general" 
+		texturefile = "gfx/interface/goals/JAP/GFX_appoint_a_new_governor_general.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_mantetsuian_project" 
+		texturefile = "gfx/interface/goals/JAP/GFX_mantetsuian_project.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_expand_the_mantetsu_railways" 
+		texturefile = "gfx/interface/goals/JAP/GFX_expand_the_mantetsu_railways.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_colonial_incentives_program" 
+		texturefile = "gfx/interface/goals/JAP/GFX_colonial_incentives_program.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_manchurian_integration" 
+		texturefile = "gfx/interface/goals/JAP/GFX_manchurian_integration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_kokutai_seitai"
+		texturefile = "gfx/interface/goals/JAP/GFX_kotutai_seitai.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_new_prefectures" 
+		texturefile = "gfx/interface/goals/JAP/GFX_new_prefectures.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_reclaim_taiwan" 
+		texturefile = "gfx/interface/goals/JAP/GFX_reclaim_taiwan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_finish_the_campaign" 
+		texturefile = "gfx/interface/goals/JAP/GFX_finish_the_campaign.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_three_month_campaign" 
+		texturefile = "gfx/interface/goals/JAP/GFX_three_month_campaign.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_tributary_act" 
+		texturefile = "gfx/interface/goals/JAP/GFX_tributary_act.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_negotiations_with_the_ma_clique" 
+		texturefile = "gfx/interface/goals/JAP/GFX_negotiations_with_the_ma_clique.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_beijing_compromise" 
+		texturefile = "gfx/interface/goals/JAP/GFX_beijing_compromise.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_renew_the_litagation_blockcade" 
+		texturefile = "gfx/interface/goals/JAP/GFX_renew_the_litagation_blockcade.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_central_region_strategy" 
+		texturefile = "gfx/interface/goals/JAP/GFX_central_region_strategy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_support_the_communists" 
+		texturefile = "gfx/interface/goals/JAP/GFX_support_the_communists.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_intervene_in_the_chinese_civil_war" 
+		texturefile = "gfx/interface/goals/JAP/GFX_intervene_in_the_chinese_civil_war.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_rising_sun" 
+		texturefile = "gfx/interface/goals/JAP/GFX_rising_sun.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_bamboo_circle" 
+		texturefile = "gfx/interface/goals/JAP/GFX_bamboo_circle.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_loosen_regulations" 
+		texturefile = "gfx/interface/goals/JAP/GFX_loosen_regulations.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_infiltrate_the_palace" 
+		texturefile = "gfx/interface/goals/JAP/GFX_infiltrate_the_palace.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_samurai_codes" 
+		texturefile = "gfx/interface/goals/JAP/GFX_samurai_codes.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_teikokunoi_ha" 
+		texturefile = "gfx/interface/goals/JAP/GFX_teikokunoi_ha.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_emperor_nobuhito" 
+		texturefile = "gfx/interface/goals/JAP/GFX_emperor_nobuhito.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_secure_army_loyalty" 
+		texturefile = "gfx/interface/goals/JAP/GFX_secure_army_loyalty.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_restore_the_shogunate" 
+		texturefile = "gfx/interface/goals/JAP/GFX_restore_the_shogunate.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_execute_sadao" 
+		texturefile = "gfx/interface/goals/JAP/GFX_execute_sadao.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_freeze_the_banks" 
+		texturefile = "gfx/interface/goals/JAP/GFX_freeze_the_banks.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_support_the_zaibatsu" 
+		texturefile = "gfx/interface/goals/JAP/GFX_support_the_zaibatsu.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_the_future_of_the_sunrise_kingdom" 
+		texturefile = "gfx/interface/goals/JAP/GFX_the_future_of_the_sunrise_kingdom.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_will_of_the_people" 
+		texturefile = "gfx/interface/goals/JAP/GFX_will_of_the_people.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_down_with_the_emperor" 
+		texturefile = "gfx/interface/goals/JAP/GFX_down_with_the_emperor.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_organizer_the_ricers" 
+		texturefile = "gfx/interface/goals/JAP/GFX_organizer_the_ricers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_weapons_stockpiling" 
+		texturefile = "gfx/interface/goals/JAP/GFX_weapons_stockpiling.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_general_strikes" 
+		texturefile = "gfx/interface/goals/JAP/GFX_general_strikes.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_victory_in_the_civil_war" 
+		texturefile = "gfx/interface/goals/JAP/GFX_victory_in_the_civil_war.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_colonial_management" 
+		texturefile = "gfx/interface/goals/JAP/GFX_colonial_management.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_liberate_korea" 
+		texturefile = "gfx/interface/goals/JAP/GFX_liberate_korea.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_liberate_vietnam" 
+		texturefile = "gfx/interface/goals/JAP/GFX_liberate_vietnam.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pacific_workers_league" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pacific_workers_league.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_reclaim_mantetsu" 
+		texturefile = "gfx/interface/goals/JAP/GFX_reclaim_mantetsu.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_free_the_mantetsus" 
+		texturefile = "gfx/interface/goals/JAP/GFX_free_the_mantetsus.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_japanese_oversight" 
+		texturefile = "gfx/interface/goals/JAP/GFX_japanese_oversight.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_rebuild_the_nation" 
+		texturefile = "gfx/interface/goals/JAP/GFX_rebuild_the_nation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_roadway_repair" 
+		texturefile = "gfx/interface/goals/JAP/GFX_roadway_repair.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_sieze_factories" 
+		texturefile = "gfx/interface/goals/JAP/GFX_sieze_factories.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_devalue_the_zen" 
+		texturefile = "gfx/interface/goals/JAP/GFX_devalue_the_zen.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_abolish_the_zaibatsu" 
+		texturefile = "gfx/interface/goals/JAP/GFX_abolish_the_zaibatsu.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_champions" 
+		texturefile = "gfx/interface/goals/JAP/GFX_champions_day.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_sunset_stock_crash" 
+		texturefile = "gfx/interface/goals/JAP/GFX_sunset_stock_crash.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pro_zaibatsu_focus_1" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pro_zaibatsu_focus_1.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pro_zaibatsu_focus_2" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pro_zaibatsu_focus_2.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pro_zaibatsu_focus_3" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pro_zaibatsu_focus_3.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pro_zaibatsu_focus_4" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pro_zaibatsu_focus_4.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pro_zaibatsu_focus_5" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pro_zaibatsu_focus_5.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_zaibatsu_focus_1" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_zaibatsu_focus_1.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_zaibatsu_focus_2" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_zaibatsu_focus_2.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_zaibatsu_focus_3" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_zaibatsu_focus_3.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_zaibatsu_focus_4" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_zaibatsu_focus_4.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_zaibatsu_focus_5" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_zaibatsu_focus_5.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_finish_sunset_repairs"
+		texturefile = "gfx/interface/goals/JAP/GFX_finish_sunset_repairs.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_industrial_revitilization" 
+		texturefile = "gfx/interface/goals/JAP/GFX_industrial_revitilization.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_CCP" 
+		texturefile = "gfx/interface/goals/JAP/GFX_CCP.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_hirohito_memorial_railway" 
+		texturefile = "gfx/interface/goals/JAP/GFX_hirohito_memorial_railway.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_wartime_preperations" 
+		texturefile = "gfx/interface/goals/JAP/GFX_wartime_preperations.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_government_grants" 
+		texturefile = "gfx/interface/goals/JAP/GFX_government_grants.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_invest_in_factories" 
+		texturefile = "gfx/interface/goals/JAP/GFX_invest_in_factories.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_pacific_war_machine" 
+		texturefile = "gfx/interface/goals/JAP/GFX_pacific_war_machine.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_costal_defense" 
+		texturefile = "gfx/interface/goals/JAP/GFX_costal_defense.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_machines_of_the_future" 
+		texturefile = "gfx/interface/goals/JAP/GFX_machines_of_the_future.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_kiniro_no_council" 
+		texturefile = "gfx/interface/goals/JAP/GFX_kiniro_no_council.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_kaku_bakudan" 
+		texturefile = "gfx/interface/goals/JAP/GFX_kaku_bakudan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_economic_miracle" 
+		texturefile = "gfx/interface/goals/JAP/GFX_economic_miracle.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_refinery_research" 
+		texturefile = "gfx/interface/goals/JAP/GFX_refinery_research.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_synthetic_oil" 
+		texturefile = "gfx/interface/goals/JAP/GFX_synthetic_oil.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_fuel_stockpiles" 
+		texturefile = "gfx/interface/goals/JAP/GFX_fuel_stockpiles.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_rubber_plants" 
+		texturefile = "gfx/interface/goals/JAP/GFX_rubber_plants.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_modernize_the_army" 
+		texturefile = "gfx/interface/goals/JAP/GFX_modernize_the_army.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_a_gun_in_every_hand" 
+		texturefile = "gfx/interface/goals/JAP/GFX_a_gun_in_every_hand.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_devise_new_tactics" 
+		texturefile = "gfx/interface/goals/JAP/GFX_devise_new_tactics.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_artillery_support" 
+		texturefile = "gfx/interface/goals/JAP/GFX_artillery_support.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_motorization" 
+		texturefile = "gfx/interface/goals/JAP/GFX_motorization.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_light_tank_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_light_tank_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_mount_fiji_training_camp" 
+		texturefile = "gfx/interface/goals/JAP/GFX_mount_fiji_training_camp.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_anti_tank_production" 
+		texturefile = "gfx/interface/goals/JAP/GFX_anti_tank_production.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_emperors_soldiers" 
+		texturefile = "gfx/interface/goals/JAP/GFX_emperors_soldiers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_design_new_firearms" 
+		texturefile = "gfx/interface/goals/JAP/GFX_design_new_firearms.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_imperial_airforce" 
+		texturefile = "gfx/interface/goals/JAP/GFX_imperial_airforce.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_air_land_battle" 
+		texturefile = "gfx/interface/goals/JAP/GFX_air_land_battle.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_naval_assualt" 
+		texturefile = "gfx/interface/goals/JAP/GFX_naval_assualt.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_fighter_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_fighter_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_airforce_army_intergration" 
+		texturefile = "gfx/interface/goals/JAP/GFX_airforce_army_intergration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_CAS_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_CAS_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_carrier_fighter_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_carrier_fighter_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_long_range_bombing_raids" 
+		texturefile = "gfx/interface/goals/JAP/GFX_long_range_bombing_raids.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_prioritize_military_targets" 
+		texturefile = "gfx/interface/goals/JAP/GFX_prioritize_military_targets.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_planes_of_the_future" 
+		texturefile = "gfx/interface/goals/JAP/GFX_planes_of_the_future.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_naval_bomber_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_naval_bomber_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_expand_the_navy" 
+		texturefile = "gfx/interface/goals/JAP/GFX_expand_the_navy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_floating_fortresses" 
+		texturefile = "gfx/interface/goals/JAP/GFX_floating_fortresses.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_naval_bombardment" 
+		texturefile = "gfx/interface/goals/JAP/GFX_naval_bombardment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_carrier_focus" 
+		texturefile = "gfx/interface/goals/JAP/GFX_carrier_focus.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_battleship_focus" 
+		texturefile = "gfx/interface/goals/JAP/GFX_battleship_focus.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_50_destroyer_program" 
+		texturefile = "gfx/interface/goals/JAP/GFX_50_destroyer_program.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_light_crusier_production" 
+		texturefile = "gfx/interface/goals/JAP/GFX_light_crusier_production.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_heavy_cruiser_production" 
+		texturefile = "gfx/interface/goals/JAP/GFX_heavy_cruiser_production.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_undersea_destruction" 
+		texturefile = "gfx/interface/goals/JAP/GFX_undersea_destruction.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_SNLF" 
+		texturefile = "gfx/interface/goals/JAP/GFX_SNLF.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_troop_transport_effort" 
+		texturefile = "gfx/interface/goals/JAP/GFX_troop_transport_effort.dds" 
+	}
+}

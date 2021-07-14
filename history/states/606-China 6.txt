@@ -1,0 +1,23 @@
+state = {
+	id = 606
+	name = "STATE_606" #Anqing
+	manpower = 23265400
+
+	state_category = town
+
+	history = {
+		owner = SHA
+		add_core_of = SHA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			7035 5
+		}
+	}
+
+	provinces = {
+		1083 4203 7035 7222 10017 11994 12061
+	}
+}

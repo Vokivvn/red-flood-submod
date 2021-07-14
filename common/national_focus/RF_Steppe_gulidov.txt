@@ -1,0 +1,538 @@
+focus_tree = {
+	id = RF_Steppe_Division
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			original_tag = STE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = STE_army_effort
+	shared_focus = STE_aviation_effort
+	shared_focus = STE_naval_effort
+	shared_focus = STE_industrial_effort
+
+	############### DIVISION ###############
+
+	focus = {
+		id = STE_operations_takeover
+		icon = GFX_goal_STE_operations_takeover
+		cost = 5
+		x = 7
+		y = 0
+		completion_reward = {
+			retire_country_leader = yes
+			hidden_effect = {
+				set_party_name = { 
+					ideology = right_authoritarianism
+					name = STE_right_authoritarianism_party_dynamic
+					long_name = STE_right_authoritarianism_party_dynamic_long 
+				}
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+			create_country_leader = {
+				name = "Vladimir Gulidov"
+				#desc = ""
+				picture = "Portrait_Vladimir_Gulidov.dds"
+				expire = "1965.1.1"
+				ideology = military_junta
+				traits = {
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_remove_kornilov
+		icon = GFX_goal_STE_remove_kornilov
+		cost = 2
+		relative_position_id = STE_operations_takeover
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_operations_takeover
+		}
+		completion_reward = {
+			add_stability = -0.05
+			remove_unit_leader = 9019
+			create_corps_commander = {
+				name = "Vasily Flug"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Vasily_Flug.tga"
+				traits = { career_officer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 3
+			}
+		}
+	}
+	focus = {
+		id = STE_purge_bureaucracy
+		icon = GFX_goal_STE_purge_bureaucracy
+		cost = 4
+		relative_position_id = STE_remove_kornilov
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_remove_kornilov
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = STE_subsidizze_agrarian_sector
+		icon = GFX_goal_STE_subsidizze_agrarian_sector
+		cost = 4
+		relative_position_id = STE_operations_takeover
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_operations_takeover
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = STE_prioritize_russian_farmers
+		icon = GFX_goal_STE_prioritize_russian_farmers
+		cost = 5
+		relative_position_id = STE_subsidizze_agrarian_sector
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_subsidizze_agrarian_sector
+		}
+		completion_reward = {
+			257 = {
+				add_manpower = -109133
+			}
+			249 = {
+				add_manpower = -44016
+			}
+			398 = {
+				add_manpower = -46851
+			}
+
+			571 = {
+				add_manpower = 43462
+			}
+			590 = {
+				add_manpower = 60249
+			}
+			588 = {
+				add_manpower = 52535
+			}
+			586 = {
+				add_manpower = 43754
+			}
+		}
+	}
+
+	focus = {
+		id = STE_purge_military
+		icon = GFX_goal_STE_purge_military
+		cost = 10
+		relative_position_id = STE_purge_bureaucracy
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = STE_purge_bureaucracy
+		}
+		prerequisite = {
+			focus = STE_prioritize_russian_farmers
+		}
+		completion_reward = {
+			add_war_support = -0.15
+			add_manpower = -5203
+			add_timed_idea = {
+				idea = STE_purged_officers
+				days = 120
+			}
+		}
+	}
+	focus = {
+		id = STE_kickstart_conscription
+		icon = GFX_goal_STE_kickstart_conscription
+		cost = 10
+		relative_position_id = STE_purge_military
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_purge_military
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+	}
+	focus = {
+		id = STE_drill
+		icon = GFX_goal_STE_drill
+		cost = 10
+		relative_position_id = STE_kickstart_conscription
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_kickstart_conscription
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = STE_martial_meritocracy
+		icon = GFX_goal_STE_martial_meritocracy
+		cost = 10
+		relative_position_id = STE_drill
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_drill
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+			add_war_support = 0.1
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = STE_review_economy
+		icon = GFX_goal_STE_review_economy
+		cost = 10
+		relative_position_id = STE_purge_bureaucracy
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_purge_bureaucracy
+		}
+		prerequisite = {
+			focus = STE_prioritize_russian_farmers
+		}
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+	focus = {
+		id = STE_tougher_punishments
+		icon = GFX_goal_STE_tougher_punishments
+		cost = 10
+		relative_position_id = STE_review_economy
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_review_economy
+		}
+		completion_reward = {
+			add_ideas = STE_russian_work_ethic
+		}
+	}
+	focus = {
+		id = STE_invite_investors
+		icon = GFX_goal_STE_invite_investors
+		cost = 10
+		relative_position_id = STE_tougher_punishments
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_tougher_punishments
+		}
+		completion_reward = {
+			add_research_slot = 1
+			RUS = { add_opinion_modifier = { target = STE modifier = medium_increase } }
+			add_opinion_modifier = { target = RUS modifier = medium_increase }
+			SRU = { add_opinion_modifier = { target = STE modifier = medium_increase } }
+			add_opinion_modifier = { target = STE modifier = medium_increase }
+			ENG = { add_opinion_modifier = { target = STE modifier = medium_increase } }
+			add_opinion_modifier = { target = ENG modifier = medium_increase }
+			PRS = { add_opinion_modifier = { target = STE modifier = medium_increase } }
+			add_opinion_modifier = { target = PRS modifier = medium_increase }
+		}
+	}
+	focus = {
+		id = STE_industrialize_dominion
+		icon = GFX_goal_STE_industrialize_dominion
+		cost = 10
+		relative_position_id = STE_invite_investors
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_invite_investors
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_question_democratization
+		icon = GFX_goal_STE_question_democratization
+		cost = 10
+		relative_position_id = STE_prioritize_russian_farmers
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = STE_purge_bureaucracy
+		}
+		prerequisite = {
+			focus = STE_prioritize_russian_farmers
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.15
+			}
+			add_ideas = STE_russian_colonial_regime
+		}
+	}
+	focus = {
+		id = STE_censorship_laws
+		icon = GFX_goal_STE_censorship_laws
+		cost = 10
+		relative_position_id = STE_question_democratization
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_question_democratization
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_russian_colonial_regime
+				add_idea = STE_russian_colonial_regime1
+			}
+		}
+	}
+	focus = {
+		id = STE_uphold_russian_identity
+		icon = GFX_goal_STE_uphold_russian_identity
+		cost = 10
+		relative_position_id = STE_censorship_laws
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_censorship_laws
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.2
+			}
+			swap_ideas = {
+				remove_idea = STE_russian_colonial_regime1
+				add_idea = STE_russian_colonial_regime2
+			}
+		}
+	}
+	focus = {
+		id = STE_no_room_for_natives
+		icon = GFX_goal_STE_no_room_for_natives
+		cost = 10
+		relative_position_id = STE_uphold_russian_identity
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_uphold_russian_identity
+		}
+		completion_reward = {
+			add_manpower = -7720
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.2
+			}
+			swap_ideas = {
+				remove_idea = STE_russian_colonial_regime2
+				add_idea = STE_russian_colonial_regime3
+			}
+		}
+	}
+
+	focus = {
+		id = STE_military_industrial_complex_of_steppes
+		icon = GFX_goal_STE_military_industrial_complex_of_steppes
+		cost = 10
+		relative_position_id = STE_industrialize_dominion
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_martial_meritocracy
+		}
+		prerequisite = {
+			focus = STE_industrialize_dominion
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = STE_steppe_in_russias_image
+		icon = GFX_goal_STE_steppe_in_russias_image
+		cost = 10
+		relative_position_id = STE_industrialize_dominion
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_industrialize_dominion
+		}
+		prerequisite = {
+			focus = STE_no_room_for_natives
+		}
+		completion_reward = {
+			add_political_power = 100
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_look_outside_for_ambitions
+		icon = GFX_goal_STE_look_outside_for_ambitions
+		cost = 10
+		relative_position_id = STE_military_industrial_complex_of_steppes
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_military_industrial_complex_of_steppes
+		}
+		prerequisite = {
+			focus = STE_steppe_in_russias_image
+		}
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = STE_russian_colonial_regime3
+				add_idea = STE_russian_colonial_regime4
+			}
+			set_country_flag = STE_gulidov_decision_unlock
+			custom_effect_tooltip = "STE_GULIDOV_DECISION_UNLOCK_TOOLTIP"
+		}
+	}
+}

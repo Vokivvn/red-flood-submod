@@ -1,0 +1,99 @@
+﻿capital = 613
+
+oob = "KMT_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	gwtank = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+set_convoys = 50
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 2
+	libertarian_marxism = 1
+	revolutionary_anarchism = 0
+	revisionist_socialism = 1
+	social_democratism = 1
+	liberalism = 9
+	conservatism = 15
+	right_authoritarianism = 27
+	despotism = 6
+	reactionism = 35
+	accelerationism = 3
+}
+
+add_ideas = { 
+	CHI_shared_economy
+	KMT_revolutionary_stronghold
+	KMT_fractured_politics
+	KMT_green_gangs
+}
+
+create_country_leader = {
+	name = "Zhang Jingjiang"
+	desc = "POLITICS_JINJIANG_DESC"
+	picture = "Portrait_KMT_Zhang_Jingjiang.dds"
+	expire = "1931.11.12"
+	ideology = authoritarian_democratism
+	traits = {
+		#
+	}
+}
+create_corps_commander = {
+	name = "Chiang Wei-kuo"
+	picture = "Portrait_Chiang_wei_kuo.dds"
+	traits = { politically_connected }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}

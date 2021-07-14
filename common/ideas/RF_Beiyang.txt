@@ -1,0 +1,66 @@
+ideas = {
+	
+	country = {
+		BYJ_egg_dancer = {
+			
+			picture = generic_intel_bonus
+			
+			allowed = {
+				original_tag = BYJ
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				opinion_gain_monthly_factor = 0.5
+			}
+		}
+		
+		BYJ_industrial_investment = {
+			
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				original_tag = BYJ
+			}
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.20
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		BYJ_fengtian_threat = {
+		
+			picture = FRA_scw_intervention_republicans_focus
+
+			allowed = {
+				original_tag = BYJ
+			}
+
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.1
+			}
+		}
+		
+		BYJ_compulsory_education = {
+		
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				original_tag = BYJ
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.05
+				conscription = -0.02
+			}
+		}
+		
+	}
+}

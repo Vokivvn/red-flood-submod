@@ -1,0 +1,286 @@
+#COX_BAITED_PATH
+
+focus_tree = {
+
+	id = USA_Cox_path
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+	default = no
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+	shared_focus = USA_our_direction
+	focus = {
+		id = USA_Cox_presidency
+		icon = GFX_Focus_USA_Cox_Presidency
+		available = {
+		}
+		bypass = {
+		}	
+		x = 8
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = USA_new_day_america
+		icon = GFX_Focus_USA_A_New_America
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = USA_Cox_presidency
+		x = 0
+		y = 1
+		cost = 4
+		prerequisite = { focus = USA_Cox_presidency } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.07
+			}
+		}
+	}
+
+	focus = {
+		id = USA_side_with_unions_cox
+		icon = GFX_Focus_USA_Side_With_The_Unions
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = USA_new_day_america
+		x = -2
+		y = 1
+		cost = 4
+		prerequisite = { focus = USA_new_day_america } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_work_with_farmers_cox
+		icon = GFX_Focus_USA_Work_With_Farmers
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = USA_new_day_america
+		x = 2
+		y = 1
+		cost = 4
+		prerequisite = { focus = USA_new_day_america } 
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+    			add_extra_state_shared_building_slots = 1
+    		}
+			random_owned_controlled_state = {
+    			add_extra_state_shared_building_slots = 1
+    		}
+		}
+	}
+
+	focus = {
+		id = USA_deals_with_moderates_socdem
+		icon = GFX_focus_USA_deals_with_moderates_socdem
+		prerequisite = {
+			focus = USA_side_with_unions_cox
+		}
+		prerequisite = {
+			focus = USA_work_with_farmers_cox
+		}
+		relative_position_id = USA_new_day_america
+		x = 0
+		y = 2
+
+		cost = 4
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_united_coalition_cox
+		icon = GFX_Focus_USA_An_United_Coalition
+		relative_position_id = USA_deals_with_moderates_socdem
+		available = {
+		}
+		bypass = {
+		}	
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_deals_with_moderates_socdem
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			remove_ideas = USA_disjointed_government
+		}
+	}
+
+	focus = {
+		id = USA_end_hunger_cox
+		icon = GFX_Focus_USA_End_Hunger
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = USA_united_coalition_cox
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_united_coalition_cox
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = USA_nomorehunger
+				days = 90
+			}
+		}
+	}
+
+	focus = {
+		id = USA_end_the_dustbowl_cox
+		icon = GFX_Focus_USA_End_The_Dustbowl
+		available = {
+		}
+		bypass = {
+		}
+		relative_position_id = USA_united_coalition_cox
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_united_coalition_cox
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_dustbowl
+				add_idea = USA_dustbowl_improve_1
+			}
+		}
+	}
+
+	focus = {
+		id = USA_end_poverty_in_america_cox
+		icon = GFX_Focus_USA_End_Poverty_In_America
+		available = {
+		}
+		bypass = {
+		}	
+		relative_position_id = USA_united_coalition_cox
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = {
+			focus = USA_end_hunger_cox
+		}
+		prerequisite = {
+			focus = USA_end_the_dustbowl_cox
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		select_effect = {
+			country_event = {
+				id = usa.10
+				days = 7
+			}
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = "USA_troll_tooltip"
+		}
+	}
+}

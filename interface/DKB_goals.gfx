@@ -1,0 +1,242 @@
+spriteTypes = {
+	SpriteType = { 
+		name = "GFX_goal_DKB_krug_gathering" 
+		texturefile = "gfx/interface/goals/DKB/DKB_krug_gathering.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_chernomortsy_victorious" 
+		texturefile = "gfx/interface/goals/DKB/DKB_chernomortsy_victorious.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_kaledin_marches_forward" 
+		texturefile = "gfx/interface/goals/DKB/DKB_kaledin_marches_forward.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_lineytsy_victorious" 
+		texturefile = "gfx/interface/goals/DKB/DKB_lineytsy_victorious.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_death_of_union" 
+		texturefile = "gfx/interface/goals/DKB/DKB_death_of_union.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_gorgulov_at_stage" 
+		texturefile = "gfx/interface/goals/DKB/DKB_gorgulov_at_stage.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_officialize_ukrainian_education" 
+		texturefile = "gfx/interface/goals/DKB/DKB_officialize_ukrainian_education.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_print_hryvnia" 
+		texturefile = "gfx/interface/goals/DKB/DKB_print_hryvnia.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_drift_away_from_russia" 
+		texturefile = "gfx/interface/goals/DKB/DKB_drift_away_from_russia.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_decentralize_military" 
+		texturefile = "gfx/interface/goals/DKB/DKB_decentralize_military.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_require_visa" 
+		texturefile = "gfx/interface/goals/DKB/DKB_require_visa.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_land_of_freedom" 
+		texturefile = "gfx/interface/goals/DKB/DKB_land_of_freedom.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_intensify_reforms" 
+		texturefile = "gfx/interface/goals/DKB/DKB_intensify_reforms.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_free_trade_zone_of_taganrog" 
+		texturefile = "gfx/interface/goals/DKB/DKB_free_trade_zone_of_taganrog.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_expand_donbass_coal_trade" 
+		texturefile = "gfx/interface/goals/DKB/DKB_expand_donbass_coal_trade.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_open_to_europe" 
+		texturefile = "gfx/interface/goals/DKB/DKB_open_to_europe.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_guns_for_caucasian_tatars" 
+		texturefile = "gfx/interface/goals/DKB/DKB_guns_for_caucasian_tatars.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_union_of_all_peoples" 
+		texturefile = "gfx/interface/goals/DKB/DKB_union_of_all_peoples.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_be_wary_of_change" 
+		texturefile = "gfx/interface/goals/DKB/DKB_be_wary_of_change.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_invest_in_all_education" 
+		texturefile = "gfx/interface/goals/DKB/DKB_invest_in_all_education.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_independent_diplomacy" 
+		texturefile = "gfx/interface/goals/DKB/DKB_independent_diplomacy.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_free_trade_zone_of_astrakhan" 
+		texturefile = "gfx/interface/goals/DKB/DKB_free_trade_zone_of_astrakhan.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_expand_factory_tsaritsyn" 
+		texturefile = "gfx/interface/goals/DKB/DKB_expand_factory_tsaritsyn.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_open_to_world" 
+		texturefile = "gfx/interface/goals/DKB/DKB_open_to_world.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_open_to_russia" 
+		texturefile = "gfx/interface/goals/DKB/DKB_open_to_russia.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_move_towards_centralism" 
+		texturefile = "gfx/interface/goals/DKB/DKB_move_towards_centralism.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_officialize_russification" 
+		texturefile = "gfx/interface/goals/DKB/DKB_officialize_russification.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_invite_settlers" 
+		texturefile = "gfx/interface/goals/DKB/DKB_invite_settlers.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_continue_using_ruble" 
+		texturefile = "gfx/interface/goals/DKB/DKB_continue_using_ruble.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_unify_our_troops" 
+		texturefile = "gfx/interface/goals/DKB/DKB_unify_our_troops.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_solve_separatist_problem" 
+		texturefile = "gfx/interface/goals/DKB/DKB_solve_separatist_problem.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_loyal_south_east" 
+		texturefile = "gfx/interface/goals/DKB/DKB_loyal_south_east.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_stay_away_from_drozdovsky" 
+		texturefile = "gfx/interface/goals/DKB/DKB_stay_away_from_drozdovsky.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_denounce_dutov" 
+		texturefile = "gfx/interface/goals/DKB/DKB_denounce_dutov.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_conquer_orenburg" 
+		texturefile = "gfx/interface/goals/DKB/DKB_conquer_orenburg.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_return_to_sich" 
+		texturefile = "gfx/interface/goals/DKB/DKB_return_to_sich.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_join_intermarium" 
+		texturefile = "gfx/interface/goals/DKB/DKB_join_intermarium.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_our_russian_cousins" 
+		texturefile = "gfx/interface/goals/DKB/DKB_our_russian_cousins.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_our_russian_brothers" 
+		texturefile = "gfx/interface/goals/DKB/DKB_our_russian_brothers.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_national_peasant_program" 
+		texturefile = "gfx/interface/goals/DKB/DKB_national_peasant_program.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_no_capitalists" 
+		texturefile = "gfx/interface/goals/DKB/DKB_no_capitalists.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_no_minorities" 
+		texturefile = "gfx/interface/goals/DKB/DKB_no_minorities.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_no_monarchists" 
+		texturefile = "gfx/interface/goals/DKB/DKB_no_monarchists.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_no_communists" 
+		texturefile = "gfx/interface/goals/DKB/DKB_no_communists.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_rebirth_of_great_scythia" 
+		texturefile = "gfx/interface/goals/DKB/DKB_rebirth_of_great_scythia.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_total_state_control" 
+		texturefile = "gfx/interface/goals/DKB/DKB_total_state_control.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_youth_participation" 
+		texturefile = "gfx/interface/goals/DKB/DKB_youth_participation.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_burn_unscythian_literature" 
+		texturefile = "gfx/interface/goals/DKB/DKB_burn_unscythian_literature.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_military_of_scythians" 
+		texturefile = "gfx/interface/goals/DKB/DKB_military_of_scythians.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_green_comissars" 
+		texturefile = "gfx/interface/goals/DKB/DKB_green_comissars.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_metal_horse" 
+		texturefile = "gfx/interface/goals/DKB/DKB_metal_horse.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_violet_will_overthrow_machine" 
+		texturefile = "gfx/interface/goals/DKB/DKB_violet_will_overthrow_machine.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_we_are_scythians_we_are_asians" 
+		texturefile = "gfx/interface/goals/DKB/DKB_we_are_scythians_we_are_asians.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_bashkirs_shouldnt_exist" 
+		texturefile = "gfx/interface/goals/DKB/DKB_bashkirs_shouldnt_exist.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_steppe_isnt_kirgiz" 
+		texturefile = "gfx/interface/goals/DKB/DKB_steppe_isnt_kirgiz.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_end_mongolian_treachery" 
+		texturefile = "gfx/interface/goals/DKB/DKB_end_mongolian_treachery.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_burn_kolchaks_nest" 
+		texturefile = "gfx/interface/goals/DKB/DKB_burn_kolchaks_nest.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_agony_of_intermarium" 
+		texturefile = "gfx/interface/goals/DKB/DKB_agony_of_intermarium.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_we_will_conquer_eurasia" 
+		texturefile = "gfx/interface/goals/DKB/DKB_we_will_conquer_eurasia.tga" 
+	}
+	SpriteType = { 
+		name = "GFX_goal_DKB_and_go_beyond" 
+		texturefile = "gfx/interface/goals/DKB/DKB_and_go_beyond.tga" 
+	}
+}

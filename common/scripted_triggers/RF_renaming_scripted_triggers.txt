@@ -1,0 +1,277 @@
+# renaming events trigger
+is_american_tag = {
+	OR = {
+		tag = USA
+		tag = TEX
+		tag = CAL
+		tag = NEE
+	}
+}
+is_arab_tag = {
+	OR = {
+		tag = LBA
+		tag = EGY
+		tag = SAU
+		tag = YEM
+		tag = OMA
+		tag = JOR
+		tag = SYR
+		tag = IRQ
+		tag = PAL
+	}
+}
+is_brz_portuguese = { # MZB, ANG, CPV, COG not included
+	OR = {
+		tag = POR
+		is_brazilian_tag = yes
+	}
+}
+is_brazilian_tag = {
+	OR = {
+		tag = BRA
+		tag = BRR
+		tag = MOG
+		tag = NEU
+		tag = BIH
+		tag = ASS
+	}
+}
+is_han_chinese_tag = {
+	OR = {
+		tag = MAN
+		tag = BYJ
+		tag = SHA
+		tag = KMT
+		tag = FJN
+		tag = GDP
+		tag = XIA
+		tag = YUN
+		tag = XSM
+		tag = TAN
+		tag = MON
+		tag = MNG
+	}
+}
+is_non_han_chinese_tag = {
+	OR = {
+		tag = TAN
+		tag = ETS
+		tag = TIB
+		tag = SIK
+	}
+}
+is_chinese_tag = {
+	OR = {
+		is_han_chinese_tag = yes
+		is_non_han_chinese_tag = yes
+	}
+}
+is_dutch_tag = {
+	OR = {
+		tag = HOL
+		tag = FLN
+		tag = DEI
+		tag = FIR
+	}
+}
+is_english_tag = {
+	OR = {
+		is_american_tag = yes
+		tag = ENG
+		tag = NFL
+		#tag = WAL
+		tag = SCO
+		tag = IRE
+		tag = CAN
+		tag = NZL
+		tag = AST
+	}
+}
+is_catholic_tag = {
+	OR = {
+		is_italian_tag = yes
+		is_polish_tag = yes
+		is_spanish_speaking_tag = yes
+		is_brz_portuguese = yes
+		is_french_tag = yes
+		tag = ANG
+		tag = AUS
+		tag = BAV
+		tag = BEL
+		tag = COG
+		tag = CRO
+		tag = CZE
+		tag = FLN
+		tag = HAI
+		tag = HUN
+		tag = IRE
+		tag = LIT
+		tag = LUX
+		tag = MZB
+		tag = PHI
+		tag = QUE
+		tag = SLO
+		tag = RHI
+		tag = WLL
+	}
+}
+is_french_tag = {
+	OR = {
+		tag = FRA
+		tag = CYN
+		tag = LOR
+	}
+}
+is_french_africa_tag = {
+	OR = {
+		tag = NGR
+		tag = MRT
+		tag = SEN
+		tag = WAD
+	}
+}
+is_french_speaking_tag = {
+	OR = {
+		is_french_tag = YES
+		is_french_africa_tag = yes
+		tag = QUE
+		tag = WLL
+		tag = HAI
+	}
+}
+is_german_tag = {
+	OR = {
+		tag = GER
+		tag = AUS
+		tag = RHI
+		tag = PRS
+		tag = PRR
+		tag = BAV
+		tag = SOR
+	}
+}
+is_germany_or_splinter_tag = {
+	OR = {
+		tag = GER
+		tag = RHI
+		tag = PRS
+		tag = PRR
+		tag = BAV
+		tag = SOR
+	}
+}
+is_italian_tag = {
+	OR = {
+		tag = ITA
+	}
+}
+is_polish_tag = {
+	OR = {
+		tag = POL
+	}
+}
+is_russian_tag = {
+	OR = {
+		tag = RUS
+		tag = SRU
+		tag = WRU
+		tag = STE
+		tag = SIB
+		tag = KCK
+		tag = ORE
+		tag = ZHR
+		tag = DKB
+	}
+}
+is_south_slav_tag = {
+	OR = {
+		tag = SER
+		tag = CRO
+		tag = BOS
+		tag = MNT
+		tag = MAC
+	}
+}
+is_turkic_tag = {
+	OR = {
+		tag = TUR
+		tag = AZR
+		tag = TRK
+		tag = TAN
+		tag = SIK
+	}
+}
+is_spanish_speaking_tag = {
+	OR = {
+		is_central_american_tag = yes
+		is_spanish_tag = yes
+		is_spanish_south_american_tag = yes
+		tag = MEX
+		tag = CUB
+		tag = DOM
+		tag = PAN
+	}
+}
+is_central_american_tag = {
+	OR = {
+		tag = COS
+		tag = NIC
+		tag = HON
+		tag = ELS
+		tag = GUA
+	}
+}
+is_spanish_tag = {
+	OR = {
+		tag = SPR
+		tag = SPA
+		tag = CNT
+		tag = FAL
+	}
+}
+is_spanish_south_american_tag = {
+	OR = {
+		tag = ARG
+		tag = BOL
+		tag = CHL
+		tag = COL
+		tag = ECU
+		tag = PAR
+		tag = PRU
+		tag = URG
+		tag = VEN
+	}
+}
+is_indian_tag = {
+	OR = {
+		tag = ARY
+		tag = DEH
+		tag = IND
+		tag = UPI
+		tag = ASM
+		tag = TRA
+		tag = MYS
+		tag = CEY
+	}
+}
+is_yiddish_tag = { #has a large yiddish population
+	OR = {
+		tag = RUS
+		tag = SIB
+		tag = POL
+		tag = LIT
+		tag = LAT
+		tag = BAT
+		tag = BLR
+		tag = UKR
+		tag = GAL
+		tag = HUN
+		tag = CZE
+		tag = SLO
+		tag = GER
+		tag = PRS
+		tag = ROM
+		tag = TRS
+	}
+}
+

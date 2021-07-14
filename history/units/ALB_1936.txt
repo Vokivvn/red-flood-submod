@@ -1,0 +1,56 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = DEN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Motorized Division"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 
+	}
+}
+units = {
+	division = {
+		division_name = "Tirana Guard"
+		}
+		location = 9914
+		division_template = "Infantry Division"
+		start_experience_factor = 0.50
+	}
+	division = {
+		division_name = "Bunker Busters"
+		}
+		location = 3896
+		division_template = "Infantry Division"
+		start_experience_factor = 0.20
+	}
+}

@@ -1,0 +1,284 @@
+﻿division_template = {
+	name = "Red Guard"
+	division_names_group = JAP_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Mounted Police Defectors" 				# Cavalry
+	division_names_group = JAP_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Red Sailors" 				# Marines
+	division_names_group = JAP_INF_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+	}
+}
+units = {
+	division = {
+		location = 9998 #Yokohama
+		name = "Yokosuka Sailors"
+		division_template = "Red Sailors"
+		start_experience_factor = 0.20
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1182	#tokyo
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1182 #tokyo
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 10125 #nagoya
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 7072 #Osaka
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 11949 #Kagoshima
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1092 #Hirsoshima
+		division_template = "Mounted Police Defectors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 1092 #Hirsoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 11908 #maebashi
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7087 #shizuoka
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10125 #nagoya
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7087 #shizuoka
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 11908 #maebashi
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7072 #Osaka
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4102	#Kagoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4102 #Kagoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12032 #Kagoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9998 #Yokohama
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182	#tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182 #tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182 #tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182 #tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182 tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1182 #tokyo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 6994 #aomori
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1092 #Hirsoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9859 #aomori-port
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1092 #Hirsoshima
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12421 #ashigawa
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10444 #sapporo
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12421 #ashigawa
+		division_template = "Red Guard"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12421 #ashigawa
+		name = "Aonmori Sailors"
+		division_template = "Red Sailors"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 10444 #sapporo
+		name = "Sapporo Sailors"
+		division_template = "Red Sailors"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 7072 #Osaka
+		name = "Osaka Sailors"
+		division_template = "Red Sailors"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1182 #tokyo
+		name = "Tokyo Sailors"
+		division_template = "Red Sailors"
+		start_experience_factor = 0.25
+		start_equipment_factor = 0.8
+	}
+}

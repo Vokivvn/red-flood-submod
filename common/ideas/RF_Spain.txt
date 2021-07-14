@@ -1,0 +1,65 @@
+ideas = {
+	
+	country = {
+		
+		SPR_broken_nation = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.25 
+			}
+		}
+		
+	    SPR_london_crash = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.25
+			}
+		}
+	    SPR_overambitious_generals = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.3
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+		}
+		
+	    SPR_moroccon_sinkhole = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			modifier = {
+				stability_factor = -0.25
+				production_speed_infrastructure_factor = -0.2
+			}
+		}
+		
+		SPR_legacy_34 = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = SPR
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+	}
+}

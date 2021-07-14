@@ -1,0 +1,29 @@
+state={
+	id=310
+	name="STATE_310"
+	manpower = 54312
+	resources={
+		aluminium=10
+		steel=6
+	}
+
+	state_category = pastoral
+
+	history={
+		owner = CYN
+		buildings = {
+			infrastructure = 4
+			12885 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			12885 15 
+		}
+		add_core_of = CYN
+	}
+
+	provinces={
+		4934 12885 
+	}
+}

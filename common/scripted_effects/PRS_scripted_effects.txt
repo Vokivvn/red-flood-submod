@@ -1,0 +1,31 @@
+PRS_usurper_war = {
+	every_state = {
+		limit = {
+			is_core_of = PRS
+		}
+		add_core_of = PRR
+	}
+	PRR = {
+		set_state_owner = 5
+		set_state_controller = 5
+		inherit_technology = PRS
+		load_oob = "PRR_usurper_war"
+		declare_war_on = {
+			target = PRS
+			type = annex_everything
+		}
+	}
+	
+}
+PRR_victory = {
+	PRS = {
+		annex_country = {
+			target = PRR
+			transfer_troops = yes
+		}
+	}
+	PRS = {
+		change_tag_from = PRR
+	}
+}
+	

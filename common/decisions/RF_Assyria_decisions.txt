@@ -1,0 +1,50 @@
+ASY_return_to_nineveh = {
+	ASY_retake_mosul = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALJ
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ASY_adobt_greater_assyria_plan
+				has_completed_focus = ASY_return_that_is_ours
+			}
+			ALJ = {
+				exists = yes
+				has_full_control_of_state = 807
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ASY_retake_erbil = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ASY_adobt_greater_assyria_plan
+				has_completed_focus = ASY_return_that_is_ours
+			}
+			KUR = {
+				exists = yes
+				has_full_control_of_state = 1051
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

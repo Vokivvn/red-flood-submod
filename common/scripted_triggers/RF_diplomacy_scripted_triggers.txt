@@ -1,0 +1,32 @@
+
+DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_idea = RUS_warlord_indifference
+		}
+		custom_trigger_tooltip = {
+			tooltip = russian_warlord_cannot_join_ally_war
+			FROM = {
+				NOT = {
+					tag = RUS
+				}
+			}
+		}
+	}
+}
+
+DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			tag = RUS
+		}
+		custom_trigger_tooltip = {
+			tooltip = russian_warlord_cannot_call_ally_war
+			FROM = {
+				NOT = {
+					has_idea = RUS_warlord_indifference
+				}
+			}
+		}
+	
+}

@@ -1,0 +1,270 @@
+ideas = {
+	country = {
+		
+		MON_humiliation = {
+			picture = MON_humiliation
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				stability_factor = -0.10
+				trade_opinion_factor = -0.25
+				research_speed_factor = -0.10
+				political_power_factor = -0.25
+			}
+		}
+		
+		MON_recordcorrected = {
+			picture = chi_chinese_unity
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				stability_factor = 0.10
+				trade_opinion_factor = 0.25
+				research_speed_factor = 0.10
+				political_power_factor = 0.25
+			}
+		}
+		
+		MON_brokenarmy = {
+			picture = generic_army_problems
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				conscription_factor = -0.25
+				war_support_factor = -0.2
+				army_org_factor = -0.15
+				generate_wargoal_tension = 0.90
+				foreign_minister_cost_factor = 0.25
+				economy_minister_cost_factor = 0.25
+				security_minister_cost_factor = 0.25
+				head_of_intel_cost_factor = 0.25
+			}
+		}
+		
+		MON_brokenarmy2 = {
+			picture = generic_army_problems
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				conscription_factor = -0.15
+				war_support_factor = -0.1
+				army_org_factor = -0.1
+				foreign_minister_cost_factor = 0.15
+				economy_minister_cost_factor = 0.15
+				security_minister_cost_factor = 0.15
+				head_of_intel_cost_factor = 0.15
+			}
+		}
+		
+		MON_newarmy = {
+			picture = infantry_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				conscription_factor = 0.25
+				war_support_factor = 0.2
+				army_org_factor = 0.15
+				foreign_minister_cost_factor = -0.25
+				economy_minister_cost_factor = -0.25
+				security_minister_cost_factor = -0.25
+				head_of_intel_cost_factor = -0.25
+			}
+		}
+
+		MON_apolitical_officers = {
+			picture = generic_army_war_college
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				chief_of_staff_cost_factor = -0.15
+				chief_of_army_cost_factor = -0.15
+				chief_of_air_force_cost_factor = -0.15
+				chief_of_navy_cost_factor = -0.15
+			}
+		}
+
+
+		MON_nomadshock = {
+			picture = ast_volunteer_defence_corps
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				offence = 0.10
+				army_morale_factor = 0.05
+			}
+		}
+		
+		MON_agrarianeconomy = {
+			picture = generic_agrarian_society
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor  = -0.10
+			}
+		}
+		
+		MON_agrarianreform = {
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				stability_factor = 0.2
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor  = 0.10
+			}
+		}
+		
+		MON_rapidindustrialisation = {
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = -0.40
+				production_factory_max_efficiency_factor = 0.20
+				production_speed_buildings_factor  = 0.25
+			}
+		}
+		
+		MON_progressiveindustry = {
+			picture = generic_local_self_management
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				research_speed_factor = 0.07
+				stability_factor = -0.15
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor  = 0.10
+			}
+		}
+		
+		MON_anhuirevival = {
+			picture = generic_intel_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				research_speed_factor = 0.12
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		MON_militarygovt = {
+			picture = general_staff
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+				has_government = right_authoritarianism
+			}
+			modifier = {
+				conscription_factor = 0.2
+				mobilization_speed = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.3
+				surrender_limit = 0.05
+			}
+		}
+		
+		MON_empire = {
+			picture = FRA_national_mobilization_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+				has_government = despotism
+			}
+			modifier = {
+				conscription_factor = 0.15
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				surrender_limit = -0.05
+			}
+		}
+		
+		MON_democracy = {
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+				has_government = conservatism
+			}
+			modifier = {
+				conscription_factor = -0.1
+				mobilization_speed = -0.1
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.1
+				surrender_limit = 0.05
+			}
+		}
+		
+		MON_yuanshikai = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		MON_acespades = {
+			picture = air_support_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				experience_gain_air_factor = 0.1
+				air_accidents_factor = -0.05
+			}
+		}
+		
+		MON_acehearts = {
+			picture = combined_bomber_offensive
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				air_ace_generation_chance_factor = 0.2
+				air_night_penalty = -0.15
+			}
+		}
+		
+		MON_conscription = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MON
+			}
+			modifier = {
+				conscription = 0.01
+			}
+		}
+	}
+}

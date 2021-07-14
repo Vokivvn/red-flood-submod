@@ -1,0 +1,30 @@
+
+state={
+	id=5
+	name="STATE_5"
+	manpower = 3988108
+	state_category = large_city
+
+	history={
+		owner = PRS
+		victory_points = {
+			3380 2 
+		}
+
+
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+
+
+			air_base = 2
+		}
+		add_core_of = GER
+		add_core_of = PRS
+
+	}
+
+	provinces={
+		266 3351 6402 9327 9398 11245 3380 9346 6375 9372 11386
+	}
+}

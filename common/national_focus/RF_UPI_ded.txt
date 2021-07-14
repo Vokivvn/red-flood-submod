@@ -1,0 +1,347 @@
+focus_tree = {
+	id = RF_churchill_election
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = UPI
+		}
+	}
+	continuous_focus_position = { x = 100 y = 1200 }
+	
+	default = no
+
+	focus = {
+		id = UPI_old_bastard
+		icon = GFX_focus_UPI_aftermath
+		cost = 5
+		x = 8
+		y = 0
+		completion_reward = {
+			add_political_power = -200
+		}
+	}
+	focus = {
+		id = UPI_rose_india
+		icon = GFX_focus_UPI_deva_saves_the_day
+		cost = 5
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = UPI_old_bastard
+		}
+		ai_will_do = {
+			factor = 2.5
+		}
+		mutually_exclusive = {
+			focus = UPI_aryavarta
+			focus = UPI_personality_cult
+		}
+		available = {
+			OR = {
+				has_country_flag = UPI_thechaos
+				has_country_leader = {
+				    name = "Acharya Narendra Deva"
+				    ruling_only = yes
+				}
+			}
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = social_democratism
+			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Acharya Narendra Deva"
+					#desc = ""
+					picture = "Portrait_UPI_Narendra_Deva.tga"
+					expire = "1965.1.1"
+					ideology = left_nationalism
+					traits = {
+						
+					}
+				}
+			}
+			add_stability = 0.15
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.1
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = UPI_end_chaos
+		icon = GFX_focus_UPI_end_chaos
+		cost = 3
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = UPI_rose_india
+		}
+		completion_reward = {
+			BIH = {
+				remove_opinion_modifier = {
+				    target = UPI
+				    modifier = large_decrease
+				}
+			}
+			if = {
+				limit = {
+					has_idea = UPI_chaos_idea
+				}
+				remove_ideas = UPI_chaos_idea
+			}
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = UPI_plans_motion
+		icon = GFX_focus_UPI_plans_motion
+		cost = 1
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = UPI_end_chaos
+		}
+		completion_reward = {
+			add_political_power = 50
+			country_event = {
+				id = UPI.300
+			}
+		}
+	}
+	focus = {
+		id = UPI_merge_bihar
+		icon = GFX_focus_UPI_merge_bihar
+		cost = 2
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = UPI_plans_motion
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.301
+			}
+			hidden_effect = {
+				BIH = {
+					country_event = {
+						id = UPI.301
+					}
+				}
+			}
+			if = {
+				limit = {
+					BIH = {
+						exists = no
+					}
+					UPI = {
+						has_full_control_of_state = 435
+						has_full_control_of_state = 431
+					}
+				}
+				BIH = {
+					transfer_state = 435
+					transfer_state = 431
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_closing_talks
+		icon = GFX_focus_UPI_closing_talks
+		cost = 2
+		x = 4
+		y = 5
+		prerequisite = {
+			focus = UPI_merge_bihar
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.302
+			}
+		}
+	}
+	focus = {
+		id = UPI_aryavarta
+		icon = GFX_focus_UPI_aryavarta
+		cost = 5
+		x = 8
+		y = 1
+		prerequisite = {
+			focus = UPI_old_bastard
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		mutually_exclusive = {
+			focus = UPI_rose_india
+			focus = UPI_personality_cult
+		}
+		available = {
+			has_country_flag = UPI_thechaos
+			ARY = {
+				exists = yes
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.303
+			}
+			ARY = {
+				add_state_core = 438
+			}
+			hidden_effect = {
+				ARY = {
+					country_event = {
+						id = UPI.303
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_bring_peace
+		icon = GFX_focus_UPI_bring_peace
+		cost = 3
+		x = 8
+		y = 2
+		prerequisite = {
+			focus = UPI_aryavarta
+		}
+		completion_reward = {
+			remove_ideas = UPI_chaos_idea
+		}
+	}
+	focus = {
+		id = UPI_provisional_government
+		icon = GFX_focus_UPI_provisional_government
+		cost = 2
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = UPI_bring_peace
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.304
+			}
+		}
+	}
+	focus = {
+		id = UPI_personality_cult
+		icon = GFX_focus_UPI_personality_cult
+		cost = 2
+		x = 12
+		y = 1
+		prerequisite = {
+			focus = UPI_old_bastard
+		}
+		ai_will_do = {
+			factor = 3.5
+		}
+		mutually_exclusive = {
+			focus = UPI_rose_india
+			focus = UPI_aryavarta
+		}
+		available = {
+			OR = {
+				has_country_flag = UPI_thechaos
+				has_country_flag = UPI_kalicoup
+			}
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = reactionism
+			}
+			hidden_effect = {
+				remove_unit_leader = 8999
+				remove_unit_leader = 8998
+				remove_unit_leader = 8997
+				remove_unit_leader = 8996
+				remove_unit_leader = 8995
+			}
+		}
+	}
+	focus = {
+		id = UPI_peace_ultraviolence
+		icon = GFX_focus_UPI_peace_ultraviolence
+		cost = 3
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = UPI_personality_cult
+		}
+		completion_reward = {
+			remove_ideas = UPI_chaos_idea
+			add_manpower = -100000
+			set_stability = 0.1
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.3
+			}
+		}
+	}
+	focus = {
+		id = UPI_prepare_rituals
+		icon = GFX_focus_UPI_prepare_rituals
+		cost = 1
+		x = 12
+		y = 3
+		prerequisite = {
+			focus = UPI_peace_ultraviolence
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.305
+			}
+			hidden_effect = {
+				load_oob = UPI_KAL
+				remove_ideas = {
+					UPI_shadow_gallipoli
+					UPI_alone_unsupplied_cutoff
+				}
+				add_ideas = {
+					UPI_Asit_Mukheri_hog
+					UPI_Mahanambrata_Brahmachari
+					UPI_Savitri_Devi_eco
+					UPI_Bangalore_Venkata_Raman
+					UPI_Savitri_Devi_ntl
+					UPI_wargoal_block
+				}
+				create_corps_commander = {
+					name = "Guizara Singh"
+					picture = "Portrait_UPI_Guizara_Singh.tga"
+					traits = { inflexible_strategist }
+					skill = 3
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Gurbaksh Singh Dhillon"
+					picture = "Portrait_UPI_Gurbaksh_Singh_Dhillon.tga"
+					traits = { trait_cautious }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Prem Sahgal"
+					picture = "Portrait_UPI_Prem_Sahgal.tga"
+					traits = { infantry_officer }
+					skill = 2
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+			}
+		}
+	}
+}

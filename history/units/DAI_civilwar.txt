@@ -1,0 +1,28 @@
+division_template = {
+	name = "Rebellion Militia"  		# Cavalry Division
+	division_names_group = VIN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "1 Rebellion Militia"
+		location = 10075
+		division_template = "Rebellion Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+	division = {
+		name = "2 Rebellion Militia"
+		location = 4075
+		division_template = "Rebellion Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+	}
+}

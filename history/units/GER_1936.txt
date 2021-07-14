@@ -1,0 +1,330 @@
+﻿division_template = {
+	name = "Volksschützendivision" 				# Infantry
+	division_names_group = GER_ALTINF_02
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		artillery_brigade = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Motorisierte Volksschützendivision" 				# Motorized
+	division_names_group = GER_MOT_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Berittene Volksschützendivision" 				# Cavalry
+	division_names_group = GER_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+	}
+}
+division_template = {
+	name = "Panzerdivision" 				# Light Tank
+	division_names_group = GER_Arm_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+	}
+}
+division_template = {
+	name = "Volksmarinedivision" 				# Marines
+	division_names_group = GER_INF_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Proletarische Hundertschaft" 				# Militia
+	division_names_group = GER_MIL_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	    infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Gebirgsjägerbattalion"		#Mountaineer
+	division_names_group = GER_Mnt_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Sicherheitswehr" 				# Garrison
+	division_names_group = GER_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	    infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }   
+	}
+}
+division_template = {
+	name = "Rote Garde" 				# Guard
+	division_names_group = GER_ALTINF_03
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	    infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		artillery_brigade = { x = 1 y = 2 }
+		artillery_brigade = { x = 1 y = 3 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	#Western Borders 12 Infantry, 2 Cavalry
+	division = {
+		division_name = {
+		}
+		location = 9559
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 11502
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 3629
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 678
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 9575
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 11435
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 11470
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 3547
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 9522
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 9522
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 9503
+		division_template = "Berittene Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 587
+		division_template = "Berittene Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	#Eastern Border 13 Infantry, 1 Cavalry
+	division = {
+		division_name = {
+		}
+		location = 9457
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 9511
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 6462
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 3283
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	#Austrian Mountaineer
+	division = {
+		division_name = {
+		}
+		location = 692
+		division_template = "Gebirgsjägerbattalion"
+		start_experience_factor = 0.20
+	}
+	#West Motorized 
+	division = {
+		division_name = {
+		}
+		location = 6488
+		division_template = "Motorisierte Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = {
+		}
+		location = 6488
+		division_template = "Motorisierte Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	#East Motorized
+	division = {
+		division_name = {
+		}
+		location = 6521
+		division_template = "Motorisierte Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	#Special Divisons
+	division = {
+		name = "Rote Sturm-Garde"
+		location = 6521
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "1st Panzer Divisions"
+		location = 11653 
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "3rd Panzer Divisions"
+		location = 563 
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "2nd Panzer Divisions"
+		location = 11346 
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "4th Panzer Divisions"
+		location = 9281 
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "5th Panzer Divisions"
+		location = 11366
+		division_template = "Panzerdivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "Volksmarinedivision Kiel"
+		location = 6389 #Kiel
+		division_template = "Volksmarinedivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "Rote Garde Division 'Karl Liebknecht'"
+		location = 6521 #Berlin
+		division_template = "Rote Garde"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "Rote Ruhr-Division Essen"
+		location = 6469 #Essen
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "Rote Ruhr-Division Wessel"
+		location = 3512 #Wessel
+		division_template = "Volksschützendivision"
+		start_experience_factor = 0.20
+	}
+}

@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_steppe_factionalism_tab_background"
+		texturefile = "gfx/interface/tiles/tiled_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_kornilovs_division_icon"
+		texturefile = "gfx/interface/decisions/icons/STE_division_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_ukrainian_council_icon"
+		texturefile = "gfx/interface/decisions/icons/STE_ukrainian_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_alash_orda_icon"
+		texturefile = "gfx/interface/decisions/icons/STE_alash_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_cossacks_icon"
+		texturefile = "gfx/interface/decisions/icons/STE_cossacks_faction_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_nomads_icon"
+		texturefile = "gfx/interface/decisions/icons/STE_nomads_faction_icon.tga"
+	}
+}

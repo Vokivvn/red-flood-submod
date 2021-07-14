@@ -1,0 +1,55 @@
+capital = 109
+
+#oob = #
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 40
+	libertarian_marxism = 2
+	revolutionary_anarchism = 3
+	revisionist_socialism = 2
+	social_democratism = 10
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 3
+	despotism = 5
+	reactionism = 7
+	accelerationism = 8
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Ante Pavelić"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Ante_Pavelic.tga"
+	expire = "1965.1.1"
+	ideology = national_vanguardism
+	traits = {
+		#popular_figurehead
+	}
+} 

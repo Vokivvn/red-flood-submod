@@ -1,0 +1,1200 @@
+ideas = {
+	
+	country = {
+		BRR_democracy = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				army_org_factor = 0.05
+				social_democratism_drift = 0.01
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+		}
+
+		BRR_civilianeconomy = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_infrastructure_factor = 0.20
+				production_speed_naval_base_factor = 0.30
+			}
+		}
+	
+		BRR_1889 = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				stability_weekly = 0.01
+				industrial_capacity_factory	= 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+			
+		BRR_o_jeitinho = {
+			picture = ROM_king_carol_emptied_accounts
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_weekly = 0.01
+				surrender_limit = 0.03
+			}
+		}
+	
+		BRR_slash_regulations = {
+			picture = chi_hyper_inflation5
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_weekly = -0.01
+				production_factory_start_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.10
+				production_speed_buildings_factor = 0.15
+			}
+		}
+	
+		BRR_political_army = {
+			picture = generic_secret_police
+			modifier = {
+				army_attack_factor = 0.10
+				army_core_defence_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		
+		BRR_embezzlement = {
+			picture = generic_political_support
+			modifier = {
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.15
+			}
+		}
+		
+		BRR_anti_corruption = {
+			picture = raj_indian_gentlemen_officers
+			modifier = {
+				consumer_goods_factor = -0.05
+				research_speed_factor = 0.15
+			}
+		}
+		
+		BRR_protect_farmers = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		BRR_officers_purged = {
+			picture = officers_purged
+			modifier = {
+				army_morale_factor = -0.20
+				army_infantry_attack_factor = -0.15
+				army_attack_factor = -0.10
+			}
+		}
+		
+		BRR_communist_insurgency = {
+			picture = officers_purged
+			modifier = {
+				army_morale_factor = -0.20
+				army_infantry_attack_factor = -0.15
+				army_attack_factor = -0.10
+				attrition = 0.25
+				heat_attrition_factor = 0.15
+				out_of_supply_factor = -0.20
+				encryption_factor = -0.25
+			}
+		}
+		
+		BRR_communist_insurgency_1 = {
+			picture = officers_purged
+			modifier = {
+				army_morale_factor = -0.01
+				army_infantry_attack_factor = -0.01
+				army_attack_factor = -0.01
+				attrition = 0.05
+				heat_attrition_factor = 0.01
+				out_of_supply_factor = -0.05
+				encryption_factor = -0.05
+			}
+		}
+
+		BRR_neutralindependentstable = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				stability_weekly = 0.01
+				war_support_weekly = -0.05
+			}
+		}
+		
+		BRR_SUS = {
+			picture = neutrality_idea
+			modifier = {
+				stability_weekly = 0.01
+				consumer_goods_factor = 0.10
+				experience_loss_factor = -0.10
+			}
+			equipment_bonus = {
+				infantry = {
+					casualty_trickleback = 0.40
+				}
+			}
+		}
+		
+		BRR_ANDR = {
+			picture = neutrality_idea
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.20
+			}
+		}
+		
+		BRR_autonomism = {
+			picture = air_support_focus
+			modifier = {
+				stability_weekly = -0.001
+				army_org_factor = 0.15
+				attrition = -0.05
+			}
+		}
+		
+		BRR_cosmetic_labor_laws = {
+			picture = generic_disjointed_gov
+			modifier = {
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+			}
+		}
+		BRR_politicalcomissars = {
+			picture = german_advisors
+			modifier = {
+				war_support_weekly = 0.01
+				root_out_resistance_effectiveness_factor = 0.25
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				reactionism_drift = 0.01
+			}
+		}
+
+		BRR_distributism = {
+			picture = neutrality_idea
+			modifier = {
+				reactionism_drift = 0.01
+				consumer_goods_factor = 0.05
+				stability_weekly = 0.01
+				production_factory_efficiency_gain_factor = 0.07
+			}
+		}
+		
+		BRR_independence = {
+			picture = generic_victors_of_ww1
+			modifier = {
+				reactionism_drift = 0.01
+				training_time_army_factor = -0.10
+				encryption_factor = 0.5
+			}
+		}
+
+		BRR_primitiveexpression = {
+			picture = jap_supremacy_of_will
+			modifier = {
+				accelerationism_drift = 0.05
+				max_dig_in = 0.5
+				army_morale_factor = 0.25
+				research_speed_factor = 0.03
+				local_resources_factor = 0.6
+			}
+		}
+
+		BRR_minorities = {
+			picture = prc_low_popular_support3
+			modifier = {
+				conscription = 0.07
+				training_time_army_factor = 0.05
+				research_speed_factor = -0.03
+			}
+		}
+		
+		BRR_chaoticmind = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				accelerationism_drift = 0.10
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				attrition = -0.25
+				army_speed_factor = 0.15
+			}
+		}
+
+		BRR_migrations = {
+			picture = prc_low_popular_support2
+			modifier = {
+				monthly_population = 1.5
+				stability_factor = -0.15
+			}
+		}
+	
+		BRR_white_migration = {
+			picture = prc_low_popular_support3
+			modifier = {
+				monthly_population = 2
+				stability_factor = -0.10
+			}
+		}
+	
+		BRR_irrationalism = {
+			picture = jap_supremacy_of_technology
+			modifier = {
+				research_speed_factor = -0.05
+				stability_weekly = 0.01
+			}
+		}
+		
+		BRR_anti_lusotropicalism = {
+			picture = jap_supremacy_of_technology
+			modifier = {
+				encryption_factor = 0.8
+				decryption_factor = 0.4
+				stability_weekly = -0.01
+				war_support_weekly = 0.01
+				accelerationism_drift = 0.02
+			}
+		}
+	
+		BRR_full_locomotives_idea = {
+			picture = generic_build_infrastructure
+			modifier = {
+				encryption_factor = 0.8
+				decryption_factor = 0.4
+			}
+		}
+
+		BRR_creativeerror = {
+			picture = chi_incompetent_officers
+			modifier = {
+				research_speed_factor = -0.03
+				accelerationism_drift = -0.01
+			}
+		}
+		BRR_chaotic_mind = {
+			#picture = 		
+		}
+		
+		BRR_agreatmixture = {
+			picture = chi_war_of_resistance
+			modifier = {
+				decryption_factor = 1
+				stability_weekly = 0.03
+			}
+		}
+
+		BRR_collectivedream = {
+			picture = ROM_king_carol_ii_hedonist
+			modifier = {
+				surrender_limit = 0.15
+				stability_weekly = 0.01
+				production_factory_efficiency_gain_factor = 0.07
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = -0.03
+				accelerationism_drift = -0.01
+				#accelerationism_drift = 0.10
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				attrition = -0.30
+				army_speed_factor = 0.20
+			}
+		}
+		
+		BRR_statecatholicism = {
+			picture = ENG_the_war_to_end_all_wars
+			modifier = {
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+			}
+		}
+		
+		BRR_upper_class = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				stability_weekly = 0.01
+				encryption_factor = 1
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		BRR_super_democracy = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				social_democratism_drift = 0.01
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+			}
+		}
+		
+		BRR_vargascult = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				social_democratism_drift = 0.05
+				war_support_weekly = 0.05
+			}
+		}
+		
+		BRR_vargascult_1 = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				social_democratism_drift = 0.10
+				war_support_weekly = 0.10
+				army_org_factor = 0.15
+			}
+		}
+	}
+	
+	#ministers
+	head_of_government = {
+		#Reactionary
+
+		BRR_floresdacuhna_hog = {
+			picture = GFX_idea_BRR_floresdacuhna_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			available = {
+				has_government = reactionism
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+				}
+			}
+		}
+		BRR_bertoldoklinger_hog = {
+			picture = GFX_idea_BRR_bertoldoklinger_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = despotism
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+		}
+		BRR_joseantonionetto_hog = {
+			picture = GFX_idea_BRR_joseantonionetto_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_smiling_oilman
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+
+		#Democratic
+
+		BRR_osvaldoaranha_hog = {
+			picture = GFX_idea_BRR_osvaldoaranha_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		BRR_assisbrasil_hog = {
+			picture = GFX_idea_BRR_assisbrasil_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			available = {
+				has_government = liberalism
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+		}
+		BRR_neururamos_hog = {
+			picture = GFX_idea_BRR_neururamos_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = social_democratism
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+		}
+
+		#Fast
+
+		BRR_anitamalfatti_hog = {
+			picture = GFX_idea_BRR_anitamalfatti_hog
+			allowed = {
+				original_tag = BRR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+
+	}
+	economy_minister = {
+
+		#Reactionary
+
+		BRR_waldirbouhid_eco = {
+			picture = GFX_idea_BRR_waldirbouhid_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			available = {
+				has_government = reactionism
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+				}
+			}
+		}
+		BRR_prestes_eco = {
+			picture = GFX_idea_BRR_prestes_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_matos_eco = {
+			picture = GFX_idea_BRR_matos_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			available = {
+				has_government = despotism
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+
+		#Democratic
+
+		BRR_vargas_eco = {
+			picture = GFX_idea_BRR_vargas_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+		}
+		BRR_teixeira_eco = {
+			picture = GFX_idea_BRR_teixeira_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_oil_baron
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+		}
+		BRR_quadros_eco = {
+			picture = GFX_idea_BRR_quadros_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+		}
+
+		#Fast
+
+		BRR_oswalddeandrade_eco = {
+			picture = GFX_idea_BRR_oswalddeandrade_eco
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				economy_minister
+				eco_visionary_of_excess
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+	}
+	foreign_minister = {
+		BRR_lauro_sodre_fore = {
+			picture = GFX_idea_BRR_lauro_sodre_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			available = {
+				has_government = reactionism
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+				}
+			}
+		}
+		BRR_barata_fore = {
+			picture = GFX_idea_BRR_barata_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				has_government = despotism
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+		}
+		BRR_soares_fore = {
+			picture = GFX_idea_BRR_soares_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_caiado_fore = {
+			picture = GFX_idea_BRR_caiado_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		BRR_luis_filho_fore = {
+			picture = GFX_idea_BRR_luis_filho_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				has_government = liberalism
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+		}
+		BRR_maia_fore = {
+			picture = GFX_idea_BRR_maia_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				has_government = social_democratism
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+		}
+		BRR_amaral_fore = {
+			picture = GFX_idea_BRR_amaral_fore
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+	}
+	security_minister = {
+		BRR_neiva_inter = {
+			picture = GFX_idea_BRR_neiva_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_government = reactionism
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+				}
+			}
+		}
+		BRR_lauro_sodre_inter = {
+			picture = GFX_idea_BRR_lauro_sodre_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_government = despotism
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+		}
+		BRR_luis_filho_inter = {
+			picture = GFX_idea_BRR_luis_filho_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_crooked_kleptocrat
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_alambert_inter = {
+			picture = GFX_idea_BRR_alambert_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		BRR_joao_filho_inter = {
+			picture = GFX_idea_BRR_joao_filho_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			available = {
+				has_government = liberalism
+			}
+			cancel = { 
+				NOT = {
+					has_government = liberalism
+				}
+			}
+		}
+		BRR_quadros_inter = {
+			picture = GFX_idea_BRR_quadros_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			available = {
+				has_government = social_democratism
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+				}
+			}
+		}
+		BRR_picchia_inter = {
+			picture = GFX_idea_BRR_picchia_inter
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+	}
+	chief_of_army = {
+		BRR_mamede_army = {
+			picture = GFX_idea_BRR_mamede_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_cavalcanti_army = {
+			picture = GFX_idea_BRR_cavalcanti_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = reactionism
+					has_government = right_authoritarianism
+				}
+				
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+					has_government = reactionism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_salgado_army = {
+			picture = GFX_idea_BRR_salgado_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_doctrine_of_autonomy
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_leal_army = {
+			picture = GFX_idea_BRR_leal_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_guns_and_butter_doctrine
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+		}
+		BRR_rondon_army = {
+			picture = GFX_idea_BRR_rondon_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_commando_doctrine
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+		}
+		BRR_euclides_costa_army = {
+			picture = GFX_idea_BRR_euclides_costa_army
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+		}
+	}
+	chief_of_navy = {
+		BRR_potiguara_nav = {
+			picture = GFX_idea_BRR_potiguara_nav
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+					}
+				}
+			}
+		BRR_benjamin_sodre_nav = {
+			picture = GFX_idea_BRR_benjamin_sodre_nav
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+					has_government = accelerationism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+					has_government = accelerationism
+				}
+			}
+		}
+	}
+	chief_of_air_force = {
+		BRR_busse_air = {
+			picture = GFX_idea_BRR_busse_air
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}	
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		BRR_melo_air = {
+			picture = GFX_idea_BRR_melo_air
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+			available = {
+				OR = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}	
+			}
+			cancel = { 
+				NOT = {
+					has_government = reactionism
+					has_government = despotism
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+			}
+		}
+		BRR_botelho_air = {
+			picture = GFX_idea_BRR_botelho_air
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+		}
+		BRR_moura_air = {
+			picture = GFX_idea_BRR_moura_air
+			allowed = {
+			original_tag = BRR
+			}
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			cancel = {
+				NOT = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+		}
+	}
+}

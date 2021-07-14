@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Russian Infantry Brigade"			# Infantry Brigade
+
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+    
+	}
+}
+division_template = {
+	name = "Russian Cavalry Brigade"			# Cavalry Brigade
+
+	division_names_group = ENG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+    
+	}
+}
+
+
+units = {
+	######## LAND OOB ########
+	##### APOC mercs #####
+	division = {
+		name = "Russian Cavalry Brigade"
+		location = 2026
+		division_template = "Russian Cavalry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Russian Cavalry Brigade"
+		location = 2026
+		division_template = "Russian Cavalry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Russian Mercenary Brigade"
+		location = 2026
+		division_template = "Russian Infantry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Russian Mercenary Brigade"
+		location = 2026
+		division_template = "Russian Infantry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "Russian Mercenary Brigade"
+		location = 2026
+		division_template = "Russian Infantry Brigade"		
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+
+	######## No Naval OOB ########
+}

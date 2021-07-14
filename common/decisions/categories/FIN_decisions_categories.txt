@@ -1,0 +1,27 @@
+FIN_destroyrussianlanguage = {
+	allowed = {
+		original_tag = FIN
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = FIN_carve_out_a_land_just_for_finns
+	}
+}
+FIN_castratemuscovitehorde = {
+	allowed = {
+		original_tag = FIN
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = FIN_unification_of_lands_of_set
+	}
+}
+FIR_raidourneighbors = {
+	allowed = {
+		original_tag = FIR
+	}
+	priority = 100
+	visible = {
+		has_country_flag = FIR_banditraiding
+	}
+}

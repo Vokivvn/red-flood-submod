@@ -1,0 +1,571 @@
+	shared_focus = {
+		id = ITA_incandescent_majority
+		icon = GFX_focus_ITA_incandescent_majority
+		cost = 1
+		x = 6
+		y = 0
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_15_points
+		icon = GFX_focus_ITA_15_points
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_incandescent_majority
+		}
+		completion_reward = {
+			add_political_power = 50
+			country_event = {
+				id = italy.52
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_handle_on_things
+		icon = GFX_focus_ITA_handle_on_things
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ITA_15_points
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	shared_focus = {
+		id = ITA_tranquility_at_home
+		icon = GFX_focus_ITA_tranquility_at_home
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = ITA_handle_on_things
+		}
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+	shared_focus = {
+		id = ITA_word_not_bullets
+		icon = GFX_focus_ITA_word_not_bullets
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = -2
+		y = 4
+		prerequisite = {
+			focus = ITA_tranquility_at_home
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+			add_political_power = -25
+		}
+	}
+	shared_focus = {
+		id = ITA_cash_weapons
+		icon = GFX_focus_ITA_cash_weapons
+		cost = 2
+		relative_position_id = ITA_incandescent_majority
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = ITA_word_not_bullets
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_from_militias_clubs
+		icon = GFX_focus_ITA_from_militias_clubs
+		cost = 2
+		relative_position_id = ITA_incandescent_majority
+		x = -2
+		y = 6
+		prerequisite = {
+			focus = ITA_cash_weapons
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.05
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_peace_overseas
+		icon = GFX_focus_ITA_peace_overseas
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = ITA_handle_on_things
+		}
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+	shared_focus = {
+		id = ITA_many_carrots
+		icon = GFX_focus_ITA_many_carrots
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = ITA_peace_overseas
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_overburdened_administration
+				add_idea = ITA_overburdened_administration_n1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_pacifying_libya
+		icon = GFX_focus_ITA_pacifying_libya
+		cost = 2
+		relative_position_id = ITA_incandescent_majority
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = ITA_many_carrots
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.53
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_equatorial_order
+		icon = GFX_focus_ITA_equatorial_order
+		cost = 2
+		relative_position_id = ITA_incandescent_majority
+		x = 2
+		y = 6
+		prerequisite = {
+			focus = ITA_pacifying_libya
+		}
+		completion_reward = {
+			remove_ideas = ITA_overburdened_administration_n1
+		}
+	}
+	shared_focus = {
+		id = ITA_reversing_slump
+		icon = GFX_focus_ITA_reversing_slump
+		cost = 1
+		relative_position_id = ITA_incandescent_majority
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = ITA_equatorial_order
+		}
+		prerequisite = {
+			focus = ITA_from_militias_clubs
+		}
+		completion_reward = {
+			add_stability = 0.02
+		}
+	}
+	shared_focus = {
+		id = ITA_sandwich_theory
+		icon = GFX_focus_ITA_sandwich_theory
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_reversing_slump
+		}
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	shared_focus = {
+		id = ITA_italian_farmer
+		icon = GFX_focus_ITA_italian_farmer
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = -3
+		y = 2
+		prerequisite = {
+			focus = ITA_sandwich_theory
+		}
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+	shared_focus = {
+		id = ITA_temporary_direct
+		icon = GFX_focus_ITA_temporary_direct
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = -4
+		y = 3
+		prerequisite = {
+			focus = ITA_italian_farmer
+		}
+		completion_reward = {
+			add_ideas = ITA_idea_farmer_subsides_n
+		}
+	}
+	shared_focus = {
+		id = ITA_non_production
+		icon = GFX_focus_ITA_non_production
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = -4
+		y = 4
+		prerequisite = {
+			focus = ITA_temporary_direct
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_idea_farmer_subsides_n
+				add_idea = ITA_idea_farmer_subsides_n1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_farming_protection
+		icon = GFX_focus_ITA_farming_protection
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = -4
+		y = 5
+		prerequisite = {
+			focus = ITA_non_production
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_idea_farmer_subsides_n1
+				add_idea = ITA_idea_farmer_subsides_n2
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_encourage_local
+		icon = GFX_focus_ITA_encourage_local
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = -4
+		y = 6
+		prerequisite = {
+			focus = ITA_farming_protection
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_idea_farmer_subsides_n2
+				add_idea = ITA_idea_farmer_subsides_n3
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_freeze_land
+		icon = GFX_focus_ITA_freeze_land
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = ITA_italian_farmer
+		}
+		completion_reward = {
+			add_ideas = ITA_centralized_land_sales
+		}
+	}
+	shared_focus = {
+		id = ITA_pick_litter
+		icon = GFX_focus_ITA_pick_litter
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = -2
+		y = 4
+		prerequisite = {
+			focus = ITA_freeze_land
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_centralized_land_sales
+				add_idea = ITA_centralized_land_sales_1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_best_deal
+		icon = GFX_focus_ITA_best_deal
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = ITA_pick_litter
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_centralized_land_sales_1
+				add_idea = ITA_idea_redistribution
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_cash_kit
+		icon = GFX_focus_ITA_cash_kit
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = -2
+		y = 6
+		prerequisite = {
+			focus = ITA_best_deal
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_idea_redistribution
+				add_idea = ITA_idea_redistribution_1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_sustainable_surplus
+		icon = GFX_focus_ITA_sustainable_surplus
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = -3
+		y = 8
+		prerequisite = {
+			focus = ITA_cash_kit
+		}
+		prerequisite = {
+			focus = ITA_encourage_local
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_idea_farmer_subsides_n3
+				add_idea = ITA_idea_farmer_subsides_n4
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_desert_markets
+		icon = GFX_focus_ITA_desert_markets
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = ITA_sandwich_theory
+		}
+		completion_reward = {
+			add_political_power = 15
+		}
+	}
+	shared_focus = {
+		id = ITA_run_presses
+		icon = GFX_focus_ITA_run_presses
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = ITA_desert_markets
+		}
+		completion_reward = {
+			add_ideas = ITA_inflation_n0
+		}
+	}
+	shared_focus = {
+		id = ITA_bottom_rates
+		icon = GFX_focus_ITA_bottom_rates
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = ITA_run_presses
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_inflation_n0
+				add_idea = ITA_inflation_n1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_power_flow
+		icon = GFX_focus_ITA_power_flow
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = ITA_bottom_rates
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_inflation_n1
+				add_idea = ITA_inflation_n2
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_have_bank
+		icon = GFX_focus_ITA_have_bank
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = ITA_desert_markets
+		}
+		completion_reward = {
+			add_stability = 0.03
+		}
+	}
+	shared_focus = {
+		id = ITA_royal_deposit
+		icon = GFX_focus_ITA_royal_deposit
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = ITA_have_bank
+		}
+		completion_reward = {
+			add_ideas = ITA_rdic
+		}
+	}
+	shared_focus = {
+		id = ITA_walk_dont_run
+		icon = GFX_focus_ITA_walk_dont_run
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 4
+		y = 5
+		prerequisite = {
+			focus = ITA_royal_deposit
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_rdic
+				add_idea = ITA_rdic_1
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_flood_market
+		icon = GFX_focus_ITA_flood_market
+		cost = 2
+		relative_position_id = ITA_reversing_slump
+		x = 3
+		y = 6
+		prerequisite = {
+			focus = ITA_walk_dont_run
+		}
+		prerequisite = {
+			focus = ITA_power_flow
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_inflation_n2
+				add_idea = ITA_inflation_n3
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_encourage_public
+		icon = GFX_focus_ITA_encourage_public
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 3
+		y = 7
+		prerequisite = {
+			focus = ITA_flood_market
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_rdic_1
+				add_idea = ITA_rdic_2
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_desert_no_more
+		icon = GFX_focus_ITA_desert_no_more
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 3
+		y = 8
+		prerequisite = {
+			focus = ITA_encourage_public
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_inflation_n3
+				add_idea = ITA_inflation_n4
+			}
+		}
+	}
+	shared_focus = {
+		id = ITA_have_bread
+		icon = GFX_focus_ITA_have_bread
+		cost = 1
+		relative_position_id = ITA_reversing_slump
+		x = 0
+		y = 9
+		prerequisite = {
+			focus = ITA_desert_no_more
+		}
+		prerequisite = {
+			focus = ITA_sustainable_surplus
+		}
+		completion_reward = {
+			remove_ideas = {
+				ITA_the_slump
+			}
+			hidden_effect = {
+				remove_ideas = {
+					ITA_idea_farmer_subsides_n4
+					ITA_idea_redistribution_1
+					ITA_inflation_n4
+					ITA_rdic_2
+				}
+			}
+			load_focus_tree = { 
+				tree = ITA_soc_lib_2 
+				keep_completed = yes
+			}
+		}
+	}

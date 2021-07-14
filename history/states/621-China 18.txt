@@ -1,0 +1,20 @@
+state={
+	id=621
+	name="STATE_621" # Suiyuan
+	manpower = 1583700
+
+	state_category = pastoral
+
+	history={
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		2087 4525 7048 7158 7631 10424 10629 12331 12403 12609 12880
+	}
+}

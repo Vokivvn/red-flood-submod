@@ -1,0 +1,409 @@
+#Japan - annexation_JAP_CONQ
+can_release_japan = {
+	state = 282 #Tokyo
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = RUS
+			has_country_flag = JAP_CONQ
+			country_exists = JAP
+		}
+	}
+}
+
+#Beiyang - annexation_BYJ_CONQ
+can_release_beiyang = {
+	state = 608 #Beijing
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = BYJ_CONQ
+			country_exists = BYJ
+		}
+	}
+}
+
+#Siberia - annexation_SIB_CONQ
+can_release_siberia = {
+	state = 570
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			has_country_flag = SIB_CONQ
+			country_exists = SIB
+		}
+	}
+}
+
+#Yakutia - annexation_KCK_CONQ
+can_release_yakutia = {
+	state = 574
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			has_country_flag = KCK_CONQ
+			country_exists = KCK
+		}
+	}
+}
+#Steppes - annexation_STE_CONQ
+can_release_steppes = {
+	state = 590
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			has_country_flag = STE_CONQ
+			country_exists = STE
+		}
+	}
+}
+#Transbaikal - annexation_MO2_CONQ
+can_release_transbaikal = {
+	state = 563
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = MON
+			tag = TAN
+			tag = ALT
+			has_country_flag = MO2_CONQ
+			country_exists = MO2
+		}
+	}
+}
+#Mongolia - annexation_MON_CONQ
+can_release_mongolia = {
+	state = 330
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = M02
+			tag = ALT
+			tag = TAN
+			has_country_flag = MON_CONQ
+			country_exists = MON
+		}
+	}
+}
+#Turkestan - annexation_TRK/TUC/TUK/AQT_CONQ
+can_release_turkestan = {
+	OR = {
+		state = 852 #TRK
+		state = 405 #TUK
+		state = 584 #TUC
+		state = 587 #AQT
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			OR = {
+				AND = {
+					has_country_flag = TRK_CONQ
+					country_exists = TRK
+				}
+				AND = {
+					has_country_flag = TUK_CONQ
+					country_exists = TUK
+				}
+				AND = {
+					has_country_flag = TUC_CONQ
+					country_exists = TUC
+				}
+				AND = {
+					has_country_flag = AQT_CONQ
+					country_exists = AQT
+				}
+			}
+		}
+	}
+}
+#Khwarezem - annexation_KHW_CONQ
+can_release_khwarezem = {
+	state = 849
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = KHW_CONQ
+			country_exists = KHW
+		}
+	}
+}
+#Bukhara - annexation_BKR_CONQ
+can_release_bukhara = {
+	state = 1038
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BKR_CONQ
+			country_exists = BKR
+		}
+	}
+}
+
+#Zheltorossiya - annexation_ZHR_CONQ
+can_release_zheltorossiya = {
+	state = 978
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ZHR_CONQ
+			country_exists = ZHR
+		}
+	}
+}
+#Manchuria - annexation_MAN_CONQ
+can_release_manchuria = {
+	state = 716
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = MAN_CONQ
+			country_exists = MAN
+		}
+	}
+}
+#Altai - annexation_ALT_CONQ
+can_release_altai = {
+	state = 654
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = MON
+			tag = TAN
+			tag = M02
+			has_country_flag = ALT_CONQ
+			country_exists = ALT
+		}
+	}
+}
+#Tuva - annexation_TAN_CONQ
+can_release_tuva = {
+	state = 329
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = MON
+			tag = ALT
+			tag = M02
+			tag = SIB
+			has_country_flag = TAN_CONQ
+			country_exists = TAN
+		}
+	}
+}
+#Xinjiang - annexation_SIK_CONQ
+can_release_xinjiang = {
+	state = 617
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = SIK_CONQ
+			country_exists = SIK
+		}
+	}
+}
+#Uyghuristan - annexation_ETS_CONQ
+can_release_uyghuristan = {
+	state = 935
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = ETS_CONQ
+			country_exists = ETS
+		}
+	}
+}
+#Ma Clique/Qinghai - annexation_XSM_CONQ
+can_release_ma_clique = {
+	state = 283
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = XSM_CONQ
+			country_exists = XSM
+		}
+	}
+}
+#Tibet - annexation_TIB_CONQ
+can_release_tibet = {
+	state = 322
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = TIB_CONQ
+			country_exists = TIB
+		}
+	}
+}
+#Korea - annexation_KOR_CONQ
+can_release_korea = {
+	state = 829
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = JAP
+			has_country_flag = KOR_CONQ
+			country_exists = KOR
+		}
+	}
+}
+#Shangdong - annexation_SHA_CONQ
+can_release_shangdong = {
+	state = 597
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = SHA_CONQ
+			country_exists = SHA
+		}
+	}
+}
+#Yunnan- annexation_YUN_CONQ
+can_release_yunnan = {
+	state = 325
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no	
+		NOT = {
+			has_country_flag = YUN_CONQ
+			country_exists = YUN
+		}
+	}
+}
+#Sichuan - annexation_SZC_CONQ
+can_release_sichuan = {
+	state = 791
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = SZC_CONQ
+			country_exists = SZC
+		}
+	}
+}
+#Guangdong - annexation_GDP_CONQ
+can_release_guangdong = {
+	state = 594
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = GDP_CONQ
+			country_exists = GDP
+		}
+	}
+}
+#Fujian - annexation_FJN_CONQ
+can_release_fujian = {
+	state = 927
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = FJN_CONQ
+			country_exists = FJN
+		}
+	}
+}
+#Kuomintang - annexation_KMT_CONQ
+can_release_kuomintang = {
+	state = 613
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			has_country_flag = KMT_CONQ
+			country_exists = KMT
+		}
+	}
+}
+#Thailand - annexation_SIA_CONQ
+can_release_thailand = {
+	state = 289
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SIA_CONQ
+			country_exists = SIA
+		}
+	}
+}
+#Philippines - annexation_PHI_CONQ
+can_release_philippines = {
+	state = 327
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = PHI_CONQ
+			country_exists = PHI
+		}
+	}
+}
+#Malaysia - annexation_MAL_CONQ
+can_release_malaysia = {
+	state = 831
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = MAL_CONQ
+			country_exists = MAL
+		}
+	}
+}
+#Myanmar - annexation_BUR_CONQ
+can_release_myanmar = {
+	state = 288
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BUR_CONQ
+			country_exists = BUR
+		}
+	}
+}
+#Taiwan - annexation_TAI_CONQ
+can_release_taiwan = {
+	state = 524
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		is_han_chinese_tag = no
+		NOT = {
+			tag = JAP
+			has_country_flag = TAI_CONQ
+			country_exists = TAI
+		}
+	}
+}
+#Vietnam - annexation_VIN_CONQ
+can_release_vietnam = {
+	state = 814
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = VIN_CONQ
+			country_exists = DAI
+		}
+	}
+}
+#Afganistan - annexation_AFG_CONQ
+can_release_afghanistan = {
+	state = 267
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = AFG_CONQ
+			country_exists = AFG
+		}
+	}
+}

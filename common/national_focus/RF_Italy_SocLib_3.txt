@@ -1,0 +1,342 @@
+focus_tree = {
+	id = ITA_soc_lib_3
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2400 }
+
+	focus = {
+		id = ITA_fifteenth_point
+		icon = GFX_focus_ITA_fifteenth_point
+		cost = 3
+		x = 7
+		y = 0
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = ITA_anti_totalitarianism
+		icon = GFX_focus_ITA_anti_totalitarianism
+		cost = 5
+		relative_position_id = ITA_fifteenth_point
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ITA_fifteenth_point
+		}
+		completion_reward = {
+			add_ideas = ITA_antitotalitarian
+		}
+	}
+	focus = {
+		id = ITA_wars_of_liberation
+		icon = GFX_focus_ITA_wars_of_liberation
+		cost = 5
+		relative_position_id = ITA_fifteenth_point
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ITA_fifteenth_point
+		}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	focus = {
+		id = ITA_paneuropean_alliance
+		icon = GFX_focus_ITA_paneuropean_alliance
+		cost = 5
+		relative_position_id = ITA_fifteenth_point
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ITA_anti_totalitarianism
+		}
+		prerequisite = {
+			focus = ITA_wars_of_liberation
+		}
+		completion_reward = {
+			create_faction = TREATY_OF_EUROPEAN_STATES
+			custom_effect_tooltip = "PANEUROPEAN_ALLIANCE_TOOLTIP"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ITA_occupation_resistance_idea
+					scope = ITA
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_take_down_vanguardists
+		icon = GFX_focus_ITA_take_down_vanguardists
+		cost = 5
+		relative_position_id = ITA_paneuropean_alliance
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ITA_paneuropean_alliance
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_crush_accelerationists
+		icon = GFX_focus_ITA_crush_accelerationists
+		cost = 5
+		relative_position_id = ITA_paneuropean_alliance
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_paneuropean_alliance
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_annihilate_reactionaries
+		icon = GFX_focus_ITA_annihilate_reactionaries
+		cost = 5
+		relative_position_id = ITA_paneuropean_alliance
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ITA_paneuropean_alliance
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_europe_free_from_tyranny
+		icon = GFX_focus_ITA_europe_free_from_tyranny
+		cost = 5
+		relative_position_id = ITA_crush_accelerationists
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_take_down_vanguardists
+		}
+		prerequisite = {
+			focus = ITA_crush_accelerationists
+		}
+		prerequisite = {
+			focus = ITA_annihilate_reactionaries
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_INTEGRATION_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_great_eurasian_war
+		icon = GFX_focus_ITA_great_eurasian_war
+		cost = 5
+		relative_position_id = ITA_europe_free_from_tyranny
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_europe_free_from_tyranny
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+		}
+	}
+
+	focus = {
+		id = ITA_heart_of_darkness
+		icon = GFX_focus_ITA_heart_of_darkness
+		cost = 5
+		relative_position_id = ITA_great_eurasian_war
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = ITA_great_eurasian_war
+		}
+		completion_reward = {
+			custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_the_british_question
+		icon = GFX_focus_ITA_the_british_question
+		cost = 5
+		relative_position_id = ITA_great_eurasian_war
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_great_eurasian_war
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.73
+			}
+		}
+	}
+	focus = {
+		id = ITA_a_concorde
+		icon = GFX_focus_ITA_a_concorde
+		cost = 2
+		relative_position_id = ITA_the_british_question
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = ITA_the_british_question
+		}
+		mutually_exclusive = {
+			focus = ITA_tear_it_down
+		}
+		available = {
+			has_country_flag = ITA_uk_peace
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = italy.74
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_tear_it_down
+		icon = GFX_focus_ITA_tear_it_down
+		cost = 3
+		relative_position_id = ITA_the_british_question
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = ITA_the_british_question
+		}
+		mutually_exclusive = {
+			focus = ITA_a_concorde
+		}
+		available = {
+			has_country_flag = ITA_uk_war
+		}
+		completion_reward = {
+			#custom_effect_tooltip = "NITTI_WARGOALS_TOOLTIP"
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+		}
+	}
+	focus = {
+		id = ITA_war_with_technate
+		icon = GFX_focus_ITA_war_with_technate
+		cost = 5
+		relative_position_id = ITA_a_concorde
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_a_concorde
+			focus = ITA_tear_it_down
+		}
+		bypass = {
+			OR = {
+				USA = {
+					NOT = {
+						has_government = accelerationism
+					}
+				}
+				USA = {
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = USA
+			}
+		}
+	}
+	focus = {
+		id = ITA_war_with_maximalitat
+		icon = GFX_focus_ITA_war_with_maximalitat
+		cost = 5
+		relative_position_id = ITA_tear_it_down
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_a_concorde
+			focus = ITA_tear_it_down
+		}
+		bypass = {
+			OR = {
+				BRA = {
+					NOT = {
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+					}
+				}
+				BRA = {
+					exists = no
+				}
+			}
+		}
+		completion_reward = {
+			declare_war_on = {
+				type = puppet_wargoal_focus
+				target = BRA
+			}
+		}
+	}
+	focus = {
+		id = ITA_aid_chinese
+		icon = GFX_focus_ITA_mission_to_india
+		cost = 5
+		relative_position_id = ITA_great_eurasian_war
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = ITA_great_eurasian_war
+		}
+		completion_reward = {
+			custom_effect_tooltip = "AID_CHINESE_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_peace_in_world_peace_in_italy
+		icon = GFX_focus_ITA_peace_in_world_peace_in_italy
+		cost = 5
+		relative_position_id = ITA_the_british_question
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = ITA_war_with_maximalitat
+		}
+		prerequisite = {
+			focus = ITA_war_with_technate
+		}
+		available = {
+			has_war = no
+			219 = { owner = { is_in_faction_with = ITA } }
+			195 = { owner = { is_in_faction_with = ITA } }
+			64 = { owner = { is_in_faction_with = ITA } }
+			16 = { owner = { is_in_faction_with = ITA } }
+			41 = { owner = { is_in_faction_with = ITA } }
+			10 = { owner = { is_in_faction_with = ITA } }
+			4 = { owner = { is_in_faction_with = ITA } }
+			107 = { owner = { is_in_faction_with = ITA } }
+			47 = { owner = { is_in_faction_with = ITA } }
+			48 = { owner = { is_in_faction_with = ITA } }
+			202 = { owner = { is_in_faction_with = ITA } }
+			9 = { owner = { is_in_faction_with = ITA } }
+			3 = { owner = { is_in_faction_with = ITA } }
+		}
+		completion_reward = {
+			add_political_power = 250
+			add_stability = 0.25
+			country_event = {
+				id = italy.75
+			}
+		}
+	}
+}

@@ -1,0 +1,130 @@
+France_acephale = {
+	name = "France Acephale Plan"
+	desc = "Acephale France"
+
+	enable = {
+		original_tag = FRA
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_route
+				option = ACEPHALE
+			}
+			has_country_flag = FRA_ai_path_2
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		FRA_adventure_in_spain
+		FRA_artistic_state
+		FRA_appease_the_acephale
+		FRA_full_speed_world
+		FRA_rattachisme
+		FRA_act_of_confederation
+		FRA_secure_internal_stability
+		FRA_recognize_minority_languages
+		FRA_province_development
+		FRA_la_metropole
+		FRA_four_centers
+		FRA_dunkerque
+		FRA_ensure_protection
+		FRA_the_city_that_will_never_fall
+		FRA_marseilles
+		FRA_birthplace_of_the_patron
+		FRA_occitan_heritage
+		FRA_brest
+		FRA_la_celtique
+		FRA_celtic_futurism
+		FRA_paris
+		FRA_centre_of_futurist_world
+		FRA_futurist_paradise
+		FRA_free_trade_policies
+		FRA_expand_exports_of_media
+		FRA_french_cinema
+		FRA_world_university_dunkerque
+		FRA_develop_car_industry
+		FRA_sell_agricultural_resources
+		FRA_french_things_to_all_continents
+		FRA_question_status_quo
+		FRA_against_councilism
+		FRA_beyond_marketplace
+		FRA_most_brutal
+		FRA_bulgarian_coup
+		FRA_encourage_settlers
+		FRA_side_with_true_germany
+		FRA_dakar_airport
+		FRA_embrace_local_art
+		FRA_support_finland
+		FRA_freedom_love
+		FRA_destory_native_populism
+		FRA_arms_to_mayakovsky
+		FRA_opportunities_in_india
+		FRA_deal_with_anglo_devil
+		FRA_end_communism
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+FRA_minor_allies = { #used to make minor European nations like France more
+	name = "Minor French Allies"
+
+	enable = {
+		OR = {
+			has_government = accelerationism
+			accelerationism > 0.5
+		}
+		is_in_faction = no
+		FRA = {
+			has_government = accelerationism
+		}
+	}
+	abort = {
+		FRA = {
+			NOT = {
+				has_government = accelerationism
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = 100
+	}
+}

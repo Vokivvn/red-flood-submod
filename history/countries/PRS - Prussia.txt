@@ -1,0 +1,227 @@
+capital = 763
+
+oob = "PRS_1936"
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+	PRS_junkerstaat
+	PRS_disloyal_proletariat
+	PRS_power_of_freikorps
+	PRS_erwin_planck_hog
+	PRS_konstantin_neurath_for
+	PRS_hjalmar_schacht_eco
+	PRS_wilhelm_groener_sec
+}
+country_event = {
+	id = prussia.1
+	days = 1
+}
+country_event = {
+	id = prussia.3
+	days = 24
+}
+
+country_event = {
+	id = poland.10
+	days = 150
+}
+
+set_technology = {
+	### ARMY ####
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	CAS1 = 1	
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 10
+	liberalism = 5
+	conservatism = 15
+	right_authoritarianism = 25
+	despotism = 15
+	reactionism = 15
+	accelerationism = 15
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Kurt von Schleicher"
+	desc = "POLITICS_Schleicher_DESC"
+	picture = "Portrait_PRS_Kurt_Schleicher.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Otto Braun"
+	desc = "POLITICS_BRAUN_DESC"
+	picture = "Portrait_PRS_Otto_Braun_socdem.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Otto Braun"
+	desc = "POLITICS_BRAUN_DESC"
+	picture = "Portrait_PRS_Otto_Braun.tga"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Horst Wessel"
+	desc = "POLITICS_WESSEL_DESC"
+	picture = "Portrait_Horst_Wessel.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Wilhelm Külz"
+	desc = ""
+	picture = "Portrait_PRS_Wilhelm_Kulz.tga"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+	}
+}
+#Generals
+create_field_marshal = {
+name = "Ludwig Beck"
+	picture = "PRS_Ludwig_Beck_general.tga"
+	traits = { old_guard defensive_doctrine thorough_planner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+name = "Franz Halder"
+	picture = "PRS_Franz_Halder_general.tga"
+	traits = { old_guard offensive_doctrine organisational_leader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+name = "Gerd von Rundstedt"
+	picture = "PRS_Gerd_Rundstedt_general.tga"
+	traits = { old_guard infantry_officer thorough_planner expert_delegator }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+name = "Heinz Guderian"
+	picture = "PRS_Heinz_Guderian_general.tga"
+	traits = { media_personality armor_officer panzer_leader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+name = "Walter Model"
+	picture = "PRS_Walter_Model_general.tga"
+	traits = { career_officer inflexible_strategist infantry_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+name = "Friedrich Paulus"
+	picture = "PRS_Friedrich_Paulus_general.tga"
+	traits = { career_officer adaptable cavalry_leader }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+name = "Hans-Jürgen von Arnim"
+	picture = "PRS_Hans_Arnim_general.tga"
+	traits = { career_officer infantry_leader trickster }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+name = "Fedor von Bock"
+	picture = "PRS_Fedor_Bock_general.tga"
+	traits = { career_officer politically_connected skilled_staffer adaptable }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+name = "Ferdinand von Bredow"
+	picture = "PRS_Ferdinand_Bredow_general.tga"
+	traits = { politically_connected trait_reckless }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+name = "Paul Ludwig Ewald von Kleist"
+	picture = "PRS_Ewald_Kleist_general.tga"
+	traits = { old_guard brilliant_strategist armor_officer panzer_leader  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+name = "Rüdiger von der Goltz"
+	picture = "Portrait_Rudiger_Goltz_general.tga"
+	traits = { old_guard trait_reckless winter_specialist commando }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}

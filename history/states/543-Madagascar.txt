@@ -1,0 +1,32 @@
+
+state={
+	id=543
+	name="STATE_543"
+	manpower = 1394611
+		resources={
+		chromium= 60
+		oil= 2
+		steel= 2
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = MAG
+		add_core_of = MAG
+		victory_points = {
+			5128 15
+		}
+		victory_points = {
+			13392 5
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 1
+		}
+	}
+
+	provinces={
+		13385 5128 13390 13391 13392 13393 13394
+	}
+}

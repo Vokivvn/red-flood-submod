@@ -1,0 +1,32 @@
+﻿capital = 773
+set_research_slots = 2
+set_technology = {
+	### Infantry ###
+	infantry_weapons = 1
+	motorised_infantry = 1
+	### Tanks ###
+	gwtank = 1
+	### Air ###
+	early_fighter = 1
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1888.6.15"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 0
+	revisionist_socialism = 0
+	revolutionary_anarchism = 0
+	libertarian_marxism = 0
+	social_democratism = 2
+	liberalism = 12
+	conservatism = 12
+	right_authoritarianism = 47
+	despotism = 10
+	reactionism = 5
+	accelerationism = 12
+}

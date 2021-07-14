@@ -1,0 +1,23 @@
+
+state={
+	id=462
+	name="STATE_462"
+	manpower = 678000
+	
+	state_category = wasteland
+
+	history={
+		owner = SPR
+		victory_points = {
+			7069 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = MOR
+	}
+
+	provinces={
+		1989 4022 4108 5046 13350 10107 
+	}
+}

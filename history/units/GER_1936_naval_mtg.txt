@@ -1,0 +1,59 @@
+﻿units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Ostseeflotte"			
+		naval_base = 6282  # Stettin
+		task_force = {				
+			name = "Ostseeflotte"
+			location = 6282  # Stettin
+			ship = { name = "Stettin" definition = battleship start_experience_factor = 0.3 equipment = { ship_hull_pre_dreadnought = { amount = 5 owner = GER } } }
+			ship = { name = "Karlsruhe" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GER version_name = "Deutschland Class" } } }	
+			ship = { name = "Admiral Scheer" pride_of_the_fleet = yes start_experience_factor = 0.3 definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GER version_name = "Deutschland Class" } } }
+			ship = { name = "T-1" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER } } } 		
+			ship = { name = "T-2" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER } } }		
+			ship = { name = "T-3" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }			
+			ship = { name = "T-4" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }	
+			# 1. Torpedobootflottille
+			ship = { name = "T-5" definition = destroyer equipment = { ship_hull_light_1 = { amount = 10 owner = GER } } }
+			ship = { name = "T-6" definition = destroyer equipment = { ship_hull_light_1 = { amount = 12 owner = GER } } }
+			ship = { name = "T-7" definition = destroyer equipment = { ship_hull_light_1 = { amount = 8 owner = GER } } }
+			ship = { name = "T-8" definition = destroyer equipment = { ship_hull_light_1 = { amount = 6 owner = GER } } }
+		}
+	}
+	fleet = {
+		name = "Volksmarine"			
+		naval_base = 6389  # Kiel
+		task_force = {
+			name = "Volksmarine"
+			location = 6389  # Kiel
+			ship = { name = "Schleswig-Holstein" definition = battleship  equipment = { ship_hull_pre_dreadnought = { amount = 9 owner = GER } } }
+			ship = { name = "Jaguar" definition = destroyer equipment = { ship_hull_light_1 = { amount = 15 owner = GER } } }
+			ship = { name = "Leopard" definition = destroyer equipment = { ship_hull_light_1 = { amount = 15 owner = GER } } }
+			ship = { name = "Luchs" definition = destroyer equipment = { ship_hull_light_1 = { amount = 10 owner = GER } } }
+			ship = { name = "Tiger" definition = destroyer equipment = { ship_hull_light_1 = { amount = 10 owner = GER } } }
+			ship = { name = "Deutschland" definition = heavy_cruiser  equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GER version_name = "Deutschland Class" } } }	
+			ship = { name = "Weimar" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_panzerschiff = { amount = 1 owner = GER version_name = "Deutschland Class" } } }
+			ship = { name = "Nürnberg" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER } } } 		
+			ship = { name = "Leipzig" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER } } }		
+			ship = { name = "Königsberg" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = GER version_name = "Königsberg Class" } } }
+		}
+	}
+	fleet = {
+		name = "Unterseeboots-Flotte"			
+		naval_base = 241  # Wilhelmshaven
+		task_force = {
+			name = "I. U-Boots Flottille Wilhelmshaven"
+			location = 241  # Wilhelmshaven
+			# 1. Unterseebootsflottille
+			ship = { name = "U-7" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-8" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-9" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-10" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			# 4. Unterseebootsflottille
+			ship = { name = "U-11" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-12" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-13" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+			ship = { name = "U-17" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 3 owner = GER } } }
+		}
+	}
+}

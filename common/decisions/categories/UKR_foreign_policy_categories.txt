@@ -1,0 +1,21 @@
+UKR_foreign_policy = {
+	allowed = {
+		original_tag = UKR
+	}
+	priority = 100
+	visible = {
+		OR = {
+			has_completed_focus = ukraine_slightly_red
+			has_completed_focus = ukraine_liberal
+			has_completed_focus = ukraine_democratic
+			has_completed_focus = ukraine_pink
+			has_completed_focus = ukraine_rewrite_history
+			has_completed_focus = ukraine_claim_greater
+			has_completed_focus = ukraine_alliance_conquest
+			has_completed_focus = ukraine_ride_future
+			has_completed_focus = ukraine_pan_state
+			has_completed_focus = ukraine_reforge_everything
+		}
+		is_subject = no
+	}
+}

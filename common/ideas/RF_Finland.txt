@@ -1,0 +1,671 @@
+ideas = {
+	country = {
+			FIN_societyofthoth = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				encryption_factor = 1
+				research_speed_factor = 0.10
+				monthly_population = 0.25
+				global_building_slots_factor = 0.25 #no idea why these don't work here
+			}
+			picture = generic_spy_coup
+		}
+			FIN_nationalmyth = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+			surrender_limit = 0.15
+			accelerationism_drift = 0.05
+			army_attack_factor = 0.05
+			supply_consumption_factor = -0.3 #they need this for Egypt
+			}
+			picture = air_war_plans_division_focus
+		}
+			FIN_vihanveljet = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				conscription = 0.05
+				army_attack_factor = 0.10
+				army_org = 0.7
+				army_speed_factor = 0.05
+				subversive_activites_upkeep = 0.04
+			}
+			picture = officers_purged
+		}
+			FIN_ruthless = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				non_core_manpower = -1
+				stability_factor = -0.07
+				war_support_factor = -0.07
+				army_morale_factor = 0.10
+				army_org = 0.10
+				army_attack_factor = 0.10
+				compliance_gain = -0.1
+				resistance_target = -0.1
+			}
+			picture = vittoria_mutilata
+		}
+			FIN_finnougric = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				conscription = 0.07
+				training_time_factor = 0.1
+				monthly_population = 0.30
+				army_org_factor = -0.1
+			}
+			picture = generic_infantry_bonus
+		}
+			FIN_germanglory = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				army_morale_factor = 0.10
+				army_attack_factor = 0.10
+				army_org = 0.10
+				army_leader_cost_factor = 0.15
+				conscription_factor = -0.03
+			}
+			picture = triumphant_will
+		}
+			FIN_monarchistsisu = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				despotism_drift = 0.07
+				army_org = 0.07
+				industrial_capacity_factory = 0.10
+			}
+			picture = sisu
+		}
+			FIN_tradingcompany = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				local_resources_factor = 0.10
+				industrial_capacity_factory = 0.10
+				monthly_population = 0.25 
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_production_bonus
+		}
+			FIN_monarchistrally = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				despotism_drift = 0.01
+			}
+			picture = generic_pp_unity_bonus
+		}
+			FIN_supremereaction = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				research_speed_factor = -0.03
+				vanguard_socialism_drift = -0.9
+				accelerationism_drift = -0.9
+				monthly_population = 0.50 
+			
+			}
+			picture = generic_intel_bonus
+		}
+			FIN_ikuturso = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+			conscription = 0.05
+			training_time_factor = 0.07
+			global_building_slots = 2
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+			FIN_absolutism = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				despotism_drift = 0.05
+				political_power_cost = -0.05
+				stability_factor = -0.10
+				industrial_capacity_factory = 0.10
+				global_building_slots_factor = 0.2
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+			FIN_constitutional = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+				political_power_cost = 0.05
+				stability_factor = 0.10
+				despotism_drift = -0.01
+				industrial_capacity_factory = 0.10 #IDK predictable government is good for investment
+				global_building_slots_factor = 0.2
+			}
+			picture = generic_victors_of_ww1
+		}
+			FIN_separationofarmy = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+			army_org = -0.03
+			political_power_factor = 0.1
+			max_planning = 0.1 #army can focus efforts on planning wars, but lacks alacrity? 
+			}
+			picture = generic_victors_of_ww1
+		}
+			FIN_russification = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+			monthly_population = 2
+			}
+			picture = generic_spy_coup
+		}
+			FIN_suojel = {
+			allowed = {
+				original_tag = FIN
+			}
+			modifier = {
+			conscription = 0.07
+			stability_factor = -0.10
+			training_time_factor = 0.08
+			}
+			picture = ast_volunteer_defence_corps
+		}
+		FIN_proletariandictatorship = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+				political_power_factor = 0.25
+				war_support_weekly = 0.01
+				planning_speed = 0.1
+			}
+		}
+		FIN_peoplescouncils = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+				stability_weekly = 0.01
+				political_power_factor = -0.1
+				out_of_supply_factor = -0.5
+				army_morale_factor = 0.1
+			}
+		}
+	}
+
+	head_of_government = {
+		FIN_senate_hog = {
+			picture = GFX_idea_FIN_senate_hog
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FIN_storm_in_central_russia
+				}
+			}
+		}
+		FIN_ragnarfuruhjelm = {
+			picture = GFX_idea_FIN_ragnarfuruhjelm
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_completed_focus = FIN_democratic_coup
+			}
+		}
+		FIN_urhokekkonen = {
+			picture = GFX_idea_FIN_urhokekkonen
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant 
+			}
+			available = {
+				has_completed_focus = FIN_karelian_academic_society
+			}
+		}
+		FIN_jeansibelius = {
+			picture = GFX_idea_FIN_jeansibelius
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_government
+				hog_political_protege 
+			}
+			available = {
+				has_completed_focus = FIN_dreams_of_old_fatherland
+			}
+		}
+		FIN_karlfredrick = {
+			picture = GFX_idea_FIN_karlfredrick
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_government
+				hog_reformist_soldier
+			}
+			available = {
+				has_completed_focus = FIN_rally_up_the_monarchists
+			}
+		}
+	}
+
+	foreign_minister = {
+		FIN_senate_for = {
+			picture = GFX_idea_FIN_senate_for
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FIN_storm_in_central_russia
+				}
+			}
+		}
+		FIN_ristoheikki = {
+			picture = GFX_idea_FIN_ristoheikki
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = FIN_democratic_coup
+			}
+		}
+		FIN_vilhohelanen = {
+			picture = GFX_idea_FIN_vilhohelanen
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_completed_focus = FIN_karelian_academic_society
+			}
+		}
+		FIN_uunokalias = {
+			picture = GFX_idea_FIN_uunokalias
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_completed_focus = FIN_dreams_of_old_fatherland
+			}
+		}
+		FIN_juhokusti = {
+			picture = GFX_idea_FIN_juhokusti
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_completed_focus = FIN_rally_up_the_monarchists
+			}
+		}
+	}
+
+	economy_minister = {
+		FIN_senate_eco = {
+			picture = GFX_idea_FIN_senate_eco
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FIN_storm_in_central_russia
+				}
+			}
+		}
+		FIN_heikkiritavuori = {
+			picture = GFX_idea_FIN_heikkiritavuori
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			available = {
+				has_completed_focus = FIN_democratic_coup
+			}
+		}
+		FIN_mattiaarnio = {
+			picture = GFX_idea_FIN_mattiaarnio
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_completed_focus = FIN_karelian_academic_society
+			}
+		}
+		FIN_jonathanwartuivaara = {
+			picture = GFX_idea_FIN_jonathanwartuivaara
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+			available = {
+				has_completed_focus = FIN_dreams_of_old_fatherland
+			}
+		}
+		FIN_ernstvonborn = {
+			picture = GFX_idea_FIN_ernstvonborn
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			available = {
+				has_completed_focus = FIN_rally_up_the_monarchists
+			}
+		}
+	}
+
+	security_minister = {
+		FIN_senate_int = {
+			picture = GFX_idea_FIN_senate_int
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FIN_storm_in_central_russia
+				}
+			}
+		}
+		FIN_ernsttandefelt = {
+			picture = GFX_idea_FIN_ernsttandefelt
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_completed_focus = FIN_democratic_coup
+			}
+		}
+		FIN_elmokaila = {
+			picture = GFX_idea_FIN_elmokaila
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_completed_focus = FIN_karelian_academic_society
+			}
+		}
+		FIN_miukawaltari = {
+			picture = GFX_idea_FIN_miukawaltari
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			available = {
+				has_completed_focus = FIN_dreams_of_old_fatherland
+			}
+		}
+		FIN_ottobrandenstein = {
+			picture = GFX_idea_FIN_ottobrandenstein
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_completed_focus = FIN_rally_up_the_monarchists
+			}
+		}
+	}
+
+	head_of_intel = {
+		FIN_senate_ntl = {
+			picture = GFX_idea_FIN_senate_ntl
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			available = {
+				NOT = {
+					has_completed_focus = FIN_storm_in_central_russia
+				}
+			}
+		}
+		FIN_anttitulenheimo = {
+			picture = GFX_idea_FIN_anttitulenheimo
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			available = {
+				has_completed_focus = FIN_democratic_coup
+			}
+		}
+		FIN_raunogustafkallia = {
+			picture = GFX_idea_FIN_raunogustafkallia
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = FIN_karelian_academic_society
+			}
+		}
+		FIN_edithsodergran = {
+			picture = GFX_idea_FIN_edithsodergran
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = FIN_dreams_of_old_fatherland
+			}
+		}
+		FIN_hanskalm = {
+			picture = GFX_idea_FIN_hanskalm
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = FIN_rally_up_the_monarchists
+			}
+		}
+	}
+
+	chief_of_staff = {
+		FIN_cos_karlfredrik = {
+			picture = GFX_idea_FIN_cos_karlfredrik
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
+		FIN_cos_einarvihma = {
+			picture = GFX_idea_FIN_cos_einarvihma
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cos_school_of_defence
+			}
+		}
+	}
+
+	chief_of_army = {
+		FIN_army_akselairo = {
+			picture = GFX_idea_FIN_army_akselairo
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+		FIN_army_hannuhanuksela = {
+			picture = GFX_idea_FIN_army_hannuhanuksela
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		FIN_navy_bainovalve = {
+			picture = GFX_idea_FIN_navy_bainovalve
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+		FIN_navy_eerorahola = {
+			picture = GFX_idea_FIN_navy_eerorahola
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		FIN_air_vainomikkola = {
+			picture = GFX_idea_FIN_air_vainomikkola
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cair_naval_aviation_doctrine
+			}
+		}
+		FIN_air_arnesomersalo = {
+			picture = GFX_idea_FIN_air_arnesomersalo
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		FIN_theo_einarvihma = {
+			picture = GFX_idea_FIN_theo_einarvihma
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				
+			}
+		}
+		FIN_theo_eerorahola = {
+			picture = GFX_idea_FIN_theo_eerorahola
+			allowed = {
+				original_tag = FIN
+			}
+			traits = {
+				
+			}
+		}
+	}
+}

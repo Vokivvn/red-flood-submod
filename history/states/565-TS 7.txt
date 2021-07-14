@@ -1,0 +1,29 @@
+
+state={
+	id=565
+	name="STATE_565"
+	resources={
+		steel=10.000
+		chromium=5.000
+	}
+
+	history={
+		owner = SIB
+		add_core_of = SIB
+		victory_points = {
+			4868 1
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1792 4737 4795 4868 7759 10583 10654 12538 
+	}
+	manpower=205325
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,40 @@
+# use this in state scope
+is_french_colonial_claim = {
+	OR = {
+
+	}
+}
+
+# use this in state scope
+is_portuguese_colonial_claim = {
+	OR = {
+
+	}
+}
+
+# use this in state scope
+is_south_african_colonial_claim = {
+	OR = {
+
+	}
+}
+
+# use this in state scope
+is_british_colonial_claim = {
+	OR = {
+		# Egypt
+		state = 767
+		state = 551
+		# Yemen
+		state = 659
+		# Canada
+		state = 332
+	}
+}
+
+# use this in state scope
+african_state_can_be_taken = {
+	NOT = {
+	}
+}
+

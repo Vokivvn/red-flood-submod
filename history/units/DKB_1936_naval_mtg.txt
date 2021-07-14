@@ -1,0 +1,63 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	### Black Sea Fleet -- Tuapse
+	fleet = {
+		name = "Chernomorskiy Flot"
+		naval_base = 719 # Tuapse
+		task_force = {				
+			name = "Chernomorskiy Flot"
+			location = 719 # Tuapse
+			ship = { name = "Chervona Ukraina" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = DKB version_name = "Chervona Ukraina Class" } } }
+			ship = { name = "Malorossiya" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = DKB version_name = "Brusilovsky Class" } } }
+			ship = { name = "Dnipro" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = DKB version_name = "Dnipro Class" } } }
+		}	
+		task_force = {	
+			name = "Chernomorskiy Podvodniy Flot"
+			location = 719 # Tuapse
+			# 9iy Podvodniy Flot
+			ship = { name = "Shch-121" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "Series V Shchuka" } } }			
+			ship = { name = "Shch-122" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "Series V Shchuka" } } }			
+			# 15iy Podvodniy Flot
+			ship = { name = "A-1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "AG Class" } } }
+			ship = { name = "A-2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "AG Class" } } }
+			ship = { name = "A-3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "AG Class" } } }
+			ship = { name = "A-4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "AG Class" } } }
+			ship = { name = "A-5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = DKB version_name = "AG Class" } } }
+		}	
+	}
+} 
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+instant_effect = {
+
+	### Ships Under Construction Notes ###
+	# DD: Petrograd & Minsk variant (x4) ("Petrograd" "Moskva" "Kharkov" "Minsk")
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_2
+			creator = "DKB"
+			version_name = "Petrograd Class"
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_submarine_2
+			creator = "DKB"
+			version_name = "Series IX Srednyaya"
+		}
+		requested_factories = 1
+		progress = 0.70
+		amount = 5
+	}
+}
+
+#####################

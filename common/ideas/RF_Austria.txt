@@ -1,0 +1,557 @@
+ideas = {
+	country = {
+
+	AUS_paramillitary_conscription = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
+	AUS_emergency_conscription = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				conscription = 0.02
+				political_power_gain = -0.1
+
+			}
+		}
+
+	AUS_unrelenting_progress = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+	AUS_czesup = {
+		picture = CZE_AUSUP
+		removal_cost = -1
+		modifier = {
+				army_org = 6
+				research_speed_factor = 0.06
+			}
+		}
+	AUS_huntorture = {
+		cancel = { 
+			NOT = {
+				country_exists = AUS
+			}
+		}
+		picture = CZE_AUSUP
+		removal_cost = -1
+		modifier = {
+				stability_factor = -0.10	
+			    political_power_gain = -0.3	
+
+			}
+		}
+	AUS_huntorturetwo = {
+		cancel = { 
+			NOT = {
+				country_exists = AUS
+			}
+		}
+		picture = CZE_AUSUP
+		removal_cost = -1
+		modifier = {
+				stability_factor = -0.08	
+			    political_power_gain = -0.3	
+				war_support_factor = 0.05
+			}
+		}
+	AUS_neutrallity = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				stability_factor = 0.30	
+				war_support_factor = -0.20	
+			}
+		}
+	AUS_stable_once_more = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				stability_factor = 0.20	
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+	AUS_whatever_the_cost_focus = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_morale_factor = 0.1
+				surrender_limit = +0.5
+
+			}
+	}
+	AUS_worker_front = {
+		picture = AUS_paracon
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+			  	production_speed_buildings_factor = 0.1
+			  	production_factory_max_efficiency_factor = 0.1
+			  	line_change_production_efficiency_factor = 0.05
+
+
+
+			}
+		}
+
+	AUS_despoticsupremacy = {
+		picture = AUS_des
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+			 despotism_drift = 0.05
+			}
+		}
+	AUS_conservativesupremacy = {
+		picture = AUS_con
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+			 conservatism_drift = 0.05
+			}
+		}
+	AUS_circleofsteel = {
+		removal_cost = -1
+			modifier = {
+			 despotism_drift = 0.1
+			 right_authoritarianism_drift = 0.1
+			}
+		}
+
+	AUS_nationalist_millitarism = {
+		allowed_civil_war = {
+				always = yes
+		}
+		picture = AUS_natmil
+		removal_cost = -1
+			modifier = {
+			  production_speed_buildings_factor = -0.1
+			  army_morale_factor = 0.15
+			}
+		}
+
+
+	AUS_accsupremacy = {
+		picture = AUS_acc
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+			 accelerationism_drift = 0.05
+
+			}
+		}
+
+	AUS_adelheid = {
+		picture = aus_adelheid
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				war_support_factor = 0.10	
+			}
+		}
+
+	AUS_despoticmonarchy = {
+		picture = despotic_monarchism
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				war_support_factor = 0.20	
+			}
+		}
+	AUS_Dolfuss_Alone = {
+		picture = aus_dollfuss
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = { 
+				army_org = 5
+				stability_factor = -0.10	
+			}
+		}
+	AUS_franzferdinand = {
+		picture = aus_franz
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+			  political_power_gain = 0.5	
+
+			}
+		}
+	AUS_ottohabsburg = {
+		picture = aus_otto
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				stability_factor = 0.10	
+			}
+		}
+	PRS_alone_against_the_giant = {
+		removal_cost = -1
+			allowed = {
+				original_tag = PRS
+			}
+			modifier = {
+				army_org = -10
+			}
+		}
+
+	AUS_ausprustreaty = {
+		picture = AUS_treaty
+		removal_cost = -1
+			allowed = {
+				original_tag = PRS
+				original_tag = AUS
+			}
+			modifier = {
+				army_org = 5
+				research_speed_factor = 0.05
+			}
+		}
+
+	AUS_thesouthernreich = {
+		picture = AUS_thesouthernreich
+		removal_cost = -1
+			modifier = {
+				political_power_gain = 1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+
+	AUS_Improved_Economy = {
+   	    picture = AUS_improved
+		allowed_civil_war = {
+				always = yes
+		}
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+	AUS_Final_Compromise = {
+		picture = AUS_hitlerunity
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	AUS_democracyprevailed = {
+		picture = AUS_hitlerunity
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				stability_factor = 0.10	
+			}
+		}
+	AUS_defenceofaustria = {
+		picture = AUS_hitlerunity
+		removal_cost = -1
+			allowed = {
+				original_tag = AUS
+			}
+			modifier = {
+				stability_factor = 0.10	
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.1
+
+			}
+		}
+
+	AUS_new_austrian_army = {
+		picture = AUS_paracon
+		removal_cost = -1
+		allowed = {
+			original_tag = AUS
+		}
+		modifier = {
+			army_attack_factor = 0.1
+			army_speed_factor = 0.1
+		}
+	}
+
+	AUS_for_the_fatherland = {
+		removal_cost = -1
+		allowed = {
+			original_tag = AUS
+		}
+		modifier = {
+			army_core_defence_factor = 0.1
+			generate_wargoal_tension = -0.3
+			justify_war_goal_time = -0.25
+		}
+	}
+
+
+	}
+	head_of_government = {
+			AUS_kurt_schuchnigg = {
+				picture = AUS_kurt_minister
+				allowed = {
+					original_tag = AUS
+				}
+				available = {
+						has_government = conservatism
+				}
+				traits = { 
+					head_of_government
+					ruthless_pacifier
+				}
+			}
+			AUS_engelbert_dollfuss = {
+				picture = AUS_dollfuss_minister
+				allowed = {
+						original_tag = AUS
+				}
+				available = {
+						has_government = despotism
+						has_country_leader = {
+							    name = "Engelbert Dollfuß"
+							    ruling_only = yes
+							
+						}
+					}
+				traits = { 
+					head_of_government
+					glorious_reichsprotektor
+				}
+			}
+			AUS_general_staff = {
+				picture = AUS_general_staff
+				allowed = {
+					original_tag = AUS
+				}
+				available = {
+						has_government = despotism
+						NOT = {
+							has_country_leader = {
+							    name = "Engelbert Dollfuß"
+							    ruling_only = yes
+							}
+						}
+					}
+				traits = { 
+					head_of_government
+					despotic_council
+				}
+			}
+
+	}
+	
+	foreign_minister = {
+				AUS_ernst_rudiger = {
+				picture = AUS_rudiger_minister
+				allowed = {
+					original_tag = AUS
+				}
+				cancel = { 
+					NOT = {
+							has_government = despotism
+							has_government = reactionism
+							has_government = right_authoritarianism
+					}
+				}
+				available = {
+
+						OR = {
+							has_government = despotism
+							has_government = right_authoritarianism
+							has_government = reactionism
+						}
+
+					}
+				traits = { 
+					foreign_minister
+					for_great_compromiser
+				}
+			}
+				AUS_karl_buresch = {
+					picture = AUS_buresch_minister
+					allowed = {
+						original_tag = AUS
+					}
+					cancel = { 
+						NOT = {
+								has_government = conservatism
+								has_government = social_democratism
+								has_government = reactionism
+						}
+					}
+
+					available = {
+
+							OR = {
+								has_government = conservatism
+								has_government = social_democratism
+								has_government = reactionism
+							}
+
+						}
+					traits = { 
+						foreign_minister
+						for_biased_intellectual
+					}
+			}
+	}
+	economy_minister = {
+			AUS_friedrich_hayek = {
+				picture = AUS_hayek_minister
+				allowed = {
+					original_tag = AUS
+				}
+				cancel = { 
+					has_government = accelerationism
+					has_government = revolutionary_anarchism
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+						has_country_leader = {
+							   name = "Friedrich August von Hayek"
+							   ruling_only = yes
+						
+						}
+				 }
+				available = {
+
+
+						NOT = {
+							has_government = accelerationism
+							has_government = revolutionary_anarchism
+							has_government = vanguard_socialism
+							has_government = libertarian_marxism
+							has_country_leader = {
+							    name = "Friedrich August von Hayek"
+							    ruling_only = yes
+							}
+						}
+
+				}
+
+				traits = { 
+					economy_minister
+					eco_hayek
+				}
+			}
+	}
+	security_minister = {
+				AUS_emil_fey = {
+				picture = AUS_fey_minister
+				allowed = {
+					original_tag = AUS
+				}
+				cancel = { 
+					NOT = {
+							has_government = accelerationism
+							has_government = despotism
+							has_government = reactionism
+							has_government = right_authoritarianism
+					}
+				}
+				available = {
+
+						OR = {
+							has_government = accelerationism
+							has_government = despotism
+							has_government = reactionism
+							has_government = right_authoritarianism
+						}
+
+				}
+				traits = { 
+					security_minister
+					sec_prince_of_terror
+				}
+			}
+	}
+	head_of_intel = {
+	}
+	air_naval_manufacturer = {
+		designer = yes
+		herz = {
+			allowed = {
+					original_tag = AUS
+			}
+			available = {
+					original_tag = AUS
+			}
+			traits = {
+				fighter_producer_defense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+	}
+	tank_manufacturer = {
+		designer = yes
+		ausporsche = {
+			allowed = {
+					original_tag = AUS
+			}
+			available = {
+					original_tag = AUS
+			}
+			traits = {
+				porsche_trait
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+}

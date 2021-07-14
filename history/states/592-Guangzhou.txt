@@ -1,0 +1,22 @@
+state={
+	id=592
+	name="STATE_592"
+	manpower = 5648860
+	state_category = town
+	resources={
+		chromium = 4
+	}
+
+	history={
+		owner = GDP
+		add_core_of = GDP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			}
+		}
+
+	provinces={
+		1087 1131 1187 4092 7039 9963 11941 12077 11938
+	}
+}

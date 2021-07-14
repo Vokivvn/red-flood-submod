@@ -1,0 +1,124 @@
+﻿capital = 423
+
+oob = "MAD_1936"
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+MAD_british_direct_rule
+MAD_collapsing_raj
+MAD_partisan_infestation
+MAD_refugee_crisis
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 25
+	liberalism = 5
+	conservatism = 25
+	right_authoritarianism = 40
+	despotism = 5
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.6
+
+create_country_leader = {
+	name = "Lord John Erskine"
+	desc = "POLITICS_John_Erskine_DESC"
+	picture = "Portrait_MAD_John_Erskine.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "Philip Chetwode"
+	picture = "Portrait_MAD_Philip_Chetwode.dds"
+	traits = { old_guard organisational_leader}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Orde Wingate"
+	picture = "Portrait_MAD_Orde_Wingate.dds"
+	traits = { career_officer commando adaptable}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "George Vasey"
+	picture = "Portrait_MAD_George_Vasey.dds"
+	traits = { career_officer trickster }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Frank Messervy"
+	picture = "Portrait_MAD_Frank_Messervy.dds"
+	traits = { cavalry_leader }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Paramasiva Kumaramangalam"
+	picture = "Portrait_MAD_Paramasiva_Kumaramangalam.dds"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Gopal Gurunath Bewoor"
+	picture = "Portrait_MAD_Gopal_Gurunath_Bewoor.dds"
+	traits = { trait_cautious infantry_leader}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

@@ -1,0 +1,101 @@
+﻿capital = 335
+
+oob = "DEI_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "DEI_1936_naval_mtg"
+	else = {
+		set_naval_oob = "DEI_1936_naval_legacy"
+	}
+}
+set_research_slots = 3 
+
+set_convoys = 75
+
+set_cosmetic_tag = DEI_HOL
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fuel_silos = 1
+
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_destroyer = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1931.9.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 10
+	liberalism = 20
+	conservatism = 20
+	right_authoritarianism = 45
+	despotism = 2
+	reactionism = 0
+	accelerationism = 3
+}
+create_country_leader = {
+	name = "Bonifacius Cornelis de Jonge"
+	desc = "de_jonge_desc"
+	picture = "Portrait_CHAD_de_Jonge.dds"
+	expire = "1958.1.1"
+	ideology = oligarchy
+} 
+
+### VARIANTS ###
+
+add_equipment_to_stockpile = {
+	type = fighter_equipment_0
+	amount = 75
+}
+
+add_equipment_to_stockpile = {
+	type = CAS_equipment_1
+	amount = 50
+}
+

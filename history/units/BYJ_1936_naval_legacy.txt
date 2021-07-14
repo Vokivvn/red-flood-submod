@@ -1,0 +1,18 @@
+﻿units = {
+	##### ROCN #####
+	fleet = {
+		name = "Di 1 Jiandui"
+		naval_base = 12043 #Shanghai
+		task_force = {
+			name = "Di 1 Jiandui"
+			location = 12043 #Shanghai
+			ship = { name = "Yingrui" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Ninghai" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Hairong" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Zhaohe" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Haiqi" definition = light_cruiser equipment = { light_cruiser_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Dadong" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = BYJ } } }
+			ship = { name = "Zejiang" definition = destroyer equipment = { destroyer_1 = {amount = 1 owner = BYJ } } }
+		}
+	}
+}

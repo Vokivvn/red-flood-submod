@@ -1,0 +1,52 @@
+﻿capital = 991
+
+#oob = "SYR_1936"
+
+set_research_slots = 2
+
+set_convoys = 0
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 10
+	despotism = 0
+	reactionism = 10
+	accelerationism = 80
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+create_country_leader = {
+	name = "Abd-el-Haï"
+	desc = "POLITICS_MONFRIED_DESC"
+	picture = "gfx/leaders/FRA/Portrait_FRA_Henry_Monfried.tga"
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+	traits = {}
+	}
+
+

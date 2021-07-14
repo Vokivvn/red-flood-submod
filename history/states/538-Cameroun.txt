@@ -1,0 +1,31 @@
+state={
+	id=538
+	name="STATE_538" # Central Congo
+	manpower = 1543974
+	
+	state_category = rural
+	resources={
+		rubber=5 # was: 5
+		steel=5
+		tungsten=5
+	}
+	
+	history={
+		owner = PCN
+		buildings = {
+			infrastructure = 4
+		}
+		#add_core_of = COG
+		add_core_of = PCN
+		add_core_of = CFS
+		add_core_of = NBE
+		add_core_of = KIV
+		victory_points = { 
+		10071 1
+		}
+	}
+
+	provinces={
+		988  10071 12775
+	}
+}

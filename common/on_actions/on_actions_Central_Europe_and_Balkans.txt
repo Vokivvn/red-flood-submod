@@ -1,0 +1,191 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			AUS = {
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = AUS_ai_route
+							option = RANDOM
+						}
+					}
+					random_list = {
+						80 = { AUS = { set_country_flag = AUS_ai_path_1 } }
+						20 = { AUS = { set_country_flag = AUS_ai_path_2 } }
+					}
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					tag = AUS
+					is_subject = no
+					OR = {
+						has_cosmetic_tag = AUS_empire
+						has_cosmetic_tag = AUS_empire_czechia
+					}
+				}
+				if = {
+					limit= {
+						CZE = { exists = no }			
+						owns_state = 9
+						NOT = { has_cosmetic_tag = AUS_empire_czechia }
+					}
+					set_cosmetic_tag = AUS_empire_czechia
+				}
+				else_if = {
+					limit= {
+						HUN = { exists = no }
+						owns_state = 43
+					}
+					set_cosmetic_tag = AUS_empire_danube
+				}
+			}
+			if = {
+				limit = {
+					tag = AUS
+					is_subject = no
+					has_country_leader = {
+						name = "Adolf Hitler"
+						ruling_only = yes
+					}
+					SWI = { exists = no }
+					owns_state = 3
+				}
+				set_cosmetic_tag = AUS_alpine
+			}
+			if = {
+				limit = {
+					tag = ASC
+					AUS = { exists = no }
+					has_country_flag = AUS_civil_war
+				}
+				every_owned_state = {
+					limit = { is_core_of = ASC }
+					AUS = { transfer_state = PREV }
+				}
+				add_to_temp_array = { core_removal_array = ASC }
+				remove_all_cores_and_claims_of_tags = yes
+				AUS = {
+					if = {
+						limit = {
+							ASC = { has_government = libertarian_marxism }
+						}
+						add_popularity = {
+							ideology = libertarian_marxism
+							popularity = 0.20
+						}
+						set_politics = {
+							ruling_party = libertarian_marxism
+							elections_allowed = no
+						}
+						set_cosmetic_tag = AUS_left
+						complete_national_focus = AUS_weakenthegovernment
+						set_country_flag = AUS_socialistswon
+					}
+					else_if = {
+						limit = {
+							ASC = { has_government = conservatism }
+						}
+						add_popularity = {
+							ideology = conservatism
+							popularity = 0.20
+						}
+						set_politics = {
+							ruling_party = conservatism
+							elections_allowed = no
+						}
+						create_country_leader = {
+							name = "Kurt Schuschnigg"
+							picture = "gfx/leaders/AUS/Portrait_Austria_Kurt_Schuschnigg.tga"
+							expire = "1965.1.1"
+							ideology = social_conservatism
+							traits = {
+							}
+						}
+						drop_cosmetic_tag = yes
+						set_country_flag = AUS_conservativeswon
+						complete_national_focus = AUS_powertothemoderates
+						add_ideas = AUS_democracyprevailed
+					}
+					annex_country = {
+						target = ASC
+						transfer_troops = yes
+					}
+					clr_country_flag = AUS_civil_war
+				}
+			}
+			else_if = {
+				limit = {
+					tag = AUS
+					ASC = { exists = no }
+					has_country_flag = AUS_civil_war
+				}
+				add_to_temp_array = { core_removal_array = ASC }
+				remove_all_cores_and_claims_of_tags = yes
+				clr_country_flag = AUS_civil_war
+			}
+			if = {
+				limit = {
+					CZE = { exists = no }
+					NOT = {
+						POL = {
+							owns_state = 72
+							owns_state = 975
+						}
+					}
+					POL = {
+						owns_state = 88
+						is_subject = no
+					}
+				}
+				every_state = {
+					limit = {
+						OR = {
+							state = 72
+							state = 975
+						}
+					}
+					POL = { transfer_state = PREV add_state_core = PREV }
+				}
+			}
+		}
+	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							FROM = { original_tag = FIU }
+							tag = ITA
+						}
+						AND = {
+							FROM = { original_tag = ITA }
+							tag = FIU
+						}
+					}
+				}
+				hidden_effect = {
+					MNT = {
+						country_event = {
+							id = montenegro.1
+						}
+						if = {
+							limit = {
+								is_in_faction_with = ITA
+							}
+							leave_faction = yes
+						}
+					}
+					ITA = {
+						end_puppet = MNT
+					}
+				}
+			}
+		}
+	}
+}

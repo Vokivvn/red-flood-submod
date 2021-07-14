@@ -1,0 +1,253 @@
+﻿capital = 100
+
+oob = "NOR_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "NOR_1936_naval_mtg"
+	else = {
+		set_naval_oob = "NOR_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	limited_conscription
+}
+
+set_stability = 0.9
+set_war_support = 0.1
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	tech_recon = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_convoys = 350		# biggest merchant marine in the world
+set_stability = 0.57
+
+set_cosmetic_tag = NOR_peoples_council
+
+set_politics = {
+	ruling_party = revisionist_socialism
+	last_election = "1933.10.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 52
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 34
+	social_democratism = 0
+	liberalism = 8
+	conservatism = 6
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+
+create_country_leader = {
+	name = "Bernt Heiberg"
+	desc = ""
+	picture = "gfx/leaders/NOR/Portrait_Bernt_Heiberg.dds"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+	traits = {
+		dictator
+	}
+}
+
+create_country_leader = {
+	name = "Fridtjof Nansen"
+	desc = ""
+	picture = "gfx/leaders/NOR/fridtjof_nansen.dds"
+	expire = "1965.1.1"
+	ideology = orthodox_leninism
+	traits = {
+		dictator
+	}
+}
+
+
+create_corps_commander = {
+	name = "Carl Gustav Fleischer"
+	portrait_path = "Portrait_Norway_Carl_Fleischer.dds"
+	traits = {  trickster winter_specialist }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Kristian Kristiansen Laake"
+	portrait_path = "Portrait_Norway_Kristian_Kristiansen_Laake.dds"
+	traits = {  old_guard inflexible_strategist }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Otto Ruge"
+	portrait_path = "Portrait_Norway_Otto_Ruge.dds"
+	traits = {  old_guard career_officer infantry_leader }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Birger Eriksen"
+	portrait_path = "Portrait_Norway_Birger_Eriksen.dds"
+	traits = {  old_guard winter_specialist }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Wilhelm von Tangen Hansteen"
+	portrait_path = "Portrait_Norway_Wilhelm_von_Tangen_Hansteen.dds"
+	traits = { commando  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_navy_leader = {
+	name = "Elias Corneliussen"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	traits = { navy_career_officer inshore_fighter spotter }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 1
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "A & B Class"						
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Draug Class"							
+		type = ship_hull_light_1
+		name_group = NOR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Frøya Class"								# minelayer		
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Olaf Tryggvason Class"							# minelayer		
+		type = ship_hull_light_2
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Norge Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = NOR_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

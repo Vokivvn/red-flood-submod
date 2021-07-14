@@ -1,0 +1,57 @@
+##############
+# Montenegro #
+##############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		LOU_low_legitimacy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LOU_low_legitimacy"}
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.5
+				surrender_limit = -0.25
+			}
+			picture = generic_disjointed_gov
+		}
+		
+		LOU_southern_resistance = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea LOU_southern_resistance"}
+			modifier = {
+				stability_factor = -0.2
+				political_power_factor = -0.5
+				conscription_factor = -0.5
+			}
+			picture = chi_war_of_resistance3
+		}
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

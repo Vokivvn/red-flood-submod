@@ -1,0 +1,260 @@
+##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = RUS_INF_02
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Pekhotnaya Diviziya"			# Infantry Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"	# Cavarly Division
+	division_names_group = RUS_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+units = {
+	division = {
+		name = "Drozdovskaya Clique Diviziya 1"
+		location = 437
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 2"
+		location = 413
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 3"
+		location = 232
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 4"
+		location = 3332
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 5"
+		location = 6284
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 6"
+		location = 3387
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 7"
+		location = 11298
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 8"
+		location = 9253
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 9"
+		location = 11325
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 10"
+		location = 6704
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 11"
+		location = 371
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 12"
+		location = 11217
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 13"
+		location = 366
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 14"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 15"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 16"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 17"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 18"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 19"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 20"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 21"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 22"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Diviziya 23"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 1"
+		location = 6262
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 2"
+		location = 9353
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 3"
+		location = 269
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 4"
+		location = 9273
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 5"
+		location = 3335
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 6"
+		location = 9282
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 7"
+		location = 11369
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 8"
+		location = 6587
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 9"
+		location = 6587
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Drozdovskaya Clique Kavaleriyskaya 10"
+		location = 6587
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.8
+	}
+}

@@ -1,0 +1,28 @@
+add_namespace = jef
+
+# Cosmic Realization
+country_event = {
+	id = jef.1
+	title = jef.1.t
+	desc = jef.1.desc
+	picture = GFX_JEF_cosmicmind
+	is_triggered_only = yes
+
+	option = {
+		name = jef.1.a
+		add_political_power = 10
+	}
+}
+# Initiation
+country_event = {
+	id = jef.2
+	title = jef.2.t
+	desc = jef.2.desc
+	picture = GFX_JEF_initiation
+	is_triggered_only = yes
+
+	option = {
+		name = jef.2.a
+		add_manpower = 1
+	}
+}

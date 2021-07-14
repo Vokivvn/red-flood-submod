@@ -1,0 +1,23 @@
+
+state={
+	id=406
+	name="STATE_406" # Turgai
+	manpower = 349620
+
+	state_category = rural
+
+	history={
+		owner = ORE
+		victory_points = {
+			10164 1 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = ORE
+	}
+
+	provinces={
+		1360 1429 4227 4303 4374 4376 7337 7354 7392 7410 10164 10275 10277 10295 10452 12139 12170 12198 12227 
+	}
+}

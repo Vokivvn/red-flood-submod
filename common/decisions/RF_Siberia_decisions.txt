@@ -1,0 +1,245 @@
+SIB_reclaiming_the_homeland = {
+	SIB_burn_false_rome = {
+		cost = 100
+		ai_will_do = {
+            factor = 0.5
+        }
+		allowed = { tag = SIB }
+		icon = generic_scorched_earth
+		visible = {
+			has_completed_focus = SIB_march_on_false_rome
+		}
+		available = {
+			controls_state = 209
+		}
+		activation = {
+			controls_state = 209
+		}
+		fire_only_once = yes
+		complete_effect = {
+			219 = {
+				remove_building = {
+					type = infrastructure
+					level = 10
+				}
+				add_manpower = -100000
+			}
+			209 = {
+				add_manpower = 50000
+			}
+			247 = {
+				add_manpower = 25000
+			}
+		}
+	}
+	SIB_move_to_kiev = {
+		cost = 20
+		ai_will_do = {
+            factor = 0.5
+        }
+		allowed = { tag = SIB }
+		icon = eng_trade_unions_demand
+		visible = {
+			has_completed_focus = SIB_reclaim_kiev
+		}
+		available = {
+			owns_state = 202
+		}
+		fire_only_once = yes
+		complete_effect = {
+			set_capital = 202
+			add_stability = 0.1
+			202 = {
+				add_manpower = 20000
+			}
+		}
+	}
+}
+
+SIB_european_union = {
+	SIB_ratify_treaty = {
+		cost = 200
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect  = {
+			set_country_flag = SIB_ratify_treaty
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				add_ideas = SIB_member_of_the_eu_1
+			}
+		}
+	}
+	SIB_draft_renovation_project = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				every_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+		}
+	}
+	SIB_collective_defence_charter = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 10000
+					producer = SIB
+				}
+				army_experience = 100
+			}
+		}
+	}
+	SIB_sign_free_trade_zone_charter = {
+		cost = 300
+		fire_only_once = yes
+		days_remove = 140
+		available = {
+			has_idea = SIB_member_of_the_eu_1
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SIB
+				}
+				swap_ideas = {
+					remove_idea = SIB_member_of_the_eu_1
+					add_idea = SIB_member_of_the_eu_2
+				}
+			}
+		}
+	}
+}
+SIB_invite_refugees = {
+	SIB_invite_jewish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			set_country_flag = SIB_invite_jewish_refugees
+			country_event = sib.50
+		}
+	}
+	SIB_invite_ukrainian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			set_country_flag = SIB_invite_ukrainian_refugees
+			country_event = sib.50
+		}
+	}
+	SIB_invite_polish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_baltic_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_finnish_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_russian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_persian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_romanian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_german_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_american_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_canadian_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_chinese_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_korean_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+	SIB_invite_japanese_refugees = {
+		cost = 100
+		fire_only_once = yes
+		days_remove = 140
+		remove_effect = {
+			country_event = sib.50
+		}
+	}
+}

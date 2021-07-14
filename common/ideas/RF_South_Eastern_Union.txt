@@ -1,0 +1,843 @@
+ideas = {
+	country = {
+		DKB_ukrainian_education = {
+			picture = DKB_ukrainian_education
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		DKB_ukrainian_education1 = {
+			picture = DKB_ukrainian_education
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				research_speed_factor = 0.07
+				right_authoritarianism_drift = 0.03
+				political_power_factor = 0.1
+			}
+		}
+		DKB_ukrainian_education2 = {
+			picture = DKB_ukrainian_education
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				research_speed_factor = 0.1
+				right_authoritarianism_drift = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		DKB_hryvnia_currency = {
+			picture = DKB_hryvnia
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.07
+				industrial_capacity_factory = 0.05
+			}
+		}
+		DKB_hryvnia_currency1 = {
+			picture = DKB_hryvnia
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				industrial_capacity_factory = 0.05
+				right_authoritarianism_drift = 0.03
+			}
+		}
+		DKB_hryvnia_currency2 = {
+			picture = DKB_hryvnia
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.12
+				industrial_capacity_factory = 0.1
+				right_authoritarianism_drift = 0.05	
+			}
+		}
+		DKB_decentralized_army = {
+			picture = SIB_patriotism
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				max_planning = -0.1
+				planning_speed = 0.15
+			}
+		}
+		DKB_decentralized_army1 = {
+			picture = SIB_patriotism
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				max_planning = -0.1
+				planning_speed = 0.15
+				experience_gain_army_factor = 0.1
+			}
+		}
+		DKB_legal_immigration = {
+			picture = DKB_legal_immigration 
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				non_core_manpower = 0.05
+				monthly_population = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		DKB_legal_immigration1 = {
+			picture = DKB_legal_immigration
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				non_core_manpower = 0.15
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		DKB_legal_immigration2 = {
+			picture = DKB_legal_immigration
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				non_core_manpower = 0.2
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		DKB_open_to_europe_idea = {
+			picture = DKB_open_to_europe
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+			}
+		}
+
+		DKB_federalism = {
+			picture = PRS_power_of_freikorps
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				political_power_factor = -0.05
+			 	army_org_factor = 0.1
+			}
+		}
+		DKB_pluralistic_education = {
+			picture = DKB_pluralistic_education
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		DKB_open_to_world_idea = {
+			picture = DKB_open_to_world
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+				non_core_manpower = 0.15
+			}
+		}
+		DKB_open_to_world_idea1 = {
+			picture = DKB_open_to_world
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.15
+				non_core_manpower = 0.15
+				political_power_factor = 0.1
+			 	send_volunteer_size = 2
+				send_volunteers_tension = -0.2
+				improve_relations_maintain_cost_factor = -0.45
+			}
+		}
+
+		DKB_open_to_russia_idea = {
+			picture = DKB_open_to_russia
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = RUS
+				license_purchase_cost  = -0.75
+			}
+			targeted_modifier = {
+				tag = SRU
+				license_purchase_cost  = -0.75
+			}
+		}
+		DKB_open_to_russia_idea1 = {
+			picture = DKB_open_to_russia
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				consumer_goods_factor = -0.05
+				despotism_drift = 0.05
+				non_core_manpower = 0.1
+			}
+			targeted_modifier = {
+				tag = RUS
+				license_purchase_cost  = -0.75
+			}
+			targeted_modifier = {
+				tag = SRU
+				license_purchase_cost  = -0.75
+			}
+		}
+		DKB_russification = {
+			picture = SIB_russification_by_education
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				despotism_drift = 0.05
+				stability_factor = -0.05
+			 	political_power_factor = 0.05
+			}
+		}
+		DKB_russian_immigration = {
+			picture = DKB_russian_immigration
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				monthly_population = 0.15
+			}
+		}
+		DKB_ruble_currency = {
+			picture = DKB_ruble
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+			 	industrial_capacity_factory = 0.1
+			 	industrial_capacity_dockyard = 0.1
+			 	political_power_factor = 0.1
+			}
+		}
+		DKB_centralized_army = {
+			picture = PRS_power_of_freikorps
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				max_planning = 0.1
+				research_speed_factor = 0.1
+				training_time_army_factor = -0.05
+			 	army_morale_factor = -0.1
+			}
+		}
+
+		DKB_npp = {
+			picture = SIB_popularland
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		DKB_chervonets_currency = {
+			picture = DKB_chervonets
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+				liberalism_drift = -0.05
+				conservatism_drift = -0.05
+			}
+		}
+		DKB_slavic_scythian_supremacy = {
+			picture = DKB_slavic_scythian
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				conscription_factor = -0.05
+				political_power_factor = 0.15
+				resistance_target = -0.1
+				right_authoritarianism_drift = -0.05
+			}
+		}
+		DKB_purge_of_russian_monarchists = {
+			picture = DKB_purge_monarchists
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				political_power_factor = 0.15
+				army_core_attack_factor = 0.05
+			 	army_morale_factor = -0.05
+				despotism_drift = -0.05
+				reactionism_drift = -0.05
+			}
+		}
+		DKB_revolutionary_anti_communism = {
+			picture = DKB_revolutionary_anti_com
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				vanguard_socialism_drift = -0.05
+				libertarian_marxism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+		}
+		DKB_scythian_rebirth = {
+			picture = DKB_scythian_rebirth
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.02
+				conscription_factor = 0.05
+				resistance_target = -0.1
+				political_power_factor = 0.3
+				army_core_attack_factor = 0.05
+			 	army_morale_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				vanguard_socialism_drift = -0.05
+				libertarian_marxism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+				liberalism_drift = -0.05
+				conservatism_drift = -0.05
+				right_authoritarianism_drift = -0.05
+				despotism_drift = -0.05
+				reactionism_drift = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+		}
+		DKB_totalitarian_state = {
+			picture = DKB_totalitarian
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				encryption_factor = 1
+				decryption_factor = 1
+				research_speed_factor = 0.15
+				resistance_target = -0.1
+			}
+		}
+		DKB_totalitarian_state1 = {
+			picture = DKB_totalitarian
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				encryption_factor = 1
+				decryption_factor = 1
+				research_speed_factor = 0.1
+				resistance_target = -0.1
+			}
+		}
+		DKB_gorgulovite_youth = {
+			picture = DKB_gorgulovite_youth
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = -0.03
+			}
+		}
+		DKB_commissars_and_orchestras = {
+			picture = DKB_commissars_orchestras
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				army_morale_factor = 0.15
+			 	training_time_army_factor = -0.05
+			}
+		}
+		DKB_chosen_of_vozhd = {
+			picture = DKB_chosen_of_vozhd
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.07
+				conscription_factor = 0.05
+				resistance_target = -0.2
+				political_power_factor = 0.3
+				army_core_attack_factor = 0.05
+				army_morale_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+				vanguard_socialism_drift = -0.05
+				libertarian_marxism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+				liberalism_drift = -0.05
+				conservatism_drift = -0.05
+				right_authoritarianism_drift = -0.05
+				despotism_drift = -0.05
+				reactionism_drift = -0.05
+				encryption_factor = 1
+				decryption_factor = 1
+				research_speed_factor = 0.1
+				conscription = 0.02
+			 	training_time_army_factor = -0.05
+			 	justify_war_goal_time = -0.25
+			 	surrender_limit = 0.03
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+		}
+		DKB_chosen_of_vozhd1 = {
+			picture = DKB_chosen_of_vozhd
+			allowed = {
+				original_tag = DKB
+		    }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.07
+				conscription_factor = 0.05
+				resistance_target = -0.2
+				political_power_factor = 0.3
+				army_core_attack_factor = 0.05
+				army_morale_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+				vanguard_socialism_drift = -0.05
+				libertarian_marxism_drift = -0.05
+				revisionist_socialism_drift = -0.05
+				liberalism_drift = -0.05
+				conservatism_drift = -0.05
+				right_authoritarianism_drift = -0.05
+				despotism_drift = -0.05
+				reactionism_drift = -0.05
+				encryption_factor = 1
+				decryption_factor = 1
+				research_speed_factor = 0.1
+				conscription = 0.02
+			 	training_time_army_factor = -0.05
+			 	justify_war_goal_time = -0.45
+			 	surrender_limit = 0.03
+			}
+			targeted_modifier = {
+				tag = GER
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = HUN
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ZHR
+				defense_bonus_against = 0.1
+			}
+		}
+	}
+
+	head_of_government = {
+		DKB_Luka_Bych_hog = {
+			picture = GFX_idea_DKB_Luka_Bych_hog
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+		DKB_Afrikan_Bogayevsky_hog = {
+			picture = GFX_idea_DKB_Afrikan_Bogayevsky_hog
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+		}
+		DKB_Pavel_Gorgulov_hog = {
+			picture = GFX_idea_DKB_Pavel_Gorgulov_hog
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+		}
+	}
+	foreign_minister = {
+		DKB_Fedir_Shcherbyna_for = {
+			picture = GFX_idea_DKB_Fedir_Shcherbyna_for
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		DKB_Fyodor_Bekovich_Cherkassky_for = {
+			picture = GFX_idea_DKB_Fyodor_Bekovich_Cherkassky_for
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+		}
+		DKB_Konstantin_Chkheidze_for = {
+			picture = GFX_idea_DKB_Konstantin_Chkheidze_for
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	economy_minister = {
+		DKB_Vasyl_Ivanis_eco = {
+			picture = GFX_idea_DKB_Vasyl_Ivanis_eco
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+		}
+		DKB_Pavel_Kudinov_eco = {
+			picture = GFX_idea_DKB_Pavel_Kudinov_eco
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				economy_minister
+				eco_infantry_proponent
+			}
+		}
+		DKB_Galina_Kuznetsova_eco = {
+			picture = GFX_idea_DKB_Galina_Kuznetsova_eco
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+	}
+	security_minister = {
+		DKB_Oleksandr_Filimonov_sec = {
+			picture = GFX_idea_DKB_Oleksandr_Filimonov_sec
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+		}
+		DKB_Pyotr_Popov_sec = {
+			picture = GFX_idea_DKB_Pyotr_Popov_sec
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+		}
+		DKB_Bora_Berduko_sec = {
+			picture = GFX_idea_DKB_Bora_Berduko_sec
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+	head_of_intel = {
+		DKB_Mykola_Bukretov_int = {
+			picture = GFX_idea_DKB_Mykola_Bukretov_int
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_chernomortsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		DKB_Svyatoslav_Denisov_int = {
+			picture = GFX_idea_DKB_Svyatoslav_Denisov_int
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				OR = {
+					has_completed_focus = DKB_lineytsy_victorious
+					has_completed_focus = DKB_kaledin_marches_forward
+				}
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		DKB_Vladimir_Sidorin_int = {
+			picture = GFX_idea_DKB_Vladimir_Sidorin_int
+			allowed = {
+				original_tag = DKB
+			}
+			available = {
+				has_completed_focus = DKB_gorgulov_at_stage
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+		}
+	}
+
+	chief_of_staff = {
+		DKB_Afrikan_Bogayevsky_cos = {
+			picture = GFX_idea_DKB_Afrikan_Bogayevsky_cos
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+		DKB_Mykola_Ryabovil_cos = {
+			picture = GFX_idea_DKB_Mykola_Ryabovil_cos
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+
+	chief_of_army = {
+		DKB_Pyotr_Polovtsov_carm = {
+			picture = GFX_idea_DKB_Pyotr_Polovtsov_carm
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+		DKB_Andrey_Shkuro_carm = {
+			picture = GFX_idea_DKB_Andrey_Shkuro_carm
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		DKB_Dmitriy_Nenyukov_cnav = {
+			picture = GFX_idea_DKB_Dmitriy_Nenyukov_cnav
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+		DKB_Mykhail_Sablin_cnav = {
+			picture = GFX_idea_DKB_Mykhail_Sablin_cnav
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		DKB_Aleksandr_Utin_cair = {
+			picture = GFX_idea_DKB_Aleksandr_Utin_cair
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		DKB_Vasily_Bibikov_cair = {
+			picture = GFX_idea_DKB_Vasily_Bibikov_cair
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		DKB_Fyodor_Bekovich_Cherkassky_theo = {
+			picture = GFX_idea_DKB_Fyodor_Bekovich_Cherkassky_theo
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				land_doctrine_theorist
+			}
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+		DKB_Mykola_Bukretov_theo = {
+			picture = GFX_idea_DKB_Mykola_Bukretov_theo
+			allowed = {
+				original_tag = DKB
+			}
+			traits = {
+				industry_theorist
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+}

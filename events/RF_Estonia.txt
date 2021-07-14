@@ -1,0 +1,55 @@
+add_namespace = estonia
+
+country_event = {
+	id = estonia.1
+	title = estonia.1.t
+	desc = estonia.1.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = estonia.1.a
+		EST = { add_to_faction = LIT }
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = estonia.1.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = estonia.2
+	title = estonia.2.t
+	desc = estonia.2.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = estonia.2.a
+		RUS = {
+			end_puppet = FIN
+		}
+		set_autonomy = {
+		    target = FIN
+		    autonomy_state = autonomy_free
+		}
+		drop_cosmetic_tag = yes
+		EST = { add_to_faction = FIN }
+		ai_chance = {
+			base = 9
+		}
+	}
+	option = {
+		name = estonia.2.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}

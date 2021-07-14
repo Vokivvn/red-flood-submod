@@ -1,0 +1,155 @@
+capital = 563
+oob = "M02_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	MO2_border_raids
+	MO2_wild_far_east
+	MO2_white_expats
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gw_artillery = 1
+}
+
+# Events #
+country_event = { id = mo2.101 days = 1 }
+
+set_war_support = 0.35
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 45
+	reactionism = 25
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Grigory Semyonov"
+	desc = "POLITICS_Semyonov_DESC"
+	picture = "gfx/leaders/M02/Portrait_MO2_Grigoriy_Semyonov.tga"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+	
+	}
+}
+create_country_leader = {
+	name = "Sergei Taskin"
+	desc = "POLITICS_Taskin_DESC"
+	picture = "gfx/leaders/M02/Portrait_lib_Sergey_Taskin.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+	
+	}
+}
+
+create_country_leader = {
+	name = "Pitirim Sorokin"
+	desc = "POLITICS_Sorokin_DESC"
+	picture = "gfx/leaders/M02/Portrait_con_Pitrim_Sorokin.dds"
+	expire = "1968.1.1"
+	ideology = social_conservatism
+	traits = {
+	
+	}
+}
+create_country_leader = {
+	name = "Anton Kostyushko-Valyuzanich"
+	desc = "POLITICS_Anton_DESC"
+	picture = "gfx/leaders/M02/Portrait_Anton_Kostyushko_Valyuzanich.dds"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+	
+	}
+}
+
+create_country_leader = {
+	name = "Provisional Baikal Government"
+	desc = "POLITICS_provisional_MO2_DESC"
+	picture = "gfx/leaders/M02/Portrait_provisional_mo2.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+	
+	}
+}
+
+create_field_marshal = {
+	name = "Grigory Semyonov"
+	portrait_path = "gfx/leaders/M02/Portrait_M02_Semyonov.dds"
+	traits = { offensive_doctrine }
+	id = 56301
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+#create_corps_commander = {
+#	name = "Ivan Shilnikov"
+#	picture = "Ivan_Shilnikov_lib_general.dds"
+#	traits = {   }
+#	skill = 2
+#	attack_skill = 2
+#	defense_skill = 2
+#	planning_skill = 2
+#	logistics_skill = 1
+#}
+
+create_corps_commander = {
+	name = "Leonid Verigo"
+	portrait_path = "gfx/leaders/M02/Leonid_Verigo.dds"
+	traits = {  }
+	skill = 1 
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Leo Vlasyevsky"
+	portrait_path = "gfx/leaders/M02/Vlasyevsky.dds"
+	traits = { trickster career_officer infantry_officer }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Xenofont Aslamov"
+	portrait_path = "gfx/leaders/M02/Xenofont_Aslamov.dds"
+	traits = { trait_reckless }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

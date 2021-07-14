@@ -1,0 +1,56 @@
+GUK_perfection_with_USA = {
+	GUK_sign_NPT = {
+		cost = 50
+		available = {
+			USA = {
+				has_government = accelerationism
+				is_in_faction = no
+			}
+		}
+		complete_effect  = {
+			USA = {
+				create_faction = north_pacific_treaty_faction
+				country_event = {
+					id = ZHR.40
+				}
+				add_to_faction = north_pacific_treaty_faction
+			}
+			country_event = {
+				id = ZHR.401
+			}
+		}
+		visible = {
+			USA = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GUK_join_gdi = {
+		cost = 50
+		available = {
+			KAV = {
+				is_in_faction_with = USA
+			}
+		}
+		complete_effect  = {
+			KAV = {
+				add_to_faction = GUK
+			}
+		}
+		visible = {
+			KAV = {
+				exists = yes
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,143 @@
+division_template = {
+	name = "Milícia Regional"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+}
+division_template = {
+	name = "Divisão de Cavalaria"  		# Cavalry Division
+	division_names_group = BRA_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	division = {
+		location = 10447
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 8181
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 2109
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 4587
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 2181
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 8224
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 10447
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 8181
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 2109
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 4587
+		division_template = "Milícia Regional"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 2181
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 5168
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 5107
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 7561
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 1524
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 1524
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 1524
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 7561
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 7561
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 7561
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 5107
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+	division = {
+		location = 5107
+		division_template = "Divisão de Cavalaria"
+		start_experience_factor = 0.20
+	}
+}

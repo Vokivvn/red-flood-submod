@@ -1,0 +1,908 @@
+ideas = {
+	country = {
+		SIB_minorities_recognized = {
+			picture = SIB_minorities_recognized
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		SIB_member_of_the_eu_1 = {
+			picture = SIB_european_union_member
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				min_export = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		SIB_member_of_the_eu_2 = {
+			picture = SIB_european_union_member
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				min_export = 0.1
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		SIB_swiss = {
+			picture = SIB_swiss
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		SIB_oldfrnc = {
+			picture = SIB_oldfrnc
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				training_time_factor = -0.05
+			}
+		}
+		SIB_transformation = {
+			picture = SIB_transformation
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.05
+				social_democratism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+			}
+		}
+		SIB_econreforms = {
+			picture = SIB_econreforms
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		SIB_popularland = {
+			picture = SIB_popularland
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SIB_industrial_subsidies = {
+			picture = SIB_industrial_subsidies
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		SIB_patriotism = {
+			picture = SIB_patriotism
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		SIB_patriotism1 = {
+			picture = SIB_patriotism
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		SIB_welfarestate = {
+			picture = SIB_welfarestate
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				min_export = -0.05
+			}
+		}
+		SIB_siberia_glory = {
+			picture = SIB_siberia_glory
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		SIB_siberian_democracy = {
+			picture = SIB_siberian_democracy
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.25
+				political_power_factor = 0.05
+				social_democratism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				min_export = -0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.05
+			}
+		}
+		SIB_siberian_democracy1 = {
+			picture = SIB_siberian_democracy
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.25
+				political_power_factor = 0.05
+				social_democratism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.2
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				min_export = -0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.05
+				research_speed_factor = 0.1
+			}
+		}
+		SIB_league_of_nations_member = {
+			picture = SIB_league_of_nations_member
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				trade_opinion_factor  = 0.3
+				political_power_factor = 0.1
+				min_export = 0.05
+			}
+		}
+
+		SIB_russification_by_education = {
+			picture = SIB_russification_by_education
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				stability_factor = -0.1
+				despotism_drift = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		SIB_workethic = {
+			picture = SIB_workethic
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				libertarian_marxism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				revolutionary_anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+			}
+		}
+		SIB_workethic1 = {
+			picture = SIB_industrial_quotas
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				libertarian_marxism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				revolutionary_anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+				local_resources_factor = 0.2
+			}
+		}
+		SIB_workethic2 = {
+			picture = SIB_industrial_quotas
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.05
+				vanguard_socialism_drift = -0.02
+				libertarian_marxism_drift = -0.02
+				revisionist_socialism_drift = -0.02
+				revolutionary_anarchism_drift = -0.02
+				accelerationism_drift = -0.02
+				local_resources_factor = 0.3
+			}
+		}
+		SIB_havenfordrozd = {
+			picture = SIB_havenfordrozd
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.15
+				despotism_drift = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		SIB_synchronization_army = {
+			picture = SIB_synchronization_army
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		SIB_synchronization_army_1 = {
+			picture = SIB_synchronization_army
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.15
+				training_time_factor = -0.15
+				attrition = -0.05
+			}
+		}
+		SIB_synchronization_army_2 = {
+			picture = SIB_synchronization_army
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.15
+				training_time_factor = -0.15
+				attrition = -0.05
+				research_speed_factor = 0.05
+			}
+		}
+		SIB_russian_militarism = {
+			picture = SIB_russian_militarism
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.15
+				attrition = -0.05
+				research_speed_factor = 0.05
+				war_support_factor = 0.15
+			}
+			equipment_bonus = {
+				light_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+				heavy_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+			}
+		}
+		SIB_population_growth = {
+			picture = ASY_repatriation
+			removal_cost = -1
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				monthly_population = 2
+			}
+		}
+		SIB_society = {
+			picture = SIB_society
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		SIB_society1 = {
+			picture = SIB_society
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SIB_society2 = {
+			picture = SIB_society
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				accelerationism_drift = 0.05
+			}
+		}
+		SIB_solidaristcommissars = {
+			picture = SIB_solidaristcommissars
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				resistance_target = -0.1
+			}
+		}
+		SIB_solidaristcommissars1 = {
+			picture = SIB_solidarist_mass_media
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				resistance_target = -0.1
+				trade_opinion_factor = 0.15
+				subversive_activites_upkeep = -0.2
+			}
+		}
+		SIB_russian_progressivism = {
+			picture = SIB_russian_progressivism
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				accelerationism_drift = 0.1
+				resistance_target = -0.1
+				trade_opinion_factor = 0.15
+				subversive_activites_upkeep = -0.2
+				research_speed_factor = 0.05
+			}
+		}
+		SIB_synchronization_economy = {
+			picture = SIB_synchronization_economy
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		SIB_synchronization_economy1 = {
+			picture = SIB_synchronization_economy
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		SIB_synchronization_economy2 = {
+			picture = SIB_synchronization_economy
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.2
+				local_resources_factor = 0.25
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		SIB_SVSNK = {
+			picture = SIB_SVSNK
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				min_export = -0.05
+				political_power_factor = 0.05
+			}
+		}
+		SIB_solidarism_idea = {
+			picture = SIB_solidarism_idea
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.2
+				local_resources_factor = 0.25
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
+				min_export = -0.05
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SIB_russian_rebirth_idea = {
+			picture = SIB_russian_rebirth_idea
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.2
+				research_speed_factor = 0.1
+				conscription_factor = 0.2
+				training_time_factor = -0.15
+				attrition = -0.05
+				war_support_factor = 0.15
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				accelerationism_drift = 0.1
+				resistance_target = -0.1
+				trade_opinion_factor = 0.15
+				subversive_activites_upkeep = -0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.2
+				local_resources_factor = 0.25
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
+				min_export = -0.05
+				production_speed_buildings_factor = 0.1
+				drift_defence_factor = 0.5
+			}
+			equipment_bonus = {
+				light_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+				heavy_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+			}
+		}
+		SIB_russian_rebirth_idea1 = {
+			picture = SIB_russian_rebirth_idea
+			allowed = {
+				original_tag = SIB
+			}
+			modifier = {
+				political_power_factor = 0.2
+				research_speed_factor = 0.1
+				conscription_factor = 0.2
+				training_time_factor = -0.15
+				attrition = -0.05
+				war_support_factor = 0.15
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				accelerationism_drift = 0.1
+				resistance_target = -0.1
+				trade_opinion_factor = 0.15
+				subversive_activites_upkeep = -0.2
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_factory_max_efficiency_factor = 0.2
+				local_resources_factor = 0.25
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = -0.1
+				min_export = -0.05
+				production_speed_buildings_factor = 0.1
+				drift_defence_factor = 0.5
+				justify_war_goal_time = -0.5
+			}
+			equipment_bonus = {
+				light_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+				heavy_tank_equipment = {
+					instant = yes reliability = 0.05
+				}
+			}
+		}
+	}
+
+	head_of_government = {
+		SIB_Vladimir_Krutovsky_hog = {
+			picture = SIB_Vladimir_Krutovsky_hog
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_invite_opposition_to_government
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+		SIB_Ivan_Mikhailov_hog = {
+			picture = SIB_Ivan_Mikhailov_hog
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+		}
+		SIB_Georgiy_Gins_hog = {
+			picture = SIB_Georgiy_Gins_hog
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_new_path
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+		SIB_upcos_hog = {
+			picture = SIB_upcos_hog
+			allowed = {
+				original_tag = MO4
+			}
+			available = {
+				has_completed_focus = SIB_history_is_on_our_side
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+
+	foreign_minister = {
+		SIB_Nikolay_Gondatti_for = {
+			picture = SIB_Nikolay_Gondatti_for
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_invite_opposition_to_government
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		SIB_Pyotr_Gran_for = {
+			picture = SIB_Pyotr_Gran_for
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		SIB_Vladimir_Poremsky_for = {
+			picture = SIB_Vladimir_Poremsky_for
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_new_path
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+		}
+		SIB_upcos_for = {
+			picture = SIB_upcos_for
+			allowed = {
+				original_tag = MO4
+			}
+			available = {
+				has_completed_focus = SIB_history_is_on_our_side
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+
+	economy_minister = {
+		SIB_Nikolay_Kozmin_eco = {
+			picture = SIB_Nikolay_Kozmin_eco
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_invite_opposition_to_government
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+		}
+		SIB_Ivan_Kraslinikov_eco = {
+			picture = SIB_Ivan_Kraslinikov_eco
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+		}
+		SIB_Georgiy_Okolovich_eco = {
+			picture = SIB_Georgiy_Okolovich_eco
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_new_path
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		SIB_upcos_eco = {
+			picture = SIB_upcos_eco
+			allowed = {
+				original_tag = MO4
+			}
+			available = {
+				has_completed_focus = SIB_history_is_on_our_side
+			}
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+		}
+	}
+
+	security_minister = {
+		SIB_Aleksandr_Novosyolov_sec = {
+			picture = SIB_Aleksandr_Novosyolov_sec
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_invite_opposition_to_government
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+		SIB_Vladimir_Dudinsky_sec = {
+			picture = SIB_Vladimir_Dudinsky_sec
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+		}
+		SIB_Mikhail_Rozanov_sec = {
+			picture = SIB_Mikhail_Rozanov_sec
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_new_path
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+		}
+		SIB_upcos_sec = {
+			picture = SIB_upcos_sec
+			allowed = {
+				original_tag = MO4
+			}
+			available = {
+				has_completed_focus = SIB_history_is_on_our_side
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+		}
+	}
+
+	head_of_intel = {
+		SIB_Pavel_Kandidov_inl = {
+			picture = SIB_Pavel_Kandidov_inl
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_invite_opposition_to_government
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		SIB_Karl_von_Nolken_int = {
+			picture = SIB_Karl_von_Nolken_int
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_black_hundreds_in_siberian_duma
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+		}
+		SIB_Fyodor_Yeliseyev_int = {
+			picture = SIB_Fyodor_Yeliseyev_int
+			allowed = {
+				original_tag = SIB
+			}
+			available = {
+				has_completed_focus = SIB_new_path
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		SIB_upcos_int = {
+			picture = SIB_upcos_int
+			allowed = {
+				original_tag = MO4
+			}
+			available = {
+				has_completed_focus = SIB_history_is_on_our_side
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+
+	chief_of_staff = {
+		SIB_Vyacheslav_Volkov_chf = {
+			picture = SIB_Fyodor_Yeliseyev_int
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+		SIB_Ivan_Krasilnikov_chf = {
+			picture = SIB_Ivan_Krasilnikov_chf
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+
+	chief_of_army = {
+		SIB_Mikhail_Khanzhin_arm = {
+			picture = SIB_Mikhail_Khanzhin_arm
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				carm_static_defence_doctrine
+			}
+		}
+		SIB_Pavel_Ivanov_Rinov_arm = {
+			picture = SIB_Pavel_Ivanov_Rinov_arm
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		SIB_Ilya_Mazuruk_air = {
+			picture = SIB_Ilya_Mazuruk_air
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		SIB_Mark_Shevelyov_air = {
+			picture = SIB_Mark_Shevelyov_air
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	
+	theorist = {
+		SIB_Ilya_Mazuruk_theo = {
+			picture = SIB_Ilya_Mazuruk_theo
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				operational_integrity_theorist
+			}
+			research_bonus = {
+				cat_operational_integrity = 0.1
+			}
+		}
+		SIB_Innokentiy_Smolin_theo = {
+			picture = SIB_Innokentiy_Smolin_theo
+			allowed = {
+				original_tag = SIB
+			}
+			traits = {
+				mobile_warfare_theorist
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.1
+			}
+		}
+	}
+}

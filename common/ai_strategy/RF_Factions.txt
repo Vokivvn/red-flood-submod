@@ -1,0 +1,81 @@
+stay_in_alliance_third_international = {
+    enable = {
+        AND = {
+            is_in_faction = yes
+            any_allied_country = {
+                tag = GER
+                is_faction_leader = yes
+            }
+        }
+    }
+ 
+    abort = {
+        NOT = { country_exists = GER }
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "GER"
+        value = 500
+    }
+}
+UGD_stay_out = {
+    enable = {
+        AND = {
+			tag = UGD
+			has_war_with = ENG
+		}
+    }
+ 
+    abort = {
+        NOT = { country_exists = ENG }
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "GER"
+        value = -500
+    }
+}
+stay_in_alliance_commonwealth = {
+    enable = {
+        AND = {
+            is_in_faction = yes
+            any_allied_country = {
+                tag = ENG
+                is_faction_leader = yes
+            }
+        }
+    }
+ 
+    abort = {
+        NOT = { country_exists = ENG }
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "ENG"
+        value = 500
+    }
+}
+stay_in_alliance_intermarium = {
+    enable = {
+        AND = {
+            is_in_faction = yes
+            any_allied_country = {
+                tag = POL
+                is_faction_leader = yes
+            }
+        }
+    }
+ 
+    abort = {
+        NOT = { country_exists = POL }
+    }
+
+    ai_strategy = {
+        type = alliance
+        id = "POL"
+        value = 500
+    }
+}

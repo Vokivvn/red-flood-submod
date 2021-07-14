@@ -1,0 +1,29 @@
+
+state={
+	id=732
+	name="STATE_732" #Magnitogorsk
+	
+	history={
+		owner = ORE
+		victory_points = {
+			7328 1 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 2
+		}
+		#add_core_of = KAZ
+		add_core_of = ORE
+		
+	}
+	resources={
+		steel = 10
+	}
+	provinces={
+		1334 4215 4340 4411 7233 7281 7328 7401 7429 10140 10168 10196 10224 10256 10284 12229
+	}
+	manpower=768823
+	buildings_max_level_factor=1.000
+	state_category = town
+}

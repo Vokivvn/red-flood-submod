@@ -1,0 +1,941 @@
+focus_tree = {
+	id = USA_moody
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+	shared_focus = USA_our_direction
+	focus = {
+		id = USA_moodys_presidency
+		icon = GFX_focus_USA_moodys_presidency
+		x = 6
+		y = 0
+
+		cost = 5
+
+		available = {
+			has_country_leader = {
+				name = "Dan Moody"
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_soil_conservation_corps
+		icon = GFX_focus_USA_soil_conservation_corps
+		prerequisite = {
+			focus = USA_moodys_presidency
+		}
+		relative_position_id = USA_moodys_presidency
+		x = -3
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = USA_SCC
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_soil_conservation_camps
+		icon = GFX_focus_USA_soil_conservation_camps
+		prerequisite = {
+			focus = USA_soil_conservation_corps
+		}
+		relative_position_id = USA_soil_conservation_corps
+		x = -1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = USA_SCC
+		add_idea = USA_SCC_1
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_drought_relief_service
+		icon = GFX_focus_USA_drought_relief_service
+		prerequisite = {
+			focus = USA_soil_conservation_corps
+		}
+		relative_position_id = USA_soil_conservation_corps
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = USA_dustbowl
+		add_idea = USA_dustbowl_improve_1
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_fund_forestry_conservative
+		icon = GFX_focus_USA_fund_forestry_conservative
+		prerequisite = {
+			focus = USA_soil_conservation_camps
+		}
+		prerequisite = {
+			focus = USA_drought_relief_service
+		}
+		relative_position_id = USA_soil_conservation_corps
+		x = 0
+		y = 2
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_FC
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_prevent_erosion
+		icon = GFX_focus_USA_prevent_erosion
+		prerequisite = {
+			focus = USA_fund_forestry_conservative
+		}
+		relative_position_id = USA_fund_forestry_conservative
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.10
+		add_political_power = -50
+		add_popularity = {
+		ideology = conservatism
+		popularity = 0.10
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_reform_road_system
+		icon = GFX_focus_USA_reform_road_system
+		prerequisite = {
+			focus = USA_moodys_presidency
+		}
+		relative_position_id = USA_moodys_presidency
+		x = 3
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+random_owned_controlled_state = {
+add_building_construction = {
+	type = infrastructure
+	level = 2
+	instant_build = yes
+}
+}
+random_owned_controlled_state = {
+add_building_construction = {
+	type = infrastructure
+	level = 2
+	instant_build = yes
+}
+}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_share_our_wealth
+		icon = GFX_focus_USA_share_our_wealth
+		prerequisite = {
+			focus = USA_reform_road_system
+		}
+		relative_position_id = USA_reform_road_system
+		x = -2
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_SOW
+		add_popularity = {
+		ideology = conservatism
+		popularity = 0.10
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_rural_poverties
+		icon = GFX_focus_USA_rural_poverties
+		prerequisite = {
+			focus = USA_reform_road_system
+		}
+		relative_position_id = USA_reform_road_system
+		x = 2
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		add_stability = 0.10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_deal_with_extremists
+		icon = GFX_focus_USA_deal_with_extremists
+		prerequisite = {
+			focus = USA_reform_road_system
+		}
+		relative_position_id = USA_reform_road_system
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = accelerationism
+		popularity = -0.2
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_veteran_pensions
+		icon = GFX_focus_USA_veteran_pensions
+		prerequisite = {
+			focus = USA_share_our_wealth
+		}
+		prerequisite = {
+			focus = USA_deal_with_extremists
+		}
+		relative_position_id = USA_deal_with_extremists
+		x = -1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_vet_pensions
+		add_popularity = {
+		ideology = conservatism
+		popularity = 0.2
+		}
+		swap_ideas = {
+			remove_idea = USA_under_budget_military
+			add_idea = USA_under_budget_military_1
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_education_for_americans
+		icon = GFX_focus_USA_education_for_americans
+		prerequisite = {
+			focus = USA_rural_poverties
+		}
+		prerequisite = {
+			focus = USA_deal_with_extremists
+		}
+		relative_position_id = USA_deal_with_extremists
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		add_political_power = -150
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_federal_highways
+		icon = GFX_focus_USA_federal_highways
+		prerequisite = {
+			focus = USA_education_for_americans
+		}
+		prerequisite = {
+			focus = USA_veteran_pensions
+		}
+		relative_position_id = USA_veteran_pensions
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+                    type = infrastructure
+                    level = 1
+                    instant_build = yes
+                }
+		    }
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_rebuild_america
+		icon = GFX_focus_USA_rebuild_america
+		prerequisite = {
+			focus = USA_federal_highways
+		}
+		prerequisite = {
+			focus = USA_prevent_erosion
+		}
+		relative_position_id = USA_moodys_presidency
+		x = 0
+		y = 5
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_great_depression
+				add_idea = USA_great_depression_1
+			}
+			remove_ideas = USA_disjointed_government
+			hidden_effect = {
+				remove_ideas = USA_disjointed_government_1
+				remove_ideas = USA_disjointed_government_2
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_improve_south
+		icon = GFX_focus_USA_improve_south
+		prerequisite = {
+			focus = USA_rebuild_america
+		}
+		relative_position_id = USA_rebuild_america
+		x = -3
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+370 = {
+add_building_construction = {
+	type = infrastructure
+	level = 2
+	instant_build = yes
+}
+}
+375 = {
+add_building_construction = {
+	type = infrastructure
+	level = 2
+	instant_build = yes
+}
+}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_southern_industry
+		icon = GFX_focus_USA_southern_industry
+		prerequisite = {
+			focus = USA_improve_south
+		}
+		relative_position_id = USA_improve_south
+		x = -1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+366 = {
+add_building_construction = {
+	type = arms_factory
+	level = 2
+	instant_build = yes
+}
+}
+367 = {
+add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+}
+}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_virginian_mines
+		icon = GFX_focus_USA_virginian_mines
+		prerequisite = {
+			focus = USA_improve_south
+		}
+		relative_position_id = USA_improve_south
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+	362 = {
+	add_resource = {
+		type = steel
+		amount = 24
+	}
+	}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+	id = USA_atlantic_dockyards
+		icon = GFX_focus_USA_atlantic_dockyards
+		prerequisite = {
+			focus = USA_southern_industry
+		}
+		relative_position_id = USA_southern_industry
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			362 = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+		
+	focus = {
+		id = USA_texan_oil
+		icon = GFX_focus_USA_texan_oil
+		prerequisite = {
+			focus = USA_virginian_mines
+		}
+		relative_position_id = USA_virginian_mines
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+	375 = {
+	add_resource = {
+		type = oil
+		amount = 120
+	}
+	}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_southern_reconstruction
+		icon = GFX_focus_USA_southern_reconstruction
+		prerequisite = {
+			focus = USA_atlantic_dockyards
+		}
+		prerequisite = {
+			focus = USA_texan_oil
+		}
+		relative_position_id = USA_atlantic_dockyards
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.10
+		add_war_support = 0.10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_heart_of_america
+		icon = GFX_focus_USA_heart_of_america
+		prerequisite = {
+			focus = USA_southern_reconstruction
+		}
+		relative_position_id = USA_southern_reconstruction
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_beating_heart
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_anti_lynching_bill_conservative
+		icon = GFX_focus_USA_anti_lynching_bill_conservative
+		prerequisite = {
+			focus = USA_rebuild_america
+		}
+		relative_position_id = USA_rebuild_america
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_anti_lynching_bill_moody
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_civil_rights_conservative
+		icon = GFX_focus_USA_civil_rights_conservative
+		prerequisite = {
+			focus = USA_anti_lynching_bill_conservative
+		}
+		mutually_exclusive = {
+			focus = USA_work_with_gravey
+		}
+		relative_position_id = USA_anti_lynching_bill_conservative
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_ideas = USA_civil_rights_limited
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_calm_the_south
+		icon = GFX_focus_USA_calm_the_south
+		prerequisite = {
+			focus = USA_civil_rights_conservative
+		}
+		relative_position_id = USA_civil_rights_conservative
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.15
+		add_war_support = 0.15
+		add_popularity = {
+		ideology = conservatism
+		popularity = 0.10
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_work_with_moderates_conservative
+		icon = GFX_focus_USA_work_with_moderates_conservative
+		prerequisite = {
+			focus = USA_calm_the_south
+		}
+		relative_position_id = USA_calm_the_south
+		x = -1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_popularity = {
+		ideology = conservatism
+		popularity = 0.08
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_bury_the_klan
+		icon = GFX_focus_USA_bury_the_klan
+		prerequisite = {
+			focus = USA_calm_the_south
+		}
+		relative_position_id = USA_calm_the_south
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			remove_ideas = USA_klan_civil_war
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_reform_jim_crow
+		icon = GFX_focus_USA_reform_jim_crow
+		prerequisite = {
+			focus = USA_bury_the_klan
+		}
+		prerequisite = {
+			focus = USA_work_with_moderates_conservative
+		}
+		relative_position_id = USA_work_with_moderates_conservative
+		x = 1
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_work_with_gravey
+		icon = GFX_focus_USA_work_with_gravey
+		relative_position_id = USA_rebuild_america
+		mutually_exclusive = {
+			focus = USA_civil_rights_conservative
+		}
+		x = 3
+		y = 2
+
+		cost = 5
+
+		available = {
+			LIB = {
+				has_government = accelerationism
+			}
+		}
+		bypass = {
+		}
+
+		completion_reward = {
+			add_opinion_modifier = {
+				target = LIB
+				modifier = large_increase
+			}
+			LIB = {
+				add_opinion_modifier = {
+					target = USA
+					modifier = large_increase
+				}
+			}
+			give_guarantee = LIB
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_help_black_star
+		icon = GFX_focus_USA_help_black_star
+		prerequisite = {
+			focus = USA_work_with_gravey
+		}
+		relative_position_id = USA_work_with_gravey
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+			LIB = {
+				country_event = {
+					id = usa.321
+				}
+			}
+			add_stability = 0.10
+			add_manpower = -13420
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_better_life
+		icon = GFX_focus_USA_better_life
+		prerequisite = {
+			focus = USA_help_black_star
+		}
+		relative_position_id = USA_help_black_star
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_stability = 0.10
+		add_political_power = -25
+		add_war_support = 0.10
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = USA_funding_to_liberia
+		icon = GFX_focus_USA_funding_to_liberia
+		prerequisite = {
+			focus = USA_better_life
+		}
+		relative_position_id = USA_better_life
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+		bypass = {
+			NOT = {
+				LIB = {
+					has_government = accelerationism
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.10
+			}
+			298 = {
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+					instant_build = yes
+    	        }
+            }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = USA_new_america_is_here
+		icon = GFX_focus_USA_new_america_is_here
+		prerequisite = {
+			focus = USA_heart_of_america
+		}
+		prerequisite = {
+			focus = USA_funding_to_liberia
+			focus = USA_reform_jim_crow
+		}
+		relative_position_id = USA_reform_jim_crow
+		x = 0
+		y = 1
+
+		cost = 5
+
+		available = {
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		remove_ideas = USA_great_depression_1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

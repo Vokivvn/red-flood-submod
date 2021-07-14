@@ -1,0 +1,756 @@
+###-Harbin Reworked Decisions-###
+##Last Stand Decisions
+#BH
+HAR_BH_Calls = {
+	HAR_call_for_motherland = {
+		cost = 50
+		available = {
+			RUS = {
+				exists = yes
+			}
+		}
+		visible = {
+			RUS = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			RUS = {
+				add_state_core = 881
+				add_state_core = 810
+				add_state_core = 930
+				add_state_core = 408
+				add_state_core = 409
+				add_state_core = 978
+				add_state_core = 560
+				add_state_core = 657
+				add_state_core = 561
+				add_state_core = 761
+				add_state_core = 714
+				add_state_core = 912
+				if = {
+					limit = {
+						MNS = {
+							has_full_control_of_state = 717
+						}
+					}
+					add_state_core = 717
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MNS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PRI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GUK
+				}
+				change_tag_from = HAR
+			}
+		}
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HAR_call_for_thrushes = {
+		cost = 50
+		available = {
+			SRU = {
+				exists = yes
+			}
+		}
+		visible = {
+			SRU = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			SRU = {
+				add_state_core = 881
+				add_state_core = 810
+				add_state_core = 930
+				add_state_core = 408
+				add_state_core = 409
+				add_state_core = 978
+				add_state_core = 560
+				add_state_core = 657
+				add_state_core = 561
+				add_state_core = 761
+				add_state_core = 714
+				add_state_core = 912
+				if = {
+					limit = {
+						MNS = {
+							has_full_control_of_state = 717
+						}
+					}
+					add_state_core = 717
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MNS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PRI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GUK
+				}
+				change_tag_from = HAR
+			}
+		}
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Kadets
+HAR_unity_against_enemies_of_westernization = {
+	HAR_unite_priamurye = {
+		cost = 50
+		available = {
+			PRI = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			PRI = {
+				change_tag_from = HAR
+				annex_country = {
+					target = HAR
+					transfer_troops = yes
+				}
+				add_state_core = 978
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.1
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Leftists
+HAR_cant_beat_join = {
+	HAR_join_the_manchus = {
+		cost = 50
+		available = {
+			MNS = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			MNS = {
+				change_tag_from = HAR
+				annex_country = {
+					target = HAR
+					transfer_troops = no
+				}
+				add_state_core = 978
+				add_popularity = {
+					ideology = revolutionary_anarchism
+					popularity = 0.1
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Kwantung
+HAR_welcome_our_liberators = {
+	HAR_join_GUK = {
+		cost = 50
+		available = {
+			GUK = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			GUK = {
+				change_tag_from = HAR
+				annex_country = {
+					target = HAR
+					transfer_troops = yes
+				}
+				add_state_core = 978
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.1
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+##Foreign Policies
+#General
+HAR_general_foreign_policy = {
+
+	HAR_reclaim_yakutia = {
+		cost = 100
+		available = {
+			is_neighbor_of = KCK
+		}
+		complete_effect  = {
+			add_state_core = 637
+			add_state_core = 562
+			add_state_core = 644
+			add_state_core = 574
+			add_state_core = 1036
+			create_wargoal = {
+				type = annex_everything
+				target = KCK
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	HAR_reclaim_siberia = {
+		cost = 100
+		available = {
+			is_neighbor_of = SIB
+		}
+		complete_effect  = {
+			add_state_core = 516
+			add_state_core = 577
+			add_state_core = 579
+			add_state_core = 576
+			add_state_core = 575
+			add_state_core = 565
+			add_state_core = 566
+			add_state_core = 567
+			add_state_core = 568
+			add_state_core = 569
+			add_state_core = 570
+			add_state_core = 578
+			add_state_core = 403
+			add_state_core = 40
+			add_state_core = 580
+			create_wargoal = {
+				type = annex_everything
+				target = SIB
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	HAR_deal_with_mongolia = {
+		cost = 100
+		available = {
+			OR = {
+				is_neighbor_of = TAN
+				is_neighbor_of = SIK
+				is_neighbor_of = MON
+				is_neighbor_of = MO2
+				is_neighbor_of = ALT
+			}
+		}
+		complete_effect  = {
+			#TAN
+			add_state_core = 961
+			add_state_core = 329
+			add_state_core = 962
+			#SIK
+			add_state_core = 793
+			add_state_core = 618
+			add_state_core = 617
+			add_state_core = 760
+			#ALT
+			add_state_core = 654
+			add_state_core = 838
+			add_state_core = 898
+			#MO2
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 964
+			#MON
+			add_state_core = 330
+			add_state_core = 914
+			add_state_core = 915
+			add_state_core = 612
+			create_wargoal = {
+				type = annex_everything
+				target = TAN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MO2
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HAR_restore_order_in_central_asia = {
+		cost = 100
+		available = {
+			SIB = {
+				exists = no
+			}
+			OR = {
+				is_neighbor_of = STE
+				is_neighbor_of = ORE
+				is_neighbor_of = MO6
+			}
+		}
+		complete_effect  = {
+			#KOK
+			add_state_core = 1041
+			#TUK
+			add_state_core = 1042
+			add_state_core = 585
+			add_state_core = 405
+			#BKR
+			add_state_core = 742
+			add_state_core = 840
+			add_state_core = 1038
+			add_state_core = 851
+			#TUC
+			add_state_core = 850
+			add_state_core = 584
+			add_state_core = 1037
+			#AQT
+			add_state_core = 587
+			#KHW
+			add_state_core = 849
+			add_state_core = 1039
+			add_state_core = 1040
+			#TRK
+			add_state_core = 852
+			add_state_core = 1043
+			#STE
+			add_state_core = 571
+			add_state_core = 583
+			add_state_core = 590
+			add_state_core = 588
+			add_state_core = 404
+			add_state_core = 589
+			add_state_core = 842
+			add_state_core = 784
+			create_wargoal = {
+				type = annex_everything
+				target = KOK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BKR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUC
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AQT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KHW
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TRK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = STE
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HAR_offensive_on_moscow = {
+		cost = 100
+		available = {
+			OR = {
+				has_country_flag = HAR_zaborovsky_wins
+				has_country_flag = HAR_milyukov_wins
+				has_country_flag = HAR_myakotin_wins
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = HAR_zaborovsky_wins
+				has_country_flag = HAR_milyukov_wins
+				has_country_flag = HAR_myakotin_wins
+			}
+		}
+		complete_effect  = {
+			#SRU
+			add_state_core = 137
+			add_state_core = 200
+			add_state_core = 227
+			add_state_core = 853
+			add_state_core = 228
+			add_state_core = 221
+			add_state_core = 259
+			add_state_core = 854
+			add_state_core = 225
+			add_state_core = 240
+			add_state_core = 859
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 222
+			add_state_core = 224
+			add_state_core = 196
+			add_state_core = 242
+			#RUS
+			add_state_core = 243
+			add_state_core = 241
+			add_state_core = 246
+			add_state_core = 263
+			add_state_core = 208
+			add_state_core = 195
+			add_state_core = 244
+			add_state_core = 264
+			add_state_core = 351
+			add_state_core = 195
+			add_state_core = 216
+			add_state_core = 147
+			add_state_core = 215
+			add_state_core = 214
+			add_state_core = 213
+			add_state_core = 722
+			add_state_core = 247
+			add_state_core = 248
+			add_state_core = 205
+			add_state_core = 219
+			add_state_core = 253
+			add_state_core = 262
+			add_state_core = 397
+			add_state_core = 581
+			add_state_core = 804
+			add_state_core = 653
+			add_state_core = 573
+			add_state_core = 400
+			add_state_core = 398
+			add_state_core = 651
+			add_state_core = 399
+			add_state_core = 249
+			add_state_core = 256
+			add_state_core = 252
+			add_state_core = 255
+			add_state_core = 223
+			add_state_core = 257
+			add_state_core = 239
+			add_state_core = 401
+			add_state_core = 251
+			add_state_core = 250
+			
+			create_wargoal = {
+				type = annex_everything
+				target = SRU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = RUS
+			}
+		}
+		fire_only_once = yes
+	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+	
+#BH Exclusive
+HAR_hold_zemsky_sobor = {
+	HAR_zemsky_sobor_decision = {
+		cost = 100
+		available = {
+			has_full_control_of_state = 219
+			has_full_control_of_state = 195
+			RUS = {
+				exists = no
+			}
+			SRU = {
+				exists = no
+			}
+		}
+		complete_effect  = {
+			set_cosmetic_tag = ZHR_russian_empire
+			retire_country_leader = yes
+			create_country_leader = {
+			name = "Vasily IV"
+			desc = ""
+			picture = "Portrait_Vasily_IV.dds"
+			expire = "1965.1.1"
+			ideology = religious_fundamentalism
+			traits = { }
+			}
+			
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Kwantung Exclusive
+HAR_united_ukraine_decision = {
+	HAR_toast_to_united_ukraine = {
+		cost = 100
+		available = {
+			is_neighbor_of = UKR
+			UKR = {
+				has_war = no
+			}
+			has_war = no
+		}
+		complete_effect  = {
+			UKR = {
+				change_tag_from = HAR
+				annex_country = {
+					target = HAR
+					transfer_troops = yes
+				}
+				ZHR = {
+					every_unit_leader = {
+						set_nationality = UKR
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = ZHR
+					}
+					add_core_of = UKR
+				}
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.05
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Democrat Exclusive
+HAR_unite_russia_kad_lef = {
+	HAR_young_russia_hail_victorious_decision = {
+		cost = 150
+		complete_effect  = {
+			set_capital = 219
+			set_cosmetic_tag = ZHR_russianrepublic
+			create_wargoal = {
+				type = annex_everything
+				target = WRU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DKB
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Left Exclusive
+HAR_peoples_front = {
+
+	HAR_form_russian_popular_front = {
+		cost = 100
+		available = {
+			SIB = {
+				exists = no
+			}
+		}
+		complete_effect  = {
+			RUS = {
+				add_timed_idea = {
+					idea = HAR_popular_front
+					days = 300
+				}
+			}
+			SRU = {
+				add_timed_idea = {
+					idea = HAR_popular_front
+					days = 300
+				}
+			}
+			WRU = {
+				add_timed_idea = {
+					idea = HAR_popular_front
+					days = 300
+				}
+			}
+			ORE = {
+				add_timed_idea = {
+					idea = HAR_popular_front
+					days = 300
+				}
+			}
+			FIN = {
+				add_timed_idea = {
+					idea = HAR_popular_front
+					days = 300
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HAR_form_russian_peoples_front = {
+		cost = 100
+		available = {
+			if = {
+				limit = {
+					FIN = {
+						OR = {
+							has_government = reactionism
+							has_government = accelerationism
+						}
+					}
+				}
+			}	
+			is_neighbor_of = FIN
+		}
+		complete_effect  = {
+			create_faction = "ZHR_russian_peoples_front"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FIN
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARM
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+#Kadets Exclusive
+HAR_letter_to_romanovsky = {
+	HAR_a_letter_to_lib_RUS = {
+		cost = 100
+		available = {
+			RUS = {
+				has_completed_focus = RUS_eternal_regent
+				has_country_flag = RUS_kolchakdead
+			}
+			is_neighbor_of = RUS
+			RUS = {
+				has_war = no
+			}
+			has_war = no
+		}
+		complete_effect  = {
+			RUS = {
+				change_tag_from = HAR
+				annex_country = {
+					target = HAR
+					transfer_troops = yes
+				}
+				ZHR = {
+					every_unit_leader = {
+						set_nationality = RUS
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = ZHR
+					}
+					add_core_of = RUS
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = 0.05
+				}
+				if = {
+				limit = {
+					has_government = right_authoritarianism
+				}
+				set_cosmetic_tag = "ZHR_russianrepublic"
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+
+
+
+
+	
+	
+	
+	
+

@@ -1,0 +1,12 @@
+ASY_return_to_nineveh = {
+	allowed = {
+		original_tag = ASY
+	}
+	priority = 1
+	visible = {
+		OR = {
+			has_completed_focus = ASY_adobt_greater_assyria_plan
+			has_completed_focus = ASY_return_that_is_ours
+		}
+	}
+}

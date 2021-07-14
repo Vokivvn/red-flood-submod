@@ -1,0 +1,173 @@
+################################
+#		Orenburg - Baba		   #
+################################
+
+add_namespace = ore
+
+country_event = {
+	id = ore.1
+	title = ore.1.t
+	desc = ore.1.d
+	picture = GFX_spy
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.1.a
+	}
+}
+country_event = {  
+	id = ore.2
+	title = ore.2.t
+	desc = ore.2.d
+	picture = GFX_inflitration
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.2.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_DUTOV_KOLCHAK
+					}
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_DUTOV_DROZ
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ore.6
+		}
+	}
+	option = {
+		name = ore.2.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_ORINBOR
+					}
+					has_game_rule = {
+						rule = ORE_ai_route
+						option = ORE_EUR
+					}
+				}
+			}
+		}
+		country_event = {
+			id = ore.7
+		}
+	}
+}
+country_event = {  
+	id = ore.3
+	title = ore.3.t
+	desc = ore.3.d
+	picture = GFX_officers
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		
+	}
+}
+country_event = {
+	id = ore.4
+	title = ore.4.t
+	desc = ore.4.d
+	picture = GFX_coup
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.4.a
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ORE_ai_route
+					option = ORE_ORINBOR
+				}
+			}
+		}
+		set_country_flag = ORE_orinbor
+	}
+	
+	option = {
+		name = ore.4.b
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = ORE_ai_route
+					option = ORE_EUR
+				}
+			}
+		}
+		set_country_flag = ORE_eurasianists
+	}
+	
+}
+country_event = {
+	id = ore.5
+	title = ore.5.t
+	desc = ore.5.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+	name = ore.5.a
+	ai_chance = {
+	factor = 40
+	}
+	}
+}
+country_event = {
+	id = ore.6
+	title = ore.6.t
+	desc = ore.6.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ore.6.a
+		ai_chance = {
+			factor = 40
+		}
+		set_country_flag = ORE_dutovlives
+	}
+}
+country_event = {
+	id = ore.7
+	title = ore.7.t
+	desc = ore.7.d
+	picture = GFX_address_the_troops
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = ore.7.a
+		ai_chance = {
+			factor = 60
+		}
+		kill_country_leader = yes
+		set_country_flag = ORE_dutovdies
+		country_event = {
+			days = 1
+			id = ore.4
+		}
+	}
+}

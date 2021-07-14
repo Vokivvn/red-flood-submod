@@ -1,0 +1,58 @@
+### NAVAL DOCTRINES
+###
+### How to use these scripted triggers:
+###
+### These are only necessary if your country has a choice of naval doctrines in its focus tree - it will prevent the AI from researching
+### a doctrine if it doesn't get bonuses for that doctrine, or prevent it from taking focuses for a doctrine if it's already researched a different
+### one on its own. Note that it doesn't make a country more or less likely to research specific doctrines - that's all handled in the
+### ai_will_do's in the technology files
+###
+### 1) if your country has a choice between doctrines, put their tag in the "never_research_XXX" list for doctrines it shouldn't research at all
+### 2) for the doctrines your country can take, put it in the "dont_research_XXX_if_choicemade" lists - with whatever conditions/focuses
+###    that should prevent it from taking that (ie. when the focus for another doctrine has already been taken)
+### 3) add the "already_has_doctrine_XXX" into the ai_will_do for any focuses where the choice would be made, which prevents the focus
+###    from being taken by the AI if it's already researched it
+###
+### If you want the country to *never* research a doctrine until a focus has been taken, it needs to follow steps #1 and #2 above, and the
+### "dont_research_XXX_if_choicemade" lists should instead include the conditions that should stop it from researching (such as
+### "NOT = { has_completed_focus = RUS_reform_markov }" ...meaning once RUS_reform_markov has been taken, the doctrine can now be researched
+
+
+anti_submarine_strategy_required_trigger = {
+	OR = {
+		AND = {
+			tag = ENG
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = USA
+			not = { is_in_faction_with = GER }
+			GER = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		AND = {
+			tag = JAP
+			not = { is_in_faction_with = USA }
+		}
+		AND = {
+			has_war = yes
+			any_enemy_country = {
+				has_navy_size = {
+					type = submarine
+					size > 30
+				}
+			}
+		}
+		convoy_threat > 0.3
+	}
+}

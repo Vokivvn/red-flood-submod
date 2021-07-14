@@ -1,0 +1,80 @@
+ideas = {
+	country = {
+	
+		ROM_the_purge_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					 monthly_population = -0.2
+				}
+				picture = ROM_the_purge_idea
+		}
+	
+		ROM_self_sacrifice_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					 conscription = 0.04
+					 stability_factor = 0.15
+				}
+				picture = ROM_self_sacrifice_idea
+		}	
+	
+		ROM_power_of_the_church_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					reactionism_drift = 0.2
+				}
+				picture = ROM_power_of_the_church_idea
+		}
+		ROM_i_want_nothing_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					consumer_goods_factor = -0.15
+				}
+				picture = ROM_i_want_nothing_idea
+		}		
+		ROM_exclude_the_non_romanians_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					consumer_goods_factor = -0.10
+					stability_factor = -0.15
+				}
+				picture = ROM_exclude_the_non_romanians_idea
+		}
+
+		ROM_romania_once_more_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+					training_time_army_factor = -0.10
+				}
+				picture = ROM_romania_once_more_idea
+		}
+
+			ROM_revive_the_romanian_man_idea = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ROM
+				}
+				modifier = {
+				monthly_population = 0.1
+				}
+				picture = ROM_romania_once_more_idea
+		}				
+}

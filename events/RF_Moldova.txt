@@ -1,0 +1,75 @@
+###################
+# Moldovan Events #
+###################
+
+add_namespace = moldova
+
+#Revolution of Freedom
+country_event = {
+	id = moldova.1
+	title = moldova.1.t
+	desc = moldova.1.d
+	#picture = GFX_report_event_vampire_attack
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = moldova.1.a
+		remove_ideas = MOL_slavic_separatism
+		NUK = {
+			transfer_state = 766
+			transfer_state = 1014
+			hidden_effect = {
+				add_state_core = 766
+				add_state_core = 1014
+				load_oob = "NUK_rebellion"
+			}
+		}
+		declare_war_on = {
+			target = NUK
+			type = annex_everything
+		}
+	}
+	
+	option = {
+		name = moldova.1.b
+		remove_ideas = MOL_slavic_separatism
+		NUK = {
+			transfer_state = 766
+			transfer_state = 1014
+			hidden_effect = {
+				add_state_core = 766
+				add_state_core = 1014
+				load_oob = "NUK_rebellion"
+			}
+		}
+		declare_war_on = {
+			target = NUK
+			type = annex_everything
+		}
+		hidden_effect = {
+			NUK = { change_tag_from = ROOT }
+		}
+	}
+}
+
+#Internationalism
+country_event = {
+	id = moldova.2
+	title = moldova.2.t
+	desc = moldova.2.d
+	#picture = GFX_report_event_vampire_attack
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = moldova.2.a
+		GER = {
+			add_to_faction = MOL
+		}
+	}
+}

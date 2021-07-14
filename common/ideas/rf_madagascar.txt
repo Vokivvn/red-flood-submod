@@ -1,0 +1,527 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		mag_nationalmyth = {
+			modifier = {
+				stability_factor = 0.10	
+				war_support_factor = 0.20
+				surrender_limit = 0.30
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+		
+		mag_squadron = {
+			modifier = {
+				conscription = 0.05
+				political_power_factor = 0.10
+				accelerationism_drift = 0.005
+			}
+			picture = air_war_plans_division_focus
+		}
+		mag_neutrality = {
+			modifier = {
+				conscription = 0.01
+				political_power_factor = 0.15
+				surrender_limit = 0.30
+				war_support_factor = -0.90
+				stability_factor = 0.40
+			}
+			picture = new_deal
+		}
+		mag_radicalismdestroyed = {
+			modifier = {
+				political_power_factor = 0.10
+				liberalism_drift = 0.100
+				social_democratism_drift = 0.100
+				conservatism_drift = 0.100
+			}
+			picture = FRA_matignon_agreements
+		}
+		mag_rally = {
+			modifier = {
+				conscription = 0.05
+				war_support_factor = 0.10
+			}
+			picture = generic_victors_of_ww1
+		}
+		mag_confederalism = {
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = 0.10
+				political_power_factor = -0.40
+				industrial_capacity_factory = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+				consumer_goods_factor = -0.05
+			}
+			picture = triumphant_will
+		}
+		mag_meritocracy = {
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.03
+			}
+			picture = triumphant_will
+		}
+		mag_farms = {
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = 0.15
+			}
+			picture = generic_goods_red_bonus
+		}
+		mag_directdemocracy = {
+			modifier = {
+				consumer_goods_factor = -0.10
+				stability_factor = 0.10
+			}
+			picture = generic_disjointed_gov
+		}
+		mag_language = {
+			modifier = {
+				research_speed_factor = 0.10
+			}
+			picture = FRA_national_mobilization_focus
+		}
+		mag_communalism = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_start_efficiency_factor = 0.20
+			}
+			picture = home_of_revolution
+		}
+		mag_tradition = {
+			modifier = {
+				research_speed_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+			picture = home_of_revolution
+		}
+		mag_surrealisme = {
+			modifier = {
+				research_speed_factor = 0.20
+				consumer_goods_factor = -0.10
+			}
+			picture = home_of_revolution
+		}
+		mag_refugees = {
+			modifier = {
+				monthly_population = 1
+			}
+			picture = anti_soviet_pact
+		}
+		mag_localtribes = {
+			modifier = {
+				conscription = 0.05
+			}
+			picture = raj_indian_gentlemen_officers
+		}
+		mag_welfare = {
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_factor = 0.20
+			}
+			picture = raj_risk_of_famine
+		}
+	}
+
+	head_of_government = {
+		MAG_mary_margueritte_razafitrimo_hog = {
+			picture = GFX_idea_MAG_mary_margueritte_razafitrimo_hog
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_rabearivelomarchesontana
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+		}
+		MAG_philibert_tsiranana_hog = {
+			picture = GFX_idea_MAG_philibert_tsiranana_hog
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_liberalcoup
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+		}
+		MAG_regency_council_hog = {
+			picture = GFX_idea_MAG_regency_council_hog
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_successioncrisisresolved
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+		}
+		MAG_joseph_ravoahangy_hog = {
+			picture = GFX_idea_MAG_joseph_ravoahangy_hog
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_poincianarevolution
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+	}
+
+	foreign_minister = {
+		MAG_leon_henri_charles_cayla_for = {
+			picture = GFX_idea_MAG_leon_henri_charles_cayla_for
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_rabearivelomarchesontana
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		MAG_calvin_tsiebo_for = {
+			picture = GFX_idea_MAG_calvin_tsiebo_for
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_liberalcoup
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+		MAG_regency_council_for = {
+			picture = GFX_idea_MAG_regency_council_for
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_successioncrisisresolved
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		MAG_charles_ravoajanahary_for = {
+			picture = GFX_idea_MAG_charles_ravoajanahary_for
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_poincianarevolution
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+
+	economy_minister = {
+		MAG_ny_avana_ramanantoanina_eco = {
+			picture = GFX_idea_MAG_ny_avana_ramanantoanina_eco
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_rabearivelomarchesontana
+			}
+			traits = {
+				economy_minister
+				eco_construction_magnate
+			}
+		}
+		MAG_norbert_zafimahova_eco = {
+			picture = GFX_idea_MAG_norbert_zafimahova_eco
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_liberalcoup
+			}
+			traits = {
+				economy_minister
+				eco_steel_magnate
+			}
+		}
+		MAG_regency_council_eco = {
+			picture = GFX_idea_MAG_regency_council_eco
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_successioncrisisresolved
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		MAG_democratic_councils_eco = {
+			picture = GFX_idea_MAG_democratic_councils_eco
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_poincianarevolution
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+		}
+	}
+
+	security_minister = {
+		MAG_jean_joseph_rabearivelo_int = {
+			picture = GFX_idea_MAG_jean_joseph_rabearivelo_int
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_rabearivelomarchesontana
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+		}
+		MAG_pierre_ramampy_int = {
+			picture = GFX_idea_MAG_pierre_ramampy_int
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_liberalcoup
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+		}
+		MAG_regency_council_int = {
+			picture = GFX_idea_MAG_regency_council_int
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_successioncrisisresolved
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+		}
+		MAG_joseph_raseta_int = {
+			picture = GFX_idea_MAG_joseph_raseta_int
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_poincianarevolution
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+	}
+
+	head_of_intel = {
+		MAG_jacques_rabemananjara_itl = {
+			picture = GFX_idea_MAG_jacques_rabemananjara_itl
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_rabearivelomarchesontana
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		MAG_gabriel_ramanantsoa_itl = {
+			picture = GFX_idea_MAG_gabriel_ramanantsoa_itl
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_liberalcoup
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		MAG_regency_council_itl = {
+			picture = GFX_idea_MAG_regency_council_itl
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_successioncrisisresolved
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		MAG_samuel_rakotondrabe_itl = {
+			picture = GFX_idea_MAG_samuel_rakotondrabe_itl
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				has_completed_focus = MAG_poincianarevolution
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+	}
+
+	chief_of_staff = {
+		MAG_gabriel_ramanantsoa = {
+			picture = GFX_idea_MAG_gabriel_ramanantsoa
+			allowed = {
+				original_tag = MAG
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+
+	chief_of_army = {
+		MAG_joel_rakotomalala = {
+			picture = GFX_idea_MAG_joel_rakotomalala
+			allowed = {
+				original_tag = MAG
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		MAG_gilles_andriamahazo = {
+			picture = GFX_idea_MAG_gilles_andriamahazo
+			allowed = {
+				original_tag = MAG
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	industrial_concern = {
+		JIRAMA = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.07
+				production_speed_industrial_complex_factor = 0.1
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+		}
+		Magarail = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		}
+	tank_manufacturer = {
+		designer = yes
+		Karenjy = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+				}
+			}
+		}
+	air_naval_manufacturer = {
+		designer = yes
+		Air_Madagascar = {
+			allowed = {
+				original_tag = MAG
+			}
+			available = {
+				original_tag = MAG
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+	}
+}

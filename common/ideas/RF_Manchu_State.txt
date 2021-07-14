@@ -1,0 +1,81 @@
+ideas = {
+	head_of_government = {
+		MNS_zaitao_hog = {
+			picture = GFX_idea_MNS_zaitao_hog
+			allowed = {
+				original_tag = MNS
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	
+	foreign_minister = {
+		MNS_zaitao_for = {
+			picture = GFX_idea_MNS_zaitao_for
+			allowed = {
+				original_tag = MNS
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	
+	economy_minister = {
+		MNS_aisin_gioro_xiqia_eco = {
+			picture = GFX_idea_MNS_aisin_gioro_xiqia_eco
+			allowed = {
+				original_tag = MNS
+			}
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	
+	security_minister = {
+		MNS_yinchang_sec = {
+			picture = GFX_idea_MNS_yinchang_sec
+			allowed = {
+				original_tag = MNS
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+	
+	head_of_intel = {
+		MNS_zaixun_int = {
+			picture = GFX_idea_MNS_zaixun_int
+			allowed = {
+				original_tag = MNS
+			}
+			traits = {
+				head_of_intel
+				int_naval_intelligence_specialist
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+division_template = {
+	name = "Infantry Division"
+	division_names_group = RUS_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"	
+
+	division_names_group = RUS_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }      
+	}
+}
+
+division_template = {
+	name = "Light Armor Division"
+
+	division_names_group = RUS_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Svodnaya Garnizonnaya Diviziya"
+		location = 10433
+		division_template = "Infantry Division"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Gorodskaya Konnaya Politsiya"
+		location = 10433
+		division_template = "Cavalry Division"
+		start_experience_factor = 1
+	}
+}

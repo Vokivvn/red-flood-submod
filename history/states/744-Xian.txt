@@ -1,0 +1,30 @@
+
+state={
+	id=744
+	name="STATE_744"#Shaanxi
+	resources={
+		steel=4.000
+	}
+
+	history={
+		owner = BYJ
+		add_core_of = BYJ
+		victory_points = {
+			1976 3
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
+
+	}
+
+	provinces={
+		1976 2006 4167 4256 4295 5092 7301 7406 7418 10257 12713
+	}
+	manpower=9313234
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,1990 @@
+ideas = {
+	country = {
+		FRA_divided_nation = {
+			removal_cost = -1
+			picture = FRA_divided_nation
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					 stability_factor = -0.25
+					 political_power_factor = -0.75
+					 war_support_factor = -0.3
+					 surrender_limit = -0.6
+				}
+			}
+		FRA_terre_futur = {
+			removal_cost = -1
+			picture = FRA_terre_futur
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					surrender_limit = 0.15
+				}
+			}
+		FRA_abolish_army = {
+			removal_cost = -1
+			picture = FRA_abolish_french_army
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					army_morale_factor = 0.1
+					army_org = -0.1
+					conscription_factor = -0.25
+				}
+			}
+		#Acephale
+		FRA_act_of_confederation_stability_1 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_stability
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					stability_factor = -0.25
+				}
+			
+		}
+		FRA_act_of_confederation_stability_2 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_stability
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					stability_factor = -0.2
+				}
+		}
+		FRA_act_of_confederation_stability_3 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_stability_3
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					stability_factor = -0.10
+				}
+		}
+		FRA_act_of_confederation_pp_1 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_pp
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					political_power_factor = -0.4
+				}
+		}
+		FRA_act_of_confederation_manpower_1 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_manpower
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					conscription_factor = -0.5
+					MONTHLY_POPULATION = -0.2
+				}
+		}
+		FRA_act_of_confederation_manpower_2 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_manpower
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					conscription_factor = -0.25
+					MONTHLY_POPULATION = -0.2
+				}
+		}
+		FRA_act_of_confederation_manpower_3 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_manpower
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					conscription_factor = -0.25
+					MONTHLY_POPULATION = -0.1
+				}
+		}
+		FRA_act_of_confederation_manpower_4 = {
+			removal_cost = -1
+			picture = FRA_act_of_confederation_manpower 
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					conscription_factor = 0.1
+				}
+		}
+		FRA_our_business_is_business = {
+			removal_cost = -1
+			picture = FRA_our_business_is_business
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.05
+				}
+		}
+		FRA_celtic_support = {
+			removal_cost = -1
+			picture = FRA_celtic_support
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.05
+					conscription = 0.01
+				}
+		}
+		FRA_parisian_support = {
+			removal_cost = -1
+			picture = FRA_parisian_support
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.05
+					research_speed_factor = 0.03
+				}
+		}
+		FRA_futuristic_centers = {
+			removal_cost = -1
+			picture = FRA_futuristic_centers
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.05
+					research_speed_factor = 0.03
+					conscription = 0.01
+				}
+		}
+		FRA_occitan_heritage = {
+			removal_cost = -1
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					army_defence_factor = 0.1
+				}
+		}
+		FRA_brest_futurism = {
+			removal_cost = -1
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.1
+				}
+		}
+		FRA_media_exports = {
+			removal_cost = -1
+			picture = FRA_media_exports
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					research_speed_factor = 0.05
+				}
+		}
+		FRA_international_research = {
+			removal_cost = -1
+			picture = FRA_international_research
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					research_speed_factor = 0.05
+				}
+				research_bonus = {
+					electronics = 0.1
+				}
+		}
+		FRA_car_industry = {
+			removal_cost = -1
+			picture = FRA_car_industry
+				allowed = {
+					original_tag = FRA
+				}
+				equipment_bonus = {
+					motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					}
+				}
+		}
+		FRA_french_exports = {
+			removal_cost = -1
+			picture = FRA_french_exports
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.03
+				}
+				equipment_bonus = {
+					motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					}
+				}
+		}
+		FRA_trade_powerhouse = {
+			removal_cost = -1
+			picture = FRA_trade_powerhouse
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.03
+					research_speed_factor = 0.05
+					min_export = -0.1
+				}
+				equipment_bonus = {
+					motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					}
+				}
+				research_bonus = {
+					electronics = 0.1
+				}
+		}
+		FRA_cheap_tanks = {
+			removal_cost = -1
+			picture = FRA_cheap_tanks
+				allowed = {
+					original_tag = FRA
+				}
+				equipment_bonus = {
+					armor = {
+						build_cost_ic = -0.2 instant = yes reliability = -0.1
+					}
+				}
+		}
+		FRA_rogue_states = {
+			removal_cost = -1
+			picture = FRA_rogue_states
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+				}
+		}
+		FRA_ufc_trading = {
+			removal_cost = -1
+			picture = FRA_rogue_states
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.1
+				}
+		}
+		FRA_global_connections = {
+			removal_cost = -1
+			picture = FRA_global_connections
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.1
+					research_speed_factor = 0.03
+				}
+		}
+		FRA_lawless_trade = {
+			removal_cost = -1
+			picture = FRA_global_connections
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					consumer_goods_factor = -0.1
+					research_speed_factor = 0.03
+					trade_opinion_factor = 0.4
+				}
+		}
+		#Escadron
+		FRA_corporate_state = {
+			removal_cost = -1
+			picture = FRA_divided_nation
+				allowed = {
+					original_tag = FRA
+				}
+				modifier = {
+					 stability_factor = -0.1
+					 political_power_factor = -0.4
+					 war_support_factor = -0.1
+					 surrender_limit = -0.2
+				}
+		}
+		FRA_brute_culture_idea_1 = {
+			removal_cost = -1
+			picture = FRA_brute_culture
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		FRA_brute_culture_idea_2 = {
+			removal_cost = -1
+			picture = FRA_brute_culture
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.07
+				research_speed_factor = 0.05
+			}
+		}
+		FRA_brute_culture_idea_3 = {
+			removal_cost = -1
+			picture = FRA_brute_culture
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.07
+				research_speed_factor = 0.025
+				conscription = 0.025
+			}
+		}
+		FRA_centralised_corporate_1 = {
+			removal_cost = -1
+			picture = FRA_centralised_corporate
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		FRA_centralised_corporate_2 = {
+			removal_cost = -1
+			picture = FRA_centralised_corporate
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		FRA_heroic_capitalism_idea = {
+			removal_cost = -1
+			picture = FRA_heroic_capitalism_idea
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		FRA_united_labour_front_idea = {
+			removal_cost = -1
+			picture = FRA_centralised_corporate
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		FRA_brute_culture_idea_4 = {
+			removal_cost = -1
+			picture = FRA_reckless_progress
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.05
+				research_speed_factor = 0.05
+				conscription = 0.04
+			}
+		}
+		FRA_brute_culture_idea_5 = {
+			removal_cost = -1
+			picture = FRA_reckless_progress
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.06
+				stability_factor = -0.05
+				research_speed_factor = 0.05
+				conscription = 0.04
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				
+			}
+		}
+		FRA_warrior_priests_idea = {
+			removal_cost = -1
+			picture = FRA_warrior_priests
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		FRA_enfants_du_patron = {
+			removal_cost = -1
+			picture = FRA_enfants_du_patron
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.20
+			}
+		}
+		FRA_homoeroticism = {
+			removal_cost = -1
+			picture = FRA_homoeroticism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		FRA_new_man = {
+			removal_cost = -1
+			picture = FRA_homoeroticism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+				army_morale_factor = 0.1
+			}
+		}
+		FRA_militarism = {
+			removal_cost = -1
+			picture = FRA_militarism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.25
+			}
+		}
+		FRA_militarised_citizens = {
+			removal_cost = -1
+			picture = FRA_militarism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.25
+				production_speed_bunker_factor = 0.25
+			}
+		}
+		FRA_reclaimed_countryside = {
+			removal_cost = -1
+			picture = FRA_reclaimed_countryside
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				global_building_slots_factor = 0.2
+			}
+		}
+		FRA_techno_catherism_idea = {
+			removal_cost = -1
+			picture = FRA_techno_catherism_idea
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.02
+			}
+		}
+		FRA_religious_futurism = {
+			removal_cost = -1
+			picture = FRA_religious_futurism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.02
+				offence = 0.1
+				defence = 0.1
+			}
+		}
+		FRA_terminal_velocity = {
+			removal_cost = -1
+			picture = FRA_terminal_velocity
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				army_speed_factor = 0.1
+			}
+		}
+		FRA_guerre_de_cultur_idea = {
+			removal_cost = -1
+			picture = FRA_guerre_de_cultur_idea
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		FRA_free_revolution = {
+			removal_cost = -1
+			picture = FRA_free_revolution
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.02
+			}
+		}
+		FRA_free_love = {
+			removal_cost = -1
+			picture = FRA_free_love
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+			}
+		}
+		FRA_new_sects = {
+			removal_cost = -1
+			picture = FRA_new_sects
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription = 0.005
+			}
+		}
+		FRA_omnipotent_patron = {
+			removal_cost = -1
+			picture = FRA_omnipotent_patron
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		FRA_united_futurism = {
+			removal_cost = -1
+			picture = FRA_united_futurism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		FRA_beyond_time = {
+			removal_cost = -1
+			picture = FRA_beyond_time
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		FRA_beyond_space = {
+			removal_cost = -1
+			picture = FRA_beyond_space
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.20
+				justify_war_goal_time = -0.25
+			}
+		}
+		FRA_dream_of_death = {
+			removal_cost = -1
+			picture = FRA_dream_of_death
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.05
+				defence = 0.05
+			}
+		}
+		FRA_beyond_reality = {
+			removal_cost = -1
+			picture = FRA_beyond_reality
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+				research_speed_factor = 0.05
+				war_support_factor = 0.2
+				industrial_capacity_factory = 0.05
+				justify_war_goal_time = -0.25
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		#Islamic
+		FRA_african_recognition = {
+			removal_cost = -1
+			picture = FRA_african_recognition
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				stability_factor = 0.02
+				conscription = 0.001
+			}
+		}
+		FRA_futurist_sword_of_islam = {
+			removal_cost = -1
+			picture = FRA_futurist_sword_of_islam
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		FRA_futurist_education = {
+			removal_cost = -1
+			picture = FRA_futurist_education
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		FRA_futurist_arab_culture = {
+			removal_cost = -1
+			picture = FRA_futurist_arab_culture
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+		#Druidist
+		FRA_druidic_nation = {
+			removal_cost = -1
+			picture = FRA_divided_nation
+			allowed = {
+				original_tag = FRA
+			}
+			modifier = {
+				 stability_factor = -0.15
+				 political_power_factor = -0.5
+				 war_support_factor = -0.15
+				 surrender_limit = -0.3
+			}
+		}
+		FRA_wolves_wake = {
+		removal_cost = -1
+			picture = FRA_wolves_wake
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+			}
+		}
+		FRA_celtic_rising = {
+		removal_cost = -1
+			picture = FRA_celtic_rising
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				political_power_factor = 0.5
+			}
+		}
+		FRA_forest_kin = {
+		removal_cost = -1
+			picture = FRA_forest_kin
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				conscription = 0.01
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		FRA_druidic_purity = {
+		removal_cost = -1
+			picture = FRA_druidic_purity
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				conscription = 0.015
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+				
+			}
+		}
+		FRA_union_with_nature = {
+		removal_cost = -1
+			picture = FRA_union_with_nature
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				conscription = 0.065
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+				
+			}
+		}
+		FRA_return_to_nature = {
+		removal_cost = -1
+			picture = FRA_union_with_nature
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				conscription = 0.085
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.1
+				stability_factor = -0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		FRA_old_patrons = {
+		removal_cost = -1
+			picture = FRA_old_patrons
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 1
+			}
+		}
+		FRA_ancestral_ties = {
+			removal_cost = -1
+			picture = FRA_ancestral_ties
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 1
+				conscription = 0.05
+			}
+		}
+		FRA_new_vercingetorix = {
+			removal_cost = -1
+			picture = FRA_new_vercingetorix
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+			}
+		}
+		FRA_druidic_spirit = {
+			removal_cost = -1
+			picture = FRA_druidic_spirit
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.2
+				defence = 0.2
+			}
+		}
+		FRA_celtic_spirit = {
+			removal_cost = -1
+			picture = FRA_druidic_spirit
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.3
+				defence = 0.3
+				stability_factor = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		FRA_self_sufficiency = {
+			removal_cost = -1
+			picture = FRA_self_sufficiency
+			allowed = {
+				has_government = accelerationism
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.5 instant = yes
+				}
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		FRA_freed_from_industry = {
+			removal_cost = -1
+			picture = FRA_freed_from_industry
+			allowed = {
+				has_government = accelerationism
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.9 instant = yes
+				}
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		FRA_statelessness = {
+			removal_cost = -1
+			picture = FRA_statelessness
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = -1
+				political_power_factor = -1
+				production_factory_max_efficiency_factor = -0.9
+				MONTHLY_POPULATION = 0.5
+			}
+		}
+		FRA_new_approach = {
+			removal_cost = -1
+			picture = FRA_new_approach
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				production_speed_buildings_factor = -1
+				political_power_factor = 1
+				production_factory_max_efficiency_factor = -0.9
+				MONTHLY_POPULATION = 0.5
+				supply_consumption_factor = -0.9
+			}
+		}
+		FRA_animal_drive = {
+			removal_cost = -1
+			picture = FRA_animal_drive
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.7
+			}
+		}
+		FRA_animal_indulgence = {
+			removal_cost = -1
+			picture = FRA_animal_drive
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 2.75
+			}
+		}
+		FRA_tribal_warriors = {
+			removal_cost = -1
+			picture = FRA_tribal_warriors
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription = 0.5
+			}
+		}
+		FRA_wolfen_warriors = {
+			removal_cost = -1
+			picture = FRA_wolfen_warriors
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription = 0.5
+				offence = 0.25
+				defence = 0.25
+			}
+		}
+		FRA_ascetic_warriors = {
+			removal_cost = -1
+			picture = FRA_ascetic_warriors
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				supply_consumption_factor = -0.1
+				training_time_factor = -0.8
+			}
+		}
+		FRA_enforced_mating = {
+			removal_cost = -1
+			picture = FRA_enforced_mating
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				conscription_factor = 5
+			}
+		}
+		FRA_instinctual_approach = {
+			removal_cost = -1
+			picture = FRA_instinctual_approach
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 1
+				production_factory_max_efficiency_factor = -0.9
+				MONTHLY_POPULATION = 0.5
+
+			}
+		}
+		FRA_perfect_hunters = {
+			removal_cost = -1
+			picture = FRA_perfect_hunters
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				justify_war_goal_time = -0.75
+			}
+		}
+		FRA_expansionism = {
+			removal_cost = -1
+			picture = FRA_expansionism
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				justify_war_goal_time = -0.25
+			}
+		}
+		FRA_communal_property = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				local_resources_factor = 0.25
+				consumer_goods_factor = -0.15
+			}
+		}
+		FRA_celtic_language = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_gain = 0.2
+			}
+		}
+		FRA_celtic_culture = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = -0.03
+				political_power_gain = 0.2
+				army_core_defence_factor = 0.08
+			}
+		}
+		FRA_le_pain_le_nature_la_terre_idea = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				consumer_goods_factor = -0.1
+			}
+		}
+		FRA_give_them_the_voice_idea = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 0.2
+			}
+		}
+		FRA_hedonist_society = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		FRA_hedonist_society_1 = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 0.25
+				stability_factor = -0.05
+			}
+		}
+		FRA_hedonist_society_2 = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 0.4
+				war_support_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		FRA_hedonist_society_3 = {
+			removal_cost = -1
+			#picture = 
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				political_power_factor = 0.6
+				war_support_factor = 0.05
+				stability_factor = -0.15
+			}
+		}
+		FRA_military_mission = {
+			removal_cost = -1
+			picture = FRA_warrior_priests
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+		FRA_military_observation = {
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			allowed = {
+				has_government = accelerationism
+			}
+			cancel = {
+				NOT = {
+					SPA = {
+						has_war = yes
+					}
+				}
+			}
+			modifier = {
+				experience_gain_army_factor = 0.2
+			}
+		}
+		FRA_cultural_attache = {
+			removal_cost = -1
+			picture = FRA_cultural_attache
+			allowed = {
+				always = no
+			}
+			modifier = {
+				accelerationism_drift = 0.01
+			}
+		}
+		FRA_hyperborean_ideal_strength = {
+			removal_cost = -1
+			picture = FRA_hyperborean_ideal
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				offence = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		FRA_hyperborean_ideal_fortitude = {
+			removal_cost = -1
+			picture = FRA_hyperborean_ideal
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				defence = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		FRA_hyperborean_ideal_genius = {
+			removal_cost = -1
+			picture = FRA_hyperborean_ideal
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				research_speed_factor = 0.03
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		FRA_hyperborean_ideal_prosperity = {
+			removal_cost = -1
+			picture = FRA_hyperborean_ideal
+			allowed = {
+				has_government = accelerationism
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_factory = 0.05
+			}
+		}
+		FRA_futurist_strikes = {
+			removal_cost = -1
+			#picture = FRA_hyperborean_ideal
+			cancel = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		FRA_futurist_terrorism = {
+			removal_cost = -1
+			#picture = FRA_hyperborean_ideal
+			cancel = {
+				NOT = {
+					has_war_with = FRA
+				}
+			}
+			modifier = {
+				industry_free_repair_factor = -0.5
+				industry_repair_factor = -0.2
+				local_resources_factor = -0.1
+				production_oil_factor = -0.1
+				training_time_factor = 0.05
+			}
+		}
+	}
+	head_of_government = {
+		FRA_georges_bataille_hog_acc = {
+			picture = FRA_georges_bataille
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_end_perverted_societies
+					}
+				}
+			}
+			traits = { 
+				hog_le_jesuve
+				head_of_government
+			}
+		}
+		FRA_marc_augier_hog_acc = {
+			picture = FRA_Marc_Augier
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_end_perverted_societies
+					}
+					NOT = {
+						has_country_flag = FRA_augier_dead_flag
+					}
+				}
+			}
+			traits = { 
+				hog_flamboyant_tough_guy
+				head_of_government
+			}
+		}
+		FRA_charles_nungesser_hog_acc = {
+			picture = FRA_charles_nungesser
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				hog_happy_amateur
+				head_of_government
+			}
+		}
+		FRA_georges_valois_hog_acc = {
+			picture = FRA_Georges_Valois
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+				}
+			}
+			traits = { 
+				hog_ambitious_union_boss
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		FRA_abel_bonnard_for_acc = {
+			picture = FRA_abel_bonnard
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				for_iron_fisted_brute
+				foreign_minister
+			}
+		}
+		FRA_charles_nungesser_for_acc = {
+			picture = FRA_charles_nungesser
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				for_the_cloak_n_dagger_schemer
+				
+				foreign_minister
+			}
+		}
+		FRA_fernand_brinon_for_acc = {
+			picture = FRA_Fernand_de_Brinon
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				for_apologetic_clerk
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		FRA_hubert_lagardelle_eco_acc = {
+			picture = FRA_hubert_lagardelle
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+			    eco_mixed_economy
+				economy_minister
+			}
+		}
+		FRA_jacques_arthuys_eco_acc = {
+			picture = FRA_Jacques_Arthuys
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_collaborate_with_the_escadron
+					}
+				}
+			}
+			traits = { 
+			    eco_industrialiser
+				economy_minister
+			}
+		}
+		FRA_eugene_schueller_eco_acc = {
+			picture = FRA_Eugene_Schueller
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+			    eco_industrial_chemist
+				economy_minister
+			}
+		}
+		FRA_marcel_deat_eco_acc = {
+			picture = FRA_Eugene_Schueller
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+			    eco_reformer
+				economy_minister
+			}
+		}
+		FRA_georges_bataille_eco_acc = {
+			picture = FRA_georges_bataille
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_end_perverted_societies
+					}
+				}
+			}
+			traits = { 
+				eco_visionary_of_excess
+				economy_minister
+			}
+		}
+	}
+	security_minister = {
+		FRA_marcel_bucard_sec_acc = {
+			picture = FRA_marcel_bucard
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				sec_secret_police_chief
+				security_minister
+			}
+		}
+		FRA_adrien_marquet_sec_acc = {
+			picture = FRA_adrien_marquet
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				sec_back_stabber
+				security_minister
+			}
+		}
+		FRA_henri_berbe_sec_acc = {
+			picture = FRA_Henri_Berbe
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				sec_silent_lawyer
+				security_minister
+			}
+		}
+		FRA_olier_mordrel_sec_acc = {
+			picture = FRA_Olier_Mordrel
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_collaborate_with_the_escadron
+					}
+				}
+			}
+			traits = { 
+				sec_compassionate_gentleman
+				security_minister
+			}
+		}
+		FRA_andre_grisoni_sec_acc = {
+			picture = FRA_Andre_Grisoni
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				sec_crime_fighter
+				security_minister
+			}
+		}
+		FRA_marius_metge_sec_acc = {
+			picture = FRA_Marius_Metge
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_collaborate_with_the_escadron
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				sec_illegalist_terrorist
+				security_minister
+			}
+		}
+	}
+	head_of_intel = {
+		FRA_xavier_vallat_int_acc = {
+			picture = FRA_Xavier_Vallat
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+		FRA_pierre_pucheu_int_acc = {
+			picture = FRA_Pierre_Pucheu
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				int_technical_specialist
+				head_of_intel
+			}
+		}
+		FRA_jean_boissel_int_acc = {
+			picture = FRA_Jean_Boissel
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				int_logistics_specialist
+				head_of_intel
+			}
+		}
+		FRA_paul_marion_int_acc = {
+			picture = FRA_Paul_Marion
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				int_political_specialist
+				head_of_intel
+			}
+		}
+		FRA_francois_coli_int_acc = {
+			picture = FRA_Francois_Coli
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+					NOT = {
+						has_country_flag = FRA_francois_coli_dead
+					}
+				}
+			}
+			traits = { 
+				int_naval_intelligence_specialist
+				head_of_intel
+			}
+		}
+		FRA_edouard_carouy_int_acc = {
+			picture = FRA_edouard_carouy
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_collaborate_with_the_escadron
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				int_iron_fisted_renegade
+				head_of_intel
+			}
+		}
+	}
+	chief_of_staff = {
+		FRA_jospeh_darnand_cos_acc = {
+			picture = FRA_jospeh_darnand
+			allowed = {
+				original_tag = FRA
+			}
+			available = {
+				if = {
+					limit = {
+						has_government = accelerationism
+					}
+					NOT = {
+						has_completed_focus = FRA_appease_the_acephale
+					}
+					NOT = {
+						has_completed_focus = FRA_howling_with_wolves
+					}
+				}
+			}
+			traits = { 
+				silent_workhorse
+				chief_of_staff
+			}
+		}
+		FRA_francois_darlan = {
+			picture = FRA_francois_darlan
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { navy_naval_air_defense_2 }
+		}
+		FRA_marcel_deat = {
+			picture = FRA_marcel_deat
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { army_infantry_2 }
+		}
+	}
+	chief_of_army = {
+		FRA_edgar_puaud = {
+			picture = FRA_edgar_puaud
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { army_chief_offensive_2 }
+		}
+		FRA_neven_henaff = {
+			picture = FRA_neven_henaff
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { army_chief_defensive_2 }
+		}
+	}
+	chief_of_navy = {
+		FRA_eugene_deloncle = {
+			picture = FRA_eugene_deloncle
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_chief_naval_aviation_2 }
+		}
+		FRA_paul_chack = {
+			picture = FRA_paul_chack
+			allowed = {
+				original_tag = FRA
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+		}
+	}
+	chief_of_air_force = {
+	
+	}
+	tank_manufacturer = {
+
+		designer = yes
+	
+		# TECHNOLOGY
+		renault_fra = {
+		
+			picture = renault
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.1
+			}
+			
+
+			traits = { heavy_tank_manufacturer }
+		}
+	
+		groupe_matford = {
+		
+			picture = generic_tank_manufacturer_2
+
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				armor = 0.1
+			}
+			
+
+			traits = { fast_tank_manufacturer }
+		}
+	}
+	
+	weapons_manufacturer = {
+			
+		designer = yes
+		
+		mas = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	
+		schneider = {
+						
+			allowed = {
+				original_tag = FRA
+			}		
+			
+			research_bonus = {
+				artillery = 0.1
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+	}
+	
+	air_naval_manufacturer = {
+			
+		designer = yes
+		
+		morane_saulnier = {
+			
+			allowed = {
+				original_tag = FRA
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		bloch = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		amiot = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		levasseur = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		
+		fcm = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			
+			traits = { naval_manufacturer }
+		}
+	}
+	
+	industrial_concern = {	
+		
+		famh = {
+						
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+		}
+		merlin_gerin = {
+			picture = generic_electronics_concern_1		
+			allowed = {
+				original_tag = FRA
+			}
+						
+			research_bonus = {
+				electronics = 0.1
+			}
+			
+			traits = { electronics_concern }
+		}
+	}
+}	

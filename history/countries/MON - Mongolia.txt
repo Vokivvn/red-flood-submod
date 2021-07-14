@@ -1,0 +1,110 @@
+﻿capital = 330
+
+oob = "MON_1936"
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	gw_artillery = 1	
+	early_fighter = 1
+	early_bomber = 1
+	transport = 1
+}
+
+add_ideas = {
+	limited_conscription
+	MON_humiliation
+	MON_agrarianeconomy
+	MON_brokenarmy
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 0
+	conservatism = 5
+	right_authoritarianism = 80
+	despotism = 5
+	reactionism = 10
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Duan Qirui"
+	desc = "POLITICS_DUAN_QIRUI_DESC"
+	picture = "Portrait_Duan_Qirui.dds"
+	expire = "1945.1.1"
+	ideology = military_junta
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Wang Yitang"
+	desc = "POLITICS_WANG_YITANG_DESC"
+	picture = "Portrait_Wang_Yitang.dds"
+	expire = "1948.1.1"
+	ideology = national_conservatism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Yuan Keding"
+	desc = "POLITICS_KEDING_DESC"
+	picture = "Portrait_Yuan_Keding.dds"
+	expire = "1965.1.1"
+	ideology = absolute_monarchy
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Duan Qirui"
+	picture = "Portrait_Duan_Qirui_g.dds"
+	traits = { 
+		defensive_doctrine
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Xu Shuzheng"
+		picture = "Portrait_Xu_Shuzheng.dds"
+	traits = { career_officer  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Prince Darijaya"
+		picture = "Portrait_Prince_Darijaya.dds"
+	traits = { }
+	skill = 1 
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}

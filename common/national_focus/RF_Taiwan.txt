@@ -1,0 +1,3763 @@
+#####################
+#	Taiwan - Baba	#
+#####################
+
+focus_tree = {
+	id = TAI
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = TAI
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1300 }
+	#Focus for Denounce the Reactionaries
+	focus = {
+		id = TAI_denouncethereactionaries
+		icon = GFX_denouncethereactionaries
+		x = 28
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_chihsingtaiwan 
+			focus = TAI_outofonemany 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.15
+			}
+			TAI = {
+				country_event = { id = tai.25 }
+			}
+		}
+	}
+
+	#Focus for Surreal Architecture
+	focus = {
+		id = TAI_surrealarchitecture
+		icon = GFX_surrealarchitecture
+		x = 26
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chihsingtaiwan }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_surreal
+			}
+		}
+	}
+
+	#Focus for Occidentalist China
+	focus = {
+		id = TAI_occidentalistchina
+		icon = GFX_occidentalistchina
+		x = 30
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_outofonemany }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_occidentalist
+			}
+		}
+	}
+
+	#Focus for The Dreamscape
+	focus = {
+		id = TAI_thedreamscape
+		icon = GFX_thedreamscape
+		x = 26
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_surrealarchitecture }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_dreamscape
+			}
+		}
+	}
+
+	#Focus for The Yellow River
+	focus = {
+		id = TAI_theyellowriver
+		icon = GFX_theyellowriver
+		x = 26
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thedreamscape }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAI_dreamscape
+				add_idea = TAI_yellow
+			}
+		}
+	}
+
+	#Focus for Nature is the Sculptor and China is the Statue
+	focus = {
+		id = TAI_natureisthesculptorandchinaisthestatue
+		icon = GFX_natureisthesculptorandchinaisthestatue
+		x = 26
+		y = 7
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_theyellowriver }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAI_yellow
+				add_idea = TAI_statues
+			}
+		}
+	}
+
+	#Focus for Present
+	focus = {
+		id = TAI_present
+		icon = GFX_present
+		x = 30
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_occidentalistchina }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_present
+			}
+		}
+	}
+
+	#Focus for Past
+	focus = {
+		id = TAI_past
+		icon = GFX_past
+		x = 30
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_present }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_past
+			}
+		}
+	}
+
+	#Focus for A New Mandate
+	focus = {
+		id = TAI_anewmandate
+		icon = GFX_anewmandate
+		x = 28
+		y = 8
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_future 
+			focus = TAI_natureisthesculptorandchinaisthestatue 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#claim the chinese coast south of the Yellow river
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Chinese Socialism
+	focus = {
+		id = TAI_chinesesocialism
+		icon = GFX_chinesesocialism
+		x = 18
+		y = 7
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_modernchineseideal }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_socialism
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FJN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KMT
+			}
+		}
+	}
+
+	#Focus for New Religious Laws
+	focus = {
+		id = TAI_newreligiouslaws
+		icon = GFX_newreligiouslaws
+		x = 20
+		y = 8
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chinesesocialism }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_religion
+			}
+		}
+	}
+
+	#Focus for Purge the Technocrats
+	focus = {
+		id = TAI_purgethetechnocrats
+		icon = GFX_purgethetechnocrats
+		x = 28
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_denouncethesocialists }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#
+			TAI = {
+				country_event = { id = tai.27 }
+			}
+		}
+	}
+
+	#Focus for Shipping Contracts
+	focus = {
+		id = TAI_shippingcontracts
+		icon = GFX_shippingcontracts
+		x = 3
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_formosapact }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#convoys and ship designs
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 150
+				producer = ENG
+			}
+			add_tech_bonus = {
+				name = naval_bonus
+				bonus = 1
+				uses = 3
+				category = naval_doctrine		
+			}
+		}
+	}
+
+	#Focus for Beacon of Liberty
+	focus = {
+		id = TAI_beaconofliberty
+		icon = GFX_beaconofliberty
+		x = 16
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_economicequality }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_liberty
+			}
+		}
+	}
+
+	#Focus for Modern Chinese Ideal
+	focus = {
+		id = TAI_modernchineseideal
+		icon = GFX_modernchineseideal
+		x = 18
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_beaconofliberty 
+		
+			focus = TAI_noracialboundaries 
+		
+			focus = TAI_womensrights 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_chinese_ideal
+			}
+		}
+	}
+
+	#Focus for Infiltrate the Cities
+	focus = {
+		id = TAI_infiltratethecities
+		icon = GFX_infiltratethecities
+		x = 12
+		y = 4
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_taiwanesesunyatsen }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+			
+		}
+		completion_reward = {	#build support in city states (opens decisions?)
+			TAI = {
+				country_event = { id = tai.21 }
+			}
+		}
+	}
+
+	#Focus for Urban Support
+	focus = {
+		id = TAI_urbansupport
+		icon = GFX_urbansupport
+		x = 12
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_infiltratethecities }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event for defection
+			TAI = {
+				country_event = { id = tai.23 }
+			}
+		}
+	}
+
+	#Focus for Agricultural Revolutionaries
+	focus = {
+		id = TAI_agriculturalrevolutionaries
+		icon = GFX_agriculturalrevolutionaries
+		x = 14
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_infiltratethecountryside }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event for defection
+			TAI = {
+				country_event = { id = tai.24 }
+			}
+		}
+	}
+
+	#Focus for Rally the Moderates
+	focus = {
+		id = TAI_rallythemoderates
+		icon = GFX_rallythemoderates
+		x = 12
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_urbansupport 
+		}
+		prerequisite = { 
+			focus = TAI_agriculturalrevolutionaries 
+		}
+		mutually_exclusive = { focus = TAI_newchinesepopulism }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#add popularity, stabilise, lower war support
+			add_stability = 0.1
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.17
+			}
+		}
+	}
+
+	#Focus for New Chinese Populism
+	focus = {
+		id = TAI_newchinesepopulism
+		icon = GFX_newchinesepopulism
+		x = 14
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_agriculturalrevolutionaries 
+		}
+		prerequisite = { 
+			focus = TAI_urbansupport 
+		}
+		mutually_exclusive = { 
+			focus = TAI_rallythemoderates 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#reduce opposition popularities, destabilise, add war support,
+			add_stability = -0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.1
+			}
+		}
+	}
+
+	#Focus for Support Shumei
+	focus = {
+		id = TAI_supportshumei
+		icon = GFX_supportshumei
+		x = 21
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thetcptakespower }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= {
+			JAP = { exists = no }
+		}
+		available = {
+			JPR = { exists = yes }
+		}
+		completion_reward = {	#offer help to Shumei if the CW is still going. Bypasses when the war is over if Shumei wins
+			TAI = {
+				country_event = { id = tai.12 }
+			}
+		}
+	}
+
+	#Focus for Economic Equality
+	focus = {
+		id = TAI_economicequality
+		icon = GFX_economicequality
+		x = 16
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_taiwanesesunyatsen 
+			focus = TAI_socialistprograms 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#consumer goods increase, add civ and increase pop growth
+			524 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				TAI_eco_equality
+			}
+		}
+	}
+
+	#Focus for Chi-Hsing Taiwan
+	focus = {
+		id = TAI_chihsingtaiwan
+		icon = GFX_chihsingtaiwan
+		x = 26
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_huajiachengpo }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#cosmetic tag Chi-Hsing Taiwan
+			set_cosmetic_tag = "TAI_hsi_accelerationism"
+		}
+	}
+
+	#Focus for Out of One, Many
+	focus = {
+		id = TAI_outofonemany
+		icon = GFX_outofonemany
+		x = 30
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_tansclub }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#cosmetic Occidentalist Taiwan
+			set_cosmetic_tag = "TAI_tan_accelerationism"
+		}
+	}
+
+	#Focus for No Dictators
+	focus = {
+		id = TAI_nodictators
+		icon = GFX_nodictators
+		x = 13
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_rallythemoderates 
+			focus = TAI_newchinesepopulism 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SZC
+				modifier = protest_action_strong
+			}
+			add_opinion_modifier = {
+				target = GDP
+				modifier = protest_action_strong
+			}
+			add_opinion_modifier = {
+				target = XSM
+				modifier = protest_action_strong
+			}
+			add_opinion_modifier = {
+				target = BYJ
+				modifier = protest_action_strong
+			}
+			add_opinion_modifier = {
+				target = KMT
+				modifier = protest_action_strong
+			}
+		}
+	}
+
+	#Focus for Local Chairmen
+	focus = {
+		id = TAI_localchairmen
+		icon = GFX_localchairmen
+		x = 22
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_civilliberties }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#pp gain loss, buff command power and stab 
+			add_ideas = {
+				TAI_chairmen
+			}
+		}
+	}
+
+	#Focus for Join the Communes
+	focus = {
+		id = TAI_jointhecommunes
+		icon = GFX_jointhecommunes
+		x = 22
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_internationalecontacts }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#New revolutionary front forms and TAI can join
+			TAI = {
+				country_event = { id = tai.101 }
+			}
+		}
+	}
+
+	#Focus for Lin's Coalition
+	focus = {
+		id = TAI_linscoalition
+		icon = GFX_linscoalition
+		x = 7
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_freeelections }
+		mutually_exclusive = { focus = TAI_liaosrepublicans }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#cons form coalition gov't
+			TAI = {
+				country_event = { id = tai.9 }
+			}
+		}
+	}
+
+	#Focus for Market Economy
+	focus = {
+		id = TAI_marketeconomy
+		icon = GFX_marketeconomy
+		x = 5
+		y = 3
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_liaosrepublicans 
+			focus = TAI_linscoalition 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_market_economy
+			}
+		}
+	}
+
+	#Focus for Curtail Corporate
+	focus = {
+		id = TAI_curtailcorporate
+		icon = GFX_curtailcorporate
+		x = 3
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_liaosrepublicans }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			TAI = {
+				country_event = { id = tai.13 }
+			}
+		}
+	}
+
+	#Focus for Civil Liberties
+	focus = {
+		id = TAI_civilliberties
+		icon = GFX_civilliberties
+		x = 19
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_socialistprograms }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#gain popularity for all libertarians, increase resource gain and production, decrease conscription
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.03
+			}
+		}
+	}
+
+	#Focus for 2nd Singapore
+	focus = {
+		id = TAI_2ndsingapore
+		icon = GFX_2ndsingapore
+		x = 5
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_formosapact 
+			focus = TAI_pacifictradeorganisation 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#extra civs, more consumer goods, research speed
+			524 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			524 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+	}
+
+	#Focus for Deal with Australia
+	focus = {
+		id = TAI_dealwithaustralia
+		icon = GFX_dealwithaustralia
+		x = 8
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_corporatestate }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = AST
+				modifier = large_increase
+			}
+			TAI = {
+				country_event = { id = tai.18 }
+			}
+		}
+	}
+
+	#Focus for Formosa Pact
+	focus = {
+		id = TAI_formosapact
+		icon = GFX_formosapact
+		x = 3
+		y = 5
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_dealwiththeanglos 
+			focus = TAI_dealwiththedutch 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_formosa_pact
+			}
+			TAI = {
+				country_event = { id = tai.19 }
+			}
+		}
+	}
+
+	#Focus for Pacific Trade Organisation
+	focus = {
+		id = TAI_pacifictradeorganisation
+		icon = GFX_pacifictradeorganisation
+		x = 7
+		y = 5
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_dealwiththeusa 
+			focus = TAI_dealwithaustralia 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_PTO
+			}
+			TAI = {
+				country_event = { id = tai.20 }
+			}
+		}
+	}
+
+	#Focus for Corporate State
+	focus = {
+		id = TAI_corporatestate
+		icon = GFX_corporatestate
+		x = 7
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_linscoalition }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			TAI = {
+				country_event = { id = tai.14 }
+			}
+		}
+	}
+
+	#Focus for Deal with the Anglos
+	focus = {
+		id = TAI_dealwiththeanglos
+		icon = GFX_dealwiththeanglos
+		x = 2
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_curtailcorporate }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#trade with UK
+			add_opinion_modifier = {
+				target = ENG
+				modifier = large_increase
+			}
+			TAI = {
+				country_event = { id = tai.15 }
+			}
+		}
+	}
+
+	#Focus for Deal with the USA
+	focus = {
+		id = TAI_dealwiththeusa
+		icon = GFX_dealwiththeusa
+		x = 6
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_corporatestate }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#trade with USA
+			add_opinion_modifier = {
+				target = USA
+				modifier = large_increase
+			}
+			TAI = {
+				country_event = { id = tai.17 }
+			}
+		}
+	}
+
+	#Focus for No North or South
+	focus = {
+		id = TAI_nonorthorsouth
+		icon = GFX_nonorthorsouth
+		x = 35
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chinesefiume }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#acclimatisation
+			add_ideas = {
+				TAI_northsouth
+			}
+		}
+	}
+
+	#Focus for Cultural Revolution
+	focus = {
+		id = TAI_culturalrevolution
+		icon = GFX_culturalrevolution
+		x = 34
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = TAI_nonorthorsouth 
+		}
+		prerequisite = { 
+			focus = TAI_noeastorwest 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_cultural_rev
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Huajia Chengpo
+	focus = {
+		id = TAI_huajiachengpo
+		icon = GFX_huajiachengpo
+		x = 26
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_penspencilstreatise }
+		mutually_exclusive = { focus = TAI_tansclub }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			TAI = {
+				country_event = { id = tai.11 }
+			}
+		}
+	}
+
+	#Focus for The People's Party
+	focus = {
+		id = TAI_thepeoplesparty
+		icon = GFX_thepeoplesparty
+		x = 14
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thechaos }
+		mutually_exclusive = { focus = TAI_thetcptakespower }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.1
+			}
+			TAI = {
+				country_event = { id = tai.6 }
+			}
+			remove_ideas = {
+				TAI_chaos
+			}
+		}
+	}
+
+	#Focus for Liao's Republicans
+	focus = {
+		id = TAI_liaosrepublicans
+		icon = GFX_liaosrepublicans
+		x = 3
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_freeelections }
+		mutually_exclusive = { focus = TAI_linscoalition }
+		ai_will_do = {
+			factor = 2
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			TAI = {
+				country_event = { id = tai.8 }
+			}
+		}
+	}
+
+	#Focus for Free Elections
+	focus = {
+		id = TAI_freeelections
+		icon = GFX_freeelections
+		x = 5
+		y = 1
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_breakingfree }
+		mutually_exclusive = { focus = TAI_thechaos }
+		mutually_exclusive = { focus = TAI_penspencilstreatise }
+		ai_will_do = {
+			factor = 4
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event for the elections
+			TAI = {
+				country_event = { id = tai.2 }
+			}
+		}
+	}
+
+	#Focus for Pens & Pencils Treatise
+	focus = {
+		id = TAI_penspencilstreatise
+		icon = GFX_pensandpencilstreatise
+		x = 28
+		y = 1
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_breakingfree }
+		mutually_exclusive = { focus = TAI_thechaos }
+		mutually_exclusive = { focus = TAI_freeelections }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event for the treatise and accels taking over the gov't
+			TAI = {
+				country_event = { id = tai.7 }
+			}
+		}
+	}
+
+	#Focus for Friends in Hanoi
+	focus = {
+		id = TAI_friendsinhanoi
+		icon = GFX_friendsinhanoi
+		x = 34
+		y = 2
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_penspencilstreatise }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#boost accel in DAI? relations if DAI is accel
+			DAI = {
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.07
+				}
+			}
+		}
+	}
+
+	#Focus for Chinese Fiume
+	focus = {
+		id = TAI_chinesefiume
+		icon = GFX_chinesefiume
+		x = 34
+		y = 4
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_frenchconnections }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#relations with fiume, tech boost to navy
+			add_opinion_modifier = {
+				target = FIU
+				modifier = large_increase
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	#Focus for No East or West
+	focus = {
+		id = TAI_noeastorwest
+		icon = GFX_noeastorwest
+		x = 33
+		y = 5
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chinesefiume }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#tech boost and claims on all polynesia
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+			custom_effect_tooltip = "TAI_claim_the_sea"
+			hidden_effect = {
+				add_state_claim = 591
+				add_state_claim = 728
+				add_state_claim = 729
+				add_state_claim = 326
+				add_state_claim = 928
+				add_state_claim = 927
+				add_state_claim = 862
+				add_state_claim = 797
+				add_state_claim = 743
+				add_state_claim = 839
+				add_state_claim = 745
+				add_state_claim = 526
+				add_state_claim = 875
+				add_state_claim = 981
+				add_state_claim = 645
+				add_state_claim = 647
+				add_state_claim = 980
+				add_state_claim = 647
+				add_state_claim = 980
+				add_state_claim = 648
+				add_state_claim = 646
+				add_state_claim = 638
+				add_state_claim = 684
+				add_state_claim = 633
+				add_state_claim = 632
+				add_state_claim = 623
+				add_state_claim = 327
+				add_state_claim = 624
+				add_state_claim = 628
+				add_state_claim = 626
+				add_state_claim = 627
+				add_state_claim = 625
+			}
+		}
+	}
+
+	#Focus for The Chaos
+	focus = {
+		id = TAI_thechaos
+		icon = GFX_thechaos
+		x = 17
+		y = 1
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_breakingfree }
+		mutually_exclusive = { 
+			focus = TAI_penspencilstreatise 
+		}
+		mutually_exclusive = { 
+			focus = TAI_freeelections 
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAI_freedom2
+				add_idea = TAI_chaos
+			}
+			TAI = {
+				country_event = { id = tai.3 }
+			}
+		}
+	}
+
+	#Focus for Breaking Free
+	focus = {
+		id = TAI_breakingfree
+		icon = GFX_breakingfree
+		x = 17
+		y = 0
+		cost = 12
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TAI_freedom
+				add_idea = TAI_freedom2
+			}
+			TAI = {
+				country_event = { id = tai.1 }
+			}
+		}
+	}
+
+	#Focus for Tan's Club
+	focus = {
+		id = TAI_tansclub
+		icon = GFX_tansclub
+		x = 30
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_penspencilstreatise }
+		mutually_exclusive = { focus = TAI_huajiachengpo }
+		ai_will_do = {
+			factor = 0
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#Tan begins the Cult
+			TAI = {
+				country_event = { id = tai.10 }
+			}
+		}
+	}
+
+	#Focus for French Connections
+	focus = {
+		id = TAI_frenchconnections
+		icon = GFX_frenchconnections
+		x = 34
+		y = 3
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_friendsinhanoi }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#relations with France, art, fashion, military ideas, (event)
+			add_opinion_modifier = {
+				target = FRA
+				modifier = large_increase
+			}
+			TAI = {
+				country_event = { id = tai.103 }
+			}
+		}
+	}
+
+	#Focus for The TCP Takes Power
+	focus = {
+		id = TAI_thetcptakespower
+		icon = GFX_thetcptakespower
+		x = 20
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thechaos }
+		mutually_exclusive = { focus = TAI_thepeoplesparty }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event for TCP to take power
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.1
+			}
+			TAI = {
+				country_event = { id = tai.5 }
+			}
+			remove_ideas = {
+				TAI_chaos
+			}
+		}
+	}
+
+	#Focus for Deal with the Dutch
+	focus = {
+		id = TAI_dealwiththedutch
+		icon = GFX_dealwiththedutch
+		x = 4
+		y = 4
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_curtailcorporate }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = HOL
+				modifier = large_increase
+			}
+			TAI = {
+				country_event = { id = tai.16 }
+			}
+		}
+	}
+
+	#Focus for Join the PWL
+	focus = {
+		id = TAI_jointhepwl
+		icon = GFX_jointhepwl
+		x = 21
+		y = 4
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_supportshumei }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event asking JPR to join PWL
+			TAI = {
+				country_event = { id = tai.102 }
+			}
+		}
+	}
+
+	#Focus for Socialist Programs
+	focus = {
+		id = TAI_socialistprograms
+		icon = GFX_socialistprograms
+		x = 19
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thetcptakespower }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_social_progs
+			}
+		}
+	}
+
+	#Focus for Women's Rights
+	focus = {
+		id = TAI_womensrights
+		icon = GFX_womensrights
+		x = 20
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_civilliberties }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_feminism
+			}
+		}
+	}
+
+	#Focus for No Racial Boundaries
+	focus = {
+		id = TAI_noracialboundaries
+		icon = GFX_noracialboundaries
+		x = 18
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_civilliberties }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_race
+			}
+		}
+	}
+
+	#Focus for Taiwanese Sun Yat-Sen
+	focus = {
+		id = TAI_taiwanesesunyatsen
+		icon = GFX_taiwanesesunyatsen
+		x = 14
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_thepeoplesparty }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#popularity, relations with KMT tags
+			add_opinion_modifier = {
+				target = KMT
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = FJN
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = SZC
+				modifier = medium_increase
+			}
+			add_opinion_modifier = {
+				target = GDP
+				modifier = medium_increase
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Infiltrate the Countryside
+	focus = {
+		id = TAI_infiltratethecountryside
+		icon = GFX_infiltratethecountryside
+		x = 14
+		y = 4
+		cost = 14
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_taiwanesesunyatsen }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#build support in rural mainland KMT states, opens up decisions?
+			TAI = {
+				country_event = { id = tai.22 }
+			}
+		}
+	}
+
+	#Focus for March North Once More
+	focus = {
+		id = TAI_marchnorthoncemore
+		icon = GFX_marchnorthoncemore
+		x = 13
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_nodictators }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+			#has_full_control_of_state = ###
+		}
+		completion_reward = {	#requires control over southern China, gives claims/cores and possibly a WG
+			create_wargoal = {
+				type = annex_everything
+				target = BYJ
+			}
+		}
+	}
+
+	#Focus for Internationale Contacts
+	focus = {
+		id = TAI_internationalecontacts
+		icon = GFX_internationalecontacts
+		x = 22
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_localchairmen }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#relations, research, co-operation with 3rd Intern'l
+			add_opinion_modifier = {
+				target = GER
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = HUN
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = BRA
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = LUX
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = NOR
+				modifier = large_increase
+			}
+			add_opinion_modifier = {
+				target = CUB
+				modifier = large_increase
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	#Focus for Future!
+	focus = {
+		id = TAI_future
+		icon = GFX_future
+		x = 30
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_past }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_future
+			}
+		}
+	}
+
+	#Focus for 5 Nation Vanguard
+	focus = {
+		id = TAI_5nationvanguard
+		icon = GFX_5nationvanguard
+		x = 16
+		y = 8
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chinesesocialism }
+		mutually_exclusive = { focus = TAI_panasianism }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+			#owns warlord capitals
+			has_government = social_democratism
+			owns_state = 613
+		}
+		completion_reward = {	#core major warlord capitals
+			set_cosmetic_tag = "TAI_chi_right"
+			set_capital = 613
+			custom_effect_tooltip = MON_chinese_reclaimation
+			hidden_effect = {
+				#claim japanese canton
+				add_state_core = 877
+				add_state_core = 728
+				add_state_core = 591
+				#cores on BYJ
+				add_state_core = 621
+				add_state_core = 611
+				add_state_core = 615
+				add_state_core = 837
+				add_state_core = 609
+				add_state_core = 608
+				add_state_core = 860
+				add_state_core = 866
+				add_state_core = 614
+				add_state_core = 871
+				add_state_core = 872
+				add_state_core = 792
+				add_state_core = 870
+				add_state_core = 868
+				add_state_core = 878
+				add_state_core = 606
+				add_state_core = 879
+				add_state_core = 622
+				add_state_core = 744
+				add_state_core = 746
+				add_state_core = 607
+				add_state_core = 917
+				add_state_core = 620
+				#cores on Mao/hunan
+				add_state_core = 896
+				add_state_core = 932
+				add_state_core = 795
+				add_state_core = 897
+				add_state_core = 867
+				add_state_core = 750
+				add_state_core = 874
+				add_state_core = 602
+				add_state_core = 892
+				add_state_core = 934
+				#cores on KMT
+				add_state_core = 600
+				add_state_core = 749
+				add_state_core = 613
+				add_state_core = 929
+				add_state_core = 861
+				add_state_core = 863
+				add_state_core = 596
+				#cores on FJN
+				add_state_core = 869
+				add_state_core = 595
+				add_state_core = 864
+				add_state_core = 931
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				#cores on MAN
+				add_state_core = 610
+				add_state_core = 715
+				add_state_core = 328
+				add_state_core = 717
+				add_state_core = 809
+				add_state_core = 716
+				add_state_core = 789
+				#cores on TIB
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 757
+				add_state_core = 434
+				add_state_core = 601
+				add_state_core = 604
+				#cores on ETS
+				add_state_core = 935
+				add_state_core = 843
+				add_state_core = 287
+				add_state_core = 619
+				#cores on SIK
+				add_state_core = 617
+				add_state_core = 760
+				add_state_core = 793
+				add_state_core = 618
+				#cores on XSM
+				add_state_core = 755
+				add_state_core = 759
+				add_state_core = 756
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 754
+				#cores on SZC
+				add_state_core = 605
+				add_state_core = 753
+				add_state_core = 752
+				add_state_core = 751
+				add_state_core = 791
+				add_state_core = 790
+				add_state_core = 748
+				#cores on YUN
+				add_state_core = 603
+				add_state_core = 325
+				add_state_core = 924
+				add_state_core = 887
+				add_state_core = 886
+				add_state_core = 747
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				add_state_core = 593
+				add_state_core = 926
+				add_state_core = 592
+				#cores on SHA
+				add_state_core = 918
+				add_state_core = 597
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 893
+				add_state_core = 598
+			}
+		}
+	}
+
+	#Focus for Pan-Asianism
+	focus = {
+		id = TAI_panasianism
+		icon = GFX_panasianism
+		x = 18
+		y = 8
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_chinesesocialism }
+		mutually_exclusive = { focus = TAI_5nationvanguard }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+			has_government = vanguard_socialism
+			owns_state = 613
+		}
+		completion_reward = { #Claim GREATER CHINA
+			set_cosmetic_tag = "TAI_chi_leftist"
+			set_capital = 613
+			custom_effect_tooltip = MON_chinese_reclaimation
+			hidden_effect = {
+				#claim japanese canton
+				add_state_core = 877
+				add_state_core = 728
+				add_state_core = 591
+				#cores on BYJ
+				add_state_core = 621
+				add_state_core = 611
+				add_state_core = 615
+				add_state_core = 837
+				add_state_core = 609
+				add_state_core = 608
+				add_state_core = 860
+				add_state_core = 866
+				add_state_core = 614
+				add_state_core = 871
+				add_state_core = 872
+				add_state_core = 792
+				add_state_core = 870
+				add_state_core = 868
+				add_state_core = 878
+				add_state_core = 606
+				add_state_core = 879
+				add_state_core = 622
+				add_state_core = 744
+				add_state_core = 746
+				add_state_core = 607
+				add_state_core = 917
+				add_state_core = 620
+				#cores on Mao/hunan
+				add_state_core = 896
+				add_state_core = 932
+				add_state_core = 795
+				add_state_core = 897
+				add_state_core = 867
+				add_state_core = 750
+				add_state_core = 874
+				add_state_core = 602
+				add_state_core = 892
+				add_state_core = 934
+				#cores on KMT
+				add_state_core = 600
+				add_state_core = 749
+				add_state_core = 613
+				add_state_core = 929
+				add_state_core = 861
+				add_state_core = 863
+				add_state_core = 596
+				#cores on FJN
+				add_state_core = 869
+				add_state_core = 595
+				add_state_core = 864
+				add_state_core = 931
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				#cores on MAN
+				add_state_core = 610
+				add_state_core = 715
+				add_state_core = 328
+				add_state_core = 717
+				add_state_core = 809
+				add_state_core = 716
+				add_state_core = 789
+				#cores on TIB
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 757
+				add_state_core = 434
+				add_state_core = 601
+				add_state_core = 604
+				#cores on ETS
+				add_state_core = 935
+				add_state_core = 843
+				add_state_core = 287
+				add_state_core = 619
+				#cores on SIK
+				add_state_core = 617
+				add_state_core = 760
+				add_state_core = 793
+				add_state_core = 618
+				#cores on XSM
+				add_state_core = 755
+				add_state_core = 759
+				add_state_core = 756
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 754
+				#cores on SZC
+				add_state_core = 605
+				add_state_core = 753
+				add_state_core = 752
+				add_state_core = 751
+				add_state_core = 791
+				add_state_core = 790
+				add_state_core = 748
+				#cores on YUN
+				add_state_core = 603
+				add_state_core = 325
+				add_state_core = 924
+				add_state_core = 887
+				add_state_core = 886
+				add_state_core = 747
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				add_state_core = 593
+				add_state_core = 926
+				add_state_core = 592
+				#cores on SHA
+				add_state_core = 918
+				add_state_core = 597
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 893
+				add_state_core = 598
+			}
+		}
+	}
+
+	#Focus for Denounce the Socialists
+	focus = {
+		id = TAI_denouncethesocialists
+		icon = GFX_denouncethesocialists
+		x = 28
+		y = 5
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_denouncethereactionaries }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.1
+			}
+			TAI = {
+				country_event = { id = tai.26 }
+			}
+		}
+	}
+
+	#Focus for Mining Contracts
+	focus = {
+		id = TAI_miningcontracts
+		icon = GFX_miningcontracts
+		x = 7
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_pacifictradeorganisation }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#add resources, resource gain tech
+			add_resource = {
+				type = steel
+				amount = 7
+				state = 1023
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = excavation_tech
+			}
+		}
+	}
+
+	#Focus for Jewel of Asia
+	focus = {
+		id = TAI_jewelofasia
+		icon = GFX_jewelofasia
+		x = 5
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_2ndsingapore }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				TAI_jewel
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Serene Republic of China
+	focus = {
+		id = TAI_serenerepublicofchina
+		icon = GFX_serenerepublicofchina
+		x = 5
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = TAI_jewelofasia }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#Naval bonuses and set economy to free trade
+			add_ideas = {
+				free_trade
+			}
+			set_cosmetic_tag = TAI_serene_republic_formosa
+		}
+	}
+######	mil tree	############
+	######################################################
+	######Generic extension###############################
+	######################################################
+	focus = {
+		id = TAI_army_effort
+		icon = GFX_focus_army
+		x = 38
+		y = 0
+		cost = 10
+		ai_will_do = { 
+		 factor = 1
+	    } 
+		available_if_capitulated = yes
+		available = {
+			OR = {
+				has_completed_focus = TAI_penspencilstreatise
+				has_completed_focus = TAI_thechaos
+				has_completed_focus = TAI_freeelections
+			}
+		}
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TAI_equipment_effort
+		icon = GFX_focus_equipment_1
+		prerequisite = { focus = TAI_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = TAI_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = TAI_motorization_effort
+		icon = GFX_focus_motorization
+		prerequisite = { focus = TAI_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = TAI_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+	focus = {
+		id = TAI_doctrine_effort
+		icon = GFX_focus_doctrine_1
+		prerequisite = { focus = TAI_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TAI_equipment_effort_2
+		icon = GFX_focus_equipment_2
+		prerequisite = { focus = TAI_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = TAI_mechanization_effort
+		icon = GFX_focus_mechanized
+		prerequisite = { focus = TAI_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = TAI_doctrine_effort_2
+		icon = GFX_focus_doctrine_2
+		prerequisite = { focus = TAI_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TAI_equipment_effort_3
+		icon = GFX_focus_equipment_3
+		prerequisite = { focus = TAI_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = TAI_equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	focus = {
+		id = TAI_armor_effort
+		icon = GFX_focus_armor
+		prerequisite = { focus = TAI_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = TAI_special_forces
+		icon = GFX_focus_special_forces
+		prerequisite = { focus = TAI_equipment_effort_3 }
+		prerequisite = { focus = TAI_doctrine_effort_2 }
+		prerequisite = { focus = TAI_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = TAI_equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = TAI_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	focus = {
+		id = TAI_aviation_effort
+		icon = GFX_focus_aviation1
+		x = 42
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			OR = {
+				has_completed_focus = TAI_penspencilstreatise
+				has_completed_focus = TAI_thechaos
+				has_completed_focus = TAI_freeelections
+			}
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = TAI_aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = TAI_aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = TAI_aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TAI_fighter_focus
+		icon = GFX_focus_fighter
+		prerequisite = { focus = TAI_aviation_effort }
+		mutually_exclusive = { focus = TAI_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = TAI_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+	focus = {
+		id = TAI_bomber_focus
+		icon = GFX_focus_bomber
+		prerequisite = { focus = TAI_aviation_effort }
+		mutually_exclusive = { focus = TAI_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = TAI_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = TAI_aviation_effort_2
+		icon = GFX_focus_aviation2
+		prerequisite = { focus = TAI_bomber_focus focus = TAI_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = TAI_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = TAI_aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = TAI_aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = TAI_aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = TAI_CAS_effort
+		icon = GFX_focus_CASeffort
+		prerequisite = { focus = TAI_aviation_effort_2 }
+		prerequisite = { focus = TAI_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = TAI_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = TAI_rocket_effort
+		icon = GFX_focus_rocket_effort
+		prerequisite = { focus = TAI_aviation_effort_2 }
+		prerequisite = { focus = TAI_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = TAI_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	focus = {
+		id = TAI_NAV_effort
+		icon = GFX_focus_naveffort
+		prerequisite = { focus = TAI_aviation_effort_2 }
+		prerequisite = { focus = TAI_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = TAI_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	focus = {
+		id = TAI_naval_effort
+		icon = GFX_focus_navaleffort
+		x = 46
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			OR = {
+				has_completed_focus = TAI_penspencilstreatise
+				has_completed_focus = TAI_thechaos
+				has_completed_focus = TAI_freeelections
+			}
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = TAI_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = TAI_naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = TAI_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = TAI_naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	focus = {
+		id = TAI_flexible_navy
+		icon = GFX_focus_flexible_navy
+		prerequisite = { focus = TAI_naval_effort }
+		mutually_exclusive = { focus = TAI_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = TAI_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+	focus = {
+		id = TAI_large_navy
+		icon = GFX_focus_large
+		prerequisite = { focus = TAI_naval_effort }
+		mutually_exclusive = { focus = TAI_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = TAI_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+	focus = {
+		id = TAI_submarine_effort
+		icon = GFX_focus_submarine
+		prerequisite = { focus = TAI_flexible_navy focus = TAI_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = TAI_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	focus = {
+		id = TAI_cruiser_effort
+		icon = GFX_focus_cruisers
+		prerequisite = { focus = TAI_large_navy focus = TAI_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = TAI_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	focus = {
+		id = TAI_destroyer_effort
+		icon = GFX_focus_destroyers
+		prerequisite = { focus = TAI_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = TAI_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = TAI_capital_ships_effort
+		icon = GFX_focus_capitalships
+		prerequisite = { focus = TAI_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = TAI_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+	focus = {
+		id = TAI_industrial_effort
+		icon = GFX_focus_industry
+		x = 50
+		y = 0
+		cost = 10
+		ai_will_do = { 
+			 factor = 20
+		} 
+		available_if_capitulated = yes
+		available = {
+			OR = {
+				has_completed_focus = TAI_penspencilstreatise
+				has_completed_focus = TAI_thechaos
+				has_completed_focus = TAI_freeelections
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+	focus = {
+		id = TAI_construction_effort
+		icon = GFX_focus_construction_1
+		prerequisite = { focus = TAI_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = TAI_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_production_effort
+		icon = GFX_focus_production_1
+		prerequisite = { focus = TAI_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = TAI_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 20			
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_construction_effort_2
+		icon = GFX_focus_construction_2
+		prerequisite = { focus = TAI_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = TAI_construction_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_production_effort_2
+		icon = GFX_focus_production_2
+		prerequisite = { focus = TAI_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = TAI_production_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_infrastructure_effort
+		icon = GFX_focus_infrastructure_1
+		prerequisite = { focus = TAI_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = TAI_construction_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_production_effort_3
+		icon = GFX_focus_production_3
+		prerequisite = { focus = TAI_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = TAI_production_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_infrastructure_effort_2
+		icon = GFX_focus_infrastructure_2
+		prerequisite = { focus = TAI_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = TAI_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_construction_effort_3
+		icon = GFX_focus_construction_3
+		prerequisite = { focus = TAI_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = TAI_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = TAI_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = TAI_nuclear_effort
+		icon = GFX_focus_Nuclear_Effort
+		prerequisite = { focus = TAI_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = TAI_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+	focus = {
+		id = TAI_extra_tech_slot
+		icon = GFX_focus_extra_tech1
+		prerequisite = { focus = TAI_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = TAI_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = TAI_extra_tech_slot_2
+		icon = GFX_focus_extra_tech2
+		prerequisite = { focus = TAI_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = TAI_extra_tech_slot
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+	focus = {
+		id = TAI_secret_weapons
+		icon = GFX_focus_Secret_Weapons
+		prerequisite = { focus = TAI_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = TAI_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+#End of focuses 
+ }

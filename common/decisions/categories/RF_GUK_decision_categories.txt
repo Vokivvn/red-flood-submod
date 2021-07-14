@@ -1,0 +1,10 @@
+GUK_perfection_with_USA = {
+	icon = generic_crisis
+	allowed = {
+		original_tag = GUK
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = GUK_perfection_with_metal_undertone
+	}
+}

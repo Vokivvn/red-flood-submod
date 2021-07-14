@@ -1,0 +1,354 @@
+spriteTypes = { 
+ SpriteType = { 
+ name = "GFX_2year" 
+ texturefile = "gfx/interface/goals/ARM/2year.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_agresindus" 
+ texturefile = "gfx/interface/goals/ARM/agresindus.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_andthebear" 
+ texturefile = "gfx/interface/goals/ARM/And the bear.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_annihilatekav" 
+ texturefile = "gfx/interface/goals/ARM/Annihalate kavkaz.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_aairforce" 
+ texturefile = "gfx/interface/goals/ARM/Armenian airforce.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_aarmy" 
+ texturefile = "gfx/interface/goals/ARM/Armenian army.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_anavy" 
+ texturefile = "gfx/interface/goals/ARM/Armenian navy.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_asocialistdem" 
+ texturefile = "gfx/interface/goals/ARM/Armenian socialist democracy.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_armeniastep"
+ texturefile = "gfx/interface/goals/ARM/armeniastep.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_armeniasubsidise" 
+ texturefile = "gfx/interface/goals/ARM/Armeniasubs.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_artillerya" 
+ texturefile = "gfx/interface/goals/ARM/Artillery.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_blowturk" 
+ texturefile = "gfx/interface/goals/ARM/Blow the turk of.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_bombereffortarmenia" 
+ texturefile = "gfx/interface/goals/ARM/Bomber effort.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_businessasusual" 
+ texturefile = "gfx/interface/goals/ARM/Business_as_usual.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_britishplanes" 
+ texturefile = "gfx/interface/goals/ARM/Buy british planes.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_buytrucks" 
+ texturefile = "gfx/interface/goals/ARM/Buy tracks and tanks.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_centrocaspiastakank" 
+ texturefile = "gfx/interface/goals/ARM/centrocaspia Takank problem.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_civilizeoutskirts" 
+ texturefile = "gfx/interface/goals/ARM/civoutscirts.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_cosnscripteveryonelmao" 
+ texturefile = "gfx/interface/goals/ARM/Conscript all that are able.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_consumerindustry" 
+ texturefile = "gfx/interface/goals/ARM/consumerindustry.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_cooperatewithcommies" 
+ texturefile = "gfx/interface/goals/ARM/Cooperate with councilists.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_cultofviolencearmenia" 
+ texturefile = "gfx/interface/goals/ARM/Cult of violence.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_dashnakvictory" 
+ texturefile = "gfx/interface/goals/ARM/Dashnak victory.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_democraticsocialism" 
+ texturefile = "gfx/interface/goals/ARM/Democratic socialism.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_destroyeveryenemy" 
+ texturefile = "gfx/interface/goals/ARM/Destroy every enemie.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_destroytakank" 
+ texturefile = "gfx/interface/goals/ARM/Destroy the Takank.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_endturkishlanguage" 
+ texturefile = "gfx/interface/goals/ARM/End turkish language.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_executepartisans" 
+ texturefile = "gfx/interface/goals/ARM/Execute partisans.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_expandcruisers" 
+ texturefile = "gfx/interface/goals/ARM/expand cruisers.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_expandvoting" 
+ texturefile = "gfx/interface/goals/ARM/Expand voting booth.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_fightereffort" 
+ texturefile = "gfx/interface/goals/ARM/Fighter effort.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_fragiledemocracy" 
+ texturefile = "gfx/interface/goals/ARM/fragile_democracy_2.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_freedomofspeech" 
+ texturefile = "gfx/interface/goals/ARM/Freedom of speech.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_freedomforworker" 
+ texturefile = "gfx/interface/goals/ARM/Freedom of the worker.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_fundeducation" 
+ texturefile = "gfx/interface/goals/ARM/Fund education.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_fundpatriotism" 
+ texturefile = "gfx/interface/goals/ARM/Fund patriotism.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_gareginsavesarmenia" 
+ texturefile = "gfx/interface/goals/ARM/garegins saves Armenia.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_giveturksthefinger" 
+ texturefile = "gfx/interface/goals/ARM/Give turks the middle finger.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_greatstepforwardintanktechnology" 
+ texturefile = "gfx/interface/goals/ARM/Great step forward in tank technology.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_gunforeveryman" 
+ texturefile = "gfx/interface/goals/ARM/Gun for every man.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_housingprograms" 
+ texturefile = "gfx/interface/goals/ARM/Housing programs fpr the poor.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_huntchakianvictory" 
+ texturefile = "gfx/interface/goals/ARM/Huntchakian victory.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_instituteofarts" 
+ texturefile = "gfx/interface/goals/ARM/Institute of arts.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_instituteofscience" 
+ texturefile = "gfx/interface/goals/ARM/Institute of science.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_interdicttrade" 
+ texturefile = "gfx/interface/goals/ARM/Intredict turkish trade.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_killunionists" 
+ texturefile = "gfx/interface/goals/ARM/Kill unionists.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_landdoctrine" 
+ texturefile = "gfx/interface/goals/ARM/Land doctrine.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_manpowerarmenia" 
+ texturefile = "gfx/interface/goals/ARM/Manpower.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_massinternalpurges" 
+ texturefile = "gfx/interface/goals/ARM/Mass internal purges.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_militarisedsociety" 
+ texturefile = "gfx/interface/goals/ARM/Militarised society.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_mountainfactory" 
+ texturefile = "gfx/interface/goals/ARM/mountainfactory.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_militaryindustry" 
+ texturefile = "gfx/interface/goals/ARM/militaryindustry.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_neweffortsinaviation" 
+ texturefile = "gfx/interface/goals/ARM/New efforts in aviation.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_newjobs" 
+ texturefile = "gfx/interface/goals/ARM/newjobs.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_notwiththem" 
+ texturefile = "gfx/interface/goals/ARM/Not with them.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_openuparmenianairways" 
+ texturefile = "gfx/interface/goals/ARM/Open up armenian airways.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_peoplesarmy" 
+ texturefile = "gfx/interface/goals/ARM/Peoples army.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_plannedeconomy" 
+ texturefile = "gfx/interface/goals/ARM/Planned economy.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_preemptivestrike" 
+ texturefile = "gfx/interface/goals/ARM/Preemptive strike.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_producegiantcannons" 
+ texturefile = "gfx/interface/goals/ARM/Produce giant cannons.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_protectagainstwolf" 
+ texturefile = "gfx/interface/goals/ARM/Protect against the wolf.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_protectdemocracyarm" 
+ texturefile = "gfx/interface/goals/ARM/Protect democracy.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_protectmoderaterevolution" 
+ texturefile = "gfx/interface/goals/ARM/Protect moderate revolution.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_reconcilewithminorities" 
+ texturefile = "gfx/interface/goals/ARM/Reconcile with minorities.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_recruitmentdrive" 
+ texturefile = "gfx/interface/goals/ARM/Recruitment drive.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_researchacademies" 
+ texturefile = "gfx/interface/goals/ARM/researchacademies.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_revisetradition" 
+ texturefile = "gfx/interface/goals/ARM/Revise tradition.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_revolutionaryresearch" 
+ texturefile = "gfx/interface/goals/ARM/revresearch.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_rewarddaringness" 
+ texturefile = "gfx/interface/goals/ARM/Reward daringness.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_societyoftseghakron" 
+ texturefile = "gfx/interface/goals/ARM/Society of Tsegakhron.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_speed" 
+ texturefile = "gfx/interface/goals/ARM/Speed.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_starvethemout" 
+ texturefile = "gfx/interface/goals/ARM/Starve them out.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_statesecularism" 
+ texturefile = "gfx/interface/goals/ARM/State secularism.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_sasf" 
+ texturefile = "gfx/interface/goals/ARM/Strategic air support focus.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_submarines" 
+ texturefile = "gfx/interface/goals/ARM/Submarines.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_thegreatbattle" 
+ texturefile = "gfx/interface/goals/ARM/The great battle.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_tradewithus" 
+ texturefile = "gfx/interface/goals/ARM/Trade with us.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_theyfindout" 
+ texturefile = "gfx/interface/goals/ARM/They find out.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_travelermovement" 
+ texturefile = "gfx/interface/goals/ARM/Traveler movement.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_tseghparamilitaries" 
+ texturefile = "gfx/interface/goals/ARM/Tsegh paramilietaries.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_turkishassimilation" 
+ texturefile = "gfx/interface/goals/ARM/Turkish assimilation.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_turkishautonomies" 
+ texturefile = "gfx/interface/goals/ARM/Turkish autinomies.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_unstoppablewave" 
+ texturefile = "gfx/interface/goals/ARM/Unstoppoble wave.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_vanguardofreaction" 
+ texturefile = "gfx/interface/goals/ARM/Vanguard of reacrion.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_welfareprograms" 
+ texturefile = "gfx/interface/goals/ARM/Welfare programs.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_wealthtaxationbill" 
+ texturefile = "gfx/interface/goals/ARM/Welth taxation bill.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_wipetheboardclean" 
+ texturefile = "gfx/interface/goals/ARM/Wipe the board clean.dds" 
+ }
+ SpriteType = { 
+ name = "GFX_yerevan" 
+ texturefile = "gfx/interface/goals/ARM/yerevan.dds" 
+ } 
+ }

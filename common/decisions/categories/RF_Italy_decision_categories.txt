@@ -1,0 +1,254 @@
+ITA_west_development_fund = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		#has_completed_focus = ITA_west_african_development
+		always = no
+	}
+	available = {
+		#has_completed_focus = ITA_west_african_development
+	}
+}
+ITA_east_development_fund = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		#has_completed_focus = ITA_east_africa_development
+		always = no
+	}
+	available = {
+		#has_completed_focus = ITA_east_africa_development
+	}
+}
+ITA_the_national_economy = {
+	icon = generic_economy
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 190
+	visible = {
+		has_completed_focus = ITA_economic_questions
+	}
+	available = {
+		has_completed_focus = ITA_economic_questions
+	}
+}
+ITA_balbo_naval_base_expansion = {
+	icon = generic_industry
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 160
+	visible = {
+		has_completed_focus = ITA_national_shipyards
+	}
+	available = {
+		has_completed_focus = ITA_national_shipyards
+	}
+}
+ITA_balbos_war = {
+	icon = generic_fascism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = ITA_seize_day
+	}
+	available = {
+		has_completed_focus = ITA_seize_day
+	}
+}
+
+ITA_decision_infrastructure = {
+	#picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		#has_completed_focus = ITA_great_conference
+		always = no
+	}
+	available = {
+		#has_completed_focus = ITA_great_conference
+	}
+}
+ITA_but_it_just_might_work = {
+	picture = decision_cat_picture_ITA_but_it_just_might_work
+	icon = generic_fascism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 180
+	visible = {
+		has_completed_focus = ITA_operation_buonaparte
+	}
+	available = {
+		has_completed_focus = ITA_operation_buonaparte
+	}
+}
+ITA_quaternion = {
+	picture = decision_cat_picture_ITA_quaternion
+	icon = generic_fascism
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 170
+	visible = {
+		has_completed_focus = ITA_operation_quaternion
+	}
+	available = {
+		has_completed_focus = ITA_operation_quaternion
+	}
+}
+
+ITA_decisions_rbfpw = {
+	icon = generic_industry
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 190
+	visible = {
+		has_country_flag = ITA_decisions_rbfpw_unlock
+	}
+	available = {
+		has_country_flag = ITA_decisions_rbfpw_unlock
+	}
+}
+ITA_decisions_rbfmaa = {
+	icon = generic_arms_trade
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 180
+	visible = {
+		has_country_flag = ITA_decisions_rbfmaa_unlock
+	}
+	available = {
+		has_country_flag = ITA_decisions_rbfmaa_unlock
+	}
+}
+ITA_decisions_armed_services_reform = {
+	icon = army_reform
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		has_country_flag = ITA_decisions_armed_services_reform_unlock_0
+	}
+	available = {
+		has_country_flag = ITA_decisions_armed_services_reform_unlock_0
+	}
+}
+ITA_decisions_regiment_the_complex = {
+	icon = generic
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 170
+	visible = {
+		has_country_flag = ITA_decisions_regiment_the_complex_unlock
+	}
+	available = {
+		has_country_flag = ITA_decisions_regiment_the_complex_unlock
+	}
+}
+ITA_decisions_mediterranean_sec = {
+	icon = infiltration
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 160
+	visible = {
+		has_country_flag = ITA_decisions_mediterranean_sec_unlock
+	}
+	available = {
+		has_country_flag = ITA_decisions_mediterranean_sec_unlock
+	}
+}
+ITA_decisions_toes = {
+	icon = generic_democracy
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 250
+	visible = {
+		has_completed_focus = ITA_paneuropean_alliance
+	}
+	available = {
+		has_completed_focus = ITA_paneuropean_alliance
+	}
+}
+ITA_decisions_soclib_wargoals = {
+	icon = saf_anti_colonialist_crusade
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 240
+	visible = {
+		has_completed_focus = ITA_paneuropean_alliance
+	}
+	available = {
+		has_completed_focus = ITA_paneuropean_alliance
+	}
+}
+ITA_decisions_soclib_integration = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 230
+	visible = {
+		has_completed_focus = ITA_europe_free_from_tyranny
+	}
+	available = {
+		has_completed_focus = ITA_europe_free_from_tyranny
+	}
+}
+ITA_decisions_help_china = {
+	icon = generic_democracy
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 220
+	visible = {
+		has_completed_focus = ITA_aid_chinese
+	}
+	available = {
+		has_completed_focus = ITA_aid_chinese
+	}
+}
+ITA_decisions_help_india = {
+	icon = generic_democracy
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 210
+	visible = {
+		has_completed_focus = ITA_aid_chinese
+	}
+	available = {
+		has_completed_focus = ITA_aid_chinese
+	}
+}
+ITA_decisions_struzo_military_buildup = {
+	icon = army_reform
+	allowed = {
+		original_tag = ITA
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = ITA_the_empire
+	}
+	available = {
+		has_completed_focus = ITA_the_empire
+	}
+}

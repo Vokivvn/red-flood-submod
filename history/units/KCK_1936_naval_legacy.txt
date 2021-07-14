@@ -1,0 +1,27 @@
+units= {
+	fleet = {
+		name = "Tikhookeanskaya Flotiliya"		
+		naval_base = 4728
+		task_force = {		
+			name = "Kamchatskaya Eskadra I"			
+			location = 4728
+			ship = { name = "Manchzhur" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Groznyi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Peresvet" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Angara" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = KCK } } }
+			ship = { name = "Delfin" definition = submarine equipment = { submarine_1 = { amount = 1 owner = KCK } } }				
+			ship = { name = "Skat" definition = submarine equipment = { submarine_1 = { amount = 1 owner = KCK } } }	
+			ship = { name = "Admiral Stark" definition = battleship equipment = { battleship_1 = { amount = 1 owner = KCK } } }				
+		}
+		task_force = {
+			name = "Kamchatskaya Eskadra II"			
+			location = 4728
+			ship = { name = "Retvizan" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = KCK } } }
+			ship = { name = "Tsesarevich" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = KCK } } }
+			ship = { name = "Kasatka" definition = submarine equipment = { submarine_1 = { amount = 1 owner = KCK } } }	
+			ship = { name = "Nalim" definition = submarine equipment = { submarine_1 = { amount = 1 owner = KCK } } }	
+			ship = { name = "Zhemchug" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Askold" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = KCK } } }
+		}	
+	}
+}

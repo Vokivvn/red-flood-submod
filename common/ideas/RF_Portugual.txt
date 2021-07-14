@@ -1,0 +1,43 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		POR_divided_republic = {
+			modifier = {
+			    political_power_factor = -0.20
+                political_power_gain = -0.20
+                #political_advisor_cost_factor = 0.30
+				#trade_laws_cost_factor = 0.30
+                #mobilization_laws_cost_factor = 0.30
+                #economy_cost_factor = 0.30
+			}
+			picture = generic_disjointed_gov
+		}
+		POR_economic_disaster = {
+			modifier = {
+				production_factory_max_efficiency_factor = -0.20
+                production_speed_buildings_factor = -0.20
+                industrial_capacity_factory = -0.20
+                production_oil_factor = -0.20
+                industrial_capacity_dockyard = -0.20
+                conversion_cost_civ_to_mil_factor = 0.20
+				consumer_goods_factor = 0.30
+			}
+			picture = great_depression
+		}
+		POR_political_chaos = {
+			modifier = {
+				stability_factor = -0.30                                                                                                          
+				send_volunteer_divisions_required = 0.25	
+			}
+			picture = anti_soviet_pact
+		}
+		
+###########
+#MINISTERS#
+###########
+
+	

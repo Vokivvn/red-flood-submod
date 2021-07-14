@@ -1,0 +1,949 @@
+ideas = {
+	country = {
+		STE_cooperatives = {
+			picture = UKR_democratic_land_reform
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		STE_decentralization = {
+			picture = STE_decentralization
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		STE_decentralization1 = {
+			picture = STE_decentralization
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		STE_ukrainian_education = {
+			picture = STE_ukrainian_education
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				revisionist_socialism_drift = 0.02
+			}
+		}
+		STE_ukrainian_education1 = {
+			picture = STE_ukrainian_education
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				research_speed_factor = 0.1	
+				revisionist_socialism_drift = 0.04
+			}
+		}
+		STE_ukrainian_education2 = {
+			picture = STE_ukrainian_education
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				research_speed_factor = 0.1	
+				revisionist_socialism_drift = 0.06
+				production_factory_max_efficiency_factor = 0.05
+			}
+			equipment_bonus = {
+				light_tank_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+			}
+		}
+		STE_demsoc_idea = {
+			picture = UKR_socialist_land_reform
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				stability_factor = 0.1
+				revisionist_socialism_drift = 0.02
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		STE_demsoc_idea1 = {
+			#picture = STE_ukrainian_republic 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				stability_factor = 0.1
+				revisionist_socialism_drift = 0.02
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.05
+				monthly_population = 0.20
+				surrender_limit = 0.05
+			}
+		}
+
+		STE_alash_economy = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				min_export = 0.05
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		STE_alash_economy1 = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				min_export = 0.05
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+		STE_alash_economy2 = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				min_export = 0.05
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_factor = 0.03
+				stability_weekly = 0.02
+			}
+		}
+		STE_alash_politics = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				political_power_factor = 0.1
+				social_democratism_drift = 0.02
+			}
+		}
+		STE_alash_politics1 = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				political_power_factor = 0.1
+				social_democratism_drift = 0.04
+			 	resistance_target = -0.1
+			 	subversive_activites_upkeep = -0.1
+			}
+		}
+		STE_alash_politics2 = {
+			picture = STE_alash_republic 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				political_power_factor = 0.1
+				social_democratism_drift = 0.06
+			 	resistance_target = -0.1
+			 	subversive_activites_upkeep = -0.1
+			 	conscription = 0.015
+			}
+		}
+		STE_alash_welfare = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				min_export = 0.05
+				local_resources_factor = 0.05
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				stability_weekly = 0.02
+				political_power_factor = 0.1
+				social_democratism_drift = 0.06
+				resistance_target = -0.1
+				subversive_activites_upkeep = -0.1
+				conscription = 0.015
+				consumer_goods_factor = -0.05
+			}
+		}
+		STE_alash_education = {
+			picture = STE_alash_republic 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				social_democratism_drift = 0.02
+				research_speed_factor = 0.05
+			 	resistance_target = -0.1
+			}
+		}
+		STE_alash_education1 = {
+			picture = STE_alash_republic 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				social_democratism_drift = 0.04
+				research_speed_factor = 0.1
+				resistance_target = -0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		STE_alash_education2 = {
+			picture = STE_alash_republic 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				social_democratism_drift = 0.04
+				research_speed_factor = 0.1
+				resistance_target = -0.1
+				industrial_capacity_factory = 0.05
+			 	attrition = -0.1
+			}
+		}
+		STE_alash_republic_idea = {
+			picture = STE_alash_republic
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				min_export = 0.05
+				local_resources_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+				stability_weekly = 0.02
+				political_power_factor = 0.1
+				resistance_target = -0.2
+				subversive_activites_upkeep = -0.1
+				conscription = 0.015
+				consumer_goods_factor = -0.05
+				social_democratism_drift = 0.1
+				research_speed_factor = 0.1
+				industrial_capacity_factory = 0.1
+			 	attrition = -0.1
+			 	surrender_limit = 0.05
+			 	army_morale_factor = 0.1
+			}
+		}
+
+		STE_reign_of_nature = {
+			picture = STE_reign_of_nature
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.3
+				production_speed_infrastructure_factor = -0.25
+			}
+		}
+		STE_steppe_workshops = {
+			picture = STE_workshops
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.4
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+		STE_steppe_levies = {
+			picture = STE_levies
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.4
+				conscription_factor = 0.2
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+		STE_steppe_levies1 = {
+			picture = STE_levies
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.4
+				conscription_factor = 0.2
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+				resistance_target = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+		STE_steppe_levies2 = {
+			picture = STE_levies
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.4
+				conscription_factor = 0.2
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+				resistance_target = -0.05
+				attrition = -0.1
+				cavalry_attack_factor = 0.1
+				army_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+		STE_new_great_khan = {
+			picture = STE_great_khan
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				surrender_limit = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		STE_golden_horde_reborn = {
+			picture = STE_golden_horde
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				industry_air_damage_factor = -0.7
+				production_speed_infrastructure_factor = -0.25
+				conscription_factor = 0.2
+				stability_factor = 0.1
+				resistance_target = -0.05
+				attrition = -0.1
+				cavalry_attack_factor = 0.1
+				reactionism_drift = 0.1
+				surrender_limit = 0.05
+				army_speed_factor = 0.1
+				research_speed_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		STE_cossack_supremacy = {
+			picture = STE_cossack
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				resistance_target = -0.15
+			}
+		}
+		STE_cossack_supremacy1 = {
+			picture = STE_cossack
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+				resistance_target = -0.15
+			 	local_resources_factor = 0.1
+				despotism_drift = 0.05
+			}
+		}
+		STE_cossack_feudalism = {
+			picture = STE_cossack_feudalism 
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.07
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		STE_cossack_banditry = {
+			picture = STE_cossack_banditry
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				army_speed_factor = 0.1
+				equipment_capture = 0.5
+			}
+		}
+		STE_annenkovs_dictatorship = {
+			picture = STE_annenkov_dictatorship
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		STE_annenkovs_dictatorship1 = {
+			picture = STE_annenkov_dictatorship
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				subversive_activites_upkeep = -0.5
+			}
+		}
+		STE_annenkovs_dictatorship2 = {
+			picture = STE_annenkov_dictatorship
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				subversive_activites_upkeep = -0.5
+				min_export = -0.03
+			}
+		}
+		STE_bandit_state_idea = {
+			#picture = STE_cossack_despotism_pillagers_haven
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				cavalry_attack_factor = 0.1
+			 	army_speed_factor = 0.05
+			 	despotism_drift = 0.1
+			}
+		}
+
+		STE_purged_officers = {
+			picture = BLR_purge_on_clique
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				army_morale_factor = -0.1
+				planning_speed = -0.05
+				right_authoritarianism_drift = 0.02
+			}
+		}
+		STE_russian_work_ethic = {
+			picture = STE_russian_work
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		STE_russian_colonial_regime = {
+			picture = STE_russian_colonial
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				non_core_manpower = -0.05
+			 	political_power_factor = 0.05
+			 	stability_factor = -0.05
+			 	right_authoritarianism_drift = 0.02
+			}
+		}
+		STE_russian_colonial_regime1 = {
+			picture = STE_russian_colonial
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				non_core_manpower = -0.1
+				political_power_factor = 0.1
+			 	right_authoritarianism_drift = 0.04
+			 	research_speed_factor = -0.05
+			}
+		}
+		STE_russian_colonial_regime2 = {
+			picture = STE_russian_colonial
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				non_core_manpower = -0.15
+				political_power_factor = 0.15
+			 	right_authoritarianism_drift = 0.06
+			 	research_speed_factor = -0.05
+			 	monthly_population = 0.05
+			 	stability_factor = 0.1
+			}
+		}
+		STE_russian_colonial_regime3 = {
+			picture = STE_russian_colonial
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				non_core_manpower = -0.2
+				political_power_factor = 0.15
+			 	right_authoritarianism_drift = 0.08
+			 	research_speed_factor = -0.05
+			 	monthly_population = 0.1
+			}
+		}
+		STE_russian_colonial_regime4 = {
+			picture = STE_wild_west
+			allowed = {
+				original_tag = STE
+			}
+			modifier = {
+				non_core_manpower = -0.25
+				political_power_factor = 0.15
+				right_authoritarianism_drift = 0.08
+				research_speed_factor = 0.05
+				monthly_population = 0.20
+				consumer_goods_factor = -0.05
+				army_core_defence_factor = 0.1
+				production_factory_max_efficiency_factor = 0.08
+			}
+		}
+	}
+
+	head_of_government = {
+		STE_Vasiliy_Scheglov = {
+			picture = STE_Vasiliy_Scheglov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+		}
+		STE_Mykola_Skrypnyk = {
+			picture = STE_Mykola_Skrypnyk
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+		STE_Bazarbay_Mametov = {
+			picture = STE_Bazarbay_Mametov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = social_democratism
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+		}
+		STE_Kurultay_hog = {
+			picture = STE_Kurultay_hog
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+		}
+	}
+
+	foreign_minister = {
+		STE_Nikolay_Babiyev = {
+			picture = STE_Nikolay_Babiyev
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+		}
+		STE_Mykola_Voronyi = {
+			picture = STE_Mykola_Voronyi
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		STE_Aidarkhan_Turlybayev = {
+			picture = STE_Aidarkhan_Turlybayev
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = social_democratism
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		STE_Kurultay_for = {
+			picture = STE_Kurultay_for
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+		}
+	}
+
+	economy_minister = {
+		STE_Vladimir_Yakunin = {
+			picture = STE_Vladimir_Yakunin
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+		}
+		STE_Volodymyr_Zatonskyi = {
+			picture = STE_Volodymyr_Zatonskyi
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		STE_Alimkhan_Yermenkov = {
+			picture = STE_Alimkhan_Yermenkov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = social_democratism
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+		}
+		STE_Kurultay_eco = {
+			picture = STE_Kurultay_eco
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+		}
+	}
+
+	security_minister = {
+		STE_Sergey_Biryukov = {
+			picture = STE_Sergey_Biryukov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				security_minister
+				sec_crooked_kleptocrat
+			}
+		}
+		STE_Vsevolod_Petriv = {
+			picture = STE_Vsevolod_Petriv
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+		}
+		STE_Ahmet_Beremzhanov = {
+			picture = STE_Ahmet_Beremzhanov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = social_democratism
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+		}
+		STE_Kurultay_sec = {
+			picture = STE_Kurultay_sec
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+
+	head_of_intel = {
+		STE_Vladimir_Indeykin = {
+			picture = STE_Vladimir_Indeykin
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+		STE_Oleksandr_Ossietzky = {
+			picture = STE_Oleksandr_Ossietzky
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = revisionist_socialism
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		STE_Halel_Gabbasov = {
+			picture = STE_Halel_Gabbasov
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = social_democratism
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		STE_Kurultay_int = {
+			picture = STE_Kurultay_int
+			allowed = {
+				original_tag = STE
+			}
+			available = {
+				has_government = reactionism
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+
+	chief_of_staff = {
+		STE_Aleksandr_Vagin = {
+			picture = STE_Aleksandr_Vagin
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cos_school_of_defence
+			}
+		}
+		STE_Kyrylo_Moskalenko = {
+			picture = STE_Kyrylo_Moskalenko
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+
+	chief_of_army = {
+		STE_Ivan_Zaytsev = {
+			picture = STE_Ivan_Zaytsev
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+		STE_Tokash_Bokin = {
+			picture = STE_Tokash_Bokin
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		STE_Caspian_Coastal_Partol = {
+			picture = STE_Caspian_Coastal_Partol
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		STE_Aral_Coastal_Patrol = {
+			picture = STE_Aral_Coastal_Patrol
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		STE_Pyotr_Abakanovich = {
+			picture = STE_Pyotr_Abakanovich
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		STE_Nurken_Abdirov = {
+			picture = STE_Nurken_Abdirov
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		STE_Vasily_Flug_theo = {
+			picture = STE_Vasily_Flug_theo
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				land_doctrine_theorist
+			}
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+		STE_Pyotr_Abakanovich_theo = {
+			picture = STE_Pyotr_Abakanovich_theo
+			allowed = {
+				original_tag = STE
+			}
+			traits = {
+				air_doctrine_theorist
+			}
+			research_bonus = {
+				air_doctrine = 0.1
+			}
+		}
+	}
+}

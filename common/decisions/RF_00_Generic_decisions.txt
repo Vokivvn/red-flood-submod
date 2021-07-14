@@ -1,0 +1,155 @@
+political_actions = {
+	#Annexation Start
+	annexation_start = {
+		icon = generic_form_nation
+		selectable_mission = yes
+		is_good = no
+		cost = 0
+		fire_only_once = yes
+		
+		available = {
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision annexation_start"
+			country_event = annex.event
+		}
+	}
+
+	return_cores_to_ally = {
+		icon = generic_agreement
+
+		available = {
+			if = {
+				limit = { has_war = yes }
+				surrender_progress < 0.20
+			}
+			else = {
+				has_war = no
+			}
+		}
+		visible = {
+			is_in_faction = yes
+			NOT = { has_country_flag = RF_returning_land }
+			FROM = {
+				is_in_faction_with = ROOT
+				exists = yes
+			}
+			any_owned_state = {
+				is_claim_or_core_of_FROM = yes
+				is_claim_or_core_of_ROOT = no
+				OR = {
+					any_neighbor_state = { is_owned_by = FROM }
+					is_coastal = yes
+				}
+				OR = {
+					AND = {
+						ROOT = { tag = ENG }
+						is_british_colonial_claim = yes
+					}
+					ROOT = { is_ai = no }
+				}
+				NOT = { has_variable = ambition_area_@ROOT }					
+				NOT = { has_state_flag = RF_keeping_state@ROOT }
+			}
+		}
+
+		target_root_trigger = {
+			is_in_faction = yes
+		}
+
+		target_array = allies
+
+		target_trigger = {
+			FROM = {
+				is_in_faction_with = ROOT
+				exists = yes
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision return_cores_to_ally target: [From.GetName]"
+			set_country_flag = RF_returning_land
+			FROM = { save_event_target_as = return_to }
+			country_event = rf.political.1
+		}
+	}
+
+	return_cores_to_subject = {
+		icon = generic_agreement
+
+		available = {
+			if = {
+				limit = { has_war = yes }
+				surrender_progress < 0.20
+			}
+			else = {
+				has_war = no
+			}
+		}
+		visible = {
+			num_subjects > 0
+			NOT = { has_country_flag = RF_returning_land }
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { is_in_faction_with = ROOT }
+				exists = yes
+			}
+			any_owned_state = {
+				is_claim_or_core_of_FROM = yes
+				is_claim_or_core_of_ROOT = no
+				OR = {
+					any_neighbor_state = { is_owned_by = FROM }
+					is_coastal = yes
+				}
+				OR = {
+					AND = {
+						ROOT = { tag = ENG }
+						is_british_colonial_claim = yes
+					}
+					ROOT = { is_ai = no }
+				}
+				NOT = { has_variable = ambition_area_@ROOT }					
+				NOT = { has_state_flag = RF_keeping_state@ROOT }
+			}
+		}
+
+		target_root_trigger = {
+			num_subjects > 0
+		}
+
+		target_array = subjects
+
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				NOT = { is_in_faction_with = ROOT }
+				exists = yes
+			}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision return_cores_to_subject target: [From.GetName]"
+			set_country_flag = RF_returning_land
+			FROM = { save_event_target_as = return_to }
+			country_event = rf.political.1
+		}
+	}
+}

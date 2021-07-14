@@ -1,0 +1,23 @@
+destroy_the_spanish_language = {
+	icon = GFX_decision_cat_generic_mefo_bills
+	allowed = {
+		original_tag = BRA
+	}
+
+	visible = {
+		has_completed_focus = BRA_establish_the_american_maximalitat
+		is_subject = no
+	}
+}
+national_pacification_campaign = {
+	icon = GFX_decision_cat_picture_chi_political_support
+	allowed = {
+		original_tag = BRR
+		has_country_flag = BRR_npc
+	}
+
+	available = {
+		original_tag = BRR
+		has_country_flag = BRR_npc
+	}
+}

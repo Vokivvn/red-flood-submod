@@ -1,0 +1,455 @@
+﻿division_template = {
+	name = "Escadron Infanterie"
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+        infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+		anti_tank = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Acéphale divisions"
+	division_names_group = FRA_CAV_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+        motorized = { x = 1 y = 1 }
+        motorized = { x = 2 y = 0 }
+        motorized = { x = 2 y = 1 }
+	}
+	support = {
+        artillery = { x = 0 y = 0}
+        recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Escadron Tank Regiments"
+	division_names_group = FRA_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 3 y = 0 }
+		motorized = { x = 3 y = 1 }
+		motorized = { x = 3 y = 2 }
+	}
+	
+	support = {
+        artillery = { x = 0 y = 0}
+        light_tank_recon = { x = 0 y = 1 }
+		engineer  = { x = 0 y = 2}		
+	}
+}
+
+
+units = {
+division= {
+	     name = "Garde du Patron"
+	     location = 11506
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 1
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Escadron Infanterie"
+	     location = 9737
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Escadron Infanterie"
+	     location = 575
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "3rd Escadron Infanterie"
+	     location = 3536
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "4th Escadron Infanterie"
+	     location = 9500
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "5th Escadron Infanterie"
+	     location = 11483
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "6th Escadron Infanterie"
+	     location = 485
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "7th Escadron Infanterie"
+	     location = 9434
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "8th Escadron Infanterie"
+	     location = 6449
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "9th Escadron Infanterie"
+	     location = 6548
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "10th Escadron Infanterie"
+	     location = 3552
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "11th Escadron Infanterie"
+	     location = 6536
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "12th Escadron Infanterie"
+	     location = 11465
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "13th Escadron Infanterie"
+	     location = 13338
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "14th Escadron Infanterie"
+	     location = 13339
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "15th Escadron Infanterie"
+	     location = 11516
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "16th Escadron Infanterie"
+	     location = 521
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "17th Escadron Infanterie"
+	     location = 698
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "18th Escadron Infanterie"
+	     location = 3666
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "19th Escadron Infanterie"
+	     location = 6698
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "20th Escadron Infanterie"
+	     location = 13011
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "21st Escadron Infanterie"
+	     location = 11642
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "22nd Escadron Infanterie"
+	     location = 9909
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "23rd Escadron Infanterie"
+	     location = 778
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "24th Escadron Infanterie"
+	     location = 911
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "25th Escadron Infanterie"
+	     location = 11834
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+ division= {
+	     name = "26th Escadron Infanterie"
+	     location = 9898
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "27th Escadron Infanterie"
+	     location = 6766
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "28th Escadron Infanterie"
+	     location = 3838
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "29th Escadron Infanterie"
+	     location = 3594
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "30th Escadron Infanterie"
+	     location = 6657
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "31st Escadron Infanterie"
+	     location = 6613
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "32nd Escadron Infanterie"
+	     location = 6613
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "33rd Escadron Infanterie"
+	     location = 6613
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "34th Escadron Infanterie"
+	     location = 3838
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "35th Escadron Infanterie"
+	     location = 3838
+	     division_template = "Escadron Infanterie"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Acéphale divisions"
+	     location = 6613
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Acéphale divisions"
+	     location = 9523
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "3rd Acéphale divisions"
+	     location = 512
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "4th Acéphale divisions"
+	     location = 9490
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "5th Acéphale divisions"
+	     location = 620
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "6th Acéphale divisions"
+	     location = 3652
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "7th Acéphale divisions"
+	     location = 3652
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "8th Acéphale divisions"
+	     location = 620
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "9th Acéphale divisions"
+	     location = 3652
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Tank Regiment"
+	     location = 11506
+	     division_template = "Escadron Tank Regiments"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.5
+    }
+division= {
+	     name = "2nd Tank Regiment"
+	     location = 11420
+	     division_template = "Escadron Tank Regiments"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.5
+    }
+division= {
+	     name = "3rd Tank Regiment"
+	     location = 5291
+	     division_template = "Escadron Tank Regiments"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.5
+    }
+division= {
+	     name = "Algeris Guard"
+	     location = 1145
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.8
+    }
+division= {
+	     name = "Constantine Regiment"
+	     location = 12051
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.8
+    }
+division= {
+	     name = "2nd Algeris Guard"
+	     location = 1145
+	     division_template = "Acéphale divisions"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 0.8
+    }
+}
+
+air_wings = {
+	17 = { 	
+		fighter_equipment_0 =  {		
+			owner = "FRA" 
+			amount = 200
+		}
+		CAS_equipment_1 =  {			
+			owner = "FRA" 
+			amount = 100
+		}
+	}
+	29 = { 		
+		fighter_equipment_0 =  {		
+			owner = "FRA" 
+			amount = 80
+		}
+		tac_bomber_equipment_0 = {		
+			owner = "FRA" 
+			amount = 80
+		}
+	}
+	16 = { 		
+		tac_bomber_equipment_0 = {		
+			owner = "FRA" 
+			amount = 120
+		}		
+		CAS_equipment_1 =  {			
+			owner = "FRA" 
+			amount = 80
+		}
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=403
+	name="STATE_403" # Tobolsk
+	manpower = 988171
+	
+	state_category = rural
+
+	history={
+		owner = SIB
+		victory_points = {
+			4659 1 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SIB
+	}
+
+	provinces={
+		1835 3472 4209 4659 4700 6787 7681 7774 7833 7846 9512 10600 10626 10659 10670 12390 12580 12652
+	}
+}

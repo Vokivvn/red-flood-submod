@@ -1,0 +1,85 @@
+﻿division_template = {
+	name = "Infantry Division"		
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Division" 	
+	division_names_group = RAJ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 	
+	}
+}
+division_template = {
+	name = "Marine Division" 				# Marines
+	division_names_group = RAJ_INF_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 4 }
+	}
+}
+units = {
+	division= {	
+		location = 4162
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 11929
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 9993
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 1075
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 11929
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 11929
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 10035
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 11968
+		division_template = "Marine Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+}

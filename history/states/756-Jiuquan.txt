@@ -1,0 +1,24 @@
+
+state={
+	id=756
+	name="STATE_756" # Jiuquan
+	manpower = 3156620
+	state_category = rural
+	resources={
+		tungsten=1
+	}
+
+	history={
+		owner = XSM
+		add_core_of = XSM
+
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		1778 2028 5057 5076 5100 7971 12327 12596 12820
+	}
+}

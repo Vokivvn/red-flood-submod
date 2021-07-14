@@ -1,0 +1,1123 @@
+ideas = {
+	country = {
+
+		# WRU #
+
+		WRU_russiansettlement = {
+			picture = PRS_junkerstaat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				monthly_population = 0.4
+			}
+		}
+		WRU_gov_contracts = {
+			picture = SIB_industrial_quotas
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		WRU_gov_contracts_1 = {
+			picture = SIB_industrial_quotas
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = 0.05
+			}
+		}
+		WRU_collapsed_economy = {
+			picture = PRS_disloyal_proletariat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_buildings_factor = -0.3
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				research_speed_factor = -0.2
+			}
+		}
+		WRU_yunarmija = {
+			picture = ZHR_deathoftherepublic
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.1
+			}
+		}
+		WRU_patriotten_squads = {
+			picture = AUS_natmil
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.01
+				political_power_factor = -0.1
+			}
+		}
+		WRU_paramilitary_conscription = {
+			picture = AUS_paracon
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.02
+				training_time_factor = -0.05
+			}
+		}
+		WRU_minorities_conscription = {
+			picture = ZHR_yellowrussiansabotage
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.01
+				stability_weekly = -0.05
+			}
+		}
+		WRU_minorities_conscription_1 = {
+			picture = ZHR_yellowrussiansabotage
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.01
+				stability_weekly = -0.05
+				war_support_weekly = -0.05
+			}
+		}
+		WRU_victorious_armies_of_avalov = {
+			picture = ASY_caucasian_volunteer
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.01
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+			}
+		}
+		WRU_revitalized_zemstvo = {
+			picture = PRS_junkerstaat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = -0.05
+			}
+		}
+		WRU_council_of_baltic_lands = {
+			picture = ZHR_thedirectorate
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = -0.05
+				conscription = 0.02
+				stability_weekly = 0.01
+				war_support_weekly = 0.01
+				right_authoritarianism_drift = 0.10
+				monthly_population = 0.1
+			}
+		}
+		WRU_neue_ostsiedlung = {
+			picture = PRS_junkerstaat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				monthly_population = 0.2
+			}
+		}
+		WRU_neue_ostsiedlung_1 = {
+			picture = PRS_junkerstaat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		WRU_neue_ostsiedlung_2 = {
+			picture = PRS_junkerstaat
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		WRU_baltic_german_army = {
+			picture = BLR_icon_united_partisants
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				conscription = 0.02
+				attrition = -0.05
+			}
+		}
+		WRU_baltic_prussian_unity_prop = {
+			picture = ZHR_presidentsspeeches
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				despotism_drift = 0.10
+			}
+		}
+		WRU_teutonic_charge_idea = {
+			picture = BLR_icon_united_partisants
+			allowed = {
+				original_tag = WRU
+			}
+			modifier = {
+				despotism_drift = 0.10
+				monthly_population = 0.2
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				conscription = 0.02
+				attrition = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+
+		# WRT #
+
+		WRT_state_orthodoxy = {
+			picture = ASY_assyrian_church
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_permanent_russian_colonization = {
+			picture = ASY_repatriation
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		WRT_permanent_russian_colonization_1 = {
+			picture = ASY_repatriation
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.2
+				monthly_population = 0.2
+				political_power_factor = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_enemies_of_russia_purged = {
+			picture = BLR_icon_purge_on_clique
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				stability_factor = -0.1
+				right_authoritarianism_drift = -0.1
+				monthly_population = -0.02
+				stability_weekly = 0.02
+			}
+		}
+		WRT_russian_way = {
+			picture = ZHR_nationalrepresantativeassembly
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+			}
+		}
+		WRT_russian_way_1 = {
+			picture = ZHR_nationalrepresantativeassembly
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_population = 0.05
+			}
+		}
+		WRT_russian_way_2 = {
+			picture = ZHR_nationalrepresantativeassembly
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_population = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		WRT_baltic_military = {
+			picture = PRS_power_of_freikorps
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				conscription_factor = 0.2
+				attrition = -0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		WRT_baltic_russian_identity = {
+			picture = ZHR_deathoftherepublic
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				army_morale_factor = 0.05
+				reactionism_drift = 0.03
+			}
+		}
+		WRT_russian_truth_idea = {
+			picture = SIB_russification_by_education
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				stability_factor = -0.2
+				monthly_population = 0.25
+				political_power_factor = 0.15
+				resistance_target = -0.05
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				conscription_factor = 0.2
+				attrition = -0.1
+				army_morale_factor = 0.05
+				surrender_limit = 0.05
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		WRT_5_year_plan_idea = {
+			picture = ZHR_fiveyearplans
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		WRT_5_year_plan_idea1 = {
+			picture = ZHR_fiveyearplans
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.05
+				vanguard_socialism_drift = 0.03
+			}
+		}
+		WRT_5_year_plan_idea2 = {
+			picture = ZHR_fiveyearplans
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.07
+				vanguard_socialism_drift = 0.06
+			}
+		}
+		WRT_5_year_plan_idea3 = {
+			picture = ZHR_fiveyearplans
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.1
+				vanguard_socialism_drift = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		WRT_ubeg = {
+			picture = SIB_econreforms 
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		WRT_german_military_mission = {
+			picture = ZHR_germaninstructors
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_german_military_mission1 = {
+			picture = ZHR_germaninstructors
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_socialist_education = {
+			picture = ZHR_ROSTA
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+				vanguard_socialism_drift = 0.05
+				conscription_factor = 0.1
+				research_speed_factor = 0.02
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+		WRT_all_powerful_red_army = {
+			picture = ZHR_defendtherevolution
+			allowed = {
+				tag = WRT
+			}
+			modifier = {
+				attrition = -0.1
+				vanguard_socialism_drift = 0.05
+				conscription_factor = 0.25
+				non_core_manpower = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				license_purchase_cost = -0.8
+			}
+		}
+
+		#WRR
+
+		WRR_sicherheitssektion = {
+			picture = ZHR_commissarsdictatorship
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				resistance_target = -0.05
+				occupation_cost = -0.5
+			}
+		}
+		WRR_positive_christianity_idea = {
+			picture = BLR_icon_ethnic_nationalism
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				reactionism_drift = 0.02
+			}
+		}
+		WRR_positive_christianity_idea1 = {
+			picture = BLR_icon_ethnic_nationalism
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				reactionism_drift = 0.04
+				army_core_defence_factor = 0.05
+			}
+		}
+		WRR_positive_christianity_idea2 = {
+			picture = BLR_icon_ethnic_nationalism
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				reactionism_drift = 0.1
+				army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		WRR_germanized_ranks = {
+			picture = SIB_russian_progressivism
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+			}
+		}
+		WRR_baltischwehr = {
+			picture = PRS_power_of_freikorps
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+				conscription = 0.03
+				max_planning_factor = 0.15
+			}
+		}
+		WRR_baltischwehr1 = {
+			picture = PRS_power_of_freikorps
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				attrition = -0.1
+				conscription = 0.05
+				max_planning_factor = 0.15
+				army_org_factor = 0.1
+			}
+		}
+		WRR_baltic_frontier_colonization = {
+			picture = ASY_repatriation
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				monthly_population = 0.1
+			}
+		}
+		WRR_baltic_frontier_colonization1 = {
+			picture = ASY_repatriation
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				monthly_population = 0.2
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		WRR_vhtn_idea = {
+			picture = SIB_workethic
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		WRR_pagan_agitation = {
+			picture = PRS_disloyal_proletariat
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			cancel = { WRR = { exists = no } }
+		}
+		WRR_peterburg_infiltration = {
+			picture = ZHR_yellowrussiansabotage
+			allowed = {
+				original_tag = WRR
+			}
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			cancel = { WRR = { exists = no } }
+		}
+	}
+	head_of_government = {
+		WRU_max_erwin_von_scheubner_richter_hog = {
+			picture = GFX_idea_WRU_max_erwin_von_scheubner_richter
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				always = no
+			}
+		}
+		WRU_alfred_rosenberg_hog = {
+			picture = GFX_idea_WRU_alfred_rosenberg_hog
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			available = {
+				always = no
+			}
+		}
+		WRU_afinogen_argunov = {
+			picture = GFX_idea_WRU_afinogen_argunov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+			tag = WRT
+			has_government = reactionism
+			}
+		}
+		WRU_heinrich_eduard_von_stryk = {
+			picture = GFX_idea_WRU_heinrich_eduard_von_stryk
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			available = {
+				tag = WRU
+			}
+		}
+		WRU_janis_kalnberzins = {
+			picture = GFX_idea_WRU_janis_kalnberzins
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	foreign_minister = {
+		WRU_margarete_von_wrangell_for = {
+			picture = GFX_idea_WRU_margarate_von_wrangell
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				always = no
+			}
+		}
+		WRU_alfred_rosenberg_for = {
+			picture = GFX_idea_WRU_alfred_rosenberg_for
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				always = no
+			}
+		}
+		WRU_sergey_sokolov_kretchetov = {
+			picture = GFX_idea_WRU_sergey_sokolov_kretchetov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				tag = WRT
+				has_government = reactionism
+			}
+		}
+		WRU_alexei_lobanov_rostovskiy = {
+			picture = GFX_idea_WRU_alexei_lobanov_rostovskiy
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				tag = WRU
+			}
+		}
+		WRU_nikolai_karotamm = {
+			picture = GFX_idea_WRU_nikolai_karotamm
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	economy_minister = {
+		WRU_leonid_andrussow = {
+			picture = GFX_idea_WRU_leonid_andrussow
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			available = {
+			tag = WRR
+			}
+		}
+		WRU_yury_tynyanov = {
+			picture = GFX_idea_WRU_yury_tynyanov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				tag = WRT
+				has_government = reactionism
+			}
+		}
+		WRU_sergey_nabokov = {
+			picture = GFX_idea_WRU_sergey_nabokov
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				tag = WRU
+			}
+		}
+		WRU_ivan_lebedev = {
+			picture = GFX_idea_WRU_ivan_lebedev
+			allowed = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				economy_minister
+				eco_military_entrepreneur
+			}
+			available = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	security_minister = {
+		WRU_adrian_von_folkersam = {
+			picture = GFX_idea_WRU_adrian_von_folkersam
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			available = {
+			tag = WRR
+			}
+		}
+		WRU_alexander_amfiteatrov = {
+			picture = GFX_idea_WRU_alexander_amfiteatrov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			available = {
+				tag = WRT
+				has_government = reactionism
+			}
+		}
+		WRU_sergey_kelopovskiy = {
+			picture = GFX_idea_WRU_sergey_kelopovskiy
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			available = {
+				tag = WRU
+			}
+		}
+		WRU_viktor_kingissepp = {
+			picture = GFX_idea_WRU_viktor_kingissepp
+			allowed = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	head_of_intel = {
+		WRU_wessel_freytag_von_loringhoven = {
+			picture = WRU_wessel_freytag_von_loringhoven
+			allowed = {
+				original_tag = WRR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+			tag = WRR
+			}
+		}
+		WRU_vladimir_burtsev = {
+			picture = GFX_idea_WRU_vladimir_burtsev
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				tag = WRT
+				has_government = reactionism
+			}
+		}
+		WRU_sergey_shydlovskiy = {
+			picture = GFX_idea_WRU_sergey_shydlovskiy
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				tag = WRU
+			}
+		}
+		WRU_augusts_kirhensteins = {
+			picture = GFX_idea_WRU_augusts_kirhensteins
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+		}
+	}
+
+	chief_of_staff = {
+		WRU_cos_paul_von_rennenkampf = {
+			picture = GFX_idea_WRU_paul_von_rennenkampf
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+		WRU_cos_aleksandr_loktionov = {
+			picture = GFX_idea_WRU_aleksandr_loktionov
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+		WRU_cos_aleksandr_rodzianko = {
+			picture = GFX_idea_WRU_aleksandr_rodzianko
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				cos_school_of_manoeuvre
+			}
+		}
+		WRR_cos_paul_von_rennenkampf = {
+			picture = GFX_idea_WRR_paul_von_rennenkampf
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+
+	chief_of_army = {
+		WRU_carm_josef_bischoff = {
+			picture = GFX_idea_WRU_josef_bischoff
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				carm_guns_and_butter_doctrine
+			}
+		}
+		WRU_carm_gustav_jonson = {
+			picture = GFX_idea_WRU_gustav_jonson
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+		WRU_carm_boris_kazanovich = {
+			picture = GFX_idea_WRU_boris_kazanovich
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				carm_decisive_battle_doctrine
+			}
+		}
+		WRU_carm_wessel_freytag_von_longhoven = {
+			picture = GFX_idea_WRU_wessel_freytag_von_loringhoven
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		WRU_cnav_aleksei_krylov = {
+			picture = GFX_idea_WRU_aleksei_krylov
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		WRU_cnav_viktor_bogolepov = {
+			picture = GFX_idea_WRU_viktor_bogolepov
+			allowed = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+		WRT_cnav_aleksei_krylov = {
+			picture = GFX_idea_WRT_aleksei_krylov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		WRU_cnav_alexander_von_salza = {
+			picture = GFX_idea_WRU_alexander_von_salza
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		WRU_cair_viktor_utgof = {
+			picture = GFX_idea_WRU_viktor_utgof
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				cair_naval_aviation_doctrine
+			}
+		}
+		WRU_cair_horst_adomaitis = {
+			picture = GFX_idea_WRU_horst_adomaitis
+			allowed = {
+				tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+		WRU_cair_konstantin_kalinin = {
+			picture = GFX_idea_WRU_konstantin_kalinin
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		WRR_cair_horst_adomaitis = {
+			picture = GFX_idea_WRR_horst_adomaitis
+			allowed = {
+			tag = WRR
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		WRU_theo_pyotr_von_glazenap = {
+			picture = GFX_idea_WRU_pyotr_von_glazenap
+			allowed = {
+				tag = WRU
+			}
+			traits = {
+				
+			}
+		}
+		WRU_theo_janis_lacis = {
+			picture = GFX_idea_WRU_janis_lacis
+			allowed = {
+				original_tag = WRT
+				has_government = vanguard_socialism
+			}
+			traits = {
+				
+			}
+		}
+		WRU_theo_aleksandr_razvozov = {
+			picture = GFX_idea_WRU_aleksandr_razvozov
+			allowed = {
+				tag = WRT
+				has_government = reactionism
+			}
+			traits = {
+				
+			}
+		}
+		WRU_theo_adrian_von_folkersam = {
+			picture = GFX_idea_WRU_adrian_von_folkersam
+			allowed = {
+				tag = WRR
+			}
+			traits = {
+				
+			}
+		}
+	}
+	tank_manufacturer = {
+		designer = yes
+	
+		WRT_russo_balt = {
+			allowed = {
+				tag = WRT
+			}
+			research_bonus = {
+				cat_mechanized_equipment = 0.1
+			}
+			traits = { motorised_equipment_producer_offense_2 }
+		}
+	}
+}

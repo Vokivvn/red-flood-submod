@@ -1,0 +1,368 @@
+spriteTypes = {
+	
+	SpriteType = { 
+		name = "GFX_focus_RUS_canopener" 
+		texturefile = "gfx/interface/goals/RUS_canopener.tga" 
+	}##Icon For: 86902
+	
+	SpriteType = { 
+		name = "GFX_nationalchampions" 
+		texturefile = "gfx/interface/goals/GFX_nationalchampions.tga" 
+	}##Icon For: 83695
+	
+	SpriteType = { 
+		name = "GFX_oligarchicconnections" 
+		texturefile = "gfx/interface/goals/GFX_oligarchicconnections.tga" 
+	}##Icon For: 83699
+	
+	SpriteType = { 
+		name = "GFX_eurasianeconomicpowerhouse" 
+		texturefile = "gfx/interface/goals/GFX_eurasianeconomicpowerhouse.tga" 
+	}##Icon For: 83705
+	
+	SpriteType = { 
+		name = "GFX_popularmonarchism" 
+		texturefile = "gfx/interface/goals/GFX_popularmonarchism.tga" 
+	}##Icon For: 83704
+	
+	SpriteType = { 
+		name = "GFX_thereturnofthetsarina" 
+		texturefile = "gfx/interface/goals/GFX_thereturnofthetsarina.tga" 
+	}##Icon For: 83708
+	
+	SpriteType = { 
+		name = "GFX_disciplineandbrotherhood" 
+		texturefile = "gfx/interface/goals/GFX_disciplineandbrotherhood.tga" 
+	}##Icon For: 73588
+	
+	SpriteType = { 
+		name = "GFX_focus_RUS_tank" 
+		texturefile = "gfx/interface/goals/RUS_tank.tga" 
+	}##Icon For: 86974
+	
+	SpriteType = { 
+		name = "GFX_curtailoligarchicinfluences" 
+		texturefile = "gfx/interface/goals/GFX_curtailoligarchicinfluences.tga" 
+	}##Icon For: 72439
+	
+	SpriteType = { 
+		name = "GFX_logisticnetwork" 
+		texturefile = "gfx/interface/goals/GFX_logisticnetwork.tga" 
+	}##Icon For: 72636
+	
+	SpriteType = { 
+		name = "GFX_enemyinpetrograd" 
+		texturefile = "gfx/interface/goals/GFX_enemyinpetrograd.tga" 
+	}##Icon For: 76396
+	
+	SpriteType = { 
+		name = "GFX_yusupovsmoney" 
+		texturefile = "gfx/interface/goals/GFX_yusupovsmoney.tga" 
+	}##Icon For: 76399
+	
+	SpriteType = { 
+		name = "GFX_banparamilitarygroups" 
+		texturefile = "gfx/interface/goals/GFX_banparamilitarygroups.tga" 
+	}##Icon For: 76403
+	
+	SpriteType = { 
+		name = "GFX_representationoflocalautonomies" 
+		texturefile = "gfx/interface/goals/GFX_representationoflocalautonomies.tga" 
+	}##Icon For: 76406
+	
+	SpriteType = { 
+		name = "GFX_usetheokhrana" 
+		texturefile = "gfx/interface/goals/GFX_usetheokhrana.tga" 
+	}##Icon For: 76411
+	
+	SpriteType = { 
+		name = "GFX_createosvag" 
+		texturefile = "gfx/interface/goals/GFX_createosvag.tga" 
+	}##Icon For: 79064
+	
+	SpriteType = { 
+		name = "GFX_embracethents" 
+		texturefile = "gfx/interface/goals/GFX_embracethents.tga" 
+	}##Icon For: 79056
+	
+	SpriteType = { 
+		name = "GFX_purgethetraitors" 
+		texturefile = "gfx/interface/goals/GFX_purgethetraitors.tga" 
+	}##Icon For: 79053
+	
+	SpriteType = { 
+		name = "GFX_oathofloyality" 
+		texturefile = "gfx/interface/goals/GFX_oathofloyality.tga" 
+	}##Icon For: 79029
+	
+	SpriteType = { 
+		name = "GFX_specialregulationsonforeignagents" 
+		texturefile = "gfx/interface/goals/GFX_specialregulationsonforeignagents.tga" 
+	}##Icon For: 86987
+	
+	SpriteType = { 
+		name = "GFX_flameforthesinner" 
+		texturefile = "gfx/interface/goals/GFX_flameforthesinner.tga" 
+	}##Icon For: 86986
+	
+	SpriteType = { 
+		name = "GFX_breadforthepoor" 
+		texturefile = "gfx/interface/goals/GFX_breadforthepoor.tga" 
+	}##Icon For: 83539
+	
+	SpriteType = { 
+		name = "GFX_drozdovskyscoup" 
+		texturefile = "gfx/interface/goals/GFX_drozdovskyscoup.tga"
+	}##Icon For: 83542
+	
+	SpriteType = { 
+		name = "GFX_limitchurchinfluence" 
+		texturefile = "gfx/interface/goals/GFX_limitchurchinfluence.tga" 
+	}##Icon For: 83544
+	
+	SpriteType = { 
+		name = "GFX_freedomofspeechwithbottomlines" 
+		texturefile = "gfx/interface/goals/GFX_freedomofspeechwithbottomlines.tga" 
+	}##Icon For: 83547
+	
+	SpriteType = { 
+		name = "GFX_statuteonlaborrelations" 
+		texturefile = "gfx/interface/goals/GFX_statuteonlaborrelations.tga" 
+	}##Icon For: 83548
+	
+	SpriteType = {
+		name = "GFX_graduallandreform" 
+		texturefile = "gfx/interface/goals/GFX_graduallandreform.tga" 
+	}##Icon For: 83549
+	
+	SpriteType = { 
+		name = "GFX_allrussianunionofpatroticworkers" 
+		texturefile = "gfx/interface/goals/GFX_allrussianunionofpatroticworkers.tga" 
+	}##Icon For: 83757
+	
+	SpriteType = { 
+		name = "GFX_federalistmonarchy" 
+		texturefile = "gfx/interface/goals/GFX_federalistmonarchy.tga" 
+	}##Icon For: 83714
+	
+	SpriteType = { 
+		name = "GFX_unitedrussianempire" 
+		texturefile = "gfx/interface/goals/GFX_unitedrussianempire.tga" 
+	}##Icon For: 83712
+	
+	SpriteType = { 
+		name = "GFX_messiahicnationalism" 
+		texturefile = "gfx/interface/goals/GFX_messiahicnationalism.tga" 
+	}##Icon For: 83693
+	
+	SpriteType = { 
+		name = "GFX_deregulation" 
+		texturefile = "gfx/interface/goals/GFX_deregulation.tga" 
+	}##Icon For: 83692
+	
+	SpriteType = { 
+		name = "GFX_agrotechnicstations" 
+		texturefile = "gfx/interface/goals/GFX_agrotechnicstations.tga" 
+	}##Icon For: 83682
+	
+	SpriteType = { 
+		name = "GFX_reintroducethestatueonlandorganization" 
+		texturefile = "gfx/interface/goals/GFX_reintroducethestatueonlandorganization.tga" 
+	}##Icon For: 83686
+	
+	SpriteType = { 
+		name = "GFX_verkhoveneyypravitelkolchak" 
+		texturefile = "gfx/interface/goals/GFX_verkhoveneyypravitelkolchak.tga" 
+	}##Icon For: 83667
+	
+	SpriteType = { 
+		name = "GFX_wartimesolidarism" 
+		texturefile = "gfx/interface/goals/GFX_wartimesolidarism.tga" 
+	}##Icon For: 83660
+	
+	SpriteType = { 
+		name = "GFX_compulsoryeducation" 
+		texturefile = "gfx/interface/goals/GFX_compulsoryeducation.tga" 
+	}##Icon For: 83644
+	
+	SpriteType = { 
+		name = "GFX_politicallydependentbanks" 
+		texturefile = "gfx/interface/goals/GFX_politicallydependentbanks.tga" 
+	}##Icon For: 83646
+	
+	SpriteType = { 
+		name = "GFX_loosenthemonopolygrip" 
+		texturefile = "gfx/interface/goals/GFX_loosenthemonopolygrip.tga" 
+	}##Icon For: 83651
+	
+	SpriteType = { 
+		name = "GFX_helpsmallbusinesses" 
+		texturefile = "gfx/interface/goals/GFX_helpsmallbusinesses.tga" 
+	}##Icon For: 83652
+	
+	SpriteType = { 
+		name = "GFX_madeinrussiamadeforrussia" 
+		texturefile = "gfx/interface/goals/GFX_madeinrussiamadeforrussia.tga" 
+	}##Icon For: 83654
+	
+	SpriteType = { 
+		name = "GFX_sanctityofindividuals" 
+		texturefile = "gfx/interface/goals/GFX_sanctityofindividuals.tga" 
+	}##Icon For: 83637
+	
+	SpriteType = { 
+		name = "GFX_unifiedrussianidentity" 
+		texturefile = "gfx/interface/goals/GFX_unifiedrussianidentity.tga" 
+	}##Icon For: 83629
+	
+	SpriteType = { 
+		name = "GFX_classreconciliation" 
+		texturefile = "gfx/interface/goals/GFX_classreconciliation.tga" 
+	}##Icon For: 83694
+	
+	SpriteType = { 
+		name = "GFX_resourceexportfocus" 
+		texturefile = "gfx/interface/goals/GFX_resourceexportfocus.tga" 
+	}##Icon For: 83716
+	
+	SpriteType = { 
+		name = "GFX_progressivetaxes" 
+		texturefile = "gfx/interface/goals/GFX_progressivetaxes.tga" 
+	}##Icon For: 83718
+	
+	SpriteType = { 
+		name = "GFX_allimperialeconomiccouncil" 
+		texturefile = "gfx/interface/goals/GFX_allimperialeconomiccouncil.tga" 
+	}##Icon For: 83719
+	
+	SpriteType = { 
+		name = "GFX_conducttheprivatefirms" 
+		texturefile = "gfx/interface/goals/GFX_conducttheprivatefirms.tga" 
+	}##Icon For: 83722
+	
+	SpriteType = { 
+		name = "GFX_yunarmiya" 
+		texturefile = "gfx/interface/goals/GFX_yunarmiya.tga" 
+	}##Icon For: 83723
+	
+	SpriteType = { 
+		name = "GFX_expandrussianacademyofscience" 
+		texturefile = "gfx/interface/goals/GFX_expandrussianacademyofscience.tga" 
+	}##Icon For: 83783
+	
+	SpriteType = { 
+		name = "GFX_stateuniversities" 
+		texturefile = "gfx/interface/goals/GFX_stateuniversities.tga" 
+	}##Icon For: 83724
+	
+	SpriteType = { 
+		name = "GFX_advancedadministrationacademy" 
+		texturefile = "gfx/interface/goals/GFX_advancedadministrationacademy.tga" 
+	}##Icon For: 86978
+	
+	SpriteType = { 
+		name = "GFX_coercethepoliticians" 
+		texturefile = "gfx/interface/goals/GFX_coercethepoliticians.tga" 
+	}##Icon For: 86977
+	
+	SpriteType = { 
+		name = "GFX_dissolvetheduma" 
+		texturefile = "gfx/interface/goals/GFX_dissolvetheduma.tga" 
+	}##Icon For: 86964
+	
+	SpriteType = { 
+		name = "GFX_banblackhundredists" 
+		texturefile = "gfx/interface/goals/GFX_banblackhundredists.tga" 
+	}##Icon For: 86973
+	
+	SpriteType = { 
+		name = "GFX_letoligarchsbe" 
+		texturefile = "gfx/interface/goals/GFX_letoligarchsbe.tga" 
+	}##Icon For: 86975
+	
+	SpriteType = { 
+		name = "GFX_negotiatewithstrikers" 
+		texturefile = "gfx/interface/goals/GFX_negotiatewithstrikers.tga" 
+	}##Icon For: 86976
+	
+	SpriteType = { 
+		name = "GFX_sendinthecops" 
+		texturefile = "gfx/interface/goals/GFX_sendinthecops.tga" 
+	}##Icon For: 86979
+	
+	SpriteType = { 
+		name = "GFX_diterikhscoup" 
+		texturefile = "gfx/interface/goals/GFX_diterikhscoup.tga" 
+	}##Icon For: 86981
+	
+	SpriteType = { 
+		name = "GFX_dismantletheunion" 
+		texturefile = "gfx/interface/goals/GFX_dismantletheunion.tga" 
+	}##Icon For: 86983
+	
+	SpriteType = { 
+		name = "GFX_banpoliticalparties" 
+		texturefile = "gfx/interface/goals/GFX_banpoliticalparties.tga" 
+	}##Icon For: 86984
+	
+	SpriteType = { 
+		name = "GFX_swordsforthefaithful" 
+		texturefile = "gfx/interface/goals/GFX_swordsforthefaithful.tga" 
+	}##Icon For: 87035
+	
+	SpriteType = {
+		name = "GFX_integratethechurch" 
+		texturefile = "gfx/interface/goals/GFX_integratethechurch.tga" 
+	}##Icon For: 87039
+	
+	SpriteType = { 
+		name = "GFX_reintroducethemir" 
+		texturefile = "gfx/interface/goals/GFX_reintroducethemir.tga" 
+	}##Icon For: 87041
+	
+	SpriteType = { 
+		name = "GFX_restoreabsolutism" 
+		texturefile = "gfx/interface/goals/GFX_restoreabsolutism.tga" 
+	}##Icon For: 87043
+	
+	SpriteType = { 
+		name = "GFX_everychildabible" 
+		texturefile = "gfx/interface/goals/GFX_everychildabible.tga" 
+	}##Icon For: 87048
+	
+	SpriteType = { 
+		name = "GFX_russification" 
+		texturefile = "gfx/interface/goals/GFX_russification.tga" 
+	}##Icon For: 87050
+	
+	SpriteType = { 
+		name = "GFX_crusadeagainstinfidels" 
+		texturefile = "gfx/interface/goals/GFX_crusadeagainstinfidels.tga" 
+	}##Icon For: 87052
+	
+	SpriteType = { 
+		name = "GFX_calltopatrioticworkers" 
+		texturefile = "gfx/interface/goals/GFX_calltopatrioticworkers.tga" 
+	}##Icon For: 87055
+	
+	SpriteType = { 
+		name = "GFX_mladorossiinthegovernment" 
+		texturefile = "gfx/interface/goals/GFX_mladorossiinthegovernment.tga" 
+	}##Icon For: 87056
+	
+	SpriteType = {
+		name = "GFX_greaterthancatherine" 
+		texturefile = "gfx/interface/goals/GFX_greaterthancatherine.tga" 
+	}##Icon For: 87057
+	
+	SpriteType = {
+		name = "GFX_russianmodel" 
+		texturefile = "gfx/interface/goals/GFX_russianmodel.tga" 
+	}##Icon For: 8705
+	
+	SpriteType = { 
+		name = "GFX_destinedtostand" 
+		texturefile = "gfx/interface/goals/GFX_destinedtostand.tga" 
+	}
+
+}

@@ -1,0 +1,98 @@
+﻿division_template = {
+	name = "Juntuán"				# Represents: German-trained divisions (better equipment than rest),
+	division_names_group = CHI_INF_01
+									# 	as well as two-division infantry corps (generally poorly-equipped militias),
+	regiments = {					#	and local militia groups.
+		infantry = { x = 0 y = 0 }	# Note: Chinese divisions were brigade-sized compared other nations' armies
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+
+	priority = 0 # garrison
+}
+### OOB ###
+units = {
+	division = {
+		location = 11913
+		division_template = "Juntuán"		# Provincial militia unit (poor equipment and training)
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 11982
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 10076
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1099
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1171
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 11937
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1153
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 3992
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 4038
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 7054
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1066
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 9944
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 11947
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 1055
+		division_template = "Juntuán"		
+		start_equipment_factor = 0.8
+	}
+}
+air_wings = {
+	613 = { 
+		fighter_equipment_0 = {		
+			owner = "KMT" 
+			amount = 30
+		}
+		tac_bomber_equipment_0 =  {	
+			owner = "KMT" 
+			amount = 20
+		}
+	}
+}

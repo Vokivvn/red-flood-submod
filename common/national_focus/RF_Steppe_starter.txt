@@ -1,0 +1,396 @@
+focus_tree = {
+	id = RF_Steppe_Starter
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = STE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = STE_army_effort
+	shared_focus = STE_aviation_effort
+	shared_focus = STE_naval_effort
+	shared_focus = STE_industrial_effort
+
+	############### Starting Tree ###############
+
+	focus = {
+		id = STE_review_1935
+		icon = GFX_goal_STE_review_1935
+		cost = 1
+		x = 7
+		y = 0
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = STE_question_peasants_russianess
+		icon = GFX_goal_STE_question_peasants_russianess
+		cost = 5
+		relative_position_id = STE_review_1935
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_review_1935
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 15
+		}
+	}
+	focus = {
+		id = STE_end_triune_nation_policy
+		icon = GFX_goal_STE_end_triune_nation_policy
+		cost = 5
+		relative_position_id = STE_question_peasants_russianess
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_question_peasants_russianess
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			country_event = {
+				id = steppe.3
+			}
+		}
+	}
+	focus = {
+		id = STE_draft_1936_budget
+		icon = GFX_goal_STE_draft_1936_budget
+		cost = 5
+		relative_position_id = STE_review_1935
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_review_1935
+		}
+		completion_reward = {
+			country_event = {
+				id = steppe.5
+			}
+		}
+	}
+	focus = {
+		id = STE_help_nomads_settle_down
+		icon = GFX_goal_STE_help_nomads_settle_down
+		cost = 5
+		relative_position_id = STE_review_1935
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_review_1935
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			842 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_state_core = 794
+			country_event = {
+				id = steppe.4
+			}
+		}
+	}
+	focus = {
+		id = STE_cooperate_with_orda
+		icon = GFX_goal_STE_cooperate_with_orda
+		cost = 5
+		relative_position_id = STE_help_nomads_settle_down
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_help_nomads_settle_down
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = STE_kornilovs_day_alone
+		icon = GFX_goal_STE_kornilovs_day_alone
+		cost = 5
+		relative_position_id = STE_draft_1936_budget
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_end_triune_nation_policy
+		}
+		prerequisite = {
+			focus = STE_draft_1936_budget
+		}
+		prerequisite = {
+			focus = STE_cooperate_with_orda
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = steppe.6
+			}
+		}
+	}
+	focus = {
+		id = STE_news_from_european_russia
+		icon = GFX_goal_STE_news_from_european_russia
+		cost = 5
+		relative_position_id = STE_kornilovs_day_alone
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_kornilovs_day_alone
+		}
+		available = {
+			RUS = {
+				has_war_with = SRU
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = -0.2
+			RUS = {
+				end_puppet = STE
+			}
+			set_autonomy = {
+			    target = STE
+			    autonomy_state = autonomy_free
+			}
+			remove_ideas = RUS_warlord_indifference
+			hidden_effect = {
+				set_cosmetic_tag = "STE_independent"
+			}
+		}
+	}
+	focus = {
+		id = STE_steady_as_she_goes
+		icon = GFX_goal_STE_steady_as_she_goes
+		cost = 10
+		relative_position_id = STE_news_from_european_russia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_news_from_european_russia
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = "Dominant faction will emerge."
+			hidden_effect = {
+				add_to_variable = {
+					var = STE_influence_kornilov_total
+					value = STE_influence_points_urban_kornilov
+				}
+				add_to_variable = {
+					var = STE_influence_kornilov_total
+					value = STE_influence_points_rular_kornilov
+				}
+				add_to_variable = {
+					var = STE_influence_kornilov_total
+					value = STE_influence_points_steppe_kornilov
+				}
+
+				add_to_variable = {
+					var = STE_influence_ukrainian_total
+					value = STE_influence_points_urban_ukrainian
+				}
+				add_to_variable = {
+					var = STE_influence_ukrainian_total
+					value = STE_influence_points_rular_ukrainian
+				}
+				add_to_variable = {
+					var = STE_influence_ukrainian_total
+					value = STE_influence_points_steppe_ukrainian
+				}
+
+				add_to_variable = {
+					var = STE_influence_alash_total
+					value = STE_influence_points_urban_alash
+				}
+				add_to_variable = {
+					var = STE_influence_alash_total
+					value = STE_influence_points_rular_alash
+				}
+				add_to_variable = {
+					var = STE_influence_alash_total
+					value = STE_influence_points_steppe_alash
+				}
+
+				add_to_variable = {
+					var = STE_influence_cossack_total
+					value = STE_influence_points_urban_cossack
+				}
+				add_to_variable = {
+					var = STE_influence_cossack_total
+					value = STE_influence_points_rular_cossack
+				}
+				add_to_variable = {
+					var = STE_influence_cossack_total
+					value = STE_influence_points_steppe_cossack
+				}
+
+				add_to_variable = {
+					var = STE_influence_nomads_total
+					value = STE_influence_points_urban_nomads
+				}
+				add_to_variable = {
+					var = STE_influence_nomads_total
+					value = STE_influence_points_rular_nomads
+				}
+				add_to_variable = {
+					var = STE_influence_nomads_total
+					value = STE_influence_points_steppe_nomads
+				}
+
+				clr_country_flag = STE_factionalism_visible
+				if = {
+					limit = {
+						is_ai = yes
+					}
+					country_event = {
+						id = steppe.998
+					}
+				}
+				else_if = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = steppe.7
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_ukrainian_demonstrations
+		icon = GFX_goal_STE_ukrainian_demonstrations
+		cost = 5
+		relative_position_id = STE_steady_as_she_goes
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = STE_steady_as_she_goes
+		}
+		available = {
+			has_country_flag = STE_gery_ukraine_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = steppe.8
+			}
+		}
+	}
+	focus = {
+		id = STE_kazahs_invited_into_administration
+		icon = GFX_goal_STE_kazahs_invited_into_administration
+		cost = 5
+		relative_position_id = STE_steady_as_she_goes
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = STE_steady_as_she_goes
+		}
+		available = {
+			has_country_flag = STE_alash_republic_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = steppe.9
+			}
+		}
+	}
+	focus = {
+		id = STE_governor_rules_forever
+		icon = GFX_goal_STE_governor_rules_forever
+		cost = 5
+		relative_position_id = STE_steady_as_she_goes
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_steady_as_she_goes
+		}
+		available = {
+			has_country_flag = STE_kornilov_forever_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = steppe.10
+			}
+			add_state_core = 838
+			add_state_core = 654
+			add_state_core = 898
+			set_country_flag = STE_kornilov_decision_unlock
+			set_country_flag = STE_generic_tree_unlock
+			custom_effect_tooltip = "STE_KORNILOV_DECISION_UNLOCK_TOOLTIP"
+		}
+	}
+	focus = {
+		id = STE_division_has_questions
+		icon = GFX_goal_STE_division_has_questions
+		cost = 5
+		relative_position_id = STE_steady_as_she_goes
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = STE_steady_as_she_goes
+		}
+		available = {
+			has_country_flag = STE_gulidov_coup_unlock
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = steppe.11
+			}
+		}
+	}
+	focus = {
+		id = STE_annenkovs_cossack_rage
+		icon = GFX_goal_STE_annenkovs_cossack_rage
+		cost = 1
+		relative_position_id = STE_steady_as_she_goes
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = STE_steady_as_she_goes
+		}
+		available = {
+			OR = {
+				has_country_flag = STE_cossack_host_unlock
+				has_country_flag = STE_kirghiz_khanate_unlock
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = STE_cossack_host_unlock
+				}
+				country_event = { #Another Border Conflict - side w cossacks
+					id = steppe.12
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = STE_kirghiz_khanate_unlock
+				}
+				country_event = { #Another Border Conflict - side w nomads
+					id = steppe.13
+				}
+			}
+		}
+	}
+}

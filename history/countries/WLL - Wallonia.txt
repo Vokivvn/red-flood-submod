@@ -1,0 +1,74 @@
+﻿capital = 34
+
+oob = "WLL_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+	#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	trench_warfare = 1
+
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 14
+	libertarian_marxism = 14
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 18
+	liberalism = 8
+	conservatism = 8
+	right_authoritarianism = 4
+	despotism = 26
+	reactionism = 0
+	accelerationism = 8
+}
+
+set_stability = 0.75
+
+create_country_leader = {
+	name = "Herman Baltia"
+	desc = "POLITICS_KING_ALBERT_DESC"
+	picture = "Portrait_Herman_Baltia.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+}
+
+create_corps_commander = {
+	name = "M.C.L. Keyaerts"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	traits = { trait_mountaineer hill_fighter }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_navy_leader = {
+	name = "Georges Timmermans"
+	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+	traits = { bold }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 4
+}

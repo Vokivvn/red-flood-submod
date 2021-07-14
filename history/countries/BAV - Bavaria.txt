@@ -1,0 +1,51 @@
+﻿capital = 52
+
+oob = ""
+
+set_research_slots = 2
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fuel_silos = 1
+
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 12
+	libertarian_marxism = 28
+	revolutionary_anarchism = 12
+	revisionist_socialism = 4
+	social_democratism = 5
+	liberalism = 12
+	conservatism = 2
+	right_authoritarianism = 13
+	despotism = 1
+	reactionism = 7
+	accelerationism = 4
+}
+
+set_stability = 0.4
+set_war_support = 0.4
+
+create_country_leader = {
+	name = "Hans Ritter von Seisser"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	#picture = "Portrait_BRA_Luis_Carlos_Prestes.tga"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+	}
+}

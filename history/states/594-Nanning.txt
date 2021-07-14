@@ -1,0 +1,29 @@
+state = {
+	id = 594
+	name = "STATE_594"
+	manpower = 3850000
+	state_category = town
+	resources = {
+		tungsten = 14
+		steel = 10
+		chromium = 4
+	}
+
+	history = {
+		owner = GDP
+		add_core_of = GDP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		victory_points = {
+			7137 10
+		}
+	}
+
+	provinces = {
+		4028 7044 7137 7192 7650 10050 10105 11983 12023
+	}
+}

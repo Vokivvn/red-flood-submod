@@ -1,0 +1,65 @@
+BRA_counter_revolution = {
+	502 = {
+		add_core_of = BRR
+	}
+	503 = {
+		add_core_of = BRR
+	}
+	504 = {
+		add_core_of = BRR
+	}
+	1024 = {
+		add_core_of = BRR
+	}
+	1025 = {
+		add_core_of = BRR
+	}
+	1026 = {
+		add_core_of = BRR
+	}
+	498 = {
+		add_core_of = BRR
+	}
+	
+	BRR = {
+		set_state_owner = 502
+		set_state_controller = 502
+		set_state_owner = 503
+		set_state_controller = 503
+		set_state_owner = 504
+		set_state_controller = 504
+		set_state_owner = 1024
+		set_state_controller = 1024
+		set_state_owner = 1025
+		set_state_controller = 1025
+		set_state_owner = 1026
+		set_state_controller = 1026
+		set_state_owner = 1033
+		set_state_controller = 1033
+		set_state_owner = 498
+		set_state_controller = 498
+		declare_war_on = {
+			target = BRA
+			type = annex_everything
+		}
+		hidden_effect = {
+			load_oob = "BRR_counter_revolution"
+			every_state = {
+				limit = {
+					is_owned_by = BRA
+					is_core_of = BRA
+				}
+				add_core_of = BRR
+			}
+			every_state = {
+				limit = {
+					is_owned_by = BRA
+					NOT = {
+						is_core_of = BRA
+					}
+				}
+				add_claim_by = BRR
+			}
+		}
+	}
+}

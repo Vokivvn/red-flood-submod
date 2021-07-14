@@ -1,0 +1,21 @@
+MNT_unite_balkans = {
+	picture = GFX_decision_cat_picture_MNT_balkans
+	allowed = {
+		original_tag = MNT
+	}
+
+	visible = {
+		has_completed_focus = MNT_unite_vlachs
+		is_subject = no
+	}
+}
+MNT_national_solidarity_category = {
+
+	allowed = {
+		original_tag = MNT
+	}
+
+	visible = {
+		has_completed_focus = MNT_national_solidarity
+	}
+}

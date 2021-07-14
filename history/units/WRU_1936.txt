@@ -1,0 +1,160 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Pekhotnaya Diviziya"			# Infantry Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"	# Cavarly Division
+	division_names_group = RUS_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Mekhanizirovannaya Diviziya"			# Motorized Division
+	division_names_group = RUS_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "23ya Pekhotnaya Diviziya"#(HQ-Revel)
+		location = 3152
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "24ya Pekhotnaya Diviziya"#(HQ-Pskov)
+		location = 11202
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "25ya Pekhotnaya Diviziya"#(HQ-Dvinsk)
+		location = 310
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}		
+	division = {
+		name = "27ya Pekhotnaya Diviziya"#(HQ-Riga)
+		location = 9340
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "28ya Pekhotnaya Diviziya"#(HQ-Yuriev)
+		location = 9221
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "29ya Pekhotnaya Diviziya"#(HQ-Riga)
+		location = 9340
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}	
+	division = {
+		name = "30ya Pekhotnaya Diviziya"#(HQ-Vitebsk)
+		location = 11241
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3ya Kavaleriyskaya Diviziya"#(HQ-Dvinsk)
+		location = 310
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "13ya Kavaleriyskaya Diviziya"#(HQ-Vitebsk)
+		location = 11241
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Svodnaya Kavaleriyskaya Diviziya"#(HQ-Riga)
+		location = 9340
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2ya Mekhanizirovannaya Diviziya"#(HQ-Revel)
+		location = 3152
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}
+air_wings = {
+	12 = {
+		fighter_equipment_0 = {
+			owner = "WRU"
+			amount = 75
+		}
+		name = "Pribaltiyskiy Aviaotryad Istrebiteley"
+	}
+	12 = {
+		tac_bomber_equipment_0 = {
+			owner = "WRU"
+			amount = 50
+		}
+		name = "Pribaltiyskiy Aviaotryad Bombardirovshchikov"
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+}

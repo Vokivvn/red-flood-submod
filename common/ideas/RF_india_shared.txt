@@ -1,0 +1,33 @@
+ideas = {
+     country = {
+	    RAJ_shared_economy = {
+		
+		    removal_cost = -1
+            
+            picture = generic_agrarian_society
+            
+			allowed = {
+				original_tag = CEY
+				original_tag = TRA
+				original_tag = ORS
+				original_tag = MYS
+				original_tag = HYD
+				original_tag = UPI
+				original_tag = RSR
+				original_tag = ARY
+				original_tag = PNJ
+				original_tag = DIN
+				original_tag = KSM
+				original_tag = IDR
+				original_tag = BIH
+				original_tag = BNG
+				original_tag = ASM
+		    }
+			
+			modifier = {
+				training_time_army_factor = 0.25
+				conscription_factor = -0.5
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+JPR_pan_asianism = {
+	allowed = {
+		original_tag = JPR
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = JPR_panasianism
+	}
+}
+JPR_westerncomrades = {
+	allowed = {
+		original_tag = JPR
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = JPR_western_comrades
+	}
+}
+JPR_pacificcomrades = {
+	allowed = {
+		original_tag = JPR
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = JPR_pacific_comrades
+	}
+}

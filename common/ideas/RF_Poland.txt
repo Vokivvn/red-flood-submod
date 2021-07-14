@@ -1,0 +1,429 @@
+ideas = {
+	country = {
+		POL_placeholder = {
+			removal_cost = -1
+			allowed = {
+				original_tag = POL
+			}
+			modifier = {
+
+			}
+			picture = POL_placeholder
+		}
+		POL_lowerstate = {
+			modifier = {
+				consumer_goods_factor = -0.15
+				
+			}
+			picture = FRA_matignon_agreements
+		}
+		POL_spending = {
+			modifier = {
+				political_power_cost = 0.50
+				production_speed_infrastructure_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				production_speed_dockyard_factor = 0.20
+				
+			}
+			picture = generic_goods_red_bonus
+		}
+		POL_christiancharity = {
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_factor = 0.10
+				surrender_limit = 0.05
+				
+			}
+			picture = air_support_focus
+		}
+		POL_ubi = {
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory	= 0.30
+				local_resources_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.30
+				production_speed_air_base_factor = 0.25
+				research_speed_factor = 0.20
+				
+			}
+			picture = SOV_scientist_defect
+		}
+		POL_politicalinterest = {
+			modifier = {
+				social_democratism_drift = 0.05
+				liberalism_drift = 0.05
+				conservatism_drift = 0.05
+				revisionist_socialism_drift = 0.05
+				
+			}
+			picture = generic_manpower_bonus
+		}
+		POL_newdemocracy = {
+			modifier = {
+				stability_weekly = 0.05
+				
+			}
+			picture = neutrality_idea
+		}
+		POL_huzarzy_smierci = {
+			modifier = {
+				stability_weekly = 0.05
+				accelerationism_drift = 0.05
+				political_power_gain = 0.05
+				root_out_resistance_effectiveness_factor = 0.50
+			}
+			picture = generic_fascism_drift_bonus
+		}
+		POL_cult_marshal = {
+			modifier = {
+				accelerationism_drift = 0.05
+				surrender_limit = 0.1
+				army_org = 5
+			}
+			picture = POL_cultmarshal
+		}
+		POL_zermatic = {
+			modifier = {
+				accelerationism_drift = 0.05
+				consumer_goods_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.15
+				army_attack_factor = 0.15
+				conscription = 0.05
+			}
+			picture = POL_zermatic_spiritualism
+		}
+		POL_neweraneweconomy = {
+			modifier = {
+				accelerationism_drift = 0.05
+				production_speed_infrastructure_factor = 0.20
+				production_speed_industrial_complex_factor = 0.20
+				research_speed_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+			picture = saf_ossewabrandwag_fascism
+		}
+		POL_dreamofzadruga = {
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+			picture = POL_dreamofzadruga
+		}
+		POL_selfmanagement = {
+			modifier = {
+				consumer_goods_factor = -0.05
+				industry_repair_factor = 0.10
+				production_speed_buildings_factor = 0.1
+			}
+		picture = POL_selfmanagement
+		}
+		POL_masteryovermatter = {
+			modifier = {
+				production_speed_industrial_complex_factor = 0.10
+				conversion_cost_civ_to_mil_factor = 0.15
+				industry_air_damage_factor = 0.20
+				production_speed_anti_air_building_factor = 0.10
+				research_speed_factor = 0.1
+			}
+			picture = triumphant_will
+		}
+		POL_forfreedom = {
+			modifier = {
+			ai_focus_aggressive_factor = 0.30
+			drift_defence_factor = 0.20
+			guarantee_cost = -1
+			guarantee_tension = -0.5
+			}
+			picture = HUN_dynastic_ties
+		}
+		POL_ukremigration = {
+			modifier = {
+			consumer_goods_factor = 0.1
+			monthly_population = -0.05
+			}
+		}
+		POL_eastandwest = {
+			modifier = {
+			army_defence_factor	= 0.20
+			}
+			picture = POL_eastandwest
+		}
+		POL_prometheus = {
+			modifier = {
+				send_volunteer_size	= 8
+			}
+			picture = POL_prometheus
+		}
+		POL_sharingresponsibilities = {
+			modifier = {
+				production_speed_fuel_silo_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+				production_speed_infrastructure_factor = 0.15
+			}
+			picture = generic_production_bonus
+		}
+		POL_cult_zymierski = {
+			modifier = {
+				surrender_limit = 0.07
+				army_defence_factor = 0.1
+			}
+			picture = hun_charles_v
+		}
+		POL_unitedinspirit = {
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			picture = generic_victors_of_ww1
+		}
+		POL_absolutedevotion = {
+			modifier = {
+				army_attack_factor = 0.1
+				stability_weekly = 0.01
+				conscription = 0.02
+				despotism_drift = 0.15
+			}
+			picture = german_advisors
+		}
+		POL_polishadministrators = {
+			modifier = {
+				resistance_target = -0.1
+			}
+			picture = generic_pp_unity_bonus
+		}
+		POL_partisantweaponry = {
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2 instant = yes
+				}
+			}
+			picture = generic_infantry_equipment_manufacturer_2
+		}
+		POL_likestorks = {
+			modifier = {
+				air_agility_factor = 0.3
+			}
+		}
+	}
+	head_of_government = {
+		POL_jan_stachniuk_head_acc = {
+			picture = POL_jan_stachniuk_head_acc
+			allowed = {
+				original_tag = POL
+			}
+			cancel = { 
+					NOT = {
+							has_government = accelerationism
+							has_completed_focus = POL_national_collective
+					}
+				}
+			available = {
+			    has_government = accelerationism
+				has_completed_focus = POL_national_collective
+			}
+			traits = {
+				hog_silent_workhorse
+				head_of_government
+			}
+		}
+		POL_waclaw_iwaszkiewicz_rudoszanski_head = {
+			picture = POL_waclaw_iwaszkiewicz_rudoszanski_head
+			allowed = {
+				original_tag = POL
+			}
+			cancel = { 
+					NOT = {
+							has_government = despotism
+							has_government = right_authoritarianism
+					}
+				}
+				available = {
+
+						OR = {
+							has_government = despotism
+							has_government = right_authoritarianism
+						}
+
+					}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+		}
+		POL_bronislaw_pieracki_head = {
+			picture = POL_bronislaw_pieracki_head
+			allowed = {
+				original_tag = POL
+			}
+			cancel = { 
+					NOT = {
+							has_government = despotism
+							has_government = right_authoritarianism
+					}
+				}
+				available = {
+
+						OR = {
+							has_government = despotism
+							has_government = right_authoritarianism
+						}
+
+					}
+			traits = {
+				hog_old_general
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		POL_jozef_beck_foregin = {
+			picture = POL_jozef_beck_foregin
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				for_great_compromiser
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		POL_stanislaw_ruziewicz_eco = {
+			picture = POL_stanislaw_ruziewicz_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_administrative_genius
+				economy_minister
+			}
+		}
+		POL_eugeniusz_kwiatkowski_eco = {
+			picture = POL_eugeniusz_kwiatkowski_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_industrialiser
+				economy_minister
+			}
+		}
+		POL_gabriel_narutowicz_eco = {
+			picture = POL_gabriel_narutowicz_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_resource_industrialist
+				economy_minister
+			}
+		}
+		POL_maksymilian_matakiewicz_eco = {
+			picture = POL_maksymilian_matakiewicz_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_industrialiser
+				economy_minister
+			}
+		}
+		POL_wojciech_swietoslawski_eco = {
+			picture = POL_wojciech_swietoslawski_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_industrial_chemist
+				economy_minister
+			}
+		}
+		POL_antoni_lomnicki_eco = {
+			picture = POL_antoni_lomnicki_eco
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				eco_theoretical_scientist
+				economy_minister
+			}
+		}
+	}
+	head_of_intel = {
+		POL_stefan_banach_intel = {
+			picture = POL_stefan_banach_intel
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+		POL_stefan_kaczmarz_intel = {
+			picture = POL_stefan_kaczmarz_intel
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				int_industrial_specialist
+				head_of_intel
+			}
+		}
+	}
+	chief_of_staff = {
+		POL_jan_wladyslaw_rozwadowski_chief = {
+			picture = POL_jan_wladyslaw_rozwadowski_chief
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cos_school_of_mass_combat
+				chief_of_staff
+			}
+		}
+	}
+	chief_of_army = {
+		POL_stefan_mossor_army = {
+			picture = POL_stefan_mossor_army
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+	}
+	chief_of_navy = {
+		POL_antoni_garnuszewski_naval = {
+			picture = POL_antoni_garnuszewski_naval
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cnav_decisive_battle_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		POL_jan_nagorski_air = {
+			picture = POL_jan_nagorski_air
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cair_battlefield_support_doctrine	
+			}
+		}
+		POL_jasinski_stanislaw_air = {
+			picture = POL_jasinski_stanislaw_air
+			allowed = {
+				original_tag = POL
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+}

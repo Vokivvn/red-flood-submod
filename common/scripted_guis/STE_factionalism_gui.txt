@@ -1,0 +1,26 @@
+scripted_gui = {
+	steppe_factionalism_gui = {
+		window_name = "steppe_factionalism_gui_window"
+		context_type = decision_category
+
+		visible = {
+			tag = STE
+		}
+
+		effects = {
+	
+		}
+
+		triggers = {
+
+		}
+
+		dynamic_lists = {
+
+		}
+
+		properties = {
+
+		}
+	}
+}

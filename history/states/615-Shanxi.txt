@@ -1,0 +1,26 @@
+state = { #Jindong #Eastern Shanxi
+	id = 615
+	name = "STATE_615"
+	manpower = 5480000
+
+	state_category = rural
+	resources = {
+		steel = 10
+	}
+
+	history = {
+		owner = BYJ
+		add_core_of = BYJ
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+		}
+		victory_points = {
+			12432 2
+		}
+	}
+
+	provinces = {
+		1027 1180 1203 1438 1519 4469 4538 10421 10480 12078 12344 12432
+	}
+}

@@ -1,0 +1,223 @@
+capital = 608
+
+oob = "BYJ_1936"
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+	set_naval_oob = "BYJ_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "BYJ_1936_naval_mtg"	
+}
+set_research_slots = 3
+add_manpower = 200000
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	gwtank = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = 	right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_ideas = { 
+	limited_conscription
+	BYJ_egg_dancer
+	BYJ_industrial_investment
+	BYJ_fengtian_threat
+	BYJ_compulsory_education
+}
+	
+set_popularities = {
+	vanguard_socialism = 4
+	libertarian_marxism = 2
+	revolutionary_anarchism = 0
+	revisionist_socialism = 2
+	social_democratism = 6
+	liberalism = 10
+	conservatism = 14
+	right_authoritarianism = 31
+	despotism = 17
+	reactionism = 9
+	accelerationism = 5
+}
+
+
+create_country_leader = {
+	name = "Yan Xishan"
+	desc = "POLITICS_YAN XISHAN_DESC"
+	picture = "Portrait_Yan_Xishan.dds"
+	expire = "1965.1.1"
+	ideology = military_junta
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Fu Zuoyi"
+	desc = "POLITICS_FU_DESC"
+	picture = "Fu_Zuoyi.dds"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Liang Shiyi"
+	desc = "POLITICS_Liang_DESC"
+	picture = "Liang_Shiyi.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		
+	}
+}
+#POTENTIAL LEADER IN TREE - SAVED DETAILS HERE#
+#create_country_leader = {
+#	name = "Zhang Xueliang"
+#	desc = "POLITICS_ZHANG_DESC"
+#	picture = "Portrait_Zhang_Xueliang.dds"
+#	expire = "1965.1.1"
+#	ideology = military_junta
+#	traits = {
+#		
+#	}
+#}
+create_country_leader = {
+	name = "Yan Yangchu"
+	desc = "POLITICS_YAN_YANGCHU_DESC"
+	picture = "Yan_Yangchu.dds"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Zuo Shunsheng"
+	desc = "POLITICS_ZUO_DESC"
+	picture = "Zuo_Shunsheng.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		
+	}
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Jianwei Class"			
+		type = ship_hull_light_1
+		name_group = CHI_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Hairong Class"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Haiqi Class"
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ninghai Class"
+		type = ship_hull_cruiser_1
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

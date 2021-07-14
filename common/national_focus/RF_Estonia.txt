@@ -1,0 +1,1276 @@
+focus_tree = {
+	id = RF_estonia
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = EST
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	focus = {
+		id = EST_restoration_of_independence
+		icon = GFX_goal_EST_restoration_of_independence
+		x = 10
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_province_name = {
+				id = 3152
+				name = "Tallinn"
+			}
+		}
+	}
+
+	focus = {
+		id = EST_foreign_policy
+		icon = GFX_goal_EST_foreign_policy
+		prerequisite = {
+			focus = EST_restoration_of_independence
+		}
+		relative_position_id = EST_restoration_of_independence
+		x = -7
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			date > 1938.1.1
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = EST_question_of_latvia
+		icon = GFX_goal_EST_question_of_latvia
+		prerequisite = {
+			focus = EST_foreign_policy
+		}
+		relative_position_id = EST_foreign_policy
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = LAT
+			}
+		}
+	}
+	focus = {
+		id = EST_claims_on_ingerimaa
+		icon = GFX_goal_EST_claims_on_ingerimaa
+		prerequisite = {
+			focus = EST_foreign_policy
+		}
+		relative_position_id = EST_foreign_policy
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_claim = 208
+		}
+	}
+	focus = {
+		id = EST_improve_relations_with_south
+		icon = GFX_goal_EST_improve_relations_with_south
+		prerequisite = {
+			focus = EST_question_of_latvia
+		}
+		relative_position_id = EST_question_of_latvia
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = EST_improve_relations_with_north
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = POL modifier = large_increase }
+			POL = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			add_opinion_modifier = { target = BLR modifier = large_increase }
+			BLR = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			add_opinion_modifier = { target = UKR modifier = large_increase }
+			UKR = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			add_opinion_modifier = { target = PRS modifier = large_increase }
+			PRS = { add_opinion_modifier = { target = EST modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = EST_improve_relations_with_north
+		icon = GFX_goal_EST_improve_relations_with_north
+		prerequisite = {
+			focus = EST_claims_on_ingerimaa
+		}
+		relative_position_id = EST_claims_on_ingerimaa
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = EST_improve_relations_with_south
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = FIN modifier = large_increase }
+			FIN = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			add_opinion_modifier = { target = SWE modifier = large_increase }
+			SWE = { add_opinion_modifier = { target = EST modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = EST_question_lithuania
+		icon = GFX_goal_EST_question_lithuania
+		prerequisite = {
+			focus = EST_improve_relations_with_south
+		}
+		relative_position_id = EST_improve_relations_with_south
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					LIT = { has_government = libertarian_marxism }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = LIT
+				}
+			}
+			else = {
+				add_opinion_modifier = { target = LIT modifier = large_increase }
+				LIT = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			}
+		}
+	}
+	focus = {
+		id = EST_luuga_or_war
+		icon = GFX_goal_EST_luuga_or_war
+		prerequisite = {
+			focus = EST_improve_relations_with_north
+		}
+		relative_position_id = EST_improve_relations_with_north
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_core = 208
+			RUS = { add_war_support = -0.05 }
+		}
+	}
+	focus = {
+		id = EST_baltic_federation_focus
+		icon = GFX_goal_EST_baltic_federation_focus
+		prerequisite = {
+			focus = EST_question_lithuania
+		}
+		relative_position_id = EST_question_lithuania
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			LAT = {
+				OR = {
+					exists = no
+					is_puppet_of = EST
+				}
+			}
+		}
+		completion_reward = {
+			create_faction = BALTIC_CONFEDERATION
+			add_stability = 0.1
+			add_political_power = 100
+			if = {
+				limit = {
+					LIT = {
+						is_puppet = no
+						is_in_faction = no
+					}
+				}
+				LIT = {
+					country_event = {
+						id = estonia.1
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_finno_urgic_union_focus
+		icon = GFX_goal_EST_finno_urgic_union_focus
+		prerequisite = {
+			focus = EST_luuga_or_war
+		}
+		relative_position_id = EST_luuga_or_war
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+			FIN = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		completion_reward = {
+			create_faction = FINNO_URGIC_UNION
+			FIN = {
+				country_event = {
+					id = estonia.2
+					days = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EST_autocracy_of_pats
+		icon = GFX_goal_EST_autocracy_of_pats
+		prerequisite = {
+			focus = EST_restoration_of_independence
+		}
+		relative_position_id = EST_restoration_of_independence
+		x = -3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = EST_tonissons_cabinet
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+			create_country_leader = {
+				name = "Konstantin Päts"
+				desc = "POLITICS_ALEXEI_II_DESC"
+				picture = "Portrait_Estonia_Konstantin_Pats.tga"
+				expire = "1965.1.1"
+				ideology = authoritarian_democratism
+				traits = {
+				}
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = EST_exile_left_wing_politicans
+		icon = GFX_goal_EST_exile_left_wing_politicans
+		prerequisite = {
+			focus = EST_autocracy_of_pats
+		}
+		relative_position_id = EST_autocracy_of_pats
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -1
+			}
+		}
+	}
+	focus = {
+		id = EST_eesti_rahva_armee
+		icon = GFX_goal_EST_eesti_rahva_armee
+		prerequisite = {
+			focus = EST_autocracy_of_pats
+		}
+		relative_position_id = EST_autocracy_of_pats
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 15000
+		}
+	}
+	focus = {
+		id = EST_one_man_rule
+		icon = GFX_goal_EST_one_man_rule
+		prerequisite = {
+			focus = EST_exile_left_wing_politicans
+		}
+		relative_position_id = EST_exile_left_wing_politicans
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_country_leader_trait = EST_sole_ruler_of_estonians
+		}
+	}
+	focus = {
+		id = EST_crush_political_opponents
+		icon = GFX_goal_EST_crush_political_opponents
+		prerequisite = {
+			focus = EST_exile_left_wing_politicans
+		}
+		relative_position_id = EST_exile_left_wing_politicans
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = liberalism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -1
+			}
+		}
+	}
+
+	focus = {
+		id = EST_tonissons_cabinet
+		icon = GFX_goal_EST_tonissons_cabinet
+		prerequisite = {
+			focus = EST_restoration_of_independence
+		}
+		relative_position_id = EST_restoration_of_independence
+		x = 3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		mutually_exclusive = {
+			focus = EST_autocracy_of_pats
+		}
+		available = {
+		}
+		completion_reward = {
+			create_country_leader = {
+				name = "Jaan Tõnisson"
+				desc = "POLITICS_ALEXEI_II_DESC"
+				picture = "Portrait_EST_Jaan_Tonisson.tga"
+				expire = "1965.1.1"
+				ideology = progressivism
+				traits = {
+				}
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = EST_exile_right_wing_politicans
+		icon = GFX_goal_EST_exile_right_wing_politicans
+		prerequisite = {
+			focus = EST_tonissons_cabinet
+		}
+		relative_position_id = EST_tonissons_cabinet
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -1
+			}
+		}
+	}
+	focus = {
+		id = EST_gain_western_support
+		icon = GFX_goal_EST_gain_western_support
+		prerequisite = {
+			focus = EST_tonissons_cabinet
+		}
+		relative_position_id = EST_tonissons_cabinet
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 5000
+			ENG = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			ITA = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			HOL = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			USA = { add_opinion_modifier = { target = EST modifier = large_increase } }
+			SWE = { add_opinion_modifier = { target = EST modifier = large_increase } }
+		}
+	}
+	focus = {
+		id = EST_coalition_government
+		icon = GFX_goal_EST_coalition_government
+		prerequisite = {
+			focus = EST_exile_right_wing_politicans
+		}
+		relative_position_id = EST_exile_right_wing_politicans
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.4
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = EST_welfare_and_free_trade
+		icon = GFX_goal_EST_welfare_and_free_trade
+		prerequisite = {
+			focus = EST_exile_right_wing_politicans
+		}
+		relative_position_id = EST_exile_right_wing_politicans
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_country_leader_trait = EST_protector_of_estonian_freedom
+		}
+	}
+
+	focus = {
+		id = EST_stabilize_the_economy
+		icon = GFX_goal_EST_stabilize_the_economy
+		prerequisite = {
+			focus = EST_restoration_of_independence
+		}
+		relative_position_id = EST_restoration_of_independence
+		x = 0
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.5
+			every_owned_state = {
+				limit = {
+					is_core_of = EST
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_tallinn_industry
+		icon = GFX_goal_EST_tallinn_industry
+		prerequisite = {
+			focus = EST_stabilize_the_economy
+		}
+		relative_position_id = EST_stabilize_the_economy
+		x = -4
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_parnu_industry
+		icon = GFX_goal_EST_parnu_industry
+		prerequisite = {
+			focus = EST_tallinn_industry
+		}
+		relative_position_id = EST_tallinn_industry
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_estonian_oil_shale
+		icon = GFX_goal_EST_estonian_oil_shale
+		prerequisite = {
+			focus = EST_stabilize_the_economy
+		}
+		relative_position_id = EST_stabilize_the_economy
+		x = -2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 3
+				category = excavation_tech
+				category = synth_resources
+			}
+		}
+	}
+	focus = {
+		id = EST_begin_the_hunt
+		icon = GFX_goal_EST_begin_the_hunt
+		prerequisite = {
+			focus = EST_estonian_oil_shale
+		}
+		relative_position_id = EST_estonian_oil_shale
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_resource = {
+    			type = oil
+    			amount = 5
+    			state = 13
+			}
+			add_resource = {
+    			type = oil
+    			amount = 5
+    			state = 191
+			}
+		}
+	}
+	focus = {
+		id = EST_maanteeamet
+		icon = GFX_goal_EST_maanteeamet
+		prerequisite = {
+			focus = EST_stabilize_the_economy
+		}
+		relative_position_id = EST_stabilize_the_economy
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = EST
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_strategic_ports
+		icon = GFX_goal_EST_strategic_ports
+		prerequisite = {
+			focus = EST_maanteeamet
+		}
+		relative_position_id = EST_maanteeamet
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			13 = {
+				add_building_construction = {
+					type = naval_base
+					level = 7
+					instant_build = yes
+					province = 3152
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_estonian_metal
+		icon = GFX_goal_EST_estonian_metal
+		prerequisite = {
+			focus = EST_stabilize_the_economy
+		}
+		relative_position_id = EST_stabilize_the_economy
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_resource = {
+    			type = steel
+    			amount = 10
+    			state = 13
+			}
+		}
+	}
+	focus = {
+		id = EST_narva_steel
+		icon = GFX_goal_EST_narva_steel
+		prerequisite = {
+			focus = EST_estonian_metal
+		}
+		relative_position_id = EST_estonian_metal
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_resource = {
+    			type = steel
+    			amount = 10
+    			state = 191
+			}
+		}
+	}
+	focus = {
+		id = EST_narva_industry
+		icon = GFX_goal_EST_narva_industry
+		prerequisite = {
+			focus = EST_stabilize_the_economy
+		}
+		relative_position_id = EST_stabilize_the_economy
+		x = 4
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			191 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_viru_industry
+		icon = GFX_goal_EST_viru_industry
+		prerequisite = {
+			focus = EST_narva_industry
+		}
+		relative_position_id = EST_narva_industry
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			191 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_baltic_regional_power
+		icon = GFX_goal_EST_baltic_regional_power
+		prerequisite = {
+			focus = EST_parnu_industry
+		}
+		prerequisite = {
+			focus = EST_begin_the_hunt
+		}
+		prerequisite = {
+			focus = EST_strategic_ports
+		}
+		prerequisite = {
+			focus = EST_narva_steel
+		}
+		prerequisite = {
+			focus = EST_viru_industry
+		}
+		relative_position_id = EST_strategic_ports
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = EST_baltic_regional_power
+		}
+	}
+
+	focus = {
+		id = EST_study_the_great_war
+		icon = GFX_goal_EST_study_the_great_war
+		prerequisite = {
+			focus = EST_restoration_of_independence
+		}
+		relative_position_id = EST_restoration_of_independence
+		x = 8
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EST_conscription_question
+		icon = GFX_goal_EST_conscription_question
+		prerequisite = {
+			focus = EST_study_the_great_war
+		}
+		relative_position_id = EST_study_the_great_war
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_manpower = 8000
+		}
+	}
+	focus = {
+		id = EST_metallhobune
+		icon = GFX_goal_EST_metallhobune
+		prerequisite = {
+			focus = EST_conscription_question
+		}
+		relative_position_id = EST_conscription_question
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = EST_expand_the_arsenal
+		icon = GFX_goal_EST_expand_the_arsenal
+		prerequisite = {
+			focus = EST_metallhobune
+		}
+		relative_position_id = EST_metallhobune
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_new_era_doctrines
+		icon = GFX_goal_EST_new_era_doctrines
+		prerequisite = {
+			focus = EST_expand_the_arsenal
+		}
+		relative_position_id = EST_expand_the_arsenal
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EST_form_kindralstaap
+		icon = GFX_goal_EST_form_kindralstaap
+		prerequisite = {
+			focus = EST_new_era_doctrines
+		}
+		relative_position_id = EST_new_era_doctrines
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = EST_study_from_foreign_pilots
+		icon = GFX_goal_EST_study_from_foreign_pilots
+		prerequisite = {
+			focus = EST_study_the_great_war
+		}
+		relative_position_id = EST_study_the_great_war
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = EST_plane_production_contracts
+		icon = GFX_goal_EST_plane_production_contracts
+		prerequisite = {
+			focus = EST_study_from_foreign_pilots
+		}
+		relative_position_id = EST_study_from_foreign_pilots
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 150
+				producer = POL
+			}
+		}
+	}
+	focus = {
+		id = EST_balic_aerial_superiority
+		icon = GFX_goal_EST_balic_aerial_superiority
+		prerequisite = {
+			focus = EST_plane_production_contracts
+		}
+		relative_position_id = EST_plane_production_contracts
+		x = 0
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = EST_reform_the_miinisadam
+		icon = GFX_goal_EST_reform_the_miinisadam
+		prerequisite = {
+			focus = EST_study_the_great_war
+		}
+		relative_position_id = EST_study_the_great_war
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_coastal_defense_navy
+		icon = GFX_goal_EST_coastal_defense_navy
+		prerequisite = {
+			focus = EST_reform_the_miinisadam
+		}
+		relative_position_id = EST_reform_the_miinisadam
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = EST_battleship_designs
+		icon = GFX_goal_EST_battleship_designs
+		prerequisite = {
+			focus = EST_coastal_defense_navy
+		}
+		relative_position_id = EST_coastal_defense_navy
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	focus = {
+		id = EST_retrofit_the_navy
+		icon = GFX_goal_EST_retrofit_the_navy
+		prerequisite = {
+			focus = EST_battleship_designs
+		}
+		relative_position_id = EST_battleship_designs
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			191 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EST_baltic_naval_superiority
+		icon = GFX_goal_EST_baltic_naval_superiority
+		prerequisite = {
+			focus = EST_retrofit_the_navy
+		}
+		relative_position_id = EST_retrofit_the_navy
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+	focus = {
+		id = EST_unified_military
+		icon = GFX_goal_EST_unified_military
+		prerequisite = {
+			focus = EST_form_kindralstaap
+		}
+		prerequisite = {
+			focus = EST_balic_aerial_superiority
+		}
+		prerequisite = {
+			focus = EST_baltic_naval_superiority
+		}
+		relative_position_id = EST_balic_aerial_superiority
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.25
+			add_political_power = 100
+		}
+	}
+}

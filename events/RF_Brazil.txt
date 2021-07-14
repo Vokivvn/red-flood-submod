@@ -1,0 +1,2231 @@
+##############
+# Brazillian Events #
+##############
+
+add_namespace = brazil
+
+	##Event: Primeiro Conselho Revolucionário
+	country_event = {
+		id = brazil.1
+		title = brazil.1.title
+		desc = brazil.1.desc
+		picture = GFX_report_event_BRA_pajama_coup
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.1.a
+		}
+	}
+
+	##Event: The Morning After
+	country_event = {
+		id = brazil.2
+		title = brazil.2.t
+		desc = brazil.2.desc
+		#picture = GFX_report_event_BRA_pajama_coup
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.2.a
+			add_stability = 0.03
+		}
+	}
+
+	##Event: Selecting the Venue
+	country_event = {
+		id = brazil.3
+		title = brazil.3.t
+		desc = brazil.3.desc
+		#picture = GFX_report_event_BRA_pajama_coup
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.3.a
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = PRESTES
+					}
+				}
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = prestes_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.3.b
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AMAZONAS
+					}
+				}
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = muller_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.3.c
+			ai_chance = {
+				factor = 2
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AQUINO
+					}
+				}
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = correia_win
+				value = 1
+			}
+		}
+	}
+	##Event: Checking the Delegates
+	country_event = {
+		id = brazil.4
+		title = brazil.4.t
+		desc = brazil.4.desc
+		#picture = GFX_report_event_BRA_pajama_coup
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = brazil.4.a
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = PRESTES
+					}
+				}
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = prestes_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.4.b
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AMAZONAS
+					}
+				}
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = muller_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.4.c
+			ai_chance = {
+				factor = 10
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AQUINO
+					}
+				}
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = correia_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.4.d
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					OR = {
+						has_game_rule = {
+							rule = BRA_ai_route
+							option = COLLAPSE
+						}
+						has_game_rule = {
+							rule = BRA_ai_route
+							option = ELECTIONS
+						}
+					}
+				}
+			}
+			add_stability = 0.02
+			add_to_variable = {
+				var = counter_revolution
+				value = 1
+			}
+		}
+	}
+	##Event: Securing the Council
+	country_event = {
+		id = brazil.5
+		title = brazil.5.t
+		desc = brazil.5.desc
+		#picture = GFX_report_event_BRA_pajama_coup
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.5.a
+			ai_chance = {
+				factor = 6
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = PRESTES
+					}
+				}
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = prestes_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.5.b
+			ai_chance = {
+				factor = 5
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AMAZONAS
+					}
+				}
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.02
+			}
+			add_to_variable = {
+				var = muller_win
+				value = 1
+			}
+		}
+		option = {
+			name = brazil.5.c
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					OR = {
+						has_game_rule = {
+							rule = BRA_ai_route
+							option = AQUINO
+						}
+						has_game_rule = {
+							rule = BRA_ai_route
+							option = COLLAPSE
+						}
+						has_game_rule = {
+							rule = BRA_ai_route
+							option = ELECTIONS
+						}
+					}
+				}
+			}
+			add_war_support = 0.02
+			add_to_variable = {
+				var = counter_revolution
+				value = 1
+			}
+		}
+	}
+	##Event: The outcome of the First Council
+	country_event = {
+	 id = brazil.6
+	 title = brazil.6.t
+	 desc = brazil.6.desc
+	 #picture = GFX_report_event_BRA_pajama_coup
+	 fire_only_once = yes
+	 is_triggered_only = yes
+		option = {
+			name = brazil.6.a
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = PRESTES
+					}
+				}
+			}
+			trigger = {
+				check_variable = {
+					var = prestes_win
+					value > 0
+				}
+				NOT = {
+					check_variable = {
+					var = counter_revolution
+					value = 2
+					}
+				}
+				NOT = {
+					check_variable = {
+						var = muller_win
+						value = 2
+					}
+				}
+				NOT = {
+					check_variable = {
+					var = correia_win
+					value = 2
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = libertarian_marxism
+			}
+			complete_national_focus = BRA_prestes
+		}
+		option = {
+			name = brazil.6.b
+			ai_chance = {
+				factor = 1
+				modifier = {
+					factor = 1000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = AMAZONAS
+					}
+				}	
+			}
+			trigger = {
+				check_variable = {
+					var = muller_win
+					value > 0
+				}
+				NOT = {
+					check_variable = {
+						var = counter_revolution
+						value = 2
+					}
+				}
+				NOT = {
+					check_variable = {
+						var = prestes_win
+						value = 2
+					}
+				}
+				NOT = {
+					check_variable = {
+					var = correia_win
+					value = 2
+					}
+				}
+			}
+			complete_national_focus = BRA_amazonas
+		}
+		option = {
+			name = brazil.6.c
+			ai_chance = { factor = 1 }
+			trigger = {
+				check_variable = {
+					var = correia_win
+					value = 2
+				}
+				NOT = {
+					check_variable = {
+					var = counter_revolution
+					value = 2
+					}
+				}
+			}
+			set_politics = {
+				ruling_party = revisionist_socialism
+			}
+			complete_national_focus = BRA_aquino
+		}
+		option = {
+			name = brazil.6.d
+			ai_chance = { factor = 1 }
+			trigger = {
+				check_variable = {
+					var = counter_revolution
+					value = 2
+				}
+			}
+			country_event = {
+				id = brazil.7
+				days = 2
+			}
+		}
+	}
+	##Event: Oligarchic Counter Revolution
+	country_event = {
+	 id = brazil.7
+	 title = brazil.7.t
+	 desc = brazil.7.desc
+	 picture = GFX_report_event_BRA_counter_revolution
+	 fire_only_once = yes
+	 is_triggered_only = yes
+		option = {
+			name = brazil.7.a
+			BRA_counter_revolution = yes
+			add_ideas = BRA_civil_war
+			BRA = {
+				leave_faction = yes
+			}
+			hidden_effect = {
+				BRA = {
+					country_event = {
+						id = brazil.16
+						days = 10
+					}
+				}
+				1033 = {
+					add_core_of = BRR
+				}
+			}
+		}
+		option = {
+			name = brazil.7.b 
+			BRA_counter_revolution = yes
+			add_ideas = BRA_civil_war
+			BRA = {
+				leave_faction = yes
+			}
+			BRR = {
+				change_tag_from = BRA
+			}
+			hidden_effect = {
+				BRR = {
+					country_event = {
+						id = brazil.17
+						days = 10
+					}
+					1033 = {
+						add_core_of = BRR
+					}
+				}
+			}	
+		}
+	}
+	##Event: Oligarchic Victory
+	country_event = {
+	 id = brazil.8
+	 title = brazil.8.t
+	 desc = brazil.8.desc
+	 picture = GFX_report_event_BRA_counter_revolution
+	 fire_only_once = yes
+	 trigger = {
+		NOT = {
+			BRA = {
+				exists = yes
+			}
+		}
+		BRR = {
+			NOT = {
+				has_war_with = BRA
+			}
+		}
+		tag = BRR
+	}
+		mean_time_to_happen = {
+			days = 1
+		}
+		
+		option = {
+			name = brazil.8.a
+			add_stability = -0.05
+		add_ideas = BRR_communist_insurgency
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 2000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = ELECTIONS
+					}
+				}
+			}
+		}
+		option = {
+			name = brazil.8.b 
+			country_event = {
+				id = brazil.9
+				days = 2
+			}
+		add_ideas = BRR_communist_insurgency
+			ai_chance = {
+				base = 1
+				modifier = {
+					factor = 2000
+					has_game_rule = {
+						rule = BRA_ai_route
+						option = COLLAPSE
+					}
+				}
+			}
+		}
+	}
+	##Event: Colapso Generalizado
+	country_event = {
+	 id = brazil.9
+	 title = brazil.9.t
+	 desc = brazil.9.desc
+	 picture = GFX_report_event_BRA_colapso_gereralizado
+	 fire_only_once = yes
+	 is_triggered_only = yes
+		option = {
+			name = brazil.9.a
+			add_ideas = BRA_state_authority_collapse
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchy"
+				desc = "POLITICS_Anarchy_DESC"
+				picture = "Portrait_BRR_anarchy.tga"
+				expire = "2000.1.1"
+				ideology = oligarchy
+				traits = {
+				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "Milícia Regional"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Divisão de Cavalaria"
+			}
+			complete_national_focus = BRR_colapso_generalizado
+
+			hidden_effect = {
+				country_event = {
+					id = brazil.19
+					days = 56
+				}
+				country_event = {
+					id = brazil.20
+					days = 57
+				}
+				country_event = {
+					id = brazil.21
+					days = 58
+				}
+				country_event = {
+					id = brazil.22
+					days = 59
+				}
+				country_event = {
+					id = brazil.23
+					days = 60
+				}
+				country_event = {
+					id = brazil.24
+					days = 65
+				}
+				country_event = {
+					id = brazil.25
+					days = 66
+				}
+				country_event = {
+					id = brazil.26
+					days = 67
+				}
+				country_event = {
+					id = brazil.27
+					days = 68
+				}
+				country_event = {
+					id = brazil.27
+					days = 70
+				}
+				country_event = {
+					id = brazil.28
+					days = 72
+				}
+				country_event = {
+					id = brazil.29
+					days = 73
+				}
+				country_event = {
+					id = brazil.30
+					days = 75
+				}
+				country_event = {
+					id = brazil.31
+					days = 75
+				}
+				country_event = {
+					id = brazil.32
+					days = 75
+				}
+				country_event = {
+					id = brazil.33
+					days = 75
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.8
+						days = 7
+					}
+				}
+			}
+		}
+		option = {
+			name = brazil.9.b
+			add_ideas = BRA_state_authority_collapse
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchy"
+				desc = "POLITICS_Anarchy_DESC"
+				picture = "Portrait_BRR_anarchy.tga"
+				expire = "2000.1.1"
+				ideology = oligarchy
+				traits = {
+				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "Milícia Regional"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Divisão de Cavalaria"
+			}
+			complete_national_focus = BRR_colapso_generalizado
+			hidden_effect = {
+				country_event = {
+					id = brazil.19
+					days = 56
+				}
+				country_event = {
+					id = brazil.20
+					days = 57
+				}
+				country_event = {
+					id = brazil.21
+					days = 58
+				}
+				country_event = {
+					id = brazil.22
+					days = 59
+				}
+				country_event = {
+					id = brazil.23
+					days = 60
+				}
+				country_event = {
+					id = brazil.24
+					days = 65
+				}
+				country_event = {
+					id = brazil.25
+					days = 66
+				}
+				country_event = {
+					id = brazil.26
+					days = 67
+				}
+				country_event = {
+					id = brazil.27
+					days = 68
+				}
+				country_event = {
+					id = brazil.27
+					days = 70
+				}
+				country_event = {
+					id = brazil.28
+					days = 72
+				}
+				country_event = {
+					id = brazil.29
+					days = 73
+				}
+				country_event = {
+					id = brazil.30
+					days = 75
+				}
+				country_event = {
+					id = brazil.31
+					days = 76
+				}
+				country_event = {
+					id = brazil.32
+					days = 76
+				}
+				country_event = {
+					id = brazil.33
+					days = 76
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.8
+						days = 7
+					}
+				}
+			}
+		}
+		option = {
+			name = brazil.9.c
+			add_ideas = BRA_state_authority_collapse
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchy"
+				desc = "POLITICS_Anarchy_DESC"
+				picture = "Portrait_BRR_anarchy.tga"
+				expire = "2000.1.1"
+				ideology = oligarchy
+				traits = {
+				}
+			}
+			delete_unit_template_and_units = {
+				division_template = "Milícia Regional"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Divisão de Cavalaria"
+			}
+			complete_national_focus = BRR_colapso_generalizado
+			hidden_effect = {
+				country_event = {
+					id = brazil.19
+					days = 56
+				}
+				country_event = {
+					id = brazil.20
+					days = 57
+				}
+				country_event = {
+					id = brazil.21
+					days = 58
+				}
+				country_event = {
+					id = brazil.22
+					days = 59
+				}
+				country_event = {
+					id = brazil.23
+					days = 60
+				}
+				country_event = {
+					id = brazil.24
+					days = 65
+				}
+				country_event = {
+					id = brazil.25
+					days = 66
+				}
+				country_event = {
+					id = brazil.26
+					days = 67
+				}
+				country_event = {
+					id = brazil.27
+					days = 68
+				}
+				country_event = {
+					id = brazil.27
+					days = 70
+				}
+				country_event = {
+					id = brazil.28
+					days = 72
+				}
+				country_event = {
+					id = brazil.29
+					days = 73
+				}
+				country_event = {
+					id = brazil.30
+					days = 75
+				}
+				country_event = {
+					id = brazil.31
+					days = 76
+				}
+				country_event = {
+					id = brazil.32
+					days = 76
+				}
+				country_event = {
+					id = brazil.33
+					days = 76
+				}
+				every_country = {
+					limit = {
+						is_ai = no
+					}
+					country_event = {
+						id = news.8
+						days = 7
+					}
+				}
+			}
+		}
+	}
+	##Event: Battle of Sao Borja
+	country_event = {
+	 id = brazil.10
+	 title = brazil.10.t
+	 desc = brazil.10.desc
+	 picture = GFX_report_event_BRA_battle_of_sao_borja
+	 fire_only_once = yes
+	 is_triggered_only = yes
+		option = {
+			name = brazil.10.a
+		}
+	}
+	country_event = {
+	 id = brazil.11
+	 title = brazil.11.t
+	 desc = brazil.11.desc
+	 picture = GFX_report_event_BRA_the_tale_of_antonio
+	 fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = brazil.11.a
+		}
+	}
+	country_event = {
+	 id = brazil.12
+	 title = brazil.12.t
+	 desc = brazil.12.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	is_triggered_only = yes
+
+		option = {
+			name = brazil.12.a
+		}
+	}
+	country_event = {
+	 id = brazil.18
+	 title = brazil.18.t
+	 desc = brazil.18.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+	 
+		option = {
+			name = brazil.18.a
+			BRA = {
+				annex_country = { target = URG transfer_troops = yes }
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.13
+	 title = brazil.13.t
+	 desc = brazil.13.desc
+	 picture = GFX_report_event_BRA_vargas
+	 fire_only_once = yes
+		trigger = {
+			original_tag = BRA
+			date > 1937.3.30
+			tag = BRA
+			has_government = revisionist_socialism
+		}
+		mean_time_to_happen = {
+			days = 1
+		}
+		option = {
+			name = brazil.13.a
+		}
+	}
+	country_event = {
+	 id = brazil.14
+	 title = brazil.14.t
+	 desc = brazil.14.desc
+	 picture = GFX_report_event_BRA_vargas
+	 fire_only_once = yes
+		trigger = {
+			original_tag = BRA
+			date > 1937.3.30
+			tag = BRA
+			has_government = libertarian_marxism
+		}
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		option = {
+			name = brazil.14.a
+		}
+	}
+	country_event = {
+	 id = brazil.15
+	 title = brazil.15.t
+	 desc = brazil.15.desc
+	 picture = GFX_report_event_BRA_vargas
+	 fire_only_once = yes
+		trigger = {
+			original_tag = BRA
+			date > 1937.3.30
+			tag = BRA
+			has_government = vanguard_socialism
+		}
+		mean_time_to_happen = {
+			days = 1
+		}
+
+		option = {
+			name = brazil.15.a
+		}
+	}
+	country_event = {
+	 id = brazil.16
+	 title = brazil.16.t
+	 desc = brazil.16.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+		option = {
+			name = brazil.16.a
+			BRA = {
+				hidden_effect = {
+					load_oob = "BRA_japred"
+				}
+				custom_effect_tooltip = "BRA_japred_tooltip"
+				create_corps_commander = { 
+					name = "Miyamoto Yuriko" 
+					picture = "Portrait_BRA_Miyamoto_Yuriko.tga" 
+					traits = { 
+						politically_connected
+						media_personality
+						#reckless
+					} 
+					skill = 1
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.17
+		title = brazil.17.t
+		desc = brazil.17.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = brazil.17.a
+			BRR = {
+				hidden_effect = { 
+					load_oob = "BRA_jap"
+				}
+				custom_effect_tooltip = "BRA_jap_tooltip"
+				create_corps_commander = { 
+					name = "Hitoshi Imamura" 
+					picture = "Portrait_BRA_Hitoshi_Imamura.tga" 
+					traits = { 
+						politically_connected
+						media_personality
+						#cautious
+					} 
+					skill = 1 
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.19
+	 title = brazil.19.t
+	 desc = brazil.19.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.19.a
+			1024 = {
+				NEU = { transfer_state = PREV }	
+			}
+			1024 = {
+				add_core_of = NEU
+			}
+			hidden_effect = {
+			NEU = {
+				load_oob = "NEU_1936"
+			}
+			set_province_name = {
+				id = 4589
+				name = "Neu-Sankt Marie"
+			}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.20
+	 title = brazil.20.t
+	 desc = brazil.20.desc
+	 picture = GFX_report_event_BRA_colapso_gereralizado
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.20.a
+			502 = { 
+				POA = { transfer_state = PREV }
+			}
+			502 = {
+			add_core_of = POA
+			}
+			hidden_effect = {
+				POA = {
+				load_oob = "POA_1936"
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.21
+	 title = brazil.21.t
+	 desc = brazil.21.desc
+	 picture = GFX_report_event_BRA_counter_revolution
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.21.a
+			1026 = { 
+				MOG = { transfer_state = PREV }
+			}
+			1026 = {
+				add_core_of = MOG
+			}
+			hidden_effect = {
+				MOG = {
+					load_oob = "MOG_1936"
+				}
+				set_province_name = {
+					id = 11003
+					name = "Sanhosedoriopūreto"
+				}
+			}
+		}
+		option = {
+			name = brazil.21.b
+			1026 = { 
+				MOG = { transfer_state = PREV }
+			}
+			1026 = {
+				add_core_of = MOG
+			}
+			hidden_effect = {
+				MOG = {
+					load_oob = "MOG_1936"
+				}
+				set_province_name = {
+					id = 11003
+					name = "Sanhosedoriopūreto"
+				}
+			}
+			MOG = {
+				change_tag_from = BRR
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.22
+	 title = brazil.22.t
+	 desc = brazil.22.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.22.a
+			503 = { 
+				FLO = { transfer_state = PREV }
+			}
+			503 = {
+				add_core_of = FLO
+			}
+			hidden_effect = {
+				FLO = {
+					load_oob = "FLO_1936"
+				}
+				set_province_name = {
+					id = 10405
+					name = "Florianowo"
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.23
+	 title = brazil.23.t
+	 desc = brazil.23.desc
+	 picture = GFX_report_event_BRA_colapso_gereralizado
+	 fire_only_once = yes
+	 is_triggered_only = yes
+	 
+		option = {
+			name = brazil.23.a
+			1025 = { 
+				PRP = { transfer_state = PREV }
+			}
+			1025 = {
+				add_core_of = PRP
+			}
+			hidden_effect = {
+				PRP = {
+					load_oob = "PRP_1936"
+				}
+				PRP = { 
+					add_state_core = 280
+					add_state_core = 1026
+					add_state_core = 1024
+					add_state_core = 1025
+					add_state_core = 501
+					add_state_core = 502
+					add_state_core = 500
+					add_state_core = 495
+					add_state_core = 505
+					add_state_core = 504
+					add_state_core = 499
+					add_state_core = 498
+					add_state_core = 497
+					add_state_core = 496
+					add_state_core = 1027
+					add_state_core = 1028
+					add_state_core = 1029
+					add_state_core = 1030
+					add_state_core = 1031
+					add_state_core = 1032
+					add_state_core = 1033
+				}
+				set_province_name = {
+					id = 5156
+					name = "Prudentopil"
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.24
+	 title = brazil.24.t
+	 desc = brazil.24.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+	 
+		option = {
+			name = brazil.24.a
+			1032 = { 
+				FCQ = { transfer_state = PREV }
+			}
+					497 = { 
+				FCQ = { transfer_state = PREV }
+			}
+					505 = { 
+				FCQ = { transfer_state = PREV }
+			}
+			1032 = {
+				add_core_of = FCQ
+			}
+			497 = {
+				add_core_of = FCQ
+			}
+			505 = {
+				add_core_of = FCQ
+			}
+			hidden_effect = {
+				FCQ = {
+				load_oob = "FCQ_1936"
+				country_event = {
+				id = fcq.1
+				}
+				}
+			}
+		}
+		option = {
+			name = brazil.24.b
+			1032 = { 
+				FCQ = { transfer_state = PREV }
+			}
+					497 = { 
+				FCQ = { transfer_state = PREV }
+			}
+					505 = { 
+				FCQ = { transfer_state = PREV }
+			}
+			1032 = {
+				add_core_of = FCQ
+			}
+			497 = {
+				add_core_of = FCQ
+			}
+			505 = {
+				add_core_of = FCQ
+			}
+			FCQ = {
+			change_tag_from = BRR
+			}
+			hidden_effect = {
+				FCQ = {
+				load_oob = "FCQ_1936"
+				country_event = {
+				id = fcq.1
+				}
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.25
+	 title = brazil.25.t
+	 desc = brazil.25.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.25.a
+			1027 = { 
+				MCM = { transfer_state = PREV }
+			}
+			1027 = {
+				add_core_of = MCM
+			}
+			hidden_effect = {
+				MCM = {
+				load_oob = "MCM_1936"
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.26
+	 title = brazil.26.t
+	 desc = brazil.26.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.26.a
+			495 = { 
+				ASS = { transfer_state = PREV }
+			}
+			495 = {
+				add_core_of = ASS
+			}
+			hidden_effect = {
+				ASS = {
+					load_oob = "ASS_1936"
+				}
+			}
+		}
+		option = {
+			name = brazil.26.b
+			495 = { 
+				ASS = { transfer_state = PREV }
+			}
+			495 = {
+				add_core_of = ASS
+			}
+			hidden_effect = {
+				ASS = {
+					load_oob = "ASS_1936"
+				}
+			}
+			ASS = {
+				change_tag_from = BRR
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.27
+	 title = brazil.27.t
+	 desc = brazil.27.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.27.a
+			499 = { 
+				ACQ = { transfer_state = PREV }
+			}
+			1028 = { 
+				ACQ = { transfer_state = PREV }
+			}
+			499 = {
+				add_core_of = ACQ
+			}
+			1028 = {
+				add_core_of = ACQ
+			}
+			hidden_effect = {
+				ACQ = {
+					load_oob = "ACQ_1936"
+				}
+			}
+		}
+	}
+	country_event = {
+	 id = brazil.28
+	 title = brazil.28.t
+	 desc = brazil.28.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+
+		option = {
+			name = brazil.28.a
+			1031 = { 
+		BCQ = { transfer_state = PREV }
+	}
+			496 = { 
+		BCQ = { transfer_state = PREV }
+	}
+	1031 = {
+	add_core_of = BCQ
+	}
+	496 = {
+	add_core_of = BCQ
+	}
+	hidden_effect = {
+	BCQ = {
+	load_oob = "BCQ_1936"
+	}
+	}
+		}
+	}
+	country_event = {
+	 id = brazil.29
+	 title = brazil.29.t
+	 desc = brazil.29.desc
+	 picture = GFX_report_event_BRA_amazonas_euphoria
+	 fire_only_once = yes
+	 is_triggered_only = yes
+	 
+		option = {
+			name = brazil.29.a
+			498 = { 
+		GCC = { transfer_state = PREV }
+	}
+	498 = {
+	add_core_of = GCC
+	}
+	hidden_effect = {
+	GCC = {
+	load_oob = "GCC_1936"
+	}
+				GCC = { 
+					add_state_core = 280
+					add_state_core = 1026
+					add_state_core = 1024
+					add_state_core = 1025
+					add_state_core = 501
+					add_state_core = 502
+					add_state_core = 500
+					add_state_core = 495
+					add_state_core = 505
+					add_state_core = 504
+					add_state_core = 499
+					add_state_core = 498
+					add_state_core = 497
+					add_state_core = 496
+					add_state_core = 1027
+					add_state_core = 1028
+					add_state_core = 1029
+					add_state_core = 1030
+					add_state_core = 1031
+					add_state_core = 1032
+					add_state_core = 1033
+				}
+	}
+		}
+	}
+	country_event = {
+		id = brazil.30
+		title = brazil.30.t
+		desc = brazil.30.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = brazil.30.a
+			280 = { 
+				CRA = { transfer_state = PREV }
+			}
+			280 = {
+				add_core_of = CRA
+			}
+			hidden_effect = {
+				CRA = {
+					load_oob = "CRA_1936"
+				}
+				CRA = { 
+					add_state_core = 280
+					add_state_core = 1026
+					add_state_core = 1024
+					add_state_core = 1025
+					add_state_core = 501
+					add_state_core = 502
+					add_state_core = 500
+					add_state_core = 495
+					add_state_core = 505
+					add_state_core = 504
+					add_state_core = 499
+					add_state_core = 498
+					add_state_core = 497
+					add_state_core = 496
+					add_state_core = 1027
+					add_state_core = 1028
+					add_state_core = 1029
+					add_state_core = 1030
+					add_state_core = 1031
+					add_state_core = 1032
+					add_state_core = 1033
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.31
+		title = brazil.31.t
+		desc = brazil.31.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = brazil.31.a
+			1030 = { 
+				FAC = { transfer_state = PREV }
+			}
+			504 = {
+				FAC = { transfer_state = PREV }
+			}
+			1030 = {
+				add_core_of = FAC
+			}
+			504 = {
+				add_core_of = FAC
+			}
+			hidden_effect = {
+				FAC = {
+					load_oob = "FAC_1936"
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.32
+		title = brazil.32.t
+		desc = brazil.32.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = brazil.32.a
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Júlio Prestes"
+				desc = "POLITICS_JULIO_PRESTES_DESC"
+				picture = "Portrait_BRR_Prestes.tga"
+				expire = "2000.1.1"
+				ideology = oligarchy
+				traits = {
+				}
+			}
+			set_cosmetic_tag = BRR_EMERGENCY
+			country_event = {
+				id = brazil.35
+				days = 20
+			}
+			hidden_effect = {
+				BRR = { 
+					add_state_core = 280
+					add_state_core = 1026
+					add_state_core = 1024
+					add_state_core = 1025
+					add_state_core = 501
+					add_state_core = 502
+					add_state_core = 500
+					add_state_core = 495
+					add_state_core = 505
+					add_state_core = 504
+					add_state_core = 499
+					add_state_core = 498
+					add_state_core = 497
+					add_state_core = 496
+					add_state_core = 1027
+					add_state_core = 1028
+					add_state_core = 1029
+					add_state_core = 1030
+					add_state_core = 1031
+					add_state_core = 1032
+					add_state_core = 1033
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.33
+		title = brazil.33.t
+		desc = brazil.33.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = brazil.33.a
+			1029 = { 
+				NTB = { transfer_state = PREV }
+			}
+			1029 = {
+				add_core_of = NTB
+			}
+			hidden_effect = {
+				NTB = {
+					load_oob = "NTB_bandits"
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.34
+		title = brazil.34.t
+		desc = brazil.34.desc
+		picture = GFX_report_event_BRA_amazonas_euphoria
+		fire_only_once = yes
+		trigger = {
+			TAG = MOG
+			has_full_control_of_state = 1033
+		}
+		option = {
+			name = brazil.34.a
+			set_province_name = {
+				id = 5112
+				name = "Santosū"
+			}
+			set_province_name = {
+				id = 10513
+				name = "Sanpaūro"
+			}
+			MOG = {
+				add_state_core = 1033
+			}
+		}
+	}
+	country_event = {
+		id = brazil.35
+		title = brazil.35.t
+		desc = brazil.35.desc
+		picture = GFX_report_event_generic_read_write
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.35.a
+			unlock_decision_category_tooltip = national_pacification_campaign
+			hidden_effect = {
+				set_country_flag = BRR_npc
+			}
+			remove_ideas = BRA_state_authority_collapse
+			hidden_effect = {
+				country_event = {
+					id = brazil.36
+					days = 20
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.36
+		title = brazil.36.t
+		desc = brazil.36.desc
+		#picture = GFX_report_event_BRA_land_doctrine
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.36.a
+			add_ideas = BRA_klinger_plan
+			hidden_effect = {
+				country_event = {
+					id = brazil.48
+					days = 40
+				}
+			}
+		}
+		option = {
+			name = brazil.36.b
+			add_ideas = BRA_kill_the_poor_plan
+			hidden_effect = {
+				country_event = {
+					id = brazil.48
+					days = 40
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.37
+		title = brazil.37.t
+		desc = brazil.37.desc
+		#picture = GFX_report_event_generic_read_write
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.37.a
+			set_politics = {
+				ruling_party = social_democratism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.30
+			}
+		}
+		option = {
+			name = brazil.37.b
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Góis Monteiro"
+				desc = "POLITICS_GOYS_DESC"
+				picture = "Portrait_Gois_Monteiro.tga"
+				expire = "2003.1.1"
+				ideology = oligarchy traits = { }
+			}
+		}
+		option = {
+			name = brazil.37.c
+			set_politics = {
+				ruling_party = liberalism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.30
+			}
+		}
+		option = {
+			name = brazil.37.d
+			set_politics = {
+				ruling_party = reactionism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.02
+			}
+			hidden_effect = {
+				country_event = {
+					id = brazil.50
+					days = 20
+				}
+			}
+		}
+	}
+	country_event = {
+		id = brazil.38
+		title = brazil.38.t
+		desc = brazil.38.desc
+		#picture = GFX_report_event_generic_read_write
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.38.a
+			add_manpower = 127421
+			add_stability = -0.15
+			add_war_support = -0.20
+		}
+		option = {
+			name = brazil.38.b
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+	
+	country_event = {
+		id = brazil.39
+		title = brazil.39.t
+		desc = brazil.39.desc
+		#picture = GFX_report_event_generic_read_write
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.39.a
+			add_stability = 0.10
+			add_political_power = -150
+		}
+		option = {
+			name = brazil.39.b
+			add_stability = -0.10
+			add_political_power = 150
+		}
+	}
+
+	country_event = {
+		id = brazil.40
+		title = brazil.40.t
+		desc = brazil.40.desc
+		#picture = GFX_report_event_generic_read_write
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.40.a
+			add_stability = 0.10
+			add_political_power = -150
+		}
+		option = {
+			name = brazil.40.b
+			add_stability = -0.15
+			add_political_power = 250
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.10
+			}
+		}
+	}
+
+	country_event = { #the gays are at it!
+		id = brazil.41
+		title = brazil.41.t
+		desc = brazil.41.desc
+		picture = GFX_report_event_bunker_01
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.41.a
+			add_stability = -0.01
+			add_political_power = -10
+			hidden_effect = {
+				country_event = {
+					id = brazil.42
+					days = 1
+				}
+			}
+		}
+	}
+
+	country_event = { #trial
+		id = brazil.42
+		title = brazil.42.t
+		desc = brazil.42.desc
+		picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.42.a
+			add_stability = -0.01
+			add_political_power = 15
+			hidden_effect = {
+				country_event = {
+					id = brazil.43
+					days = 5
+				}
+			}
+		}
+
+		option = {
+			name = brazil.42.b
+			add_stability = -0.02
+			add_political_power = 25
+			hidden_effect = {
+				country_event = {
+					id = brazil.44
+					days = 5
+				}
+			}
+		}
+
+		option = {
+			name = brazil.42.c
+			add_stability = 0.02
+			add_political_power = -25
+		}
+	}
+
+	country_event = { #and so, the storm begins
+		id = brazil.43
+		title = brazil.43.t
+		desc = brazil.43.desc
+		picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.43.a
+			add_stability = -0.15
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.25
+			}
+			hidden_effect = {
+				country_event = {
+					id = brazil.45
+					days = 5
+				}
+			}
+		}
+
+		option = {
+			name = brazil.43.b
+			add_stability = 0.05
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.10
+			}
+		}
+	}
+
+	country_event = { #send the gays to France
+		id = brazil.44
+		title = brazil.44.t
+		desc = brazil.44.desc
+		picture = GFX_report_event_merchant_ship_01
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.44.a
+			hidden_effect = {
+				country_event = {
+					id = brazil.46
+					days = 5
+				}
+			}
+		}
+
+		option = {
+			name = brazil.44.b
+			hidden_effect = {
+				country_event = {
+					id = brazil.47
+					days = 5
+				}
+			}
+		}
+	}
+
+	country_event = { #hardcore protests now, oof
+		id = brazil.45
+		title = brazil.45.t
+		desc = brazil.45.desc
+		picture = GFX_report_event_gathering_protest
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.45.a
+			add_stability = -0.10
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.10
+			}
+		}
+		option = {
+			name = brazil.45.b
+			add_stability = 0.10
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.10
+			}
+		}
+	}
+
+	country_event = { #gays go boom boom
+		id = brazil.46
+		title = brazil.46.t
+		desc = brazil.46.desc
+		picture = GFX_report_event_desertion_poster
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.46.a
+			add_manpower = -4721
+		}
+	}
+
+	country_event = { #gays no go boom boom
+		id = brazil.47
+		title = brazil.47.t
+		desc = brazil.47.desc
+		picture = GFX_report_event_merchant_ship_01
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.47.a
+			add_manpower = -4721
+		}
+	}
+
+	country_event = { #we hate the poor
+		id = brazil.48
+		title = brazil.48.t
+		desc = brazil.48.desc
+		picture = GFX_report_event_gathering_protest
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.48.a
+			add_stability = -0.05
+			add_political_power = 150
+			hidden_effect = {
+				country_event = {
+					id = brazil.49
+					days = 80
+				}
+			}
+		}
+	}
+
+	country_event = { #we hate women
+		id = brazil.49
+		title = brazil.49.t
+		desc = brazil.49.desc
+		picture = GFX_report_event_gathering_protest
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.49.a
+			add_stability = -0.05
+			add_political_power = 100
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+		option = {
+			name = brazil.49.b
+			add_stability = 0.05
+			add_political_power = -100
+		}
+	}
+
+	country_event = {
+		id = brazil.50
+		title = brazil.50.t
+		desc = brazil.50.desc
+		picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.50.a
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			hidden_effect = {
+				remove_ideas = BRR_ANDR
+				remove_ideas = BRR_cosmetic_labor_laws
+				remove_ideas = BRR_upper_class
+				remove_ideas = BRR_neutralindependentstable
+				remove_ideas = BRR_democracy
+				remove_ideas = BRR_autonomism
+			}
+			set_country_flag = BRR_oswald
+			add_stability = -0.12
+			add_war_support = -0.12
+		}
+		option = {
+			name = brazil.50.b
+			add_stability = 0.03
+			add_war_support = 0.03
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.12
+			}
+			set_country_flag = BRR_barroso
+			hidden_effect = {
+				remove_ideas = BRR_ANDR
+				remove_ideas = BRR_cosmetic_labor_laws
+				remove_ideas = BRR_democracy
+				remove_ideas = BRR_autonomism
+			}
+		}
+	}
+
+	country_event = { #league solar
+		id = brazil.51
+		title = brazil.51.t
+		desc = brazil.51.desc
+		picture = GFX_report_event_merchant_ship_01
+		fire_only_once = yes
+		trigger = {
+			BRR = {
+				has_government = accelerationism
+			}
+			tag = BRR
+			country_exists = FRA
+		}
+		option = {
+			name = brazil.51.a
+			FRA = {
+				country_event = {
+					id = brazil.52
+					days = 1
+				}
+			}
+		}
+		option = {
+			name = brazil.51.b
+			add_political_power = -5
+		}
+	}
+
+	country_event = { #league solar
+		id = brazil.52
+		title = brazil.52.t
+		desc = brazil.52.desc
+		picture = GFX_report_event_merchant_ship_01
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			ai_chance = {
+				factor = 1000
+			}
+			name = brazil.52.a
+			add_to_faction = BRR
+			BRR = {
+				country_event = {
+					id = brazil.53
+					days = 1
+				}
+			}
+		}
+		option = {
+			name = brazil.52.b
+			ai_chance = {
+				factor = 5
+			}
+			add_political_power = -5
+		}
+	}
+
+	country_event = { #league solar
+		id = brazil.53
+		title = brazil.53.t
+		desc = brazil.53.desc
+		picture = GFX_report_event_merchant_ship_01
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.53.a
+		}
+	}
+	country_event = {
+		id = brazil.54
+		title = brazil.54.t
+		desc = brazil.54.desc
+		#picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.54.a
+			add_manpower = -14542
+			add_stability = -0.05
+			add_political_power = 100
+		}
+	}
+	country_event = {
+		id = brazil.55
+		title = brazil.55.t
+		desc = brazil.55.desc
+		#picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.55.a
+			add_stability = 0.03
+		}
+	}
+	country_event = {
+		id = brazil.56
+		title = brazil.56.t
+		desc = brazil.56.desc
+		#picture = GFX_report_event_ANZAC_day
+		fire_only_once = yes
+		is_triggered_only = yes
+		option = {
+			name = brazil.56.a
+			add_stability = 0.07
+			add_political_power = -50
+		}
+	}
+	country_event = {
+		 id = brazil.57
+		 title = brazil.57.t
+		 desc = brazil.57.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			 name = brazil.57.a
+			 add_stability = -0.04
+			 add_political_power = -25
+		}
+	}
+	country_event = {
+		 id = brazil.58
+		 title = brazil.58.t
+		 desc = brazil.58.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			 name = brazil.58.a
+			 add_stability = -0.03
+			 add_political_power = -50
+			499 = {
+			add_manpower = -12000
+			}
+		}
+	}
+	country_event = {
+		 id = brazil.59
+		 title = brazil.59.t
+		 desc = brazil.59.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			 name = brazil.59.a
+			 add_stability = -0.05
+			 add_war_support = 0.05
+			 add_political_power = -25
+			 			500 = {
+			add_manpower = -4310
+			}
+		}
+	}
+	country_event = {
+		 id = brazil.60
+		 title = brazil.60.t
+		 desc = brazil.60.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			name = brazil.60.a
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_political_power = -25
+			add_manpower = -212
+		}
+	}
+	country_event = {
+		 id = brazil.61
+		 title = brazil.61.t
+		 desc = brazil.61.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			name = brazil.61.a
+			add_stability = -0.05
+			add_war_support = -0.05
+			add_political_power = 100
+			499 = {
+			add_manpower = -100000
+			}
+		}
+	}
+	country_event = {
+		 id = brazil.62
+		 title = brazil.62.t
+		 desc = brazil.62.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			name = brazil.62.a
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_political_power = -200
+			501 = {
+			add_manpower = 50000
+			}
+			1033 = {
+			add_manpower = 50000
+			}
+			1031 = {
+			add_manpower = 50000
+			}
+			496 = {
+			add_manpower = 50000
+			}
+			280 = {
+			add_manpower = 50000
+			}
+			499 = {
+			add_manpower = 50000
+			}
+			498 = {
+			add_manpower = 50000
+			}
+		}
+	}
+	country_event = {
+		 id = brazil.9191
+		 title = brazil.9191.t
+		 desc = brazil.9191.desc
+		#picture = GFX_report_event_ANZAC_day
+		 fire_only_once = yes
+		 is_triggered_only = yes
+		 option = {
+			 name = brazil.9191.a
+			 add_stability = -0.03
+			 add_political_power = -50
+		}
+	}

@@ -1,0 +1,471 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = ENG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+        cavalry = { x = 0 y = 4 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+       	engineer = { x = 0 y = 1 }
+       	artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Tank Brigade"
+	division_names_group = ENG_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		light_armor = { x = 1 y = 2 }
+		light_armor = { x = 1 y = 3 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+		motorized = { x = 2 y = 3 }
+	}
+	support = {
+       	engineer = { x = 0 y = 0 }
+       	artillery = { x = 0 y = 1 }
+		light_tank_recon = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Colonial Garrison"
+	division_names_group = ENG_COL_01
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+
+units = {
+    ####Military Units####
+    ####Main Land
+division= {
+	     name = "Guards Division"
+	     location = 13070
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Infantry Division"
+	     location = 3501
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Infantry Division"
+	     location = 9458
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st London Division"
+	     location = 6103
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd London Division"
+	     location = 11333
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "12th Eastern Infatry"
+	     location = 3369
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.3
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "15th Scottish Infantry"
+	     location = 9392
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.3
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "23rd Northumbrian Infantry"
+	     location = 351
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "38th Welsh Division"
+	     location = 377
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "44th East Lanchishire Division"
+	     location = 6384
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "43rd Wessex Division"
+	     location = 11253
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "45th Home Countries Division"
+	     location = 9297
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "51st Highland Division"
+	     location = 3273
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "59th Staffordshire Infantry division"
+	     location = 9379
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Calais Garrison"
+	     location = 11548
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Calais Garrison"
+	     location = 11548
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "60th Ulster Division"
+	     location = 3379
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Royal Tank Regiment"
+	     location = 364
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Armoured Force"
+	     location = 11297
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Calais Expeditionary Force"
+	     location = 11548
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Continental Expeditionary Force"
+	     location = 11548
+	     division_template = "Tank Brigade"
+	     start_experience_factor = 0.7
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Life Guards"
+	     location = 311
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "5th Royal Inniskilling Dragoon Guards"
+	     location = 540
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+	}
+division= {
+	     name = "11th Hussars"
+	     location = 6300
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+	}
+
+####Commonwealth Forces####
+##Eygpt##
+division= {
+	     name = "Royal Scots Grey"
+	     location = 1071
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+	}
+division= {
+	     name = "Royal Dragoons"
+	     location = 1155
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+	}
+division= {
+	     name = "Suez Canal Guard"
+	     location = 12049
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Cairo Garrison"
+	     location = 7011
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Royal Alexandrian Division"
+	     location = 4076
+	     division_template = "Infantry Division"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Maltan Guard"
+	     location = 12003
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor =1
+    }
+division= {
+	     name = "Gibraltar Garrison"
+	     location = 4135
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st African Division"
+	     location = 5210
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Rhodesian Division"
+	     location = 10929
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Caribbean Garrison"
+	     location = 12304
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Nigerian Guard"
+	     location = 2050
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd African Guard"
+	     location = 10862
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "Hong Kong Garrison"
+	     location = 10062
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+}
+
+air_wings = {
+	### RAF Fighter Command ###
+	129 = { 
+		### No. 11 Fighter Command, Middlesex area -- Hawker Demons, Furys, Gloster Gauntlets
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 216
+		}
+	}
+	130 = { 
+		### No. 11 Fighter Command, Essex area -- Hawker Demons, Furys, Gloster Gauntlets
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 144
+		}
+	}	
+	127 = { 
+		### No. 12 Fighter Command, Nottingham area -- Hawker Demons, Furys, Gloster Gauntlets
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 96
+		}
+	}	
+	131 = { 
+		### No. 13 Fighter Command, Newcastle -- Hawker Demons, Furys, Gloster Gauntlets
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 72
+		}
+		
+	}
+	
+	### RAF Bomber Command ###
+	125 = { 
+		### No. 1 Bomber Command, East Anglia area -- Fairey Gordons, Battles
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+	125 = { 
+		### No. 2 Bomber Command, East Anglia area -- HP Heyford, Harrows, AW Whitleys
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 48
+		}
+	}
+	126 = { 
+		### No. 3 Bomber Command, Suffolk area -- HP Heyford, Harrows, AW Whitleys
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+	130 = { 
+		### No. 4 Bomber Command, York area -- HP Heyford, Harrows, AW Whitleys
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 80
+		}
+	}
+	128 = { 
+		### No. 5 Bomber Command, Lincoln area -- Fairey Gordons, Battles
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+
+	### RAF Coastal Command
+	130 = { 
+		### No. 16 Coastal Command -- Vickers Vildebeests
+		nav_bomber_equipment_1 = {
+			owner = "ENG" 
+			amount = 24
+		}
+	}
+
+	### RAF Middle East and Africa
+	447 = { 
+		### AHQ Egypt
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 72
+		}
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 48
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+	454 = { 
+		### RAF Palestine & Iraq
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 32
+		}
+	}
+	659 = { 
+		### RAF Aden
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 24
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 16
+		}
+	}
+
+	### RAF Far East
+	336 = { 
+		### RAF Far East
+		nav_bomber_equipment_1 = {
+			owner = "ENG" 
+			amount = 24
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+}
+

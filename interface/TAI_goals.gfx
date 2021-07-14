@@ -1,0 +1,280 @@
+spriteTypes = {
+	##Icon For:
+	SpriteType = {
+		name = "GFX_anewmandate"
+		texturefile = "gfx/interface/goals/TAI/anewmandate.dds"
+	}
+	SpriteType = {
+		name = "GFX_chihsingtaiwan"
+		texturefile = "gfx/interface/goals/TAI/chihsingtaiwan.dds"
+	}
+	SpriteType = {
+		name = "GFX_culturalrevolution"
+		texturefile = "gfx/interface/goals/TAI/culturalrevolution.dds"
+	}
+	SpriteType = {
+		name = "GFX_denouncethereactionaries"
+		texturefile = "gfx/interface/goals/TAI/denouncethereactionaries.dds"
+	}
+	SpriteType = {
+		name = "GFX_denouncethesocialists"
+		texturefile = "gfx/interface/goals/TAI/denouncethesocialists.dds"
+	}
+	SpriteType = {
+		name = "GFX_friendsinhanoi"
+		texturefile = "gfx/interface/goals/TAI/friendsinhanoi.dds"
+	}
+	SpriteType = {
+		name = "GFX_future"
+		texturefile = "gfx/interface/goals/TAI/future.dds"
+	}
+	SpriteType = {
+		name = "GFX_huajiachengpo"
+		texturefile = "gfx/interface/goals/TAI/huajiachengpo.dds"
+	}
+	SpriteType = {
+		name = "GFX_natureisthesculptorandchinaisthestatue"
+		texturefile = "gfx/interface/goals/TAI/natureisthesculptorandchinaisthestatue.dds"
+	}
+	SpriteType = {
+		name = "GFX_occidentalistchina"
+		texturefile = "gfx/interface/goals/TAI/occidentalistchina.dds"
+	}
+	SpriteType = {
+		name = "GFX_outofonemany"
+		texturefile = "gfx/interface/goals/TAI/outofonemany.dds"
+	}
+	SpriteType = {
+		name = "GFX_past"
+		texturefile = "gfx/interface/goals/TAI/past.dds"
+	}
+	SpriteType = {
+		name = "GFX_pensandpencilstreatise"
+		texturefile = "gfx/interface/goals/TAI/pensandpencilstreatise.dds"
+	}
+	SpriteType = {
+		name = "GFX_present"
+		texturefile = "gfx/interface/goals/TAI/present.dds"
+	}
+	SpriteType = {
+		name = "GFX_purgethetechnocrats"
+		texturefile = "gfx/interface/goals/TAI/purgethetechnocrats.dds"
+	}
+	SpriteType = {
+		name = "GFX_surrealarchitecture"
+		texturefile = "gfx/interface/goals/TAI/surrealarchitecture.dds"
+	}
+	SpriteType = {
+		name = "GFX_tansclub"
+		texturefile = "gfx/interface/goals/TAI/tansclub.dds"
+	}
+	SpriteType = {
+		name = "GFX_thedreamscape"
+		texturefile = "gfx/interface/goals/TAI/thedreamscape.dds"
+	}
+	SpriteType = {
+		name = "GFX_theyellowriver"
+		texturefile = "gfx/interface/goals/TAI/theyellowriver.dds"
+	}
+	SpriteType = {
+		name = "GFX_nonorthorsouth"
+		texturefile = "gfx/interface/goals/TAI/nonorthorsouth.dds"
+	}
+	SpriteType = {
+		name = "GFX_noeastorwest"
+		texturefile = "gfx/interface/goals/TAI/noeastorwest.dds"
+	}
+	SpriteType = {
+		name = "GFX_chinesefiume"
+		texturefile = "gfx/interface/goals/TAI/chinesefiume.dds"
+	}
+	SpriteType = {
+		name = "GFX_frenchconnections"
+		texturefile = "gfx/interface/goals/TAI/frenchconnections.dds"
+	}
+	SpriteType = {
+		name = "GFX_chinesesocialism"
+		texturefile = "gfx/interface/goals/TAI/chinesesocialism.dds"
+	}
+	SpriteType = {
+		name = "GFX_newreligiouslaws"
+		texturefile = "gfx/interface/goals/TAI/newreligiouslaws.dds"
+	}
+	SpriteType = {
+		name = "GFX_shippingcontracts"
+		texturefile = "gfx/interface/goals/TAI/shippingcontracts.dds"
+	}
+	SpriteType = {
+		name = "GFX_beaconofliberty"
+		texturefile = "gfx/interface/goals/TAI/beaconofliberty.dds"
+	}
+	SpriteType = {
+		name = "GFX_modernchineseideal"
+		texturefile = "gfx/interface/goals/TAI/modernchineseideal.dds"
+	}
+	SpriteType = {
+		name = "GFX_infiltratethecities"
+		texturefile = "gfx/interface/goals/TAI/infiltratethecities.dds"
+	}
+	SpriteType = {
+		name = "GFX_urbansupport"
+		texturefile = "gfx/interface/goals/TAI/urbansupport.dds"
+	}
+	SpriteType = {
+		name = "GFX_agriculturalrevolutionaries"
+		texturefile = "gfx/interface/goals/TAI/agriculturalsupport.dds"
+	}
+	SpriteType = {
+		name = "GFX_rallythemoderates"
+		texturefile = "gfx/interface/goals/TAI/rallythemoderates.dds"
+	}
+	SpriteType = {
+		name = "GFX_newchinesepopulism"
+		texturefile = "gfx/interface/goals/TAI/newchinesepopulism.dds"
+	}
+	SpriteType = {
+		name = "GFX_supportshumei"
+		texturefile = "gfx/interface/goals/TAI/supportshumei.dds"
+	}
+	SpriteType = {
+		name = "GFX_economicequality"
+		texturefile = "gfx/interface/goals/TAI/economicequality.dds"
+	}
+	SpriteType = {
+		name = "GFX_nodictators"
+		texturefile = "gfx/interface/goals/TAI/nodictators.dds"
+	}
+	SpriteType = {
+		name = "GFX_localchairmen"
+		texturefile = "gfx/interface/goals/TAI/localchairmen.dds"
+	}
+	SpriteType = {
+		name = "GFX_jointhecommunes"
+		texturefile = "gfx/interface/goals/TAI/jointhecommunes.dds"
+	}
+	SpriteType = {
+		name = "GFX_linscoalition"
+		texturefile = "gfx/interface/goals/TAI/linscoalition.dds"
+	}
+	SpriteType = {
+		name = "GFX_marketeconomy"
+		texturefile = "gfx/interface/goals/TAI/marketeconomy.dds"
+	}
+	SpriteType = {
+		name = "GFX_curtailcorporate"
+		texturefile = "gfx/interface/goals/TAI/curtailcorporate.dds"
+	}
+	SpriteType = {
+		name = "GFX_civilliberties"
+		texturefile = "gfx/interface/goals/TAI/civilliberties.dds"
+	}
+	SpriteType = {
+		name = "GFX_2ndsingapore"
+		texturefile = "gfx/interface/goals/TAI/2ndsingapore.dds"
+	}
+	SpriteType = {
+		name = "GFX_dealwithaustralia"
+		texturefile = "gfx/interface/goals/TAI/dealwithaustralia.dds"
+	}
+	SpriteType = {
+		name = "GFX_formosapact"
+		texturefile = "gfx/interface/goals/TAI/formosapact.dds"
+	}
+	SpriteType = {
+		name = "GFX_pacifictradeorganisation"
+		texturefile = "gfx/interface/goals/TAI/pacifictradeorganisation.dds"
+	}
+	SpriteType = {
+		name = "GFX_corporatestate"
+		texturefile = "gfx/interface/goals/TAI/corporatestate.dds"
+	}
+	SpriteType = {
+		name = "GFX_dealwiththeanglos"
+		texturefile = "gfx/interface/goals/TAI/dealwiththeanglos.dds"
+	}
+	SpriteType = {
+		name = "GFX_dealwiththeusa"
+		texturefile = "gfx/interface/goals/TAI/dealwiththeusa.dds"
+	}
+	SpriteType = {
+		name = "GFX_thepeoplesparty"
+		texturefile = "gfx/interface/goals/TAI/thepeoplesparty.dds"
+	}
+	SpriteType = {
+		name = "GFX_liaosrepublicans"
+		texturefile = "gfx/interface/goals/TAI/liaosrepublicans.dds"
+	}
+	SpriteType = {
+		name = "GFX_freeelections"
+		texturefile = "gfx/interface/goals/TAI/freeelections.dds"
+	}
+	SpriteType = {
+		name = "GFX_thechaos"
+		texturefile = "gfx/interface/goals/TAI/thechaos.dds"
+	}
+	SpriteType = {
+		name = "GFX_breakingfree"
+		texturefile = "gfx/interface/goals/TAI/breakingfree.dds"
+	}
+	SpriteType = {
+		name = "GFX_thetcptakespower"
+		texturefile = "gfx/interface/goals/TAI/thetcptakespower.dds"
+	}
+	SpriteType = {
+		name = "GFX_dealwiththedutch"
+		texturefile = "gfx/interface/goals/TAI/dealwiththedutch.dds"
+	}
+	SpriteType = {
+		name = "GFX_jointhepwl"
+		texturefile = "gfx/interface/goals/TAI/jointhepwl.dds"
+	}
+	SpriteType = {
+		name = "GFX_socialistprograms"
+		texturefile = "gfx/interface/goals/TAI/socialistprograms.dds"
+	}
+	SpriteType = {
+		name = "GFX_womensrights"
+		texturefile = "gfx/interface/goals/TAI/womensrights.dds"
+	}
+	SpriteType = {
+		name = "GFX_noracialboundaries"
+		texturefile = "gfx/interface/goals/TAI/noracialboundaries.dds"
+	}
+	SpriteType = {
+		name = "GFX_taiwanesesunyatsen"
+		texturefile = "gfx/interface/goals/TAI/taiwanesesunyatsen.dds"
+	}
+	SpriteType = {
+		name = "GFX_infiltratethecountryside"
+		texturefile = "gfx/interface/goals/TAI/infiltratethecountryside.dds"
+	}
+	SpriteType = {
+		name = "GFX_marchnorthoncemore"
+		texturefile = "gfx/interface/goals/TAI/marchnorthoncemore.dds"
+	}
+	SpriteType = {
+		name = "GFX_internationalecontacts"
+		texturefile = "gfx/interface/goals/TAI/internationalecontacts.dds"
+	}
+	SpriteType = {
+		name = "GFX_5nationvanguard"
+		texturefile = "gfx/interface/goals/TAI/5nationvanguard.dds"
+	}
+	SpriteType = {
+		name = "GFX_panasianism"
+		texturefile = "gfx/interface/goals/TAI/panasianism.dds"
+	}
+	SpriteType = {
+		name = "GFX_miningcontracts"
+		texturefile = "gfx/interface/goals/TAI/miningcontracts.dds"
+	}
+	SpriteType = {
+		name = "GFX_jewelofasia"
+		texturefile = "gfx/interface/goals/TAI/jewelofasia.dds"
+	}
+	SpriteType = {
+		name = "GFX_serenerepublicofchina"
+		texturefile = "gfx/interface/goals/TAI/serenerepublicofchina.dds"
+	}
+	
+}

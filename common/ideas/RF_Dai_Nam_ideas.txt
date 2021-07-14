@@ -1,0 +1,64 @@
+### DAI Ideas
+
+ideas = {
+
+	##############
+	# Country ideas
+	##############
+	country = {
+	
+		DAI_acolonialstate = {
+			removal_cost = -1
+			picture = saf_ossewabrandwag_fascism
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				conscription_factor = -0.5
+			}
+		}
+		DAI_united = {
+			removal_cost = -1
+			picture = saf_history_of_segregation_2
+			allowed = {
+				original_tag = DAI
+			}
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+			}
+		}
+
+	}
+
+	##############
+	# Companies
+	##############
+
+	#### General ####
+	industrial_concern = {
+
+	}
+
+	#### Weapons Manufacturer ####
+	weapons_manufacturer = {
+
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+
+	}
+
+	#### Air and Naval Manufacturer ####
+	air_naval_manufacturer = {
+
+	}
+
+	##############
+	# Theorist
+	##############
+	theorist = {
+
+	}
+}

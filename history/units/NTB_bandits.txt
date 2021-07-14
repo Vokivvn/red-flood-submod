@@ -1,0 +1,56 @@
+division_template = {
+
+	division_names_group = NTB_CAV_01
+
+	name = "Cangaceiros"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		cavalry = { x = 0 y = 4 }
+		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+		cavalry = { x = 1 y = 4 }
+	}
+}
+
+division_template = {
+
+	division_names_group = NTB_CAV_02
+
+	name = "Regimento De Cavalaria"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	
+	division = {
+		name = "1a Divisão de Cangaceiros"
+		location = 5115
+		division_template = "Cangaceiros"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2a Divisão de Cangaceiros"
+		location = 5115
+		division_template = "Cangaceiros"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}

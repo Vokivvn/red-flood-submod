@@ -1,0 +1,128 @@
+capital = 408
+
+oob = "PRI_1936"
+
+set_research_slots = 3 
+
+set_convoys = 0
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+    vanguard_socialism = 2
+    libertarian_marxism = 2
+    revolutionary_anarchism = 4
+    revisionist_socialism = 2
+    social_democratism = 10
+    liberalism = 20
+    conservatism = 40
+    right_authoritarianism = 10
+    despotism = 4
+    reactionism = 5
+    accelerationism = 1
+}
+
+set_stability = 0.4
+
+
+create_country_leader = {
+	name = "Spiridon Merkulov"
+	desc = "POLITICS_SPIRIDON_MERKULOV_DESC"
+	picture = "Portrait_Spiridon_Merkulov.dds"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {}
+}
+
+create_corps_commander = {
+	name = "Sergey Wojciechowski"
+	portrait_path = "gfx/leaders/ZHR/Sergey Wojciechowski.dds"
+	traits = { inflexible_strategist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Viktorin Molchanov"
+	portrait_path = "gfx/leaders/ZHR/Viktorin Molchanov.dds"
+	traits = { harsh_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Boris Shaposhnikov"
+	portrait_path = "gfx/leaders/ZHR/Boris Shaposhnikov.dds"
+	traits = { brilliant_strategist }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+
+}
+create_corps_commander = {
+	name = "Vasily Boldyrev"
+	portrait_path = "gfx/leaders/ZHR/Boldyrev.dds"
+	traits = { brilliant_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+
+}
+
+create_corps_commander = {
+	name = "Dmitrij Karbyshev"
+	portrait_path = "gfx/leaders/ZHR/Dmitrij Karbyshev.dds"
+	traits = { harsh_leader }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
+}
+create_corps_commander = {
+	name = "Pyotr Lutskov"
+	portrait_path = "gfx/leaders/ZHR/Pyotr Lutskov.dds"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+
+}
+create_navy_leader = {
+	name = "Eduard Pantserzhansky"
+	picture = "Admiral_Eduard_Pantserzhansky.dds"
+	traits = { navy_career_officer }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}

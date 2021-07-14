@@ -1,0 +1,432 @@
+ideas = {
+	country = {
+		KCK_north_pacific_customs_union = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					consumer_goods_factor = -0.1
+				}
+				picture = KCK_north_pacific_customs_union
+		}
+		KCK_north_asian_unity = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					conscription = 0.05
+					justify_war_goal_time = -0.25
+					army_core_attack_factor = 0.15
+					army_core_defence_factor = 0.15
+				}
+				picture = KCK_north_asian_unity
+		}
+		KCK_kolyma_gold_prospectors = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.05
+					production_speed_infrastructure_factor = 0.1
+					local_resources_factor = 0.05
+				}
+				picture = KCK_kolyma_gold_prospectors
+		}
+		KCK_kolyma_gold_prospectors_1 = {
+			allowed = {
+				original_tag = KCK
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				conscription = 0.01
+			}
+			picture = KCK_kolyma_gold_prospectors
+		}
+		KCK_greater_east_asian_co_prosperity_sphere = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					conscription = 0.02
+					production_factory_max_efficiency_factor = 0.1
+					research_speed_factor = 0.05
+				}
+				picture = KCK_greater_east_asian_co_prosperity_sphere
+		}
+		KCK_remnants_of_the_pacific_fleet = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					consumer_goods_factor = 0.05
+					conscription = 0.02
+				}
+				picture = KCK_remnants_of_the_pacific_fleet
+		}
+		KCK_remnants_of_the_pacific_fleet_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					consumer_goods_factor = 0.05
+					conscription = 0.02
+					production_speed_dockyard_factor = 0.1
+				}
+				picture = KCK_remnants_of_the_pacific_fleet
+		}
+		KCK_remnants_of_the_pacific_fleet_3 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					conscription = 0.02
+					production_speed_dockyard_factor = 0.1
+					research_speed_factor = 0.05
+				}
+				picture = KCK_remnants_of_the_pacific_fleet
+		}
+		KCK_cold_comforts = {
+			picture = SIB_econreforms
+			removal_cost = -1
+			allowed = {
+				original_tag = KCK
+			}
+			modifier = {
+				monthly_population = 5
+			}
+		}
+		KCK_coastal_guard_volunteers = {
+			removal_cost = -1
+				allowed = {
+					original_tag = KCK
+				}
+				modifier = {
+					conscription = 0.01
+				}
+				equipment_bonus = {
+					marines = {
+						max_organisation = 0.1
+						instant = yes
+					}
+					marines2 = {
+						max_organisation = 0.1
+						instant = yes
+					}
+					marines3 = {
+						max_organisation = 0.1
+						instant = yes
+					}
+				}
+				picture = KCK_coastal_guard_volunteers
+		}
+	}
+	head_of_government = {
+		KCK_georgiy_stark = {
+			picture = KCK_georgiy_stark
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+				hog_respected_war_hero
+				head_of_government
+			}
+		}
+		KCK_isidor_barakhov = {
+			picture = KCK_isidor_barakhov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = {
+				hog_pragmatic_statesman
+				head_of_government
+			}
+		}
+		KCK_kiichiro_kumagai = {
+			picture = KCK_kiichiro_kumagai
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_surprise_from_mantetsu
+			}
+			traits = {
+				hog_flamboyant_tough_guy
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		KCK_eduard_tomson = {
+			picture = KCK_eduard_tomson
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = {
+				for_general_staffer
+				foreign_minister
+			}
+		}
+		KCK_maksim_ammosov = {
+			picture = KCK_maksim_ammosov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = {
+				for_biased_intellectual
+				foreign_minister
+			}
+		}
+		KCK_takeshi_imamura = {
+			picture = KCK_takeshi_imamura
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_surprise_from_mantetsu
+			}
+			traits = {
+				for_iron_fisted_brute
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		KCK_anatoly_pepelyayev = {
+			picture = KCK_anatoly_pepelyayev
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+			    eco_resource_industrialist
+				economy_minister
+			}
+		}
+		KCK_ivan_vinokurov = {
+			picture = KCK_ivan_vinokurov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+			    eco_keynesian_economy
+				economy_minister
+			}
+		}
+		KCK_masao_kishimoto = {
+			picture = KCK_masao_kishimoto
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_surprise_from_mantetsu
+			}
+			traits = { 
+			    eco_mixed_economy
+				economy_minister
+			}
+		}
+	}
+	security_minister = {
+		KCK_ivan_orlov = {
+			picture = KCK_ivan_orlov
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				sec_prince_of_terror
+				security_minister
+			}
+		}
+		KCK_mikhail_artemyev = {
+			picture = KCK_mikhail_artemyev
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+				sec_man_of_the_people
+				security_minister
+			}
+		}
+		KCK_masahiko_amakasu = {
+			picture = KCK_masahiko_amakasu
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_surprise_from_mantetsu
+			}
+			traits = { 
+				sec_media_magnate
+				security_minister
+			}
+		}
+	}
+	head_of_intel = {
+		KCK_anatoly_pepelyayev_int = {
+			picture = KCK_anatoly_pepelyayev_int
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				int_logistics_specialist
+				head_of_intel
+			}
+		}
+		KCK_nikolay_neustroev = {
+			picture = KCK_nikolay_neustroev
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_spring_of_yakutia
+			}
+			traits = { 
+				int_political_specialist
+				head_of_intel
+			}
+		}
+		KCK_toshio_miyazaki = {
+			picture = KCK_toshio_miyazaki
+			allowed = {
+				original_tag = KCK
+			}
+			available = {
+				has_completed_focus = KCK_surprise_from_mantetsu
+			}
+			traits = { 
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+	}
+	chief_of_staff = {
+		KCK_anatoly_pepelyayev_cos = {
+			picture = KCK_anatoly_pepelyayev_cos
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+		KCK_pavel_ksenofontov_cos = {
+			picture = KCK_pavel_ksenofontov_cos
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+	}
+	chief_of_army = {
+		KCK_anatoly_pepelyayev_carm = {
+			picture = KCK_anatoly_pepelyayev_carm
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+		KCK_pavel_ksenofontov_carm = {
+			picture = KCK_pavel_ksenofontov_carm
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+	}
+	chief_of_navy = {
+		KCK_georgiy_stark_cnav = {
+			picture = KCK_georgiy_stark_cnav
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { cnav_open_seas_doctrine }
+		}
+		KCK_pacific_merchant_marine = {
+			#picture = KCK_pacific_merchant_marine
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		KCK_ivan_orlov_cair = {
+			picture = KCK_ivan_orlov_cair
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+		KCK_eduard_tomson_cair = {
+			picture = KCK_eduard_tomson_cair
+			allowed = {
+				original_tag = KCK
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+	}
+	theorist = {
+		KCK_anatoly_pepelyayev_the = {
+			picture = KCK_anatoly_pepelyayev_the
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { trench_warfare_theorist }
+		}
+		KCK_eduard_tomson_the = {
+			picture = KCK_eduard_tomson_the
+			allowed = {
+				original_tag = KCK
+			}
+			traits = { strategic_destruction_theorist }
+		}
+	}
+}

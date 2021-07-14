@@ -1,0 +1,77 @@
+Germany_goebbels = {
+	name = "Goebbels Plan"
+	desc = "National Vanguardist Germany"
+
+	enable = {
+		original_tag = GER
+		OR = {
+			AND = {
+				has_game_rule = {
+					rule = GER_ai_route
+					option = NMAPD
+				}
+				GER = {
+					has_completed_focus = GER_neuerdeutschersozialismus
+				}
+			}
+			GER = {
+				has_completed_focus = GER_neuerdeutschersozialismus
+			}
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		GER_wirtschaftskommission
+		GER_centralizedplannedeconomy
+		GER_createthezpk
+		GER_thezpkreplacesthewirtschaftskommission
+		GER_patrioticduty
+		GER_deutschegesellschaftzurfrderungderwissenschaft
+		GER_createthezkbmt
+		GER_volkswehr
+		GER_durchbruch
+		GER_proletariansteel
+		
+		
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		cat_light_armor = 20.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	focus_factors = {
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+state=
+{
+	id=78
+	name="STATE_78"
+	manpower = 1908900
+
+	state_category = town
+
+	history=
+	{
+		owner = MOL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		victory_points = {
+			3707 10
+		}
+
+		add_core_of = ROM
+		add_core_of = MOL
+	}
+	provinces = { 565 3577 3707 3724 9683 11686 }
+	
+}

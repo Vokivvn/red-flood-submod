@@ -1,0 +1,272 @@
+ideas = {
+	country = {
+		MOG_shindo = {
+			picture = FRA_scw_intervention_nationalists_focus
+			modifier = {
+				conscription = 0.05
+				army_org = -0.03
+				attrition = -0.05
+			}
+		}
+		MOG_state_shintoism = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				consumer_goods_factor = -0.03
+				non_core_manpower = 0.05
+				supply_consumption_factor = -0.10
+				army_attack_factor = 0.05
+				despotism_drift = 0.05
+			}
+		}
+		MOG_japfirst = {
+			picture = chi_army_corruption2
+			modifier = {
+				consumer_goods_factor = -0.10
+				army_defence_factor = 0.10
+				non_core_manpower = -0.02
+				supply_consumption_factor = -0.10
+				army_attack_factor = 0.10
+				conservatism_drift = 0.10
+				stability_weekly = 0.01
+			}
+		}
+		MOG_neutrality = {
+			picture = neutrality_idea
+			modifier = {
+				justify_war_goal_time = -0.50	
+			}
+		}
+		MOG_consumer = {
+			picture = generic_goods_red_bonus
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_cost = 0.10
+				stability_weekly = 0.02
+				conservatism_drift = 0.02
+			}
+		}
+		MOG_immigration = {
+			picture = generic_democratic_drift_bonus
+			modifier = {
+				MONTHLY_POPULATION = 6
+			}
+		}
+		MOG_preparation = {
+			picture = jap_militarism_showa
+			modifier = {
+				army_core_defence_factor = 0.30
+				conscription = 0.05
+				army_speed_factor = 0.20
+				war_support_weekly = 0.05
+			}
+		}
+	}
+
+	head_of_government = {
+		MOG_domingos_nakamura_hog = {
+			picture = GFX_idea_MOG_domingos_nakamura_hog
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				head_of_government
+				hog_spiritual_leader
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+		MOG_junji_kikawa_hog = {
+			picture = GFX_idea_MOG_junji_kikawa_hog
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+
+	economy_minister = {
+		MOG_tomoke_eco = {
+			picture = GFX_idea_MOG_tomoke_eco
+			allowed = { 
+				original_tag = MOG	
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+		MOG_shobei_eco = {
+			picture = GFX_idea_MOG_shobei_eco
+			allowed = { 
+				original_tag = MOG	
+			}
+			traits = {
+				economy_minister
+				eco_construction_magnate
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+	}
+
+	foreign_minister = {
+		MOG_joao_sussumu_fore = {
+			picture = GFX_idea_MOG_joao_sussumu_fore
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		MOG_yukishigue_fore = {
+			picture = GFX_idea_MOG_yukishigue_fore
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	security_minister = {
+		MOG_masanobu_inter = {
+			picture = GFX_idea_MOG_masanobu_inter
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		MOG_ioshifumi_inter = {
+			picture = GFX_idea_MOG_ioshifumi_inter
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	head_of_intel = {
+		MOG_toyama_int = {
+			picture = GFX_idea_MOG_toyama_int
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			cancel = { 
+				NOT = {
+					has_government = despotism
+				}
+			}
+			available = {
+				has_government = despotism
+			}
+		}
+		MOG_michitaro_int = {
+			picture = GFX_idea_MOG_michitaro_int
+			allowed = { 
+				original_tag = MOG
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+			available = {
+				has_government = conservatism
+			}
+		}
+	}
+
+	chief_of_army = {
+		MOG_junji_army = {
+			picture = GFX_idea_MOG_junji_kikawa_army
+			allowed = {
+				original_tag = MOG
+			}
+			traits = {
+				chief_of_army
+				cos_school_of_mass_combat
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+capital = 310
+
+oob = CYN_1936
+
+set_research_slots = 3
+
+set_convoys = 120
+
+add_ideas = {
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gw_artillery = 1
+}
+
+# Events
+country_event = { id = cyn.1 days = 400 }
+
+# Politics
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 3
+	libertarian_marxism = 18
+	revolutionary_anarchism = 1
+	revisionist_socialism = 1
+	liberalism = 2
+	conservatism = 1
+	right_authoritarianism = 20
+	despotism = 2
+	reactionism = 1
+	accelerationism = 51
+}
+
+	set_stability = 0.1
+	set_war_support = 0.01
+
+	create_country_leader = {
+		name = "Provisional Cayenne Authority"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Caribbean_Council.dds"
+		expire = "1965.1.1"
+		ideology = constitutional_dictatorship
+		traits = {
+			#popular_figurehead
+		}
+	}
+	create_country_leader = {
+		name = "André Alike"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Caribbean_Andre_Alike.dds"
+		expire = "1965.1.1"
+		ideology = council_communism
+		traits = {
+			#popular_figurehead
+		}
+	}
+		create_country_leader = {
+		name = "Paulette Nardal"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Caribbean_Paulette_Nardal.dds"
+		expire = "1965.1.1"
+		ideology = ethno_futurism
+		traits = {
+			#popular_figurehead
+		}
+	}
+	create_country_leader = {
+		name = "Hégésippe Jean Légitimus"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Caribbean_Hegesippe_Jean_Legitimus.dds"
+		expire = "1965.1.1"
+		ideology = liberal_socialism
+		traits = {
+			#popular_figurehead
+		}
+	}
+	create_country_leader = {
+		name = "André Tardieu"
+		desc = "POLITICS_ALEXEI_II_DESC"
+		picture = "Portrait_Caribbean_Andre_Tardieu.dds"
+		expire = "1965.1.1"
+		ideology = market_liberalism
+		traits = {
+			#popular_figurehead
+		}
+	}

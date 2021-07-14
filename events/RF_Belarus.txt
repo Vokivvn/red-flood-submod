@@ -1,0 +1,1150 @@
+add_namespace = belarus
+
+# Constitution of Belarus #
+country_event = {
+	id = belarus.1
+	title = belarus.1.t
+	desc = belarus.1.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = belarus.1.a
+	}
+}
+
+# Ataman's decision #
+country_event = {
+	id = belarus.2
+	title = belarus.2.t
+	desc = belarus.2.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.2.a
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = DICTATORSHIP
+				}
+			}
+		}
+		set_country_flag = BLR_stilldictatorship
+	}
+
+	option = {
+		name = belarus.2.b
+		ai_chance = {
+			factor = 7
+			modifier = {
+				factor = 1000
+				NOT = {
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = DICTATORSHIP
+					}
+				}
+				NOT = {
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+		set_country_flag = BLR_whatnow
+	}
+}
+
+# What now #
+country_event = {
+	id = belarus.3
+	title = belarus.3.t
+	desc = belarus.3.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.3.a
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				NOT = {
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = DEMOCRACY
+					}
+				}
+				NOT = {
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = RANDOM
+					}
+				}
+			}
+		}
+		country_event = {
+			id = belarus.5
+			days = 3
+		}
+	}
+
+	option = {
+		name = belarus.3.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = DEMOCRACY
+				}
+			}
+		}
+		country_event = {
+			id = belarus.4
+			days = 3
+		}
+	}
+}
+
+# Constitutional agreement #
+country_event = {
+	id = belarus.4
+	title = belarus.4.t
+	desc = belarus.4.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.4.a
+		set_country_flag = BLR_democracypath
+	}
+}
+
+# Evening at Albin's #
+country_event = {
+	id = belarus.5
+	title = belarus.5.t
+	desc = belarus.5.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = belarus.5.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = EMPIRE
+				}
+			}
+		}
+		country_event = {
+			id = belarus.6
+			days = 1
+		}
+		kill_country_leader = yes
+		kill_ideology_leader = revisionist_socialism
+		create_country_leader = {
+			name = "Eugeniusz Tinz"
+			desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+			picture = "Portrait_Eugeniusz_Tinz.tga"
+			expire = "2000.1.1"
+			ideology = military_dictatorship
+			traits = {
+		
+			}
+		}
+	}
+
+	option = {
+		name = belarus.5.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = SAVINKOV
+				}
+			}
+		}
+		country_event = {
+			id = belarus.7
+			days = 1
+		}
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+	}
+
+	option = {
+		name = belarus.5.c
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				OR = {
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = VITUSKA
+					}
+					has_game_rule = {
+						rule = BLR_ai_route
+						option = BOGDANOV
+					}
+				}
+			}
+		}
+		country_event = {
+			id = belarus.8
+			days = 1
+		}
+		kill_country_leader = yes
+		kill_ideology_leader = revisionist_socialism
+		set_politics = {
+			ruling_party = reactionism
+		}
+	}
+}
+
+# Just as planned #
+country_event = {
+	id = belarus.6
+	title = belarus.6.t
+	desc = belarus.6.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.6.a
+		set_country_flag = BLR_monarchypath
+
+		create_corps_commander = {
+			name = "Alexander Dolgorukov"
+			picture = "Portrait_Dolgorukov.tga"
+			traits = { cavalry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Juliusz Rommel"
+			picture = "Portrait_Juliusz_Rommel.tga"
+			traits = { cavalry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Eugeniusz Tinz"
+			picture = "Portrait_Eugeniusz_Tinz.tga"
+			traits = { cavalry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+}
+
+# The Pale Horse #
+country_event = {
+	id = belarus.7
+	title = belarus.7.t
+	desc = belarus.7.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.7.a
+		set_country_flag = BLR_savinkovpath
+
+		create_corps_commander = {
+			name = "Vadim Rudnev"
+			picture = "Portrait_Rudnev.tga"
+			traits = { infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}
+
+# The Beast rules #
+country_event = {
+	id = belarus.8
+	title = belarus.8.t
+	desc = belarus.8.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.8.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = VITUSKA
+				}
+			}
+		}
+		set_country_flag = BLR_vituskapath
+
+		create_corps_commander = {
+			name = "Michal Vituska"
+			picture = "Portrait_Vituska_General.tga"
+			traits = { infantry_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Uladzislav Kazlouski"
+			picture = "Portrait_Kazlouski.tga"
+			traits = { politically_connected }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	option = {
+		name = belarus.8.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = BLR_ai_route
+					option = BOGDANOV
+				}
+			}
+		}
+		country_event = {
+			id = belarus.9
+			days = 1
+		}
+	}
+}
+
+# An insignificant cult #
+country_event = {
+	id = belarus.9
+	title = belarus.9.t
+	desc = belarus.9.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.9.a
+		country_event = {
+			id = belarus.10
+			days = 1
+		}
+	}
+}
+
+# The Madman's Revolution #
+country_event = {
+	id = belarus.10
+	title = belarus.10.t
+	desc = belarus.10.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.10.a
+		set_country_flag = BLR_bogdanovpath
+		set_politics = {
+			ruling_party = accelerationism
+		}
+
+		create_corps_commander = {
+			name = "Iazep Adamovic"
+			picture = "Portrait_Adamovic.tga"
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+}
+
+# Elections #
+country_event = {
+	id = belarus.11
+	title = belarus.11.t
+	desc = belarus.11.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.11.a
+		set_politics = {
+			ruling_party = social_democratism
+		}
+		ai_chance = {
+			factor = 4
+		}
+	}
+	option = {
+		name = belarus.11.b
+		set_politics = {
+			ruling_party = liberalism
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = belarus.11.c
+		set_politics = {
+			ruling_party = conservatism
+		}
+		ai_chance = {
+			factor = 4
+		}
+	}
+}
+
+# A Humble Citizen's Day #
+country_event = {
+	id = belarus.12
+	title = belarus.12.t
+	desc = belarus.12.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.12.a
+	}
+}
+
+# Coronation #
+country_event = {
+	id = belarus.13
+	title = belarus.13.t
+	desc = belarus.13.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.13.a
+		create_country_leader = {
+				name = "Uladzimir I"
+				#desc = "politics_andrew_mellon_desc"
+				picture = "Portrait_Uladzimir_I.tga"
+				expire = "2000.1.1"
+				ideology = absolute_monarchy
+				traits = {
+					##
+				}
+			}
+	}
+}
+
+# Manifesto #
+country_event = {
+	id = belarus.14
+	title = belarus.14.t
+	desc = belarus.14.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.14.a
+	}
+}
+
+# Unbelievable Times #
+country_event = {
+	id = belarus.15
+	title = belarus.15.t
+	desc = belarus.15.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.15.a
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.50
+				}
+			}
+		}
+	}
+}
+
+# A Letter to Comrades #
+country_event = {
+	id = belarus.16
+	title = belarus.16.t
+	desc = belarus.16.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.16.a
+
+		add_ideas = BLR_united_again
+	}
+}
+
+# Dinner with Black Cat #
+country_event = {
+	id = belarus.17
+	title = belarus.17.t
+	desc = belarus.17.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.17.a
+
+		add_ideas = BLR_alliance_with_black_cat
+	}
+}
+
+# A Telegram to Le Soleil #
+country_event = {
+	id = belarus.18
+	title = belarus.18.t
+	desc = belarus.18.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.18.a
+
+		add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 2000
+    			producer = FRA
+		}
+		add_equipment_to_stockpile = {
+  				type = artillery_equipment
+   				amount = 800
+    			producer = FRA
+		}
+		add_equipment_to_stockpile = {
+  				type = motorized_equipment
+   				amount = 200
+    			producer = FRA
+		}
+	}
+}
+
+# Meeting Old Comrades #
+country_event = {
+	id = belarus.19
+	title = belarus.19.t
+	desc = belarus.19.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.19.a
+
+		add_popularity = {
+   			ideology = revisionist_socialism
+    		popularity = 0.15
+		}
+		add_stability = 0.1
+	}
+}
+
+# Task That Requires Caution #
+country_event = {
+	id = belarus.20
+	title = belarus.20.t
+	desc = belarus.20.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.20.a
+
+		add_war_support = 0.05
+		add_political_power = 10
+	}
+}
+
+# Down with Golden Bulls and False Idols! #
+country_event = {
+	id = belarus.21
+	title = belarus.21.t
+	desc = belarus.21.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.21.a
+	}
+}
+
+# Bogdanov's Speech: The Deliverance #
+country_event = {
+	id = belarus.22
+	title = belarus.22.t
+	desc = belarus.22.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.22.a
+	}
+}
+
+# Bogdanov's Speech: Modern Gods #
+country_event = {
+	id = belarus.23
+	title = belarus.23.t
+	desc = belarus.23.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.23.a
+	}
+}
+
+# Alchemy of God-Building #
+country_event = {
+	id = belarus.24
+	title = belarus.24.t
+	desc = belarus.24.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.24.a
+	}
+}
+
+# State Machine, First Class #
+country_event = {
+	id = belarus.25
+	title = belarus.25.t
+	desc = belarus.25.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.25.a
+	}
+}
+
+# Vituska - alliance #
+country_event = {
+	id = belarus.26
+	title = belarus.26.t
+	desc = belarus.26.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #Swe
+		name = belarus.26.a
+		trigger = {
+			SWE = {
+				has_government = reactionism
+			}
+		}
+		SWE = {
+			country_event = {
+				id = belarus.27
+			}
+		}
+	}
+	option = { #Yug
+		name = belarus.26.b
+		trigger = {
+			YUG = {
+				has_government = reactionism
+			}
+		}
+		YUG = {
+			country_event = {
+				id = belarus.27
+			}
+		}
+	}
+	option = { #Fin
+		name = belarus.26.c
+		trigger = {
+			FIN = {
+				has_government = reactionism
+			}
+		}
+		FIN = {
+			country_event = {
+				id = belarus.27
+			}
+		}
+	}
+	option = { #Rom
+		name = belarus.26.d
+		trigger = {
+			ARM = {
+				has_government = reactionism
+			}
+		}
+		ARM = {
+			country_event = {
+				id = belarus.27
+			}
+		}
+	}
+	option = {
+		name = belarus.26.e
+	}
+}
+
+country_event = {
+	id = belarus.27
+	title = belarus.27.t
+	desc = belarus.27.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.27.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+			}
+		}
+		BLR = {
+			create_faction = BELARUS_ALLIANCE
+		}
+		if = {
+			limit = {
+				original_tag = SWE
+			}
+			BLR = {
+				add_to_faction = SWE
+			}
+		}
+		else_if = {
+		    limit = {
+		        original_tag = YUG
+		    }
+		    BLR = {
+				add_to_faction = YUG
+			}
+		}
+		else_if = {
+		    limit = {
+		        original_tag = FIN
+		    }
+		    BLR = {
+				add_to_faction = FIN
+			}
+		}
+		else_if = {
+		    limit = {
+		        original_tag = ARM
+		    }
+		    BLR = {
+				add_to_faction = ARM
+			}
+		}
+	}
+	option = {
+		name = belarus.27.b
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Bogdanov - Białystok 1 #
+country_event = {
+	id = belarus.28
+	title = belarus.28.t
+	desc = belarus.28.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.28.a
+		BLR = {
+			transfer_state = 97
+		}
+		add_stability = -0.05
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = belarus.28.b
+		BLR = {
+			country_event = {
+				id = belarus.29
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Bogdanov - Białystok 2 #
+country_event = {
+	id = belarus.29
+	title = belarus.29.t
+	desc = belarus.29.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.29.a
+		add_political_power = -50
+		ai_chance = {
+			factor = 3
+		}
+	}
+	option = {
+		name = belarus.29.b
+		if = {
+			limit = {
+				is_in_faction_with = POL
+			}
+			leave_faction = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Puppet baltics placeholder #
+country_event = {
+	id = belarus.30
+	title = belarus.30.t
+	desc = belarus.30.desc
+	#picture = GFX_report_event_BRA_pajama_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.30.a
+		LAT = {
+				set_state_owner = 190
+				set_state_owner = 12
+				set_state_owner = 210
+				set_state_controller = 190
+				set_state_controller = 12
+				set_state_controller = 210
+				load_oob = "LAT_rebelion"
+		}
+		EST = {
+				set_state_owner = 13
+				set_state_owner = 191
+				set_state_controller = 191
+				set_state_controller = 13
+				load_oob = "EST_rebelion"
+		}
+	}
+}
+
+#International Futurist Chess Tournament#
+country_event = {
+	id = belarus.31
+	title = belarus.31.t
+	desc = belarus.31.desc
+	picture = GFX_report_event_BLR_tournament
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_government = accelerationism
+	}
+
+	option = {
+		name = belarus.31.a
+		hidden_effect = {
+			country_event = {
+				id = belarus.32
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = belarus.31.b
+		hidden_effect = {
+			country_event = {
+				id = belarus.33
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = belarus.31.c
+		hidden_effect = {
+			country_event = {
+				id = belarus.34
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.32
+	title = belarus.32.t
+	desc = belarus.32.desc
+	picture = GFX_report_event_BLR_minsk
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.32.a
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_government = accelerationism
+				}
+				country_event = {
+					id = belarus.400
+					days = 1
+				}
+			}
+			country_event = {
+				id = belarus.35
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.33
+	title = belarus.33.t
+	desc = belarus.33.desc
+	picture = GFX_report_event_BLR_brest
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.33.a
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_government = accelerationism
+				}
+				country_event = {
+					id = belarus.400
+					days = 1
+				}
+			}
+			country_event = {
+				id = belarus.35
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.34
+	title = belarus.34.t
+	desc = belarus.34.desc
+	picture = GFX_report_event_BLR_mahiliou
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.34.a
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_government = accelerationism
+				}
+				country_event = {
+					id = belarus.400
+					days = 1
+				}
+			}
+			country_event = {
+				id = belarus.35
+				days = 5
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.35
+	title = belarus.35.t
+	desc = belarus.35.desc
+	picture = GFX_report_event_BLR_day1
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.35.a
+		hidden_effect = {
+			country_event = {
+				id = belarus.36
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.36
+	title = belarus.36.t
+	desc = belarus.36.desc
+	picture = GFX_report_event_BLR_day2
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.36.a
+		hidden_effect = {
+			country_event = {
+				id = belarus.37
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.37
+	title = belarus.37.t
+	desc = belarus.37.desc
+	picture = GFX_report_event_BLR_day3
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.37.a
+		hidden_effect = {
+			country_event = {
+				id = belarus.38
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.38
+	title = belarus.38.t
+	desc = belarus.38.desc
+	picture = GFX_report_event_BLR_day4
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.38.a
+		hidden_effect = {
+			country_event = {
+				id = belarus.39
+				days = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = belarus.39
+	title = belarus.39.t
+	desc = belarus.39.desc
+	picture = GFX_report_event_BLR_day5
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.39.a
+		add_stability = 0.01
+	}
+}
+country_event = {
+	id = belarus.400
+	title = belarus.400.t
+	desc = belarus.400.desc
+	picture = GFX_report_event_BLR_invitation
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.400.a
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = {
+				id = belarus.35
+				days = 4
+			}
+		}
+	}
+	option = {
+		name = belarus.400.b
+	}
+}
+
+country_event = {
+	id = belarus.41
+	title = belarus.41.t
+	desc = belarus.41.desc
+	#picture = GFX_report_event_BLR_day2
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = belarus.41.a
+	}
+}

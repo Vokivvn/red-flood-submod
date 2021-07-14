@@ -1,0 +1,113 @@
+﻿capital = 165
+
+set_stability = 0.46
+set_war_support = 0.84
+
+set_research_slots = 2 
+
+set_convoys = 22
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = revolutionary_anarchism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 19
+	revolutionary_anarchism = 64
+	revisionist_socialism = 9
+	social_democratism = 2
+	liberalism = 1
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Buenaventura Durruti"
+	desc = "POLITICS_DURRUTI_DESC"
+	picture = "CNT_Buenaventura.dds"
+	expire = "1965.1.1"
+	ideology = social_anarchism
+	traits = {
+	}
+}
+create_corps_commander = {
+	name = "Antonio Cordón García"
+	picture = "CNT_Antonio_Cordon_Garcia.dds"
+	traits = { trickster trait_reckless brilliant_strategist trait_engineer }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
+} 
+create_field_marshal = {
+	name = "Buenaventura Durruti"
+	picture = "CNT_Buenaventura.dds"
+	traits = { trait_reckless media_personality }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Cipriano Mera"
+	picture = "CNT_Cipriano_Mera.dds"
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Enrique Lister"
+	picture = "CNT_Enrique_Lister.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 4
+} 
+create_corps_commander = {
+	name = "Juan Modesto"
+	picture = "CNT_Juan_Modesto.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Valentín González"
+	picture = "CNT_Valentin_Gonzalez.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}

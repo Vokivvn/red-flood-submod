@@ -1,0 +1,702 @@
+focus_tree = {
+	id = rus_nid
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 1
+			tag = RUS
+		}
+	}
+	continuous_focus_position = { x = 5800 y = 1000 }
+	shared_focus = RUS_anewrussianarmy
+	shared_focus = RUS_transpolarflights
+	shared_focus = RUS_expandpetrogradnavalacademy
+	shared_focus = RUS_unify_empire
+
+	default = no
+
+	focus = {	
+		id = RUS_shtabs_kapitans
+		icon = GFX_focus_RUS_shtabs_kapitans
+		available = {
+		}
+		bypass = {
+		}	
+		x = 35
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_shtabs_kapitans"
+			add_political_power = 25
+			add_ideas = {
+				RUS_shtabs_army
+			}
+			add_ideas = {
+				RUS_shtabs_strikes
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = RUS
+					}
+					RUS = {
+					add_opinion_modifier = {
+					target = TAN
+					modifier = huge_increase
+					}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = SRU
+					}
+					set_cosmetic_tag = SRU_postwar
+				}
+			}
+
+		}
+	}
+	focus = {	
+		id = RUS_accept_demands_workers
+		icon = GFX_focus_RUS_accept_demands_workers
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_shtabs_kapitans
+		}
+		relative_position_id = RUS_shtabs_kapitans
+		x = -3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_shtabs_accept
+				remove_idea = RUS_shtabs_strikes
+			}
+		}
+	}
+	focus = {	
+		id = RUS_buy_food_high_prices
+		icon = GFX_focus_RUS_buy_food_high_prices
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_shtabs_kapitans
+		}
+		relative_position_id = RUS_shtabs_kapitans
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			remove_ideas = { RUS_shtabs_accept }
+			remove_ideas = { RUS_post_war_famine }
+			hidden_effect = { remove_ideas = RUS_post_war_famine1 }
+		}
+	}
+	focus = {	
+		id = RUS_negotiate_apoliticals
+		icon = GFX_focus_RUS_negotiate_apoliticals
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_shtabs_kapitans
+		}
+		relative_position_id = RUS_shtabs_kapitans
+		x = 3
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			remove_ideas = { RUS_shtabs_army }
+		}
+	}
+	focus = {	
+		id = RUS_hold_zemsky_sobor
+		icon = GFX_focus_RUS_hold_zemsky_sobor
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_accept_demands_workers
+		}
+		prerequisite = { 
+		    focus = RUS_buy_food_high_prices
+		}
+		prerequisite = { 
+		    focus = RUS_negotiate_apoliticals
+		}
+		relative_position_id = RUS_buy_food_high_prices
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			country_event = {
+				id = russia.14
+			}
+			country_event = {
+				id = news.29
+				days = 2
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = RUS
+					}
+					TAN = {
+					add_opinion_modifier = {
+					target = RUS
+					modifier = huge_increase
+					}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = SRU
+					}
+					set_cosmetic_tag = RUS
+				}
+			}
+		}
+	}
+	focus = {	
+		id = RUS_land_rural_communities
+		icon = GFX_focus_RUS_land_rural_communities
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_hold_zemsky_sobor
+		}
+		relative_position_id = RUS_hold_zemsky_sobor
+		x = -5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_revolting_peasants
+				add_idea = RUS_shtabs_rural_reforms
+			}
+		}
+	}
+	focus = {	
+		id = RUS_help_poor
+		icon = GFX_focus_RUS_help_poor
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_land_rural_communities
+		}
+		relative_position_id = RUS_land_rural_communities
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_shtabs_patronizing }
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_faith_erring_souls
+		icon = GFX_focus_RUS_faith_erring_souls
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_help_poor
+		}
+		relative_position_id = RUS_help_poor
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_shtabs_patronizing
+				add_idea = RUS_shtabs_patronizing1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_spirit_sobornost
+		icon = GFX_focus_RUS_spirit_sobornost 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_faith_erring_souls
+		}
+		relative_position_id = RUS_faith_erring_souls
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_shtabs_patronizing1
+				add_idea = RUS_shtabs_patronizing2
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_industry_council
+		icon = GFX_focus_RUS_industry_council
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_land_rural_communities
+		}
+		relative_position_id = RUS_land_rural_communities
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_council_of_artisans }
+		}
+	}
+	focus = {	
+		id = RUS_fair_profit_sharing
+		icon = GFX_focus_RUS_fair_profit_sharing
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_industry_council
+		}
+		relative_position_id = RUS_industry_council
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_political_power = 200
+			add_stability = 0.05
+			remove_ideas = {
+				monopolized_industry
+			}
+		}
+	}
+	focus = {	
+		id = RUS_restore_system_institutions
+		icon = GFX_focus_RUS_restore_system_institutions
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_hold_zemsky_sobor
+		}
+		relative_position_id = RUS_hold_zemsky_sobor
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_shtabs_restore_system }
+		}
+	}
+	focus = {	
+		id = RUS_power_zemstvos_municipalities
+		icon = GFX_focus_RUS_power_zemstvos_municipalities
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_restore_system_institutions
+		}
+		relative_position_id = RUS_restore_system_institutions
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_shtabs_restore_system
+				add_idea = RUS_shtabs_restore_system1
+			}
+			remove_ideas = { RUS_civil_war_damage }
+			hidden_effect = { remove_ideas = RUS_civil_war_damage1 }
+		}
+	}
+	focus = {	
+		id = RUS_elect_new_patriarch
+		icon = GFX_focus_RUS_elect_new_patriarch
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_restore_system_institutions
+		}
+		relative_position_id = RUS_restore_system_institutions
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			country_event = {
+				days = 1 id = russia.480
+			}
+
+		}
+	}
+	focus = {	
+		id = RUS_new_zemsky_sobor
+		icon = GFX_focus_RUS_new_zemsky_sobor
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_industry_council
+		}
+		prerequisite = { 
+		    focus = RUS_power_zemstvos_municipalities
+		}
+		prerequisite = { 
+		    focus = RUS_elect_new_patriarch
+		}
+		prerequisite = { 
+		    focus = RUS_ban_all_parties
+		}
+		relative_position_id = RUS_elect_new_patriarch
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_ourfinalpush }
+		}
+	}
+	focus = {	
+		id = RUS_will_of_zemlya
+		icon = GFX_focus_RUS_will_of_zemlya
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_new_zemsky_sobor
+		}
+		relative_position_id = RUS_new_zemsky_sobor
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_will_of_zemlya }
+		}
+	}
+	focus = {	
+		id = RUS_autocratic_rule
+		icon = GFX_focus_RUS_autocratic_rule
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_new_zemsky_sobor
+		}
+		relative_position_id = RUS_new_zemsky_sobor
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_aristocratic_rule }
+		}
+	}
+	focus = {	
+		id = RUS_spiritual_guidance
+		icon = GFX_focus_RUS_spiritual_guidance	#NTBD 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_new_zemsky_sobor
+		}
+		relative_position_id = RUS_new_zemsky_sobor
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_spiritual_guidance }
+		}
+	}
+	focus = {	
+		id = RUS_russian_symphony
+		icon = GFX_focus_RUS_russian_symphony
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_will_of_zemlya
+		}
+		prerequisite = { 
+		    focus = RUS_autocratic_rule
+		}
+		prerequisite = { 
+		    focus = RUS_spiritual_guidance
+		}
+		relative_position_id = RUS_autocratic_rule
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			remove_ideas = {
+				RUS_will_of_zemlya
+			}
+			remove_ideas = {
+				RUS_aristocratic_rule
+			}
+			remove_ideas = {
+				RUS_spiritual_guidance
+			}
+			add_ideas = RUS_united_and_ready
+			add_stability = 0.1
+			add_research_slot = 1
+		}
+	}
+	focus = {	
+		id = RUS_revoke_constitution
+		icon = GFX_focus_RUS_revoke_constitution
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_hold_zemsky_sobor
+		}
+		relative_position_id = RUS_hold_zemsky_sobor
+		x = 5
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.20
+			}
+
+		}
+	}
+	focus = {	
+		id = RUS_ban_all_parties
+		icon = GFX_focus_RUS_ban_all_parties
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_revoke_constitution
+		}
+		relative_position_id = RUS_revoke_constitution
+		x = -1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_stability = -0.20
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.20
+			}
+		}
+	}
+	focus = {	
+		id = RUS_clean_bureaucratic_apparatus
+		icon = GFX_focus_RUS_clean_bureaucratic_apparatus
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_ban_all_parties
+		}
+		relative_position_id = RUS_ban_all_parties
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_cleaning_bureaucratic_apparatus }
+			remove_ideas = { unstable_political_system }
+		}
+	}
+	focus = {	
+		id = RUS_take_privileges_nobility
+		icon = GFX_focus_RUS_take_privileges_nobility
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_revoke_constitution
+		}
+		relative_position_id = RUS_revoke_constitution
+		x = 1
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_check_loyalty_nobles
+		icon = GFX_focus_RUS_check_loyalty_nobles
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_take_privileges_nobility
+		}
+		relative_position_id = RUS_take_privileges_nobility
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = { RUS_army_reforms }
+		}
+	}
+	focus = {	
+		id = RUS_bring_faith_army
+		icon = GFX_focus_RUS_bring_faith_army
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_check_loyalty_nobles
+		}
+		relative_position_id = RUS_check_loyalty_nobles
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			add_ideas = { RUS_the_faithful_army }
+		}
+	}
+	focus = {	
+		id = RUS_frontline_chaplains
+		icon = GFX_focus_RUS_frontline_chaplains
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_bring_faith_army
+		}
+		relative_position_id = RUS_bring_faith_army
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			army_experience = 30
+			swap_ideas = {
+				remove_idea = RUS_army_reforms
+				add_idea = RUS_army_reforms1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_troops_crusaders
+		icon = GFX_focus_RUS_troops_crusaders
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_bring_faith_army
+		}
+		relative_position_id = RUS_bring_faith_army
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RUS_the_faithful_army
+				add_idea = RUS_the_faithful_army1
+			}
+		}
+	}
+}

@@ -1,0 +1,1370 @@
+#Albania - annexation_ALB_CONQ
+can_release_albania = {
+	state = 44 #Scutari
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ALB_CONQ
+			country_exists = ALB
+		}
+	}
+}
+
+#Austria - annexation_AUS_CONQ
+can_release_austria = {
+	state = 4 #Vienna
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = AUS_CONQ
+			country_exists = AUS
+		}
+	}
+}
+
+#Fiume - annexation_FIU_CONQ
+can_release_fiume = {
+	state = 163 #Fiume
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ITA
+			tag = YUG
+			tag = CRO
+			has_country_flag = FIU_CONQ
+			country_exists = FIU
+		}
+	}
+}
+
+#Belarus - annexation_BLR_CONQ
+can_release_belarus = {
+	state = 206 #Minsk
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = BLR_CONQ
+			country_exists = BLR
+		}
+	}
+}
+
+#Belgium - annexation_BEL_CONQ
+can_release_belgium = {
+	state = 6 #Flanders
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = WLL
+			has_country_flag = BEL_CONQ
+			country_exists = BEL
+			country_exists = FLN
+		}
+	}
+}
+
+#Bohemia - annexation_CZE_CONQ
+can_release_czechia = {
+	state = 9 #Bohemia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CZE_CONQ
+			country_exists = CZE
+		}
+	}
+}
+
+#Bulgaria - annexation_BUL_CONQ
+can_release_bulgaria = {
+	state = 48 #Sofia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = YUG
+			country_exists = BUL
+			has_country_flag = BUL_CONQ
+		}
+	}
+}
+
+#Denmark - annexation_DEN_CONQ
+can_release_denmark = {
+	state = 37 #Zealand
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = DEN_CONQ
+			country_exists = DEN
+		}
+	}
+}
+
+#England - annexation_ENG_CONQ
+can_release_england = {
+	state = 126 #London
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ENG_CONQ
+			country_exists = ENG
+		}
+	}
+}
+
+#Estonia - annexation_EST_CONQ
+can_release_estonia = {
+	state = 13 #Estonia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = EST_CONQ
+			country_exists = EST
+		}
+	}
+}
+
+#Finland - annexation_FIN_CONQ
+can_release_finland = {
+	state = 840 #Nyland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = FIN_CONQ
+			country_exists = FIN
+		}
+	}
+}
+
+#France - annexation_FRA_CONQ
+can_release_france = {
+	state = 16 #Paris
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = FRA
+			has_country_flag = FRA_CONQ
+		}
+	}
+}
+#Germany - annexation_GER_CONQ
+can_release_germany = {
+	state = 64 #Berlin
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = GER_CONQ
+			country_exists = GER
+		}
+	}
+}
+
+#Greece - annexation_GRE_CONQ
+can_release_greece = {
+	state = 47 #Athens
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = GRE_CONQ
+			country_exists = GRE
+		}
+	}
+}
+
+#Hungary - annexation_HUN_CONQ
+can_release_hungary = {
+	state = 43 #Budapest
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+		}
+	}
+}
+
+#Ireland - annexation_IRE_CONQ
+can_release_ireland = {
+	state = 113 #Leinster
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			has_country_flag = IRE_CONQ
+			country_exists = IRE
+		}
+	}
+}
+
+#Italy - annexation_ITA_CONQ
+can_release_italy = {
+	state = 2 #Rome
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = FIU
+			has_country_flag = ITA_CONQ
+			country_exists = ITA
+		}
+	}
+}
+
+#Latvia - annexation_LAT_CONQ
+can_release_latvia = {
+	state = 12
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = LAT_CONQ
+			country_exists = LAT
+		}
+	}
+}
+
+#Lithuania - annexation_LIT_CONQ
+can_release_lithuania = {
+	OR = {	
+		state = 11
+		state = 96
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = LIT_CONQ
+			country_exists = LIT
+		}
+	}
+}
+
+#Luxembourg - annexation_LUX_CONQ
+can_release_luxembourg = {
+	state = 8 #Luxembourg
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		NOT = {
+			country_exists = LUX
+			has_country_flag = LUX_CONQ
+		}
+	}
+}
+
+#Montenegro - annexation_MNT_CONQ
+can_release_montenegro = {
+	state = 105 #Montenegro
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Serbia release first
+		OR = {
+			country_exists = SER
+			has_country_flag = SER_CONQ
+			102 = { is_core_of = var:102.owner }
+		}
+		NOT = {
+			tag = YUG
+			has_country_flag = MNT_CONQ
+			country_exists = MNT
+		}
+	}
+}
+
+#Netherlands - annexation_HOL_CONQ
+can_release_netherlands = {
+	state = 7 #Holland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = HOL
+			has_country_flag = HOL_CONQ
+		}
+	}
+}
+
+#Norway - annexation_NOR_CONQ
+can_release_norway = {
+	state = 142 #Vestlandet
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			OR = {
+				has_dictatorship_government = yes
+				has_democratic_government = yes
+			}
+			has_country_flag = NOR_CONQ
+			country_exists = NOR
+		}
+	}
+}
+#Occupied Norway - annexation_NRO_CONQ
+can_release_occupied_norway = {
+	state = 110 #Ostlandet
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			AND = {
+				tag = ITA
+				has_completed_focus = ITA_fifteenth_point
+			}
+			OR = {
+				has_socialist_government = yes
+				has_government = accelerationism
+			}
+			has_country_flag = NRO_CONQ
+			country_exists = NRO
+		}
+	}
+}
+
+#Poland - annexation_POL_CONQ
+can_release_poland = {
+	state = 10 #Warsaw
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = POL_CONQ
+			country_exists = POL
+		}
+	}
+}
+
+#Portugal - annexation_POR_CONQ
+can_release_portugal = {
+	state = 112 #Lisbon
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = POR_CONQ
+			country_exists = POR
+		}
+	}
+}
+
+#Prussia - annexation_PRS_CONQ
+can_release_prussia = {
+	OR = {
+		state = 763 #Konigsberg
+		state = 5 #Ostpreussen
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Germany release first
+		OR = {
+			country_exists = GER
+			has_country_flag = GER_CONQ
+			64 = { OR = { is_core_of = var:64.owner is_claimed_by = var:64.owner } }
+		}
+		# Do Polish release first
+		OR = {
+			country_exists = POL
+			has_country_flag = POL_CONQ
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		}
+		# Do Lithuanian release first
+		OR = {
+			country_exists = LIT
+			has_country_flag = LIT_CONQ
+			NOT = {
+				96 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+				11 = {
+					is_owned_and_controlled_by = ROOT
+					is_claim_or_core_of_ROOT = no
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				tag = GER
+				#is_germany_or_splinter_tag = yes
+				country_exists = PRS
+				country_exists = PRR
+				has_country_flag = PRS_CONQ
+				has_country_flag = PRR_CONQ
+			}
+		}
+	}
+}
+
+#Romania - annexation_ROM_CONQ
+can_release_romania = {
+	state = 46 #Muntenia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = ROM
+			has_country_flag = ROM_CONQ
+		}
+	}
+}
+
+#Moldova - annexation_MOL_CONQ
+can_release_moldova = {
+	OR = {
+		state = 79 #Moldova
+		state = 78 #Bessarabia
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			AND = {
+				tag = ITA
+				has_completed_focus = ITA_fifteenth_point
+			}
+			tag = ROM
+			country_exists = MOL
+			has_country_flag = MOL_CONQ
+		}
+	}
+}
+
+#Russia - annexation_RUS_CONQ
+can_release_russia = {
+	state = 219 #Moscow
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			has_country_flag = RUS_CONQ
+			country_exists = RUS
+		}
+	}
+}
+
+#Yugoslovakia - annexation_YUG_CONQ
+can_release_yugoslavia = {
+	OR = {
+		state = 107 #Belgrade
+		state = 109 #Zagreb
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		tag = AUS
+		NOT = {
+			has_country_flag = YUG_CONQ
+			country_exists = YUG
+		}
+	}
+}
+
+#Slovakia - annexation_SLO_CONQ
+can_release_slovakia = {
+	state = 70 #Western Slovakia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungarian release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Czech release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		NOT = {
+			has_country_flag = SLO_CONQ
+			country_exists = SLO
+		}
+	}
+}
+
+#Spain - annexation_SPA_CONQ
+can_release_spain = {
+	state = 41 #Madrid
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_spanish_tag = yes
+			has_country_flag = SPR_CONQ
+			country_exists = SPR
+		}
+	}
+}
+
+#Sweden - annexation_SWE_CONQ
+can_release_sweden = {
+	state = 141 #Svealand
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SWE_CONQ
+			country_exists = SWE
+		}
+	}
+}
+
+#Switzerland - annexation_SWI_CONQ
+can_release_switzerland = {
+	state = 3 #Swiss Plateau
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SWI_CONQ
+			country_exists = SWI
+		}
+	}
+}
+
+#Transylvania - annexation_TRS_CONQ
+can_release_transylvania = {
+	state = 76 #Transylvania
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			AND = {
+				tag = ITA
+				has_completed_focus = ITA_fifteenth_point
+			}
+			tag = HUN
+			tag = ROM
+			has_country_flag = TRS_CONQ
+			country_exists = TRS
+		}
+	}
+}
+
+#Ukraine - annexation_UKR_CONQ
+can_release_ukraine = {
+	state = 202 #Kiev
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = RUS
+			has_country_flag = UKR_CONQ
+			country_exists = UKR
+		}
+	}
+}
+
+#Wallonia - annexation_WLL_CONQ
+can_release_wallonia = {
+	state = 34 #Wallonia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = BEL
+			tag = FRA
+			country_exists = WLL
+			has_country_flag = WLL_CONQ
+		}
+	}
+}
+
+#Wales - annexation_WAL_CONQ
+can_release_wales = {
+	state = 122 #Wales
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			country_exists = WAL
+			has_country_flag = WAL_CONQ
+		}
+	}
+}
+
+#Scotland - annexation_SCO_CONQ
+can_release_scotland = {
+	state = 121 #Scotland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			country_exists = SCO
+			has_country_flag = SCO_CONQ
+		}
+	}
+}
+
+#Novorossyia - annexation_SRU_CONQ
+can_release_novorossyia = {
+	state = 221 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			AND = {
+				tag = ITA
+				has_completed_focus = ITA_fifteenth_point
+			}
+			is_russian_tag = yes
+			tag = KAV
+			tag = UKR
+			country_exists = SRU
+			has_country_flag = SRU_CONQ
+		}
+	}
+}
+#Orenburg - annexation_ORE_CONQ
+can_release_orenburg = {
+	state = 652 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			country_exists = ORE
+			has_country_flag = ORE_CONQ
+		}
+	}
+}
+#Baltic - annexation_WRU_CONQ
+can_release_baltic = {
+	state = 12 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			AND = {
+				tag = ITA
+				has_completed_focus = ITA_fifteenth_point
+			}
+			has_democratic_government = yes
+			has_socialist_government = yes
+			is_russian_tag = yes
+			country_exists = WRU
+			has_country_flag = WRU_CONQ
+		}
+	}
+}
+#Don Kuban - annexation_DKB_CONQ
+can_release_don_kuban = {
+	state = 234 #Yekaterinodar
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			is_russian_tag = yes
+			tag = KAV
+			has_country_flag = DKB_CONQ
+			country_exists = DKB
+		}
+	}
+}
+#Posen - annexation_POSEN_CONQ
+can_release_posen = {
+	state = 86 #Posen
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Polish release first
+		OR = {
+			country_exists = POL
+			has_country_flag = POL_CONQ
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		}
+		# Do Prussian release first
+		#OR = {
+		#	country_exists = PRS
+		#	has_country_flag = PRS_CONQ
+		#	NOT = {
+		#		763 = {
+		#			is_owned_and_controlled_by = ROOT
+		#			is_claim_or_core_of_ROOT = no
+		#		}
+		#	}
+		#}
+		OR = {
+			tag = POL
+			POL = {
+				is_ally_with = ROOT
+				owns_state = 87
+			}
+			var:66.owner = {
+				is_germany_or_splinter_tag = yes
+				is_ally_with = ROOT
+			}
+		}
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = POSEN_CONQ
+		}
+	}
+}
+#Upper Silesia - annexation_UPPER_SILESIA_CONQ
+can_release_upper_silesia = {
+	OR = {
+		state = 67 #German Silesia
+		state = 762 #Polish Silesia
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Polish release first
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		# Do Prussian release first
+		OR = {
+			country_exists = PRS
+			has_country_flag = PRS_CONQ
+			763 = { OR = { is_core_of = var:763.owner is_claimed_by = var:763.owner } }
+		}
+		OR = {
+			tag = POL
+			POL = {
+				is_ally_with = ROOT
+				owns_state = 87
+			}
+			var:67.owner = {
+				is_germany_or_splinter_tag = yes
+				is_ally_with = ROOT
+			}
+			var:66.owner = {
+				is_germany_or_splinter_tag = yes
+				is_ally_with = ROOT
+			}
+		}
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = UPPERSILESIA_CONQ
+		}
+	}
+}
+#Masuria - annexation_MASURIA_CONQ
+can_release_masuria = {
+	state = 85 #Masuria
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Polish release first
+		OR = {
+			country_exists = POL
+			has_country_flag = POL_CONQ
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		}
+		# Do Prussian release first
+		OR = {
+			country_exists = PRS
+			country_exists = PRR
+			has_country_flag = PRS_CONQ
+			has_country_flag = PRR_CONQ
+			763 = { OR = { is_core_of = var:763.owner is_claimed_by = var:763.owner } }
+		}
+		OR = {
+			tag = POL
+			POL = {
+				is_ally_with = ROOT
+				owns_state = 98
+			}
+			var:5.owner = {
+				is_germany_or_splinter_tag = yes
+				is_ally_with = ROOT
+			}
+		}
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = MASURIA_CONQ
+		}
+	}
+}
+#Galicia - annexation_GALICIA_CONQ
+can_release_galicia = {
+	OR = {
+		state = 91 #Lwow
+		state = 88 #Krakow
+		state = 89 #Stanislawow
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Polish release first
+		OR = {
+			country_exists = POL
+			has_country_flag = POL_CONQ
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		}
+		# Do Ukraine release first
+		OR = {
+			country_exists = UKR
+			has_country_flag = UKR_CONQ
+			202 = { OR = { is_core_of = var:202.owner is_claimed_by = var:202.owner } }
+		}
+		NOT = { has_country_flag = GALICIA_CONQ }
+	}
+}
+#Rhineland - annexation_RHI_CONQ
+can_release_rhineland = {
+	state = 51 #Essen
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = RHI_CONQ
+			country_exists = RHI
+		}
+	}
+}
+#Bavaria - annexation_BAV_CONQ
+can_release_bavaria = {
+	state = 52 #Munich
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = BAV_CONQ
+			country_exists = BAV
+		}
+	}
+}
+
+#Lorraine - annexation_LORRAINE_CONQ
+can_release_lorraine = {
+	OR = {
+		state = 958 #Luxembourg Lorraine
+		state = 956 #French Lorraine
+		state = 959 #German Lorriane
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do French release first
+		OR = {
+			country_exists = FRA
+			has_country_flag = FRA_CONQ
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+		}
+		# Do Rhenish release first
+		OR = {
+			country_exists = RHI
+			has_country_flag = GER_CONQ
+			has_country_flag = RHI_CONQ
+			51 = { OR = { is_core_of = var:51.owner is_claimed_by = var:51.owner } }
+		}
+		# Do Bavarian release first
+		OR = {
+			country_exists = BAV
+			has_country_flag = GER_CONQ
+			has_country_flag = BAV_CONQ
+			52 = { OR = { is_core_of = var:52.owner is_claimed_by = var:52.owner } }
+		}
+		NOT = {
+			has_country_flag = LORRAINE_CONQ
+			country_exists = LOR
+		}
+	}
+}
+#Alsace - annexation_ALSACE_CONQ
+can_release_alsace = {
+	OR = {
+		state = 957 #French Alsace
+		state = 28 #German Alsace
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do French release first
+		OR = {
+			country_exists = FRA
+			has_country_flag = FRA_CONQ
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+		}
+		# Do Rhenish release first
+		OR = {
+			country_exists = RHI
+			has_country_flag = GER_CONQ
+			has_country_flag = RHI_CONQ
+			51 = { OR = { is_core_of = var:51.owner is_claimed_by = var:51.owner } }
+		}
+		# Do Bavarian release first
+		OR = {
+			country_exists = BAV
+			has_country_flag = GER_CONQ
+			has_country_flag = BAV_CONQ
+			52 = { OR = { is_core_of = var:52.owner is_claimed_by = var:52.owner } }
+		}
+		# Do Lorraine release first
+		OR = {
+			NOT = {
+				OR = {
+					owns_state = 959 #French Alsace
+					owns_state = 956 #German Alsace
+				}
+			}
+			has_country_flag = GER_CONQ
+			has_country_flag = LOR_CONQ
+		}
+		NOT = { has_country_flag = ALSACE_CONQ }
+	}
+}
+#Schleswig Holstein - annexation_SCHLESWIG_HOLSTEIN_CONQ
+can_release_schleswig_holstein = {
+	OR = {
+		state = 58 #Schleswig-Holstein
+		state = 796 #Northern Schleswig
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Danish release first
+		OR = {
+			country_exists = DEN
+			has_country_flag = DEN_CONQ
+			37 = { OR = { is_core_of = var:37.owner is_claimed_by = var:37.owner } }
+		}
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = SCHLESWIG_HOLSTEIN_CONQ
+		}
+	}
+}
+#West Transylvania - annexation_WEST_TRANSYLVANIA_CONQ
+can_release_west_transylvania = {
+	OR = {
+		state = 83 #Crisana
+		state = 911 #Bihor
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Transylvania release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = TRS_CONQ
+			76 = { OR = { is_core_of = var:76.owner is_claimed_by = var:76.owner } }
+		}
+		NOT = {
+			has_country_flag = WEST_TRANSYLVANIA_CONQ
+		}
+	}
+}
+
+#South Sudetenland - annexation_SOUTH_SUDETENLAND_CONQ
+can_release_south_sudetenland = {
+	OR = {
+		state = 913 #South Sudetenland
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		# Do Austria release first
+		OR = {
+			country_exists = AUS
+			has_country_flag = AUS_CONQ
+			4 = { OR = { is_core_of = var:4.owner is_claimed_by = var:4.owner } }
+		}
+		NOT = {
+			ROOT = {
+				owns_state = 4
+				is_germany_or_splinter_tag = yes
+			}
+			has_country_flag = SOUTH_SUDETENLAND_CONQ
+		}
+	}
+}
+#North Sudetenland - annexation_NORTH_SUDETENLAND_CONQ
+can_release_north_sudetenland = {
+	OR = {
+		state = 69 #North Sudetenland
+		state = 74 #East Sudetenland
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		should_release_germany_first = yes
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		NOT = {
+			is_germany_or_splinter_tag = yes
+			has_country_flag = NORTH_SUDETENLAND_CONQ
+		}
+	}
+}
+#South Slovakia - annexation_SOUTH_SLOVAKIA_CONQ
+can_release_south_slovakia = {
+	OR = {
+		state = 664 #South Slovakia
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		# Do Slovak release first
+		OR = {
+			country_exists = SLO
+			has_country_flag = SLO_CONQ
+			70 = { OR = { is_core_of = var:70.owner is_claimed_by = var:70.owner } }
+		}
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		NOT = {
+			has_country_flag = SOUTH_SLOVAKIA_CONQ
+		}
+	}
+}
+#Lemkovyna - annexation_LEMKOVYNA_CONQ
+can_release_lemkovyna = {
+	OR = {
+		state = 975 #Lemkovyna
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		# Do Slovak release first
+		OR = {
+			country_exists = SLO
+			has_country_flag = SLO_CONQ
+			70 = { OR = { is_core_of = var:70.owner is_claimed_by = var:70.owner } }
+		}
+		# Do Krakow release first
+		OR = {
+			has_country_flag = GALICIA_CONQ
+			88 = { OR = { is_core_of = var:88.owner is_claimed_by = var:88owner } }		
+		}
+		# Do Ukraine release first
+		OR = {
+			country_exists = UKR
+			has_country_flag = UKR_CONQ
+			202 = { OR = { is_core_of = var:202.owner is_claimed_by = var:202.owner } }
+		}
+		NOT = {
+			has_country_flag = LEMKOVYNA_CONQ
+		}
+	}
+}
+#Zaolzie - annexation_ZAOLZIE_CONQ
+can_release_zaolzie = {
+	OR = {
+		state = 72 #Zaolzie
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		# Do Polish release first
+		OR = {
+			country_exists = POL
+			has_country_flag = POL_CONQ
+			10 = { OR = { is_core_of = var:10.owner is_claimed_by = var:10.owner } }
+		}
+		NOT = {
+			has_country_flag = ZAOLZIE_CONQ
+		}
+	}
+}
+#Carpathian Ruthenia - annexation_CARPATHIAN_RUTHENIA_CONQ
+can_release_carpathian_ruthenia = {
+	OR = {
+		state = 73 #Carpathian Ruthenia
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Czechia release first
+		OR = {
+			country_exists = CZE
+			has_country_flag = CZE_CONQ
+			9 = { OR = { is_core_of = var:9.owner is_claimed_by = var:9.owner } }
+		}
+		# Do Slovak release first
+		OR = {
+			country_exists = SLO
+			has_country_flag = SLO_CONQ
+			70 = { OR = { is_core_of = var:70.owner is_claimed_by = var:70.owner } }
+		}
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Ukraine release first
+		OR = {
+			country_exists = UKR
+			has_country_flag = UKR_CONQ
+			202 = { OR = { is_core_of = var:202.owner is_claimed_by = var:202.owner } }
+		}
+		NOT = {
+			has_country_flag = CARPATHIAN_RUTHENIA_CONQ
+		}
+	}
+}
+#Eisenstadt - annexation_EISENSTADT_CONQ
+can_release_eisenstadt = {
+	OR = {
+		state = 901 #Eisenstadt
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Austria release first
+		OR = {
+			country_exists = AUS
+			has_country_flag = AUS_CONQ
+			4 = { OR = { is_core_of = var:4.owner is_claimed_by = var:4.owner } }
+		}
+		NOT = {
+			has_country_flag = EISENSTADT_CONQ
+		}
+	}
+}
+#East Banat - annexation_EAST_BANAT_CONQ
+can_release_east_banat = {
+	OR = {
+		state = 923 #Central Banat
+		state = 82 #Eastern banat
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Transylvania release first
+		OR = {
+			country_exists = TRS
+			has_country_flag = TRS_CONQ
+		}
+		# Do Romania release first
+		OR = {
+			country_exists = ROM
+			has_country_flag = ROM_CONQ
+		}
+		NOT = {
+			has_country_flag = EAST_BANAT_CONQ
+		}
+	}
+}
+#West Banat - annexation_WEST_BANAT_CONQ
+can_release_west_banat = {
+	OR = {
+		state = 1035 #Western Banat
+		state = 764 #South Banat
+	}
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Croatia release first
+		OR = {
+			country_exists = CRO
+			has_country_flag = CRO_CONQ
+			109 = { OR = { is_core_of = var:109.owner is_claimed_by = var:109.owner } }
+		}
+		# Do Yugoslavia release first
+		OR = {
+			AND = {
+				NOT = { owns_state = 107 } #Serbia
+				NOT = { owns_state = 109 } #Croatia
+				NOT = { owns_state = 104 } #Banja Luka
+				NOT = { owns_state = 105 } #North Macedonia
+			}
+			has_country_flag = YUG_CONQ
+		}
+		# Do Serbia release first
+		OR = {
+			country_exists = SER
+			has_country_flag = SER_CONQ
+			107 = { OR = { is_core_of = var:107.owner is_claimed_by = var:107.owner } }
+		}
+		NOT = {
+			has_country_flag = WEST_BANAT_CONQ
+		}
+	}
+}
+#Vojvodina- annexation_VOJVODINA_CONQ
+can_release_vojvodina = {
+	state = 45 #Vojvodina
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Hungary release first
+		OR = {
+			country_exists = HUN
+			has_country_flag = HUN_CONQ
+			43 = { OR = { is_core_of = var:43.owner is_claimed_by = var:43.owner } }
+		}
+		# Do Croatia release first
+		OR = {
+			country_exists = CRO
+			has_country_flag = CRO_CONQ
+			109 = { OR = { is_core_of = var:109.owner is_claimed_by = var:109.owner } }
+		}
+		# Do Yugoslavia release first
+		OR = {
+			country_exists = YUG
+			has_country_flag = YUG_CONQ
+			76 = { OR = { is_core_of = var:76.owner is_claimed_by = var:76.owner } }
+		}
+		# Do Serbia release first
+		OR = {
+			country_exists = SER
+			has_country_flag = SER_CONQ
+			107 = { OR = { is_core_of = var:107.owner is_claimed_by = var:107.owner } }
+		}
+		NOT = {
+			has_country_flag = VOJVODINA_CONQ
+		}
+	}
+}
+#Slovenia- annexation_SLV_CONQ
+can_release_slovenia = {
+	state = 102 #Vojvodina
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Austria release first
+		OR = {
+			country_exists = AUS
+			has_country_flag = AUS_CONQ
+			4 = { OR = { is_core_of = var:4.owner is_claimed_by = var:4.owner } }
+		}
+		# Do Yugoslavia release first
+		OR = {
+			country_exists = YUS
+			has_country_flag = YUG_CONQ
+			76 = { OR = { is_core_of = var:76.owner is_claimed_by = var:76.owner } }
+		}
+		NOT = {
+			country_exists = SLV
+			has_country_flag = SLV_CONQ
+		}
+	}
+}
+#Serbia - annexation_SER_CONQ
+can_release_serbia = {
+	state = 107 #Serbia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = SER
+			has_country_flag = SER_CONQ
+		}
+	}
+}
+#Croatia - annexation_CRO_CONQ
+can_release_croatia = {
+	state = 109 #Croatia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Serbia release first
+		OR = {
+			country_exists = SER
+			has_country_flag = SER_CONQ
+			107 = { OR = { is_core_of = var:107.owner is_claimed_by = var:107.owner } }
+		}
+		NOT = {
+			tag = YUG
+			country_exists = CRO
+			has_country_flag = CRO_CONQ
+		}
+	}
+}
+#Iceland - annexation_ICE_CONQ
+can_release_iceland = {
+	state = 100 #Iceland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = ICE
+			has_country_flag = ICE_CONQ
+		}
+	}
+}
+
+#Bosnia - annexation_BOS_CONQ
+can_release_bosnia = {
+	state = 921 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Croatia release first
+		OR = {
+			country_exists = CRO
+			has_country_flag = CRO_CONQ
+			109 = { OR = { is_core_of = var:109.owner is_claimed_by = var:109.owner } }
+		}
+		NOT = {
+			tag = AUS
+			tag = YUG
+			country_exists = BOS
+			has_country_flag = BOS_CONQ
+		}
+	}
+}
+
+### Special Triggers ###
+will_annex_europe_totally = {
+	OR = {
+		AND = {
+			tag = ITA
+			has_government = despotism
+		}
+		AND = {
+			tag = FRA
+			has_cosmetic_tag = FRA_evropa
+		}
+		AND = {
+			tag = GER
+			has_cosmetic_tag = GER_red_unification
+		}
+	}
+}
+
+should_release_germany_first = {
+	OR = {
+		tag = PRS
+		tag = PRR
+		tag = BAV
+		tag = RHI
+		tag = SOR
+		tag = LOR
+		country_exists = GER
+		has_country_flag = GER_CONQ
+		NOT = {
+			64 = {
+				is_owned_and_controlled_by = ROOT
+				is_claim_or_core_of_ROOT = no
+			}
+		}
+		#NOT = {
+		#	51 = {
+		#		is_owned_and_controlled_by = ROOT
+		#		is_claim_or_core_of_ROOT = no
+		#	}
+		#}
+		#NOT = {
+		#	52 = {
+		#		is_owned_and_controlled_by = ROOT
+		#		is_claim_or_core_of_ROOT = no
+		#	}
+		#}
+	}
+}

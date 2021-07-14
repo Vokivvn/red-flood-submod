@@ -1,0 +1,24 @@
+
+state={
+	id=441
+	name="STATE_441"
+	manpower = 3539500
+
+	state_category = rural
+
+	history={
+		owner = KSM
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+		}
+		add_core_of = KSM
+		victory_points = {
+			10905 2
+		}
+	}
+
+	provinces={
+		7316 8005 10905 12754 12884
+	}
+}

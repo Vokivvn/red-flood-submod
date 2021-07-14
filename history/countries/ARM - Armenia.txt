@@ -1,0 +1,187 @@
+﻿capital = 230
+
+oob = "ARM_1936"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+		}
+	}
+	set_autonomy = {
+		target = CCD
+		autonomous_state = autonomy_colony
+	}
+	else = {
+		puppet = CCD
+	}
+}
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fighter1 = 1 
+	fuel_silos = 1
+}
+
+
+
+
+set_politics = {
+
+	
+	ruling_party = social_democratism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	
+	vanguard_socialism = 4
+	
+	libertarian_marxism = 12
+	
+	revolutionary_anarchism = 5
+	
+	revisionist_socialism = 15
+
+	social_democratism = 45
+	
+	liberalism = 6
+	
+	conservatism = 3
+	
+	right_authoritarianism = 2
+	
+	despotism = 0
+	
+	reactionism = 8
+	
+	accelerationism = 0
+	
+}
+create_country_leader = {
+	name = "Aram Manukian"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Aram_Manukian.dds"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	traits = {
+
+	}
+}
+create_country_leader = {
+	name = "Garegin Nzhdeh"
+	desc = "POLITICS_GAREGIN_DESC"
+	picture = "Portrait_Garegin.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+
+	}
+}
+create_country_leader = {
+	name = "Mikayel Varandian"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Mikayel_Varandian.dds"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+	traits = {
+
+	}
+}
+create_corps_commander = {
+	name = "Andranik O'zanyan"
+		picture = "Portrait_Andranik.tga"
+	traits = {
+		commando
+		#mountaineer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Daniel bek-P'irowmyan"
+		picture = "Portrait_Daniel_bek.tga"
+	traits = {
+		old_guard
+		#mountaineer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Drastmat Kanayan"
+		picture = "Portrait_Drastmat.tga"
+	traits = {
+		brilliant_strategist
+		#mountaineer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_corps_commander = {
+	name = "Garegin Nzdeh"
+		picture = "Portrait_Garegin_General.tga"
+	traits = {
+		harsh_leader
+		brilliant_strategist
+		#mountaineer
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_corps_commander = {
+	name = "Movses Silikyan"
+		picture = "Portrait_Movses.tga"
+	traits = {
+		#mountaineer
+		#cautious
+		winter_specialist
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "T'vomas Nazarbekyan"
+		picture = "Portrait_Tvomas_Nazarbekyan.tga"
+	traits = {
+		brilliant_strategist
+		#reckless
+		old_guard
+		winter_specialist
+	}
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+} 
+set_stability = 0.5

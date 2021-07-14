@@ -1,0 +1,77 @@
+division_template = {
+	name = "Garde du Lebanon"			# Infantry Division
+
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1er Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11919
+		division_template = "Garde du Lebanon"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "2eme Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 792
+		division_template = "Garde du Lebanon"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "3eme Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 792
+		division_template = "Garde du Lebanon"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "4eme Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 792
+		division_template = "Garde du Lebanon"	
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+
+
+}
+air_wings = {
+	553 = {
+		# 1st Squadron -- Hawker Audax
+		CAS_equipment_1 =  {
+			owner = "SYR" 
+			amount = 50
+		}
+	}
+}

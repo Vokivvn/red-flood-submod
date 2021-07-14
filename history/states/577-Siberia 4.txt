@@ -1,0 +1,21 @@
+
+state={
+	id=577 # Nizhnevartovsk
+	manpower = 22599
+	name="STATE_577"
+
+	state_category = wasteland
+	impassable = yes
+
+	history={
+		owner = SIB
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SIB
+	}
+
+	provinces={
+		1729 1757 1856 4761 7781 7809 7837 7882 10561 10663 12514 12545 
+	}
+}

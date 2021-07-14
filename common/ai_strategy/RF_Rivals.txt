@@ -1,0 +1,18 @@
+neighbours_contain_austria = {
+	enable = {
+		AUS = {
+			has_government = accelerationism
+		}
+		tag = GER
+		tag = POL
+		tag = ITA
+	}
+	abort = {
+		has_government = accelerationism
+	}
+	ai_strategy = {
+		type = contain
+		id = AUS
+		value = 15
+	}
+}	

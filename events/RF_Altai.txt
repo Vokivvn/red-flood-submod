@@ -1,0 +1,270 @@
+﻿add_namespace = alt
+
+	country_event = {
+		id = alt.1
+		title = alt.1.title
+		desc = alt.1.desc
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		
+		trigger = {
+			tag = MON
+			has_war_with = ALT
+			surrender_progress > 50
+		}
+		
+		option = {
+			name = alt.1.a
+			ai_chance = {
+				factor = 10
+			}
+			white_peace = TAN
+			set_truce = {
+				target = ALT
+				days = 60 
+			}
+		}
+		option = {
+			name = alt.1.b
+			ai_chance = {
+				factor = 2
+			}
+			add_stability = -0.05
+		}
+	}
+
+	country_event = {
+		id = alt.2
+		title = alt.2.title
+		desc = alt.2.d
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.2.a
+			add_stability = 0.10
+			hidden_effect = {
+				country_event = {
+					days = 150
+					id = alt.3
+				}
+			}
+		}
+	}
+
+	country_event = {
+		id = alt.3
+		title = alt.3.t
+		desc = alt.3.d
+		picture = GFX_report_event_generic_sign_treaty3
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.3.a
+			add_stability = 0.05
+			add_manpower = -124
+		}
+	}
+
+	country_event = {
+		id = alt.4
+		title = alt.4.t
+		desc = alt.4.d
+		picture = GFX_report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.4.a
+			ai_chance = {
+				factor = 10
+			}
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = no
+			}
+		}
+
+		option = {
+			name = alt.4.b
+			ai_chance = {
+				factor = 10
+			}
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+		}
+
+		option = {
+			name = alt.4.c
+			ai_chance = {
+				factor = 10
+			}
+			kill_country_leader = yes
+			set_politics = {
+				ruling_party = reactionism
+				elections_allowed = no
+			}
+		}
+
+		option = {
+			name = alt.4.e
+			ai_chance = {
+				factor = 10
+			}
+			complete_national_focus = ALT_kagyrodovsurvives
+		}
+	}
+
+	##Event: Institution of Millenarianism
+	country_event = {
+		id = alt.5
+		title = alt.5.title
+		desc = alt.5.desc
+		picture = GFX_institutionofmillenarianism
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.5.a
+			add_stability = 0.01
+		}
+	}
+
+	##Event: Partisans Destroyed
+	country_event = {
+		id = alt.6
+		title = alt.6.title
+		desc = alt.6.desc
+		picture = GFX_partisansdestroyed
+
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.6.a
+			add_stability = -0.10
+		}
+	}
+
+	##Event: End of Feudalism
+	country_event = {
+		id = alt.7
+		title = alt.7.title
+		desc = alt.7.desc
+		picture = GFX_endoffeudalism
+
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.7.a
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.01
+			}
+		}
+	}
+
+	##Event: Great Curse upon the Bourgeoise
+	country_event = {
+		id = alt.8
+		title = alt.8.title
+		desc = alt.8.desc
+		picture = GFX_bvwNVjDQ
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.8.a
+		}
+	}
+
+	##Event: Baikal Lake Ritual
+	country_event = {
+		id = alt.9
+		title = alt.9.title
+		desc = alt.9.desc
+		picture = GFX_baikallakeritual
+		fire_only_once = yes
+
+		trigger = {
+			tag = ALT
+			has_government = revisionist_socialism
+			owns_state = 564
+			owns_state = 964
+			owns_state = 563
+		}
+		
+		mean_time_to_happen = {
+			days = 13
+		}
+		option = {
+			name = alt.9.a
+		}
+	}
+
+	##Event: The Shamanistic Empire
+	country_event = {
+		id = alt.10
+		title = alt.10.title
+		desc = alt.10.desc
+		picture = GFX_/hoi4/event_gfx/event_test
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = alt.10.a
+			set_cosmetic_tag = ALT_SHMN
+		}
+	}
+
+	country_event = {
+		id = alt.11
+		title = alt.11.title
+		desc = alt.11.desc
+		picture = GFX_baikallakeritual
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.11.a
+			set_cosmetic_tag = ALT_TSAR
+		}
+	}
+
+	country_event = {
+		id = alt.12
+		title = alt.12.title
+		desc = alt.12.desc
+		picture = GFX_baikallakeritual
+		fire_only_once = yes
+
+		option = {
+			name = alt.12.a
+			add_stability = 0.05
+		}
+	}
+
+	country_event = {
+		id = alt.13
+		title = alt.13.title
+		desc = alt.13.desc
+		picture = GFX_baikallakeritual
+		fire_only_once = yes
+		is_triggered_only = yes
+		
+		option = {
+			name = alt.13.a
+			add_stability = 0.01
+		}
+	}

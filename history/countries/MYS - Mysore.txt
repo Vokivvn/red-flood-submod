@@ -1,0 +1,147 @@
+﻿capital = 425
+
+oob = "MYS_1936"
+
+set_research_slots = 2
+
+set_convoys = 175
+
+add_ideas = {
+RAJ_shared_economy
+MYS_prospering_state
+MYS_refugee_crisis
+MYS_refuge_of_the_elites
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = liberalism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 10
+	social_democratism = 20
+	liberalism = 30
+	conservatism = 20 
+	right_authoritarianism = 15
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Tulsidas Jadhav"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = orthodox_leninism 
+}
+
+create_country_leader = {
+	name = "V. M. Tarkunde"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = council_communism
+}
+
+create_country_leader = {
+	name = "Colletive Leadership"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_anarchism
+}
+
+create_country_leader = {
+	name = "Shri K. A. Damodara Menon"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = democratic_socialism 
+}
+
+create_country_leader = {
+	name = "Bhimrao Ramji Ambedkar"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = progressivism
+}
+
+create_country_leader = {
+	name = "Huseyn Shaheed Suhrawardy"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Huseyn_Shaheed_Suhrawardy.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+}
+
+create_country_leader = {
+	name = "Morarji Ranchhodji Desai"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_conservatism 
+}
+
+create_country_leader = {
+	name = "Mirza Ismail"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+}
+
+create_country_leader = {
+	name = "Huseyn Shaheed Suhrawardy"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Huseyn_Shaheed_Suhrawardy.dds"
+	expire = "1965.1.1"
+	ideology = constitutional_dictatorship
+}
+
+create_country_leader = {
+	name = "Jaganath Rao Bhonsle"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+}
+
+create_country_leader = {
+	name = "Gubbi Veeranna"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = technocratism
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Maharaja Krishnaraja Wadiyar IV"
+	desc = "POLITICS_Krishnaraja_Wadiyar_DESC"
+	picture = "Portrait_Maharaja_Krishnaraja_Wadiyar_IV.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		popular_figurehead
+	}
+}

@@ -1,0 +1,1765 @@
+focus_tree = {
+	id = USA_technocracy
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+
+	default = no
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+	focus = {
+		id = USA_crash_the_price_system
+		icon = GFX_focus_USA_crash_the_price_system
+		available = {
+		}
+		bypass = {
+		}
+		x = 8
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_great_depression
+				add_idea = USA_crashed_price_system
+			}
+		}
+	}
+
+	focus = {
+		id = USA_enact_hyperinflation
+		icon = GFX_focus_USA_enact_hyperinflation
+		available = {
+		}
+		bypass = {
+		}
+		x = -1
+		y = 1
+		relative_position_id = USA_crash_the_price_system
+		cost = 10
+		prerequisite = { focus = USA_crash_the_price_system }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_ideas = USA_hyperinflation
+		}
+	}
+
+	focus = {
+		id = USA_let_the_bank_collapse
+		icon = GFX_focus_USA_let_the_bank_collapse
+		available = {
+		}
+		bypass = {
+		}
+		x = 1
+		y = 1
+		relative_position_id = USA_crash_the_price_system
+		cost = 10
+		prerequisite = { focus = USA_crash_the_price_system }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = -1000
+			add_stability = -0.50
+		}
+	}
+
+	focus = {
+		id = USA_technates_save_day
+		icon = GFX_focus_USA_technates_save_day
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 2
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_let_the_bank_collapse }
+		prerequisite = { focus = USA_enact_hyperinflation }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.05
+            }
+		}
+	}
+
+	focus = {
+		id = USA_birth_of_the_technate
+		icon = GFX_focus_USA_birth_of_the_technate
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_technates_save_day }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = USA_american_technate
+		}
+	}
+
+	focus = {
+		id = USA_redraw_state_boundaries
+		icon = GFX_focus_USA_redraw_state_boundaries
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 4
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_birth_of_the_technate }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = USA_gerrymander_elections
+		icon = GFX_focus_USA_gerrymander_elections
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 5
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_redraw_state_boundaries }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_political_power = 125
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = USA_first_meeting_of_continental_technocracy
+		icon = GFX_focus_USA_first_meeting_of_continental_technocracy
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 6
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_gerrymander_elections }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.10
+            }
+			add_stability = 0.05
+			remove_ideas = USA_disjointed_government
+			hidden_effect = {
+		    	remove_ideas = USA_disjointed_government_1
+		    	remove_ideas = USA_disjointed_government_2
+			}
+		}
+	}
+
+	## Economy Tree ##
+
+    focus = {
+		id = USA_ten_year_plan
+		icon = GFX_focus_USA_ten_year_plan
+		available = {
+		}
+		bypass = {
+		}
+		x = -7
+		y = 7
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_first_meeting_of_continental_technocracy }
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			remove_ideas = USA_hyperinflation
+		}
+	}
+
+	focus = {
+		id = USA_introduce_energy_credits
+		icon = GFX_focus_USA_introduce_energy_credits
+		available = {
+		}
+		bypass = {
+		}
+		x = -9
+		y = 8
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_ten_year_plan }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = USA_energy_credits
+		}
+	}
+
+	focus = {
+		id = USA_emergancy_credits_plains
+		icon = GFX_focus_USA_emergancy_credits_plains
+		available = {
+		}
+		bypass = {
+		}
+		x = -8
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_introduce_energy_credits }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = -150
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = USA_factory_farming
+		icon = GFX_focus_USA_factory_farming
+		available = {
+		}
+		bypass = {
+		}
+		x = -10
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_introduce_energy_credits }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+            383 = {
+			    add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+            random_owned_state = {
+            	add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
+		}
+	}
+
+	focus = {
+		id = USA_fix_dustbowl_technocrat
+		icon = GFX_focus_USA_fix_dustbowl_technocrat
+		available = {
+		}
+		bypass = {
+		}
+		x = -9
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_emergancy_credits_plains }
+		prerequisite = { focus = USA_factory_farming }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			remove_ideas = USA_dustbowl
+		}
+	}
+
+
+	focus = {
+		id = USA_soviet_corporations
+		icon = GFX_focus_USA_soviet_corporations
+		available = {
+		}
+		bypass = {
+		}
+		x = -5
+		y = 8
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_ten_year_plan }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = USA_soviet_corporatism
+		}
+	}
+
+
+	focus = {
+		id = USA_crush_unions
+		icon = GFX_focus_USA_crush_unions
+		available = {
+		}
+		bypass = {
+		}
+		x = -4
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_soviet_corporations }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_stability = -0.05
+            add_popularity = {
+                ideology = revisionist_socialism
+                popularity = -0.5
+            }
+            add_popularity = {
+                ideology = libertarian_marxism
+                popularity = -0.5
+            }
+		}
+	}
+
+
+	focus = {
+		id = USA_scientist_led_corps
+		icon = GFX_focus_USA_scientist_led_corps
+		available = {
+		}
+		bypass = {
+		}
+		x = -6
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_soviet_corporations }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = -350
+			add_research_slot = 1
+		}
+	}
+
+
+	focus = {
+		id = USA_scientific_revolution
+		icon = GFX_focus_USA_scientific_revolution
+		available = {
+		}
+		bypass = {
+		}
+		x = -5
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_scientist_led_corps }
+		prerequisite = { focus = USA_crush_unions }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = USA_scientific_revolution
+		}
+	}
+
+
+	focus = {
+		id = USA_economic_revolution
+		icon = GFX_focus_USA_economic_revolution
+		available = {
+		}
+		bypass = {
+		}
+		x = -7
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_fix_dustbowl_technocrat }
+		prerequisite = { focus = USA_scientific_revolution }
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			remove_ideas = USA_crashed_price_system
+		}
+	}
+
+	focus = {
+		id = USA_self_sustaining_technates
+		icon = GFX_focus_USA_self_sustaining_technates
+		available = {
+		}
+		bypass = {
+		}
+		x = -9
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_economic_revolution }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = USA_self_sustaining_technates
+		}
+	}
+
+	focus = {
+		id = USA_monorail_development
+		icon = GFX_focus_USA_monorail_development
+		available = {
+		}
+		bypass = {
+		}
+		x = -9
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_self_sustaining_technates }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			360 = {    
+				set_building_level = {
+            	    type = infrastructure
+            	    level = 10
+             		instant_build = yes
+                }
+			}
+			359 = {    
+				set_building_level = {
+                    type = infrastructure
+                    level = 10
+                    instant_build = yes
+                }
+			}
+			358 = {    
+				set_building_level = {
+                    type = infrastructure
+                    level = 10
+                    instant_build = yes
+                }
+			}
+			357 = {    
+				set_building_level = {
+                    type = infrastructure
+                    level = 10
+                    instant_build = yes
+                }
+			}
+			361 = {    
+				set_building_level = {
+                    type = infrastructure
+                    level = 10
+                    instant_build = yes
+                }
+			}
+			261 = {    
+				set_building_level = {
+                    type = infrastructure
+                    level = 10
+                    instant_build = yes
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = USA_increase_oil_infastructure
+		icon = GFX_focus_USA_increase_oil_infastructure
+		available = {
+		}
+		bypass = {
+		}
+		x = -10
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_monorail_development }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+                type = oil
+        	    amount = 56
+            	state = 375
+            }
+		}
+	}
+
+	focus = {
+		id = USA_steel_ohio
+		icon = GFX_focus_USA_steel_ohio
+		available = {
+		}
+		bypass = {
+		}
+		x = -8
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_monorail_development }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+                type = steel
+                amount = 32
+                state = 261
+            }
+		}
+	}
+
+	focus = {
+		id = USA_civilian_factory_development
+		icon = GFX_focus_USA_civilian_factory_development
+		available = {
+		}
+		bypass = {
+		}
+		x = -9
+		y = 15
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_increase_oil_infastructure }
+		prerequisite = { focus = USA_steel_ohio }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+            385 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                	type = industrial_complex
+                    level = 2
+    	        }
+        	}
+            386 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+		}
+	}
+
+	focus = {
+		id = USA_work_with_mega_corps
+		icon = GFX_focus_USA_work_with_mega_corps
+		available = {
+		}
+		bypass = {
+		}
+		x = -6
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_economic_revolution }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = USA_pacific_rim_development
+		icon = GFX_focus_USA_pacific_rim_development
+		available = {
+		}
+		bypass = {
+		}
+		x = -6
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_work_with_mega_corps }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			378 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+            379 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                	type = arms_factory
+               		level = 2
+                }
+            }
+		}
+	}
+
+	focus = {
+		id = USA_military_south
+		icon = GFX_focus_USA_military_south
+		available = {
+		}
+		bypass = {
+		}
+		x = -6
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_pacific_rim_development }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			368 = {
+				add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+            }
+            372 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+            }
+
+		}
+	}
+
+	focus = {
+		id = USA_factory_buildup_by_great_lakes
+		icon = GFX_focus_USA_factory_buildup_by_great_lakes
+		available = {
+		}
+		bypass = {
+		}
+		x = -6
+		y = 15
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_military_south }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			395 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                }
+            }
+            396 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                }
+            }
+		}
+	}
+
+	focus = {
+		id = USA_technates_shall_lead_the_way
+		icon = GFX_focus_USA_technates_shall_lead_the_way
+		available = {
+		}
+		bypass = {
+		}
+		x = -7
+		y = 16
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_civilian_factory_development }
+		prerequisite = { focus = USA_factory_buildup_by_great_lakes }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_self_sustaining_technates
+				add_idea = USA_self_sustaining_technates_1
+			}
+			remove_ideas = USA_under_budget_military
+		}
+	}
+
+
+	#######################################
+	#######Internal Technocracy Path#######
+	#######################################
+
+    focus = {
+		id = USA_technocrat_calendar
+		icon = GFX_focus_USA_technocrat_calendar
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 7
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_first_meeting_of_continental_technocracy }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_stability = -0.10
+			add_ideas = USA_technate_calendar
+		}
+	}
+
+	 focus = {
+		id = USA_24_hour_services
+		icon = GFX_focus_USA_24_hour_services
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 8
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_technocrat_calendar }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = USA_24_hour_services
+		}
+	}
+
+	focus = {
+		id = USA_milkshakes_and_rollercoasters
+		icon = GFX_focus_USA_milkshakes_and_rollercoasters
+		available = {
+		}
+		bypass = {
+		}
+		x = -2
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_24_hour_services }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 250
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = USA_technocratic_cartoons
+		icon = GFX_focus_USA_technocratic_cartoons
+		available = {
+		}
+		bypass = {
+		}
+		x = -2
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_milkshakes_and_rollercoasters }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			hidden_effect = {
+				country_event = {
+					id = usa.53
+					days = 80
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_force_membership
+		icon = GFX_focus_USA_force_membership
+		available = {
+		}
+		bypass = {
+		}
+		x = -2
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_technocratic_cartoons }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.90
+            }
+            add_stability = -0.25
+		}
+	}
+
+	focus = {
+		id = USA_daily_newspapers
+		icon = GFX_focus_USA_weekly_newspapers_to_all
+		available = {
+		}
+		bypass = {
+		}
+		x = -1
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_force_membership }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = USA_daily_news
+		}
+	}
+
+	focus = {
+		id = USA_technocrat_teaching
+		icon = GFX_focus_USA_technocrat_teaching_in_the_schools
+		available = {
+		}
+		bypass = {
+		}
+		x = -3
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_force_membership }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.20
+		}
+	}
+
+	focus = {
+		id = USA_higher_education_for_all
+		icon = GFX_focus_USA_higher_education_for_all
+		available = {
+		}
+		bypass = {
+		}
+		x = -2
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_daily_newspapers }
+		prerequisite = { focus = USA_technocrat_teaching }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = -500
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = USA_supreme_court_packing
+		icon = GFX_focus_USA_supreme_court_packing
+		available = {
+		}
+		bypass = {
+		}
+		x = 2
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_24_hour_services }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.10
+            }
+            add_stability = -0.10
+		}
+	}
+
+	focus = {
+		id = USA_work_with_politicians
+		icon = GFX_focus_USA_work_with_politicians
+		available = {
+		}
+		bypass = {
+		}
+		x = 1
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_supreme_court_packing }
+		mutually_exclusive = { focus = USA_sweep_away_the_senate }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = USA_sweep_away_the_senate
+		icon = GFX_focus_USA_sweep_away_the_senate
+		available = {
+		}
+		bypass = {
+		}
+		x = 3
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_supreme_court_packing }
+		mutually_exclusive = { focus = USA_work_with_politicians }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.10
+            }
+		}
+	}
+
+	focus = {
+		id = USA_bribe_the_senate
+		icon = GFX_focus_USA_bribe_the_senate
+		available = {
+		}
+		bypass = {
+		}
+		x = 1
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_work_with_politicians }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = -250
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = USA_white_house_always_wins
+		icon = GFX_focus_USA_white_house_always_wins
+		available = {
+		}
+		bypass = {
+		}
+		x = 1
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_bribe_the_senate }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = USA_subvert_the_house
+		icon = GFX_focus_USA_subvert_the_house
+		available = {
+		}
+		bypass = {
+		}
+		x = 3
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_sweep_away_the_senate }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = USA_house_subverted
+		}
+	}
+
+	focus = {
+		id = USA_science_high_up
+		icon = GFX_focus_USA_science_high_up
+		available = {
+		}
+		bypass = {
+		}
+		x = 3
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_subvert_the_house }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = USA_scientific_dominance
+		}
+	}
+
+	focus = {
+		id = USA_technocratic_government
+		icon = GFX_focus_USA_technocratic_government
+		available = {
+		}
+		bypass = {
+		}
+		x = 2
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = {
+			focus = USA_white_house_always_wins
+			focus = USA_science_high_up
+		}
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+                ideology = accelerationism
+                popularity = 0.05
+            }
+		}
+	}
+
+	focus = {
+		id = USA_experimental_community_of_tommorow
+		icon = GFX_focus_USA_experimental_community_of_tommorow
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_higher_education_for_all }
+		prerequisite = { focus = USA_technocratic_government }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                }
+            }
+            random_owned_state = {
+			    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                }
+            }
+            random_owned_state = {
+			    add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+            	    type = infrastructure
+            	    level = 2
+                }
+            }
+            random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+            	    type = infrastructure
+            	    level = 2
+                }
+            }
+		}
+	}
+
+	focus = {
+		id = USA_true_technocratic_society
+		icon = GFX_focus_USA_true_technocratic_society
+		available = {
+		}
+		bypass = {
+		}
+		x = 0
+		y = 15
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_experimental_community_of_tommorow }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.10
+			add_ideas = USA_technocratic_society
+			add_research_slot = 1
+		}
+	}
+
+	#######################################
+	#######   Foriegn Policy Path   #######
+	#######################################
+
+    focus = {
+		id = USA_technocracy_phillipines
+		icon = GFX_focus_USA_technocracy_phillipines
+		available = {
+		}
+		bypass = {
+		}
+		x = 7
+		y = 7
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_first_meeting_of_continental_technocracy }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			PHI = {
+				set_politics = {
+	           		ruling_party = accelerationism
+                }
+			}
+		}
+	}
+
+	focus = {
+		id = USA_domino_theory
+		icon = GFX_focus_USA_domino_theory
+		available = {
+		}
+		bypass = {
+		}
+		x = 7
+		y = 8
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_technocracy_phillipines }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = ENG_technocratic_volunteers
+		}
+	}
+
+	focus = {
+		id = USA_american_ambitions
+		icon = GFX_focus_USA_american_ambitions
+		available = {
+		}
+		bypass = {
+		}
+		x = 6
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_domino_theory }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = USA_central_american_coups
+		icon = GFX_focus_USA_central_american_coups
+		available = {
+		}
+		bypass = {
+		}
+		x = 5
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_american_ambitions }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = {
+				id = usa.47
+			}
+			create_wargoal = {
+    			target = COS
+    			type = annex_everything
+			}
+			create_wargoal = {
+    			target = HON
+    			type = annex_everything
+			}
+			create_wargoal = {
+    			target = GUA
+    			type = annex_everything
+			}
+			annex_country = {
+    			target = NIC
+    			transfer_troops = yes
+			}
+			annex_country = {
+    			target = PAN
+    			transfer_troops = yes
+			}
+		}
+	}
+
+	focus = {
+		id = USA_work_with_peru
+		icon = GFX_focus_USA_work_with_peru
+		available = {
+		}
+		bypass = {
+		}
+		x = 7
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_american_ambitions }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			PRU = {
+				country_event = {
+					id = usa.51
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_support_quebec
+		icon = GFX_focus_USA_support_quebec
+		available = {
+		}
+		bypass = {
+		}
+		x = 6
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_central_american_coups }
+		prerequisite = { focus = USA_work_with_peru }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			CAN = {
+				country_event = {
+					id = usa.52
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_terror_attacks_canada
+		icon = GFX_focus_USA_terror_attacks_canada
+		available = {
+		}
+		bypass = {
+		}
+		x = 6
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_support_quebec }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			CAN = {
+				add_ideas = USA_terror
+			}
+		}
+	}
+
+	focus = {
+		id = USA_great_north_american_war
+		icon = GFX_focus_USA_great_north_american_war
+		available = {
+		}
+		bypass = {
+		}
+		x = 6
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_terror_attacks_canada }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			declare_war_on = {
+   				target = CAN
+    			type = annex_everything
+			}
+			declare_war_on = {
+   				target = MEX
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = USA_form_the_NAT
+		icon = GFX_focus_USA_form_the_NAT
+		available = {
+			CAN = {
+				OR = {
+					has_capitulated = yes
+					NOT = {
+						has_war_with = USA
+					}
+				}
+			}
+			MEX = {
+				OR = {
+					has_capitulated = yes
+					NOT = {
+						has_war_with = USA
+					}
+				}
+			}
+		}
+		bypass = {
+		}
+		x = 6
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_great_north_american_war }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = USA_north_american_technate
+			country_event = {
+				id = usa.54
+				days = 3
+			}
+			custom_effect_tooltip = "USA_TECHNATE_CORES"
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = MEX
+							is_core_of = CAN
+						}
+					}
+					add_core_of = USA
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_destroy_second_phillipines_insurrection
+		icon = GFX_focus_USA_2nd_Phillipines_Insurrection
+		available = {
+
+		}
+		bypass = {
+		}
+		x = 9
+		y = 9
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_domino_theory }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			PHI = {
+				start_civil_war = {
+					ideology = liberalism
+					size = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_fortress_guam
+		icon = GFX_focus_USA_fortress_guam
+		available = {
+		}
+		bypass = {
+		}
+		x = 9
+		y = 10
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_destroy_second_phillipines_insurrection }
+		ai_will_do = {
+			factor = 1
+		}
+
+    	completion_reward = {
+			638 = {            
+				add_building_construction = {
+            	    type = coastal_bunker
+            	    province = 12140
+            	    level = 7
+            	    instant_build = yes
+            	}
+            }
+		}
+	}
+
+	focus = {
+		id = USA_take_over_indochina
+		icon = GFX_focus_USA_take_control_over_indochina
+		available = {
+		}
+		bypass = {
+		}
+		x = 8
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_fortress_guam }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+                type = puppet_wargoal_focus
+                target = DAI
+            }
+		}
+	}
+
+	focus = {
+		id = USA_prepare_for_australian_invasion
+		icon = GFX_focus_USA_prepare_for_the_asian_invasion
+		available = {
+		}
+		bypass = {
+		}
+		x = 8
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_take_over_indochina }
+		ai_will_do = {
+			factor = 1
+		}
+
+	    completion_reward = {
+			627 = {
+				add_building_construction = {
+					type = naval_base
+					level = 5
+					instant_build = yes
+					province = 4241
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
+			642 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+               		type = coastal_bunker
+            	    province = 13050
+                	level = 7
+                	instant_build = yes
+            	}
+			}
+			727 = {
+				add_building_construction = {
+               		type = coastal_bunker
+            	    province = 13053
+                	level = 3
+                	instant_build = yes
+            	}
+            	add_building_construction = {
+               		type = coastal_bunker
+            	    province = 13049
+                	level = 3
+                	instant_build = yes
+            	}
+            	add_building_construction = {
+               		type = coastal_bunker
+            	    province = 13048
+                	level = 3
+                	instant_build = yes
+            	}
+			}
+		}
+	}
+
+	focus = {
+		id = USA_war_plan_scarlet
+		icon = GFX_focus_USA_war_plan_scarlet
+		available = {
+		}
+		bypass = {
+		}
+		x = 8
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_prepare_for_australian_invasion }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+                type = puppet_wargoal_focus
+                target = AST
+            }
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = WAS
+            }
+		}
+	}
+
+	focus = {
+		id = USA_jaden_gewel
+		icon = GFX_focus_USA_the_jaden_jewel
+		available = {
+		}
+		bypass = {
+		}
+		x = 10
+		y = 11
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_fortress_guam }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = USA_take_over_the_yangtze
+		icon = GFX_focus_USA_take_over_the_yangtze
+		available = {
+		}
+		bypass = {
+		}
+		x = 10
+		y = 12
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_jaden_gewel }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+                type = puppet_wargoal_focus
+                target = KMT
+            }
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = FJN
+            }
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = GDP
+            }
+		}
+	}
+
+	focus = {
+		id = USA_combat_japan
+		icon = GFX_focus_USA_combat_japan
+		available = {
+		}
+		bypass = {
+		}
+		x = 10
+		y = 13
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_take_over_the_yangtze }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+                type = puppet_wargoal_focus
+                target = JAP
+            }
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = JPR
+            }
+		}
+	}
+
+	focus = {
+		id = USA_pacific_hegemony
+		icon = GFX_focus_USA_pacific_hegemony
+		available = {
+		}
+		bypass = {
+		}
+		x = 9
+		y = 14
+		relative_position_id = USA_crash_the_price_system
+		cost = 5
+		prerequisite = { focus = USA_war_plan_scarlet }
+		prerequisite = { focus = USA_combat_japan }
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+}

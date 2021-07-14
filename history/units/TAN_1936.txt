@@ -1,0 +1,81 @@
+﻿division_template = {
+	name = "Cavalry Division"			# Cavalry Division
+
+	division_names_group = TAN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+		engineer  = { x = 0 y = 1}		
+	}
+}
+units = {
+    division= {			
+		name = "1st Asiatic Cavalry Division"
+		location = 10627
+		division_template = "Cavalry Division"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}	
+	division= {			
+		name = "Tibetan Volunteer Cavalry Division"
+		location = 10627
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.65
+
+	}
+	division= {			
+		name = "Manchurian Cavalry Division"
+		location = 10627
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.65
+
+	}
+	division= {			
+		name = "1st Russian Cavalry Division"
+		location = 7799
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}
+	division= {			
+		name = "2nd Russian Cavalry Division"
+		location = 7799
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0
+
+	}
+	division= {			
+		name = "3rd Russian Cavalry Division"
+		location = 7799
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {			
+		name = "Bogd Khan Division"
+		location = 7799
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.07
+		start_equipment_factor = 0.65
+
+	}	
+	division= {			
+		name = "Cossack Volunteer Cavalry Division"
+		location = 7799
+		division_template = "Cavalry Division"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+
+	}	
+}

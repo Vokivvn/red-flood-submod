@@ -1,0 +1,80 @@
+ideas = {
+	
+	country = {
+		
+		MAD_british_direct_rule = {
+			removal_cost = -1 
+			picture = hol_caved_to_the_british
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.25
+			}
+		}
+		
+	    MAD_collapsing_raj = {
+			removal_cost = -1 
+			picture = MAD_collapsing_raj
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.3
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+		}
+		
+	    MAD_partisan_infestation = {
+			removal_cost = -1 
+			picture = chi_war_of_resistance2
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				war_support_factor = -0.35
+				training_time_army_factor = 0.40
+				army_morale_factor = -0.1
+			}
+		}
+		
+	    MAD_refugee_crisis = {
+			removal_cost = -1 
+			picture = prc_low_popular_support3
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				stability_factor = -0.25
+				production_speed_infrastructure_factor = -0.2
+			}
+		}
+		
+	    MAD_post_british_crisis = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				stability_factor = -0.25
+				army_morale_factor = -0.3
+			}
+		}
+		
+	    MAD_british_investment = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = MAD
+			}
+			modifier = {
+				stability_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+	}
+}

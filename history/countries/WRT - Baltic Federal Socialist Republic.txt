@@ -1,0 +1,117 @@
+capital = 1058
+
+oob = "WRT_1936"
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_submarine = 1
+	basic_machine_tools = 1
+	electronic_mechanical_engineering = 1
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 40
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 5
+	liberalism = 0
+	conservatism = 5
+	right_authoritarianism = 5
+	despotism = 0
+	reactionism = 40
+	accelerationism = 5
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Jaan Anvelt"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/WRU/Portrait_WRU_Jaan_Anvelt.tga"
+	expire = "1965.1.1"
+	ideology = totalism
+	traits = {
+
+	}
+}
+create_country_leader = {
+	name = "Georgiy Leykhtenbergskiy"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/WRU/Portrait_WRU_Georgiy_Leykhtenbergskiy.tga"
+	expire = "1965.1.1"
+	ideology = esoteric_reactionism
+	traits = {
+
+	}
+}
+
+create_corps_commander = {
+	name = "Arnold Meri"
+	portrait_path = "gfx/leaders/WRU/Arnold_Meri.dds"
+	id = 198
+	traits = { organizer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Jānis Lācis"
+	portrait_path = "gfx/leaders/WRU/Portrait_WRU_Janis_Lacis.tga"
+	id = 197
+	traits = { infantry_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Antanas Martusevičius"
+	portrait_path = "gfx/leaders/WRU/Portrait_WRU_Antanas_Martusevičius.tga"
+	id = 196
+	traits = { skilled_staffer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Aleksandr Loktionov"
+	portrait_path = "gfx/leaders/WRU/Portrait_WRU_Aleksandr_Loktionov.tga"
+	id = 195
+	traits = { trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}

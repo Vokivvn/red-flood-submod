@@ -1,0 +1,13 @@
+BLR_capitalmoving = {
+	priority = 200
+	allowed = {
+		original_tag = BLR
+	}
+	available = {
+		has_completed_focus = BLR_means_to_an_end
+	}
+	visible = {
+		has_completed_focus = BLR_means_to_an_end
+	}
+	icon = generic_political_actions
+}

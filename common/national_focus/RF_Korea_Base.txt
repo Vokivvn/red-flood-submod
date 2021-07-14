@@ -1,0 +1,152 @@
+#####################
+#	Korea - Baba	#
+#####################
+focus_tree = {
+	id = KOR_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+	
+	#Focus for Making the Best of the Worst
+	focus = {
+		id = IKR_making_the_best_of_the_worst
+		icon = GFX_focus_KOR_making_the_best_of_the_worst
+		x = 4
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#reduce popularity of despotism for right-auth
+			country_event = {
+				id = kor.2
+			}
+		}
+	}
+
+	#Focus for Egalitarianism at Work
+	focus = {
+		id = IKR_egalitarianism_at_work
+		icon = GFX_focus_KOR_egalitarianism_at_work
+		x = 0
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_making_the_best_of_the_worst }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#popularity for all socs
+			country_event = {
+				id = kor.3
+			}
+		}
+	}
+
+	#Focus for Status of Cultural Preservation
+	focus = {
+		id = IKR_status_of_cultural_preservation
+		icon = GFX_focus_KOR_status_of_cultural_preservation
+		x = 2
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_making_the_best_of_the_worst }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#event suppression of Korean and the popular reaction
+			country_event = {
+				id = kor.4
+			}
+		}
+	}
+
+	#Focus for Extend the Industrial Quotas
+	focus = {
+		id = IKR_extend_the_industrial_quotas
+		icon = GFX_focus_KOR_extend_industrial_quotas
+		x = 4
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_making_the_best_of_the_worst }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#boost production, boost popularity of socs
+			country_event = {
+				id = kor.5
+			}
+		}
+	}
+
+	#Focus for Question of Land Ownership
+	focus = {
+		id = IKR_question_of_land_ownership
+		icon = GFX_focus_KOR_question_of_land_ownership
+		x = 6
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_making_the_best_of_the_worst }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#event option, either piss off the socs or placate them
+			country_event = {
+				id = kor.6
+			}
+		}
+	}
+
+	#Focus for Amend the Japanese Migration Policy
+	focus = {
+		id = IKR_amend_the_japanese_migration_policy
+		icon = GFX_focus_KOR_amend_the_japanese_migration_policy
+		x = 8
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_making_the_best_of_the_worst }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#option to boost or reduce, boost increases instability but will add one infra to 3 states, reduce will boost stability but nerf war support and boost con popularity
+			country_event = {
+				id = kor.7
+			}
+		}
+	}
+
+#End of focuses 
+ }

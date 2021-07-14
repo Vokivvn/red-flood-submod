@@ -1,0 +1,1010 @@
+############################
+### Custom Country Paths ###
+############################
+
+GER_ai_route = {
+	name = "GER_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KPD
+		text = "RULE_OPTION_GER_KPD"
+		desc = "RULE_OPTION_GER_KPD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KPDA
+		text = "RULE_OPTION_GER_KPDA"
+		desc = "RULE_OPTION_GER_KPDA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KPDS
+		text = "RULE_OPTION_GER_KPDS"
+		desc = "RULE_OPTION_GER_KPDS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NMAPD
+		text = "RULE_OPTION_GER_NMAPD"
+		desc = "RULE_OPTION_GER_NMAPD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = PAGANBOL
+		text = "RULE_OPTION_GER_PAGANBOL"
+		desc = "RULE_OPTION_GER_PAGANBOL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USPD
+		text = "RULE_OPTION_GER_USPD"
+		desc = "RULE_OPTION_GER_USPD_DESC"
+		allow_achievements = yes
+	}
+}
+
+FRA_ai_route = {
+	name = "FRA_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = ESCADRON
+		text = "RULE_OPTION_FRA_ESCADRON"
+		desc = "RULE_OPTION_FRA_ESCADRON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ACEPHALE
+		text = "RULE_OPTION_FRA_ACEPHALE"
+		desc = "RULE_OPTION_FRA_ACEPHALE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DRUIDISTS
+		text = "RULE_OPTION_FRA_DRUIDISTS"
+		desc = "RULE_OPTION_FRA_DRUIDISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+}
+
+USA_ai_route = {
+	name = "USA_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = PROGRESSIVES
+		text = "RULE_OPTION_USA_PROGRESSIVES"
+		desc = "RULE_OPTION_USA_PROGRESSIVES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = AMERICANS
+		text = "RULE_OPTION_USA_AMERICANS"
+		desc = "RULE_OPTION_USA_AMERICANS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = REPUBLICANS
+		text = "RULE_OPTION_USA_REPUBLICANS"
+		desc = "RULE_OPTION_USA_REPUBLICANS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TECHNOCRACTS
+		text = "RULE_OPTION_USA_TECHNOCRACTS"
+		desc = "RULE_OPTION_USA_TECHNOCRACTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ANARCHISTS
+		text = "RULE_OPTION_USA_ANARCHISTS"
+		desc = "RULE_OPTION_USA_ANARCHISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = USA_COLLAPSE
+		text = "RULE_OPTION_USA_COLLAPSE"
+		desc = "RULE_OPTION_USA_COLLAPSE_DESC"
+		allow_achievements = yes
+	}
+}
+
+ENG_ai_route = {
+	name = "ENG_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LABOR
+		text = "RULE_OPTION_ENG_LABOR"
+		desc = "RULE_OPTION_ENG_LABOR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = LIBERAL
+		text = "RULE_OPTION_ENG_LIBERAL"
+		desc = "RULE_OPTION_ENG_LIBERAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TORIES
+		text = "RULE_OPTION_ENG_TORIES"
+		desc = "RULE_OPTION_ENG_TORIES_DESC"
+		allow_achievements = yes
+	}
+}
+
+ITA_ai_route = {
+	name = "ITA_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ITA_STATUS_QUO
+		text = "RULE_OPTION_ITA_STATUS_QUO"
+		desc = "RULE_OPTION_ITA_STATUS_QUO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ITA_BALBO
+		text = "RULE_OPTION_ITA_BALBO"
+		desc = "RULE_OPTION_ITA_BALBO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ITA_NITTI
+		text = "RULE_OPTION_ITA_NITTI"
+		desc = "RULE_OPTION_ITA_NITTI_DESC"
+		allow_achievements = yes
+	}
+}
+
+FIU_ai_route = {
+	name = "FIU_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KELLER
+		text = "RULE_OPTION_FIU_KELLER"
+		desc = "RULE_OPTION_FIU_KELLER_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MARINETTI
+		text = "RULE_OPTION_FIU_MARINETTI"
+		desc = "RULE_OPTION_FIU_MARINETTI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SHIMOI
+		text = "RULE_OPTION_FIU_SHIMOI"
+		desc = "RULE_OPTION_FIU_SHIMOI_DESC"
+		allow_achievements = yes
+	}
+}
+
+POL_ai_route = {
+	name = "POL_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DASZYNSKI
+		text = "RULE_OPTION_POL_DASZYNSKI"
+		desc = "RULE_OPTION_POL_DASZYNSKI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SZUKALSKI
+		text = "RULE_OPTION_POL_SZUKALSKI"
+		desc = "RULE_OPTION_POL_SZUKALSKI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ZYMIERSKI
+		text = "RULE_OPTION_POL_ZYMIERSKI"
+		desc = "RULE_OPTION_POL_ZYMIERSKI_DESC"
+		allow_achievements = yes
+	}
+}
+
+UKR_ai_route = {
+	name = "UKR_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_DEMOCRACY_STATUSQUO
+		text = "RULE_OPTION_UKR_SOCDEM"
+		desc = "RULE_OPTION_UKR_SOCDEM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_DEMOCRACY_LIBERALS
+		text = "RULE_OPTION_UKR_LIBERALS"
+		desc = "RULE_OPTION_UKR_LIBERALS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_DEMOCRACY_CONSERVATIVES
+		text = "RULE_OPTION_UKR_CONSERVATIVES"
+		desc = "RULE_OPTION_UKR_CONSERVATIVES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_DEMOCRACY_SOCIALISTS
+		text = "RULE_OPTION_UKR_SOCIALISTS"
+		desc = "RULE_OPTION_UKR_SOCIALISTS_DESC"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = UKR_AUTHORITARIANISM_DICTATORSHIP
+		text = "RULE_OPTION_UKR_DICTATORSHIP"
+		desc = "RULE_OPTION_UKR_DICTATORSHIP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_AUTHORITARIANISM_REPUBLIC
+		text = "RULE_OPTION_UKR_REPUBLIC"
+		desc = "RULE_OPTION_UKR_REPUBLIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_AUTHORITARIANISM_MONARCHY
+		text = "RULE_OPTION_UKR_MONARCHY"
+		desc = "RULE_OPTION_UKR_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_AUTHORITARIANISM_COSSACKS
+		text = "RULE_OPTION_UKR_COSSACKS"
+		desc = "RULE_OPTION_UKR_COSSACKS_DESC"
+		allow_achievements = yes
+	}
+
+	option = {
+		name = UKR_ACCELERATIONISM_TELIHA
+		text = "RULE_OPTION_UKR_TELIHA"
+		desc = "RULE_OPTION_UKR_TELIHA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_ACCELERATIONISM_BANDERA
+		text = "RULE_OPTION_UKR_BANDERA"
+		desc = "RULE_OPTION_UKR_BANDERA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_ACCELERATIONISM_NEWART
+		text = "RULE_OPTION_UKR_NEWART"
+		desc = "RULE_OPTION_UKR_NEWART_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = UKR_ACCELERATIONISM_SELFSUFFICIENCY
+		text = "RULE_OPTION_UKR_SELFSUFFICIENCY"
+		desc = "RULE_OPTION_UKR_SELFSUFFICIENCY_DESC"
+		allow_achievements = yes
+	}
+}
+
+BLR_ai_route = {
+	name = "BLR_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = DICTATORSHIP
+		text = "RULE_OPTION_BLR_DICTATORSHIP"
+		desc = "RULE_OPTION_BLR_DICTATORSHIP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DEMOCRACY
+		text = "RULE_OPTION_BLR_DEMOCRACY"
+		desc = "RULE_OPTION_BLR_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = EMPIRE
+		text = "RULE_OPTION_BLR_EMPIRE"
+		desc = "RULE_OPTION_BLR_EMPIRE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SAVINKOV
+		text = "RULE_OPTION_BLR_SAVINKOV"
+		desc = "RULE_OPTION_BLR_SAVINKOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = VITUSKA
+		text = "RULE_OPTION_BLR_VITUSKA"
+		desc = "RULE_OPTION_BLR_VITUSKA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOGDANOV
+		text = "RULE_OPTION_BLR_BOGDANOV"
+		desc = "RULE_OPTION_BLR_BOGDANOV_DESC"
+		allow_achievements = yes
+	}
+}
+
+AUS_ai_route = {
+	name = "AUS_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DOLFUSS
+		text = "RULE_OPTION_AUS_DOLFUSS"
+		desc = "RULE_OPTION_AUS_DOLFUSS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROHM
+		text = "RULE_OPTION_AUS_ROHM"
+		desc = "RULE_OPTION_AUS_ROHM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = HITLER
+		text = "RULE_OPTION_AUS_HITLER"
+		desc = "RULE_OPTION_AUS_HITLER_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SCHUSCHNIGG
+		text = "RULE_OPTION_ZHR_SCHUSCHNIGG"
+		desc = "RULE_OPTION_ZHR_SCHUSCHNIGG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = REPUBLIC
+		text = "RULE_OPTION_ZHR_REPUBLIC"
+		desc = "RULE_OPTION_ZHR_REPUBLIC_DESC"
+		allow_achievements = yes
+	}
+}
+
+FIN_ai_route = {
+	name = "FIN_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = DEMOCRACY
+		text = "RULE_OPTION_FIN_DEMOCRACY"
+		desc = "RULE_OPTION_FIN_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KEKKONEN
+		text = "RULE_OPTION_FIN_KEKKONEN"
+		desc = "RULE_OPTION_FIN_KEKKONEN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MONARCHY
+		text = "RULE_OPTION_FIN_MONARCHY"
+		desc = "RULE_OPTION_FIN_MONARCHY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = EGYPTIAN
+		text = "RULE_OPTION_FIN_EGYPTIAN"
+		desc = "RULE_OPTION_FIN_EGYPTIAN_DESC"
+		allow_achievements = yes
+	}
+}
+
+FIR_ai_route = {
+	name = "FIR_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = FIR_LENINISTS
+		text = "RULE_OPTION_FIR_LENINISTS"
+		desc = "RULE_OPTION_FIR_LENINISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIR_COUNCILISTS
+		text = "RULE_OPTION_FIR_COUNCILISTS"
+		desc = "RULE_OPTION_FIR_COUNCILISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIR_ANARCHISTS
+		text = "RULE_OPTION_FIR_ANARCHISTS"
+		desc = "RULE_OPTION_FIR_ANARCHISTS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIR_BANDITS
+		text = "RULE_OPTION_FIR_BANDITS"
+		desc = "RULE_OPTION_FIR_BANDITS_DESC"
+		allow_achievements = yes
+	}
+}
+
+YUG_ai_route = {
+	name = "YUG_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = YUG_UJEVIC
+		text = "RULE_OPTION_YUG_UJEVIC"
+		desc = "RULE_OPTION_YUG_UJEVIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = YUG_TESLA
+		text = "RULE_OPTION_YUG_TESLA"
+		desc = "RULE_OPTION_YUG_TESLA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = YUG_LJOTIC
+		text = "RULE_OPTION_YUG_LJOTIC"
+		desc = "RULE_OPTION_YUG_LJOTIC_DESC"
+		allow_achievements = yes
+	}
+}
+
+RUS_ai_route = {
+	name = "RUS_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = LIBERALIZATION
+		text = "RULE_OPTION_RUS_LIBERALIZATION"
+		desc = "RULE_OPTION_RUS_LIBERALIZATION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BLACKBLOCK
+		text = "RULE_OPTION_RUS_BLACKBLOCK"
+		desc = "RULE_OPTION_RUS_BLACKBLOCK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = NOVYKURS
+		text = "RULE_OPTION_RUS_NOVYKURS"
+		desc = "RULE_OPTION_RUS_NOVYKURS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MLADOROSSI
+		text = "RULE_OPTION_RUS_MLADOROSSI"
+		desc = "RULE_OPTION_RUS_MLADOROSSI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DITERIKHS
+		text = "RULE_OPTION_RUS_DITERIKHS"
+		desc = "RULE_OPTION_RUS_DITERIKHS_DESC"
+		allow_achievements = yes
+	}
+}
+
+ZHR_ai_route = {
+	name = "ZHR_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = KERENSKY
+		text = "RULE_OPTION_ZHR_KERENSKY"
+		desc = "RULE_OPTION_ZHR_KERENSKY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TROTSKY
+		text = "RULE_OPTION_ZHR_TROTSKY"
+		desc = "RULE_OPTION_ZHR_TROTSKY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = CHAPAYEV
+		text = "RULE_OPTION_ZHR_CHAPAYEV"
+		desc = "RULE_OPTION_ZHR_CHAPAYEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = BOLDYREV
+		text = "RULE_OPTION_ZHR_BOLDYREV"
+		desc = "RULE_OPTION_ZHR_BOLDYREV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SPIRIDONOVA
+		text = "RULE_OPTION_ZHR_SPIRIDONOVA"
+		desc = "RULE_OPTION_ZHR_SPIRIDONOVA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KAMENEV
+		text = "RULE_OPTION_ZHR_KAMENEV"
+		desc = "RULE_OPTION_ZHR_KAMENEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = TRIUMVIRATE
+		text = "RULE_OPTION_ZHR_TRIUMVIRATE"
+		desc = "RULE_OPTION_ZHR_TRIUMVIRATE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = GASTEV
+		text = "RULE_OPTION_ZHR_GASTEV"
+		desc = "RULE_OPTION_ZHR_GASTEV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KADETS
+		text = "RULE_OPTION_ZHR_KADETS"
+		desc = "RULE_OPTION_ZHR_KADETS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ROSENBAUM
+		text = "RULE_OPTION_ZHR_ROSENBAUM"
+		desc = "RULE_OPTION_ZHR_ROSENBAUM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ZHR_COLLAPSE
+		text = "RULE_OPTION_ZHR_COLLAPSE"
+		desc = "RULE_OPTION_ZHR_COLLAPSE_DESC"
+		allow_achievements = yes
+	}
+}
+
+BRA_ai_route = {
+	name = "BRA_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = AMAZONAS
+		text = "RULE_OPTION_BRA_AMAZONAS"
+		desc = "RULE_OPTION_BRA_AMAZONAS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = PRESTES
+		text = "RULE_OPTION_BRA_PRESTES"
+		desc = "RULE_OPTION_BRA_PRESTES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = AQUINO
+		text = "RULE_OPTION_BRA_AQUINO"
+		desc = "RULE_OPTION_BRA_AQUINO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = COLLAPSE
+		text = "RULE_OPTION_BRA_COLLAPSE"
+		desc = "RULE_OPTION_BRA_COLLAPSE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ELECTIONS
+		text = "RULE_OPTION_BRA_ELECTIONS"
+		desc = "RULE_OPTION_BRA_ELECTIONS_DESC"
+		allow_achievements = yes
+	}
+}
+
+LIB_ai_route = {
+	name = "LIB_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = GARVEY
+		text = "RULE_OPTION_LIB_GARVEY"
+		desc = "RULE_OPTION_LIB_GARVEY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = PADMORE
+		text = "RULE_OPTION_LIB_PADMORE"
+		desc = "RULE_OPTION_LIB_PADMORE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = FIRESTONE
+		text = "RULE_OPTION_LIB_FIRESTONE"
+		desc = "RULE_OPTION_LIB_FIRESTONE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WHIG
+		text = "RULE_OPTION_LIB_WHIG"
+		desc = "RULE_OPTION_LIB_WHIG_DESC"
+		allow_achievements = yes
+	}
+}
+
+MAG_ai_route = {
+	name = "MAG_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MAG_DEMOCRACY
+		text = "RULE_OPTION_MAG_DEMOCRACY"
+		desc = "RULE_OPTION_MAG_DEMOCRACY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MAG_REGENCY
+		text = "RULE_OPTION_MAG_REGENCY"
+		desc = "RULE_OPTION_MAG_REGENCY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MAG_SOCIALIST
+		text = "RULE_OPTION_MAG_SOCIALIST"
+		desc = "RULE_OPTION_MAG_SOCIALIST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = MAG_FUTURIST
+		text = "RULE_OPTION_MAG_FUTURIST"
+		desc = "RULE_OPTION_MAG_FUTURIST_DESC"
+		allow_achievements = yes
+	}
+}
+
+JAP_ai_route = {
+	name = "JAP_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+	}
+	option = {
+		name = RESTORATION
+		text = "RULE_OPTION_JAP_RESTORATION"
+		desc = "RULE_OPTION_JAP_RESTORATION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SHOGUNATE
+		text = "RULE_OPTION_JAP_SHOGUNATE"
+		desc = "RULE_OPTION_JAP_SHOGUNATE_DESC"
+		allow_achievements = yes
+	}
+}
+
+WRU_ai_route = {
+	name = "WRU_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_OST
+		text = "RULE_OPTION_WRU_OST"
+		desc = "RULE_OPTION_WRU_OST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_RUSSOPHILES
+		text = "RULE_OPTION_WRU_RUSSOPHILES"
+		desc = "RULE_OPTION_WRU_RUSSOPHILES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_TRUTH
+		text = "RULE_OPTION_WRU_TRUTH"
+		desc = "RULE_OPTION_WRU_TRUTH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_ESTLAT
+		text = "RULE_OPTION_WRU_ESTLAT"
+		desc = "RULE_OPTION_WRU_ESTLAT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_SFSR
+		text = "RULE_OPTION_WRU_SFSR"
+		desc = "RULE_OPTION_WRU_SFSR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = WRU_DUCHY
+		text = "RULE_OPTION_WRU_DUCHY"
+		desc = "RULE_OPTION_WRU_DUCHY_DESC"
+		allow_achievements = yes
+	}
+}
+
+DKB_ai_route = {
+	name = "DKB_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+	
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DKB_SCYTHIA
+		text = "RULE_OPTION_DKB_SCYTHIA"
+		desc = "RULE_OPTION_DKB_SCYTHIA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DKB_LINEYTSY
+		text = "RULE_OPTION_DKB_LINEYTSY"
+		desc = "RULE_OPTION_DKB_LINEYTSY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DKB_CHERNOMORTSY
+		text = "RULE_OPTION_DKB_CHERNOMORTSY"
+		desc = "RULE_OPTION_DKB_CHERNOMORTSY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DKB_COALITION
+		text = "RULE_OPTION_DKB_CHE_LIN"
+		desc = "RULE_OPTION_DKB_CHE_LIN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = DKB_COLLAPSE
+		text = "RULE_OPTION_DKB_COLLAPSE"
+		desc = "RULE_OPTION_DKB_COLLAPSE_DESC"
+		allow_achievements = yes
+	}
+}
+
+ORE_ai_route = {
+	name = "ORE_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ORE_ORINBOR
+		text = "RULE_OPTION_ORE_ORINBOR"
+		desc = "RULE_OPTION_ORE_ORINBOR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ORE_EUR
+		text = "RULE_OPTION_ORE_EUR"
+		desc = "RULE_OPTION_ORE_EUR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ORE_DUTOV_KOLCHAK
+		text = "RULE_OPTION_ORE_DUTOV_KOLCHAK"
+		desc = "RULE_OPTION_ORE_DUTOV_KOLCHAK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ORE_DUTOV_DROZ
+		text = "RULE_OPTION_ORE_DUTOV_DROZ"
+		desc = "RULE_OPTION_ORE_DUTOV_DROZ_DESC"
+		allow_achievements = yes
+	}
+}
+
+STE_ai_route = {
+	name = "STE_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_KORNILOV
+		text = "RULE_OPTION_STE_KORNILOV"
+		desc = "RULE_OPTION_STE_KORNILOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_GREY_UKRAINE
+		text = "RULE_OPTION_GREY_UKRAINE"
+		desc = "RULE_OPTION_GREY_UKRAINE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_ALASH
+		text = "RULE_OPTION_ALASH"
+		desc = "RULE_OPTION_ALASH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_DIVISION
+		text = "RULE_OPTION_DIVISION"
+		desc = "RULE_OPTION_DIVISION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_COSSACKS
+		text = "RULE_OPTION_COSSACKS"
+		desc = "RULE_OPTION_COSSACKS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = STE_NOMADS
+		text = "RULE_OPTION_NOMADS"
+		desc = "RULE_OPTION_NOMADS_DESC"
+		allow_achievements = yes
+	}
+}
+
+SIB_ai_route = {
+	name = "SIB_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SIB_AUTONOMISTS
+		text = "RULE_OPTION_SIB_AUT"
+		desc = "RULE_OPTION_SIB_AUT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SIB_BLACK
+		text = "RULE_OPTION_SIB_BLACK"
+		desc = "RULE_OPTION_SIB_BLACK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SIB_STATE
+		text = "RULE_OPTION_SIB_STATE"
+		desc = "RULE_OPTION_SIB_STATE_DESC"
+		allow_achievements = yes
+	}
+}
+
+KCK_ai_route = {
+	name = "KCK_AI_PATH"
+	group = "RULE_GROUP_RF_AI_PATHS"
+	
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KCK_KSENOFONTOV
+		text = "RULE_OPTION_KCK_KSENOFONTOV"
+		desc = "RULE_OPTION_KCK_KSENOFONTOV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KCK_STARK
+		text = "RULE_OPTION_KCK_STARK"
+		desc = "RULE_OPTION_KCK_STARK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = KCK_JAP
+		text = "RULE_OPTION_KCK_JAP"
+		desc = "RULE_OPTION_KCK_JAP_DESC"
+		allow_achievements = yes
+	}
+}

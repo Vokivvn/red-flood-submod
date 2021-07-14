@@ -1,0 +1,322 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		ARM_thegreatbattle = {
+			modifier = {
+				stability_factor = -0.30	
+				war_support_factor = -0.20
+				surrender_limit = -0.30
+				consumer_goods_factor = 0.20
+				
+			}
+			picture = FRA_matignon_agreements
+		}
+		ARM_tgb1 = {
+			modifier = {
+				stability_factor = -0.10	
+				war_support_factor = -0.05
+				surrender_limit = -0.05
+				consumer_goods_factor = 0.05
+				
+			}
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		ARM_freedomforworker = {
+			modifier = {
+				stability_factor = 0.05	
+				war_support_factor = 0.05
+				consumer_goods_factor = 0.10
+				
+			}
+			picture = generic_victors_of_ww1
+		}
+		ARM_arts = {
+			modifier = {
+				war_support_factor = 0.05
+				army_org_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				
+			}
+			picture = state_shintoism
+		}
+		ARM_plannedeconomy = {
+			modifier = {
+				army_morale_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				
+			}
+			picture = trotskyite_plot_purged
+		}
+		ARM_newjobs = {
+			modifier = {
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.15
+			}
+			picture = wilkies_new_deal
+		}
+		TUR_interdictedtrade = {
+			modifier = {
+				consumer_goods_factor = 0.30
+				political_power_gain = -0.30
+				army_morale_factor = -0.20
+				army_core_defence_factor = -0.20
+			}
+			picture = officers_purged	
+		}
+		TUR_starvation = {
+			modifier = {
+				consumer_goods_factor = 0.50
+				political_power_gain = -0.50
+				army_morale_factor = -0.40
+				army_core_defence_factor = -0.60
+			}
+			picture = generic_goods_red_bonus	
+		}
+		ARM_peoplesarmy = {
+			modifier = {
+				conscription = 0.05
+				supply_consumption_factor = -0.20
+			}
+			picture = generic_victors_of_ww1	
+		}
+		ARM_unstoppablewave = {
+			modifier = {
+				conscription = 0.02
+				supply_consumption_factor = -0.10
+			}
+			picture = generic_manpower_bonus	
+		}
+		ARM_wealth = {
+			modifier = {
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.05
+				stability_factor = -0.10
+			}
+			picture = generic_goods_red_bonus
+		}
+		ARM_welfare = {
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_cost = 0.15
+				stability_factor = 0.1
+			}
+			picture = generic_agrarian_society
+		}
+		ARM_turkautonomy = {
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				surrender_limit = 0.1
+			}
+			picture = raj_marginalized_muslim_community_happy
+		}
+		ARM_society = {
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.10
+				surrender_limit = 0.05
+			}
+			picture = vittoria_mutilata
+		}
+		ARM_tsegh = {
+			modifier = {
+				army_attack_factor = 0.1
+				army_morale_factor = 0.1
+				non_core_manpower = 0.1
+			}
+			picture = sisu
+		}
+		ARM_travelermovement = {
+			modifier = {
+				out_of_supply_factor = -0.15
+				production_speed_infrastructure_factor = 0.20
+			}
+			picture = generic_disjointed_gov
+		}
+		ARM_turkfuckyou = {
+			modifier = {
+				army_core_defence_factor = 0.10
+			}
+			picture = generic_wall_line
+		}
+		ARM_rusfuckyou = {
+			modifier = {
+				army_core_attack_factor = 0.10
+			}
+			picture = anti_soviet_pact
+		}
+		ARM_statesecularism = {
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+			}
+			picture = generic_volunteer_expedition_bonus
+		}
+		ARM_rewarddaringness = {
+			modifier = {
+				stability_factor = -0.05
+				experience_gain_air_factor = 0.10
+				air_night_penalty = -0.20
+				air_ace_generation_chance_factor = 0.20
+			
+			}
+			picture = generic_air_bonus
+		}
+		ARM_airways = {
+			modifier = {
+				air_air_superiority_attack_factor = 0.15
+				air_air_superiority_defence_factor = 0.15
+			}
+			picture = generic_victors_of_ww1
+		}
+}
+	head_of_government = {
+		ARM_hamo_ohanjanyan_hog = {
+			picture = ARM_hamo_hog.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_avetis_nazarbekian_hog = {
+			picture = ARM_avetis_hog.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_garegin_nzhdeh_hog = {
+			picture = ARM_garegin_hog.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			cancel_if_invalid = yes
+		}
+}
+	economy_minister = {
+		ARM_alexandr_khatisian_eco = {
+			picture = ARM_alexandr_eco.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_sarkis_dkhrouni_eco = {
+			picture = ARM_sarkis_eco.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_vahan_papazin_eco = {
+			picture = ARM_vahan_eco.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	foreign_minister = {
+		ARM_sirakn_tigranyan_for = {
+			picture = ARM_sirakn_for.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_harutiun_jangulian_for = {
+			picture = ARM_harutiun_for.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_hayk_asatryan_for = {
+			picture = ARM_hayk_for.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	security_minister = {
+		ARM_abraham_gyulkhandayan_sec = {
+			picture = ARM_abraham_sec.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_mihram_damadian_sec = {
+			picture = ARM_mihram_sec.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_drastamat_kanayan_sec = {
+			picture = ARM_drastamat_sec.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	head_of_intel = {
+		ARM_arsham_khondkaryan_int = {
+			picture = ARM_arsham_int.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_stepan_sapah_guliann_int = {
+			picture = ARM_stepan_int.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			cancel_if_invalid = yes
+		}
+		ARM_khachadur_amirin_int = {
+			picture = ARM_khachadur_int.tga
+			allowed = { original_tag = ARM }
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

@@ -1,0 +1,247 @@
+﻿division_template = {
+	name = "Infantry Division"
+	division_names_group = MAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cavalry Division"	# Shamelessy ripped from basegame hoi4 USA
+
+	division_names_group = MAN_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		military_police = { x = 0 y = 0 }      
+	}
+}
+
+division_template = {
+	name = "Light Armor Division"
+
+	division_names_group = JAP_ARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+        cavalry = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4572
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4572
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4572
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4572
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4572
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1150
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1150
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1150
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1150
+		division_template = "Infantry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.4
+	}
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1150
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.4
+	}
+	
+	division = {
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11771
+		division_template = "Light Armor Division"
+		start_experience_factor = 0.4
+	}
+}
+
+air_wings = {
+	# "Manchurian Air Force"
+	716 = { 
+		fighter_equipment_0 = {
+			owner = "MAN" 
+			amount = 25
+		}
+	}
+}

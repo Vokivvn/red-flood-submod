@@ -1,0 +1,204 @@
+division_template = {
+	name = "Pikhotna Dyviziya" #"Infantry Division"
+	division_names_group = UKR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Kinna Bryhada" #"Cavalry Brigade"
+	division_names_group = UKR_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Motoryzovana Dyviziya" #"Motorized Division"
+	division_names_group = UKR_MOT_01
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 } 
+	}
+}
+units = {
+	division = {
+		division_name = "Kyivs'kyi Harnizon"
+		}
+		location = 525
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.50
+	}
+	division = {
+		division_name = "1sha Pikhotna 'Sirozhupanna' Dyviziya"
+		}
+		location = 525
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2ha Pikhotna 'Syniozhupanna' Dyviziya"
+		}
+		location = 11437
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "3tia Pikhotna 'Haydamats'ka' Dyviziya"
+		}
+		location = 11437
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "4ta Pikhotna 'Zalizna' Dyviziya"
+		}
+		location = 11561
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "5ta Pikhotna 'Povstans'ka' Dyviziya"
+		}
+		location = 11561
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "6ta Pikhotna 'Kholodnoyars'ka' Dyviziya"
+		}
+		location = 11670
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "7ma Pikhotna 'Strilets'ka' Dyviziya"
+		}
+		location = 754
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "8ma Pikhotna 'Vil'no-Kozats'ka' Dyviziya"
+		}
+		location = 9423
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "9ta Pikhotna 'Polis'ka' Dyviziya"
+		}
+		location = 3430
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "10ta Pikhotna 'Volyns'ka' Dyviziya"
+		}
+		location = 422
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "11ta Pikhotna 'Kryms'ka' Dyviziya"
+		}
+		location = 11557
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "12ta Pikhotna 'Knyazivs'ka' Dyviziya"
+		}
+		location = 6480
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "13ta Pikhotna 'Chorna' Dyviziya"
+		}
+		location = 3468
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "14ta Pikhotna 'Otamans'ka' Dyviziya"
+		}
+		location = 9493
+		division_template = "Pikhotna Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1sha Kinna 'Zaporiz'ka' Bryhada"
+		}
+		location = 489
+		division_template = "Kinna Bryhada"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2ha Kinna 'Kirasyrs'ka' Bryhada"
+		}
+		location = 3738
+		division_template = "Kinna Bryhada"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "3tia Kinna 'Kozats'ka' Bryhada"
+		}
+		location = 6478
+		division_template = "Kinna Bryhada"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "4ta Kinna 'Husars'ka' Bryhada"
+		}
+		location = 11490
+		division_template = "Kinna Bryhada"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "5ta Kinna 'Chornomors'ka' Bryhada"
+		}
+		location = 11543
+		division_template = "Kinna Bryhada"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "1sha Motoryzovana 'Haydamats'ka' Dyviziya"
+		}
+		location = 525
+		division_template = "Motoryzovana Dyviziya"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = "2ha Motoryzovana 'Serdiuts'ka' Dyviziya"
+		}
+		location = 11422
+		division_template = "Motoryzovana Dyviziya"
+		start_experience_factor = 0.20
+	}
+}
+air_wings = {
+	192 = { 
+		fighter_equipment_0 = {		
+			owner = "UKR" 
+			amount = 150
+		}
+	}
+}

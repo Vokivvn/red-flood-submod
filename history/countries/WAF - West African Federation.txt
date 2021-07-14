@@ -1,0 +1,94 @@
+﻿capital = 779
+
+oob = "WAF_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+add_ideas = {
+	WAF_brit_neutrality
+}
+set_convoys = 25
+
+# Events
+country_event = { id = waf.1 days = 14 }
+
+# Politics
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 10
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 5
+	liberalism = 15
+	conservatism = 20
+	right_authoritarianism = 5
+	despotism = 20
+	reactionism = 15
+	accelerationism = 10
+}
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Andrew Cohen"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Cohen.tga"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Edward Akufo-Addo"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_AkufoAddo.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Émile Derlin Zinsou"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Derlin.tga"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Krobo Edusei"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Krobo_Edusei.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Amílcar Cabral"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Amilcar.tga"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+		#popular_figurehead
+	}
+}	
+

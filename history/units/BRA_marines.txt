@@ -1,0 +1,54 @@
+division_template = {
+	name = "Marinheiros Populares"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Montanheiros Populares"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+	}
+}
+units = {
+	division = {
+		name = "1st Marinha Popular 'Vasco'"
+		location = 5112
+		division_template = "Marinheiros Populares"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "2nd Marinha Popular 'Regatas'"
+		location = 5112
+		division_template = "Marinheiros Populares"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Montanheiros Popular 'Serra'"
+		location = 10947
+		division_template = "Montanheiros Populares"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2nd Montanheiros Popular 'Jundiaí'"
+		location = 10947
+		division_template = "Montanheiros Populares"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+
+}

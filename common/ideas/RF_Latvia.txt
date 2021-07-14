@@ -1,0 +1,178 @@
+ideas = {
+	country = {
+		LAT_education = {
+			picture = BLR_icon_new_byelorussian_education 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_weekly = 0.03
+			}
+		}
+		LAT_transition_to_proper_tactics = {
+			picture = ZHR_yellowrussiansabotage 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				conscription_factor = 0.1
+				war_support_weekly = 0.05
+			}
+		}
+		LAT_transition_to_proper_tactics1 = {
+			picture = ZHR_yellowrussiansabotage 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		LAT_transition_to_proper_tactics2 = {
+			picture = ZHR_yellowrussiansabotage 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+		LAT_transition_to_proper_tactics3 = {
+			picture = PRS_power_of_freikorps 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+		LAT_pan_baltic_idea = {
+			picture = AUS_natmil 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				non_core_manpower = 0.1
+				army_morale_factor = 0.05
+			}
+		}
+		LAT_pan_baltic_idea1 = {
+			picture = AUS_natmil 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				non_core_manpower = 0.1
+				army_morale_factor = 0.05
+				decryption_factor = 0.5
+				encryption_factor = 0.5
+			}
+		}
+		LAT_soldier_gods = {
+			picture = POL_zermatic_spiritualism 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				attrition = -0.1
+				army_attack_factor = 0.05
+				max_planning_factor = 0.2
+				industry_air_damage_factor = -0.15
+			}
+		}
+		LAT_thunderstorm = {
+			picture = AUS_acc 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				surrender_limit = 0.02
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+		LAT_polish_military_mission = {
+			picture = POL_cultmarshal 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				attrition = -0.05
+				planning_speed = 0.1
+			}
+		}
+		LAT_polish_military_mission1 = {
+			picture = POL_cultmarshal 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				attrition = -0.05
+				planning_speed = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+		LAT_education1 = {
+			picture = BLR_icon_new_byelorussian_education 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_weekly = 0.03
+				compliance_gain = 0.1
+			}
+		}
+		LAT_romuva_revival = {
+			picture = POL_dreamofzadruga 
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		LAT_baltic_beacon_idea = {
+			picture = BLR_icon_reactionary_beacon
+			allowed = {
+				original_tag = LAT
+			}
+			modifier = {
+				surrender_limit = 0.03
+				research_speed_factor = 0.05
+				accelerationism_drift = 0.15
+			}
+		}
+	}
+
+	industrial_concern = {
+		LAT_VEF = {
+			allowed = {
+				original_tag = LAT
+			}
+			available = {
+				has_completed_focus = LAT_found_vef
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+		}
+	}
+}

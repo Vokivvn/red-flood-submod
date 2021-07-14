@@ -1,0 +1,31 @@
+
+state={
+	id=617
+	name="STATE_617"
+	resources={
+		oil=4
+		steel=1
+	}
+
+	history={
+		owner = SIK
+		add_core_of = SIK
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			12656 3
+		}
+
+	}
+
+	provinces={
+		4709 4788 10614 10674 10691 12656
+	}
+	manpower=1780500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,133 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Kazachya Peshaya Diviziya"			# Cossack Infantry
+	division_names_group = DKB_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	#support = {
+		#recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 }		# (semi-mot) Engineer bn
+		#artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	#}
+}
+
+division_template = {
+	name = "Kazachya Diviziya"	# Cossack cavalry
+	division_names_group = DKB_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		#light_armor = { x = 0 y = 0 }	# Tank "rgt" of 64 light tanks, 28 ACs - (removed)
+		#artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+##### OOB #####
+
+units = {
+
+	division = {
+		#name = "1ya Kazachya Diviziya"(HQ-Orenburg)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 12128
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "2ya Kazachya Peshaya Diviziya"(HQ-Orenburg)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 12128
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "3ya Kazachya Diviziya"(HQ-Chelyabinsk)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 9292
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "4ya Kazachya Peshaya Diviziya"(HQ-Orsk)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 4261
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "5ya Kazachya Peshaya Diviziya"(HQ-Magnitogorsk)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 7328
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		#name = "6ya Kazachya Diviziya"(HQ-Gurev)
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 10164
+		division_template = "Kazachya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5ya Turkestanskaya Strelkovaya Diviziya"#(HQ-Aktyubinsk)
+		location = 7370
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3ya Turkestanskaya Strelkovaya Diviziya"#(HQ-Kyzyl-Orda)
+		location = 10164
+		division_template = "Kazachya Peshaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}
+### Air Wings
+air_wings = {
+	195 = {
+		fighter_equipment_0 = {
+			owner = "RUS"
+			amount = 25
+		}
+		name = "Orenburgskiy Aviaotrayd Istrebiteley"
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+}

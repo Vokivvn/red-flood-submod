@@ -1,0 +1,15 @@
+Ukraine_path_5 = {
+	enable = {
+		original_tag = UKR
+		has_game_rule = {
+			rule = UKR_ai_route
+			option = UKR_AUTHORITARIANISM_DICTATORSHIP
+		}
+	}
+	ai_national_focuses = {
+		ukraine_mikhnovsky_scandal
+		ukraine_information_saves
+		ukraine_establish_junta
+		ukraine_permanent_dictatorship
+	}
+}

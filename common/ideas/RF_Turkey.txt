@@ -1,0 +1,282 @@
+ideas = {
+	country = {
+
+	TUR_treaty_of_Konstantinopolis = {
+		picture = TUR_treaty_of_adrianople
+
+			allowed = {
+				has_war = no
+			}
+			modifier = {
+				conscription = -0.005
+				production_speed_arms_factory_factor = -0.25
+				production_speed_dockyard_factor = -0.15
+				production_speed_industrial_complex_factor = -0.1
+				reactionism_drift = -0.05
+			}
+		}
+		
+		TUR_loser = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				vanguard_socialism_drift = 0.01
+				revolutionary_anarchism_drift = 0.01
+				right_authoritarianism_drift = 0.01
+				despotism_drift = 0.01
+				accelerationism_drift = 0.01
+				
+			}
+		}
+		
+		TUR_general_staff = {
+			
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = tur_army
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+		        army_core_defence_factor = 0.1
+				planning_speed = 0.10
+				foreign_subversive_activites = -0.05
+			}
+		}
+		
+		TUR_Blow_up_north_idea = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = tur_istanbul_mining
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		TUR_Never_stops_Wolf_Machine_idea = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_org_factor = 0.08
+				army_morale_factor = 0.04
+				army_defence_factor = 0.1
+				army_speed_factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+		
+		TUR_Last_stand_idea = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_defence_factor = 0.2
+				training_time_army_factor = -0.2
+			}
+		}
+		
+		TUR_altaic_turanic_education = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				political_power_factor = 0.25
+				drift_defence_factor = 0.10
+				stability_factor = 0.10
+				non_core_manpower = 0.01
+			}
+		}
+		
+		TUR_Turkic_gokturk_alphabet = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				war_support_factor = 0.10
+		        political_power_factor = 0.25
+		        army_morale_factor = 0.8
+			}
+		}
+		
+		TUR_Pagan_soul = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				war_support_factor = 0.10
+		        stability_factor = 0.10
+			}
+			
+			targeted_modifier = {
+					tag = SYR
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+				
+				targeted_modifier = {
+					tag = IRQ
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+				
+				targeted_modifier = {
+					tag = GRE
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+				
+				targeted_modifier = {
+					tag = MAR
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+				
+				targeted_modifier = {
+					tag = RUS
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+				
+				targeted_modifier = {
+					tag = EGY
+					attack_bonus_against = 0.2
+					defense_bonus_against = 0.1
+				}
+		}
+		
+		TUR_Wolf_brigades = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				war_support_factor = 0.10
+		        accelerationism_drift = 0.05
+				root_out_resistance_effectiveness_factor = 0.50
+				army_attack_factor = 0.4
+				army_morale_factor = 0.8
+				
+			}
+		}
+		
+		TUR_Batir_yurtagan = {
+
+			allowed = {
+				original_tag = TUR
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				non_core_manpower = 0.02
+		        weekly_manpower = 25
+				
+			}
+		}
+
+	}
+}

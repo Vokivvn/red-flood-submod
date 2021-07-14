@@ -1,0 +1,66 @@
+#############
+# Westralia #
+#############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		WAS_emu_plague = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WAS_emu_plague"}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+			picture = great_depression
+		}
+		
+		WAS_economic_depression = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WAS_economic_depression"}
+			modifier = {
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.3
+################trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+			picture = great_depression
+		}
+		
+		WAS_spirit_of_independence = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WAS_spirit_of_independence"}
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.2
+			}
+			picture = great_depression
+		}
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

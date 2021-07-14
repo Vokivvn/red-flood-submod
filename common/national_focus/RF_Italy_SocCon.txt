@@ -1,0 +1,1267 @@
+focus_tree = {
+	id = ITA_soc_con
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	#Setup
+	shared_focus = ITA_transforismo_36
+	#Economy
+	focus = {
+		id = ITA_escaping_slump
+		icon = GFX_focus_ITA_escaping_slump
+		cost = 10
+		x = 15
+		y = 0
+		available = {
+			has_completed_focus = ITA_the_economy
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = ITA_check_books
+		icon = GFX_focus_ITA_check_books
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_escaping_slump
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump
+				add_idea = ITA_the_slump_s1
+			}
+		}
+	}
+	focus = {
+		id = ITA_modest_issue
+		icon = GFX_focus_ITA_modest_issue
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = ITA_check_books
+		}
+		mutually_exclusive = {
+			focus = ITA_assume_burden
+		}
+		completion_reward = {
+			add_ideas = ITA_the_easy_way_out
+		}
+	}
+	focus = {
+		id = ITA_assume_burden
+		icon = GFX_focus_ITA_assume_burden
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = ITA_check_books
+		}
+		mutually_exclusive = {
+			focus = ITA_modest_issue
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = -150
+		}
+	}
+	focus = {
+		id = ITA_invite_investors
+		icon = GFX_focus_ITA_invite_investors
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = ITA_modest_issue
+			focus = ITA_assume_burden
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump_s1
+				add_idea = ITA_the_slump_s2
+			}
+		}
+	}
+	focus = {
+		id = ITA_deregulate_small_businesses
+		icon = GFX_focus_ITA_deregulate_small_businesses
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = -2
+		y = 4
+		prerequisite = {
+			focus = ITA_invite_investors
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump_s2
+				add_idea = ITA_the_slump_s3
+			}
+		}
+	}
+	focus = {
+		id = ITA_subsidize_farmer
+		icon = GFX_focus_ITA_subsidize_farmer
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = -2
+		y = 5
+		prerequisite = {
+			focus = ITA_deregulate_small_businesses
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump_s3
+				add_idea = ITA_the_slump_s4
+			}
+		}
+	}
+	focus = {
+		id = ITA_stimulus_season
+		icon = GFX_focus_ITA_stimulus_season
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = ITA_assume_burden
+		}
+		completion_reward = {
+			add_ideas = ITA_repaying_the_debt
+		}
+	}
+	focus = {
+		id = ITA_expanded_pensions
+		icon = GFX_focus_ITA_expanded_pensions
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = ITA_stimulus_season
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_repaying_the_debt
+				add_idea = ITA_repaying_the_debt1
+			}
+		}
+	}
+	focus = {
+		id = ITA_state_scholarships
+		icon = GFX_focus_ITA_state_scholarships
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 2
+		y = 5
+		prerequisite = {
+			focus = ITA_expanded_pensions
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_repaying_the_debt1
+				add_idea = ITA_repaying_the_debt2
+			}
+		}
+	}
+	focus = {
+		id = ITA_turn_southward
+		icon = GFX_focus_ITA_turn_southward
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 6
+		y = 0
+		available = {
+			has_completed_focus = ITA_subsidize_farmer
+		}
+		completion_reward = {
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_industrial_incentives
+		icon = GFX_focus_ITA_industrial_incentives
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = ITA_turn_southward
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_lagging_south
+				add_idea = ITA_lagging_south_s1
+			}
+		}
+	}
+	focus = {
+		id = ITA_land_loans
+		icon = GFX_focus_ITA_land_loans
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 6
+		y = 2
+		prerequisite = {
+			focus = ITA_industrial_incentives
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump_s4
+				add_idea = ITA_the_slump_s5
+			}
+			if = {
+				limit = {
+					has_idea = ITA_agricultural_crisis
+				}
+				remove_ideas = ITA_agricultural_crisis
+			}
+		}
+	}
+	focus = {
+		id = ITA_equipment_subsidies
+		icon = GFX_focus_ITA_equipment_subsidies
+		cost = 10
+		relative_position_id = ITA_escaping_slump
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = ITA_land_loans
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_the_slump_s5
+				add_idea = ITA_the_slump_s6
+			}
+		}
+	}
+	focus = {
+		id = ITA_noonday_sun
+		icon = GFX_focus_ITA_noonday_sun
+		cost = 15
+		relative_position_id = ITA_escaping_slump
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = ITA_equipment_subsidies
+		}
+		completion_reward = {
+			remove_ideas = {
+				ITA_lagging_south_s1
+				ITA_deflation
+				ITA_agricultural_crisis
+			}
+			if = {
+				limit = {
+					has_idea = ITA_deflation
+				}
+				remove_ideas = ITA_deflation
+			}
+		}
+	}
+	#Empire
+	focus = {
+		id = ITA_six_chairs
+		icon = GFX_focus_ITA_six_chairs
+		cost = 10
+		x = 17
+		y = 7
+		available = {
+			has_completed_focus = ITA_the_empire
+		}
+		completion_reward = {
+			add_stability = 0.05
+			hidden_effect = {
+				remove_ideas = ITA_overburdened_administration
+				add_dynamic_modifier = {
+					modifier = ITA_six_chairs_idea
+					scope = ITA
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = -0.5
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = 0.05
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_FOCUS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_libya
+		icon = GFX_focus_ITA_libya
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = 0.12
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_LIBYA_TOOLTIP"
+			add_war_support = 0.05
+			448 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			450 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = ITA_mukhtar
+		icon = GFX_focus_ITA_mukhtar
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -4
+		y = 2
+		prerequisite = {
+			focus = ITA_libya
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.8
+			}
+		}
+	}
+	focus = {
+		id = ITA_peace_with_honour
+		icon = GFX_focus_ITA_peace_with_honour
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -5
+		y = 3
+		available = {
+			has_country_flag = mukhtar_peace
+		}
+		prerequisite = {
+			focus = ITA_mukhtar
+		}
+		mutually_exclusive = {
+			focus = ITA_finish_it
+		}
+		completion_reward = {
+			remove_ideas = ITA_the_libyan_war
+			661 = {
+				set_demilitarized_zone = no
+			}
+			449 = {
+				set_demilitarized_zone = no
+			}
+			662 = {
+				set_demilitarized_zone = no
+			}
+			663 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	focus = {
+		id = ITA_finish_it
+		icon = GFX_focus_ITA_finish_it
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -3
+		y = 3
+		available = {
+			has_country_flag = mukhtar_war
+		}
+		prerequisite = {
+			focus = ITA_mukhtar
+		}
+		mutually_exclusive = {
+			focus = ITA_peace_with_honour
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_manpower = -70000
+			remove_ideas = ITA_the_libyan_war
+			661 = {
+				set_demilitarized_zone = no
+			}
+			449 = {
+				set_demilitarized_zone = no
+			}
+			662 = {
+				set_demilitarized_zone = no
+			}
+			663 = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	focus = {
+		id = ITA_somalia
+		icon = GFX_focus_ITA_somalia
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = 0.12
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.02
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.03
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_SOMALIA_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_undercut_governor
+		icon = GFX_focus_ITA_undercut_governor
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = ITA_somalia
+		}
+		completion_reward = {
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = ITA_east_africa_development
+		icon = GFX_focus_ITA_east_africa_development
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = ITA_undercut_governor
+		}
+		prerequisite = {
+			focus = ITA_model_colony
+		}
+		completion_reward = {
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			550 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			if = {
+				limit = {
+					ITA = { controls_state = 1018 }
+				}
+				1018 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_eritrea
+		icon = GFX_focus_ITA_eritrea
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = 0.12
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.02
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.03
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_ERITREA_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_model_colony
+		icon = GFX_focus_ITA_model_colony
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = ITA_eritrea
+		}
+		completion_reward = {
+			550 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = ITA_antalya
+		icon = GFX_focus_ITA_antalya
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.02
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.02
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_ANTALYA_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_naval_command_east
+		icon = GFX_focus_ITA_naval_command_east
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = ITA_antalya
+		}
+		completion_reward = {
+			342 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 1005
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	focus = {
+		id = ITA_open_border
+		icon = GFX_focus_ITA_open_border
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = ITA_naval_command_east
+		}
+		completion_reward = {
+			TUR = {
+				country_event = {
+					id = italy.11
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_chad
+		icon = GFX_focus_ITA_chad
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = 0.12
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.01
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.06
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_CHAD_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_congo
+		icon = GFX_focus_ITA_congo
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 6
+		y = 1
+		prerequisite = {
+			focus = ITA_six_chairs
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_pp
+					value = 0.12
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.02
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.08
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_CONGO_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_rational_restructuring
+		icon = GFX_focus_ITA_rational_restructuring
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 5
+		y = 2
+		prerequisite = {
+			focus = ITA_congo
+		}
+		prerequisite = {
+			focus = ITA_chad
+		}
+		completion_reward = {
+			774 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			773 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			772 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			660 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			539 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ITA_go_south
+		icon = GFX_focus_ITA_go_south
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 5
+		y = 3
+		prerequisite = {
+			focus = ITA_rational_restructuring
+		}
+
+		completion_reward = {
+			158 = {
+				add_manpower = -20000
+			}
+			162 = {
+				add_manpower = -10000
+			}
+			161 = {
+				add_manpower = -20000
+			}
+			160 = {
+				add_manpower = -10000
+			}
+			2 = {
+				add_manpower = -20000
+			}
+			539 = {
+				add_manpower = 20000
+			}
+			773 = {
+				add_manpower = 20000
+			}
+			772 = {
+				add_manpower = 20000
+			}
+			660 = {
+				add_manpower = 10000
+			}
+			774 = {
+				add_manpower = 10000
+			}
+			539 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			773 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = ITA_six_chairs_idea_goods
+					value = -0.01
+				}
+				add_to_variable = {
+					var = ITA_six_chairs_idea_manpower
+					value = 0.03
+				}
+			}
+			custom_effect_tooltip = "ITA_SIX_CHAIRS_GO_SOUTH_TOOLTIP"
+		}
+	}
+	focus = {
+		id = ITA_west_african_development
+		icon = GFX_focus_ITA_west_african_development
+		cost = 10
+		relative_position_id = ITA_six_chairs
+		x = 5
+		y = 4
+		prerequisite = {
+			focus = ITA_go_south
+		}
+
+		completion_reward = {
+			772 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+			539 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 12975
+				}
+				add_extra_state_shared_building_slots = 5
+			}
+			773 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 5139
+				}
+				add_extra_state_shared_building_slots = 5
+			}
+			660 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			774 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus  = {
+		id = ITA_ripple_theory
+		icon = GFX_focus_ITA_ripple_theory
+		cost = 10
+		x = 5
+		y = 5
+		available = {
+			has_completed_focus = ITA_foreign_relations
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	focus  = {
+		id = ITA_suss_out_french
+		icon = GFX_focus_ITA_suss_out_french
+		cost = 5
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_ripple_theory
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			country_event = {
+				id = italy.12
+			}
+		}
+	}
+	focus  = {
+		id = ITA_brisk_business
+		icon = GFX_focus_ITA_brisk_business
+		cost = 5
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_suss_out_french
+		}
+		mutually_exclusive = {
+			focus = ITA_watching_west
+		}
+		x = -5
+		y = 2
+		completion_reward = {
+			158 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus  = {
+		id = ITA_watching_west
+		icon = GFX_focus_ITA_watching_west
+		cost = 5
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_suss_out_french
+		}
+		mutually_exclusive = {
+			focus = ITA_brisk_business
+		}
+		x = -3
+		y = 2
+		completion_reward = {
+			158 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11891
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11721
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9738
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6780
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 661
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_quick_handshake
+		icon = GFX_focus_ITA_quick_handshake
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_ripple_theory
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			diplomatic_relation = {
+				country = SWI
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	focus  = {
+		id = ITA_warn_buffer
+		icon = GFX_focus_ITA_warn_buffer
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_ripple_theory
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			AUS = {
+				country_event = {
+					id = italy.13
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_watching_east
+		icon = GFX_focus_ITA_watching_east
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_ripple_theory
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			160 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 628
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 9613
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_our_sea
+		icon = GFX_focus_ITA_our_sea
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_quick_handshake
+		}
+		prerequisite = {
+			focus = ITA_warn_buffer
+		}
+		prerequisite = {
+			focus = ITA_watching_east
+		}
+		prerequisite = {
+			focus = ITA_watching_west
+			focus = ITA_brisk_business
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			add_war_support = 0.05
+			create_faction = MEDITERRANEAN_ALLIANCE
+		}
+	}
+	focus  = {
+		id = ITA_cordial_understanding
+		icon = GFX_focus_ITA_cordial_understanding
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		x = -4
+		y = 4
+		completion_reward = {
+			41 = {
+				owner = {
+					country_event = {
+						id = italy.14
+					}
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_adriatic_community
+		icon = GFX_focus_ITA_adriatic_community
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		x = -2
+		y = 4
+		completion_reward = {
+			ALB = {
+				country_event = {
+					id = italy.15
+				}
+			}
+			MNT = {
+				country_event = {
+					id = italy.15
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_greek_question
+		icon = GFX_focus_ITA_greek_question
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			country_event = {
+				id = italy.16
+			}
+		}
+	}
+	focus  = {
+		id = ITA_turkish_question
+		icon = GFX_focus_ITA_turkish_question
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		x = 2
+		y = 4
+		completion_reward = {
+			country_event = {
+				id = italy.19
+			}
+		}
+	}
+	focus  = {
+		id = ITA_healthy_rivalry
+		icon = GFX_focus_ITA_healthy_rivalry
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_our_sea
+		}
+		x = 4
+		y = 4
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = italy.20
+				}
+			}
+		}
+	}
+	focus  = {
+		id = ITA_past_gates
+		icon = GFX_focus_ITA_past_gates
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_healthy_rivalry
+		}
+		prerequisite = {
+			focus = ITA_turkish_question
+		}
+		prerequisite = {
+			focus = ITA_greek_question
+		}
+		prerequisite = {
+			focus = ITA_adriatic_community
+		}
+		prerequisite = {
+			focus = ITA_cordial_understanding
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus  = {
+		id = ITA_will_suffice
+		icon = GFX_focus_ITA_will_suffice
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_past_gates
+		}
+		x = 0
+		y = 6
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus  = {
+		id = ITA_good_neighbour
+		icon = GFX_focus_ITA_good_neighbour
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_will_suffice
+		}
+		x = 0
+		y = 7
+		completion_reward = {
+			add_ideas = ITA_good_neighbor_italy
+		}
+	}
+	focus  = {
+		id = ITA_global_italy
+		icon = GFX_focus_ITA_global_italy
+		cost = 10
+		relative_position_id = ITA_ripple_theory
+		prerequisite = {
+			focus = ITA_good_neighbour
+		}
+		x = 0
+		y = 8
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ITA_good_neighbor_italy
+				add_idea = ITA_good_neighbor_italy1
+			}
+		}
+	}
+}

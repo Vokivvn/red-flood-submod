@@ -1,0 +1,11 @@
+LAT_diplomatic_decisions = {
+	icon = GFX_KAV_diplomacy_icon
+	allowed = {
+		original_tag = LAT
+	}
+	priority = 200
+	visible = {
+		always = yes
+		is_subject = no
+	}
+}

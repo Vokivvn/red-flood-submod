@@ -1,0 +1,30 @@
+﻿##################
+# Trollvorossiya #
+##################
+
+add_namespace = sru
+
+# Election
+country_event = {
+	id = sru.1
+	title = sru.1.t
+	desc = sru.1.d
+	picture = GFX_trollface
+	
+	fire_only_once = yes
+    
+    trigger = {
+        tag = SRU
+        date > 1936.01.01
+    }
+
+	is_triggered_only = yes
+	
+	option = {
+		name = sru.1.a
+		RUS = {
+			change_tag_from = ROOT
+		}
+    }
+
+}

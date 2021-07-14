@@ -1,0 +1,21 @@
+
+state={
+	id=681
+	name="Western Cape" # Cape
+	manpower = 725732
+
+	state_category = town
+
+	history={
+		owner = SAF
+		add_core_of = SAF
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+	    }
+}
+	provinces={
+		10442 13244 13250 13252 4528 13245 13249 13246 10415 13247
+	}
+}

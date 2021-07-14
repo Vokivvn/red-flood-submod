@@ -1,0 +1,164 @@
+﻿capital = 947
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+set_stability = 0.5
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 50
+	libertarian_marxism = 25
+	revolutionary_anarchism = 25
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Tielman Roos"
+	desc = "politics_Tielman_Roos_desc"
+	picture = "Portrait_Tielman_Roos.tga"
+	expire = "1937.1.1"
+	ideology = social_liberalism
+	traits = {
+		#
+	}
+} 
+
+create_country_leader = {
+	name = "D. F. Malan"
+	desc = "politics_D_F_Malan_desc"
+	picture = "Portrait_D_F_Malan.tga"
+	expire = "1959.2.7"
+	ideology = national_conservatism
+	traits = {
+		#
+	}
+} 
+
+create_country_leader = {
+	name = "Walter Madeley"
+	desc = "politics_Walter_Madeley_desc"
+	picture = "Portrait_Walter_Madeley.tga"
+	expire = "1937.5.12"
+	ideology = liberal_socialism
+	traits = {
+		#
+	}
+} 
+
+create_country_leader = {
+	name = "Nicolaas Havenga"
+	desc = "politics_Nicolaas_Havenga_desc"
+	picture = "Portrait_Nicolaas_Havenga.tga"
+	expire = "1957.3.14"
+	ideology = authoritarian_democratism
+	traits = {
+		#
+	}
+} 
+
+create_country_leader = {
+	name = "Edwin Mofutsanyana"
+	desc = "Portrait_Edwin_Mofutsanyana_desc"
+	picture = "Portrait_Edwin_Mofutsanyana.tga"
+	expire = "1995.11.19"
+	ideology = agrarian_councilism
+	traits = {
+			#
+	}
+}
+
+create_country_leader = {
+	name = "Zacharias Mahabane"
+	desc = "politics_Zacharias_Mahabane_desc"
+	picture = "Portrait_Zacharias_Mahabane.tga"
+	expire = "1971.9.1"
+	ideology = reactionary_populism
+	traits = {
+			#
+	}
+} 
+
+create_country_leader = {
+	name = "Moses Kotane"
+	desc = "portrait_Moses_Kotane_desc"
+	picture = "Portrait_Moses_Kotane.tga"
+	expire = "1978.5.19"
+	ideology = orthodox_leninism
+	traits = {
+			#
+	}
+} 
+
+create_country_leader = {
+	name = "Edward “Eddie” Roux"
+	desc = "portrait_Edward_Roux_desc"
+	picture = "Portrait_Edward_Roux.tga"
+	expire = "1966.3.2"
+	ideology = democratic_socialism
+	traits = {
+			#
+	}
+} 
+
+create_country_leader = {
+	name = "Clements Kadalie"
+	desc = "portrait_Clements_Kadalie_desc"
+	picture = "Portrait_Clements_Kadalie.tga"
+	expire = "1951.11.28"
+	ideology = social_anarchism
+	traits = {
+			#
+	}
+} 
+
+create_country_leader = {
+	name = "Sobhuza II"
+	desc = "portrait_Sobhuza_II_desc"
+	picture = "Portrait_Sobhuza_II.tga"
+	expire = "1982.8.21"
+	ideology = absolute_monarchy
+	traits = {
+			#
+	}
+} 
+
+create_country_leader = {
+	name = "George Villiers, 6th Earl of Clarendon"
+	desc = "politics_george_villiers_desc"
+	picture = "Portrait_George_Villiers_T.tga"
+	expire = "1955.12.13"
+	ideology = technocratism
+	traits = {
+			#
+	}
+}  
+

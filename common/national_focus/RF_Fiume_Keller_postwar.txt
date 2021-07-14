@@ -1,0 +1,754 @@
+focus_tree = {
+	id = FIU_keller_postwar
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3700 }
+	shared_focus = FIU_Poetry_In_Motion
+	#Keller Post-War Tree
+
+	focus = {
+		id = FIU_A_Firm_Landing
+		icon = GFX_focus_FIU_A_Firm_Landing
+		#prerequisite = { focus = FIU_And_Now... }
+		
+		x = 8
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ITA = {
+				OR = {
+					exists = no
+					is_puppet_of = FRA
+					is_puppet_of = FIU
+					has_capitulated = yes
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		select_effect = {
+			country_event = {
+				id = fiume.91
+				days = 1
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			remove_ideas = {
+				FIU_spirit_of_19
+				FIU_militia_mobilized
+			}
+		}
+	}
+
+	focus = {
+		id = FIU_Down_With_The_Princes_And_Popes
+		icon = GFX_focus_FIU_Down_With_The_Princes_And_Popes
+		prerequisite = { focus = FIU_A_Firm_Landing }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_demedievalization
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Proclamations
+		icon = GFX_focus_FIU_The_Proclamations
+		prerequisite = { focus = FIU_Down_With_The_Princes_And_Popes }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = FIU
+			}
+			set_cosmetic_tag = FIU_italian_republic
+			add_political_power = 150
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Roma_o_Morte #doesn't work with exclamation point for some reason
+		icon = GFX_focus_FIU_Roma_o_Morte
+		prerequisite = { focus = FIU_The_Proclamations }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			set_capital = 2
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_AllArmi
+		icon = GFX_focus_FIU_AllArmi
+		prerequisite = { focus = FIU_Roma_o_Morte }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 6
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_all_for_nation
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Purge_the_Reaction
+		icon = GFX_focus_FIU_Purge_the_Reaction
+		prerequisite = { focus = FIU_AllArmi }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 8
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_command_power = -50
+			add_manpower = -50000
+			add_war_support = 0.15
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Yoga_elite
+		icon = GFX_focus_FIU_Yoga_elite
+		prerequisite = { focus = FIU_AllArmi }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 4
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_yoga
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Army_Of_Action
+		icon = GFX_focus_FIU_Army_Of_Action
+		prerequisite = { focus = FIU_Yoga_elite }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 4
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_yoga
+				add_idea = FIU_yoga_1
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Youth_only_youth
+		icon = GFX_focus_FIU_Youth_only_youth
+		prerequisite = { focus = FIU_Purge_the_Reaction }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 8
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_all_for_nation
+				add_idea = FIU_all_for_nation_1
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Work_With_Bombacci
+		icon = GFX_focus_FIU_Work_With_Bombacci
+		prerequisite = { focus = FIU_Roma_o_Morte }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -6
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_nation_for_all
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Proletarian_Nationalism
+		icon = GFX_focus_FIU_Proletarian_Nationalism
+		prerequisite = { focus = FIU_Work_With_Bombacci }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -8
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_nation_for_all
+				add_idea = FIU_nation_for_all_1
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Italian_Syndicalism
+		icon = GFX_focus_FIU_Italian_Syndicalism
+		prerequisite = { focus = FIU_Proletarian_Nationalism }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -8
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_nation_for_all_1
+				add_idea = FIU_nation_for_all_2
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Reining_The_Rich
+		icon = GFX_focus_FIU_Reining_The_Rich
+		prerequisite = { focus = FIU_Work_With_Bombacci }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -4
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_political_power = 150
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Wealth_of_the_Spirit
+		icon = GFX_focus_FIU_Wealth_of_the_Spirit
+		prerequisite = { focus = FIU_Reining_The_Rich }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -4
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_wealth_spirit
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Dux_populi
+		icon = GFX_focus_FIU_Dux_populi
+		prerequisite = { focus = FIU_Italian_Syndicalism focus = FIU_Wealth_of_the_Spirit focus = FIU_Army_Of_Action focus = FIU_Youth_only_youth }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 0
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Esoterror
+		icon = GFX_focus_FIU_Esoterror
+		prerequisite = { focus = FIU_Dux_populi }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -2
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_stability = -0.2
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Blow_the_Churches
+		icon = GFX_focus_FIU_Blow_the_Churches
+		prerequisite = { focus = FIU_Esoterror }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = -2
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_demedievalization
+				add_idea = FIU_demedievalization_1
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Not_Faith_but_Love
+		icon = GFX_focus_FIU_Not_Faith_but_Love
+		prerequisite = { focus = FIU_Dux_populi }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 2
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_nofaithbutlove
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Spirits_of_Heroes
+		icon = GFX_focus_FIU_Spirits_of_Heroes
+		prerequisite = { focus = FIU_Not_Faith_but_Love }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 2
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_ideas = FIU_spirit_heroes
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Into_the_Skies
+		icon = GFX_focus_FIU_Into_the_Skies
+		prerequisite = { focus = FIU_Blow_the_Churches }
+		prerequisite = { focus = FIU_Spirits_of_Heroes }
+		
+		relative_position_id = FIU_A_Firm_Landing
+		x = 0
+		y = 10
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = air_equipment
+				bonus = 0.75
+				uses = 4
+			}
+			add_tech_bonus = {
+				category = air_doctrine
+				bonus = 1
+				uses = 4
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

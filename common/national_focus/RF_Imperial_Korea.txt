@@ -1,0 +1,1920 @@
+#####################
+#	Korea - Baba	#
+#####################
+
+focus_tree = {
+	id = IKR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IKR
+		}
+	}
+
+	continuous_focus_position = { x = 150 y = 4000 }
+
+	#Focus for A Moment of Bloodthirst
+	focus = {
+		id = IKR_a_moment_of_bloodthirst
+		icon = GFX_focus_IKR_a_moment_of_bloodthirst
+		x = 17
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_and_his_homeless_court }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#event - the prisoners
+			country_event = {
+				id = kor.21
+			}
+		}
+	}
+
+	#Focus for ...And his Homeless Court
+	focus = {
+		id = IKR_and_his_homeless_court
+		icon = GFX_focus_IKR_and_his_homeless_court
+		x = 18
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_an_emperor_with_no_empire }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add characters from imp Japan
+			custom_effect_tooltip = "IKR_homeless_court"
+			add_political_power = 100
+		}
+	}
+
+	#Focus for A Man and a Glass of Sake
+	focus = {
+		id = IKR_a_man_and_a_glass_of_sake
+		icon = GFX_focus_IKR_a_man_with_a_glass_of_sake
+		x = 23
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_the_eclipse }
+		mutually_exclusive = {
+			focus = IKR_an_emperor_with_no_empire
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#event, depression, brutality, lose manpower, stability and war_support
+			set_cosmetic_tag = IKR_govt
+			add_stability = -0.05
+			add_war_support = -0.1
+			add_manpower = -25975
+			swap_ideas = {
+				remove_idea = IKR_depression
+				add_idea = IKR_sake
+			}
+		}
+	}
+
+	#Focus for The Eclipse
+	focus = {
+		id = IKR_the_eclipse
+		icon = GFX_focus_IKR_eclipse
+		x = 21
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		available = {
+			has_war = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {	#national spirit of depression - modify this to reverse the slump
+			add_ideas = {
+				IKR_depression
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_owned_by = IKR
+						is_core_of = KOR
+					}
+					remove_core_of = KOR
+				}
+				every_state = {
+					limit = {
+						is_owned_by = IKR
+						is_core_of = JKR
+					}
+					remove_core_of = JKR
+				}
+			}
+		}
+	}
+
+	#Focus for When the Sun Sets
+	focus = {
+		id = IKR_when_the_sun_sets
+		icon = GFX_focus_IKR_when_the_sun_sets
+		x = 7
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			has_war = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 200
+		}
+		completion_reward = {	#slight stabilisation
+			set_capital = 829
+			add_stability = 0.05
+			hidden_effect = {
+				add_state_core = 829
+				add_state_core = 987
+			}
+		}
+	}
+
+	#Focus for Entrust the ODC	(Oriental Development Company)
+	focus = {
+		id = IKR_entrust_the_odc
+		icon = GFX_focus_IKR_entrust_the_odc
+		x = 3
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_when_the_sun_sets }
+		mutually_exclusive = { focus = IKR_begin_the_autarky_policy }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#temp - reduce pop, reduce consoom, reduce stab, add one civ
+			add_ideas = {
+				IKR_ODC
+			}
+		}
+	}
+
+	#Focus for Begin the Autarky Policy
+	focus = {
+		id = IKR_begin_the_autarky_policy
+		icon = GFX_focus_IKR_begin_the_autarky_policy
+		x = 11
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_when_the_sun_sets }
+		mutually_exclusive = { focus = IKR_entrust_the_odc }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#resource gain, resource tech buffs,
+			add_ideas = {
+				IKR_autarky
+			}
+		}
+	}
+
+	#Focus for Begin Mass Land Resettlement
+	focus = {
+		id = IKR_begin_mass_land_resettlement
+		icon = GFX_focus_IKR_begin_mass_land_resettlement
+		x = 3
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_entrust_the_odc }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#pop growth, conscription
+			swap_ideas = {
+				remove_idea = IKR_ODC
+				add_idea = IKR_land_reset
+			}
+			remove_ideas = {
+				KOR_land_lords
+			}
+		}
+	}
+
+	#Focus for For The Emperor!
+	focus = {
+		id = IKR_for_the_emperor
+		icon = GFX_focus_IKR_for_the_emperor
+		x = 24
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_selfgoverning_dominion }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#army buff
+			add_ideas = {
+				IKR_for_emprah
+			}
+		}
+	}
+
+	#Focus for Self-Governing Dominion
+	focus = {
+		id = IKR_selfgoverning_dominion
+		icon = GFX_focus_IKR_self_governing_dominion
+		x = 24
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_assert_control }
+		mutually_exclusive = { focus = IKR_imperial_remnant }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#slash relations with Mantetsu and Saigon
+			add_opinion_modifier = {
+				target = MAN
+				modifier = large_decrease
+			}
+			MAN = {
+				add_opinion_modifier = {
+					target = IKR
+					modifier = large_decrease
+				}
+			}
+			add_opinion_modifier = {
+				target = SMC
+				modifier = large_decrease
+			}
+			SMC = {
+				add_opinion_modifier = {
+					target = IKR
+					modifier = large_decrease
+				}
+			}
+		}
+	}
+
+	#Focus for The Passing Shadow
+	focus = {
+		id = IKR_the_passing_shadow
+		icon = GFX_focus_IKR_the_passing_shadow
+		x = 18
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_sharpen_the_blades 
+		}
+		prerequisite = { 
+			focus = IKR_steel_hearts_and_minds 
+		}
+		available = { 
+			JPR = {
+				exists = yes
+			}
+			is_subject = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JPR
+			}
+		}
+	}
+
+	#Focus for Imperial Remnant
+	focus = {
+		id = IKR_imperial_remnant
+		icon = GFX_focus_IKR_imperial_remnant
+		x = 22
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_assert_control }
+		mutually_exclusive = { focus = IKR_selfgoverning_dominion }
+		available = {
+			is_subject = no
+		}    
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			create_faction = IKR_restorationist_faction
+			if = {
+				limit = {
+					SMC = {
+						exists = yes
+					}
+				}
+				SMC = {
+					country_event = {
+						id = kor.32
+					}
+				}
+			}
+			if = {
+				limit = {
+					MAN = {
+						has_country_flag = MAN_japan
+					}
+				}
+				MAN = {
+					country_event = {
+						id = kor.32
+					}
+				}
+			}
+			#if SMC exists, invite them
+			#if MAN is exiles, invite them
+		}
+	}
+
+	#Focus for Assert Control
+	focus = {
+		id = IKR_assert_control
+		icon = GFX_focus_IKR_assert_control
+		x = 23
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			986 = {
+				is_core_of = IKR
+			}
+			has_completed_focus = IKR_and_rebels_lying_dead
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#rebels crushed
+			country_event = {
+				id = kor.22
+			}
+			add_manpower = -14523
+			army_experience = 12
+		}
+	}
+
+	#Focus for Steel Hearts and Minds
+	focus = {
+		id = IKR_steel_hearts_and_minds
+		icon = GFX_focus_IKR_steel_hearts_and_minds
+		x = 19
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_national_reinvigoration }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#idea for naval invasion
+			add_timed_idea = {
+				idea = IKR_steel_hm
+				days = 730
+			}
+		}
+	}
+
+	#Focus for Sharpen the Blades
+	focus = {
+		id = IKR_sharpen_the_blades
+		icon = GFX_focus_IKR_sharpen_the_blades
+		x = 17
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_national_reinvigoration }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#boost army stat vs JPR
+			add_timed_idea = {
+				idea = IKR_sharp
+				days = 730
+			}
+		}
+	}
+
+	#Focus for National Reinvigoration
+	focus = {
+		id = IKR_national_reinvigoration
+		icon = GFX_focus_IKR_national_reinvigoration
+		x = 18
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		available = { 
+			OR = {
+				has_completed_focus = IKR_and_rebels_lying_dead
+				has_completed_focus = IKR_alas_my_grief
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#kamikaze, national buff
+			add_timed_idea = {
+				idea = IKR_nat_reinvigoration
+				days = 730
+			}
+		}
+	}
+
+	#Focus for Increase Japanese Cultural Enrichment
+	focus = {
+		id = IKR_increase_japanese_cultural_enrichment
+		icon = GFX_focus_IKR_increase_japanese_cultural_enrichment
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_entrust_the_odc }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#better stability, conscription and research rate
+			add_timed_idea = {
+				idea = IKR_nihonisation
+				days = 730
+			}
+		}
+	}
+
+	#Focus for Spur Industrial Innovation
+	focus = {
+		id = IKR_spur_industrial_innovation
+		icon = GFX_focus_IKR_spur_industrial_innovation
+		x = 11
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_begin_the_autarky_policy }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#factory build idea, research speed
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Embrace Corporatist Ethos
+	focus = {
+		id = IKR_embrace_corporatist_ethos
+		icon = GFX_focus_IKR_embrace_corporatist_ethos
+		x = 1
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_begin_mass_land_resettlement }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#production buffs, add 2 factory
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Put the Refugees to Work
+	focus = {
+		id = IKR_put_the_refugees_to_work
+		icon = GFX_focus_IKR_put_the_refugees_to_work
+		x = 3
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_begin_mass_land_resettlement }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#production buff
+			swap_ideas = {
+				remove_idea = IKR_land_reset
+				add_idea = IKR_refugee_work
+			}
+		}
+	}
+
+	#Focus for Crush the Socialist Philosophy
+	focus = {
+		id = IKR_crush_the_socialist_philosophy
+		icon = GFX_focus_IKR_crush_the_socialist_philosophy
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_increase_japanese_cultural_enrichment 
+		}
+		prerequisite = { 
+			focus = IKR_begin_mass_land_resettlement 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#anti-commie idea/purge
+			add_ideas = {
+				IKR_crush_comm
+			}
+		}
+	}
+
+	#Focus for The Benefits of Cheap Labour
+	focus = {
+		id = IKR_the_benefits_of_cheap_labour
+		icon = GFX_focus_IKR_the_benefits_of_cheap_labour
+		x = 7
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_spur_industrial_innovation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#build speed at cost of stability
+			add_ideas = {
+				IKR_cheap_labour
+			}
+		}
+	}
+
+	#Focus for Build New Automotive Factories
+	focus = {
+		id = IKR_build_new_automotive_factories
+		icon = GFX_focus_IKR_build_new_automotive_factories
+		x = 9
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_spur_industrial_innovation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#2 mils
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Shelter the Zainichi
+	focus = {
+		id = IKR_shelter_the_zainichi
+		icon = GFX_focus_IKR_shelter_zainichi
+		x = 11
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_spur_industrial_innovation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#pop and manpower buff, boost stab
+			add_ideas = {
+				IKR_zainichi
+			}
+		}
+	}
+
+	#Focus for A Fair Pension
+	focus = {
+		id = IKR_a_fair_pension
+		icon = GFX_focus_IKR_a_fair_pension
+		x = 13
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_spur_industrial_innovation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#consoomer good debuff, boost stab
+			swap_ideas = {
+				remove_idea = IKR_autarky
+				add_idea = IKR_pension
+			}
+		}
+	}
+
+	#Focus for Keynesian Inspiration
+	focus = {
+		id = IKR_keynesian_inspiration
+		icon = GFX_focus_IKR_keynesian_inspiration
+		x = 15
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_spur_industrial_innovation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#consooooooom
+			add_ideas = {
+				IKR_keynes
+			}
+		}
+	}
+
+	#Focus for Central Agricultural Association
+	focus = {
+		id = IKR_central_agricultural_association
+		icon = GFX_focus_IKR_central_agricultural_association
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_crush_the_socialist_philosophy 
+			focus = IKR_build_new_automotive_factories 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#pop growth, infra build speed
+			add_ideas = {
+				IKR_agri_assoc
+			}
+		}
+	}
+
+	#Focus for Electrified Railways
+	focus = {
+		id = IKR_electrified_railways
+		icon = GFX_focus_IKR_electrified_railways
+		x = 9
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_build_new_automotive_factories }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add 1 infra to countryside states
+			984 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			525 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			986 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Curb the ODC
+	focus = {
+		id = IKR_curb_the_odc
+		icon = GFX_focus_IKR_curb_the_odc
+		x = 13
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_a_fair_pension }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#resource gain, consoom
+			swap_ideas = {
+				remove_idea = IKR_pension
+				add_idea = IKR_curb_ODC
+			}
+		}
+	}
+
+	#Focus for Crush the Landlords
+	focus = {
+		id = IKR_crush_the_landlords
+		icon = GFX_focus_IKR_crush_the_landlords
+		x = 15
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_a_fair_pension }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#popularity, stability, debuff infra build
+			swap_ideas = {
+				remove_idea = KOR_land_lords
+				add_idea = IKR_crush_lords
+			}
+		}
+	}
+
+	#Focus for Invite Mantetsu Expats
+	focus = {
+		id = IKR_invite_mantetsu_expats
+		icon = GFX_focus_IKR_invite_mantetsu_expats
+		x = 0
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_embrace_corporatist_ethos }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add pop, manpower, 
+			add_ideas = {
+				IKR_expats
+			}
+		}
+	}
+
+	#Focus for Conduct a Cadastral Survey
+	focus = {
+		id = IKR_conduct_a_cadastral_survey
+		icon = GFX_focus_IKR_conduct_a_cadastral_survey
+		x = 2
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_embrace_corporatist_ethos }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add build slots
+			525 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			984 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			986 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	#Focus for Mining the Azure Hills
+	focus = {
+		id = IKR_mining_the_azure_hills
+		icon = GFX_focus_IKR_mining_the_azure_hills
+		x = 1
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_invite_mantetsu_expats 
+		}
+		prerequisite = { 
+			focus = IKR_conduct_a_cadastral_survey 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#add resources to X state
+			add_resource = {
+				type = steel
+				amount = 21
+				state = 984
+			}
+		}
+	}
+
+	#Focus for Busan-Pyongyang Railway
+	focus = {
+		id = IKR_busanpyongyang_railway
+		icon = GFX_focus_IKR_busan_pyongyang_railway
+		x = 3
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_put_the_refugees_to_work 
+		}
+		prerequisite = { 
+			focus = IKR_conduct_a_cadastral_survey 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#infra build
+			828 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			829 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			830 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for State-Mandated Universal Education
+	focus = {
+		id = IKR_statemandated_universal_education
+		icon = GFX_focus_IKR_state_mandated_universal_education
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_central_agricultural_association }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#1 research slot
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Korea Stands Alone
+	focus = {
+		id = IKR_korea_stands_alone
+		icon = GFX_focus_IKR_korea_stands_alone
+		x = 11
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_electrified_railways 
+		}
+		prerequisite = { 
+			focus = IKR_curb_the_odc 
+		}
+		available = {
+			is_subject = no
+		}   
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#trade idea of some kind
+			swap_ideas = {
+				remove_idea = IKR_curb_ODC
+				add_idea = IKR_standing_alone
+			}
+			remove_ideas = {
+				KOR_jap_colony
+			}
+			525 = {
+				add_core_of = IKR
+			}
+			989 = {
+				add_core_of = IKR
+			}
+			988 = {
+				add_core_of = IKR
+			}
+			985 = {
+				add_core_of = IKR
+			}
+			527 = {
+				add_core_of = IKR
+			}
+			984 = {
+				add_core_of = IKR
+			}
+		}
+	}
+
+	#Focus for New Nihon
+	focus = {
+		id = IKR_new_nihon
+		icon = GFX_focus_IKR_new_nihon
+		x = 2
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_busanpyongyang_railway 
+		}
+		prerequisite = { 
+			focus = IKR_mining_the_azure_hills 
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#cosmetic tag
+			#set_cosmetic_tag = KOR_new_nihon
+			remove_ideas = {
+				KOR_jap_colony
+			}
+			525 = {
+				add_core_of = IKR
+			}
+			989 = {
+				add_core_of = IKR
+			}
+			988 = {
+				add_core_of = IKR
+			}
+			985 = {
+				add_core_of = IKR
+			}
+			527 = {
+				add_core_of = IKR
+			}
+			984 = {
+				add_core_of = IKR
+			}
+		}
+	}
+
+	#Focus for An Emperor with no Empire
+	focus = {
+		id = IKR_an_emperor_with_no_empire
+		icon = GFX_focus_IKR_an_emperor_with_no_empire
+		x = 18
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_the_eclipse }
+		mutually_exclusive = {
+			focus = IKR_a_man_and_a_glass_of_sake
+		}
+		available = { 
+			JAP = {
+				exists = no
+			}
+			has_country_flag = JAP_exiles_IKR
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#select Emperor
+			set_cosmetic_tag = IKR_exiles
+			country_event = {
+				id = kor.34
+			}
+		}
+	}
+
+	#Focus for A Moment of Repentance
+	focus = {
+		id = IKR_a_moment_of_repentance
+		icon = GFX_focus_IKR_a_moment_of_repentance
+		x = 19
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_and_his_homeless_court }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#
+			country_event = {
+				id = kor.23
+			}
+		}
+	}
+
+	#Focus for A Rush of Guilt
+	focus = {
+		id = IKR_a_rush_of_guilt
+		icon = GFX_focus_IKR_a_rush_of_guilt
+		x = 18
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_a_moment_of_repentance 
+		}
+		prerequisite = { 
+			focus = IKR_a_moment_of_bloodthirst 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#
+			country_event = {
+				id = kor.24
+			}
+		}
+	}
+
+	#Focus for Alas! My Grief
+	focus = {
+		id = IKR_alas_my_grief
+		icon = GFX_focus_IKR_alas_my_grief
+		x = 18
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_a_rush_of_guilt }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#idea - dreams of home
+			country_event = {
+				id = kor.25
+			}
+			add_ideas = {
+				IKR_dreams_of_home
+			}
+		}
+	}
+
+	#Focus for Hears a Whisper in his Ear
+	focus = {
+		id = IKR_hears_a_whisper_in_his_ear
+		icon = GFX_focus_IKR_hears_a_whisper_in_his_ear
+		x = 23
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_a_man_and_a_glass_of_sake }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#resistance spikes, lose equipment and manpower
+			country_event = {
+				id = kor.26
+			}
+			swap_ideas = {
+				remove_idea = IKR_sake
+				add_idea = IKR_whispers
+			}
+		}
+	}
+
+	#Focus for ...Of Dissenters in Prison
+	focus = {
+		id = IKR_of_dissenters_in_prison
+		icon = GFX_focus_IKR_of_dissenters_in_prison
+		x = 23
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_hears_a_whisper_in_his_ear }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#boost stability, resistance drops
+			country_event = {
+				id = kor.27
+			}
+			remove_ideas = IKR_whispers
+			add_timed_idea = {
+				idea = IKR_dissenters
+				days = 60
+			}
+		}
+	}
+
+	#Focus for ...And Rebels Lying Dead
+	focus = {
+		id = IKR_and_rebels_lying_dead
+		icon = GFX_focus_IKR_and_rebels_lying_dead
+		x = 23
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_of_dissenters_in_prison }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#lose war_support, equipment, gain popularity
+			country_event = {
+				id = kor.28
+			}
+			add_ideas = {
+				IKR_rebels_dead
+			}
+		}
+	}
+
+	#Focus for Shogunate of Japanese Korea
+	focus = {
+		id = IKR_shogunate_of_japanese_korea
+		icon = GFX_focus_IKR_shogunate_of_japanese_korea
+		x = 22
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_imperial_remnant }
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {	#cosmetic?
+			set_cosmetic_tag = KOR_shogunate
+		}
+	}
+	
+	#Focus for Guard the Skies
+	focus = {
+		id = IKR_guard_the_skies
+		icon = GFX_focus_IKR_guard_the_skies
+		x = 46
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				OR = {
+					has_war_with = KOR
+					has_war_with = JKR
+				}
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 3 category = air_doctrine }
+		}
+	}
+
+	#Focus for National Defence
+	focus = {
+		id = IKR_national_defence
+		icon = GFX_focus_IKR_national_defence
+		x = 32
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				OR = {
+					has_war_with = KOR
+					has_war_with = JKR
+				}
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 3 uses = 1 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Guard the Seas
+	focus = {
+		id = IKR_guard_the_seas
+		icon = GFX_focus_IKR_guard_the_seas
+		x = 39
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				OR = {
+					has_war_with = KOR
+					has_war_with = JKR
+				}
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = dd_tech }
+			navy_experience = 15
+		}
+	}
+
+	#Focus for New Arsenals
+	focus = {
+		id = IKR_new_arsenals
+		icon = GFX_focus_IKR_new_arsenal
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_armoury_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Busan Fleet
+	focus = {
+		id = IKR_busan_fleet
+		icon = GFX_focus_IKR_busan_fleet
+		x = 39
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cl_tech category = ca_tech }
+		}
+	}
+
+	#Focus for Legacy of Yi Sun-sin
+	focus = {
+		id = IKR_legacy_of_yi_sunsin
+		icon = GFX_focus_IKR_legacy_of_the_ijn
+		x = 39
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_busan_fleet }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = bb_tech }
+		}
+	}
+
+	#Focus for Busan Shipyard
+	focus = {
+		id = IKR_busan_shipyard
+		icon = GFX_focus_IKR_busan_shipyard
+		x = 37
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_seas }
+		available = { 
+			has_full_control_of_state = 828
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			828 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Contest the Sea of Japan
+	focus = {
+		id = IKR_contest_the_sea_of_japan
+		icon = GFX_focus_IKR_contest_the_sea_of_japan
+		x = 41
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for Busan Naval Academy
+	focus = {
+		id = IKR_busan_naval_academy
+		icon = GFX_focus_IKR_busan_naval_academy
+		x = 37
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_busan_shipyard }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 100
+		}
+	}
+
+	#Focus for Turtle Ships
+	focus = {
+		id = IKR_turtle_ships
+		icon = GFX_focus_IKR_maximum_firepower
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_legacy_of_yi_sunsin }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				IKR_turtle
+			}
+		}
+	}
+
+	#Focus for Combined Arms
+	focus = {
+		id = IKR_combined_arms
+		icon = GFX_focus_IKR_combined_arms
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_lessons_from_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = land_doctrine category = air_doctrine }
+		}
+	}
+
+	#Focus for New Air Wings
+	focus = {
+		id = IKR_new_air_wings
+		icon = GFX_focus_IKR_new_air_wings
+		x = 46
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Air Defence Network
+	focus = {
+		id = IKR_air_defence_network
+		icon = GFX_focus_IKR_air_defence_network
+		x = 43
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_camouflage }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Women in the Air
+	focus = {
+		id = IKR_women_in_the_air
+		icon = GFX_focus_IKR_women_in_the_air
+		x = 45
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_new_air_wings }
+		mutually_exclusive = { focus = IKR_martyrs_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_manpower = 25000
+		}
+	}
+
+	#Focus for Pilot Schools
+	focus = {
+		id = IKR_pilot_schools
+		icon = GFX_focus_IKR_pilot_schools
+		x = 46
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = IKR_women_in_the_air 
+			focus = IKR_martyrs_in_the_air 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 100
+		}
+	}
+
+	#Focus for Camouflage
+	focus = {
+		id = IKR_camouflage
+		icon = GFX_focus_IKR_camouflage
+		x = 43
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				IKR_air_camouflage
+			}
+		}
+	}
+
+	#Focus for Harass the Bombers
+	focus = {
+		id = IKR_harass_the_bombers
+		icon = GFX_focus_IKR_harass_the_bombers
+		x = 49
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				IKR_harassment
+			}
+		}
+	}
+
+	#Focus for Armoury of the Republic
+	focus = {
+		id = IKR_armoury_of_the_republic
+		icon = GFX_focus_IKR_armoury_of_the_governorate
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Promote Partisan Leaders
+	focus = {
+		id = IKR_promote_partisan_leaders
+		icon = GFX_focus_IKR_promote_junior_officers
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_army_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				IKR_promote_pl
+			}
+		}
+	}
+
+	#Focus for Army of the Republic
+	focus = {
+		id = IKR_army_of_the_republic
+		icon = GFX_focus_IKR_army_of_the_governorate
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	#Focus for Establish a Marine Corps
+	focus = {
+		id = IKR_establish_a_marine_corps
+		icon = GFX_focus_IKR_establish_a_marine_corps
+		x = 41
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_contest_the_sea_of_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = marine_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = tp_tech }
+		}
+	}
+
+	#Focus for Lessons from Japan
+	focus = {
+		id = IKR_lessons_from_japan
+		icon = GFX_focus_IKR_lessons_from_japan
+		x = 34
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_light_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_heavy_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	#Focus for Politicise the Army
+	focus = {
+		id = IKR_politicise_the_army
+		icon = GFX_focus_IKR_poiticise_the_army
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_promote_partisan_leaders }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_command_power = 35
+		}
+	}
+
+	#Focus for Martyrs in the Air
+	focus = {
+		id = IKR_martyrs_in_the_air
+		icon = GFX_focus_IKR_martyrs_in_the_air
+		x = 47
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_new_air_wings }
+		mutually_exclusive = { focus = IKR_women_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+
+	#Focus for Dogfighting Pedigree
+	focus = {
+		id = IKR_dogfighting_pedigree
+		icon = GFX_focus_IKR_dogfighting_pedigree
+		x = 49
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = IKR_harass_the_bombers }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				IKR_dogfighting
+			}
+		}
+	}
+
+#End of focuses 
+ }

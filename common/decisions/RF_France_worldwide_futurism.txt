@@ -1,0 +1,1384 @@
+FRA_worldwide_futurism = {
+	political_mission_fiume = {
+		cost = 50
+		ai_will_do = {
+			factor = 0.5
+		}
+		available = {
+			FIU = {
+				accelerationism < 1
+			}
+			NOT = {
+				FIU = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			FIU = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_fiume = {
+		cost = 15
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = ger_military_buildup
+		available = {
+			FIU = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				FIU = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			FIU = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	military_mission_fiume = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		available = {
+			FIU = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				FIU = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			FIU = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	political_mission_kavkaz = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		available = {
+			KAV = {
+				accelerationism < 1
+			}
+			NOT = {
+				KAV = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			KAV = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_kavkaz = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		available = {
+			KAV = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				KAV = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			KAV = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_kavkaz = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		available = {
+			KAV = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				KAV = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			KAV = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	political_mission_austria = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_austrian_comrades
+		}
+		available = {
+			has_completed_focus = FRA_austrian_comrades
+			AUS = {
+				accelerationism < 1
+			}
+			NOT = {
+				AUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			AUS = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_austria = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_austrian_comrades
+			AUS = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			AUS = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				AUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			AUS = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_austria = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_austrian_comrades
+			AUS = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			AUS = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				AUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			AUS = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_austria = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_austrian_comrades
+			NOT = {
+				AUS = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_austria
+			}
+			NOT = {
+				AUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = austrian_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_austria_tooltip"
+		}
+	}
+	futurist_revolt_austria = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_austrian_comrades
+			NOT = {
+				AUS = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				AUS = {
+					has_government = accelerationism
+				}
+			}
+			AUS = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						austrian_futurists < 30
+					}
+				}
+				AUS = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						austrian_futurists > 30
+					}
+					check_variable = {
+						austrian_futurists < 70
+					}
+				}
+				AUS = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						austrian_futurists > 70
+					}
+				}
+				AUS = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	political_mission_yugoslavia = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_aid_yugoslavia
+		}
+		available = {
+			has_completed_focus = FRA_aid_yugoslavia
+			YUG = {
+				accelerationism < 1
+			}
+			NOT = {
+				YUG = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			YUG = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_yugoslavia = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_aid_yugoslavia
+			YUG = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			YUG = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				YUG = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			YUG = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_yugoslavia = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_aid_yugoslavia
+			YUG = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			YUG = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				YUG = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			YUG = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_yugoslavia = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_aid_yugoslavia
+			NOT = {
+				YUG = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_yugoslavia
+			}
+			NOT = {
+				YUG = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = yugoslavian_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_yugoslavia_tooltip"
+		}
+	}
+	futurist_revolt_yugoslavia = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_aid_yugoslavia
+			NOT = {
+				YUG = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				YUG = {
+					has_government = accelerationism
+				}
+			}
+			YUG = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						yugoslavian_futurists < 30
+					}
+				}
+				YUG = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						yugoslavian_futurists > 30
+					}
+					check_variable = {
+						yugoslavian_futurists < 70
+					}
+				}
+				YUG = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						yugoslavian_futurists > 70
+					}
+				}
+				YUG = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	political_mission_russia = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_allies_in_russia
+		}
+		available = {
+			has_completed_focus = FRA_allies_in_russia
+			RUS = {
+				accelerationism < 1
+			}
+			NOT = {
+				RUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			RUS = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_russia = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_allies_in_russia
+			RUS = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			RUS = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				RUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			RUS = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_russia = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_allies_in_russia
+			RUS = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			RUS = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				RUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			RUS = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_russia = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_allies_in_russia
+			NOT = {
+				RUS = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_russia
+			}
+			NOT = {
+				RUS = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = russian_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_russia_tooltip"
+		}
+	}
+	futurist_revolt_russia = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_allies_in_russia
+			NOT = {
+				RUS = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				RUS = {
+					has_government = accelerationism
+				}
+			}
+			RUS = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						russian_futurists < 30
+					}
+				}
+				RUS = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						russian_futurists > 30
+					}
+					check_variable = {
+						russian_futurists < 70
+					}
+				}
+				RUS = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						russian_futurists > 70
+					}
+				}
+				RUS = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	political_mission_poland = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_eternal_friendship_poland
+		}
+		available = {
+			has_completed_focus = FRA_eternal_friendship_poland
+			POL = {
+				accelerationism < 1
+			}
+			NOT = {
+				POL = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			POL = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_poland = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_eternal_friendship_poland
+			POL = {
+				has_government = accelerationism
+			}
+			NOT = {
+				POL = {
+					has_war_with = FRA
+				}
+			}
+		}
+		available = {
+			POL = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			POL = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_poland = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_eternal_friendship_poland
+			POL = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			POL = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				POL = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			POL = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_poland = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_eternal_friendship_poland
+			NOT = {
+				POL = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_poland
+			}
+			NOT = {
+				POL = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = polish_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_poland_tooltip"
+		}
+	}
+	futurist_revolt_poland = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_eternal_friendship_poland
+			NOT = {
+				POL = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				POL = {
+					has_government = accelerationism
+				}
+			}
+			POL = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						polish_futurists < 30
+					}
+				}
+				POL = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						polish_futurists > 30
+					}
+					check_variable = {
+						polish_futurists < 70
+					}
+				}
+				POL = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						polish_futurists > 70
+					}
+				}
+				POL = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	political_mission_turkey = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_riders_of_turan
+		}
+		available = {
+			has_completed_focus = FRA_riders_of_turan
+			TUR = {
+				accelerationism < 1
+			}
+			NOT = {
+				TUR = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			TUR = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_turkey = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_riders_of_turan
+			TUR = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			TUR = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				TUR = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			TUR = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_turkey = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_riders_of_turan
+			TUR = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			TUR = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				TUR = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			TUR = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_turkey = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_riders_of_turan
+			NOT = {
+				TUR = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_turkey
+			}
+			NOT = {
+				TUR = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = turkish_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_turkey_tooltip"
+		}
+	}
+	futurist_revolt_turkey = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_riders_of_turan
+			NOT = {
+				TUR = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				TUR = {
+					has_government = accelerationism
+				}
+			}
+			TUR = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						turkish_futurists < 30
+					}
+				}
+				TUR = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						turkish_futurists > 30
+					}
+					check_variable = {
+						turkish_futurists < 70
+					}
+				}
+				TUR = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						turkish_futurists > 70
+					}
+				}
+				TUR = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	political_mission_america = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		visible = {
+			has_completed_focus = FRA_friendship_in_west
+		}
+		available = {
+			has_completed_focus = FRA_friendship_in_west
+			USA = {
+				accelerationism < 1
+			}
+			NOT = {
+				USA = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			USA = {
+				add_timed_idea = {
+					idea = FRA_cultural_attache
+					days = 180
+				}
+			}
+		}
+		days_re_enable = 180
+	}
+	supply_america = {
+		cost = 15
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = FRA_friendship_in_west
+			USA = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			USA = {
+				has_government = accelerationism
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				USA = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			USA = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = FRA
+				}
+			}
+		}
+		days_re_enable = 50
+	}
+	military_mission_america = {
+		cost = 50
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_friendship_in_west
+			USA = {
+				has_government = accelerationism
+			}
+		}
+		available = {
+			USA = {
+				has_government = accelerationism
+			}
+			has_army_experience > 25
+			NOT = {
+				USA = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			USA = {
+				add_ideas = FRA_military_mission
+			}
+			army_experience = -25
+		}
+		fire_only_once = yes
+	}
+	arm_futurists_america = {
+		cost = 25
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = FRA_friendship_in_west
+			NOT = {
+				USA = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			NOT = {
+				has_country_flag = futurists_purged_america
+			}
+			NOT = {
+				USA = {
+					has_war_with = FRA
+				}
+			}
+		}
+		complete_effect  = {
+			add_to_variable = {
+				var = american_futurists
+				value = 5
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			custom_effect_tooltip = "arm_futurists_america_tooltip"
+		}
+	}
+	futurist_revolt_america = {
+		cost = 0
+		ai_will_do = {
+            factor = 0.5
+        }
+		icon = generic_army_support
+		visible = {
+			has_completed_focus = FRA_friendship_in_west
+			NOT = {
+				USA = {
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			NOT = {
+				USA = {
+					has_government = accelerationism
+				}
+			}
+			USA = {
+				has_war_with = FRA
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					check_variable = {
+						american_futurists < 30
+					}
+				}
+				USA = {
+					country_event = france.167
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						american_futurists > 30
+					}
+					check_variable = {
+						american_futurists < 70
+					}
+				}
+				USA = {
+					country_event = france.168
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = {
+						american_futurists > 70
+					}
+				}
+				USA = {
+					country_event = france.169
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+}

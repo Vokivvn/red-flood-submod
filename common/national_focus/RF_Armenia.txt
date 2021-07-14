@@ -1,0 +1,2349 @@
+focus_tree = {
+	id = ARM
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARM
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+	#Focus for Reconciliation with Minorities
+	focus = {
+		id = ARM_reconciliationwithminorities
+		icon = GFX_reconcilewithminorities
+		x = 10
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniansocialistdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.20
+			}
+			add_stability = 0.07
+		}
+	}
+
+	#Focus for State Secularism
+	focus = {
+		id = ARM_statesecularism
+		icon = GFX_statesecularism
+		x = 9
+		y = 8
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_revisetraditions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_statesecularism
+		}
+	}
+
+	#Focus for Planned Economy
+	focus = {
+		id = ARM_plannedeconomy
+		icon = GFX_plannedeconomy
+		x = 10
+		y = 9
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ARM_statesecularism 
+		}
+		prerequisite = { 
+			focus = ARM_travelermovement 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_plannedeconomy
+		}
+	}
+
+	#Focus for Huntchakian Victory!
+	focus = {
+		id = ARM_huntchakianvictory
+		icon = GFX_huntchakianvictory
+		x = 10
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_businessasusual }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = revisionist_socialism
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = arm.5
+					days = 5
+				}
+			}
+		}
+	}
+
+	#Focus for Fighter Focus
+	focus = {
+		id = ARM_fighterfocus
+		icon = GFX_fightereffort
+		x = 40
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armenianairforce }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	#Focus for Armenian Airforce
+	focus = {
+		id = ARM_armenianairforce
+		icon = GFX_aairforce
+		x = 38
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for Reward Daringness
+	focus = {
+		id = ARM_rewarddaringness
+		icon = GFX_rewarddaringness
+		x = 38
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_purchasebritishplanes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_rewarddaringness
+		}
+	}
+
+	#Focus for Open Armenia's Airways
+	focus = {
+		id = ARM_openarmeniasairways
+		icon = GFX_openuparmenianairways
+		x = 38
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_rewarddaringness }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_airways
+		}
+	}
+
+	#Focus for Destroy the Takank
+	focus = {
+		id = ARM_destroythetakank
+		icon = GFX_destroytakank
+		x = 13
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_theyfindout }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			230 = {
+				add_manpower = -12543
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for Mass Internal Purges
+	focus = {
+		id = ARM_massinternalpurges
+		icon = GFX_massinternalpurges
+		x = 13
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_destroythetakank }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					days = 25
+					id = ARM.11
+				}
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for Society of the Tseghakron
+	focus = {
+		id = ARM_societyofthetseghakron
+		icon = GFX_societyoftseghakron
+		x = 15
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_destroythetakank }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_society
+		}
+	}
+
+	#Focus for Kill Unionists
+	focus = {
+		id = ARM_killunionists
+		icon = GFX_killunionists
+		x = 13
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_massinternalpurges }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			230 = {
+				add_manpower = -6543
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+		}
+	}
+
+	#Focus for End the Turkish Language
+	focus = {
+		id = ARM_endtheturkishlanguage
+		icon = GFX_endturkishlanguage
+		x = 19
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ARM_killunionists 
+		}
+		prerequisite = { 
+			focus = ARM_societyofthetseghakron 
+		}
+		prerequisite = { 
+			focus = ARM_tseghparamilitaries 
+		}
+		prerequisite = { 
+			focus = ARM_agunforeveryman 
+		}
+		prerequisite = { 
+			focus = ARM_conscriptallofthem 
+		}
+		prerequisite = { 
+			focus = ARM_executepartisans 
+		}
+		prerequisite = { 
+			focus = ARM_wipetheboardclean 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = TUR }
+			hidden_effect = {
+				TUR = {
+					add_opinion_modifier = {
+					    target = ARM
+					    modifier = huge_decrease
+					}
+				}
+				ARM = {
+					add_opinion_modifier = {
+					    target = TUR
+					    modifier = huge_decrease
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Annihilate the Kavkaz
+	focus = {
+		id = ARM_annihilatethekavkaz
+		icon = GFX_annihilatekav
+		x = 19
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_endtheturkishlanguage }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = KAV }
+		}
+	}
+
+	#Focus for Tsegh Paramilitaries
+	focus = {
+		id = ARM_tseghparamilitaries
+		icon = GFX_tseghparamilitaries
+		x = 17
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_cultofviolence }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_tsegh
+			remove_ideas = ARM_tgb1
+		}
+	}
+
+	#Focus for Vanguard of Reaction
+	focus = {
+		id = ARM_vanguardofreaction
+		icon = GFX_vanguardofreaction
+		x = 21
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_thegreatbattle }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.10
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Conscript All Of Them
+	focus = {
+		id = ARM_conscriptallofthem
+		icon = GFX_cosnscripteveryonelmao
+		x = 21
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_vanguardofreaction }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = volunteer_only
+				add_idea = service_by_requirement
+			}
+			hidden_effect = {
+				country_event = {
+					days = 25
+					id = ARM.12
+				}
+			}
+		}
+	}
+
+	#Focus for The Great Battle
+	focus = {
+		id = ARM_thegreatbattle
+		icon = GFX_thegreatbattle
+		x = 19
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_gareginsavesarmenia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = ARM_thegreatbattle
+		}
+	}
+
+	#Focus for Cult of Violence
+	focus = {
+		id = ARM_cultofviolence
+		icon = GFX_cultofviolencearmenia
+		x = 17
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_thegreatbattle }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ARM_thegreatbattle
+				add_idea = ARM_tgb1
+			}
+		}
+	}
+
+	#Focus for Militarized Society
+	focus = {
+		id = ARM_militarizedsociety
+		icon = GFX_militarisedsociety
+		x = 19
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_thegreatbattle }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+				free_building_slots = {
+				building = arms_factory
+				size > 0
+				include_locked = yes
+				}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+				type = arms_factory
+				level = 4
+				instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Wipe the Board Clean
+	focus = {
+		id = ARM_wipetheboardclean
+		icon = GFX_wipetheboardclean
+		x = 25
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_destroyeveryenemy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			229 = {
+				add_manpower = -45389
+			}
+			CCD = {
+				add_stability = 0.1
+				add_popularity = {
+					ideology = reactionism
+					popularity = 0.15
+				}
+			}
+		}
+	}
+
+	#Focus for Execute Partisans
+	focus = {
+		id = ARM_executepartisans
+		icon = GFX_executepartisans
+		x = 23
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_centrocaspiastakankproblem }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = -2432
+			add_stability = 0.1
+		}
+	}
+
+	#Focus for Centrocaspia's Takank Problem
+	focus = {
+		id = ARM_centrocaspiastakankproblem
+		icon = GFX_centrocaspiastakank
+		x = 24
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_theyfindout }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CCD = {
+				add_stability = 0.05
+			}
+			229 = {
+				add_manpower = -24534
+			}
+		}
+	}
+
+	#Focus for Freedom for the Worker
+	focus = {
+		id = ARM_freedomfortheworker
+		icon = GFX_freedomforworker
+		x = 9
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniansocialistdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_freedomforworker
+		}
+	}
+
+	#Focus for Armenian Socialist Democracy
+	focus = {
+		id = ARM_armeniansocialistdemocracy
+		icon = GFX_asocialistdem
+		x = 10
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_huntchakianvictory }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1 
+			}
+		}
+	}
+
+	#Focus for Co-operate with Councilists
+	focus = {
+		id = ARM_cooperatewithcouncilists
+		icon = GFX_cooperatewithcommies
+		x = 11
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniansocialistdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.20
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Traveler Movement
+	focus = {
+		id = ARM_travelermovement
+		icon = GFX_travelermovement
+		x = 11
+		y = 8
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_revisetraditions }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_travelermovement
+		}
+	}
+
+	#Focus for Yerevan Institute of Arts
+	focus = {
+		id = ARM_yerevaninstituteofarts
+		icon = GFX_instituteofarts
+		x = 9
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_reconciliationwithminorities }
+		mutually_exclusive = { focus = ARM_yerevaninstituteofscience }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_arts
+		}
+	}
+
+	#Focus for Housing Programs for the Poorest
+	focus = {
+		id = ARM_housingprogramsforthepoorest
+		icon = GFX_housingprograms
+		x = 3
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_welfareprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+
+			add_political_power = -200
+		}
+	}
+
+	#Focus for Fund Education
+	focus = {
+		id = ARM_fundeducation
+		icon = GFX_fundeducation
+		x = 1
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_welfareprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Welfare Programs
+	focus = {
+		id = ARM_welfareprograms
+		icon = GFX_welfareprograms
+		x = 3
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_freedomofspeech }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_welfare
+		}
+	}
+
+	#Focus for Turkish Autonomies
+	focus = {
+		id = ARM_turkishautonomies
+		icon = GFX_turkishautonomies
+		x = 5
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_freedomofspeech }
+		mutually_exclusive = { focus = ARM_turkishassimilation }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_turkautonomy
+		}
+	}
+
+	#Focus for Turkish Assimilation
+	focus = {
+		id = ARM_turkishassimilation
+		icon = GFX_turkishassimilation
+		x = 1
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_freedomofspeech }
+		mutually_exclusive = { focus = ARM_turkishautonomies }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 95434
+			add_stability = -0.10
+		}
+	}
+
+	#Focus for Wealth Taxation Bill
+	focus = {
+		id = ARM_wealthtaxationbill
+		icon = GFX_wealthtaxationbill
+		x = 5
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_dashnakswin }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_wealth
+		}
+	}
+
+	#Focus for Freedom of Speech
+	focus = {
+		id = ARM_freedomofspeech
+		icon = GFX_freedomofspeech
+		x = 3
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_protectdemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = liberalism
+				popularity = 0.03
+			}
+			add_popularity = { ideology = conservatism
+				popularity = 0.02
+			}
+			add_popularity = { ideology = social_democratism
+				popularity = 0.05
+			}
+			add_popularity = { 
+				ideology = right_authoritarianism
+				popularity = 0.02
+			}
+			add_popularity = { 
+				ideology = reactionism
+				popularity = 0.04
+			}
+			add_political_power = -50
+		}
+	}
+
+	#Focus for Expand Voting Booths
+	focus = {
+		id = ARM_expandvotingbooths
+		icon = GFX_expandvoting
+		x = 1
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_dashnakswin }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.10
+		}
+	}
+
+	#Focus for Protect Democracy
+	focus = {
+		id = ARM_protectdemocracy
+		icon = GFX_protectdemocracyarm
+		x = 3
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_dashnakswin }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = { ideology = social_democratism
+				popularity = 0.05
+			}
+				add_popularity = { ideology = liberalism
+				popularity = 0.03
+			}
+				add_popularity = { ideology = conservatism
+				popularity = 0.02
+			}
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Dashnaks Win!
+	focus = {
+		id = ARM_dashnakswin
+		icon = GFX_dashnakvictory
+		x = 3
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_businessasusual }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = social_democratism
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = {
+					id = arm.4
+					days = 5
+				}
+			}
+		}
+	}
+
+	#Focus for Business as Usual
+	focus = {
+		id = ARM_businessasusual
+		icon = GFX_businessasusual
+		x = 7
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_thefragiledemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			country_event = {
+				days = 10
+				id = ARM.2
+			}
+			country_event = {
+				days = 25
+				id = ARM.3
+			}
+		}
+	}
+
+	#Focus for The Fragile Democracy
+	focus = {
+		id = ARM_thefragiledemocracy
+		icon = GFX_fragiledemocracy
+		x = 13
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					days = 20
+					id = ARM.1
+				}
+			}
+		}
+	}
+
+	#Focus for They find out!
+	focus = {
+		id = ARM_theyfindout
+		icon = GFX_theyfindout
+		x = 19
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_thefragiledemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_stability = -0.30
+			add_war_support = 0.10
+			hidden_effect = {
+				country_event = {
+					days = 30
+					id = ARM.6
+				}
+			}
+		}
+		
+	}
+
+	#Focus for Garegin saves Armenia
+	focus = {
+		id = ARM_gareginsavesarmenia
+		icon = GFX_gareginsavesarmenia
+		x = 19
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_theyfindout }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+		}
+	}
+
+	#Focus for Destroy Every Enemy
+	focus = {
+		id = ARM_destroyeveryenemy
+		icon = GFX_destroyeveryenemy
+		x = 25
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_centrocaspiastakankproblem }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			229 = {
+				add_manpower = -14255
+			}
+			CCD = {
+				add_stability = 0.20
+				add_popularity = {
+					ideology = reactionism
+					popularity = 0.20
+				}
+			}
+		}
+	}
+
+	#Focus for A Gun for Every Man
+	focus = {
+		id = ARM_agunforeveryman
+		icon = GFX_gunforeveryman
+		x = 19
+		y = 5
+		cost = 15
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_militarizedsociety }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = ARM
+			}
+		}
+	}
+
+	#Focus for Fund Patriotism
+	focus = {
+		id = ARM_fundpatriotism
+		icon = GFX_fundpatriotism
+		x = 5
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_welfareprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	#Focus for Democratic Socialism
+	focus = {
+		id = ARM_democraticsocialism
+		icon = GFX_democraticsocialism
+		x = 7
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_businessasusual }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Defend against the Wolf...
+	focus = {
+		id = ARM_defendagainstthewolf
+		icon = GFX_protectagainstwolf
+		x = 7
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_protectthemoderaterevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_turkfuckyou
+		}
+	}
+
+	#Focus for ...And the Bear
+	focus = {
+		id = ARM_andthebear
+		icon = GFX_andthebear
+		x = 7
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_defendagainstthewolf }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_rusfuckyou
+			if = {
+				limit = {
+					ARM = {
+						has_government = social_democratism
+					}
+				}
+				DKB = {
+					add_popularity = {
+						ideology = liberalism
+						popularity = 0.05
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					ARM = {
+						has_government = revisionist_socialism
+					}
+				}
+				DKB = {
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Protect the Moderate Revolution
+	focus = {
+		id = ARM_protectthemoderaterevolution
+		icon = GFX_protectmoderaterevolution
+		x = 7
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_democraticsocialism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Pre-emptive Strike against the Society
+	focus = {
+		id = ARM_preemptivestrikeagainstthesociety
+		icon = GFX_preemptivestrike
+		x = 7
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_andthebear }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KAV
+			}
+		}
+	}
+
+	#Focus for Yerevan Institute of Science
+	focus = {
+		id = ARM_yerevaninstituteofscience
+		icon = GFX_instituteofscience
+		x = 11
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_reconciliationwithminorities }
+		mutually_exclusive = { focus = ARM_yerevaninstituteofarts }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Revise Traditions
+	focus = {
+		id = ARM_revisetraditions
+		icon = GFX_revisetradition
+		x = 10
+		y = 7
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_reconciliationwithminorities }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 200
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Bomber Focus
+	focus = {
+		id = ARM_bomberfocus
+		icon = GFX_bombereffortarmenia
+		x = 36
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armenianairforce }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#Focus for Purchase British Planes
+	focus = {
+		id = ARM_purchasebritishplanes
+		icon = GFX_britishplanes
+		x = 38
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armenianairforce }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 100
+				producer = ARM
+			}
+			ENG = {
+				add_political_power = 100
+			}
+			add_political_power = -100
+		}
+	}
+
+	#Focus for Buy Trucks and Tanks
+	focus = {
+		id = ARM_buytrucksandtanks
+		icon = GFX_buytrucks
+		x = 54
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_greatstepforwardintanktechnology }
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	#Focus for Great Step Forward in Tank Technology
+	focus = {
+		id = ARM_greatstepforwardintanktechnology
+		icon = GFX_greatstepforwardintanktechnology
+		x = 54
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_speed }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 3
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	#Focus for Blow The Turk Off
+	focus = {
+		id = ARM_blowtheturkoff
+		icon = GFX_blowturk
+		x = 52
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_producegiantcannons }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Produce Giant Cannons
+	focus = {
+		id = ARM_producegiantcannons
+		icon = GFX_producegiantcannons
+		x = 52
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_artillery }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Unstoppable Wave
+	focus = {
+		id = ARM_unstoppablewave
+		icon = GFX_unstoppablewave
+		x = 50
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_peoplesarmy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_unstoppablewave
+		}
+	}
+
+	#Focus for People's Army
+	focus = {
+		id = ARM_peoplesarmy
+		icon = GFX_peoplesarmy
+		x = 50
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_numbers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ARM_peoplesarmy
+		}
+	}
+
+	#Focus for Artillery
+	focus = {
+		id = ARM_artillery
+		icon = GFX_artillerya
+		x = 52
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_landdoctrineeffort }
+				mutually_exclusive = { focus = ARM_speed }
+		mutually_exclusive = { focus = ARM_numbers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = assembly_bonus
+				bonus = 0.5
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	#Focus for Recruitment Drives
+	focus = {
+		id = ARM_recruitmentdrives
+		icon = GFX_recruitmentdrive
+		x = 52
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armenianarmy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 68432
+		}
+	}
+
+	#Focus for Armenian Army
+	focus = {
+		id = ARM_armenianarmy
+		icon = GFX_aarmy
+		x = 52
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+
+	#Focus for Submarine Effort
+	focus = {
+		id = ARM_submarineeffort
+		icon = GFX_submarines
+		x = 47
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_expandcruisers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	#Focus for Expand Cruisers
+	focus = {
+		id = ARM_expandcruisers
+		icon = GFX_expandcruisers
+		x = 47
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniannavy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	#Focus for Not With Them
+	focus = {
+		id = ARM_notwiththem
+		icon = GFX_notwiththem
+		x = 45
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_tradewithus }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				add_stability = -0.1
+			}
+		}
+	}
+
+	#Focus for Starve Them Out
+	focus = {
+		id = ARM_starvethemout
+		icon = GFX_starvethemout
+		x = 43
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_interdictturkishtrade }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				add_ideas = TUR_starvation
+			}
+		}
+	}
+
+	#Focus for New Employment Areas
+	focus = {
+		id = ARM_newemploymentareas
+		icon = GFX_newjobs
+		x = 31
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_yerevanindustrialzone }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.07
+			add_ideas = ARM_newjobs
+		}
+	}
+
+	#Focus for Interdict Turkish Trade
+	focus = {
+		id = ARM_interdictturkishtrade
+		icon = GFX_interdicttrade
+		x = 43
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniannavy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				add_ideas = TUR_interdictedtrade
+			}
+		}
+	}
+
+	#Focus for Armenian Navy
+	focus = {
+		id = ARM_armeniannavy
+		icon = GFX_anavy
+		x = 45
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	#Focus for Subsidies to Armenian Companies
+	focus = {
+		id = ARM_subsidiestoarmeniancompanies
+		icon = GFX_armeniasubsidise
+		x = 33
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_agressiveindustrialization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = support_tech
+				category = motorized_equipment
+				category = synth_resources
+			}
+			add_political_power = -250
+		}
+	}
+
+	#Focus for Agressive Industrialization
+	focus = {
+		id = ARM_agressiveindustrialization
+		icon = GFX_agresindus
+		x = 31
+		y = 4
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_firsttwoyearplancomplete }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			230 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_stability = -0.05
+		}
+	}
+
+	#Focus for New Efforts in Aviation
+	focus = {
+		id = ARM_neweffortsinaviation
+		icon = GFX_neweffortsinaviation
+		x = 36
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_bomberfocus }
+		ai_will_do = {
+			factor = 1
+		}
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		}
+
+	#Focus for Strategic Air Support Focus
+	focus = {
+		id = ARM_strategicairsupportfocus
+		icon = GFX_sasf
+		x = 40
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_fighterfocus }
+		ai_will_do = {
+			factor = 1
+		}
+			complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for Mountains and Factories
+	focus = {
+		id = ARM_mountainsandfactories
+		icon = GFX_mountainfactory
+		x = 31
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Expand Local Military Industry
+	focus = {
+		id = ARM_expandlocalmilitaryindustry
+		icon = GFX_militaryindustry
+		x = 29
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_mountainsandfactories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Yerevan Industrial Zone
+	focus = {
+		id = ARM_yerevanindustrialzone
+		icon = GFX_yerevan
+		x = 31
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_mountainsandfactories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			230 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Expand Consumer Industry
+	focus = {
+		id = ARM_expandconsumerindustry
+		icon = GFX_consumerindustry
+		x = 33
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_mountainsandfactories }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = assembly_bonus
+				bonus = 0.5
+				uses = 2
+				technology = improved_machine_tools	
+				technology = advanced_machine_tools
+				technology = assembly_line_production
+				technology = flexible_line
+				technology = streamlined_line
+			}
+		}
+	}
+
+	#Focus for Trade with Us
+	focus = {
+		id = ARM_tradewithus
+		icon = GFX_tradewithus
+		x = 45
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_giveturkeythefinger }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Revolutionary Industrial Research
+	focus = {
+		id = ARM_revolutionaryindustrialresearch
+		icon = GFX_revolutionaryresearch
+		x = 33
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_expandconsumerindustry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	#Focus for Civilize the Outskirts
+	focus = {
+		id = ARM_civilizetheoutskirts
+		icon = GFX_civilizeoutskirts
+		x = 29
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_agressiveindustrialization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			354 = {
+				add_building_construction = {
+					type = infrastructure 
+					level = 2 
+					instant_build = yes 
+				}
+			}
+		}
+	}
+
+	#Focus for First Two Year Plan Complete
+	focus = {
+		id = ARM_firsttwoyearplancomplete
+		icon = GFX_2year
+		x = 31
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ARM_newresearchacademies 
+		}
+		prerequisite = { 
+			focus = ARM_newemploymentareas 
+		}
+		prerequisite = { 
+			focus = ARM_revolutionaryindustrialresearch 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for New Research Academies
+	focus = {
+		id = ARM_newresearchacademies
+		icon = GFX_researchacademies
+		x = 29
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_expandlocalmilitaryindustry }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for First Armenian Step Forward
+	focus = {
+		id = ARM_firstarmenianstepforward
+		icon = GFX_armeniastep
+		x = 31
+		y = 5
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_agressiveindustrialization }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			hidden_effect = {
+				955 = {
+					add_core_of = ARM
+				}
+			}
+		}
+	}
+
+	#Focus for Give Turkey The Finger
+	focus = {
+		id = ARM_giveturkeythefinger
+		icon = GFX_giveturksthefinger
+		x = 45
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_armeniannavy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			354 = {
+				remove_core_of = TUR
+				add_claim_by = TUR
+			}
+		}
+	}
+
+	#Focus for Land Doctrine Effort
+	focus = {
+		id = ARM_landdoctrineeffort
+		icon = GFX_landdoctrine
+		x = 52
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_recruitmentdrives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 2.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Numbers
+	focus = {
+		id = ARM_numbers
+		icon = GFX_manpowerarmenia
+		x = 50
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_landdoctrineeffort }
+		mutually_exclusive = { focus = ARM_speed }
+		mutually_exclusive = { focus = ARM_artillery }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Speed
+	focus = {
+		id = ARM_speed
+		icon = GFX_speed
+		x = 54
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = ARM_landdoctrineeffort }
+		mutually_exclusive = { focus = ARM_numbers }
+		mutually_exclusive = { focus = ARM_artillery }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+#End of focuses 
+ }

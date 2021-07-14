@@ -1,0 +1,85 @@
+add_namespace = leb
+
+country_event = {
+	id = leb.1
+	title = leb.1.t
+	desc = leb.1.desc
+	picture = GFX_report_event_welcome_to_lebanon
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 100
+		hidden_effect = {
+			country_event = {
+				id = leb.2
+				days = 10
+			}
+		}
+	}
+}
+
+country_event = {
+	id = leb.2
+	title = leb.2.t
+	desc = leb.2.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = leb.2.a
+		ai_chance = {
+			factor = 1
+		}
+		declare_war_on = { type = annex_everything    target = SYR }
+		add_war_support = 0.2
+		hidden_effect = {
+		load_oob = LEB_spawn
+		}
+		custom_effect_tooltip = "French citizens will rise with weapons to help us!"
+	}
+	option = {
+		name = leb.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = leb.3
+	title = leb.3.t
+	desc = leb.3.desc
+	picture = GFX_report_event_mandate_success
+	
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+		tag = LEB
+		LEB = {
+			owns_state = 554
+			owns_state = 677
+			owns_state = 1052
+		}
+	}
+	
+	option = {
+		name = leb.3.a
+		ai_chance = {
+			factor = 1
+		}
+		add_state_core = 554
+		add_state_core = 677
+		add_state_core = 1052
+		set_cosmetic_tag = LEB_MANDATE
+	}
+}

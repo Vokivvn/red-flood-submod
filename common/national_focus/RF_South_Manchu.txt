@@ -1,0 +1,2749 @@
+#####################
+#	Mantetsu - Baba	#
+#####################
+focus_tree = {
+	id = MAN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAN
+		}
+	}
+	continuous_focus_position = { x = 150 y = 2000 }
+	
+	#Focus for Green Water Navy
+	focus = {
+		id = MAN_green_water_navy
+		icon = GFX_green_water_navy
+		x = 34
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_brown_water_navy }
+		available = { 
+		
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = dd_tech }
+		}
+	}
+
+	#Focus for Like Odysseus
+	focus = {
+		id = MAN_like_odysseus
+		icon = GFX_like_odysseus
+		x = 34
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_patrol_the_murk 
+		}
+		prerequisite = { 
+			focus = MAN_lay_mines 
+		}
+		prerequisite = { 
+			focus = MAN_our_sea 
+		}
+		available = { 
+		
+		}
+		bypass = { } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#idea - harder to hit
+			add_ideas = {
+				MAN_odysseus
+			}
+		}
+	}
+
+	#Focus for Zombie Ships
+	focus = {
+		id = MAN_zombie_ships
+		icon = GFX_zombie_ships
+		x = 34
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_port_of_dalian }
+		available = { 
+			JAP = { exists = no }
+		}
+		bypass = {
+			JPR = { exists = no }
+		}        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#resurrect some of the JAP fleet that was lost
+			hidden_effect = {
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					load_oob = "MAN_ghost_ships"
+				}
+				load_oob = "MAN_ghost_ships_mtg"
+			}
+			custom_effect_tooltip = MAN_zombie_ships_tooltip
+		}
+	}
+
+	#Focus for Extend the Reach
+	focus = {
+		id = MAN_extend_the_reach
+		icon = GFX_extend_the_reach
+		x = 25
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_aircraft_procurment_scheme }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#aircraft range bonus, tech for strat bombers
+			add_ideas = {
+				MAN_reach
+			}
+		}
+	}
+
+	#Focus for Build a Domestic Air Force
+	focus = {
+		id = MAN_build_a_domestic_air_force
+		icon = GFX_build_domestic_air_force
+		x = 26
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			has_war = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#idea - fighter build cost
+			add_timed_idea = {
+				idea = MAN_fighters
+				days = 1460
+			}
+		}
+	}
+
+	#Focus for Brown Water Navy
+	focus = {
+		id = MAN_brown_water_navy
+		icon = GFX_brown_water_navy
+		x = 34
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_like_odysseus }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = tp_tech }
+		}
+	}
+
+	#Focus for Professional Soldiers
+	focus = {
+		id = MAN_professional_soldiers
+		icon = GFX_professional_soldiers
+		x = 32
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_root_out_communist_officers }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#army org buff
+			add_ideas = {
+				MAN_profesh
+			}
+		}
+	}
+
+	#Focus for Modern Small Arms
+	focus = {
+		id = MAN_modern_small_arms
+		icon = GFX_modern_small_arms
+		x = 34
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_root_out_communist_officers }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Partial Motorisation
+	focus = {
+		id = MAN_partial_motorisation
+		icon = GFX_partial_motorisation
+		x = 30
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_shenyang_arsenal 
+			focus = MAN_root_out_communist_officers 
+			focus = MAN_japanese_lingua_de_guerre 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	#Focus for Study the Japanese Failures
+	focus = {
+		id = MAN_study_the_japanese_failures
+		icon = GFX_study_japanese_failures
+		x = 34
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_kwantung_army }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Lessons of the Three Month Campaign
+	focus = {
+		id = MAN_lessons_of_the_three_month_campaign
+		icon = GFX_lessons_of_three_month_campaign
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_remnants }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_light_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_heavy_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_medium_armor }
+			
+		}
+	}
+
+	#Focus for Break their Spirits
+	focus = {
+		id = MAN_break_their_spirits
+		icon = GFX_break_their_spirits
+		x = 26
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_extend_the_reach 
+		}
+		prerequisite = { 
+			focus = MAN_multidisciplined_crews 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#bombing efficiency
+			add_ideas = {
+				MAN_spirits
+			}
+		}
+	}
+
+	#Focus for Break their Bones
+	focus = {
+		id = MAN_break_their_bones
+		icon = GFX_break_their_bones
+		x = 26
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_break_their_spirits }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#bombing efficiency
+			add_ideas = {
+				MAN_bones
+			}
+		}
+	}
+
+	#Focus for New Factories
+	focus = {
+		id = MAN_new_factories
+		icon = GFX_Open_the_Showa_Seitetsusho
+		x = 15
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_maximise_production 
+		}
+		prerequisite = { 
+			focus = MAN_labour_army 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Abandon Infantry Supremacy
+	focus = {
+		id = MAN_abandon_infantry_supremacy
+		icon = GFX_abandon_infantry_supremacy
+		x = 28
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_japanese_lingua_de_guerre }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#tank and mech bonus idea
+			add_ideas = {
+				MAN_tanks
+			}
+		}
+	}
+
+	#Focus for Root Out Communist Officers
+	focus = {
+		id = MAN_root_out_communist_officers
+		icon = GFX_root_out_communist_officers
+		x = 32
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reform_the_bandits }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	# +recruit general cost, temp army debuff, +command power
+			add_ideas = {
+				MAN_com_off
+			}
+		}
+	}
+
+	#Focus for Aircraft Procurment Scheme
+	focus = {
+		id = MAN_aircraft_procurment_scheme
+		icon = GFX_aircraft_procurement_scheme
+		x = 25
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_expand_the_home_base }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#get air techs
+			add_tech_bonus = { bonus = 0.5 uses = 3 category = light_air }
+		}
+	}
+
+	#Focus for Japanese Lingua de Guerre
+	focus = {
+		id = MAN_japanese_lingua_de_guerre
+		icon = GFX_japanese_lingua_de_guerre
+		x = 28
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_new_conscription_measures }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#org loss reduction, speed 5%
+			add_ideas = {
+				MAN_jldg
+			}
+		}
+	}
+
+	#Focus for Multidisciplined Crews
+	focus = {
+		id = MAN_multidisciplined_crews
+		icon = GFX_multidisciplined_crews
+		x = 27
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_request_foreign_expertise }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#air casualties reduction?
+			add_ideas = {
+				MAN_crews
+			}
+		}
+	}
+
+	#Focus for Intervene in the North
+	focus = {
+		id = MAN_intervene_in_the_north
+		icon = GFX_intervene_in_the_north
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_chase_out_the_japanese }
+		available = { 
+		
+		}
+		bypass = { }  
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#the Manchurian affair with ZhR
+			country_event = {
+				id = man.2
+			}
+		}
+	}
+
+	#Focus for Shenyang Arsenal
+	focus = {
+		id = MAN_shenyang_arsenal
+		icon = GFX_shenyang_arsenal
+		x = 30
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_arms_procurement_program }
+		available = { 
+			has_full_control_of_state = 716
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			716 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Reform the Bandits
+	focus = {
+		id = MAN_reform_the_bandits
+		icon = GFX_reform_the_bandits
+		x = 32
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_kwantung_army }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#gain 3 divisions of chinese guerillas
+			division_template = {
+				name = "Guerilla Regiments"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 }
+				create_unit = {
+					division = "name = \"Guerilla Regiments\" division_template = \"Guerilla Regiments\" start_experience_factor = 0.25"
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"Guerilla Regiments\" division_template = \"Guerilla Regiments\" start_experience_factor = 0.25"
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"Guerilla Regiments\" division_template = \"Guerilla Regiments\" start_experience_factor = 0.25"
+					owner = MAN
+				}
+			}
+		}
+	}
+
+	#Focus for The Remnants
+	focus = {
+		id = MAN_the_remnants
+		icon = GFX_the_remnants
+		x = 28
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			has_country_flag = MAN_japan
+			#has the new constitution
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#gain 3 divisions of imperial remnants
+			division_template = {
+				name = "Imperial Remnants"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 }
+				create_unit = {
+					division = "name = \"Imperial Remnants\" division_template = \"Imperial Remnants\" start_experience_factor = 0.50"
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"Imperial Remnants\" division_template = \"Imperial Remnants\" start_experience_factor = 0.50"
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"Imperial Remnants\" division_template = \"Imperial Remnants\" start_experience_factor = 0.50"
+					owner = MAN
+				}
+			}
+		}
+	}
+
+	#Focus for Execute the Fengtian Warlords
+	focus = {
+		id = MAN_execute_the_fengtian_warlords
+		icon = GFX_execute_the_warlords
+		x = 0
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_north_china_governorate }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#stab boost, event
+			country_event = {
+				id = man.3
+			}
+		}
+	}
+
+	#Focus for Contain the Reds
+	focus = {
+		id = MAN_contain_the_reds
+		icon = GFX_contain_the_reds
+		x = 8
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reconiliation_strategy }
+		available = { 
+			XIA = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		bypass = { 
+			XIA = {
+				OR = {
+					exists = no
+					is_puppet = yes
+				}
+			}
+		}        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#non-aggression with GDP and KMT
+			create_wargoal = {
+				type = annex_everything
+				target = XIA
+			}
+			add_political_power = 50
+			if = {
+				limit = {
+					MAN = { is_in_faction_with = SHA }
+				}
+				SHA = {
+					country_event = {
+						id = man.25
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Born Leaders
+	focus = {
+		id = MAN_born_leaders
+		icon = GFX_born_leaders
+		x = 1
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_meritocratic_enfranchisement }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#minister, general and staff costs reduced
+			add_ideas = {
+				MAN_born_leaders
+			}
+		}
+	}
+
+	#Focus for Industrialied State
+	focus = {
+		id = MAN_industrialied_state
+		icon = GFX_industrialized_state
+		x = 15
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_mantetsu_industrial_department }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#civs
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for National Unity Government
+	focus = {
+		id = MAN_national_unity_government
+		icon = GFX_national_unity_government
+		x = 9
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_preempt_the_south 
+			focus = MAN_contain_the_reds 
+		}
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#cosmetic tag
+			set_cosmetic_tag = MAN_unity_govt
+			hidden_effect = {
+				add_state_core = 524
+				add_state_core = 1023
+				#claim japanese canton
+				add_state_core = 877
+				add_state_core = 728
+				add_state_core = 591
+				#cores on Mao/hunan
+				add_state_core = 896
+				add_state_core = 932
+				add_state_core = 795
+				add_state_core = 897
+				add_state_core = 867
+				add_state_core = 750
+				add_state_core = 874
+				add_state_core = 602
+				add_state_core = 892
+				add_state_core = 934
+				#cores on KMT
+				add_state_core = 600
+				add_state_core = 749
+				add_state_core = 613
+				add_state_core = 929
+				add_state_core = 861
+				add_state_core = 863
+				add_state_core = 596
+				#cores on FJN
+				add_state_core = 869
+				add_state_core = 595
+				add_state_core = 864
+				add_state_core = 931
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				#cores on TIB
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 757
+				add_state_core = 434
+				add_state_core = 601
+				add_state_core = 604
+				#cores on ETS
+				add_state_core = 935
+				add_state_core = 843
+				add_state_core = 287
+				add_state_core = 619
+				#cores on SIK
+				add_state_core = 617
+				add_state_core = 760
+				add_state_core = 793
+				add_state_core = 618
+				#cores on XSM
+				add_state_core = 755
+				add_state_core = 759
+				add_state_core = 756
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 754
+				#cores on SZC
+				add_state_core = 605
+				add_state_core = 753
+				add_state_core = 752
+				add_state_core = 751
+				add_state_core = 791
+				add_state_core = 790
+				add_state_core = 748
+				#cores on YUN
+				add_state_core = 603
+				add_state_core = 325
+				add_state_core = 924
+				add_state_core = 887
+				add_state_core = 886
+				add_state_core = 747
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				add_state_core = 593
+				add_state_core = 926
+				add_state_core = 592
+				#cores on SHA
+				add_state_core = 918
+				add_state_core = 597
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 893
+				add_state_core = 598
+			}
+		}
+	}
+
+	#Focus for Reconiliation Strategy
+	focus = {
+		id = MAN_reconiliation_strategy
+		icon = GFX_reconciliation_strategy
+		x = 8
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_demilitarise_administration }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#attempt to peacfully unite the right-cliques with the Government, KMT, GDP, MON, SHA annex WGs if they say no.
+			KMT = {
+				country_event = {
+					id = man.4
+				}
+			}
+			MON = {
+				country_event = {
+					id = man.5
+				}
+			}
+			GDP = {
+				country_event = {
+					id = man.6
+				}
+			}
+			SHA = {
+				country_event = {
+					id = man.7
+				}
+			}
+			create_faction = MAN_republican_front
+		}
+	}
+
+	#Focus for Reform the Kenpeitai
+	focus = {
+		id = MAN_reform_the_kenpeitai
+		icon = GFX_reform_the_kenpeitai
+		x = 5
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_hire_chinese_officers 
+		}
+		prerequisite = { 
+			focus = MAN_seek_legitimancy 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#new military police template and resistance idea buff
+			division_template = {
+				name = "New Kenpetai"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+				}
+				support = {
+					military_police = { x = 0 y = 0 }
+				} 
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 }
+				create_unit = {
+					division = "name = \"New Kenpetai\" division_template = \"New Kenpetai\" start_experience_factor = 0.25"
+					owner = MAN
+				}
+			}
+			add_ideas = {
+				MAN_kenpetai
+			}
+			remove_ideas = { 
+				MAN_manchurian_guerillas
+			}
+		}
+	}
+
+	#Focus for The White Terror
+	focus = {
+		id = MAN_the_white_terror
+		icon = GFX_the_white_terror
+		x = 10
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_follow_the_old_marshals_model }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#Commie hunt event chain - 3 parter chasing supposed communists and terrorists, can result in either a successful purge and a buff vs XIA, or it fails and the government is discredited
+			country_event = {
+				id = man.8
+			}
+		}
+	}
+
+	#Focus for Meritocratic Enfranchisement
+	focus = {
+		id = MAN_meritocratic_enfranchisement
+		icon = GFX_meritocratic_enfranchisement
+		x = 1
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_remove_racial_restrictions 
+		}
+		prerequisite = { 
+			focus = MAN_reign_in_the_officers 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#boost popularity, stability and productivity
+			add_stability = 0.12
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.12
+			}
+			remove_ideas = { 
+				MAN_manchurian_guerillas
+			}
+		}
+	}
+
+	#Focus for Demilitarise Administration
+	focus = {
+		id = MAN_demilitarise_administration
+		icon = GFX_demilitarise_administration
+		x = 8
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MAN_follow_the_old_marshals_model }
+		prerequisite = { focus = MAN_national_government }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#civil government idea, tick towards soc-dem + con
+			add_timed_idea = {
+				idea = MAN_civil_admin
+				days = 365
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+				elections_allowed = no
+			}
+		}
+	}
+
+	#Focus for Follow the Old Marshal's Model
+	focus = {
+		id = MAN_follow_the_old_marshals_model
+		icon = GFX_follow_the_old_marshal_model
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_national_government }
+		mutually_exclusive = { focus = MAN_demilitarise_administration }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#tick towards rw-auth + despotism
+			add_timed_idea = {
+				idea = MAN_marshal_model
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Invite Pariahs of the KMT
+	focus = {
+		id = MAN_invite_pariahs_of_the_kmt
+		icon = GFX_invite_pariahs_of_the_kmt
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_new_blood }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#gain manpower + ?characters?
+			add_manpower = 45000
+			division_template = {
+				name = "KMT Defectors"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 745 }
+				create_unit = {
+					division = "name = \"KMT Defectors\" division_template = \"KMT Defectors\" start_experience_factor = 0.50"
+					owner = MAN
+				}
+				create_unit = {
+					division = "name = \"KMT Defectors\" division_template = \"KMT Defectors\" start_experience_factor = 0.50"
+					owner = MAN
+				}
+			}
+		}
+	}
+
+	#Focus for Checks and Balances
+	focus = {
+		id = MAN_checks_and_balances
+		icon = GFX_checks_and_balances
+		x = 1
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invite_the_exiles_to_government }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#idea - corporatocracy, Zaibatsu self-regulation
+			add_ideas = {
+				MAN_corporatocracy
+			}
+		}
+	}
+
+	#Focus for Remove Racial Restrictions
+	focus = {
+		id = MAN_remove_racial_restrictions
+		icon = GFX_remove_racial_restrictions
+		x = 0
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_checks_and_balances }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#boost conscription, pop-growth and stability
+			add_ideas = {
+				MAN_racial
+			}
+		}
+	}
+
+	#Focus for Chase out the Japanese
+	focus = {
+		id = MAN_chase_out_the_japanese
+		icon = GFX_chase_out_the_japanese
+		x = 7
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_fengtian_clique }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#lose manpower, pop and change leadership/parties to chinese ones
+			set_country_flag = MAN_japs_b_gone_flag
+			add_manpower = -45000
+			add_timed_idea = {
+				idea = japs_b_gone
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Reign in the Officers
+	focus = {
+		id = MAN_reign_in_the_officers
+		icon = GFX_reign_in_officers
+		x = 2
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_checks_and_balances }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#pp buff, command power buff, 
+			add_political_power = 75
+			add_command_power = 50
+		}
+	}
+
+	#Focus for Seek Legitimancy
+	focus = {
+		id = MAN_seek_legitimancy
+		icon = GFX_seek_legitimacy
+		x = 4
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_imperial_decree }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#popularity
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.12
+			}
+		}
+	}
+
+	#Focus for Hire Chinese Officers
+	focus = {
+		id = MAN_hire_chinese_officers
+		icon = GFX_hire_chinese_officers
+		x = 6
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_imperial_decree }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#commander recruit cost
+			add_ideas = {
+				MAN_chinese_officers
+			}
+		}
+	}
+
+	#Focus for Bridges and Roads Project
+	focus = {
+		id = MAN_bridges_and_roads_project
+		icon = GFX_bridges_and_roads_project
+		x = 18
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_mukdendalian_link }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#infra for all
+			610 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			715 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			809 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			789 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Mantetsu Industrial Department
+	focus = {
+		id = MAN_mantetsu_industrial_department
+		icon = GFX_manchuria_industrial_department
+		x = 15
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_new_factories 
+		}
+		prerequisite = { 
+			focus = MAN_bridges_and_roads_project 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#build speed idea
+			add_ideas = {
+				MAN_buildfaster
+			}
+		}
+	}
+
+	#Focus for Jinzhou Declaration
+	focus = {
+		id = MAN_jinzhou_declaration
+		icon = GFX_jinzhou_declaration
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_corporate_review }
+		mutually_exclusive = { focus = MAN_end_the_exploitation }
+		available = { 
+			has_country_flag = MAN_japan
+			has_government = despotism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#event for workers rights or the lack thereof
+			country_event = {
+				id = man.9
+			}
+		}
+	}
+
+	#Focus for End the Exploitation
+	focus = {
+		id = MAN_end_the_exploitation
+		icon = GFX_end_the_exploitation
+		x = 20
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_corporate_review }
+		mutually_exclusive = { focus = MAN_jinzhou_declaration }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#event for widespread labour reform
+			country_event = {
+				id = man.10
+			}
+		}
+	}
+
+	#Focus for Southern Rail Expansion
+	focus = {
+		id = MAN_southern_rail_expansion
+		icon = GFX_southern_rail_expansion
+		x = 18
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_jinzhou_declaration 
+			focus = MAN_end_the_exploitation 
+		}
+		available = { 
+		
+		}
+		bypass = {
+			
+		}        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#more infra
+			716 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			809 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Test the Business Leaders
+	focus = {
+		id = MAN_test_the_business_leaders
+		icon = GFX_test_the_business_leaders
+		x = 20
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_end_the_exploitation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#less corp, more market and govt
+			add_timed_idea = {
+				idea = MAN_business
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Agricultural Investments
+	focus = {
+		id = MAN_agricultural_investments
+		icon = GFX_intensify_and_mechanize_agriculture
+		x = 16
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_jinzhou_declaration }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#3 years - pop growth, revsoc growth, less production, more civ goods
+			add_timed_idea = {
+				idea = MAN_agri_inv
+				days = 1095
+			}
+		}
+	}
+
+	#Focus for Liason in Weihaiwei
+	focus = {
+		id = MAN_liason_in_weihaiwei
+		icon = GFX_liason_in_weihaiwei
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_jinzhou_declaration }
+		available = { 
+		
+		}
+		bypass = {
+			ENG = {
+				has_full_control_of_state = 839
+			}
+		}        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#deal with UK
+			country_event = {
+				id = man.11
+			}
+		}
+	}
+
+	#Focus for Open New Schools
+	focus = {
+		id = MAN_open_new_schools
+		icon = GFX_open_new_scools
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_end_the_exploitation }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#research buff, stability buff
+			add_ideas = {
+				MAN_schools
+			}
+		}
+	}
+
+	#Focus for Sponsor Education Abroad
+	focus = {
+		id = MAN_sponsor_education_abroad
+		icon = GFX_sponsor_education_abroad
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_open_new_schools }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#further research buff
+			swap_ideas = {
+				remove_idea = MAN_schools
+				add_idea = MAN_education_board
+			}
+		}
+	}
+
+	#Focus for Maximise Production
+	focus = {
+		id = MAN_maximise_production
+		icon = GFX_maximise_production
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_liason_in_weihaiwei }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#2 offmaps
+			add_resource = {
+				type = steel
+				amount = 21
+				state = 328
+			}
+			MAN = {
+				add_offsite_building = { type = arms_factory level = 2 }
+			}
+		}
+	}
+
+	#Focus for Labour Army
+	focus = {
+		id = MAN_labour_army
+		icon = GFX_conscript_the_labour_army
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_agricultural_investments }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#
+			MAN = {
+				add_offsite_building = { type = industrial_complex level = 2 }
+			}
+		}
+	}
+
+	#Focus for Purge the Technocrats Again
+	focus = {
+		id = MAN_purge_the_technocrats_again
+		icon = GFX_purge_the_technocrats_again
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_new_constitution }
+		mutually_exclusive = { focus = MAN_invite_the_exiles_to_government }
+		available = { 
+			has_idea = MAN_yasuhito
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#die die die die die
+			country_event = {
+				id = man.12
+			}
+			hidden_effect = {
+				set_country_flag = MAN_decided
+			}
+		}
+	}
+
+	#Focus for The New Blood
+	focus = {
+		id = MAN_the_new_blood
+		icon = GFX_the_new_blood
+		x = 9
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_fengtian_clique }
+		available = { 
+		
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#
+			create_field_marshal = {
+				name = "Zhang Xueliang"
+				picture = "Portrait_Zhang_Xueliang_g.dds"
+				traits = { career_officer trait_cautious }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_ideas = {
+				MAN_new_blood
+			}
+			army_experience = 25
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.12
+			}
+		}
+	}
+
+	#Focus for Imperial Decree
+	focus = {
+		id = MAN_imperial_decree
+		icon = GFX_imperial_decree
+		x = 5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_purge_the_technocrats_again }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#Crown the Emprah
+			country_event = {
+				id = man.13
+			}
+		}
+	}
+
+	#Focus for Move the Capital to Dalian
+	focus = {
+		id = MAN_move_the_capital_to_dalian
+		icon = GFX_move_capital_to_dalian
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_involve_the_manchus 
+		}
+		prerequisite = { 
+			focus = MAN_the_aristocracy 
+		}
+		available = { 
+			has_full_control_of_state = 745
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#capital to Dalian
+			set_capital = 745
+			add_state_core = 745
+			745 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			745 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for The New Constitution
+	focus = {
+		id = MAN_the_new_constitution
+		icon = GFX_new_constitution
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_move_the_capital_to_dalian }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			country_event = {
+				id = man.14
+			}
+		}
+	}
+
+	#Focus for Invite the Exiles to Government
+	focus = {
+		id = MAN_invite_the_exiles_to_government
+		icon = GFX_invite_exiles_to_goverment
+		x = 1
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MAN_purge_the_technocrats_again }
+		prerequisite = { focus = MAN_the_new_constitution }
+		available = { 
+			has_idea = MAN_nobuhito
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			hidden_effect = {
+				create_country_leader = {
+					name = "Tetsuzan Nagata"
+					picture = "Portrait_Tetsuzan_Nagata.dds"
+					expire = "1965.1.1"
+					ideology = technocratism
+					traits = {
+						silent_workhorse
+					}
+				}
+				set_party_name = { 
+					ideology = accelerationism 
+					long_name = MAN_JAP_accelerationism_party_long
+					name = MAN_JAP_accelerationism_party
+				}
+				set_politics = {
+					ruling_party = accelerationism
+					elections_allowed = no
+				}
+				set_cosmetic_tag = MAN_JAP_accelerationism
+				set_country_flag = MAN_decided
+			}
+			custom_effect_tooltip = MAN_techno_time
+		}
+	}
+
+	#Focus for The Aristocracy
+	focus = {
+		id = MAN_the_aristocracy
+		icon = GFX_the_aristocracy
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_north_china_governorate }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#
+			country_event = {
+				id = man.20
+			}
+		}
+	}
+
+	#Focus for Involve the Manchus
+	focus = {
+		id = MAN_involve_the_manchus
+		icon = GFX_involve_the_manchus
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_north_china_governorate }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#
+			country_event = {
+				id = man.21
+			}
+		}
+	}
+
+	#Focus for Unite with Beiyang
+	focus = {
+		id = MAN_unite_with_beiyang
+		icon = GFX_unite_with_beiyang
+		x = 11
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_kwantung_army_clique }
+		mutually_exclusive = { focus = MAN_fengtian_clique }
+		available = { 
+			is_AI = yes
+			is_puppet = no
+			BYJ = {
+				exists = yes
+				has_government = despotism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#AI only? get annexed into BYJ, BYJ gets some key characters
+			BYJ = {
+				country_event = {
+					id = byj.1
+				}
+			}
+		}
+	}
+
+	#Focus for Kwantung Army Clique
+	focus = {
+		id = MAN_kwantung_army_clique
+		icon = GFX_kwantung_army_clique
+		x = 9
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_freedom }
+		mutually_exclusive = { focus = MAN_north_china_governorate }
+		available = { 
+			has_country_flag = MAN_army_stepped_in
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+			}
+			hidden_effect = {
+				country_event = {
+					id = man.19
+					days = 14
+				}
+			}
+		}
+	}
+
+	#Focus for North China Governorate
+	focus = {
+		id = MAN_north_china_governorate
+		icon = GFX_north_china_governorate
+		x = 3
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MAN_kwantung_army_clique }
+		prerequisite = { focus = MAN_freedom }
+		available = { 
+			has_country_flag = MAN_japan
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#set cosmetic tag NCG
+			set_cosmetic_tag = MAN_north_china
+
+		}
+	}
+
+	#Focus for The Three Month Campaign
+	focus = {
+		id = MAN_the_three_month_campaign
+		icon = GFX_three_month_campaign
+		x = 6
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { 
+			has_war_with = BYJ
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {	#buff defence, nerf attack
+			add_timed_idea = {
+				idea = MAN_three_month
+				days = 90
+			}
+		}
+	}
+
+	#Focus for Uneasy Peace
+	focus = {
+		id = MAN_uneasy_peace
+		icon = GFX_uneasy_peace
+		x = 6
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_three_month_campaign }
+		available = { 
+			has_war = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {	#event with BYJ, tensions, skirmishes, spies
+			country_event = {
+				id = man.15
+			}
+		}
+	}
+
+	#Focus for Freedom?
+	focus = {
+		id = MAN_freedom
+		icon = GFX_MAN_freedom
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_uneasy_peace }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 100
+		}
+		completion_reward = {	#event to choose between maintaining Mantetsu control or to let the army take over
+			country_event = {
+				id = man.16
+			}
+		}
+	}
+
+	#Focus for Return Home
+	focus = {
+		id = MAN_return_home
+		icon = GFX_return_home
+		x = 3
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_born_leaders 
+			focus = MAN_contact_loyalists_at_home 
+		}
+		available = { 
+			date > 1940.3.24
+			has_war = no
+			JPR = {
+				exists = yes
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JPR
+			}
+		}
+	}
+
+	#Focus for Fengtian Clique
+	focus = {
+		id = MAN_fengtian_clique
+		icon = GFX_fengtian_clique
+		x = 9
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = MAN_unite_with_beiyang }
+		prerequisite = { focus = MAN_kwantung_army_clique }
+		available = { 
+			has_country_flag = MAN_fengtian_govt
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#event - Army control falls apart and Fengtian is reborn
+			remove_ideas = { 
+				MAN_manchurian_guerillas
+			}
+			add_state_core = 837
+			add_state_core = 609
+			add_state_core = 608
+			create_corps_commander = {
+				name = "Wan Fulin"
+				picture = "Portrait_Wan_Fulin.dds"
+				traits = { old_guard politically_connected }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			hidden_effect = {
+				set_country_flag = MAN_decided
+			}
+		}
+	}
+
+	#Focus for Usurp the Republic
+	focus = {
+		id = MAN_usurp_the_republic
+		icon = GFX_usurp_the_republic
+		x = 9
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_new_blood }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#war with BYJ, once Beijing falls fengtian annexes BYJ +cores +party changes etc
+			country_event = {
+				id = man.22
+			}
+		}
+	}
+
+	#Focus for National Government - claiming to be the legit china
+	focus = {
+		id = MAN_national_government
+		icon = GFX_national_government
+		x = 9
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_usurp_the_republic }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_cosmetic_tag = MAN_national_govt
+			hidden_effect = {
+				#cores on BYJ
+				add_state_core = 621
+				add_state_core = 611
+				add_state_core = 615
+				add_state_core = 860
+				add_state_core = 866
+				add_state_core = 614
+				add_state_core = 871
+				add_state_core = 872
+				add_state_core = 792
+				add_state_core = 870
+				add_state_core = 868
+				add_state_core = 878
+				add_state_core = 606
+				add_state_core = 879
+				add_state_core = 622
+				add_state_core = 744
+				add_state_core = 746
+				add_state_core = 607
+				add_state_core = 917
+				add_state_core = 620
+			}
+			if = {
+				limit = {
+					MAN = {
+						has_full_control_of_state = 608
+					}
+				}
+				set_capital = 608
+			}
+		}
+	}
+
+	#Focus for Corporate Review
+	focus = {
+		id = MAN_corporate_review
+		icon = GFX_corporate_review
+		x = 18
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = BYJ
+			}
+			has_country_flag = MAN_decided
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#event chain
+			if = {
+				limit = {
+					MAN = {
+						has_country_flag = MAN_japan
+						has_government = despotism
+					}
+				}
+				country_event = {
+					id = man.18
+				}
+			}
+			else = {
+				country_event = {
+					id = man.181
+				}
+			}
+		}
+	}
+
+	#Focus for Mukden-Dalian Link
+	focus = {
+		id = MAN_mukdendalian_link
+		icon = GFX_mukden_dalian_link
+		x = 18
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_southern_rail_expansion }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			716 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			745 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Work with the Families
+	focus = {
+		id = MAN_work_with_the_families
+		icon = GFX_work_with_the_families
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_test_the_business_leaders }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MAN_business
+				add_idea = MAN_families
+			}
+		}
+	}
+
+	#Focus for Institue Meritocracy
+	focus = {
+		id = MAN_institue_meritocracy
+		icon = GFX_institute_meritocracy
+		x = 21
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_sponsor_education_abroad 
+		}
+		prerequisite = { 
+			focus = MAN_work_with_the_families 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.07
+			}
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = MAN_education_board
+				add_idea = MAN_meritocracy
+			}
+		}
+	}
+
+	#Focus for National Workforce Bureau
+	focus = {
+		id = MAN_national_workforce_bureau
+		icon = GFX_national_workforce_bureau
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_bridges_and_roads_project 
+		}
+		prerequisite = { 
+			focus = MAN_institue_meritocracy 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Preempt the South
+	focus = {
+		id = MAN_preempt_the_south
+		icon = GFX_preempt_the_south
+		x = 10
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_white_terror }
+		available = { 
+			is_neighbor_of = XIA
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#fortify border with Hunan
+			if = {
+				limit = {
+					MAN = {
+						has_full_control_of_state = 620
+					}
+				}
+				620 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7948
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7596
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7609
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 4009
+					}
+				}
+			}
+			if = {
+				limit = {
+					MAN = {
+						has_full_control_of_state = 879
+					}
+				}
+				879 = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9934
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7625
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7167
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 9959
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = 7637
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for End Zongchang's House Arrest
+	focus = {
+		id = MAN_end_zongchangs_house_arrest
+		icon = GFX_end_house_arrest
+		x = 7
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_kwantung_army_clique }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#gain Zongchang as general
+			create_corps_commander = {
+				name = "Zhang Zongchang"
+				picture = "Portrait_Zhang_Zongchang.dds"
+				traits = { trait_reckless }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			hidden_effect = {
+				country_event = {
+					id = man.24
+					days = 85
+				}
+			}
+		}
+	}
+
+	#Focus for Contact Loyalists at Home
+	focus = {
+		id = MAN_contact_loyalists_at_home
+		icon = GFX_contact_loyalists_at_home
+		x = 5
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reform_the_kenpeitai }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {	#idea for JPR boosting despotism
+			JPR = {
+				add_timed_idea = {
+					idea = MAN_loyal_home
+					days = 365
+				}
+			}
+		}
+	}
+
+	#Focus for Modernised State
+	focus = {
+		id = MAN_modernised_state
+		icon = GFX_modernised_state
+		x = 21
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_national_workforce_bureau }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+			add_stability = 0.05
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	#Focus for The Kwantung Army
+	focus = {
+		id = MAN_the_kwantung_army
+		icon = GFX_the_kwantung_army
+		x = 32
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			has_war = no
+			has_country_flag = MAN_fengtian_govt
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Arms Procurement Program
+	focus = {
+		id = MAN_arms_procurement_program
+		icon = GFX_arms_procurement_program
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = MAN_the_remnants 
+			focus = MAN_the_kwantung_army 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = infantry_weapons }
+		}
+	}
+
+	#Focus for New Conscription Measures
+	focus = {
+		id = MAN_new_conscription_measures
+		icon = GFX_new_conscription_measures
+		x = 28
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_the_remnants }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#conscription
+			add_ideas = {
+				MAN_conscription
+			}
+		}
+	}
+
+	#Focus for Combined Arms
+	focus = {
+		id = MAN_combined_arms
+		icon = GFX_combined_arms
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_japanese_lingua_de_guerre }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 2 category = land_doctrine category = air_doctrine }
+		}
+	}
+
+	#Focus for Expand the Home Base
+	focus = {
+		id = MAN_expand_the_home_base
+		icon = GFX_expand_the_home_base
+		x = 26
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_build_a_domestic_air_force }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Request Foreign Expertise
+	focus = {
+		id = MAN_request_foreign_expertise
+		icon = GFX_request_foreign_expertise
+		x = 27
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_expand_the_home_base }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#tech licence idea
+			add_ideas = {
+				MAN_foreign_exp
+			}
+		}
+	}
+
+	#Focus for The Port of Dalian
+	focus = {
+		id = MAN_the_port_of_dalian
+		icon = GFX_the_port_of_dalian
+		x = 34
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			has_full_control_of_state = 745
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			745 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Our Sea
+	focus = {
+		id = MAN_our_sea
+		icon = GFX_our_sea
+		x = 34
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_zombie_ships }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 50
+			
+		}
+	}
+
+	#Focus for Lay Mines
+	focus = {
+		id = MAN_lay_mines
+		icon = GFX_lay_mines
+		x = 32
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_zombie_ships }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					category = naval_mines
+				}
+			}
+			else = {
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 1
+					category = dd_tech
+				}
+				add_ideas = {
+					MAN_no_mtg_mines
+				}
+			}
+		}
+	}
+
+	#Focus for Patrol the Murk
+	focus = {
+		id = MAN_patrol_the_murk
+		icon = GFX_patrol_the_murk
+		x = 36
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_zombie_ships }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+#End of focuses 
+ }

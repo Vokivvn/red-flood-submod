@@ -1,0 +1,87 @@
+ORE_capital_decisions = {
+	ORE_capital_orenburg = {
+		cost = 100
+		complete_effect  = {
+			set_capital = 652
+		}
+		visible = {
+			has_completed_focus = Orenburg_protective_belt_against_atlanticism
+			652 = {
+				is_capital = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ORE_capital_orsk = {
+		cost = 100
+		complete_effect  = {
+			set_capital = 582
+		}
+		visible = {
+			has_completed_focus = Orenburg_protective_belt_against_atlanticism
+			582 = {
+				is_capital = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ORE_capital_nizhny = {
+		cost = 100
+		complete_effect  = {
+			set_capital = 252
+		}
+		visible = {
+			has_completed_focus = Orenburg_protective_belt_against_atlanticism
+			252 = {
+				is_capital = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ORE_capital_yekaterinburg = {
+		cost = 100
+		complete_effect  = {
+			set_capital = 653
+		}
+		visible = {
+			has_completed_focus = Orenburg_protective_belt_against_atlanticism
+			653 = {
+				is_capital = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ORE_capital_chelyabinsk = {
+		cost = 100
+		complete_effect  = {
+			set_capital = 572
+		}
+		visible = {
+			has_completed_focus = Orenburg_protective_belt_against_atlanticism
+			572 = {
+				is_capital = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

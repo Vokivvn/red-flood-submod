@@ -1,0 +1,379 @@
+YUG_foreign_policy = {
+
+	##### Always Available #####
+	
+	YUG_fortifyaustrianborder = {
+		icon = border_war
+		cost = 75
+		days_remove = 70
+		remove_effect  = {
+			109 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3592
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11581
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9611
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3601
+					instant_build = yes
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_fortifyhungarianborder = {
+		icon = border_war
+		cost = 75
+		days_remove = 70
+		remove_effect  = {
+			764 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 614
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3614
+					instant_build = yes
+				}
+			}
+			107 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11580
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11577
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6647
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 3627
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11594
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9611
+					instant_build = yes
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### Available for Accelerationists #####
+
+	YUG_demandslovenia = {
+		icon = eng_trade_unions_demand
+		cost = 200
+		days_remove = 7
+		remove_effect  = {
+			102 = {
+				owner = {
+					country_event = {
+						id = yugoslavia.21
+						days = 3
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = YUG_revolutionarypanslavism
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_layoffclaimsondlamatia = {
+		icon = hol_exchange_intelligence_data
+		cost = 50
+		complete_effect  = {
+			FIU = {
+				diplomatic_relation = {
+					country = YUG
+					relation = non_aggression_pact
+					active = yes
+				}
+				add_opinion_modifier = {
+					target = YUG
+					modifier = large_increase
+				}
+			}
+			add_opinion_modifier = {
+				target = FIU
+				modifier = large_increase
+			}
+			remove_state_core = 163
+			remove_state_core = 736
+		}
+		visible = {
+			has_completed_focus = YUG_ourrightstoadriatic
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_liberatemontenegro = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 30
+		remove_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = MNT
+			}
+			add_state_core = 105
+			add_state_core = 922
+			add_state_core = 899
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_ourrightstoadriatic
+				has_completed_focus = YUG_slavicbrotherhood
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_conqueralbania = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 30
+		remove_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ALB
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_ourrightstoadriatic
+				has_completed_focus = YUG_betweenthreeseas
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_liberategreekmacedonia = {
+		icon = generic_prepare_civil_war
+		cost = 150
+		days_remove = 30
+		remove_effect  = {
+			add_state_core = 731
+			add_state_core = 184
+			add_state_claim = 941
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRE
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_balkandominance
+				has_completed_focus = YUG_betweenthreeseas
+				has_completed_focus = YUG_avengecarigrad
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_conquerwallachia = {
+		icon = generic_prepare_civil_war
+		cost = 150
+		days_remove = 30
+		remove_effect = {
+			add_state_claim = 77
+			create_wargoal = {
+    			type = puppet_wargoal_focus
+    			target = ROM
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_balkandominance
+				has_completed_focus = YUG_betweenthreeseas
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_demand_vojvodina = {
+		icon = eng_trade_unions_demand
+		cost = 200
+		days_remove = 7
+		remove_effect = {
+			45 = {
+				owner = {
+					country_event = {
+						id = yugoslavia.23
+						days = 3
+					}
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = YUG_balkandominance
+				has_completed_focus = YUG_betweenthreeseas
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	##### Available for Reactionaries #####
+
+	YUG_destroymontenegro = {
+		icon = generic_prepare_civil_war
+		cost = 100
+		days_remove = 30
+		remove_effect = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = MNT
+			}
+			add_state_core = 105
+			add_state_core = 922
+			add_state_core = 899
+		}
+		visible = {
+			has_completed_focus = YUG_secureadriatic
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_destroyfiume = {
+		icon = generic_prepare_civil_war
+		cost = 200
+		days_remove = 30
+		remove_effect = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FIU
+			}
+		}
+		visible = {
+			has_completed_focus = YUG_secureadriatic
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_destroybulgaria = {
+		icon = generic_prepare_civil_war
+		cost = 150
+		days_remove = 30
+		remove_effect = {
+			add_state_core = 1062
+			add_state_core = 812
+			add_state_core = 48
+			add_state_core = 212
+			add_state_core = 341
+			add_state_core = 211
+			add_state_core = 77
+			create_wargoal = {
+    			type = annex_everything
+    			target = BUL
+			}
+		}
+		visible = {
+			has_completed_focus = YUG_liberateslavs
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	YUG_liberate_vojvodina = {
+		icon = generic_prepare_civil_war
+		cost = 180
+		days_remove = 30
+		remove_effect  = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = HUN
+			}
+		}
+		visible = {
+			has_completed_focus = YUG_liberateslavs
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

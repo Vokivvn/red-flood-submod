@@ -1,0 +1,1284 @@
+JPR_pan_asianism = {
+
+	#colonies#
+	
+	JPR_demandtaiwan = {
+		cost = 75
+		complete_effect  = {
+			TAI = {
+				country_event = {
+					id = japan.36
+					days = 3
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_the_former_colonies
+			TAI = {
+				exists = yes
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_demandkorea = {
+		cost = 75
+		available = {
+			OR = {
+				IKR = {
+					has_full_control_of_state = 830
+					has_full_control_of_state = 829
+				}
+				JKR = {
+					has_full_control_of_state = 830
+					has_full_control_of_state = 829
+				}
+				KOR = {
+					has_full_control_of_state = 830
+					has_full_control_of_state = 829
+				}
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+					}
+				}
+				KOR = {
+					country_event = {
+						id = japan.37
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					JKR = {
+						exists = yes
+					}
+				}
+				JKR = {
+					country_event = {
+						id = japan.371
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					IKR = {
+						exists = yes
+						NOT = {
+							has_country_flag = IKR_returned_home
+						}
+					}
+				}
+				country_event = {
+					id = japan.372
+					days = 3
+				}
+			}	
+		}
+		visible = {
+			has_completed_focus = JPR_the_former_colonies
+			OR = {
+				KOR = {
+					exists = yes
+					has_war = no
+					NOT = {
+						has_socialist_government = yes
+					}
+				}
+				JKR = {
+					exists = yes
+					has_war = no
+					NOT = {
+						has_socialist_government = yes
+					}
+				}
+				IKR = {
+					exists = yes
+					has_war = no
+					NOT = {
+						has_socialist_government = yes
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_demandmantetsu = {
+		cost = 75
+		complete_effect  = {
+			MAN = {
+				country_event = {
+					id = japan.38
+					days = 3
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_the_former_colonies
+			MAN = {
+				exists = yes
+				has_war = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_demanddaiviet = {
+		cost = 100
+		complete_effect  = {
+			DAI = {
+				country_event = {
+					id = japan.39
+					days = 3
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_the_former_colonies
+			DAI = {
+				exists = yes
+				has_war = no
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = revolutionary_anarchism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_demandsaigon = {
+		cost = 100
+		complete_effect  = {
+			SMC = {
+				country_event = {
+					id = japan.39
+					days = 3
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_the_former_colonies
+			SMC = {
+				exists = yes
+				has_war = no
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = libertarian_marxism
+						has_government = revisionist_socialism
+						has_government = revolutionary_anarchism
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	#conquests#
+	
+	JPR_china = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BYJ
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			BYJ = {
+				exists = yes
+			}
+		}
+		available = {
+			BYJ = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_guominjun = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = JGJ
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			JGJ = {
+				exists = yes
+			}
+		}
+		available = {
+			JGJ = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_yellow_sands = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = MNG
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			MNG = {
+				exists = yes
+			}
+		}
+		available = {
+			MNG = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_south_china = {
+		cost = 50
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KMT
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			KMT = {
+				exists = yes
+			}
+		}
+		available = {
+			KMT = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_mongolia = {
+		cost = 75
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MON
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			MON = {
+				exists = yes
+			}
+		}
+		available = {
+			MON = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_xinjiang = {
+		cost = 90
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SIK
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			SIK = {
+				exists = yes
+			}
+		}
+		available = {
+			SIK = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_khotan = {
+		cost = 90
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ETS
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			ETS = {
+				exists = yes
+			}
+		}
+		available = {
+			ETS = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_tibet = {
+		cost = 100
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TIB
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			TIB = {
+				exists = yes
+			}
+		}
+		available = {
+			TIB = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_burma = {
+		cost = 125
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BUR
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			BUR = {
+				exists = yes
+			}
+		}
+		available = {
+			BUR = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_siam = {
+		cost = 125
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SIA
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			SIA = {
+				exists = yes
+			}
+		}
+		available = {
+			SIA = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_nepal = {
+		cost = 100
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = NEP
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			NEP = {
+				exists = yes
+			}
+		}
+		available = {
+			NEP = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_ladakh = {
+		cost = 100
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KSM
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			KSM = {
+				exists = yes
+			}
+		}
+		available = {
+			KSM = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_afghan = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = AFG
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			AFG = {
+				exists = yes
+			}
+		}
+		available = {
+			AFG = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	JPR_tuva = {
+		cost = 100
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TAN
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ALT
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			OR = {
+				TAN = {
+					exists = yes
+				}
+				ALT = {
+					exists = yes
+				}
+			}
+		}
+		available = {
+			OR = {
+				TAN = {
+					AND = {
+						is_puppet = no
+						any_neighbor_country = {
+							OR = {
+								tag = JPR
+								is_in_faction_with = JPR
+							}
+						}
+					}
+				}
+				ALT = {
+					AND = {
+						is_puppet = no
+						any_neighbor_country = {
+							OR = {
+								tag = JPR
+								is_in_faction_with = JPR
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_baikal = {
+		cost = 100
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MO2
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			MO2 = {
+				exists = yes
+			}
+		}
+		available = {
+			MO2 = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_philippines = {
+		cost = 175
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PHI
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			PHI = {
+				exists = yes
+			}
+		}
+		available = {
+			PHI = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_malaysia = {
+		cost = 200
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MAL
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			MAL = {
+				exists = yes
+			}
+		}
+		available = {
+			MAL = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_indonesia = {
+		cost = 200
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = DEI
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_socialist_continent
+			DEI = {
+				exists = yes
+			}
+		}
+		available = {
+			DEI = {
+				AND = {
+					is_puppet = no
+					any_neighbor_country = {
+						OR = {
+							tag = JPR
+							is_in_faction_with = JPR
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+JPR_westerncomrades = {
+	JPR_german_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = huge_increase
+			}
+			GER = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			GER = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_hungarian_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = HUN
+				modifier = huge_increase
+			}
+			HUN = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			HUN = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_NOR_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = NOR
+				modifier = huge_increase
+			}
+			NOR = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			NOR = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_brazilian_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			add_opinion_modifier = {
+				target = BRA
+				modifier = huge_increase
+			}
+			BRA = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			BRA = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_bulgarian_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			add_opinion_modifier = {
+				target = BUL
+				modifier = huge_increase
+			}
+			BUL = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			BUL = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_cuban_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = CUB
+				modifier = huge_increase
+			}
+			CUB = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			CUB = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+JPR_pacificcomrades = {
+	JPR_ZHR_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			ZHR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = ZHR
+				modifier = huge_increase
+			}
+			ZHR = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			ZHR = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_XIA_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			XIA = {
+				add_offsite_building = { type = arms_factory level = 1 }
+			}
+			add_opinion_modifier = {
+				target = XIA
+				modifier = huge_increase
+			}
+			XIA = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			XIA = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_TAI_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			TAI = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = TAI
+				modifier = huge_increase
+			}
+			TAI = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			TAI = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_FJN_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			FJN = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = FJN
+				modifier = huge_increase
+			}
+			FJN = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			FJN = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_JKR_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			JKR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = JKR
+				modifier = huge_increase
+			}
+			JKR = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			JKR = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	JPR_KOR_cooperation = {
+		cost = 50
+		complete_effect  = {
+			JPR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			KOR = {
+				add_offsite_building = { type = industrial_complex level = 1 }
+			}
+			add_opinion_modifier = {
+				target = KOR
+				modifier = huge_increase
+			}
+			KOR = {
+				add_opinion_modifier = {
+					target = JPR
+					modifier = huge_increase
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = JPR_western_comrades
+			KOR = {
+				exists = yes
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}

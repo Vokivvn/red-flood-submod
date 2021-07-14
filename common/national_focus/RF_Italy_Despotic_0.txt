@@ -1,0 +1,39 @@
+focus_tree = {
+	id = ITA_natrej_starter
+	country = {
+		factor = 0
+		modifier = {
+			add = 9
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2300 }
+	default = no
+	focus = {
+		id = ITA_sigh_relief
+		icon = GFX_focus_ITA_sigh_relief
+		x = 2
+		y = 0
+
+		cost = 3
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = ITA_christian_socialist_italy
+		icon = GFX_focus_ITA_christian_socialist_italy
+		x = 2
+		y = 1
+
+		cost = 2
+		prerequisite = {
+			focus = ITA_sigh_relief
+		}
+		completion_reward = {
+			country_event = {
+				id = italy.21
+			}
+		}
+	}
+}

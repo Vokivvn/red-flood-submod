@@ -1,0 +1,448 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_SIB_siberian_troubles" 
+		texturefile = "gfx/interface/goals/SIB/SIB_siberian_troubles.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_rampant_crime" 
+		texturefile = "gfx/interface/goals/SIB/SIB_rampant_crime.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_separatist_agitators" 
+		texturefile = "gfx/interface/goals/SIB/SIB_separatist_agitators.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_establish_emergency_provisional_directorate" 
+		texturefile = "gfx/interface/goals/SIB/SIB_establish_emergency_provisional_directorate.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_compromise_with_autonomists" 
+		texturefile = "gfx/interface/goals/SIB/SIB_compromise_with_autonomists.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_recognize_our_minorities" 
+		texturefile = "gfx/interface/goals/SIB/SIB_recognize_our_minorities.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_mimic_swiss_confederation" 
+		texturefile = "gfx/interface/goals/SIB/SIB_mimic_swiss_confederation.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_mimic_old_france" 
+		texturefile = "gfx/interface/goals/SIB/SIB_mimic_old_france.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_local_autonomy" 
+		texturefile = "gfx/interface/goals/SIB/SIB_local_autonomy.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_free_education" 
+		texturefile = "gfx/interface/goals/SIB/SIB_free_education.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_invite_opposition_to_government" 
+		texturefile = "gfx/interface/goals/SIB/SIB_invite_opposition_to_government.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_negotiate_with_church" 
+		texturefile = "gfx/interface/goals/SIB/SIB_negotiate_with_church.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_integrate_mensheviks" 
+		texturefile = "gfx/interface/goals/SIB/SIB_integrate_mensheviks.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_integrate_kadets" 
+		texturefile = "gfx/interface/goals/SIB/SIB_integrate_kadets.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_republican_transformation" 
+		texturefile = "gfx/interface/goals/SIB/SIB_republican_transformation.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_deal_with_economic_chaos" 
+		texturefile = "gfx/interface/goals/SIB/SIB_deal_with_economic_chaos.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_popular_land_reform" 
+		texturefile = "gfx/interface/goals/SIB/SIB_popular_land_reform.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_massive_subsidies_to_industry" 
+		texturefile = "gfx/interface/goals/SIB/SIB_massive_subsidies_to_industry.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_appeal_to_patriotism" 
+		texturefile = "gfx/interface/goals/SIB/SIB_appeal_to_patriotism.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_protect_private_property" 
+		texturefile = "gfx/interface/goals/SIB/SIB_protect_private_property.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_welfare_state" 
+		texturefile = "gfx/interface/goals/SIB/SIB_welfare_state.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_siberian_military" 
+		texturefile = "gfx/interface/goals/SIB/SIB_siberian_military.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_modernization_reforms" 
+		texturefile = "gfx/interface/goals/SIB/SIB_modernization_reforms.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_expand_artillery_factories" 
+		texturefile = "gfx/interface/goals/SIB/SIB_expand_artillery_factories.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_heirs_of_yermak_and_dezhnev" 
+		texturefile = "gfx/interface/goals/SIB/SIB_heirs_of_yermak_and_dezhnev.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_first_federal_government" 
+		texturefile = "gfx/interface/goals/SIB/SIB_first_federal_government.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_send_diplomats_to_europe" 
+		texturefile = "gfx/interface/goals/SIB/SIB_send_diplomats_to_europe.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_europe_of_our_own" 
+		texturefile = "gfx/interface/goals/SIB/SIB_europe_of_our_own.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_join_the_league" 
+		texturefile = "gfx/interface/goals/SIB/SIB_join_the_league.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_sign_a_treaty" 
+		texturefile = "gfx/interface/goals/SIB/SIB_sign_a_treaty.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_second_federal_government" 
+		texturefile = "gfx/interface/goals/SIB/SIB_second_federal_government.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_black_hundreds_in_siberian_duma" 
+		texturefile = "gfx/interface/goals/SIB/SIB_black_hundreds_in_siberian_duma.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_eliminate_separatism" 
+		texturefile = "gfx/interface/goals/SIB/SIB_eliminate_separatism.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_supremacy_of_the_church" 
+		texturefile = "gfx/interface/goals/SIB/SIB_supremacy_of_the_church.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_crush_the_bandits" 
+		texturefile = "gfx/interface/goals/SIB/SIB_crush_the_bandits.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_education_will_make_you_russian" 
+		texturefile = "gfx/interface/goals/SIB/SIB_education_will_make_you_russian.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_long_live_governor_general" 
+		texturefile = "gfx/interface/goals/SIB/SIB_long_live_governor_general.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_terrorize_the_opposition" 
+		texturefile = "gfx/interface/goals/SIB/SIB_terrorize_the_opposition.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_break_autonomists" 
+		texturefile = "gfx/interface/goals/SIB/SIB_break_autonomists.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_burn_the_heretics" 
+		texturefile = "gfx/interface/goals/SIB/SIB_burn_the_heretics.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_unyielding_dictatorship" 
+		texturefile = "gfx/interface/goals/SIB/SIB_unyielding_dictatorship.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_mikhailov_plan" 
+		texturefile = "gfx/interface/goals/SIB/SIB_mikhailov_plan.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_tough_strike_penalties" 
+		texturefile = "gfx/interface/goals/SIB/SIB_tough_strike_penalties.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_talks_with_the_bourgeoisie" 
+		texturefile = "gfx/interface/goals/SIB/SIB_talks_with_the_bourgeoisie.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_monopolize_foreign_trade" 
+		texturefile = "gfx/interface/goals/SIB/SIB_monopolize_foreign_trade.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_scout_for_resources" 
+		texturefile = "gfx/interface/goals/SIB/SIB_scout_for_resources.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_colonial_industrialization" 
+		texturefile = "gfx/interface/goals/SIB/SIB_colonial_industrialization.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_russian_troops_in_siberia" 
+		texturefile = "gfx/interface/goals/SIB/SIB_russian_troops_in_siberia.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_improved_cavalry_tactics" 
+		texturefile = "gfx/interface/goals/SIB/SIB_improved_cavalry_tactics.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_fortify_the_mongolian_border" 
+		texturefile = "gfx/interface/goals/SIB/SIB_fortify_the_mongolian_border.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_novonikolayevsk_aviation_division" 
+		texturefile = "gfx/interface/goals/SIB/SIB_novonikolayevsk_aviation_division.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_russia_in_trouble" 
+		texturefile = "gfx/interface/goals/SIB/SIB_russia_in_trouble.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_the_false_motherland" 
+		texturefile = "gfx/interface/goals/SIB/SIB_the_false_motherland.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_invite_drozdovites" 
+		texturefile = "gfx/interface/goals/SIB/SIB_invite_drozdovites.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_treaty_of_omsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_treaty_of_omsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_treaty_of_tomsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_treaty_of_tomsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_construct_the_yermak_line" 
+		texturefile = "gfx/interface/goals/SIB/SIB_construct_the_yermak_line.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_aid_the_motherland" 
+		texturefile = "gfx/interface/goals/SIB/SIB_aid_the_motherland.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_illusion_of_autonomy" 
+		texturefile = "gfx/interface/goals/SIB/SIB_illusion_of_autonomy.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_unleash_the_cossacks" 
+		texturefile = "gfx/interface/goals/SIB/SIB_unleash_the_cossacks.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_solidarists_in_the_directorate" 
+		texturefile = "gfx/interface/goals/SIB/SIB_solidarists_in_the_directorate.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_new_path" 
+		texturefile = "gfx/interface/goals/SIB/SIB_new_path.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_synchronize_the_army" 
+		texturefile = "gfx/interface/goals/SIB/SIB_synchronize_the_army.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_military_commissars" 
+		texturefile = "gfx/interface/goals/SIB/SIB_military_commissars.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_army_doctrine_question" 
+		texturefile = "gfx/interface/goals/SIB/SIB_army_doctrine_question.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_military_education" 
+		texturefile = "gfx/interface/goals/SIB/SIB_military_education.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_air_force_debates" 
+		texturefile = "gfx/interface/goals/SIB/SIB_air_force_debates.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_novonikolayevsk_tank_factory" 
+		texturefile = "gfx/interface/goals/SIB/SIB_novonikolayevsk_tank_factory.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_synchronize_the_society" 
+		texturefile = "gfx/interface/goals/SIB/SIB_synchronize_the_society.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_civilian_commissars" 
+		texturefile = "gfx/interface/goals/SIB/SIB_civilian_commissars.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_rebirth_of_russian_spirit" 
+		texturefile = "gfx/interface/goals/SIB/SIB_rebirth_of_russian_spirit.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_use_the_mass_media" 
+		texturefile = "gfx/interface/goals/SIB/SIB_use_the_mass_media.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_new_syncretic_identity" 
+		texturefile = "gfx/interface/goals/SIB/SIB_new_syncretic_identity.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_progressive_reforms" 
+		texturefile = "gfx/interface/goals/SIB/SIB_progressive_reforms.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_synchronize_the_economy" 
+		texturefile = "gfx/interface/goals/SIB/SIB_synchronize_the_economy.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_establish_state_control_over_industry" 
+		texturefile = "gfx/interface/goals/SIB/SIB_establish_state_control_over_industry.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_centralize_trade_unions" 
+		texturefile = "gfx/interface/goals/SIB/SIB_centralize_trade_unions.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_expand_automotive_industry" 
+		texturefile = "gfx/interface/goals/SIB/SIB_expand_automotive_industry.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_the_all_russian_council_of_corporations" 
+		texturefile = "gfx/interface/goals/SIB/SIB_the_all_russian_council_of_corporations.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_russian_solidarism" 
+		texturefile = "gfx/interface/goals/SIB/SIB_russian_solidarism.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_unite_our_people" 
+		texturefile = "gfx/interface/goals/SIB/SIB_unite_our_people.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_unite_our_nation" 
+		texturefile = "gfx/interface/goals/SIB/SIB_unite_our_nation.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_central_asian_security" 
+		texturefile = "gfx/interface/goals/SIB/SIB_central_asian_security.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_far_eastern_security" 
+		texturefile = "gfx/interface/goals/SIB/SIB_far_eastern_security.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_march_on_false_rome" 
+		texturefile = "gfx/interface/goals/SIB/SIB_march_on_false_rome.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_baltic_security" 
+		texturefile = "gfx/interface/goals/SIB/SIB_baltic_security.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_reclaim_kiev" 
+		texturefile = "gfx/interface/goals/SIB/SIB_reclaim_kiev.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_caucasian_security" 
+		texturefile = "gfx/interface/goals/SIB/SIB_caucasian_security.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_our_true_borders" 
+		texturefile = "gfx/interface/goals/SIB/SIB_our_true_borders.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_age_of_solidarity" 
+		texturefile = "gfx/interface/goals/SIB/SIB_age_of_solidarity.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_radicals_threaten_country" 
+		texturefile = "gfx/interface/goals/SIB/SIB_radicals_threaten_country.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_call_to_arms" 
+		texturefile = "gfx/interface/goals/SIB/SIB_call_to_arms.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_emergency_conscription" 
+		texturefile = "gfx/interface/goals/SIB/SIB_emergency_conscription.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_russia_abandoned_us" 
+		texturefile = "gfx/interface/goals/SIB/SIB_russia_abandoned_us.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_breakthrough_irkutsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_breakthrough_irkutsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_hold_the_line_krasnoyarsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_hold_the_line_krasnoyarsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_prepare_for_last_stand" 
+		texturefile = "gfx/interface/goals/SIB/SIB_prepare_for_last_stand.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_victory_more_or_less" 
+		texturefile = "gfx/interface/goals/SIB/SIB_victory_more_or_less.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_solidarist_coup" 
+		texturefile = "gfx/interface/goals/SIB/SIB_solidarist_coup.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_return_to_normalcy" 
+		texturefile = "gfx/interface/goals/SIB/SIB_return_to_normalcy.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_goal_SIB_for_the_republic" 
+		texturefile = "gfx/interface/goals/SIB/SIB_for_the_republic.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_revolt_of_the_masses" 
+		texturefile = "gfx/interface/goals/SIB/SIB_revolt_of_the_masses.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_seize_arms" 
+		texturefile = "gfx/interface/goals/SIB/SIB_seize_arms.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_wartime_reforms" 
+		texturefile = "gfx/interface/goals/SIB/SIB_wartime_reforms.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_arm_the_peasantry" 
+		texturefile = "gfx/interface/goals/SIB/SIB_arm_the_peasantry.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_history_is_on_our_side" 
+		texturefile = "gfx/interface/goals/SIB/SIB_history_is_on_our_side.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_triumph_at_novonikolayevsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_triumph_at_novonikolayevsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_ceasefire_at_krasnoyarsk" 
+		texturefile = "gfx/interface/goals/SIB/SIB_ceasefire_at_krasnoyarsk.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_we_need_help" 
+		texturefile = "gfx/interface/goals/SIB/SIB_we_need_help.tga" 
+	}
+	SpriteType = {
+		name = "GFX_goal_SIB_our_russian_comrades" 
+		texturefile = "gfx/interface/goals/SIB/SIB_our_russian_comrades.tga" 
+	}
+}

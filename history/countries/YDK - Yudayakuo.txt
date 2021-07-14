@@ -1,0 +1,87 @@
+﻿capital = 717
+
+oob = ""
+
+set_research_slots = 3 
+
+add_ideas = {
+
+}
+
+set_technology = {
+	### ARMY ####
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_heavy_tank = 1
+	basic_light_tank = 1
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	
+}
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 6
+	social_democratism = 3
+	liberalism = 3
+	conservatism = 3
+	right_authoritarianism = 66
+	despotism = 2
+	reactionism = 2
+	accelerationism = 10
+}
+
+create_country_leader = {
+	name = "Abraham Kaufman"
+	picture = "Abraham_Kaufman.dds"
+	expire = "1952.4.22"
+	ideology = authoritarian_democratism
+	traits = {
+	
+	}
+}
+create_country_leader = {
+	name = "Jakob Rosenfeld"
+	picture = "Jakob_Rosenfeld.dds"
+	expire = "1952.4.22"
+	ideology = agrarian_socialism
+	traits = {
+	
+	}
+}
+create_country_leader = {
+	name = "Joseph Breuer"
+	picture = "Portrait_Joseph_Breuer_React.dds"
+	expire = "1965.1.1"
+	ideology = religious_fundamentalism
+	traits = {
+		
+	}
+}
+create_country_leader = {
+	name = "Ida Rubenstein"
+	picture = "Ida_Rubenstein.dds"
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+	traits = {
+		
+	}
+}

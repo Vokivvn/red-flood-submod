@@ -1,0 +1,84 @@
+add_namespace = nbe
+
+##Event: Birthday
+country_event = {
+	id = nbe.1
+	title = nbe.1.title
+	desc = nbe.1.desc
+	is_triggered_only = yes
+	fire_only_once = yes
+	#picture = birthday-28352
+	option = {
+		name = nbe.1.a
+		ai_chance = { factor = 1}
+		add_manpower = 1
+	}
+}
+country_event = {
+	id = nbe.2
+	title = nbe.2.title
+	desc = nbe.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	#picture = birthday-28352
+	option = {
+		name = nbe.2.a
+		ai_chance = { factor = 1}
+		990 = {
+		add_manpower = -91982
+		}
+	}
+}
+country_event = {
+	id = nbe.3
+	title = nbe.3.title
+	desc = nbe.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_NBE_lushiku
+	option = {
+		name = nbe.3.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = nbe.4
+	title = nbe.4.title
+	desc = nbe.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_NBE_puk
+	option = {
+		name = nbe.4.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = nbe.5
+	title = nbe.5.title
+	desc = nbe.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_NBE_postman
+	option = {
+		name = nbe.5.a
+		ai_chance = { factor = 1}
+		add_stability = 0.05
+		country_event = {
+		id = nbe.6
+		}
+	}
+}
+country_event = {
+	id = nbe.6
+	title = nbe.6.title
+	desc = nbe.6.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_NBE_orders
+	option = {
+		name = nbe.6.a
+		ai_chance = { factor = 1}
+		add_manpower = 3411
+	}
+}

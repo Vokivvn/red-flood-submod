@@ -1,0 +1,213 @@
+focus_tree = {
+	id = fiume_postdeath
+	country = {
+		factor = 0
+		modifier = {
+			add = 45
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+	focus = {
+		id = FIU_The_Greatest_Loss
+		icon = GFX_focus_FIU_The_Greatest_Loss
+		x = 6
+		y = 0
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    set_war_support = 0
+		    add_stability = -0.1
+		    
+		    hidden_effect = {
+		    	remove_ideas = FIU_Gabrielle_Dannunzio_hog
+		    }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}	
+
+	focus = {
+		id = FIU_The_Emergency_State
+		icon = GFX_focus_FIU_The_Emergency_State
+		prerequisite = { focus = FIU_The_Greatest_Loss }
+		
+		x = 6
+		y = 2
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		
+		completion_reward = {
+		    country_event = {
+				id = fiume.8
+			}
+			custom_effect_tooltip = "D'annunzio's succesor will be chosen."
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Theorist
+		icon = GFX_focus_FIU_The_Theorist
+		prerequisite = { focus = FIU_The_Emergency_State }
+		
+		x = 4
+		y = 4
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+            has_country_flag = FIU_marinetti_victory
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			load_focus_tree = {
+				tree = FIU_marinetti
+				keep_completed = yes
+			}
+			retire_country_leader = yes
+				create_country_leader = {
+				name = "Filippo Tommaso Marinetti"
+				desc = "POLITICS_MARINETTI_DESC"
+				picture = "Portrait_Fiume_Filippo_Marinetti.tga"
+				expire = "1955.4.5"
+				ideology = ethno_futurism
+				traits = {
+				}
+			}
+			hidden_effect = {
+				add_ideas = FIU_Filippo_Marinetti_hog
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Aviator
+		icon = GFX_focus_FIU_The_Aviator
+		prerequisite = { focus = FIU_The_Emergency_State }
+		
+		x = 6
+		y = 4
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+            has_country_flag = FIU_keller_victory
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			load_focus_tree = {
+				tree = FIU_keller
+				keep_completed = yes
+			}
+			retire_country_leader = yes
+				create_country_leader = {
+				name = "Guido Keller"
+				desc = "POLITICS_KELLER_DESC"
+				picture = "Portrait_Fiume_Guido_Keller.tga"
+				expire = "1955.4.5"
+				ideology = ethno_futurism
+				traits = {
+				}
+			}
+			hidden_effect = {
+				add_ideas = FIU_Guido_Keller_hog
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Warrior
+		icon = GFX_focus_FIU_The_Warrior
+		prerequisite = { focus = FIU_The_Emergency_State }
+		
+		x = 8
+		y = 4
+
+		cost = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+            has_country_flag = FIU_shimoi_victory
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			load_focus_tree = {
+				tree = FIU_shimoi
+				keep_completed = yes
+			}
+			retire_country_leader = yes
+				create_country_leader = {
+				name = "Harukichi Shimoi"
+				desc = "POLITICS_SHIMOI_DESC"
+				picture = "Portrait_Fiume_Harukichi_Shimoi.tga"
+				expire = "1955.4.5"
+				ideology = ethno_futurism
+				traits = {
+				}
+			}
+			hidden_effect = {
+				add_ideas = FIU_Harukichi_Shimoi_hog
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

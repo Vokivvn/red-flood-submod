@@ -1,0 +1,21 @@
+
+state={
+	id=604
+	name="STATE_604" # Qinghai
+	manpower = 594433
+
+	state_category = town
+
+	history={
+		owner = TIB
+		add_core_of = TIB
+		add_core_of = XSM
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		4914 4964 8037 12899
+	}
+}

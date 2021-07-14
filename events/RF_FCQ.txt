@@ -1,0 +1,43 @@
+add_namespace = fcq
+
+country_event = { #an attempt for something new
+	id = fcq.1
+	title = fcq.1.t
+	desc = fcq.1.desc
+	fire_only_once = yes
+
+	option = { #Fuck you, madman
+		name = fcq.1.a
+		add_political_power = -5
+		add_stability = -0.01
+	}
+}
+country_event = { #desterro
+	id = fcq.2
+	title = fcq.2.t
+	desc = fcq.2.desc
+	fire_only_once = yes
+	trigger = {
+		owns_state = 503
+		tag = FCQ
+	}
+
+	option = { #desterro yes
+		name = fcq.2.a
+		add_political_power = -100
+		add_stability = 0.05
+			set_province_name = {
+			id = 10405
+			name = "Nossas Senhora do Desterro"
+		}
+	}
+	option = { #deimosville time
+		name = fcq.2.b
+		add_political_power = -100
+		add_stability = 0.05
+			set_province_name = {
+			id = 10405
+			name = "Deimosville"
+		}
+	}
+}

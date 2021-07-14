@@ -1,0 +1,24 @@
+###OOB File for UKR.txt
+units = {
+	fleet = {
+		name = "Chornomors'kyi Flot"
+		naval_base = 11670 ###Change to proper province number
+		task_force = {
+			name = "Chornomors'kyi Flot"
+			location = 11670 ###Change to proper province number
+			ship = { name = "Ukrayina" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Orfey Class" } } }
+			ship = { name = "Zavydnyi" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Orfey Class" } } }
+			ship = { name = "Kubanets" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Orfey Class" } } }
+			ship = { name = "Donets" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UKR version_name = "Orfey Class" } } }
+
+			ship = { name = "Volya" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Chervona Ukraina Class" } } }
+			ship = { name = "Pamyat' Merkuriya" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Chervona Ukraina Class" } } }
+			ship = { name = "Kagul" definition = light_cruiser equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = UKR version_name = "Chervona Ukraina Class" } } }
+			
+			ship = { name = "Kozats'kyi PCh" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series II Alekseivich" } } }
+			ship = { name = "Hetmans'kyi PCh" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series II Alekseivich" } } }
+			ship = { name = "Udatny PCh" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series II Alekseivich" } } }
+			ship = { name = "Smilyvyi PCh" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = UKR version_name = "Series II Alekseivich"  } } }
+		}
+	}
+}

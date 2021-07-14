@@ -1,0 +1,55 @@
+capital = 807
+
+oob = "ALJ_1936"
+
+set_research_slots = 3 
+
+set_convoys = 0
+
+add_ideas = {
+ALJ_BPC
+free_trade
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 5
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 20
+	conservatism = 20
+	right_authoritarianism = 0
+	despotism = 40
+	reactionism = 10
+	accelerationism = 5
+}
+
+set_stability = 0.4
+
+
+create_country_leader = {
+	name = "Zeid I"
+	desc = "POLITICS_Zeid_I_DESC"
+	picture = "Portrait_Zeid_I_despot.dds"
+	expire = "1965.1.1"
+	ideology = absolute_monarchy
+	traits = {}
+}

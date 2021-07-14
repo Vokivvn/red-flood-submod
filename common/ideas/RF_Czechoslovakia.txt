@@ -1,0 +1,78 @@
+ideas = {
+
+##################
+#   Czech ideas  #
+##################
+
+	country = {
+		CZE_unpopoular_monarchy = {
+			modifier = {
+				political_power_gain = -0.5
+				conscription_factor = -0.25
+				liberalism_drift = 0.01
+				conservatism_drift = 0.01
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				vanguard_socialism_drift = 0.01
+				revisionist_socialism_drift = 0.01
+				libertarian_marxism_drift = 0.01
+				revolutionary_anarchism_drift = 0.01
+				social_democratism_drift = 0.01
+			}
+			picture = ZHR_thecommonman
+		}
+		CZE_intermarium_sanctions = {
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.05
+				production_factory_max_efficiency_factor = -0.2
+				min_export = 0.15
+			}
+			picture = BLR_icon_national_economics
+		}
+		CZE_german_problem = {
+			modifier = {
+				conscription_factor = -0.15
+				industrial_capacity_factory = -0.15
+				consumer_goods_factor = 0.05
+				local_resources = -0.05
+			}
+			targeted_modifier = {
+				tag = GER
+				army_infantry_attack_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = PRS
+				army_infantry_attack_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = AUS
+				army_infantry_attack_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = LUX
+				army_infantry_attack_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = POL
+				army_infantry_attack_factor = -0.05
+			}
+			picture = PRS_junkerstaat
+		}
+		CZE_legacy_of_czech_legion = {
+			modifier = {
+				winter_attrition_factor = -0.08
+				despotism_drift = 0.01
+				reactionism_drift = 0.01
+				accelerationism_drift = 0.01
+				stability_factor = 0.05
+				war_support_factor = 0.1
+			}
+			picture = PRS_power_of_freikorps
+		}
+	}
+###########
+#MINISTERS#
+###########
+
+	

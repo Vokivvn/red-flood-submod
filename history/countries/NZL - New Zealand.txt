@@ -1,0 +1,90 @@
+capital = 284
+
+oob = "NZL_1936"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+}
+
+set_politics = {
+	ruling_party = social_democratism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 10
+	revolutionary_anarchism = 0
+	revisionist_socialism = 5
+	social_democratism = 45
+	liberalism = 0
+	conservatism = 30
+	right_authoritarianism = 5
+	despotism = 0
+	reactionism = 3
+	accelerationism = 2
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Harry Holland"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "portrait_harry_holand.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+		#popular_figurehead
+	}
+} 
+
+create_field_marshal = {
+	name = "Alexander Godley"
+	picture = "Portrait_NZL_alexander_godley.dds"
+	traits = { old_guard inflexible_strategist}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "William George Stevens"
+	picture = "Portrait_NZL_william_george_stevens.dds"
+	traits = {  trickster }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Leslie Wilton Andrew"
+	picture = "Portrait_NZL_leslie_wilton_andrew.dds"
+	traits = { career_officer commando }
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+

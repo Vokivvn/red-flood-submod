@@ -1,0 +1,81 @@
+﻿add_namespace = syria
+
+#SSNP Revolt
+country_event = {
+	id = syria.1
+	title = syria.1.t
+	desc = syria.1.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #Blasted maniacs!
+		name = syria.1.a
+		677 = {
+			add_core_of = SNP
+		}
+		680 = {
+			add_core_of = SNP
+		}
+		553 = {
+			add_core_of = SNP
+		}
+		554 = {
+			add_core_of = SNP
+		}
+		454 = {
+			add_core_of = SNP
+		}
+		455 = {
+			add_core_of = SNP
+		}
+		SNP = {
+			set_state_owner = 677
+			set_state_controller = 677
+			set_state_owner = 680
+			set_state_controller = 680
+			declare_war_on = {
+				target = SYR
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "SNP_revolt"
+			}
+		}
+	}
+	option = { #The revolution begins...
+		name = syria.1.b
+		677 = {
+			add_core_of = SNP
+		}
+		680 = {
+			add_core_of = SNP
+		}
+		553 = {
+			add_core_of = SNP
+		}
+		554 = {
+			add_core_of = SNP
+		}
+		454 = {
+			add_core_of = SNP
+		}
+		455 = {
+			add_core_of = SNP
+		}
+		SNP = {
+			set_state_owner = 677
+			set_state_controller = 677
+			set_state_owner = 680
+			set_state_controller = 680
+			declare_war_on = {
+				target = SYR
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "SNP_revolt"
+			}
+		}
+		change_tag_from = SYR
+	}
+}

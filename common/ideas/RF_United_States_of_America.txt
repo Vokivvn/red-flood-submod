@@ -1,0 +1,1449 @@
+ideas = {
+	
+	country = {
+
+		####### STARTER #######
+	
+		USA_land_of_the_free = {
+			removal_cost = -1
+			picture = generic_agrarian_society
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.25 
+			}
+		}
+		
+	    USA_dustbowl = {
+			removal_cost = -1
+			picture = generic_intel_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = 0.25
+			}
+		}
+
+		USA_dustbowl_improve_1 = {
+			picture = generic_intel_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		USA_dustbowl_improve_2 = {
+			picture = generic_intel_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.03
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		USA_forestry_corps = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = 0.05
+				attrition = -0.2
+			 	supply_consumption_factor = -0.20
+			}
+		}
+		
+	    USA_great_depression = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.3
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+		}
+
+		USA_great_depression_1 = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				#trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		
+	    USA_under_budget_military = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				war_support_factor = -0.35
+				training_time_army_factor = 0.40
+				army_morale_factor = -0.1
+			}
+		}
+
+		USA_under_budget_military_1 = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				war_support_factor = -0.30
+				training_time_army_factor = 0.3
+				army_morale_factor = -0.1
+			}
+		}
+		
+	    USA_organized_crime = {
+			removal_cost = -1
+			picture = officers_purged
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.25
+				production_speed_infrastructure_factor = -0.2
+			}
+		}
+
+		USA_organized_crime_1 = {
+			removal_cost = -1
+			picture = officers_purged
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.2
+				production_speed_infrastructure_factor = -0.15
+			}
+		}
+
+		USA_organized_crime_2 = {
+			removal_cost = -1
+			picture = officers_purged
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.15
+				production_speed_infrastructure_factor = -0.1
+			}
+		}
+
+		USA_war_on_gangsters = {
+			picture = officers_purged
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.01
+				political_power_gain = -0.3	
+			}
+		}
+		
+		USA_prohibition = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+
+		USA_prohibition_limited = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		USA_prohibition_enforced = {
+			removal_cost = -1
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.1
+			}
+		}
+
+		USA_police_raids = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.02
+				social_democratism_drift = -0.03
+				liberalism_drift = -0.03
+				conservatism_drift = -0.03
+				accelerationism_drift = -0.03
+			}
+		}
+
+		USA_restricted_immigration = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = -0.3
+			}
+		}
+
+		USA_trade_interrogation = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				trade_opinion_factor = -0.15
+			}
+		}
+
+		USA_disjointed_government = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.1
+				surrender_limit = -0.05
+				drift_defence_factor = -0.5
+			}
+		}
+
+		USA_disjointed_government_1 = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.05
+				surrender_limit = -0.05
+				drift_defence_factor = -0.5
+			}
+		}
+
+		USA_disjointed_government_2 = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+
+		####### ARMY #######
+
+		USA_howitzerproductionlines = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				army_artillery_attack_factor = 0.2
+			}
+		}
+
+		USA_new_recruitment_methods = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				conscription_factor = 0.25
+			}
+		}
+
+		USA_wac = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				conscription = 0.01
+			}
+		}
+
+		USA_improved_training = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
+			}
+		}
+
+		USA_organized_staff = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				max_command_power = 20
+				command_power_gain_mult = 0.3
+			}
+		}
+		
+		USA_unionsdominance = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			industrial_capacity_factory = 0.10
+			production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		USA_croprotations = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			consumer_goods_factor = 0.05
+			attrition = -0.10
+			}
+		}
+		USA_soilconservation = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			production_speed_infrastructure_factor = -0.15
+			stability_weekly = 0.03
+			}
+		}
+			USA_righttojob = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			industrial_capacity_factory = 0.10
+			political_power_gain = -0.20
+			}
+		}
+			USA_right_to_information = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			research_speed_factor = 0.07
+			political_power_gain = -0.20
+			}
+		}
+			USA_communityhelp = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			revolutionary_anarchism_drift = 0.05
+			monthly_population = 0.20
+			}
+		}
+			USA_democracyinwork = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			political_power_gain = 0.20
+			}
+		}
+			USA_librariestools = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			research_speed_factor = 0.04
+			}
+		}
+			USA_nomoreprices = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			political_power_gain = -0.20
+			war_support_weekly = 0.02
+			stability_weekly = -0.02
+			}
+		}
+			USA_radicalcivilrights = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			monthly_population = 0.20
+			stability_weekly = -0.01
+			}
+		}
+			USA_extremewelfare = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			consumer_goods_factor = -0.10
+			political_power_gain = -0.25
+			}
+		}
+			USA_pensionforold = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			consumer_goods_factor = 0.02
+			stability_factor = 0.15
+			}
+		}
+			USA_communalfood = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			out_of_supply_factor = -0.25
+			stability_weekly = 0.02
+			}
+		}
+			USA_collapsingamericanvalues = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			stability_weekly = -0.02
+			revolutionary_anarchism_drift = 0.10
+			}
+		}
+			USA_collapsedamericanvalues = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			revolutionary_anarchism_drift = 0.10
+			}
+		}
+
+		####### NAVY #######
+
+		USA_two_ocean_act = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				naval_accidents_chance = -0.3
+				naval_coordination = 0.2
+			}
+		}
+		USA_island_hopping = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				invasion_preparation = -0.3
+				naval_invasion_capacity = 4
+			}
+		}
+		USA_newgeneration = {
+			allowed = {
+				original_tag = USA
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		USA_naval_boom_idea = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				naval_morale_factor = 0.5
+				naval_coordination = 0.3
+				navy_intel_factor = 0.07
+			}
+		}
+		USA_naval_boom_idea1 = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				conscription_factor = 0.05
+				naval_morale_factor = 0.5
+				naval_coordination = 0.3
+				navy_intel_factor = 0.1
+			}
+		}
+
+		####### AIR #######
+
+		USA_skip_bombing = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				naval_strike_targetting_factor = 0.02
+				naval_strike_attack_factor = 0.02 
+			}
+		}
+
+		USA_engine_upgrades = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				air_air_superiority_agility_factor = 0.02
+			}
+		}
+
+		USA_airtoairrefueling = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				air_range_factor = 0.15
+			}
+		}
+
+		USA_reverse_technology = {
+			allowed = {
+				original_tag = USA
+			}
+			research_bonus = {
+				light_fighter = 0.03
+				cat_heavy_fighter = 0.03
+				tactical_bomber = 0.03
+				cat_strategic_bomber = 0.03
+				naval_bomber = 0.03
+				cas_bomber = 0.03
+			}
+		}
+
+		USA_paratrooper_programs = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				special_forces_cap = 0.02
+			}
+		}
+
+		USA_expanded_air_force = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				experience_gain_air_factor = 0.25
+			}
+		}
+
+		####### DIPLOMACY #######
+
+		USA_monore_doctrine = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				guarantee_tension = -0.2
+				guarantee_cost = -0.3
+			}
+		}
+
+		USA_good_neighbor_policy = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				guarantee_tension = -0.5
+				guarantee_cost = -0.7
+			}
+		}
+
+		USA_american_aid = {
+			allowed = {
+				OR = {
+					original_tag = MEX
+					original_tag = VEN
+					original_tag = COL
+					original_tag = ECU
+				}
+			}
+			modifier = {
+				liberalism_acceptance = 70
+				conservatism_acceptance = 70
+				social_democratism_acceptance = 70
+			}
+		}
+
+		USA_neutralityact = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				ai_focus_defense_factor = 0.5
+			}
+		}
+
+		USA_sabotage = {
+			removal_cost = 400
+			modifier = {
+				accelerationism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				libertarian_marxism_drift = -0.01
+				stability_factor = -0.07
+			}
+		}
+
+		USA_defending_america = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+			 	army_core_defence_factor = 0.3
+			}
+		}
+
+		USA_lendlease = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				lend_lease_tension = -1
+			}
+		}
+
+		USA_embargo_on_japan = {
+			modifier = {
+				trade_opinion_factor = -0.4
+			}
+		}
+
+		USA_montreal_conventions = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				guarantee_tension = -0.5
+				guarantee_cost = -0.25
+			}
+		}
+
+		####### CUTTING #######
+		
+	    USA_job_centres = {
+			removal_cost = -1 
+			picture = capital_outflow
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				political_power_factor = -0.01
+			}
+		}
+		
+	    USA_corp_reg_pro = {
+			removal_cost = -1
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				political_power_factor = 0.03
+			}
+		}
+
+		USA_anti_lynching_bill_l = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = 0.05 
+				political_power_factor = 0.03
+			}
+		}
+
+		USA_limited_welfare = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				political_power_gain = -0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		USA_no_welfare = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				political_power_gain = 0.2
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		USA_limited_welfare_2 = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				political_power_gain = -0.3
+				consumer_goods_factor = -0.08
+			}
+		}
+
+		USA_balanced_budget = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		USA_restrained_reserve = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				min_export = -0.1
+			}
+		}
+
+		USA_small_biz = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.3
+			}
+		}
+
+		USA_private_contractors = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+
+		USA_union_ties = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				industry_repair_factor = 0.4
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		####### MOODY #######
+
+		USA_SCC = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				out_of_supply_factor = -0.5
+				attrition = -0.3
+			}
+		}
+
+		USA_SCC_1 = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				out_of_supply_factor = -0.5
+				stability_factor = 0.03
+			}
+		}
+
+		USA_FC = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				army_core_defence_factor = 0.1
+				attrition = -0.5
+				stability_factor = 0.03
+			}
+		}
+
+		USA_SOW = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				local_building_slots_factor = 0.25
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_vet_pensions = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		USA_beating_heart = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				local_resources_factor = 0.25
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		USA_anti_lynching_bill_moody = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.02
+				monthly_population = 0.02
+				political_power_factor = 0.05
+			}
+		}
+
+		USA_civil_rights_limited = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = 0.01
+				conscription_factor = 0.15
+			}
+		}
+
+		USA_klan_civil_war = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.07
+				war_support_factor = -0.10
+			}
+		}
+
+		####### TECHNATE #######
+		
+		USA_crashed_price_system = {
+			removal_cost = -1
+			picture = chi_hyper_inflation5
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.3
+				industrial_capacity_factory = -0.4
+				production_speed_buildings_factor = -0.4
+				stability_factor = -0.2
+			}
+		}
+		
+		USA_hyperinflation = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+		
+		ENG_technocratic_volunteers = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				send_volunteers_tension = -0.50	
+				send_volunteer_size = 3
+			}
+		}
+		
+		USA_scientific_revolution = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		
+		USA_self_sustaining_technates = {
+			removal_cost = -1 
+			picture = triumphant_will
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.10
+				min_export = -0.05
+			}
+		}
+
+		USA_self_sustaining_technates_1 = {
+			removal_cost = -1 
+			picture = sisu
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = -0.2
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.1
+				min_export = -0.2
+			}
+		}
+		
+		USA_soviet_corporatism = {
+			removal_cost = -1 
+			picture = generic_political_support
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				political_power_factor = 0.50
+				monthly_population = 1.2
+			}
+		}
+
+		USA_technate_calendar = {
+			removal_cost = -1 
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				local_resources_factor = 0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		USA_24_hour_services = {
+			removal_cost = -1 
+			picture = generic_spy_intel
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		
+		USA_daily_news = {
+			removal_cost = -1 
+			picture = generic_democratic_drift_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				accelerationism_drift = 0.02	
+			}
+		}
+		
+		USA_house_subverted = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = 0.1
+			}
+		}
+			
+		USA_energy_credits = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+				production_speed_nuclear_reactor_factor = 0.25
+				research_speed_factor = 0.05
+			}
+		}
+		
+		USA_scientific_dominance = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+			}			
+		}
+
+		USA_technocratic_society = {
+			removal_cost = -1 
+			picture = generic_research_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		USA_terror = {
+			allowed = {
+				original_tag = CAN
+			}
+			modifier = {
+				attrition = 0.25
+				stability_weekly = -0.02
+			}
+			cancel = {
+				USA = {	exists = no }
+			}			
+		}
+		
+		####### LA GUARDIAS #######
+
+		USA_nomorehunger = {
+			#picture = 
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				monthly_population = 0.15
+				stability_weekly = 0.02
+				consumer_goods_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		USA_nomorepoverty = {
+			removal_cost = -1
+			picture = generic_goods_red_bonus
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				monthly_population = 0.3
+				root_out_resistance_effectiveness_factor = -0.25
+				stability_weekly = 0.02
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		USA_civilrights = {
+			removal_cost = -1
+			picture = triumphant_will
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				conscription = 0.03
+				political_power_gain = 0.10
+				stability_weekly = 0.02		
+			}
+		}
+		
+		USA_NRA = {
+		removal_cost = -1
+		picture = generic_morale_bonus
+		allowed = {
+		 original_tag = USA
+		 }
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.15
+			political_power_gain = -0.08
+			stability_weekly = 0.01
+			research_speed_factor = 0.03
+		}
+		}
+		
+		USA_WPA = {
+		removal_cost = -1
+		picture = generic_research_bonus
+		allowed = {
+		 original_tag = USA
+		 }
+		modifier = {
+			 production_factory_efficiency_gain_factor = -0.05
+			 production_factory_start_efficiency_factor	= 0.10
+			 political_power_gain = -0.12
+			 stability_weekly = 0.01
+			research_speed_factor = 0.02
+			production_speed_arms_factory_factor = 0.10
+		}
+		}
+		
+		USA_corps = {
+		removal_cost = -1
+		picture = generic_infantry_bonus
+		allowed = {
+		 original_tag = USA
+		}
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				attrition = -0.10
+			}
+		}
+
+		USA_publicworksadministration = {
+		removal_cost = -1
+		picture = generic_infantry_bonus
+		allowed = {
+		 original_tag = USA
+		 }
+		modifier = {
+			production_speed_infrastructure_factor = 0.15
+			local_resources_factor = 0.1
+		}
+		}
+
+		USA_ccc = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.12
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		USA_infrastructurereform = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		USA_anti_lynching_bill_sd = {
+			allowed = {
+				original_tag = USA
+			}
+			modifier = {
+				stability_weekly = 0.01
+				monthly_population = 0.05
+				political_power_factor = 0.02
+			}
+		}
+	}
+	
+	### Ministers by Waghlon ###
+	
+	head_of_government = { ### Head of Government ###
+			USA_HOG_Scott = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_HOG_Scott
+				available = {
+					OR = {
+						has_government = accelerationism
+					}
+				}
+				traits = {
+					head_of_government
+					hog_corporate_suit
+				}
+			}
+			
+			USA_HOG_Cutting = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_HOG_Cutting
+				available = {
+					has_government = liberalism
+				}
+
+				traits = {
+					head_of_government
+					hog_silent_workhorse
+				}
+			}
+			
+			USA_HOG_LaGuardia = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_HOG_LaGuardia
+				available = {
+					has_completed_focus = USA_la_guardias_presidency
+				}
+				traits = {
+					head_of_government
+					hog_silent_workhorse
+				}
+			}
+			
+			USA_HOG_Moody = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_HOG_Moody
+				available = {
+					has_government = conservatism
+				}
+				traits = {
+					head_of_government
+					hog_political_protege
+				}
+			}
+		}
+		##end of HoG
+	
+		head_of_intel = { ### Head of Intel ###
+			USA_INT_Farley = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_INT_Farley
+				available = {
+					OR = {
+						has_government = accelerationism
+					}
+				}
+				traits = {
+					head_of_intel
+					int_logistics_specialist
+				}
+			}
+			
+			USA_INT_Hanley = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_INT_Hanley
+				available = {
+					has_government = liberalism
+				}
+
+				traits = {
+					head_of_intel
+					int_dismal_enigma
+				}
+			}
+			
+			USA_INT_Wirds = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_INT_Wirds
+				available = {
+					has_completed_focus = USA_la_guardias_presidency
+				}
+				traits = {
+					head_of_intel
+					int_industrial_specialist
+				}
+			}
+			
+			USA_INT_Andrews = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_INT_Andrews
+				available = {
+					has_government = conservatism
+				}
+				traits = {
+					head_of_intel
+					int_industrial_specialist
+				}
+			}
+		}
+		##end of head of intel
+	
+		foreign_minister = { ### Foreign Minister ###
+			USA_FM_Morgenthau = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_FM_Morgenthau
+				available = {
+					OR = {
+						has_government = accelerationism
+					}
+				}
+				traits = {
+					foreign_minister
+					for_apologetic_clerk
+				}
+			}
+			
+			USA_FM_Brucker = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_FM_Brucker
+				available = {
+					has_government = liberalism
+				}
+
+				traits = {
+					foreign_minister
+					for_ideological_crusader
+				}
+			}
+			
+			USA_FM_Gifford = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_FM_Gifford
+				available = {
+					has_completed_focus = USA_la_guardias_presidency
+				}
+				traits = {
+					foreign_minister
+					for_great_compromiser
+				}
+			}
+			
+			USA_FM_bibbgraves = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_FM_bibbgraves
+				available = {
+					has_government = conservatism
+				}
+				traits = {
+					foreign_minister
+					for_biased_intellectual
+				}
+			}
+		}
+		##end of foreign ministers
+	
+		economy_minister = { ### Economy Minister ###
+			USA_ECO_Roper = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_ECO_Roper
+				available = {
+					OR = {
+						has_government = accelerationism
+					}
+				}
+				traits = {
+					economy_minister
+					eco_administrative_genius
+				}
+			}
+			
+			USA_ECO_Landon = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_ECO_Landon
+				available = {
+					has_government = liberalism
+				}
+
+				traits = {
+					economy_minister
+					eco_resource_industrialist
+				}
+			}
+			
+			USA_ECO_Follette = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_ECO_Follette
+				available = {
+					has_completed_focus = USA_la_guardias_presidency
+				}
+				traits = {
+					economy_minister
+					eco_reformer
+				}
+			}
+			
+			USA_ECO_Harley = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_ECO_Harley
+				available = {
+					has_government = conservatism
+				}
+				traits = {
+					economy_minister
+					eco_resource_industrialist
+				}
+			}
+			
+
+		}
+		##end of economy minister
+		
+		security_minister = { ### Security Minister ###
+			USA_SEC_Hazen = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_SEC_Hazen
+				available = {
+					OR = {
+						has_government = accelerationism
+					}
+				}
+				traits = {
+					security_minister
+					sec_crime_fighter
+				}
+			}
+			
+			USA_SEC_Hickenlooper = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_SEC_Hickenlooper
+				available = {
+					has_government = liberalism
+				}
+
+				traits = {
+					security_minister
+					sec_back_stabber
+				}
+			}
+			
+			USA_SEC_Hull = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_SEC_Hull
+				available = {
+					has_completed_focus = USA_la_guardias_presidency
+				}
+				traits = {
+					security_minister
+					sec_man_of_the_people
+				}
+			}
+			
+			USA_SEC_Bankhead = {
+				allowed = { original_tag = USA }
+				picture = GFX_idea_USA_SEC_Bankhead
+				available = {
+					has_government = conservatism
+				}
+				traits = {
+					security_minister
+					sec_crime_fighter
+				}
+			}
+		}
+		##end of security ministers
+}

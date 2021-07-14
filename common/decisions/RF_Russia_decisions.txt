@@ -1,0 +1,1153 @@
+RUS_our_diplomacy = {
+	RUS_puppet_brotherhood = {
+		cost = 50
+		icon = generic_form_nation
+		visible = {
+			has_completed_focus = RUS_reintegrate_baltic
+			WRT = {
+				exists = yes
+				has_government = reactionism
+			}
+		}
+		available = {
+			WRT = {
+				has_completed_focus = WRT_truth_is_safe
+				has_war = no
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			WRT = {
+				country_event = {
+					id = russia.98
+				}
+			}
+		}
+	}
+}
+
+SRU_new_course_to_the_great_russia = {
+
+	#Decision for: Improve the Trans-Siberian Railway
+	improvethetranssiberianrailway = {
+		icon = decision_category_generic_industry
+		available = {
+		hidden_trigger = { original_tag = SRU }
+			owns_state = 569
+			owns_state = 40
+			owns_state = 570
+			owns_state = 403
+			has_completed_focus = RUS_transsib
+		}
+		fire_only_once = no
+		complete_effect = {
+			569 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			40 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			570 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			403 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 200
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		} 
+	}
+
+	improvethemoscowrigarailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 12
+			owns_state = 242
+			owns_state = 210
+			owns_state = 858
+			has_completed_focus = RUS_colonization_ostsee
+		}
+		fire_only_once = no
+		complete_effect = {
+			12 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			242 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			210 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			858 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 200
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	improvethemoscowkazanrailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 253
+			owns_state = 252
+			owns_state = 256
+		}
+		fire_only_once = no
+		complete_effect = {
+			253 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			252 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			256 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 150
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	improvethegroznybakurailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 232
+			owns_state = 229
+			has_completed_focus = RUS_grozny_baku
+		}
+		fire_only_once = no
+		complete_effect = {
+			232 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			229 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	improvethekazanyekaterinburgrailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 249
+			owns_state = 399
+			owns_state = 398
+			owns_state = 573
+			owns_state = 653
+			owns_state = 651
+			has_completed_focus = RUS_kazan_yekaterinburg
+		}
+		fire_only_once = no
+		complete_effect = {
+			249 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			399 = {	
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			398 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			573 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			653 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			651 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			249 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	improvethekoltasvorkutarailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 214
+			owns_state = 351
+			owns_state = 400
+			has_completed_focus = RUS_kotlas_vorkuta
+		}
+		fire_only_once = no
+		complete_effect = {
+			214 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+						}
+					}
+					
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			214 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			351 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			400 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 250
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	improvethemoscowyuzovkarailway = {
+		icon = decision_category_generic_industry
+		available = {
+			owns_state = 214
+			owns_state = 220
+			owns_state = 221
+			owns_state = 222
+			owns_state = 223
+			owns_state = 227
+			owns_state = 228
+			owns_state = 240
+			owns_state = 853
+			has_completed_focus = RUS_moscow_donbass
+		}
+		fire_only_once = no
+		complete_effect = {
+			214 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+						}
+					}
+					
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			220 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			221 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			222 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			223 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			227 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			228 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			240 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			853 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			200 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+		cost = 150
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	#Decision for: Exploit Siberian Wealth
+	exploitsiberianwealth = {
+		icon = decision_category_generic_prospect_for_resources
+		available = {
+			owns_state = 570
+			owns_state = 208
+			owns_state = 569
+			has_completed_focus = RUS_siberian_wealth
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_resource = {
+    			type = oil
+    			amount = 15
+    			state = 570
+			}
+			add_resource = {
+    			type = steel
+    			amount = 15
+    			state = 208
+			}
+			add_resource = {
+    			type = aluminium
+    			amount = 20
+    			state = 569
+			}
+		}
+		cost = 100
+		days_remove = 70
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+}
+
+SRU_colonization_plan_vostok = {
+
+	SRU_core_orenburg = {
+		cost = 100
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		available = {
+			owns_state = 572
+			owns_state = 582
+			owns_state = 732
+			owns_state = 652
+			owns_state = 402
+			owns_state = 406
+		}
+		complete_effect  = {
+			252 = {
+				add_manpower = -50000
+			}
+			402 = {
+				add_manpower = 50000
+				add_manpower = -10000
+			}
+			add_state_core = 572
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 652
+			add_state_core = 402
+			add_state_core = 406
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SRU_core_steppes = {
+		cost = 100
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		available = {
+			owns_state = 571
+			owns_state = 583
+			owns_state = 590
+			owns_state = 588
+			owns_state = 404
+			owns_state = 589
+			owns_state = 842
+			owns_state = 794
+			owns_state = 586
+		}
+		complete_effect  = {
+			253 = {
+				add_manpower = -80000
+			}
+			404 = {
+				add_manpower = 40000
+				add_manpower = -10000
+			}
+			586 = {
+				add_manpower = 40000
+				add_manpower = -10000
+			}
+			add_state_core = 571
+			add_state_core = 583
+			add_state_core = 590
+			add_state_core = 588
+			add_state_core = 404
+			add_state_core = 589
+			add_state_core = 842
+			add_state_core = 794
+			add_state_core = 586
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SRU_core_siberia = {
+		cost = 100
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		available = {
+			owns_state = 403
+			owns_state = 580
+			owns_state = 578
+			owns_state = 570
+			owns_state = 40
+			owns_state = 569
+			owns_state = 568
+			owns_state = 567
+			owns_state = 566
+		}
+		complete_effect  = {
+			400 = {
+				add_manpower = -80000
+			}
+			403 = {
+				add_manpower = 40000
+				add_manpower = -2000
+			}
+			578 = {
+				add_manpower = 40000
+				add_manpower = -2000
+			}
+			add_state_core = 403
+			add_state_core = 580
+			add_state_core = 578
+			add_state_core = 570
+			add_state_core = 40
+			add_state_core = 569
+			add_state_core = 568
+			add_state_core = 567
+			add_state_core = 566
+			add_state_core = 565
+			add_state_core = 575
+			add_state_core = 576
+			add_state_core = 516
+			add_state_core = 577
+			add_state_core = 579
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SRU_conquer_kazakhs = {
+		cost = 50
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		complete_effect  = {
+			add_state_claim = 1040
+			add_state_claim = 849
+			add_state_claim = 1039
+			add_state_claim = 587
+			create_wargoal = {
+				target = AQT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KHW
+				type = annex_everything
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SRU_conquer_uzbeks = {
+		cost = 50
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		complete_effect  = {
+			add_state_claim = 1041
+			add_state_claim = 405
+			add_state_claim = 1042
+			add_state_claim = 585
+			create_wargoal = {
+				target = TUK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KOK
+				type = annex_everything
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SRU_conquer_kyrgyz = {
+		cost = 50
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		complete_effect  = {
+			add_state_claim = 1038
+			add_state_claim = 840
+			add_state_claim = 742
+			create_wargoal = {
+				target = BKR
+				type = annex_everything
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	SRU_conquer_turkmen = {
+		cost = 50
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = RUS_plan_vostok
+		}
+		complete_effect  = {
+			add_state_claim = 1037
+			add_state_claim = 584
+			add_state_claim = 850
+			add_state_claim = 851
+			create_wargoal = {
+				target = TUC
+				type = annex_everything
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SRU_uzbekistan = {
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			405 = {
+				controller = {
+					tag = SRU
+				}
+			}
+			585 = {
+				controller = {
+					tag = SRU
+				}
+			}
+		}
+		complete_effect  = {
+			219 = { add_manpower = -40000 }
+			405 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			585 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			every_state = {
+				limit = {
+					is_core_of = TUK
+				}
+				add_core_of = SRU
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	SRU_turkestan = {
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			852 = {
+				controller = {
+					tag = SRU
+				}
+			}
+		}
+		complete_effect  = {
+			255 = { add_manpower = -10000 }
+			852 = {
+				add_manpower = 10000
+			}
+			every_state = {
+				limit = {
+					is_core_of = TRK
+				}
+				add_core_of = SRU
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	SRU_khwarzem = {
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			849 = {
+				controller = {
+					tag = SRU
+				}
+			}
+			587 = {
+				controller = {
+					tag = SRU
+				}
+			}
+		}
+		complete_effect  = {
+			219 = { add_manpower = -10000 }
+			587 = {
+				add_manpower = 5000
+			}
+			849 = {
+				add_manpower = 5000
+			}
+			every_state = {
+				limit = {
+					is_core_of = KHW
+				}
+				add_core_of = SRU
+			}
+			every_state = {
+				limit = {
+					is_core_of = AQT
+				}
+				add_core_of = SRU
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	SRU_kyrgyzstan = {
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			851 = {
+				controller = {
+					tag = SRU
+				}
+			}
+			840 = {
+				controller = {
+					tag = SRU
+				}
+			}
+			742 = {
+				controller = {
+					tag = SRU
+				}
+			}
+		}
+		complete_effect  = {
+			221 = {
+				add_manpower = -36000
+			}
+			851 = {
+				add_manpower = -1000
+				add_manpower = 12000
+			}
+			840 = {
+				add_manpower = -1000
+				add_manpower = 12000
+			}
+			742 = {
+				add_manpower = -1000
+				add_manpower = 12000
+			}
+			every_state = {
+				limit = {
+					is_core_of = BKR
+				}
+				add_core_of = SRU
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
+	SRU_south_turkestan = {
+		cost = 150
+		icon = infiltrate_state
+		visible = {
+			has_completed_focus = RUS_resettlement_ministry
+		}
+		available = {
+			584 = {
+				controller = {
+					tag = SRU
+				}
+			}
+			850 = {
+				controller = {
+					tag = SRU
+				}
+			}
+		}
+		complete_effect  = {
+			205 = {
+				add_manpower = -40000
+			}
+			850 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			584 = {
+				add_manpower = -2000
+				add_manpower = 20000
+			}
+			every_state = {
+				limit = {
+					is_core_of = TUC
+				}
+				add_core_of = SRU
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+}

@@ -1,0 +1,996 @@
+focus_tree = {
+	id = RF_Siberia_Solidarist
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			original_tag = SIB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = SIB_army_effort
+	shared_focus = SIB_aviation_effort
+	shared_focus = SIB_naval_effort
+	shared_focus = SIB_industrial_effort
+	focus = {
+		id = SIB_new_path
+		icon = GFX_goal_SIB_new_path
+		cost = 10
+		x = 8
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.40
+			}
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_ideas = {
+				SIB_Georgiy_Gins_hog
+				SIB_Vladimir_Poremsky_for
+				SIB_Georgiy_Okolovich_eco
+				SIB_Mikhail_Rozanov_sec
+				SIB_Fyodor_Yeliseyev_int
+			}
+		}
+	}
+	focus = {
+		id = SIB_synchronize_the_army
+		icon = GFX_goal_SIB_synchronize_the_army
+		cost = 9
+		relative_position_id = SIB_new_path
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = SIB_new_path
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 5
+				category = infantry_weapons
+				category = artillery
+				category = air_equipment
+			}
+			add_ideas = SIB_synchronization_army
+		}
+	}
+	focus = {
+		id = SIB_military_commissars
+		icon = GFX_goal_SIB_military_commissars
+		cost = 8
+		relative_position_id = SIB_synchronize_the_army
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_army
+		}
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = SIB_synchronization_army
+				add_idea = SIB_synchronization_army_1
+			}
+		}
+	}
+	focus = {
+		id = SIB_army_doctrine_question
+		icon = GFX_goal_SIB_army_doctrine_question
+		cost = 7
+		relative_position_id = SIB_synchronize_the_army
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_army
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 3
+				category = land_doctrine
+			}
+			country_event = {
+				id = sib.13
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_military_education
+		icon = GFX_goal_SIB_military_education
+		cost = 7
+		relative_position_id = SIB_synchronize_the_army
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SIB_military_commissars
+		}
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = SIB_synchronization_army_1
+				add_idea = SIB_synchronization_army_2
+			}
+		}
+	}
+	focus = {
+		id = SIB_air_force_debates
+		icon = GFX_goal_SIB_air_force_debates
+		cost = 7
+		relative_position_id = SIB_synchronize_the_army
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SIB_army_doctrine_question
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 3
+				category = air_doctrine
+			}
+			country_event = {
+				id = sib.14
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_novonikolayevsk_tank_factory
+		icon = GFX_goal_SIB_novonikolayevsk_tank_factory
+		cost = 9
+		relative_position_id = SIB_synchronize_the_army
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_military_education
+		}
+		prerequisite = {
+			focus = SIB_air_force_debates
+		}
+		completion_reward = {
+			570 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = armor
+			}
+			swap_ideas = {
+				remove_idea = SIB_synchronization_army_2
+				add_idea = SIB_russian_militarism
+			}
+		}
+	}
+	focus = {
+		id = SIB_synchronize_the_society
+		icon = GFX_goal_SIB_synchronize_the_society
+		cost = 9
+		relative_position_id = SIB_new_path
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_new_path
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_ideas = SIB_society
+		}
+	}
+	focus = {
+		id = SIB_civilian_commissars
+		icon = GFX_goal_SIB_civilian_commissars
+		cost = 8
+		relative_position_id = SIB_synchronize_the_society
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_society
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			add_ideas = SIB_solidaristcommissars
+		}
+	}
+	focus = {
+		id = SIB_rebirth_of_russian_spirit
+		icon = GFX_goal_SIB_rebirth_of_russian_spirit
+		cost = 8
+		relative_position_id = SIB_synchronize_the_society
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_society
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_society
+				add_idea = SIB_society1
+			}
+		}
+	}
+	focus = {
+		id = SIB_use_the_mass_media
+		icon = GFX_goal_SIB_use_the_mass_media
+		cost = 8
+		relative_position_id = SIB_synchronize_the_society
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SIB_civilian_commissars
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+			swap_ideas = {
+				remove_idea = SIB_solidaristcommissars
+				add_idea = SIB_solidaristcommissars1
+			}
+		}
+	}
+	focus = {
+		id = SIB_new_syncretic_identity
+		icon = GFX_goal_SIB_new_syncretic_identity
+		cost = 8
+		relative_position_id = SIB_synchronize_the_society
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SIB_rebirth_of_russian_spirit
+		}
+		completion_reward = {
+			add_political_power = 75
+			swap_ideas = {
+				remove_idea = SIB_society1
+				add_idea = SIB_society2
+			}
+		}
+	}
+	focus = {
+		id = SIB_progressive_reforms
+		icon = GFX_goal_SIB_progressive_reforms
+		cost = 9
+		relative_position_id = SIB_synchronize_the_society
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_use_the_mass_media
+		}
+		prerequisite = {
+			focus = SIB_new_syncretic_identity
+		}
+		completion_reward = {
+			custom_effect_tooltip = "SIB_PROGRESSIVE_REFORMS_TOOLTIP"
+			hidden_effect = {
+				remove_ideas = {
+					SIB_society2
+					SIB_solidaristcommissars1
+				}
+				add_ideas = SIB_russian_progressivism
+			}
+			country_event = {
+				id = sib.15
+				days = 1
+			}
+		}
+	}
+	focus = {
+		id = SIB_synchronize_the_economy
+		icon = GFX_goal_SIB_synchronize_the_economy
+		cost = 9
+		relative_position_id = SIB_new_path
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = SIB_new_path
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					NOT = {
+						has_state_category = wasteland
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = SIB_synchronization_economy
+		}
+	}
+	focus = {
+		id = SIB_establish_state_control_over_industry
+		icon = GFX_goal_SIB_establish_state_control_over_industry
+		cost = 8
+		relative_position_id = SIB_synchronize_the_economy
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_economy
+		}
+		completion_reward = {
+			add_ideas = SIB_SVSNK
+		}
+	}
+	focus = {
+		id = SIB_centralize_trade_unions
+		icon = GFX_goal_SIB_centralize_trade_unions
+		cost = 8
+		relative_position_id = SIB_synchronize_the_economy
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_synchronize_the_economy
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_synchronization_economy
+				add_idea = SIB_synchronization_economy1
+			}
+		}
+	}
+	focus = {
+		id = SIB_expand_automotive_industry
+		icon = GFX_goal_SIB_expand_automotive_industry
+		cost = 8
+		relative_position_id = SIB_synchronize_the_economy
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SIB_establish_state_control_over_industry
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					impassable = no
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	focus = {
+		id = SIB_the_all_russian_council_of_corporations
+		icon = GFX_goal_SIB_the_all_russian_council_of_corporations
+		cost = 8
+		relative_position_id = SIB_synchronize_the_economy
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SIB_centralize_trade_unions
+		}
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = SIB_synchronization_economy1
+				add_idea = SIB_synchronization_economy2
+			}
+		}
+	}
+	focus = {
+		id = SIB_russian_solidarism
+		icon = GFX_goal_SIB_russian_solidarism
+		cost = 9
+		relative_position_id = SIB_synchronize_the_economy
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_expand_automotive_industry
+		}
+		prerequisite = {
+			focus = SIB_the_all_russian_council_of_corporations
+		}
+		completion_reward = {
+			custom_effect_tooltip = "SIB_RUSSIAN_SOLIDARISM_TOOLTIP"
+			hidden_effect = {
+				remove_ideas = {
+					SIB_synchronization_economy2
+					SIB_SVSNK
+				}
+				add_ideas = SIB_solidarism_idea
+			}
+		}
+	}
+	focus = {
+		id = SIB_unite_our_people
+		icon = GFX_goal_SIB_unite_our_people
+		cost = 10
+		relative_position_id = SIB_new_path
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = SIB_novonikolayevsk_tank_factory
+		}
+		prerequisite = {
+			focus = SIB_progressive_reforms
+		}
+		prerequisite = {
+			focus = SIB_russian_solidarism
+		}
+		available = {
+			NOT = {
+				any_state = {
+					is_core_of = SIB
+					NOT = {
+						is_owned_by = SIB
+					}
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "SIB_RUSSIAN_REBIRTH_TOOLTIP"
+			hidden_effect = {
+				remove_ideas = {
+					SIB_russian_militarism
+					SIB_russian_progressivism
+					SIB_solidarism_idea
+				}
+				add_ideas = SIB_russian_rebirth_idea
+			}
+		}
+	}
+	focus = {
+		id = SIB_unite_our_nation
+		icon = GFX_goal_SIB_unite_our_nation
+		cost = 10
+		relative_position_id = SIB_unite_our_people
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_unite_our_people
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SIB_russian_rebirth_idea
+				add_idea = SIB_russian_rebirth_idea1
+			}
+		}
+	}
+	focus = {
+		id = SIB_central_asian_security
+		icon = GFX_goal_SIB_central_asian_security
+		cost = 10
+		relative_position_id = SIB_unite_our_people
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SIB_unite_our_nation
+		}
+		available = { 
+			is_subject = no
+		}
+		will_lead_to_war_with = STE
+		will_lead_to_war_with = ORE
+		will_lead_to_war_with = TRK
+		will_lead_to_war_with = KHW
+		will_lead_to_war_with = TUK
+		will_lead_to_war_with = TUC
+		will_lead_to_war_with = AQT
+		will_lead_to_war_with = BKR
+		will_lead_to_war_with = KOK
+		completion_reward = {
+			custom_effect_tooltip = "SIB_CENTRAL_ASIAN_CORES_TOOLTIP"
+			hidden_effect = {
+				add_state_core = 571
+				add_state_core = 588
+				add_state_core = 590
+				add_state_core = 583
+				add_state_core = 404
+				add_state_core = 589
+				add_state_core = 842
+				add_state_core = 586
+				add_state_core = 794
+
+				add_state_core = 1043
+				add_state_core = 852
+
+				add_state_core = 406
+				add_state_core = 402
+				add_state_core = 652
+				add_state_core = 582
+				add_state_core = 732
+				add_state_core = 572
+			}
+			every_state = {
+					limit = {
+						OR = {
+							is_core_of = TUC
+							is_core_of = TUK
+							is_core_of = AQT
+							is_core_of = KOK
+							is_core_of = BKR
+							is_core_of = KHW
+						}
+					}
+					add_core_of = SIB
+				}
+			create_wargoal = {
+				target = STE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TRK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KHW
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TUC
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TUK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AQT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BKR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KOK
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_far_eastern_security
+		icon = GFX_goal_SIB_far_eastern_security
+		cost = 10
+		relative_position_id = SIB_unite_our_people
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SIB_unite_our_nation
+		}
+		available = { 
+			is_subject = no
+		}
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = MO2
+		will_lead_to_war_with = ZHR
+		will_lead_to_war_with = KCK
+		completion_reward = {
+			custom_effect_tooltip = "SIB_FAR_EASTERN_CORES_TOOLTIP"
+			hidden_effect = {
+				add_state_core = 838
+				add_state_core = 898
+				add_state_core = 654
+				add_state_core = 961
+				add_state_core = 329
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = ZHR
+							is_core_of = KCK
+							is_core_of = MO2
+							is_core_of = ALT
+							is_core_of = TAN
+						}
+					}
+					add_core_of = SIB
+				}
+			}
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SIK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MO2
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ZHR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KCK
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_march_on_false_rome
+		icon = GFX_goal_SIB_march_on_false_rome
+		cost = 10
+		relative_position_id = SIB_unite_our_people
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_central_asian_security
+		}
+		prerequisite = {
+			focus = SIB_far_eastern_security
+		}
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		available = {
+			ORE = { exists = no }
+			STE = { exists = no }
+			KCK = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "SIB_RUSSIAN_CORES_TOOLTIP"
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RUS
+							is_core_of = SRU
+						}
+					}
+					add_core_of = SIB
+				}
+			}
+			create_wargoal = {
+				target = RUS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SRU
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_baltic_security
+		icon = GFX_goal_SIB_baltic_security
+		cost = 10
+		relative_position_id = SIB_march_on_false_rome
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIB_march_on_false_rome
+		}
+		available = {
+			RUS = { exists = no }
+			SRU = { exists = no }
+			is_subject = no
+		}
+		will_lead_to_war_with = WRU
+		will_lead_to_war_with = EST
+		will_lead_to_war_with = LAT
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = WRT
+		will_lead_to_war_with = WRR
+		completion_reward = {
+			custom_effect_tooltip = "SIB_BALTIC_CORES_TOOLTIP"
+			hidden_effect = {
+				add_state_core = 190
+				add_state_core = 1058
+				add_state_core = 12
+				add_state_core = 210
+
+				add_state_core = 13
+				add_state_core = 191
+
+				add_state_core = 209
+				add_state_core = 858
+				add_state_core = 857
+
+				add_state_core = 995
+				add_state_core = 207
+				add_state_core = 206
+				add_state_core = 204
+				add_state_core = 194
+				add_state_core = 94
+				add_state_core = 95
+			}
+			every_state = {
+					limit = {
+						OR = {
+							is_core_of = LIT
+						}
+					}
+					add_core_of = SIB
+				}
+			create_wargoal = {
+				target = WRU
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = EST
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LAT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BLR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = WRT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = WRR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_reclaim_kiev
+		icon = GFX_goal_SIB_reclaim_kiev
+		cost = 10
+		relative_position_id = SIB_march_on_false_rome
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_march_on_false_rome
+		}
+		will_lead_to_war_with = UKR
+		available = {
+			RUS = { exists = no }
+			SRU = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "SIB_UKRAINE_CORES_TOOLTIP"
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = UKR
+					}
+					add_core_of = SIB
+				}
+			}
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_caucasian_security
+		icon = GFX_goal_SIB_caucasian_security
+		cost = 10
+		relative_position_id = SIB_march_on_false_rome
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_march_on_false_rome
+		}
+		available = {
+			RUS = { exists = no }
+			SRU = { exists = no }
+			is_subject = no
+		}
+		will_lead_to_war_with = DKB
+		will_lead_to_war_with = ARM
+		will_lead_to_war_with = KAV
+		will_lead_to_war_with = ASY
+		will_lead_to_war_with = AZR
+		will_lead_to_war_with = CCD
+		completion_reward = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = DKB
+							is_core_of = ARM
+							is_core_of = CCD
+							is_core_of = AZR
+							is_core_of = KAV
+						}
+					}
+					add_core_of = SIB
+				}
+				add_state_core = 231
+			}
+			create_wargoal = {
+				target = DKB
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ARM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = KAV
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = ASY
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = AZR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = CCD
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_our_true_borders
+		icon = GFX_goal_SIB_our_true_borders
+		cost = 10
+		relative_position_id = SIB_march_on_false_rome
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_baltic_security
+		}
+		prerequisite = {
+			focus = SIB_reclaim_kiev
+		}
+		prerequisite = {
+			focus = SIB_caucasian_security
+		}
+		available = {
+			owns_state = 202
+			is_subject = no
+		}
+		will_lead_to_war_with = MOL
+		will_lead_to_war_with = FIN
+		completion_reward = {
+			add_state_core = 80
+			add_state_core = 79
+			add_state_core = 1014
+			add_state_core = 78
+			add_state_core = 766
+
+			add_state_core = 537
+			add_state_core = 655
+
+			add_state_core = 555
+
+			add_state_core = 89
+			add_state_core = 91
+
+			add_state_core = 73
+
+			add_state_core = 146
+			add_state_core = 856
+			add_state_core = 150
+			add_state_core = 111
+			add_state_core = 149
+			add_state_core = 148
+			create_wargoal = {
+				target = MOL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = FIN
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SIB_age_of_solidarity
+		icon = GFX_goal_SIB_age_of_solidarity
+		cost = 10
+		relative_position_id = SIB_our_true_borders
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_our_true_borders
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 300
+			create_faction = CSTO
+		}
+	}
+}

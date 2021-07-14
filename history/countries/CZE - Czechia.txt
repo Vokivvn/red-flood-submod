@@ -1,0 +1,250 @@
+capital = 9
+
+oob = CZE_1936
+
+set_research_slots = 3 
+
+add_ideas = {
+	CZE_unpopoular_monarchy
+	CZE_intermarium_sanctions
+	CZE_german_problem
+	CZE_legacy_of_czech_legion
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	gwtank = 1
+	basic_light_tank = 1
+
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 20
+	revolutionary_anarchism = 5
+	revisionist_socialism = 5
+	social_democratism = 5
+	liberalism = 5
+	conservatism = 5
+	right_authoritarianism = 30
+	despotism = 5
+	reactionism = 5
+	accelerationism = 10
+}
+
+set_stability = 0.5
+
+set_cosmetic_tag = CZE_czechoslovakia
+
+create_country_leader = {
+	name = "J.k.V. Roman I"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_CZE_Roman_I_Romanov.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Alois Muna"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Alois_Muna.tga"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Karel Kindl"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Karel_Kindl.tga"
+	expire = "1965.1.1"
+	ideology = liberal_socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jan Šrámek"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Jan_Sramek.tga"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Karel Schwarzenberg"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Karel_Schwarzenberg.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ladislav Kobsinek"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Ladislav_Kobsinek.tga"
+	expire = "1965.1.1"
+	ideology = constitutional_dictatorship
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Lída Baarová"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Lida_Baarova.tga"
+	expire = "1965.1.1"
+	ideology = national_vanguardism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "František Moravec"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Franta_Moravec.tga"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jaroslav Hašek"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Jaroslav_Hasek.tga"
+	expire = "1965.1.1"
+	ideology = social_anarchism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zdeněk Fierlinger"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_Fierlinger.tga"
+	expire = "1965.1.1"
+	ideology = democratic_socialism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "František Mašek"
+	desc = "POLITICS_KLEMENT_GOTTWALD_DESC"
+	picture = "Portrait_CZE_František_Mašek.tga"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	traits = {
+		#
+	}
+}
+
+
+create_field_marshal = {
+	name = "Josef Snejdarek"
+	picture = "Portrait_CZE_Josef Snejdarek.dds"
+	traits = { fast_planner brilliant_strategist }
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 5
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Richard Tesarik"
+	picture = "Portrait_CZE_Richard_Tesarik.dds"
+	traits = { panzer_leader }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vojtěch Luža"
+	picture = "Portrait_CZE_Vojtěch_Luža.dds"
+	traits = { war_hero infantry_officer}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Josef Votruba"
+	picture = "Portrait_CZE_Josef_Votruba.dds"
+	traits = { career_officer cavalry_leader}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ludvík Svoboda"
+	picture = "Portrait_CZE_Ludvík_Svoboda.dds"
+	traits = { war_hero infantry_leader}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ján Golian"
+	picture = "Portrait_CZE_Ján_Golian.dds"
+	traits = { trickster commando}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Václav Morávek"
+	picture = "Portrait_CZE_Václav_Morávek.dds"
+	traits = { commando }
+	skill = 1
+	attack_skill = 5
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+

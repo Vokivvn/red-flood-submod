@@ -1,0 +1,45 @@
+﻿division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = ENG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Infantry Brigade"
+	division_names_group = ENG_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+	support = {
+       	artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+    division= {
+	     name = "Perth Militia"
+	     location = 1652
+	     division_template = "Infantry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "13th Infantry Brigade"
+	     location = 11016
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+}

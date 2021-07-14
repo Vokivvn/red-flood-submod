@@ -1,0 +1,24 @@
+##### Division Templates #####
+division_template = {
+	name = "Cretan Defense Militia"	
+	division_names_group = GRE_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "1st Cretan Defense Militia"
+		location = 4170
+		division_template = "Cretan Defense Militia"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "2nd Cretan Defense Militia"
+		location = 9940
+		division_template = "Cretan Defense Militia"
+		start_experience_factor = 0.5
+	}
+}

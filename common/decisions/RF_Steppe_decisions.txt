@@ -1,0 +1,1473 @@
+STE_factionalism_decisions = {
+	STE_promote_kornilovites_in_bureaucracy = {
+		icon = GFX_STE_division_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_urban_kornilov
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_URBAN_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.100
+			}
+		}
+	}
+	STE_protect_russian_settlers = {
+		icon = GFX_STE_division_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_rular_kornilov
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_RURAL_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.101
+			}
+		}
+	}
+	STE_train_border_security_guards = {
+		icon = GFX_STE_division_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_steppe_kornilov
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_STEPPE_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.102
+			}
+		}
+	}
+
+	STE_manage_prosvita_clubs = {
+		icon = GFX_STE_ukrainian_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_urban_ukrainian
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_URBAN_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.103
+			}
+		}
+	}
+	STE_legalize_ukrainian_settlements = {
+		icon = GFX_STE_ukrainian_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_rular_ukrainian
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_RURAL_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.104
+			}
+		}
+	}
+	STE_form_ukrainian_self_defense_squads = {
+		icon = GFX_STE_ukrainian_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_steppe_ukrainian
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_STEPPE_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.105
+			}
+		}
+	}
+
+	STE_support_kazakh_education = {
+		icon = GFX_STE_alash_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_urban_alash
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_URBAN_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.106
+			}
+		}
+	}
+	STE_protect_native_villages = {
+		icon = GFX_STE_alash_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_rular_alash
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_RURAL_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.107
+			}
+		}
+	}
+	STE_form_alash_self_defense_squads = {
+		icon = GFX_STE_alash_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_steppe_alash
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_STEPPE_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.108
+			}
+		}
+	}
+
+	STE_promote_cossacks_in_police = {
+		icon = GFX_STE_cossacks_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+					check_variable = {
+						var = STE_influence_points_urban
+						value = 0
+						compare = equals
+					}
+					check_variable = {
+						var = STE_influence_points_urban_cossack
+						value = 1
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_URBAN_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.109
+			}
+		}
+	}
+	STE_land_for_veteran_cossacks = {
+		icon = GFX_STE_cossacks_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+					check_variable = {
+						var = STE_influence_points_rular
+						value = 0
+						compare = equals
+					}
+					check_variable = {
+						var = STE_influence_points_rular_cossack
+						value = 1
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_RURAL_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.110
+			}
+		}
+	}
+	STE_expand_cossack_border_security = {
+		icon = GFX_STE_cossacks_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 0
+					compare = equals
+				}
+				check_variable = {
+					var = STE_influence_points_steppe_cossack
+					value = 1
+					compare = equals
+				}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_STEPPE_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.111
+			}
+		}
+	}
+
+	STE_forge_ties_with_markets = {
+		icon = GFX_STE_nomads_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+					check_variable = {
+						var = STE_influence_points_urban
+						value = 0
+						compare = equals
+					}
+					check_variable = {
+						var = STE_influence_points_urban_nomads
+						value = 1
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_URBAN_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.112
+			}
+		}
+	}
+	STE_forge_ties_with_farmers = {
+		icon = GFX_STE_nomads_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+					check_variable = {
+						var = STE_influence_points_rular
+						value = 0
+						compare = equals
+					}
+					check_variable = {
+						var = STE_influence_points_rular_nomads
+						value = 1
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_RURAL_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.113
+			}
+		}
+	}
+	STE_smuggle_cattle_through_border = {
+		icon = GFX_STE_nomads_decision_icon
+		cost = 50
+		fire_only_once = no
+		days_remove = 30
+		available = {
+			NOT = {
+				AND = {
+					check_variable = {
+						var = STE_influence_points_steppe
+						value = 0
+						compare = equals
+					}
+					check_variable = {
+						var = STE_influence_points_steppe_nomads
+						value = 1
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = "STE_STEPPE_INFLUENCE_DECISION_TOOLTIP"
+			country_event = {
+				id = steppe.114
+			}
+		}
+	}
+}
+STE_invade_the_neighbors = {
+	STE_infiltrate_orenburg = {
+		icon = infiltrate_state
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 406
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 572
+		}
+	}
+	STE_claim_turkestan = {
+		icon = infiltrate_state
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 1043
+			add_state_core = 852
+			create_wargoal = {
+				target = TRK
+				type = annex_everything
+			}
+		}
+	}
+	STE_invade_altay = {
+		icon = infiltrate_state
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 838
+			add_state_core = 654
+			add_state_core = 898
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+		}
+	}
+}
+STE_sack_the_neighbors = {
+	STE_sack_orenburg = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = ORE
+		}
+		visible = {
+			is_neighbor_of = ORE
+		}
+		complete_effect = {
+			ORE = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -800
+					producer = ORE
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = STE
+						}
+					}
+					random_list = {
+						40 = {
+							remove_building = {
+								type = infrastructure
+								level = 1
+							}
+						}
+						60 = {
+							add_manpower = -100
+						}
+					}
+					random_list = {
+						10 = {
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+						10 = {
+							remove_building = {
+								type = arms_factory
+								level = 1
+							}
+						}
+						80 = {
+							add_manpower = -100
+						}
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+				producer = ORE
+			}
+		}
+	}
+	STE_sack_southeast = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = DKB
+		}
+		visible = {
+			is_neighbor_of = DKB
+		}
+		complete_effect = {
+			DKB = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -800
+					producer = DKB
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = STE
+						}
+					}
+					random_list = {
+						40 = {
+							remove_building = {
+								type = infrastructure
+								level = 1
+							}
+						}
+						60 = {
+							add_manpower = -100
+						}
+					}
+					random_list = {
+						10 = {
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+						10 = {
+							remove_building = {
+								type = arms_factory
+								level = 1
+							}
+						}
+						80 = {
+							add_manpower = -100
+						}
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+				producer = DKB
+			}
+		}
+	}
+	STE_sack_turkestan = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = TRK
+		}
+		complete_effect = {
+			TRK = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -200
+					producer = TRK
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = TRK
+			}
+		}
+	}
+	STE_sack_altay = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = ALT
+		}
+		complete_effect = {
+			ALT = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -200
+					producer = ALT
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 200
+				producer = ALT
+			}
+		}
+	}
+	STE_sack_khotan = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = ETS
+		}
+		complete_effect = {
+			ETS = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -800
+					producer = ETS
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = STE
+						}
+					}
+					random_list = {
+						40 = {
+							remove_building = {
+								type = infrastructure
+								level = 1
+							}
+						}
+						60 = {
+							add_manpower = -100
+						}
+					}
+					random_list = {
+						10 = {
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+						10 = {
+							remove_building = {
+								type = arms_factory
+								level = 1
+							}
+						}
+						80 = {
+							add_manpower = -100
+						}
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+				producer = ETS
+			}
+		}
+	}
+	STE_sack_siberia = {
+		icon = generic_prepare_civil_war
+		cost = 125
+		fire_only_once = no
+		days_remove = 60
+		available = {
+			is_neighbor_of = SIB
+		}
+		complete_effect = {
+			SIB = {
+				add_stability = -0.02
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -800
+					producer = SIB
+				}
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = SIB
+						}
+					}
+					random_list = {
+						40 = {
+							remove_building = {
+								type = infrastructure
+								level = 1
+							}
+						}
+						60 = {
+							add_manpower = -100
+						}
+					}
+					random_list = {
+						10 = {
+							remove_building = {
+								type = industrial_complex
+								level = 1
+							}
+						}
+						10 = {
+							remove_building = {
+								type = arms_factory
+								level = 1
+							}
+						}
+						80 = {
+							add_manpower = -100
+						}
+					}
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 800
+				producer = SIB
+			}
+		}
+	}
+}
+STE_kornilovs_ambitions = {
+	STE_kornilov_orenburg = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			add_state_core = 406
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 572
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_turkestan = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		remove_effect = {
+			add_state_core = 1043
+			add_state_core = 852
+			create_wargoal = {
+				target = TRK
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_altay = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_phase_2 = {
+		icon = generic_intelligence_operation
+		cost = 50
+		fire_only_once = yes
+		days_remove = 35
+		visible = {
+			OR = {
+				RUS = { has_government = reactionism }
+				SRU = { has_government = reactionism }
+				SRU = { has_completed_focus = RUS_novy_kurs }
+			}
+		}
+		remove_effect = {
+			add_political_power = 100
+			army_experience = 25
+			set_country_flag = STE_kornilovs_quest
+		}
+	}
+	STE_kornilov_russia = {
+		icon = generic_intelligence_operation
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = RUS
+						is_core_of = SRU
+					}
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = RUS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SRU
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_south_east = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = DKB
+				DKB = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = DKB
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_baltics = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = WRU
+				WRU = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = WRU
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_siberia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+			SIB = {
+				OR = {
+					has_government = despotism
+					has_government = accelerationism
+				}
+			}
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = SIB
+				SIB = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SIB
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = SIB
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_yakutia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+			KCK = {
+				has_government = despotism
+			}
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = KCK
+				KCK = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = KCK
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = KCK
+				type = annex_everything
+			}
+		}
+	}
+	STE_kornilov_proclaim_republic = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_kornilovs_quest
+		}
+		available = {
+			owns_state = 219
+			owns_state = 195
+			owns_state = 234
+			owns_state = 590
+			owns_state = 221
+			owns_state = 570
+			owns_state = 234
+			owns_state = 574
+			owns_state = 652
+			owns_state = 852
+		}
+		complete_effect = {
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				create_country_leader = {
+					name = "Lavr Kornilov"
+					desc = "POLITICS_KORNILOV_DESC"
+					picture = "Portrait_STE_Lavr_Kornilov.dds"
+					expire = "1965.1.1"
+					ideology = authoritarian_democratism
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Lavr Kornilov"
+					desc = "POLITICS_KORNILOV_DESC"
+					picture = "Portrait_STE_Lavr_Kornilov.dds"
+					expire = "1965.1.1"
+					ideology = social_conservatism
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Lavr Kornilov"
+					desc = "POLITICS_KORNILOV_DESC"
+					picture = "Portrait_STE_Lavr_Kornilov.dds"
+					expire = "1965.1.1"
+					ideology = liberal_socialism
+					traits = {
+					}
+				}
+				create_country_leader = {
+					name = "Lavr Kornilov"
+					desc = "POLITICS_KORNILOV_DESC"
+					picture = "Portrait_STE_Lavr_Kornilov.dds"
+					expire = "1965.1.1"
+					ideology = market_liberalism
+					traits = {
+					}
+				}
+				set_party_name = { 
+					ideology = right_authoritarianism
+					name = STE_republic_right_authoritarianism_party
+					long_name = STE_republic_right_authoritarianism_party_long 
+				}
+				set_party_name = { 
+					ideology = revolutionary_anarchism
+					name = STE_republic_revolutionary_anarchism_party
+					long_name = STE_republic_revolutionary_anarchism_party_long 
+				}
+				set_party_name = { 
+					ideology = vanguard_socialism
+					name = STE_republic_vanguard_socialism_party
+					long_name = STE_republic_vanguard_socialism_party_long 
+				}
+				set_party_name = { 
+					ideology = libertarian_marxism
+					name = STE_republic_libertarian_marxism_party
+					long_name = STE_republic_libertarian_marxism_party_long 
+				}
+				set_party_name = { 
+					ideology = revisionist_socialism
+					name = STE_republic_revisionist_socialism_party
+					long_name = STE_republic_revisionist_socialism_party_long 
+				}
+				set_party_name = { 
+					ideology = social_democratism
+					name = STE_republic_social_democratism_party
+					long_name = STE_republic_social_democratism_party_long 
+				}
+				set_party_name = { 
+					ideology = liberalism
+					name = STE_republic_liberalism_party
+					long_name = STE_republic_liberalism_party_long 
+				}
+				set_party_name = { 
+					ideology = conservatism
+					name = STE_republic_conservatism_party
+					long_name = STE_republic_conservatism_party_long 
+				}
+				set_party_name = { 
+					ideology = reactionism
+					name = STE_republic_reactionism_party
+					long_name = STE_republic_reactionism_party_long 
+				}
+				set_party_name = { 
+					ideology = accelerationism
+					name = STE_republic_accelerationism_party
+					long_name = STE_republic_accelerationism_party_long 
+				}
+				set_politics = {
+					ruling_party = right_authoritarianism
+					elections_allowed = yes
+				}
+				set_popularities = {
+					right_authoritarianism = 30
+					despotism = 5
+					conservatism = 15
+					liberalism = 20
+					social_democratism = 20
+					revisionist_socialism = 5
+					reactionism = 5
+				}
+			}
+			set_capital = 219
+			set_cosmetic_tag = "STE_RUSSIAN_REPUBLIC"
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.69
+					days = 1
+				}
+			}
+		}
+	}
+	STE_kornilov_join_romanovsky = {
+		icon = generic_nationalism
+		cost = 20
+		fire_only_once = yes
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			is_neighbor_of = RUS
+		}
+		visible = {
+			RUS = {
+				has_country_flag = RUS_kolchakdead
+				has_completed_focus = RUS_liberalization_lead_prosperity
+			}
+		}
+		complete_effect = {
+			RUS = {
+				change_tag_from = STE
+			}
+			RUS = {
+				country_event = {
+					id = steppe.69
+					days = 1
+				}
+			}
+		}
+	}
+}
+STE_gulidovs_ambitions = {
+	STE_gulidov_orenburg = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 406
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 572
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_turkestan = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 1043
+			add_state_core = 852
+			create_wargoal = {
+				target = TRK
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_altay = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 838
+			add_state_core = 654
+			add_state_core = 898
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_phase_2 = {
+		icon = generic_intelligence_operation
+		cost = 50
+		fire_only_once = yes
+		days_remove = 35
+		visible = {
+			RUS = { has_government = reactionism }
+		}
+		remove_effect = {
+			add_political_power = 100
+			army_experience = 25
+			set_country_flag = STE_gulidovs_quest
+		}
+	}
+	STE_gulidov_russia = {
+		icon = generic_intelligence_operation
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = RUS
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = RUS
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_south_east = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = DKB
+				DKB = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = DKB
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_baltics = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = WRU
+				WRU = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = WRU
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = WRU
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_siberia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = SIB
+				SIB = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = SIB
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = SIB
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_yakutia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = KCK
+				KCK = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = KCK
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = KCK
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_zhelto = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			OR = {
+				is_neighbor_of = ZHR
+				ZHR = { exists = no }
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ZHR
+				}
+				add_core_of = STE
+			}
+			create_wargoal = {
+				target = ZHR
+				type = annex_everything
+			}
+		}
+	}
+	STE_gulidov_proclaim_empire = {
+		icon = generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		visible = {
+			has_country_flag = STE_gulidovs_quest
+		}
+		available = {
+			owns_state = 219
+			owns_state = 195
+			owns_state = 234
+			owns_state = 590
+			owns_state = 221
+			owns_state = 570
+			owns_state = 234
+			owns_state = 574
+			owns_state = 652
+			owns_state = 852
+		}
+		complete_effect = {
+			hidden_effect = {
+				drop_cosmetic_tag = yes
+				set_party_name = { 
+					ideology = revolutionary_anarchism
+					name = DKB_revolutionary_anarchism_party
+					long_name = DKB_revolutionary_anarchism_party 
+				}
+				set_party_name = { 
+					ideology = vanguard_socialism
+					name = DKB_vanguard_socialism_party
+					long_name = DKB_vanguard_socialism_party 
+				}
+				set_party_name = { 
+					ideology = libertarian_marxism
+					name = DKB_libertarian_marxism_party
+					long_name = DKB_libertarian_marxism_party 
+				}
+				set_party_name = { 
+					ideology = revisionist_socialism
+					name = RUS_revisionist_socialism_party
+					long_name = RUS_revisionist_socialism_party_long 
+				}
+				set_party_name = { 
+					ideology = social_democratism
+					name = STE_republic_social_democratism_party
+					long_name = STE_republic_social_democratism_party_long 
+				}
+				set_party_name = { 
+					ideology = liberalism
+					name = STE_republic_liberalism_party
+					long_name = STE_republic_liberalism_party_long 
+				}
+				set_party_name = { 
+					ideology = conservatism
+					name = STE_republic_conservatism_party
+					long_name = STE_republic_conservatism_party_long 
+				}
+				set_party_name = { 
+					ideology = reactionism
+					name = STE_republic_reactionism_party
+					long_name = STE_republic_reactionism_party_long 
+				}
+				set_party_name = { 
+					ideology = accelerationism
+					name = STE_republic_accelerationism_party
+					long_name = STE_republic_accelerationism_party_long 
+				}
+			}
+			country_event = {
+				id = steppe.14
+			}
+			set_capital = 219
+			set_cosmetic_tag = "STE_RUSSIAN_EMPIRE"
+		}
+	}
+	STE_gulidov_join_drozdovsky = {
+		icon = generic_nationalism
+		cost = 20
+		fire_only_once = yes
+		available = {
+			ORE = { exists = no }
+			TRK = { exists = no }
+			ALT = { exists = no }
+			is_neighbor_of = SRU
+		}
+		visible = {
+			SRU = {
+				has_completed_focus = RUS_novy_kurs
+			}
+		}
+		complete_effect = {
+			SRU = {
+				change_tag_from = STE
+			}
+			SRU = {
+				country_event = {
+					id = steppe.69
+					days = 1
+				}
+			}
+		}
+	}
+}

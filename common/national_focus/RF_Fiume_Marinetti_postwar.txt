@@ -1,0 +1,524 @@
+focus_tree = {
+	id = FIU_marinetti_postwar
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	shared_focus = FIU_The_Engine_of_Man
+	#Marinetti post-war tree help me please
+
+	focus = {
+		id = FIU_Accelerating_Through_the_Finish_Line
+		icon = GFX_focus_FIU_Accelerating_Through_the_Finish_Line
+		#prerequisite = { focus = FIU_Set }
+							
+		x = 8
+		y = 14
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ITA = {
+				OR = {
+					exists = no
+					is_puppet_of = FRA
+					is_puppet_of = FIU
+					has_capitulated = yes
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		select_effect = {
+			country_event = {
+				id = fiume.90
+				days = 1
+			}
+		}
+
+		completion_reward = {
+			remove_ideas = {
+				FIU_prepare_for_departure
+				FIU_rejuvenation
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Integrating_the_Conquest
+		icon = GFX_focus_FIU_Integrating_the_Conquest
+		prerequisite = { focus = FIU_Accelerating_Through_the_Finish_Line }
+				
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = FIU
+			}
+			random_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_controlled_state = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			add_stability = -0.15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Backward_to_Forward
+		icon = GFX_focus_FIU_Backward_to_Forward
+		prerequisite = { focus = FIU_Integrating_the_Conquest }
+				
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = -1
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			set_capital = 2
+			set_cosmetic_tag = FIU_italian_combine
+			every_controlled_state = {
+				remove_building = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			add_stability = -0.15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Men_Are_Men
+		icon = GFX_focus_FIU_Men_Are_Men
+		prerequisite = { focus = FIU_Integrating_the_Conquest }
+				
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 1
+		y = 2
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_bolting_through
+				add_idea = FIU_men_of_iron
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Enough_of_this_Dawdling
+		icon = GFX_focus_FIU_Enough_of_this_Dawdling
+		prerequisite = { focus = FIU_Men_Are_Men }
+		prerequisite = { focus =  FIU_Backward_to_Forward }
+				
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_assemble
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_The_Lifeblood_of_the_New_World
+		icon = GFX_focus_FIU_The_Lifeblood_of_the_New_World
+		prerequisite = { focus = FIU_Enough_of_this_Dawdling }
+						
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_black_ichor
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Another_Breather
+		icon = GFX_focus_FIU_Another_Breather
+		prerequisite = { focus = FIU_The_Lifeblood_of_the_New_World }
+						
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = FIU_final_repairs
+				days = 200
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Throw_Them_a_Bone
+		icon = GFX_focus_FIU_Throw_Them_a_Bone
+		prerequisite = { focus = FIU_Another_Breather }
+						
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = -1
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROM
+			}
+			GER = {
+				add_opinion_modifier = { target = AUS modifier = large_decrease }
+			}
+			AUS = {
+				add_opinion_modifier = { target = GER modifier = large_decrease }
+			}
+			RUS = {
+				add_opinion_modifier = { target = AUS modifier = large_decrease }
+			}
+			AUS = {
+				add_opinion_modifier = { target = RUS modifier = large_decrease }
+			}
+			ENG = {
+				add_opinion_modifier = { target = GER modifier = large_decrease }
+			}
+			GER= {
+				add_opinion_modifier = { target = ENG modifier = large_decrease }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Drill_Deeper
+		icon = GFX_focus_FIU_Drill_Deeper
+		prerequisite = { focus = FIU_Another_Breather }
+						
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 1
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CCD
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ARM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SYR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AZR
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_A_Turn_Southwards
+		icon = GFX_focus_FIU_A_Turn_Southwards
+		prerequisite = { focus = FIU_Drill_Deeper }
+		prerequisite = { focus = FIU_Throw_Them_a_Bone }
+						
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 7
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ASY
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = IRQ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SAU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PER
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = JOR
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_A_Sudden_Press_Conference
+		icon = GFX_focus_FIU_A_Sudden_Press_Conference
+		prerequisite = { focus = FIU_A_Turn_Southwards }
+							
+		
+		
+						
+		relative_position_id = FIU_Accelerating_Through_the_Finish_Line				
+		x = 0
+		y = 8
+
+		cost = 20
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			PER = {
+				exists = no
+			}
+			TUR = {
+				exists = no
+			}
+			ARM = {
+				exists = no
+			}
+			SYR = {
+				exists = no
+			}
+			IRQ = {
+				exists = no
+			}
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			country_event = {
+				id = fiume.51
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

@@ -1,0 +1,19 @@
+add_namespace = por
+
+country_event = { #The cat
+	id = por.1
+	title = por.1.t
+	desc = por.1.desc
+	picture = GFX_report_event_thecat
+	fire_only_once = yes
+	trigger = {
+		date > 1936.1.2
+		tag = POR
+	}
+
+	option = { #mayor of gato!
+		name = por.1.a
+		add_political_power = 5
+		add_stability = 0.05
+	}
+}

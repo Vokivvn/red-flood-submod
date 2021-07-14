@@ -1,0 +1,554 @@
+focus_tree = {
+	id = WRT_socialist
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = WRT
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1400 }
+	focus = {
+		id = WRT_baltic_sfsr
+		icon = GFX_goal_WRT_baltic_sfsr
+		x = 6
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_popularities = {
+					vanguard_socialism = 40
+					libertarian_marxism = 20
+					revisionist_socialism = 20
+					social_democratism = 10
+					liberalism = 5
+					accelerationism = 5
+				}
+				set_politics = {
+					ruling_party = vanguard_socialism
+					elections_allowed = no
+				}
+			}
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = WRT_international_nationalism
+		icon = GFX_goal_WRT_international_nationalism
+		prerequisite = { focus = WRT_baltic_sfsr }
+		relative_position_id = WRT_baltic_sfsr
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "WRT_CONSTITUENT_REPUBLICS_TOOLTIP"
+		}
+	}
+
+	focus = {
+		id = WRT_five_year_plan
+		icon = GFX_goal_WRT_five_year_plan
+		prerequisite = { focus = WRT_international_nationalism }
+		relative_position_id = WRT_international_nationalism
+		x = -3
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRT_5_year_plan_idea
+		}
+	}
+	focus = {
+		id = WRT_foundation_of_ubeg
+		icon = GFX_goal_WRT_foundation_of_ubeg
+		prerequisite = { focus = WRT_five_year_plan }
+		relative_position_id = WRT_five_year_plan
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = WRT_ubeg
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = computing_tech
+				category = radar_tech
+				category = decryption_tech
+				category = encryption_tech
+			}
+		}
+	}
+	focus = {
+		id = WRT_militarization_of_economy
+		icon = GFX_goal_WRT_militarization_of_economy
+		prerequisite = { focus = WRT_foundation_of_ubeg }
+		relative_position_id = WRT_foundation_of_ubeg
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRT_build_power_plant_on_daugava
+		icon = GFX_goal_WRT_build_power_plant_on_daugava
+		prerequisite = { focus = WRT_five_year_plan }
+		relative_position_id = WRT_five_year_plan
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			210 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRT_wealth_redistribution
+		icon = GFX_goal_WRT_wealth_redistribution
+		prerequisite = { focus = WRT_build_power_plant_on_daugava }
+		relative_position_id = WRT_build_power_plant_on_daugava
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRT_5_year_plan_idea
+				add_idea = WRT_5_year_plan_idea1
+			}
+		}
+	}
+	focus = {
+		id = WRT_continue_five_year_plan
+		icon = GFX_goal_WRT_continue_five_year_plan
+		prerequisite = {
+			focus = WRT_militarization_of_economy
+		}
+		prerequisite = {
+			focus = WRT_wealth_redistribution
+		}
+		relative_position_id = WRT_militarization_of_economy
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = WRT_5_year_plan_idea1
+				add_idea = WRT_5_year_plan_idea2
+			}
+		}
+	}
+	focus = {
+		id = WRT_workers_paradise
+		icon = GFX_goal_WRT_workers_paradise
+		prerequisite = {
+			focus = WRT_continue_five_year_plan
+		}
+		relative_position_id = WRT_continue_five_year_plan
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = WRT_5_year_plan_idea2
+				add_idea = WRT_5_year_plan_idea3
+			}
+		}
+	}
+
+	focus = {
+		id = WRT_baltic_red_army
+		icon = GFX_goal_WRT_baltic_red_army
+		prerequisite = { focus = WRT_international_nationalism }
+		relative_position_id = WRT_international_nationalism
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = WRT_baltic_german_doctrine_cooperation
+		icon = GFX_goal_WRT_baltic_german_doctrine_cooperation
+		prerequisite = { focus = WRT_baltic_red_army }
+		relative_position_id = WRT_baltic_red_army
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRT_german_military_mission
+			GER = { add_opinion_modifier = { target = WRT modifier = large_increase } }
+			add_opinion_modifier = { target = GER modifier = large_increase }
+		}
+	}
+	focus = {
+		id = WRT_equipment_modernization
+		icon = GFX_goal_WRT_equipment_modernization
+		prerequisite = { focus = WRT_baltic_german_doctrine_cooperation }
+		relative_position_id = WRT_baltic_german_doctrine_cooperation
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRT_german_military_mission
+				add_idea = WRT_german_military_mission1
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+				category = armor
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	focus = {
+		id = WRT_patriotic_lessons
+		icon = GFX_goal_WRT_patriotic_lessons
+		prerequisite = { focus = WRT_equipment_modernization }
+		relative_position_id = WRT_equipment_modernization
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRT_german_military_mission1
+				add_idea = WRT_socialist_education
+			}
+		}
+	}
+	focus = {
+		id = WRT_patriotic_warfare
+		icon = GFX_goal_WRT_patriotic_warfare
+		prerequisite = { focus = WRT_patriotic_lessons }
+		relative_position_id = WRT_patriotic_lessons
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			swap_ideas = {
+				remove_idea = WRT_socialist_education
+				add_idea = WRT_all_powerful_red_army
+			}
+		}
+	}
+
+	focus = {
+		id = WRT_our_plane_in_the_world
+		icon = GFX_goal_WRT_our_plane_in_the_world
+		prerequisite = { focus = WRT_international_nationalism }
+		relative_position_id = WRT_international_nationalism
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = libertarian_marxism
+				}
+				add_opinion_modifier = { target = WRT modifier = medium_increase }
+			}
+		}
+	}
+	focus = {
+		id = WRT_delegation_to_third_international
+		icon = GFX_goal_WRT_delegation_to_third_international
+		prerequisite = { focus = WRT_our_plane_in_the_world }
+		relative_position_id = WRT_our_plane_in_the_world
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			GER = {
+				country_event = {
+					id = wru.38
+					days = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRT_shelter_political_refugees
+		icon = GFX_goal_WRT_shelter_political_refugees
+		prerequisite = { focus = WRT_delegation_to_third_international }
+		relative_position_id = WRT_delegation_to_third_international
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			add_manpower = 8521
+		}
+	}
+	focus = {
+		id = WRT_message_to_lithuania
+		icon = GFX_goal_WRT_message_to_lithuania
+		prerequisite = { focus = WRT_shelter_political_refugees }
+		relative_position_id = WRT_shelter_political_refugees
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				add_claim_by = WRT
+			}
+			LIT = {
+				country_event = {
+					id = wru.39
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRT_freeing_baltic_workers
+		icon = GFX_goal_WRT_freeing_baltic_workers
+		prerequisite = { focus = WRT_message_to_lithuania }
+		relative_position_id = WRT_message_to_lithuania
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			LIT = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				add_core_of = WRT
+			}
+			191 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes
+					province = 4640
+				}
+			}
+			209 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11202
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6324
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11392
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9254
+				}
+			}
+			858 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 207
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11234
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 354
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 6293
+				}
+			}
+			857 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 11241
+				}
+			}
+		}
+	}
+}

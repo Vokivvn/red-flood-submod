@@ -1,0 +1,1880 @@
+#####################
+#	Korea - Baba	#
+#####################
+
+add_namespace = kor
+
+country_event = { #
+	id = kor.1
+	title = kor.1.t
+	desc = kor.1.d
+	picture = report_event_japanese_soldiers_03
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.1.a
+		ai_chance = { factor = 1 }
+		add_political_power = -25
+		add_stability = 0.03
+		add_manpower = -11540
+	}
+}
+
+country_event = { #setting the scene - making the best of the worst
+	id = kor.2
+	title = kor.2.t
+	desc = kor.2.d
+	picture = TAI_the_chaos
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.2.a
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = { #egalitarian experiment
+	id = kor.3
+	title = kor.3.t
+	desc = kor.3.d
+	picture = GFX_report_event_wahmen
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.3.a
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.06
+		}
+		add_political_power = 25
+	}
+	option = {
+		name = kor.3.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.06
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.06
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = kor.3.c
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.06
+		}
+		add_political_power = -100
+	}
+}
+country_event = { #cultural preservation
+	id = kor.4
+	title = kor.4.t
+	desc = kor.4.d
+	picture = GFX_report_event_yi_wu
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.4.a
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.06
+		}
+	}
+	option = {
+		name = kor.4.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.06
+		}
+	}
+}
+
+country_event = { #industrial quotas
+	id = kor.5
+	title = kor.5.t
+	desc = kor.5.d
+	picture = GFX_report_event_textiles
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.5.a
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.08
+		}
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.08
+		}
+		add_political_power = 50
+	}
+	option = {
+		name = kor.5.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.04
+		}
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.04
+		}
+		add_political_power = 25
+	}
+	option = {
+		name = kor.5.c
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.08
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = { #land ownership
+	id = kor.6
+	title = kor.6.t
+	desc = kor.6.d
+	picture = GFX_report_event_land_reform
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#restrict koreans
+		name = kor.6.a
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.15
+		}
+	}
+	option = {	#expand korean ownership
+		name = kor.6.b
+		ai_chance = { factor = 1 }
+		add_political_power = -50
+		add_stability = 0.1
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #migration policy
+	id = kor.7
+	title = kor.7.t
+	desc = kor.7.d
+	picture = GFX_report_event_jap_korea_migration
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#boost migration
+		name = kor.7.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.07
+		986 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		829 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		828 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	option = {	#reduce migration
+		name = kor.7.b
+		ai_chance = { factor = 1 }
+		add_political_power = 75
+		add_stability = 0.05
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.15
+		}
+	}
+	option = {	#maintain migration
+		name = kor.7.c
+		ai_chance = { factor = 1 }
+		add_political_power = 25
+		add_stability = 0.01
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { #Koreans rise up 1
+	id = kor.100
+	title = kor.100.t
+	desc = kor.100.d
+	picture = JAP_soldiers_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = kor.100.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = kor.101
+			days = 7
+		}
+	}
+}
+country_event = { #Koreans rise up 2
+	id = kor.101
+	title = kor.101.t
+	desc = kor.101.d
+	picture = GFX_report_event_gunner_china
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#KOR
+		name = kor.101.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			#IKR
+			986 = {
+				add_core_of = IKR
+			}
+			828 = {
+				add_core_of = IKR
+			}
+			830 = {
+				add_core_of = IKR
+			}
+			IKR = {
+				transfer_state = 525
+				transfer_state = 828
+				transfer_state = 989
+				transfer_state = 988
+				transfer_state = 985
+				transfer_state = 830
+				transfer_state = 527
+				transfer_state = 984
+				hidden_effect = {
+					inherit_technology = KOR
+					load_oob = "IKR_civil_war"
+					829 = {
+						add_claim_by = IKR
+					}
+					987 = {
+						add_claim_by = IKR
+					}
+					986 = {
+						add_claim_by = IKR
+					}
+				}
+				declare_war_on = {
+					target = KOR
+					type = annex_everything
+				}
+			}
+			#JKR
+			986 = {
+				add_core_of = JKR
+			}
+			JKR = {
+				transfer_state = 986
+				inherit_technology = KOR
+				load_oob = "JKR_civil_war"
+				every_state = {
+					limit = {
+						is_core_of = KOR
+					}
+					add_core_of = JKR
+				}
+				declare_war_on = {
+					target = IKR
+					type = annex_everything
+				}
+			}
+			#KOR
+			KOR = {
+				load_focus_tree = KOR_republic
+				drop_cosmetic_tag = yes
+			}
+			KOR = {
+				remove_unit_leader = 1901
+				remove_unit_leader = 1902
+				remove_unit_leader = 1903
+				remove_unit_leader = 1904
+				remove_unit_leader = 1905
+				remove_ideas = {
+					KOR_jap_colony
+					KOR_republicanism
+					KOR_nationalists_divided
+					KOR_land_lords
+				}
+				delete_unit_template_and_units = {
+					division_template = "Infantry Division"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Cavalry Division"
+				}
+				load_oob = "KOR_civil_war"
+				set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.25
+				}
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = 0.15
+				}
+				create_field_marshal = {
+					name = "Hong Beom-do"
+					picture = "Portrait_Hong_Beom_do.dds"
+					traits = { career_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Lee Beom-seok"
+					picture = "Lee_Beom_seok_g.dds"
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Ji Cheong-cheon"
+					picture = "Portrait_Ji_Cheong_cheon.dds"
+					traits = { cavalry_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_navy_leader = {
+					name = "Sohn Won-yil"
+						picture = "Portrait_Sohn_Won_yil.dds"
+					traits = { navy_career_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					maneuvering_skill = 3
+					coordination_skill = 2
+				}
+			}
+			IKR = {
+				create_field_marshal = {
+					name = "Ugaki Kazushige"
+					picture = "Portrait_Ugaki_Kazushige_general.dds"
+					traits = { career_officer JAP_samurai_lineage }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Minami Jirō"
+					picture = "Portrait_Minami_Jiro.dds"
+					traits = { trickster career_officer infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Koiso Kuniaki"
+					picture = "Portrait_Kuniaki_Koiso.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Yamanashi Hanzō"
+					picture = "Portrait_Yamanashi_Hanzo_g.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_navy_leader = {
+					name = "Teijiro Toyada"
+						picture = "Portrait_Teijiro_Toyoda.dds"
+					traits = { battleship_adherent naval_lineage }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					maneuvering_skill = 2
+					coordination_skill = 2
+				}
+			}
+		}
+	}
+	option = {	#IKR
+		name = kor.101.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			#IKR
+			986 = {
+				add_core_of = IKR
+			}
+			828 = {
+				add_core_of = IKR
+			}
+			830 = {
+				add_core_of = IKR
+			}
+			IKR = {
+				transfer_state = 525
+				transfer_state = 828
+				transfer_state = 989
+				transfer_state = 988
+				transfer_state = 985
+				transfer_state = 830
+				transfer_state = 527
+				transfer_state = 984
+				hidden_effect = {
+					inherit_technology = KOR
+					load_oob = "IKR_civil_war"
+					829 = {
+						add_claim_by = IKR
+					}
+					987 = {
+						add_claim_by = IKR
+					}
+					986 = {
+						add_claim_by = IKR
+					}
+				}
+				declare_war_on = {
+					target = KOR
+					type = annex_everything
+				}
+			}
+			#JKR
+			986 = {
+				add_core_of = JKR
+			}
+			JKR = {
+				transfer_state = 986
+				inherit_technology = KOR
+				load_oob = "JKR_civil_war"
+				every_state = {
+					limit = {
+						is_core_of = KOR
+					}
+					add_core_of = JKR
+				}
+				declare_war_on = {
+					target = IKR
+					type = annex_everything
+				}
+			}
+			#KOR
+			KOR = {
+				load_focus_tree = KOR_republic
+				drop_cosmetic_tag = yes
+			}
+			KOR = {
+				remove_unit_leader = 1901
+				remove_unit_leader = 1902
+				remove_unit_leader = 1903
+				remove_unit_leader = 1904
+				remove_unit_leader = 1905
+				remove_ideas = {
+					KOR_jap_colony
+					KOR_republicanism
+					KOR_nationalists_divided
+					KOR_land_lords
+				}
+				delete_unit_template_and_units = {
+					  division_template = "Infantry Division"
+				}
+				delete_unit_template_and_units = {
+					  division_template = "Cavalry Division"
+				}
+				load_oob = "KOR_civil_war"
+				set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.25
+				}
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = 0.15
+				}
+				create_field_marshal = {
+					name = "Hong Beom-do"
+					picture = "Portrait_Hong_Beom_do.dds"
+					traits = { career_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Lee Beom-seok"
+					picture = "Lee_Beom_seok_g.dds"
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Ji Cheong-cheon"
+					picture = "Portrait_Ji_Cheong_cheon.dds"
+					traits = { cavalry_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 2
+				}
+			}
+			IKR = {
+				create_field_marshal = {
+					name = "Ugaki Kazushige"
+					picture = "Portrait_Ugaki_Kazushige_general.dds"
+					traits = { career_officer JAP_samurai_lineage }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Minami Jirō"
+					picture = "Portrait_Minami_Jiro.dds"
+					traits = { trickster career_officer infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Koiso Kuniaki"
+					picture = "Portrait_Kuniaki_Koiso.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+
+					name = "Yamanashi Hanzō"
+					picture = "Portrait_Yamanashi_Hanzo_g.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_navy_leader = {
+					name = "Teijiro Toyada"
+						picture = "Portrait_Teijiro_Toyoda.dds"
+					traits = { battleship_adherent naval_lineage }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					maneuvering_skill = 2
+					coordination_skill = 2
+				}
+			}
+		}
+		IKR = {
+			change_tag_from = KOR
+		}
+	}
+	option = {	#JKR
+		name = kor.101.c
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			#IKR
+			986 = {
+				add_core_of = IKR
+			}
+			828 = {
+				add_core_of = IKR
+			}
+			830 = {
+				add_core_of = IKR
+			}
+			IKR = {
+				transfer_state = 525
+				transfer_state = 828
+				transfer_state = 989
+				transfer_state = 988
+				transfer_state = 985
+				transfer_state = 830
+				transfer_state = 527
+				transfer_state = 984
+				inherit_technology = KOR
+				load_oob = "IKR_civil_war"
+				829 = {
+					add_claim_by = IKR
+				}
+				987 = {
+					add_claim_by = IKR
+				}
+				986 = {
+					add_claim_by = IKR
+				}
+				declare_war_on = {
+					target = KOR
+					type = annex_everything
+				}
+			}
+			#JKR
+			986 = {
+				add_core_of = JKR
+			}
+			JKR = {
+				transfer_state = 986
+				hidden_effect = {
+					inherit_technology = KOR
+					load_oob = "JKR_civil_war"
+					every_state = {
+						limit = {
+							is_core_of = KOR
+						}
+						add_core_of = JKR
+					}
+				}
+				declare_war_on = {
+					target = IKR
+					type = annex_everything
+				}
+			}
+			#KOR
+			KOR = {
+				load_focus_tree = KOR_republic
+				drop_cosmetic_tag = yes
+			}
+			KOR = {
+				remove_unit_leader = 1901
+				remove_unit_leader = 1902
+				remove_unit_leader = 1903
+				remove_unit_leader = 1904
+				remove_unit_leader = 1905
+				remove_ideas = {
+					KOR_jap_colony
+					KOR_republicanism
+					KOR_nationalists_divided
+					KOR_land_lords
+				}
+				delete_unit_template_and_units = {
+					  division_template = "Infantry Division"
+				}
+				delete_unit_template_and_units = {
+					  division_template = "Cavalry Division"
+				}
+				load_oob = "KOR_civil_war"
+				set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+				}
+				add_popularity = {
+					ideology = despotism
+					popularity = -0.25
+				}
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.25
+				}
+				add_popularity = {
+					ideology = liberalism
+					popularity = 0.15
+				}
+				create_field_marshal = {
+					name = "Hong Beom-do"
+					picture = "Portrait_Hong_Beom_do.dds"
+					traits = { career_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 1
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Lee Beom-seok"
+					picture = "Lee_Beom_seok_g.dds"
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Ji Cheong-cheon"
+					picture = "Portrait_Ji_Cheong_cheon.dds"
+					traits = { cavalry_officer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 2
+				}
+			}
+			IKR = {
+				create_field_marshal = {
+					name = "Ugaki Kazushige"
+					picture = "Portrait_Ugaki_Kazushige_general.dds"
+					traits = { career_officer JAP_samurai_lineage }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Minami Jirō"
+					picture = "Portrait_Minami_Jiro.dds"
+					traits = { trickster career_officer infantry_officer }
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Koiso Kuniaki"
+					picture = "Portrait_Kuniaki_Koiso.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Yamanashi Hanzō"
+					picture = "Portrait_Yamanashi_Hanzo_g.dds"
+					traits = { JAP_samurai_lineage old_guard politically_connected }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 1
+				}
+				create_navy_leader = {
+					name = "Teijiro Toyada"
+						picture = "Portrait_Teijiro_Toyoda.dds"
+					traits = { battleship_adherent naval_lineage }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					maneuvering_skill = 2
+					coordination_skill = 2
+				}
+			}
+		}
+		JKR = {
+			change_tag_from = KOR
+		}
+	}
+}
+country_event = {	#anarchist militias come in from manchuria
+	id = kor.8
+	title = kor.8.t
+	desc = kor.8.d
+	picture = GFX_report_event_korean_anarchists
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.8.a
+		ai_chance = { factor = 1 }
+		division_template = {
+			name = "Andong Revolutionaries"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+			}
+		}
+		random_owned_controlled_state = {
+			prioritize = { 830 }
+			create_unit = {
+				division = "name = \"Andong Infantry\" division_template = \"Andong Revolutionaries\" start_experience_factor = 0.75"
+				owner = JKR
+			}
+			create_unit = {
+				division = "name = \"Andong Infantry\" division_template = \"Andong Revolutionaries\" start_experience_factor = 0.75"
+				owner = JKR
+			}
+		}
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.12
+		}
+		create_corps_commander = {
+			name = "Sin Chaeho"
+			picture = "Portrait_Sin_Chaeho_general.dds"
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}
+country_event = {	#subvert the russians
+	id = kor.9
+	title = kor.9.t
+	desc = kor.9.d
+	picture = GFX_report_event_chinese_banditos
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.9.a
+		ai_chance = { factor = 1 }
+		PRI = {
+			add_timed_idea = {
+				idea = JKR_korean_propaganda
+				days = 180
+			}
+		}
+		ZHR = {
+			add_timed_idea = {
+				idea = JKR_korean_propaganda
+				days = 150
+			}
+		}
+		KCK = {
+			add_timed_idea = {
+				idea = JKR_korean_propaganda
+				days = 120
+			}
+		}
+		SIB = {
+			add_timed_idea = {
+				idea = JKR_korean_propaganda
+				days = 90
+			}
+		}
+	}
+}
+
+country_event = {	#unite the republic - vanguard vs republic propaganda
+	id = kor.10
+	title = kor.10.t
+	desc = kor.10.d
+	picture = GFX_spy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.10.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#request ships
+	id = kor.11
+	title = kor.11.t
+	desc = kor.11.d
+	picture = GFX_navy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.11.a
+		ai_chance = { factor = 1 }
+		JPR = {
+			country_event = {
+				id = kor.111
+			}
+		}
+	}
+}
+country_event = {	#request ships
+	id = kor.111
+	title = kor.111.t
+	desc = kor.111.d
+	picture = GFX_navy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.111.a
+		ai_chance = { factor = 50 }
+		JPR = {
+			transfer_ship = {
+				type = destroyer
+				target = JKR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JKR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JKR
+			}
+			transfer_ship = {
+				type = destroyer
+				target = JKR
+			}
+		}
+	}
+	option = {	#
+		name = kor.111.b
+		ai_chance = { factor = 50 }
+		JKR = {
+			navy_experience = 25
+		}
+	}
+}
+country_event = {	#request guns
+	id = kor.12
+	title = kor.12.t
+	desc = kor.12.d
+	picture = GFX_arms_to_go
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.12.a
+		ai_chance = { factor = 1 }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 550
+			producer = ZHR
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 25
+			producer = ZHR
+		}
+	}
+}
+
+country_event = {	#request advisors
+	id = kor.13
+	title = kor.13.t
+	desc = kor.13.d
+	picture = GFX_militia_training
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.13.a
+		ai_chance = { factor = 1 }
+		army_experience = 35
+		add_command_power = 45
+		add_political_power = 50
+	}
+}
+
+country_event = {	#seek backing from Russians
+	id = kor.14
+	title = kor.14.t
+	desc = kor.14.d
+	picture = GFX_militia_training
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.14.a
+		ai_chance = { factor = 1 }
+		add_manpower = 14501
+		army_experience = 15
+		add_political_power = 15
+	}
+}
+
+country_event = {	#cooperate with the left-KMT
+	id = kor.15
+	title = kor.15.t
+	desc = kor.15.d
+	picture = GFX_CHI_troops_gen
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.15.a
+		ai_chance = { factor = 1 }
+		JKR = {
+			diplomatic_relation = {
+				country = XIA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		JKR = {
+			diplomatic_relation = {
+				country = FJN
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 125
+			producer = FJN
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 125
+			producer = XIA
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = XIA
+				modifier = offered_support
+			}
+			XIA = {
+				add_opinion_modifier = {
+					target = JKR
+					modifier = offered_support
+				}
+			}
+			add_opinion_modifier = {
+				target = FJN
+				modifier = offered_support
+			}
+			FJN = {
+				add_opinion_modifier = {
+					target = JKR
+					modifier = offered_support
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#exiles arrive
+	id = kor.16
+	title = kor.16.t
+	desc = kor.16.d
+	picture = GFX_exiles_IKR
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = kor.16.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#revive the minjok
+	id = kor.17
+	title = kor.17.t
+	desc = kor.17.d
+	picture = GFX_address_the_troops
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.17.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			country_event = {
+				id = kor.171
+				days = 60
+			}
+		}
+		add_war_support = 0.03
+		add_stability = 0.03
+		add_political_power = 25
+	}
+}
+country_event = {	#revive the minjok - Hwarang
+	id = kor.171
+	title = kor.171.t
+	desc = kor.171.d
+	picture = GFX_JAP_cav
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.171.a
+		ai_chance = { factor = 1 }
+		add_manpower = 15253
+		army_experience = 15
+		division_template = {
+			name = "Disciples of Juche"
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+				cavalry = { x = 2 y = 0 }
+				cavalry = { x = 2 y = 1 }
+				cavalry = { x = 2 y = 2 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+				artillery = { x = 0 y = 1 }
+			} 
+		}
+		random_owned_controlled_state = {
+			prioritize = { 830 }
+			create_unit = {
+				division = "name = \"Hyangdo\" division_template = \"Disciples of Juche\" start_experience_factor = 0.85"
+				owner = JKR
+			}
+			create_unit = {
+				division = "name = \"Wonhwa\" division_template = \"Disciples of Juche\" start_experience_factor = 0.85"
+				owner = JKR
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = kor.172
+				days = 60
+			}
+		}
+	}
+}
+country_event = {	#revive the minjok - neo-buddhism
+	id = kor.172
+	title = kor.172.t
+	desc = kor.172.d
+	picture = GFX_fireworks
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.172.a
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+			if = {
+				limit = {
+					FIN = {
+						has_government = reactionism
+					}
+				}
+				country_event = {
+					id = kor.173
+					days = 60
+				}
+			}
+			#if = {
+			#	limit = {
+			#		FIN = {
+			#			has_government = accelerationism
+			#		}
+			#	}
+			#	country_event = {
+			#		id = kor.174
+			#		days = 60
+			#	}
+			#}
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.05
+		}
+		add_ideas = {
+			JKR_taegeuk
+		}
+	}
+}
+country_event = {	#revive the minjok - finno-korean summit
+	id = kor.173
+	title = kor.173.t
+	desc = kor.173.d
+	picture = GFX_report_event_finno_korea
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.173.a
+		ai_chance = { factor = 1 }
+		add_opinion_modifier = {
+			target = FIN
+			modifier = offered_support
+		}
+		FIN = {
+			add_opinion_modifier = {
+				target = JKR
+				modifier = offered_support
+			}
+		}
+	}
+}
+country_event = {	#revive the minjok - finno-korean summit accel
+	id = kor.174
+	title = kor.174.t
+	desc = kor.174.d
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.174.a
+		ai_chance = { factor = 1 }
+		add_opinion_modifier = {
+			target = FIN
+			modifier = offered_support
+		}
+		FIN = {
+			add_opinion_modifier = {
+				target = JKR
+				modifier = offered_support
+			}
+		}
+	}
+}
+country_event = {	#Finno-Korean war
+	id = kor.175
+	title = kor.175.t
+	desc = kor.175.d
+	picture = GFX_address_the_troops
+	
+	fire_only_once = yes
+	trigger = {
+		JKR = {
+			has_war_with = FIN
+		}
+	}
+	
+	option = {	#
+		name = kor.175.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = {	#agrarian faction
+	id = kor.18
+	title = kor.18.t
+	desc = kor.18.d
+	picture = GFX_inflitration
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.18.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.07
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.07
+		}
+	}
+	option = {	#
+		name = kor.18.a
+		ai_chance = { factor = 1 }
+		add_stability = 0.07
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.07
+		}
+		set_politics = {
+			ruling_party = revisionist_socialism
+		}
+	}
+}
+country_event = {	#supress Lefties
+	id = kor.19
+	title = kor.19.t
+	desc = kor.19.d
+	picture = GFX_asia_assassin
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.19.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.07
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.07
+		}
+	}
+}
+country_event = {	#revolutionary coalition
+	id = kor.20
+	title = kor.20.t
+	desc = kor.20.d
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.20.a
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = kor.201
+		}
+	}
+	option = {	#
+		name = kor.20.b
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = kor.202
+		}
+	}
+	option = {	#
+		name = kor.20.c
+		ai_chance = { factor = 1 }
+		country_event = {
+			id = kor.203
+		}
+	}
+}
+country_event = {	#vanguardists secure the vote
+	id = kor.201
+	title = kor.201.t
+	desc = kor.201.d
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.201.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#national revolution secure the vote
+	id = kor.202
+	title = kor.202.t
+	desc = kor.202.d
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.202.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+	}
+}
+country_event = {	#anarchists secure the vote
+	id = kor.203
+	title = kor.203.t
+	desc = kor.203.d
+	picture = GFX_democracy_2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.203.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = revolutionary_anarchism
+			elections_allowed = no
+		}
+	}
+}
+
+country_event = {	#A moment of bloodthirst
+	id = kor.21
+	title = kor.21.t
+	desc = kor.21.d
+	picture = GFX_civil_war_defeated
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.21.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {	#assert control IKR rebels crushed
+	id = kor.22
+	title = kor.22.t
+	desc = kor.22.d
+	picture = GFX_coup
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.22.a
+		ai_chance = { factor = 1 }
+		remove_ideas = {
+			IKR_rebels_dead
+		}
+	}
+}
+country_event = {	#a moment of repentance
+	id = kor.23
+	title = kor.23.t
+	desc = kor.23.d
+	picture = GFX_roulette
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.23.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#a rush of guilt
+	id = kor.24
+	title = kor.24.t
+	desc = kor.24.d
+	picture = GFX_roulette
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.24.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#alas my grief
+	id = kor.25
+	title = kor.25.t
+	desc = kor.25.d
+	picture = GFX_roulette
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.25.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#a whisper
+	id = kor.26
+	title = kor.26.t
+	desc = kor.26.d
+	picture = GFX_exiles_IKR
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.26.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#dissenters
+	id = kor.27
+	title = kor.27.t
+	desc = kor.27.d
+	picture = GFX_spy
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.27.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#rebels lie dead
+	id = kor.28
+	title = kor.28.t
+	desc = kor.28.d
+	picture = GFX_civil_war_defeated
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = kor.28.a
+		ai_chance = { factor = 1 }
+	}
+}
+country_event = {	#first elections
+	id = kor.29
+	title = kor.29.t
+	desc = kor.29.d
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#libs
+		name = kor.29.a
+		ai_chance = { factor = 1 }
+		set_country_flag = KOR_libs_elected
+	}
+	option = {	#cons
+		name = kor.29.b
+		ai_chance = { factor = 1 }
+		set_country_flag = KOR_cons_elected
+	}
+	option = {	#succ-dems
+		name = kor.29.c
+		ai_chance = { factor = 1 }
+		set_country_flag = KOR_succ_dems_elected
+	}
+}
+country_event = {	#elections again
+	id = kor.291
+	title = kor.291.t
+	desc = kor.291.d
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#libs
+		name = kor.291.a
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = liberalism
+		}
+		hidden_effect = {
+			country_event = {
+				id = kor.291
+				days = 1460
+			}
+		}
+	}
+	option = {	#cons
+		name = kor.291.b
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = conservatism
+		}
+		hidden_effect = {
+			country_event = {
+				id = kor.291
+				days = 1460
+			}
+		}
+	}
+	option = {	#succ-dems
+		name = kor.291.c
+		ai_chance = { factor = 1 }
+		set_politics = {
+			ruling_party = social_democratism
+		}
+		hidden_effect = {
+			country_event = {
+				id = kor.291
+				days = 1460
+			}
+		}
+	}
+}
+country_event = {	#rehabilitation
+	id = kor.30
+	title = kor.30.t
+	desc = kor.30.d
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#accept reintegration
+		name = kor.30.a
+		ai_chance = { factor = 1 }
+		KOR = {
+			country_event = {
+				id = kor.301
+			}
+		}
+	}
+	option = {	#reject unification
+		name = kor.30.b
+		ai_chance = { factor = 1 }
+		KOR = {
+			country_event = {
+				id = kor.302
+			}
+		}
+	}
+}
+country_event = {	#rehabilitation - yes
+	id = kor.301
+	title = kor.301.t
+	desc = kor.301.d
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#accept reintegration
+		name = kor.301.a
+		ai_chance = { factor = 1 }
+		KOR = {
+			annex_country = {
+				target = JKR
+				transfer_troops = yes
+			}
+			JKR = {
+				every_unit_leader = {
+					set_nationality = KOR
+				}
+			}
+		}
+	}
+}
+country_event = {	#rehabilitation - no
+	id = kor.302
+	title = kor.302.t
+	desc = kor.302.d
+	picture = GFX_democracy_1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#reject reintegration
+		name = kor.302.a
+		ai_chance = { factor = 1 }
+		create_wargoal = {
+			target = JKR
+			type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = kor.31
+	title = kor.31.t
+	desc = kor.31.d
+	picture = GFX_fireworks
+	
+	fire_only_once = yes
+	trigger = {
+		tag = IKR
+		IKR = {
+			has_full_control_of_state = 282
+		}
+		JPR = {
+			exists = no
+		}
+	}
+	
+	option = {	#homeland reclaimed
+		name = kor.31.a
+		ai_chance = { factor = 1 }
+		set_country_flag = IKR_returned_home
+		hidden_effect = {
+			country_event = {
+				id = news.103
+				days = 2
+			}
+			every_state = {
+				limit = {
+					is_owned_by = IKR
+					is_core_of = JPR
+				}
+				add_core_of = IKR
+			}
+			set_capital = 282
+		}
+		set_cosmetic_tag = KOR_new_nihon
+	}
+}
+country_event = {
+	id = kor.32
+	title = kor.32.t
+	desc = kor.32.d
+	picture = GFX_event_dadao_man
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#restorationist faction
+		name = kor.32.a
+		ai_chance = { factor = 1 }
+		IKR = {
+			add_to_faction = ROOT
+		}
+	}
+	option = {	#restorationist faction
+		name = kor.32.b
+		ai_chance = { factor = 1 }
+		IKR = {
+			country_event = {
+				id = kor.321
+			}
+		}
+	}
+}
+country_event = {
+	id = kor.321
+	title = kor.321.t
+	desc = kor.321.d
+	picture = GFX_event_dadao_man
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#restorationist faction
+		name = kor.321.a
+		ai_chance = { factor = 1 }
+		add_war_support = -0.03
+	}
+	
+}
+
+country_event = {
+	id = kor.33
+	title = kor.33.t
+	desc = kor.33.d
+	picture = GFX_asia_assassin
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#order36
+		name = kor.33.a
+		ai_chance = { factor = 1 }
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = liberalism
+			popularity = -0.05
+		}
+	}
+	
+}
+country_event = {
+	id = kor.34
+	title = kor.34.t
+	desc = kor.34.d
+	picture = GFX_exiles_IKR
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#emprah - Yasu
+		name = kor.34.a
+		ai_chance = { factor = 1 }
+		add_ideas = {
+			IKR_yasuhito
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Yasuhito"
+			desc = "POLITICS_YASUHITO_IKR_DESC"
+			picture = "Portrait_IKR_Yasuhito.dds"
+			expire = "1965.1.1"
+			ideology = absolute_monarchy
+		}
+	}
+}

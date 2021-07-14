@@ -1,0 +1,18 @@
+Japan_far_right_1 = {
+	enable = {
+		original_tag = JAP
+		has_game_rule = {
+			rule = JAP_ai_route
+			option = RESTORATION
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		JAP_imperial_decree
+		JAP_eigen_restoration
+	}
+}

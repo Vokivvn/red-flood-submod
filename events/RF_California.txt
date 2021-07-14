@@ -1,0 +1,1750 @@
+add_namespace = CAL
+
+#welcome event #done
+country_event = {
+	id = CAL.1
+	title = CAL.1.title
+	desc = CAL.1.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.1.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin introduction #done
+country_event = {
+	id = CAL.2
+	title = CAL.2.title
+	desc = CAL.2.desc
+	picture = GFX_report_event_CAL_introduction_bodin
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.2.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Olson introduction #done
+country_event = {
+	id = CAL.3
+	title = CAL.3.title
+	desc = CAL.3.desc
+	picture = GFX_report_event_CAL_introduction_olson
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.3.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Sinclair introduction #done
+country_event = {
+	id = CAL.4
+	title = CAL.4.title
+	desc = CAL.4.desc
+	picture = GFX_report_event_CAL_introduction_sinclair
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.4.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Neutrality # done
+country_event = {
+	id = CAL.5
+	title = CAL.5.title
+	desc = CAL.5.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.5.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#First KCW Broadcast out of SF [might add more stations depending on political affiliation idk] #done
+country_event = {
+	id = CAL.6
+	title = CAL.6.title
+	desc = CAL.6.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.6.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#We are in fact the democracy 
+country_event = {
+	id = CAL.7
+	title = CAL.7.title
+	desc = CAL.7.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.7.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#2nd KCW Broadcast 
+country_event = {
+	id = CAL.8
+	title = CAL.8.title
+	desc = CAL.8.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.8.a
+		ai_chance = { factor = 10}
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism 
+			popularity = 0.5
+		}
+		set_country_flag = sinclair_in_power
+		complete_national_focus = CAL_howiwillendpoverty
+	}
+	option = {
+		name = CAL.8.b 
+		ai_chance = { factor = 20}
+		set_politics = {
+			ruling_party = conservatism 
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.3
+		}
+		set_country_flag = united_front_in_power
+		complete_national_focus = CAL_unitedfrontvictory
+	}
+	option = {
+		name = CAL.8.c 
+		ai_chance = { factor = 10}
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.5
+		}
+		set_country_flag = bodin_in_power
+		complete_national_focus = CAL_scareme
+		country_event = {
+			days = 2
+			id = CAL.14
+		}
+	}
+}
+
+#cringy rant on how Jefferson is a stupid place #done
+country_event = {
+	id = CAL.9
+	title = CAL.9.title
+	desc = CAL.9.desc
+	picture = GFX_report_event_CAL_fuck_jefferson
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.9.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Eat shit Jefferson # done
+country_event = {
+	id = CAL.777
+	title = CAL.777.title
+	desc = CAL.777.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.777.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#5th KCW broadcast 
+country_event = {
+	id = CAL.14
+	title = CAL.14.title
+	desc = CAL.14.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.14.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin won, funni ensues #done
+country_event = {
+	id = CAL.15
+	title = CAL.15.title
+	desc = CAL.15.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.15.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin reacts to winning
+country_event = {
+	id = CAL.16
+	title = CAL.16.title
+	desc = CAL.16.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.16.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Sinclair gets sad because he lost to a fucking madman #done
+country_event = {
+	id = CAL.18
+	title = CAL.18.title
+	desc = CAL.18.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.18.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Olson leaves for Utah #done
+country_event = {
+	id = CAL.19
+	title = CAL.19.title
+	desc = CAL.19.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.19.a
+		ai_chance = { factor = 1}
+		custom_effect_tooltip = "Culbert Olson will leave for Utah."
+		hidden_effect = {
+		kill_ideology_leader = conservatism
+		}
+	}
+}
+
+#Bodin has a meltdown over how fucked America is #done
+country_event = {
+	id = CAL.21
+	title = CAL.21.title
+	desc = CAL.21.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.21.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Ah yes, let's fix our nation by building a navy we can barely afford to take over an island that no one cares about, it do be pretty tho #done
+country_event = {
+	id = CAL.24
+	title = CAL.24.title
+	desc = CAL.24.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.24.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#KCW Broadcast on Hawaii #done
+country_event = {
+	id = CAL.25
+	title = CAL.25.title
+	desc = CAL.25.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = no
+	trigger = {
+	tag = CAL
+	has_government = accelerationism
+	owns_state = 629
+	}
+
+	option = {
+		name = CAL.25.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Hawaii you are fucked #done
+country_event = {
+	id = CAL.888
+	title = CAL.888.title
+	desc = CAL.888.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.888.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#I don't know if I should put this in here [Report gleefully talking about the """"purification"""" of Hawaii] #done
+country_event = {
+	id = CAL.27
+	title = CAL.27.title
+	desc = CAL.27.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.27.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin having a philisophical chat with his good friend L. Ron Hubbard #done
+country_event = {
+	id = CAL.28
+	title = CAL.28.title
+	desc = CAL.28.desc
+	picture = GFX_report_event_CAL_philosophical_talk
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.28.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin does drugs #done
+country_event = {
+	id = CAL.29
+	title = CAL.29.title
+	desc = CAL.29.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.29.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#KCW report on some spoopy shit # done
+country_event = {
+	id = CAL.30
+	title = CAL.30.title
+	desc = CAL.30.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = no
+	trigger = {
+	tag = CAL
+	has_government = accelerationism
+	date > 1942.7.13
+	}
+
+	option = {
+		name = CAL.30.a
+		ai_chance = { factor = 1}
+		add_stability = -0.03
+		add_war_support = 0.07
+
+	}
+}
+
+#Catholic Church getting boarded up #done
+country_event = {
+	id = CAL.33
+	title = CAL.33.title
+	desc = CAL.33.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	trigger = {
+		tag = CAL
+		CAL = {
+			has_completed_focus = CAL_scareme
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 180
+	}
+
+	option = {
+		name = CAL.33.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Bodin has some ideas regarding Christianity #done
+country_event = {
+	id = CAL.35
+	title = CAL.35.title
+	desc = CAL.35.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.35.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#World premiere of "The Dream"
+country_event = {
+	id = CAL.41
+	title = CAL.41.title
+	desc = CAL.41.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.41.a
+		ai_chance = { factor = 1}
+	}
+}
+
+
+#A letter admiring Bodin and Spiritualist California # done
+country_event = {
+	id = CAL.43
+	title = CAL.43.title
+	desc = CAL.43.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.43.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#"Discovering" Dianetics, Out of Body Expierience, and LOTS of drugs #done
+country_event = {
+	id = CAL.46
+	title = CAL.46.title
+	desc = CAL.46.desc
+	picture = GFX_report_event_CAL_excalibur
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.46.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#The Werewolf Event [Again, I cannot state enough how much drugs have been used for this]
+country_event = {
+	id = CAL.48
+	title = CAL.48.title
+	desc = CAL.48.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.48.a
+		ai_chance = { factor = 1}
+		add_ideas = {
+			CAL_supersoldiers
+		}
+	}
+}
+
+#Bodin has the idea of drugging his army to victory
+country_event = {
+	id = CAL.49
+	title = CAL.49.title
+	desc = CAL.49.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.49.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#Out of body soliders???
+country_event = {
+	id = CAL.50
+	title = CAL.50.title
+	desc = CAL.50.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.50.a
+		ai_chance = { factor = 1}
+	}
+}
+#Someone actually feeling proud of living in California
+country_event = {
+	id = CAL.55
+	title = CAL.55.title
+	desc = CAL.55.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.55.a
+		ai_chance = { factor = 1}
+	}
+}
+
+#A Meeting of the Californian Liberals
+country_event = {
+	id = CAL.73
+	title = CAL.73.title
+	desc = CAL.73.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.73.a
+		ai_chance = { factor = 1}
+	}
+}
+#United Front Victory Announced
+country_event = {
+	id = CAL.74
+	title = CAL.74.title
+	desc = CAL.74.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.74.a
+		ai_chance = { factor = 1}
+		set_party_name = {
+			ideology = liberalism
+			long_name = CAL_liberalism_party_unitedfront_long
+			name = CAL_liberalism_party_unitedfront
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = CAL_conservatism_party_unitedfront_long
+			name = CAL_conservatism_party_unitedfront
+		}
+	}
+}
+#KCW Broadcast on United Front victory
+country_event = {
+	id = CAL.75
+	title = CAL.75.title
+	desc = CAL.75.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.75.a
+		ai_chance = { factor = 1}
+	}
+}
+#The Spiritualist Party is announced to be banned at once, or if that doesn't sound good then just a sad event of some spiritualist being hauled off to Jail
+country_event = {
+	id = CAL.77
+	title = CAL.77.title
+	desc = CAL.77.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.77.a
+		ai_chance = { factor = 1}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.25
+		}
+	}
+}
+#KCW Broadcast about the Spiritualists being banned
+country_event = {
+	id = CAL.78
+	title = CAL.78.title
+	desc = CAL.78.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.78.a
+		ai_chance = { factor = 1}
+	}
+}
+#Sad event about the exile or Sinclair
+country_event = {
+	id = CAL.80
+	title = CAL.80.title
+	desc = CAL.80.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.80.a
+		ai_chance = { factor = 1}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = -0.25
+		}
+	}
+}
+#KCW broadcast about the exile of Sinclair
+country_event = {
+	id = CAL.81
+	title = CAL.81.title
+	desc = CAL.81.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.81.a
+		ai_chance = { factor = 1}
+	}
+}
+#Event announcing the policy of integrating the Mormons of Utah
+country_event = {
+	id = CAL.82
+	title = CAL.82.title
+	desc = CAL.82.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.82.a
+		ai_chance = { factor = 1}
+	}
+}
+#Olson being a very happy man 
+country_event = {
+	id = CAL.85
+	title = CAL.85.title
+	desc = CAL.85.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.84.a
+		ai_chance = { factor = 1}
+	}
+}
+#A little boy or girl listening to the latest KCW broadcast about the current hellscape that is the East and happy that they live in the stable land of California
+country_event = {
+	id = CAL.86
+	title = CAL.86.title
+	desc = CAL.86.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.86.a
+		ai_chance = { factor = 1}
+		add_stability = 0.2
+	}
+}
+#Elections as we know it, between the Republicans and Democrats.
+country_event = {
+	id = CAL.87
+	title = CAL.87.title
+	desc = CAL.87.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	#Republicans
+	option = {
+		name = CAL.87.a
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = liberalism
+		}
+		create_country_leader = {
+			name = "Earl Warren"
+			desc = "POLITICS_EARL_WARREN_DESC"
+			picture = "Earl_Warren.dds"
+			expire = "2000.1.1"
+			ideology = market_liberalism
+		}
+		add_popularity = {
+			ideology = liberalism 
+			popularity = 0.2
+		}
+		set_party_name = {
+			ideology = liberalism
+			long_name = CAL_liberalism_party_republican_long
+			name = CAL_liberalism_party_republican
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = CAL_conservatism_party_democrat_long
+			name = CAL_conservatism_party_democrat
+		}
+		complete_national_focus = CAL_republicanvictory
+	}
+	option = {
+		name = CAL.87.b
+		ai_chance = { factor = 1}
+		set_politics = {
+			ruling_party = conservatism
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.2
+		}
+		set_party_name = {
+			ideology = liberalism
+			long_name = CAL_liberalism_party_republican_long
+			name = CAL_liberalism_party_republican
+		}
+		set_party_name = {
+			ideology = conservatism
+			long_name = CAL_conservatism_party_democrat_long
+			name = CAL_conservatism_party_democrat
+		}
+		complete_national_focus = CAL_democratvictory
+	}
+}
+#KCW Broadcast announcing the election
+country_event = {
+	id = CAL.88
+	title = CAL.88.title
+	desc = CAL.88.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.88.a
+		ai_chance = { factor = 1}
+	}
+}
+#The Dems won victory event
+country_event = {
+	id = CAL.89
+	title = CAL.89.title
+	desc = CAL.89.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.89.a
+		ai_chance = { factor = 1}
+	}
+}
+#KCW Broadcast announcing Democrat Victory
+country_event = {
+	id = CAL.90
+	title = CAL.90.title
+	desc = CAL.90.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.90.a
+		ai_chance = { factor = 1}
+	}
+}
+#Policy announcment of Farmer subsidies
+country_event = {
+	id = CAL.91
+	title = CAL.91.title
+	desc = CAL.91.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.91.a
+		ai_chance = { factor = 1}
+	}
+}
+#A Farmer being a happy guy since he has money and stuff
+country_event = {
+	id = CAL.92
+	title = CAL.92.title
+	desc = CAL.92.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.92.a
+		ai_chance = { factor = 1}
+	}
+}
+#Tariffs 
+country_event = {
+	id = CAL.93
+	title = CAL.93.title
+	desc = CAL.93.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.93.a
+		ai_chance = { factor = 1}
+	}
+}
+#A Farmer freaking out because food prices are going down even harder
+country_event = {
+	id = CAL.94
+	title = CAL.94.title
+	desc = CAL.94.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.94.a
+		ai_chance = { factor = 1}
+	}
+}
+#Segregation Now, Segregation Tonorrow, and Segregation Forever... but in California, but you get the gist
+country_event = {
+	id = CAL.95
+	title = CAL.95.title
+	desc = CAL.95.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.95.a
+		ai_chance = { factor = 1}
+	}
+}
+#Uh-oh you just caused a lynching 
+country_event = {
+	id = CAL.96
+	title = CAL.96.title
+	desc = CAL.96.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.96.a
+		ai_chance = { factor = 1}
+	}
+}
+#Some phycos in the middle of no where in Jefferson getting gunned down, think Ruby Ridge 
+country_event = {
+	id = CAL.97
+	title = CAL.97.title
+	desc = CAL.97.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.97.a
+		ai_chance = { factor = 1}
+	}
+}
+#Another Ruby Ridge in Jefferson
+country_event = {
+	id = CAL.98
+	title = CAL.98.title
+	desc = CAL.98.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.98.a
+		ai_chance = { factor = 1}
+	}
+}
+#Speech about Democracy in America and how we're gonna fix it. Should feel very patriotic.
+country_event = {
+	id = CAL.99
+	title = CAL.99.title
+	desc = CAL.99.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.99.a
+		ai_chance = { factor = 1}
+	}
+}
+#KCW broadcast on Democracy in the West 
+country_event = {
+	id = CAL.100
+	title = CAL.100.title
+	desc = CAL.100.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.100.a
+		ai_chance = { factor = 1}
+	}
+}
+#Time to do some totally-not-ethnic-cleansing of Mexican Americans
+country_event = {
+	id = CAL.101
+	title = CAL.101.title
+	desc = CAL.101.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.101.a
+		ai_chance = { factor = 1}
+	}
+}
+#Read about ICE deportations if you want an idea of what to write about with this event of a poor Mexican being deported by a totally-not-white-supremacist police force
+country_event = {
+	id = CAL.102
+	title = CAL.102.title
+	desc = CAL.102.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.102.a
+		ai_chance = { factor = 1}
+	}
+}
+#The Electoral College Stays
+country_event = {
+	id = CAL.103
+	title = CAL.103.title
+	desc = CAL.103.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.103.a
+		ai_chance = { factor = 1}
+	}
+}
+#Corruption time
+country_event = {
+	id = CAL.104
+	title = CAL.104.title
+	desc = CAL.104.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.104.a
+		ai_chance = { factor = 1}
+	}
+}
+#Republicans Win
+country_event = {
+	id = CAL.105
+	title = CAL.105.title
+	desc = CAL.105.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.105.a
+		ai_chance = { factor = 1}
+	}
+}
+#KCW announcing that the Republicans won
+country_event = {
+	id = CAL.106
+	title = CAL.106.title
+	desc = CAL.106.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.106.a
+		ai_chance = { factor = 1}
+	}
+}
+#Freedom and Speech is cool now
+country_event = {
+	id = CAL.107
+	title = CAL.107.title
+	desc = CAL.107.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.107.a
+		ai_chance = { factor = 1}
+	}
+}
+#News Report about a Republican caught in a scandal, yeah Liberalism is cool
+country_event = {
+	id = CAL.108
+	title = CAL.108.title
+	desc = CAL.108.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.108.a
+		ai_chance = { factor = 1}
+	}
+}
+#Say goodbye to your social Programs
+country_event = {
+	id = CAL.111
+	title = CAL.111.title
+	desc = CAL.111.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.111.a
+		ai_chance = { factor = 1}
+		add_stability = -0.3
+	}
+}
+#A poor person getting his house foreclosed because he can't afford his mortgage 
+country_event = {
+	id = CAL.112
+	title = CAL.112.title
+	desc = CAL.112.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.112.a
+		ai_chance = { factor = 1}
+	}
+}
+
+
+
+# Alien in Hollywood
+country_event = {
+	id = CAL.113
+	title = CAL.113.title
+	desc = CAL.113.desc
+	picture = GFX_report_event_CAL_alien_in_hollywood
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.113.a
+		ai_chance = { factor = 1}
+		set_capital = 1066
+	}
+}
+# Halloween Party (racist)
+country_event = {
+	id = CAL.114
+	title = CAL.114.title
+	desc = CAL.114.desc
+	picture = GFX_report_event_CAL_halloween
+	fire_only_once = yes
+
+	is_triggered_only = no
+	trigger = {
+	tag = CAL
+	has_government = accelerationism
+	date > 1942.10.31
+	}
+
+	option = {
+		name = CAL.114.a
+		ai_chance = { factor = 1}
+		add_popularity = {
+		ideology = accelerationism
+		popularity = 0.01
+		}
+	}
+}
+#All events hereafter are written by JYA and don't need anyone to do them. Thus I will stop with these little prompt things.
+country_event = {
+	id = CAL.115
+	title = CAL.115.title
+	desc = CAL.115.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.115.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.116
+	title = CAL.116.title
+	desc = CAL.116.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.116.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.117
+	title = CAL.117.title
+	desc = CAL.117.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.117.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.118
+	title = CAL.118.title
+	desc = CAL.118.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.118.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.119
+	title = CAL.119.title
+	desc = CAL.119.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.119.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.120
+	title = CAL.120.title
+	desc = CAL.120.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.120.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.121
+	title = CAL.121.title
+	desc = CAL.121.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.121.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.122
+	title = CAL.122.title
+	desc = CAL.122.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.122.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.123
+	title = CAL.123.title
+	desc = CAL.123.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.123.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.124
+	title = CAL.124.title
+	desc = CAL.124.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.124.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.125
+	title = CAL.125.title
+	desc = CAL.125.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.125.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.126
+	title = CAL.126.title
+	desc = CAL.126.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.126.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.127
+	title = CAL.127.title
+	desc = CAL.127.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.127.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.128
+	title = CAL.128.title
+	desc = CAL.128.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.128.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.129
+	title = CAL.129.title
+	desc = CAL.129.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.129.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.130
+	title = CAL.130.title
+	desc = CAL.130.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.130.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.131
+	title = CAL.131.title
+	desc = CAL.131.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.131.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.132
+	title = CAL.132.title
+	desc = CAL.132.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.132.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.133
+	title = CAL.133.title
+	desc = CAL.133.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.133.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.134
+	title = CAL.134.title
+	desc = CAL.134.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.134.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.135
+	title = CAL.135.title
+	desc = CAL.135.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.135.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.136
+	title = CAL.136.title
+	desc = CAL.136.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.136.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.137
+	title = CAL.137.title
+	desc = CAL.137.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.137.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.138
+	title = CAL.138.title
+	desc = CAL.138.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.138.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.139
+	title = CAL.139.title
+	desc = CAL.139.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.139.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.140
+	title = CAL.140.title
+	desc = CAL.140.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.140.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.141
+	title = CAL.141.title
+	desc = CAL.141.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.141.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.142
+	title = CAL.142.title
+	desc = CAL.142.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.142.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.143
+	title = CAL.143.title
+	desc = CAL.143.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.143.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.144
+	title = CAL.144.title
+	desc = CAL.144.desc
+	picture = GFX_generic
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.144.a
+		ai_chance = { factor = 1}
+	}
+}
+country_event = {
+	id = CAL.145
+	title = CAL.145.title
+	desc = CAL.145.desc
+	picture = GFX_report_event_CAL_alien_in_hollywood
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.145.a
+		ai_chance = { factor = 1}
+		add_stability = -0.05
+	}
+	option = {
+		name = CAL.145.b
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Spiritualist Party Council"
+		desc = "POLITICS_SPIRITUAL_COUNCIL_DESC"
+		picture = "Portrait_Spiritual_Council.tga"
+		expire = "1965.1.1"
+		ideology = national_rejuvenatism
+		traits = { 
+		}
+		}
+		country_event = {
+		id = CAL.146
+		days = 1
+		}
+	}
+}
+country_event = {
+	id = CAL.146
+	title = CAL.146.title
+	desc = CAL.146.desc
+	picture = GFX_report_event_CAL_alien_in_hollywood
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CAL.146.a
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "L. Ron Hubbard"
+		desc = "POLITICS_HUBBARD_DESC"
+		picture = "Portrait_L_Ron_Hubbard.tga"
+		expire = "1965.1.1"
+		ideology = national_rejuvenatism
+		traits = { 
+		}
+		}
+		set_party_name = { 
+		ideology = accelerationism
+		long_name = CAL_scientology_long
+		name = CAL_scientology
+		}
+	set_country_flag = CAL_Hubbard
+	}
+	option = {
+		name = CAL.146.b
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Archangel Uriel"
+		desc = "POLITICS_URIEL_DESC"
+		picture = "Portrait_Uriel.tga"
+		expire = "1965.1.1"
+		ideology = national_rejuvenatism
+		traits = { 
+		}
+		}
+			set_party_name = { 
+		ideology = accelerationism
+		long_name = CAL_unarius_long
+		name = CAL_unarius
+		}
+	set_country_flag = CAL_Uriel
+	}
+	option = {
+		name = CAL.146.c
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Jack Parsons"
+		desc = "POLITICS_PARSONS_DESC"
+		picture = "Portrait_Jack_Parsons.tga"
+		expire = "1965.1.1"
+		ideology = national_rejuvenatism
+		traits = { 
+		}
+		}
+		set_party_name = { 
+		ideology = accelerationism
+		long_name = CAL_thelema_long
+		name = CAL_thelema
+		}
+	set_country_flag = CAL_Parsons
+	}
+	option = {
+		name = CAL.146.d
+		ai_chance = { factor = 1}
+		retire_country_leader = yes
+		create_country_leader = {
+		name = "Krishna Venta"
+		desc = "POLITICS_KRISHNA_VENTA_DESC"
+		picture = "Portrait_Krishna_Venta.tga"
+		expire = "1965.1.1"
+		ideology = national_rejuvenatism
+		traits = { 
+		}
+		}
+		set_party_name = { 
+		ideology = accelerationism
+		long_name = CAL_krishna_long
+		name = CAL_krishna
+		}
+		set_country_flag = CAL_Krishna
+	}
+	
+}

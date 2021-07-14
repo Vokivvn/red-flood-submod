@@ -1,0 +1,338 @@
+add_namespace = mog
+
+country_event = { #expand the shindo remnei
+	id = mog.1
+	title = mog.1.t
+	desc = mog.1.desc
+	picture = GFX_report_event_soldiers_marching
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #yes please!
+		name = mog.1.a
+		add_war_support = 0.05
+		add_manpower = 30000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 1000
+			producer = MOG
+		}
+		add_stability = 0.05
+	}
+}
+
+##### Democratic Path Events #####
+
+# New deputies #
+country_event = {
+	id = mog.2
+	title = mog.2.t
+	desc = mog.2.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.2.a
+	}
+}
+
+# Workers and warriors #
+country_event = {
+	id = mog.3
+	title = mog.3.t
+	desc = mog.3.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.3.a
+		hidden_effect = {
+			country_event = {
+				id = mog.4
+				days = 5
+			}
+		}
+	}
+}
+
+# Attack on Onori Hiroshi #
+country_event = {
+	id = mog.4
+	title = mog.4.t
+	desc = mog.4.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.4.a
+		hidden_effect = {
+			country_event = {
+				id = mog.5
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = mog.4.b
+		hidden_effect = {
+			country_event = {
+				id = mog.6
+				days = 3
+			}
+		}
+	}
+}
+
+# Trial of Shindo Renmei Severe Punishment #
+country_event = {
+	id = mog.5
+	title = mog.5.t
+	desc = mog.5.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.5.a
+		add_political_power = -30
+	}
+	option = {
+		name = mog.5.b
+		add_stability = 0.05
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.05
+		}
+	}
+}
+
+# Trial of Shindo Renmei Moderate Punishment #
+country_event = {
+	id = mog.6
+	title = mog.6.t
+	desc = mog.6.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.6.a
+		add_political_power = 15
+		add_stability = 0.05
+	}
+}
+
+# New Magazine #
+country_event = {
+	id = mog.7
+	title = mog.7.t
+	desc = mog.7.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.7.a
+	}
+}
+
+##### Imperial Path Events #####
+
+# Recruits #
+country_event = {
+	id = mog.8
+	title = mog.8.t
+	desc = mog.8.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.8.a
+	}
+}
+
+# Oath to the daimyo #
+country_event = {
+	id = mog.9
+	title = mog.9.t
+	desc = mog.9.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.9.a
+		hidden_effect = {
+			country_event = {
+				id = mog.10
+				days = 15
+			}
+		}
+	}
+}
+
+# Attack on the convoy #
+country_event = {
+	id = mog.10
+	title = mog.10.t
+	desc = mog.10.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.10.a
+		add_political_power = -10
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = mog.11
+				days = 5
+			}
+		}
+	}
+}
+
+# Punishing sword #
+country_event = {
+	id = mog.11
+	title = mog.11.t
+	desc = mog.11.desc
+	#picture = GFX_report_event_soldiers_marching
+	fire_only_once = yes
+
+	option = {
+		name = mog.11.a
+		add_political_power = -10
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = mog.12
+	title = mog.12.t
+	desc = mog.12.desc
+	is_triggered_only = yes
+
+	option = {
+		name = mog.12.a
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = mog.13
+				days = 50
+			}
+		}
+	}
+}
+country_event = {
+	id = mog.13
+	title = mog.13.t
+	desc = mog.13.desc
+	picture = GFX_report_event_MOG_kabuki
+	fire_only_once = yes
+
+	option = {
+		name = mog.13.a
+		add_stability = 0.02
+		hidden_effect = {
+			country_event = {
+				id = mog.14
+				days = 50
+			}
+		}
+	}
+}
+country_event = {
+	id = mog.14
+	title = mog.14.t
+	desc = mog.14.desc
+	picture = GFX_report_event_MOG_shunga
+	fire_only_once = yes
+
+	option = {
+		name = mog.14.a
+		add_stability = -0.01
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = mog.15
+				days = 50
+			}
+		}
+	}
+	option = {
+		name = mog.14.b
+		add_stability = 0.01
+		add_political_power = -10
+		hidden_effect = {
+			country_event = {
+				id = mog.15
+				days = 50
+			}
+		}
+	}
+}
+country_event = {
+	id = mog.15
+	title = mog.15.t
+	desc = mog.15.desc
+	#picture = GFX_report_event_MOG_rice
+	fire_only_once = yes
+
+	option = {
+		name = mog.15.a
+		add_stability = 0.02
+		add_political_power = -5
+		hidden_effect = {
+			country_event = {
+				id = mog.17
+				days = 50
+			}
+		}
+	}
+	option = {
+		name = mog.15.b
+		add_stability = -0.02
+		add_political_power = 5
+		hidden_effect = {
+			country_event = {
+				id = mog.17
+				days = 50
+			}
+		}
+	}
+}
+country_event = {
+ 	id = mog.16
+ 	title = mog.16.t
+ 	desc = mog.16.desc
+ 	picture = GFX_report_event_MOG_daitoryo
+	fire_only_once = yes
+ 	trigger = {
+ 		TAG = MOG
+ 		has_full_control_of_state = 1033
+ 	}
+ 	mean_time_to_happen = {
+ 		days = 40
+ 	}
+	option = {
+		name = mog.16.a
+	}
+	option = {
+		name = mog.16.b
+	}
+	option = {
+		name = mog.16.c
+	}
+	option = {
+		name = mog.16.d
+	}
+}
+country_event = {
+	id = mog.17
+	title = mog.17.t
+	desc = mog.17.desc
+	picture = GFX_report_event_MOG_kofun_jidai
+	fire_only_once = yes
+
+	option = {
+		name = mog.17.a
+		add_stability = 0.02
+	}
+}

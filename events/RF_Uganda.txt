@@ -1,0 +1,156 @@
+﻿###########################
+# Britain Events
+###########################
+
+add_namespace = uganda
+
+country_event = { #The uganda Revolt
+	id = uganda.1
+	title = uganda.1.t
+	desc = uganda.1.desc
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Disaster!
+		name = uganda.1.a
+		548 = {
+			add_core_of = UGD
+		}
+		768 = {
+			add_core_of = UGD
+		}
+		769 = {
+			add_core_of = UGD
+		}
+		UGD = {
+			set_state_owner = 548
+			set_state_controller = 548
+			set_state_owner = 768
+			set_state_controller = 768
+			set_state_owner = 769
+			set_state_controller = 769
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			load_oob = UGD_revolt
+		}
+	}
+	option = { #Uganda will be free!
+		name = uganda.1.b
+		hidden_effect = {
+			548 = {
+				add_core_of = UGD
+			}
+			768 = {
+				add_core_of = UGD
+			}
+			769 = {
+				add_core_of = UGD
+			}
+		}
+		UGD = {
+			set_state_owner = 548
+			set_state_controller = 548
+			set_state_owner = 768
+			set_state_controller = 768
+			set_state_owner = 769
+			set_state_controller = 769
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			change_tag_from = ENG
+		}
+		hidden_effect = {
+			UGD = {
+				load_oob = UGD_revolt
+			}
+		}
+		#BEL = {
+		#	country_event = {
+		#		id = uganda.2
+		#	}
+		#}
+	}
+}
+country_event = { #African rebels make massive gains
+	id = uganda.3
+	title = uganda.3.t
+	desc = uganda.3.desc
+	#picture = 
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			tag = ENG
+			UGD = {
+				OR = {
+				controls_state = 547
+				controls_state = 546
+				controls_state = 549
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = { #This war is not worth fighting, make peace
+		name = uganda.3.a
+		UGD = {
+			country_event = {
+				id = uganda.4
+				days = 2
+			}
+		}
+	}
+	option = { #We will not cede another inch!
+		name = uganda.3.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+	}
+}
+
+country_event = { #the ugandan war for independence is over
+	id = uganda.4
+	title = uganda.4.t
+	desc = uganda.4.desc
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = uganda.4.a
+		white_peace = ENG
+		ENG = { give_military_access = UGD }
+		hidden_effect = {
+			country_event = { 
+				id = uganda.5
+				days = 30
+			}
+		}
+	}
+	
+	option = {
+		name = uganda.4.b
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = -50
+	}
+}
+
+country_event = { #piss ass event just to remove Military access into british empire
+					#if someone else can intergrate this better please do
+	id = uganda.5
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+		diplomatic_relation = {
+		country = ENG
+		relation = military_access
+		active = no
+		}
+	}
+}

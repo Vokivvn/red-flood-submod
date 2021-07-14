@@ -1,0 +1,259 @@
+destroy_the_spanish_language = {
+
+	#Decision for: Destroy Spanish in former Peru
+	destroyspanishinformerperu = {
+		icon = decision_oppression
+		available = {
+			has_completed_focus = BRA_south_american_maximallat
+			has_full_control_of_state = 963
+			has_full_control_of_state = 494
+			has_full_control_of_state = 492
+			has_full_control_of_state = 491
+			has_full_control_of_state = 490
+			has_full_control_of_state = 303
+		}
+		cost = 300
+		days_remove = 200
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			BRA = { 
+				add_state_core = 963
+				add_state_core = 494
+				add_state_core = 492
+				add_state_core = 491
+				add_state_core = 490
+				add_state_core = 303
+				963 = {
+				add_manpower = -3431
+				}
+				494 = {
+				add_manpower = -14853
+				}
+				492 = {
+				add_manpower = -44328
+				}
+				491 = {
+				add_manpower = -32112
+				}
+				490 = {
+				add_manpower = -39872
+				}
+				303 = {
+				add_manpower = -43321
+				}				
+			}
+		}
+		modifier = {
+			stability_factor = -0.10
+		}
+	}
+
+	#Decision for: Destroy Spanish in former Gran Colombia Area
+	destroyspanishinformercolombia = {
+		icon = decision_oppression
+		available = {
+			has_completed_focus = BRA_south_american_maximallat
+			has_full_control_of_state = 306
+			has_full_control_of_state = 307
+			has_full_control_of_state = 489
+			has_full_control_of_state = 488
+			has_full_control_of_state = 493
+			has_full_control_of_state = 486
+			has_full_control_of_state = 649
+			has_full_control_of_state = 490
+			has_full_control_of_state = 305
+			has_full_control_of_state = 963
+		}
+		cost = 300
+		days_remove = 200
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			BRA = {
+				add_state_core = 306
+				add_state_core = 307
+				add_state_core = 489
+				add_state_core = 488
+				add_state_core = 493
+				add_state_core = 486
+				add_state_core = 649
+				add_state_core = 490
+				add_state_core = 305
+				add_state_core = 963
+				306 = {
+				add_manpower = -9431
+				}
+				307 = {
+				add_manpower = -14853
+				}
+				489 = {
+				add_manpower = -44328
+				}
+				488 = {
+				add_manpower = -32112
+				}
+				493 = {
+				add_manpower = -49872
+				}
+				486 = {
+				add_manpower = -49321
+				}
+				649 = {
+				add_manpower = -34322
+				}
+				490 = {
+				add_manpower = -32119
+				}
+				305 = {
+				add_manpower = -32119
+				}
+				963 = {
+				add_manpower = -32119
+				}
+			}
+		}
+		modifier = {
+			stability_factor = -0.15
+		}
+	}
+
+	#Decision for: Destroy Spanish in former Argentina and Chile
+	destroyspanishinformerargentina = {
+		icon = decision_oppression
+		available = {
+			has_completed_focus = BRA_south_american_maximallat
+			has_full_control_of_state = 508
+			has_full_control_of_state = 278
+			has_full_control_of_state = 512
+			has_full_control_of_state = 511
+			has_full_control_of_state = 510
+			has_full_control_of_state = 509
+			has_full_control_of_state = 507
+			has_full_control_of_state = 506
+			has_full_control_of_state = 279
+		}
+		cost = 300
+		days_remove = 200
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		remove_effect = {
+			BRA = {
+				add_state_core = 508
+				add_state_core = 278
+				add_state_core = 512
+				add_state_core = 511
+				add_state_core = 510
+				add_state_core = 509
+				add_state_core = 507
+				add_state_core = 506
+				add_state_core = 279
+				508 = {
+				add_manpower = -124231
+				}
+				278 = {
+				add_manpower = -134853
+				}
+				512 = {
+				add_manpower = -94328
+				}
+				511 = {
+				add_manpower = -32112
+				}
+				509 = {
+				add_manpower = -49872
+				}
+				507 = {
+				add_manpower = -43281
+				}
+				506 = {
+				add_manpower = -32119
+				}
+			}
+		}
+		modifier = {
+			stability_factor = -0.10
+		}
+	}
+}
+national_pacification_campaign = {
+
+#Decision for: The March Northeast
+	themarchnortheast = {
+		icon = decision_generic_operation
+		visible = {
+			tag = BRR
+		}
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = NTB }
+			create_wargoal = { type = annex_everything target = FCQ }
+			create_wargoal = { type = annex_everything target = ACQ }
+			create_wargoal = { type = annex_everything target = GCC }
+			create_wargoal = { type = annex_everything target = BCQ }
+		}
+		cost = 100
+		days_remove = 60
+		ai_will_do = {
+			factor = 20
+		}
+	}
+#Decision for: Liberate the North
+	liberatethenorth = {
+	icon = decision_generic_ignite_civil_war
+
+		visible = {
+			owns_state = 1024
+		}
+
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = ASS }
+			create_wargoal = { type = annex_everything target = MCM }
+		}
+		cost = 10
+		days_remove = 10
+		ai_will_do = {
+			factor = 5
+		}
+	}
+#Decision for: Liberate the West
+	liberatethewest = {
+		icon = decision_generic_scorched_earth
+		visible = {
+			tag = BRR
+		}
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = FAC }
+			create_wargoal = { type = annex_everything target = CRA }
+		}
+		cost = 10
+		days_remove = 10
+		ai_will_do = {
+			factor = 10
+		}
+	}
+#Decision for: Liberate the South
+	liberatethesouth = {
+		icon = decision_generic_prepare_civil_war
+		visible = {
+			tag = BRR
+		}
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = FLO }
+			create_wargoal = { type = annex_everything target = NEU }
+			create_wargoal = { type = annex_everything target = POA }
+			create_wargoal = { type = annex_everything target = PRP }
+			create_wargoal = { type = annex_everything target = MOG }
+		}
+		cost = 10
+		days_remove = 15
+		ai_will_do = {
+			factor = 20
+		}
+	}
+}

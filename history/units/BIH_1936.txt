@@ -1,0 +1,87 @@
+﻿division_template = {
+	name = "Infantry Division"		
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+division_template = {
+	name = "Cavalry Division" 	
+	division_names_group = RAJ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	division= {	
+		location = 1159
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 12050
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 1609
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4062
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7220
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4204
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7593
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4644
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 10077
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7220
+		division_template = "Cavalry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+}

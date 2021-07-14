@@ -1,0 +1,226 @@
+capital = 206
+
+oob = "BLR_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+	BLR_hog_jan_sierada_des
+	BLR_eco_szymon_rak_michajlowski_des
+	BLR_for_jazep_liosik_des
+	BLR_int_kiprijan_kandratovic_des
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+}
+
+# Events
+country_event = { id = belarus.31 days = 1158 }
+
+# Politics
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 5
+	social_democratism = 10
+	liberalism = 10
+	conservatism = 10
+	right_authoritarianism = 0
+	despotism = 45
+	reactionism = 20
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+BLR = {
+	add_opinion_modifier = {
+		target = LIT
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = POL
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = UKR
+		modifier = intermarium_friendship
+	}
+}
+
+create_country_leader = {
+	name = "Stanisław Bułak-Bałachowicz"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "BLR_Stanislaw_Bulak_Balachowicz.tga"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+}
+
+create_country_leader = {
+	name = "Ivan Paromchik"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Paromchik.tga"
+	expire = "1965.1.1"
+	ideology = agrarian_councilism
+}
+
+create_country_leader = {
+	name = "Panteleimon Ponomarenko"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Ponomarenko.tga"
+	expire = "1965.1.1"
+	ideology = orthodox_leninism
+}
+
+create_country_leader = {
+	name = "Boris Savinkov"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Savinkow.tga"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+}
+
+create_country_leader = {
+	name = "Vaclau Lastouski"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Lastouski.tga"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+}
+
+create_country_leader = {
+	name = "Piotr Krečeŭski"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Kreceuski.tga"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+}
+
+create_country_leader = {
+	name = "Vincent Hadleŭski"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Hadleuski.tga"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+}
+
+create_country_leader = {
+	name = "Michał Vituška"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Vituska.tga"
+	expire = "1965.1.1"
+	ideology = esoteric_reactionism
+}
+
+create_country_leader = {
+	name = "Aliaksandr Bahdanaŭ"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Bogdanov.tga"
+	expire = "1965.1.1"
+	ideology = technocratism
+}
+
+# Generals
+create_corps_commander = {
+	name = "Kanstancin Jezawitau"
+	picture = "Portrait_Kanstancin_Jezawitau.tga"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Kyprian Kandratovich"
+	picture = "Portrait_Kyprian_Kandratovich.tga"
+	traits = { old_guard }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Aliaksandr Prushinsky"
+	picture = "Portrait_Prushinsky.tga"
+	traits = { brilliant_strategist }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Hassan Kanapatsky"
+	picture = "Portrait_Kanapatsky.tga"
+	traits = { cavalry_officer }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Frants Kushal"
+	picture = "Portrait_Kushal.tga"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Boris Permikin"
+	picture = "Portrait_Permikin.tga"
+	traits = { inflexible_strategist }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mikalay Dzyamidau"
+	picture = "Portrait_Dzyamidau.tga"
+	traits = { politically_connected }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Michail Yaroslavtsev"
+	picture = "Portrait_Yaroslavtsev.tga"
+	traits = { war_hero }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}

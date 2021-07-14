@@ -1,0 +1,19 @@
+spriteTypes = {
+	##Icon For:
+	SpriteType = {
+		name = "SRU_prepare"
+		texturefile = "gfx/interface/goals/SRU/SRU_prepare.dds"
+	}
+	SpriteType = {
+		name = "SRU_build"
+		texturefile = "gfx/interface/goals/SRU/SRU_build.dds"
+	}
+	SpriteType = {
+		name = "SRU_gun"
+		texturefile = "gfx/interface/goals/SRU/SRU_gun.dds"
+	}
+	SpriteType = {
+		name = "SRU_troll"
+		texturefile = "gfx/interface/goals/SRU/SRU_troll.dds"
+	}
+}

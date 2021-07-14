@@ -1,0 +1,3386 @@
+#################################
+#	REV JAPAN TREE - BABA		#
+#################################
+focus_tree = {
+	id = JPR
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = JPR
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 50 y = 2000 }
+	
+	#Focus for Sailors Union
+	focus = {
+		id = JPR_sailors_union
+		icon = GFX_focus_JPR_sailors_union
+		x = 32
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_naval_wargames }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				JPR_sailors_union
+			}
+		}
+	}
+
+	#Focus for Nationalisation Policy
+	focus = {
+		id = JPR_nationalisation_policy
+		icon = GFX_focus_JPR_nationalisation_policy
+		x = 8
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		available = {
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.15
+			}
+			add_timed_idea = {
+				idea = JAP_reform_economy
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Collectivism Policy
+	focus = {
+		id = JPR_collectivism_policy
+		icon = GFX_focus_JPR_collectivism_policy
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		available = {
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.15
+			}
+			swap_ideas = {
+				remove_idea = JAP_sunset_crash
+				add_idea = JAP_trial_zaib
+			}
+		}
+	}
+
+	#Focus for Agriculturalism Policy
+	focus = {
+		id = JPR_agriculturalism_policy
+		icon = GFX_focus_JPR_agriculturalism_policy
+		x = 14
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		available = {
+			NOT = {
+				has_government = vanguard_socialism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.15
+			}
+			add_ideas = {
+				JAP_dismantled_zaib
+			}
+		}
+	}
+
+	#Focus for Foster the Cooperatives
+	focus = {
+		id = JPR_foster_the_cooperatives
+		icon = GFX_focus_JPR_foster_the_cooperative
+		x = 6
+		y = 8
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_dismantle_the_zaibatsus }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.1
+			}
+			#insert idea here
+		}
+	}
+
+	#Focus for National Reformation Act
+	focus = {
+		id = JPR_national_reformation_act
+		icon = GFX_focus_JPR_national_reformation_act
+		x = 2
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_collectivism_policy
+			focus = JPR_nationalisation_policy
+			focus = JPR_agriculturalism_policy
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#add an event for this one
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Mass Urbanisation
+	focus = {
+		id = JPR_mass_urbanisation
+		icon = GFX_focus_JPR_mass_urbanisation
+		x = 2
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_restart_industrialisation 
+		}
+		prerequisite = { 
+			focus = JPR_mass_land_redstribution 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Centralised Communes
+	focus = {
+		id = JPR_centralised_communes
+		icon = GFX_focus_JPR_centralised_communes
+		x = 0
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_mass_urbanisation }
+		available = {
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				JPR_centralisation
+			}
+		}
+	}
+
+	#Focus for The New Kenpeitai
+	focus = {
+		id = JPR_the_new_kenpeitai
+		icon = GFX_focus_JPR_the_new_kenpeitai
+		x = 2
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_mass_urbanisation }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#create new template for garrisons
+			division_template = {
+				name = "Red Kenpeitai"
+				regiments = {
+					motorized = { x = 0 y = 0 }
+					motorized = { x = 0 y = 1 }
+					motorized = { x = 1 y = 0 }
+					motorized = { x = 1 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 282 }
+				create_unit = {
+					division = "name = \"Red Kenpeitai\" division_template = \"Red Kenpeitai\" start_experience_factor = 1.0" 
+					owner = JPR
+				}
+			}
+		}
+	}
+
+	#Focus for Dismantle the Zaibatsus
+	focus = {
+		id = JPR_dismantle_the_zaibatsus
+		icon = GFX_focus_JPR_dismantle_the_zaibatsus
+		x = 6
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_nationalisation_policy 
+			focus = JPR_collectivism_policy 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = { id = japan.13 }
+		}
+	}
+
+	#Focus for Form the National Workers Bureau
+	focus = {
+		id = JPR_form_the_national_workers_bureau
+		icon = GFX_focus_JPR_form_the_national_workers_bureau
+		x = 10
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_nationalisation_policy 
+			focus = JPR_agriculturalism_policy 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#research speed, production retention
+			add_ideas = {
+				JPR_NWB
+			}
+		}
+	}
+
+	#Focus for Nagasaki-Ashagiwa Railway
+	focus = {
+		id = JPR_nagasakiashagiwa_railway
+		icon = GFX_focus_JPR_nagasaki_asahigawa_railway
+		x = 8
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_wealth_distribution_program }
+		available = { 
+			JPR = {
+				owns_state = 282
+				owns_state = 906
+				owns_state = 531
+				owns_state = 530
+				owns_state = 532
+			}
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			528 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			902 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			905 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			907 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Shatter the Monopolies
+	focus = {
+		id = JPR_shatter_the_monopolies
+		icon = GFX_focus_JPR_shatter_the_monopolies
+		x = 14
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_collectivism_policy
+			focus = JPR_nationalisation_policy
+			focus = JPR_agriculturalism_policy
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				JAP_abolished_zaibs
+			}
+		}
+	}
+
+	#Focus for Textile Industries
+	focus = {
+		id = JPR_textile_industries
+		icon = GFX_focus_JPR_textile_industries
+		x = 15
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_shatter_the_monopolies }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#add 2 civs
+			531 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Lessons from Fujian
+	focus = {
+		id = JPR_lessons_from_fujian
+		icon = GFX_focus_JPR_lessons_from_fujan
+		x = 16
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_textile_industries }
+		available = {
+			has_government = revisionist_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#monthly pop, resource gain, ideology drift defence
+			add_ideas = {
+				JPR_fujian
+			}
+		}
+	}
+
+	#Focus for Institute Egalitarianism
+	focus = {
+		id = JPR_institute_egalitarianism
+		icon = GFX_focus_JPR_institute_egalitarianism
+		x = 14
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_mechanised_farms 
+		}
+		prerequisite = { 
+			focus = JPR_textile_industries 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Kikue event, permit fem pilots and increase productivity, debuff pop growth
+			swap_ideas = {
+				remove_idea = JAP_inequality
+				add_idea = JPR_egalitarianism
+			}
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			country_event = {
+				id = japan.32
+				days = 7
+			}
+		}
+	}
+
+	#Focus for Autarkic Economy
+	focus = {
+		id = JPR_autarkic_economy
+		icon = GFX_focus_JPR_autarkic_economy
+		x = 13
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_institute_egalitarianism }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#closed economy?
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 536
+			}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 532
+			}
+			add_resource = {
+				type = rubber
+				amount = 4
+				state = 532
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 536
+			}
+		}
+	}
+
+	#Focus for Power to the People
+	focus = {
+		id = JPR_power_to_the_people
+		icon = GFX_focus_JPR_power_to_the_people
+		x = 15
+		y = 10
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_institute_egalitarianism }
+		available = {
+			NOT = {
+				has_government = vanguard_socialism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Council Elections event
+			country_event = { id = japan.6 }
+		}
+	}
+
+	#Focus for New Socialist Hegemon
+	focus = {
+		id = JPR_new_socialist_hegemon
+		icon = GFX_focus_JPR_new_socialist_hegemon
+		x = 8
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_the_new_worker 
+		}
+		prerequisite = { 
+			focus = JPR_devalue_the_zen 
+		}
+		prerequisite = { 
+			focus = JPR_the_new_kenpeitai
+			focus = JPR_autarkic_economy
+			focus = JPR_power_to_the_people
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Red sun rising event
+			country_event = {
+				id = japan.35
+			}
+		}
+	}
+
+	#Focus for The Tokyo Metro
+	focus = {
+		id = JPR_the_tokyo_metro
+		icon = GFX_focus_JPR_the_tokyo_metro
+		x = 7
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_new_socialist_hegemon }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#max infra in Tokyo
+			282 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			904 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for The Sunrise Palace
+	focus = {
+		id = JPR_the_sunrise_palace
+		icon = GFX_focus_JPR_the_sunrise_palace
+		x = 9
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_new_socialist_hegemon }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#event choosing what to do with the Imerial Palaces
+			country_event = {
+				id = japan.31
+			}
+		}
+	}
+
+	#Focus for Create the Red Army
+	focus = {
+		id = JPR_create_the_red_army
+		icon = GFX_focus_JPR_create_red_army
+		x = 27
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			JPR = {
+				NOT = {
+					has_idea = JAP_sunset_crash
+					has_idea = JAP_instability
+				}
+			}
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#create new template
+			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine }
+			division_template = {
+				name = "Red Division"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 4 y = 0 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+				} 
+			}
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 282 }
+				create_unit = {
+					division = "name = \"Red Division\" division_template = \"Red Division\" start_experience_factor = 1.0" 
+					owner = JPR
+				}
+			}
+		}
+	}
+
+	#Focus for Divert Naval Funds
+	focus = {
+		id = JPR_divert_naval_funds
+		icon = GFX_focus_JPR_divert_naval_funds
+		x = 21
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_create_the_red_army }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#debuff dockyard producivity, boost mil producivity
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 2
+				}
+				remove_building = {
+					type = dockyard
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Reflect on the Revolution
+	focus = {
+		id = JPR_reflect_on_the_revolution
+		icon = GFX_focus_JPR_reflection_on_the_revolution
+		x = 27
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_create_the_red_army }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Elected Officers
+	focus = {
+		id = JPR_elected_officers
+		icon = GFX_focus_JPR_elected_officers
+		x = 20
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_divert_naval_funds }
+		mutually_exclusive = { focus = JPR_socialist_commisars }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#promote cost, daily command power
+			add_ideas = {
+				JPR_officers
+			}
+		}
+	}
+
+	#Focus for Socialist Commisars
+	focus = {
+		id = JPR_socialist_commisars
+		icon = GFX_focus_JPR_socialist_commisars
+		x = 22
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_divert_naval_funds }
+		mutually_exclusive = { focus = JPR_elected_officers }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#mil police tech bonus
+			add_tech_bonus = { bonus = 1 uses = 1 category = military_police_tech  }
+		}
+	}
+
+	#Focus for Organised Militias
+	focus = {
+		id = JPR_organised_militias
+		icon = GFX_focus_JPR_organised_militias
+		x = 20
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_elected_officers 
+			focus = JPR_socialist_commisars 
+		}
+		mutually_exclusive = { focus = JPR_formalise_the_army }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#conscription
+			add_ideas = {
+				JPR_militias
+			}
+		}
+	}
+
+	#Focus for Formalise the Army
+	focus = {
+		id = JPR_formalise_the_army
+		icon = GFX_focus_JPR_formalise_the_army
+		x = 22
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_socialist_commisars 
+			focus = JPR_elected_officers 
+		}
+		mutually_exclusive = { focus = JPR_organised_militias }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#stat boost on core territory
+			add_ideas = {
+				JPR_formal_army
+			}
+		}
+	}
+
+	#Focus for Red Flag Bearers
+	focus = {
+		id = JPR_red_flag_bearers
+		icon = GFX_focus_JPR_red_flag_bearers
+		x = 21
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_organised_militias 
+			focus = JPR_formalise_the_army 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#div org boost
+			add_ideas = {
+				JPR_red_flag
+			}
+		}
+	}
+
+	#Focus for War Propaganda
+	focus = {
+		id = JPR_war_propaganda
+		icon = GFX_focus_JPR_war_propaganda
+		x = 24
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_divert_naval_funds 
+		}
+		prerequisite = { 
+			focus = JPR_reflect_on_the_revolution 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#war support boost
+			add_war_support = 0.25
+			add_threat = 2
+		}
+	}
+
+	#Focus for Defender of the Sunset Isles
+	focus = {
+		id = JPR_defender_of_the_sunset_isles
+		icon = GFX_focus_JPR_defender_of_the_sunset_isles
+		x = 24
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_war_propaganda }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#coastal bunkers
+			531 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 7072
+				}
+			}
+			528 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 9950
+				}
+			}
+			907 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1092
+				}
+			}
+			282 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1182
+				}
+			}
+			904 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 9998
+				}
+			}
+		}
+	}
+
+	#Focus for Recruit Esteemed Theorists
+	focus = {
+		id = JPR_recruit_esteemed_theorists
+		icon = GFX_focus_JPR_recruit_esteemed_theorists
+		x = 26
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reflect_on_the_revolution }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#add research slot
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Heavy Weapons Development
+	focus = {
+		id = JPR_heavy_weapons_development
+		icon = GFX_focus_JPR_heavy_weapons_development
+		x = 28
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reflect_on_the_revolution }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cat_anti_tank }
+			add_tech_bonus = { bonus = 1 uses = 1 category = artillery }
+		}
+	}
+
+	#Focus for Chi-Ha Project
+	focus = {
+		id = JPR_chiha_project
+		icon = GFX_focus_JPR_chi_ha_project
+		x = 28
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_heavy_weapons_development }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cat_light_armor }
+			add_tech_bonus = { bonus = 1 uses = 1 category = cat_heavy_armor }
+		}
+	}
+
+	#Focus for Reduce High Command's Influence
+	focus = {
+		id = JPR_reduce_high_commands_influence
+		icon = GFX_focus_JPR_reduce_high_command_influence
+		x = 27
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_crush_factionalism }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#max command power debuff, army exp gain
+			add_ideas = {
+				JPR_reduced_influence
+			}
+		}
+	}
+
+	#Focus for For the Revolution!
+	focus = {
+		id = JPR_for_the_revolution
+		icon = GFX_focus_JPR_for_the_revolution
+		x = 24
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_reduce_high_commands_influence 
+		}
+		prerequisite = { 
+			focus = JPR_defender_of_the_sunset_isles 
+		}
+		prerequisite = { 
+			focus = JPR_red_flag_bearers 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#division attack boost
+			swap_ideas = {
+				remove_idea = JPR_red_flag
+				add_idea = JPR_4revolution
+			}
+		}
+	}
+
+	#Focus for Joint Plane Development
+	focus = {
+		id = JPR_joint_plane_development
+		icon = GFX_focus_JPR_joint_plane_developments
+		x = 30
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_german_tank_collaboration }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cas, fighter and nav bomber techs
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = light_fighter }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cas_bomber }
+		}
+	}
+
+	#Focus for Advanced Thruster Experiments
+	focus = {
+		id = JPR_advanced_thruster_experiments
+		icon = GFX_focus_JPR_advanced_thrusters_experiments
+		x = 30
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_joint_plane_development }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#jet techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = jet_technology  }
+		}
+	}
+
+	#Focus for Airbase Expansion Initiative
+	focus = {
+		id = JPR_airbase_expansion_initiative
+		icon = GFX_focus_JPR_airbase_expansion_initiative
+		x = 36
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_aerial_defence_initiative }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Light Bombers
+	focus = {
+		id = JPR_light_bombers
+		icon = GFX_focus_JPR_light_bombers
+		x = 32
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_carrier_expansion }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cas techs
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cas_bomber }
+		}
+	}
+
+	#Focus for The Hero
+	focus = {
+		id = JPR_the_hero
+		icon = GFX_focus_JPR_the_hero
+		x = 34
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_continue_the_modernisation 
+		}
+		prerequisite = { 
+			focus = JPR_carrier_expansion 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#ace generation chance
+			add_ideas = {
+				JPR_the_hero
+			}
+		}
+	}
+
+	#Focus for The Sky Is No Limit
+	focus = {
+		id = JPR_the_sky_is_no_limit
+		icon = GFX_focus_JPR_the_sky_is_no_limit
+		x = 34
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_hero }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = rocketry }
+		}
+	}
+
+	#Focus for Pilot Academies
+	focus = {
+		id = JPR_pilot_academies
+		icon = GFX_focus_JPR_pilot_academies
+		x = 33
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_sky_is_no_limit }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+
+	#Focus for New Aerial Strategies
+	focus = {
+		id = JPR_new_aerial_strategies
+		icon = GFX_focus_JPR_new_aerial_strategies
+		x = 35
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_sky_is_no_limit }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#air doctrine techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = air_doctrine }
+		}
+	}
+
+	#Focus for Will of the People
+	focus = {
+		id = JPR_will_of_the_people
+		icon = GFX_focus_JPR_will_of_the_people
+		x = 8
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			
+			hidden_effect = {
+				set_global_flag = jap_red
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = vanguard_socialism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = revisionist_socialism
+					popularity = 0.03
+				}
+				add_popularity = {
+					ideology = revolutionary_anarchism
+					popularity = 0.03
+				}
+			}
+			add_political_power = 50
+			add_command_power = 15
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Down With The Emperor
+	focus = {
+		id = JPR_down_with_the_emperor
+		icon = GFX_focus_JPR_down_with_the_emperor
+		x = 8
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_will_of_the_people }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.2
+		}
+	}
+
+	#Focus for Champions Day
+	focus = {
+		id = JPR_champions_day
+		icon = GFX_focus_JPR_champions
+		x = 8
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_down_with_the_emperor }
+		available = {
+			JPR = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = japan.14
+				days = 2
+			}
+			remove_ideas = {
+				JAP_instability
+			}
+			country_event = { id = japan.5 days = 14 }
+		}
+	}
+
+	#Focus for Organise the Ricers
+	focus = {
+		id = JPR_organise_the_ricers
+		icon = GFX_focus_JPR_organize_the_ricers
+		x = 6
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_will_of_the_people }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#divisions to tokyo
+			division_template = {
+				name = "Ricer Militia"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				} 
+			}
+			282 = {
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+			}
+			908 = {
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+			}
+			536 = {
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+			}
+			905 = {
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+				create_unit = {
+					division = "name = \"Ricer Militia\" division_template = \"Ricer Militia\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+			}
+		}
+	}
+
+	#Focus for Raid the Barracks
+	focus = {
+		id = JPR_raid_the_barracks
+		icon = GFX_focus_JPR_raid_the_barracks
+		x = 10
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_will_of_the_people }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3500
+				producer = JAP
+			}
+		}
+	}
+
+	#Focus for Raid the Palaces
+	focus = {
+		id = JPR_raid_the_palaces
+		icon = GFX_focus_JPR_raid_the_palaces
+		x = 10
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_raid_the_barracks }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#-5% consumer goods
+			add_timed_idea = {
+				idea = JPR_raid_palaces
+				days = 210
+			}
+		}
+	}
+
+	#Focus for Organise the Youth
+	focus = {
+		id = JPR_organise_the_youth
+		icon = GFX_focus_JPR_organise_the_youth
+		x = 6
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_organise_the_ricers }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = JPR_general_strikes
+				days = 90
+			}
+		}
+	}
+
+	#Focus for Reorganise the Red Navy
+	focus = {
+		id = JPR_reorganise_the_red_navy
+		icon = GFX_focus_JPR_reorganise_red_navy
+		x = 27
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			JPR = {
+				NOT = {
+					has_idea = JAP_sunset_crash
+					has_idea = JAP_instability
+				}
+			}
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#
+			navy_experience = 50
+		}
+	}
+
+	#Focus for Above the Clouds
+	focus = {
+		id = JPR_above_the_clouds
+		icon = GFX_focus_JPR_above_the_clouds
+		x = 20
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reorganise_the_red_navy }
+		mutually_exclusive = { focus = JPR_beneath_the_waves }
+		mutually_exclusive = { focus = JPR_against_their_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#strat bomber techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = cat_strategic_bomber }
+		}
+	}
+
+	#Focus for Militarise Trade Ports
+	focus = {
+		id = JPR_militarise_trade_ports
+		icon = GFX_focus_JPR_militarise_trade_posts
+		x = 24
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reorganise_the_red_navy }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#extra port level in Hiroshima and Nagasaki, add a dockyard to each
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Against their Hulls
+	focus = {
+		id = JPR_against_their_hulls
+		icon = GFX_focus_JPR_against_their_hulls
+		x = 34
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reorganise_the_red_navy }
+		mutually_exclusive = { focus = JPR_beneath_the_waves }
+		mutually_exclusive = { focus = JPR_above_the_clouds }
+		available = {
+			
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#capital ship damage idea
+			add_ideas = {
+				JPR_hulls
+			}
+		}
+	}
+
+	#Focus for Convert Battleship Hulls
+	focus = {
+		id = JPR_convert_battleship_hulls
+		icon = GFX_focus_JPR_convert_battleship_hulls
+		x = 20
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_above_the_clouds }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cv tech/production cost
+			add_ideas = {
+				JPR_conversion
+			}
+		}
+	}
+
+	#Focus for Fortify the Pacific Bases
+	focus = {
+		id = JPR_fortify_the_pacific_bases
+		icon = GFX_focus_JPR_fortify_the_pacific_bases
+		x = 30
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_renew_the_coastal_defences }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#coastal and normal forts in pacific
+			648 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 13026
+				}
+			}
+			646 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 3995
+				}
+			}
+			647 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 4357
+				}
+			}
+			684 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 13028
+				}
+			}
+			633 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 13046
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 7251
+				}
+			}
+			634 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1269
+				}
+			}
+		}
+	}
+
+	#Focus for Renew the Coastal Defences
+	focus = {
+		id = JPR_renew_the_coastal_defences
+		icon = GFX_focus_JPR_renew_the_coastal_defences
+		x = 30
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reorganise_the_red_navy }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#coastal forts on Honshu
+			531 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 7072
+				}
+			}
+			528 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 9950
+				}
+			}
+			907 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1092
+				}
+			}
+			282 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1182
+				}
+			}
+			904 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 9998
+				}
+			}
+		}
+	}
+
+	#Focus for Front-Line Harassment
+	focus = {
+		id = JPR_frontline_harassment
+		icon = GFX_focus_JPR_front_line_harrasment
+		x = 26
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_beneath_the_waves }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#screen ship effectiveness
+			add_ideas = {
+				JPR_screens
+			}
+		}
+	}
+
+	#Focus for Convoy Interception
+	focus = {
+		id = JPR_convoy_interception
+		icon = GFX_focus_JPR_convoy_interception
+		x = 28
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_beneath_the_waves }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#sub doctrine techs
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = submarine_doctrine
+			}
+		}
+	}
+
+	#Focus for Push the Deck Further
+	focus = {
+		id = JPR_push_the_deck_further
+		icon = GFX_focus_JPR_push_the_deck_further
+		x = 20
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_convert_battleship_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cv tech?
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = cat_base_strike
+			}
+		}
+	}
+
+	#Focus for Destroyer Horde
+	focus = {
+		id = JPR_destroyer_horde
+		icon = GFX_focus_JPR_destroyer_horde
+		x = 22
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_promote_the_shipyard_industry 
+		}
+		prerequisite = { 
+			focus = JPR_push_the_deck_further 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#dd techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = dd_tech }
+		}
+	}
+
+	#Focus for Cruiser Development
+	focus = {
+		id = JPR_cruiser_development
+		icon = GFX_focus_JPR_cruiser_development
+		x = 36
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_against_their_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cl techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = cl_tech category = ca_tech }
+		}
+	}
+
+	#Focus for Grand Fleet
+	focus = {
+		id = JPR_grand_fleet
+		icon = GFX_focus_JPR_grand_fleet
+		x = 34
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_against_their_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#navy production boost?
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				add_tech_bonus = {
+					name = JAP_the_ultimate_battleship
+					bonus = 3.0
+					uses = 1
+					category = shbb_tech	
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						not = { has_tech = ship_hull_super_heavy }
+					}
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
+				create_equipment_variant = {
+					name = "Ōsugi Class"
+					type = ship_hull_super_heavy_1
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_super_heavy_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_shbb
+						front_1_custom_slot = ship_anti_air_1
+						front_2_custom_slot = empty
+						mid_1_custom_slot = empty
+						mid_2_custom_slot = ship_secondaries_2
+						mid_3_custom_slot = ship_secondaries_2
+						rear_1_custom_slot = ship_super_heavy_battery_1
+						rear_2_custom_slot = ship_airplane_launcher_1
+					}
+				}
+				hidden_effect = {
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "JAP" 
+							version_name = "Ōsugi Class"
+						}
+						name = "Seitō" 
+						requested_factories = 1
+						progress = 0.75
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "JAP" 
+							version_name = "Ōsugi Class"
+						}
+						name = "Ōsugi"
+						requested_factories = 1
+						progress = 0.5
+						amount = 1
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for The Katayama Class
+	focus = {
+		id = JPR_the_katayama_class
+		icon = GFX_focus_JPR_katayama_class
+		x = 34
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_sailors_union 
+		}
+		prerequisite = { 
+			focus = JPR_grand_fleet 
+		}
+		prerequisite = { 
+			focus = JPR_new_generation_battleships 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#bb tech
+			add_tech_bonus = { bonus = 1 uses = 1 category = bb_tech }
+		}
+	}
+
+	#Focus for Challenge the Bulldog
+	focus = {
+		id = JPR_challenge_the_bulldog
+		icon = GFX_focus_JPR_challenge_the_bulldog
+		x = 27
+		y = 12
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_no_seas_are_safe 
+			focus = JPR_the_katayama_class
+			focus = JPR_destroyer_horde
+		}
+		will_lead_to_war_with = ENG
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+		}
+	}
+
+	#Focus for Restart Industrialisation
+	focus = {
+		id = JPR_restart_industrialisation
+		icon = GFX_focus_JPR_restart_industrialisation
+		x = 1
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_national_reformation_act }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#civ build speed idea
+			swap_ideas = {
+				remove_idea = JAP_trial_zaib
+				add_idea = JPR_industrialisation
+			}
+		}
+	}
+
+	#Focus for Mass Land Redstribution
+	focus = {
+		id = JPR_mass_land_redstribution
+		icon = GFX_focus_JPR_mass_land_redistribution
+		x = 3
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_dismantle_the_zaibatsus 
+		}
+		prerequisite = { 
+			focus = JPR_national_reformation_act 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#+1 build slots to most of honshu
+			902 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			504 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			903 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			904 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			532 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			535 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			905 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			906 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			530 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			907 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			528 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			908 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			910 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for Correct the Rail Gauges
+	focus = {
+		id = JPR_correct_the_rail_gauges
+		icon = GFX_focus_JPR_correct_the_rail_gauges
+		x = 4
+		y = 10
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_mass_urbanisation 
+		}
+		prerequisite = { 
+			focus = JPR_the_new_worker 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = JPR_roads
+				days = 365
+			}
+		}
+	}
+
+	#Focus for The New Worker
+	focus = {
+		id = JPR_the_new_worker
+		icon = GFX_focus_JPR_the_new_worker
+		x = 6
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_foster_the_cooperatives }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				JAP_worker_coop
+			}
+		}
+	}
+
+	#Focus for Wealth Distribution Program
+	focus = {
+		id = JPR_wealth_distribution_program
+		icon = GFX_focus_JPR_wealth_distribution_program
+		x = 8
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_nationalisation_policy }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#stability boost, 5% consumer goods
+			add_timed_idea = {
+				idea = JPR_wealth
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Recontruct the Countryside
+	focus = {
+		id = JPR_recontruct_the_countryside
+		icon = GFX_focus_JPR_reconstruct_the_countryside
+		x = 10
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_form_the_national_workers_bureau 
+		}
+		prerequisite = { 
+			focus = JPR_shatter_the_monopolies 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#repair speed, infra build speed, 
+			add_timed_idea = {
+				idea = JPR_reconstruction
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Devalue the Zen
+	focus = {
+		id = JPR_devalue_the_zen
+		icon = GFX_focus_JPR_devalue_the_yen
+		x = 10
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_recontruct_the_countryside }
+		available = { }
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#add resource gain
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 2
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			swap_ideas = {
+				remove_idea = JAP_abolished_zaibs
+				add_idea = JPR_abolished_zaibs
+			}
+		}
+	}
+
+	#Focus for Mechanised Farms
+	focus = {
+		id = JPR_mechanised_farms
+		icon = GFX_focus_JPR_mechanised_farms
+		x = 13
+		y = 8
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_shatter_the_monopolies }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = {
+				JAP_rural_backwater
+			}
+		}
+	}
+
+	#Focus for The Aerial Defence Initiative
+	focus = {
+		id = JPR_the_aerial_defence_initiative
+		icon = GFX_focus_JPR_aerial_defence_initiative
+		x = 34
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_create_the_red_army }
+		available = {
+
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Small Arms Development
+	focus = {
+		id = JPR_small_arms_development
+		icon = GFX_focus_JPR_small_arms_development
+		x = 21
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_elected_officers 
+			focus = JPR_socialist_commisars 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Expand the Marine Guard
+	focus = {
+		id = JPR_expand_the_marine_guard
+		icon = GFX_focus_JPR_expand_marine_guard
+		x = 26
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_recruit_esteemed_theorists }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = marine_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = tp_tech }
+		}
+	}
+
+	#Focus for Crush Factionalism
+	focus = {
+		id = JPR_crush_factionalism
+		icon = GFX_focus_JPR_crush_factionalism
+		x = 27
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_chiha_project 
+		}
+		prerequisite = { 
+			focus = JPR_expand_the_marine_guard 
+		}
+		available = { }
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#
+			add_political_power = -50
+			army_experience = 50
+			
+		}
+	}
+
+	#Focus for German Tank Collaboration
+	focus = {
+		id = JPR_german_tank_collaboration
+		icon = GFX_focus_JPR_german_tank_collaboration
+		x = 30
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reflect_on_the_revolution }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = armor }
+		}
+	}
+
+	#Focus for Carrier Expansion
+	focus = {
+		id = JPR_carrier_expansion
+		icon = GFX_focus_JPR_carrier_expansion
+		x = 32
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_aerial_defence_initiative }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cv tech, cv plane techs
+			add_tech_bonus = { 
+				bonus = 0.5
+				uses = 3
+				category = naval_air
+			}
+			add_tech_bonus = { bonus = 1 uses = 1 category = cv_tech }
+		}
+	}
+
+	#Focus for Continue the Modernisation
+	focus = {
+		id = JPR_continue_the_modernisation
+		icon = GFX_focus_JPR_continue_the_modernisation
+		x = 34
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_aerial_defence_initiative }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#air doctrine techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = air_doctrine }
+		}
+	}
+
+	#Focus for Combat Integration
+	focus = {
+		id = JPR_combat_integration
+		icon = GFX_focus_JPR_combat_integration
+		x = 36
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_continue_the_modernisation }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#CAS idea buff
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = tactical_bomber }
+		}
+	}
+
+	#Focus for Beneath the Waves
+	focus = {
+		id = JPR_beneath_the_waves
+		icon = GFX_focus_JPR_beneath_the_waves
+		x = 27
+		y = 8
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_reorganise_the_red_navy }
+		mutually_exclusive = { focus = JPR_against_their_hulls }
+		mutually_exclusive = { focus = JPR_above_the_clouds }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for Promote the Shipyard Industry
+	focus = {
+		id = JPR_promote_the_shipyard_industry
+		icon = GFX_focus_JPR_promote_the_shipyard_industry
+		x = 24
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_militarise_trade_ports }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			282 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Deep Infiltration
+	focus = {
+		id = JPR_deep_infiltration
+		icon = GFX_focus_JPR_deep_infiltration
+		x = 27
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_frontline_harassment 
+		}
+		prerequisite = { 
+			focus = JPR_convoy_interception 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = { #naval_range_idea
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for No Seas Are Safe
+	focus = {
+		id = JPR_no_seas_are_safe
+		icon = GFX_focus_JPR_no_seas_are_safe
+		x = 27
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_deep_infiltration }
+		available = { }
+		bypass = { }        ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				set_technology = { torpedo_cruiser = 1 }
+			}
+			else = {
+				set_technology = { torpedo_cruiser_mtg = 1 }
+			}
+		}
+	}
+
+	#Focus for Forward Sea Bases
+	focus = {
+		id = JPR_forward_sea_bases
+		icon = GFX_focus_JPR_forward_sea_bases
+		x = 22
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_convert_battleship_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#build bases with coastal forts on islands.
+			648 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 13026
+				}
+			}
+			646 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3995
+				}
+			}
+			647 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 4357
+				}
+			}
+			684 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 13028
+				}
+			}
+			633 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 13046
+				}
+			}
+			737 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 7251
+				}
+			}
+			634 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 1269
+				}
+			}
+		}
+	}
+
+	#Focus for Bomber Integration
+	focus = {
+		id = JPR_bomber_integration
+		icon = GFX_focus_JPR_bomber_integration
+		x = 18
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_convert_battleship_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Tac bomber techs
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = naval_bomber }
+		}
+	}
+
+	#Focus for Mobile Air Bases
+	focus = {
+		id = JPR_mobile_air_bases
+		icon = GFX_focus_JPR_mobile_air_bases
+		x = 18
+		y = 11
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_bomber_integration }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = cv_tech }
+		}
+	}
+
+	#Focus for Naval Wargames
+	focus = {
+		id = JPR_naval_wargames
+		icon = GFX_focus_JPR_naval_wargames
+		x = 32
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_against_their_hulls }
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.00
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+
+	#Focus for New Generation Battleships
+	focus = {
+		id = JPR_new_generation_battleships
+		icon = GFX_focus_JPR_new_generation_battleships
+		x = 36
+		y = 10
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_cruiser_development }
+		available = { }
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = bb_tech }
+		}
+	}
+
+	#Focus for Pan-Asianism
+	focus = {
+		id = JPR_panasianism
+		icon = GFX_focus_JPR_pan_asianism
+		x = 4
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		mutually_exclusive = { focus = JPR_international_solidarity }
+		available = {
+			has_government = vanguard_socialism
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#boost relations with Hunan, Soc Taiwan, Fujian, soc DAI, Kaz reds
+			add_opinion_modifier = {
+				target = XIA
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = FJN
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = AQT
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = RSR
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = BIH
+				modifier = offered_support
+			}
+			if = {
+				limit = {
+					TAI = {
+						OR = {
+							has_government = social_democratism
+							has_government = vanguard_socialism
+						}
+					}
+				}
+				add_opinion_modifier = {
+					target = TAI
+					modifier = offered_support
+				}
+			}
+		}
+	}
+
+	#Focus for International Solidarity
+	focus = {
+		id = JPR_international_solidarity
+		icon = GFX_focus_JPR_internationalist_solidarity
+		x = 6
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		mutually_exclusive = { focus = JPR_panasianism }
+		available = {
+			OR = {
+				has_government = libertarian_marxism
+				has_government = revolutionary_anarchism
+				has_government = revisionist_socialism
+			}
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#boost relations with Germany, commie? brazil, Hungary, Bulgaria, soc Norway, Cuba
+			custom_effect_tooltip = JPR_internationalism
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = offered_support
+				}
+				GER = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+				add_opinion_modifier = {
+					target = BRA
+					modifier = offered_support
+				}
+				BRA = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+				add_opinion_modifier = {
+					target = HUN
+					modifier = offered_support
+				}
+				HUN = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+				add_opinion_modifier = {
+					target = BUL
+					modifier = offered_support
+				}
+				BUL = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+				add_opinion_modifier = {
+					target = NOR
+					modifier = offered_support
+				}
+				NOR = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+				add_opinion_modifier = {
+					target = CUB
+					modifier = offered_support
+				}
+				CUB = {
+					add_opinion_modifier = {
+						target = JPR
+						modifier = offered_support
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for The Vanguard
+	focus = {
+		id = JPR_the_vanguard
+		icon = GFX_focus_JPR_the_vanguard
+		x = 10
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		mutually_exclusive = { focus = JPR_the_councils }
+		available = { 
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Shumei cements control event
+			country_event = {
+				id = japan.33
+			}
+		}
+	}
+
+	#Focus for The Councils
+	focus = {
+		id = JPR_the_councils
+		icon = GFX_focus_JPR_the_councils
+		x = 12
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_champions_day }
+		mutually_exclusive = { focus = JPR_the_vanguard }
+		available = {
+			OR = {
+				has_government = libertarian_marxism
+				has_government = revolutionary_anarchism
+				has_government = revisionist_socialism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Councilists take power
+			country_event = {
+				id = japan.34
+			}
+			hidden_effect = {
+				country_event = {
+					id = japan.141
+					days = 180
+				}
+			}
+		}
+	}
+
+	#Focus for For Party
+	focus = {
+		id = JPR_for_party
+		icon = GFX_focus_JPR_for_party
+		x = 10
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_vanguard }
+		available = { 
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Purge event
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for For People
+	focus = {
+		id = JPR_for_people
+		icon = GFX_focus_JPR_for_people
+		x = 12
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_councils }
+		available = {
+			OR = {
+				has_government = libertarian_marxism
+				has_government = revolutionary_anarchism
+				has_government = revisionist_socialism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Elections and anarchists event
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for For Socialism
+	focus = {
+		id = JPR_for_socialism
+		icon = GFX_focus_JPR_for_socialism
+		x = 11
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_for_people 
+			focus = JPR_for_party 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#boost soc ideologies in asia, add an offmap civ for Hunan and Fujian
+			hidden_effect = {
+				ZHR = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				TAI = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				DAI = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				PHI = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				GDP = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				KMT = {
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				XIA = {
+					add_offsite_building = { type = arms_factory level = 1 }
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+				FJN = {
+					add_offsite_building = { type = arms_factory level = 1 }
+					add_popularity = {
+						ideology = vanguard_socialism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = libertarian_marxism
+						popularity = 0.05
+					}
+					add_popularity = {
+						ideology = revisionist_socialism
+						popularity = 0.05
+					}
+				}
+			}
+			custom_effect_tooltip = JPR_for_socialism_tooltip
+		}
+	}
+
+	#Focus for Western Comrades
+	focus = {
+		id = JPR_western_comrades
+		icon = GFX_focus_JPR_western_comrades
+		x = 6
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_international_solidarity }
+		available = { 
+			OR = {
+				has_government = libertarian_marxism
+				has_government = revisionist_socialism
+				has_government = revolutionary_anarchism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#tech licencing with the western commies
+			add_ideas = {
+				JPR_western_comrades
+			}
+			custom_effect_tooltip = JPR_western_decisions
+		}
+	}
+
+	#Focus for Pacific Comrades
+	focus = {
+		id = JPR_pacific_comrades
+		icon = GFX_focus_JPR_pacific_comrades
+		x = 6
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_western_comrades }
+		available = { 
+			OR = {
+				has_government = libertarian_marxism
+				has_government = revisionist_socialism
+				has_government = revolutionary_anarchism
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#boost libmarx in most of pacific asia
+			FJN = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			KMT = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			TAI = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			BYJ = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			SHA = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			MAN = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			KOR = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			JKR = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			IKR = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			ZHR = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			KCK = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			PHI = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			DAI = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			SMC = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			GDP = {
+				add_popularity = {
+					ideology = libertarian_marxism
+					popularity = 0.07
+				}
+			}
+			custom_effect_tooltip = JPR_pacific_decisions
+		}
+	}
+
+	#Focus for The Former Colonies
+	focus = {
+		id = JPR_the_former_colonies
+		icon = GFX_focus_JPR_former_colonies
+		x = 4
+		y = 4
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_panasianism }
+		available = { 
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#unlock decisions for taking the former colonies back or puppeting them - ultimatum style
+			custom_effect_tooltip = JPR_decisions
+		}
+	}
+
+	#Focus for Socialist Continent
+	focus = {
+		id = JPR_socialist_continent
+		icon = GFX_focus_JPR_socialist_continent
+		x = 4
+		y = 5
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = JPR_the_former_colonies }
+		available = { 
+			has_government = vanguard_socialism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#unlock decisions to conquer most of asia lmao
+			custom_effect_tooltip = JPR_decisions2
+		}
+	}
+
+	#Focus for The New Order
+	focus = {
+		id = JPR_the_new_order
+		icon = GFX_focus_JPR_the_new_order
+		x = 5
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JPR_socialist_continent 
+			focus = JPR_pacific_comrades 
+		}
+		available = { }
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#Cosmetic tag, event for autonomy of Hokkaido, cores
+			if = {
+				limit = {
+					has_government = vanguard_socialism
+				}
+				set_cosmetic_tag = JPR_FSRA
+				create_faction = federal_socialist_republics_asia
+				else = {
+					create_faction = pacific_workers_league
+					hidden_effect = {
+						DAI = {
+							if = {
+								limit = {
+									OR = {
+										has_government = libertarian_marxism
+										has_government = revisionist_socialism
+										has_government = revolutionary_anarchism
+									}
+									is_in_faction = no
+									is_puppet = no
+								}
+								country_event = {
+									id = japan.40
+								}
+							}
+						}
+						PHI = {
+							if = {
+								limit = {
+									OR = {
+										has_government = libertarian_marxism
+										has_government = revisionist_socialism
+										has_government = revolutionary_anarchism
+									}
+									is_in_faction = no
+									is_puppet = no
+								}
+								country_event = {
+									id = japan.40
+								}
+							}
+						}
+						JKR = {
+							if = {
+								limit = {
+									OR = {
+										has_government = libertarian_marxism
+										has_government = revisionist_socialism
+										has_government = revolutionary_anarchism
+									}
+									is_in_faction = no
+									is_puppet = no
+								}
+								country_event = {
+									id = japan.40
+								}
+							}
+						}
+						TAI = {
+							if = {
+								limit = {
+									OR = {
+										has_government = libertarian_marxism
+										has_government = revisionist_socialism
+										has_government = revolutionary_anarchism
+									}
+									is_in_faction = no
+									is_puppet = no
+								}
+								country_event = {
+									id = japan.40
+								}
+							}
+						}
+						MAL = {
+							if = {
+								limit = {
+									OR = {
+										has_government = libertarian_marxism
+										has_government = revisionist_socialism
+										has_government = revolutionary_anarchism
+									}
+									is_in_faction = no
+									is_puppet = no
+								}
+								country_event = {
+									id = japan.40
+								}
+							}
+						}
+					}
+					custom_effect_tooltip = JPR_pwl_invite
+				}
+			}
+		}
+	}
+
+#End of focuses 
+ }

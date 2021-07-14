@@ -1,0 +1,107 @@
+division_template = {
+	name = "Stralkovaja Dyvizija" #"Infantry Division"
+	division_names_group = LIT_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 1 } 
+	}
+}
+division_template = {
+	name = "Kavalieryjskaja Bryhada" #"Cavalry Brigade"
+	division_names_group = POL_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = { 
+		name =  "1st Stralkovaja Dyvizija"
+		location = 11370
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.4
+
+	}
+	division = { 
+		name =  "2nd Stralkovaja Dyvizija"
+		location = 11370
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+
+	}
+	division = { 
+		name =  "3rd Stralkovaja Dyvizija"
+		location = 406
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.8
+
+	}
+	division = { 
+		name =  "4th Stralkovaja Dyvizija"
+		location = 9241
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = { 
+		name =  "5th Stralkovaja Dyvizija"
+		location = 6232
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = { 
+		name =  "6th Stralkovaja Dyvizija"
+		location = 6359
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = { 
+		name =  "7th Stralkovaja Dyvizija"
+		location = 360
+		division_template = "Stralkovaja Dyvizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = { 
+		name =  "1st Kavalieryjskaja Bryhada"
+		location = 535
+		division_template = "Kavalieryjskaja Bryhada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = { 
+		name =  "2nd Kavalieryjskaja Bryhada"
+		location = 3309
+		division_template = "Kavalieryjskaja Bryhada"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+}
+air_wings = {
+	206 = {
+		fighter_equipment_0 =  {
+			owner = "BLR" 
+			amount = 120
+		}
+	}
+}

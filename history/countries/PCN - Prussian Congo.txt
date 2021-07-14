@@ -1,0 +1,131 @@
+﻿capital = 538
+
+oob = "PCN_1936"
+
+set_research_slots = 3 
+
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+
+add_ideas = {
+	PCN_Ernst_Junger_hog
+	PCN_Theodor_von_Hippel_fom
+	PCN_Paul_Von_Lettow_eco
+	PCN_Julian_Scherner_int
+	PCN_Heinrich_Kirchheim_sec
+	PCN_Muhammed_Husan_cof
+	
+}
+
+
+# Events
+country_event = { id = pcn.3 days = 91 }
+country_event = { id = pcn.4 days = 1220 }
+country_event = { id = pcn.5 days = 1127 }
+
+
+# Politics
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+
+set_popularities = {
+	vanguard_socialism = 10
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 20
+	conservatism = 20
+	right_authoritarianism = 50
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+
+set_stability = 0.20
+
+
+add_manpower = 20000
+
+create_country_leader = {
+	name = "Ernst Jünger"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Ernst_Junger.dds"
+	expire = "1965.1.1"
+	ideology = oligarchy
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Louis Brody"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_PCN_Louis_Brody.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Hans Huttig"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_PCN_Hans_Huttig.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Siegfried Müller"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_PCN_Siegfried_Muller.tga"
+	expire = "1965.1.1"
+	ideology = agrarian_councilism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_field_marshal = {
+	name = "Paul Ogorzow"
+	portrait_path = "gfx/leaders/PCN/Portrait_PCN_Paul_Ogorzow.tga"
+	traits = { offensive_doctrine logistics_wizard }
+	skill = 5
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Franz Ritter Von Epp"
+	portrait_path = "gfx/leaders/PCN/Portrait_PCN_Franz_Ritter_von_Epp.tga"
+	traits = { jungle_rat }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}

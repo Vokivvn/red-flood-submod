@@ -1,0 +1,51 @@
+﻿add_namespace = waf
+
+country_event = {
+	id = waf.1
+	title = waf.1.title
+	desc = waf.1.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = waf.1.a
+		ai_chance = {
+			factor = 1
+		}
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.15
+		}
+	}
+
+	option = {
+		name = waf.1.b
+		ai_chance = { factor = 1 }
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.15
+		}
+	}
+	
+	option = {
+		name = waf.1.c
+		ai_chance = {
+			factor = 1
+		}
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = 0.15
+		}
+		
+	}
+}

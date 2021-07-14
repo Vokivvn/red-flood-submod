@@ -1,0 +1,1819 @@
+﻿#####################
+#	Taiwan - Baba	#
+#####################
+
+add_namespace = tai
+
+country_event = { #Breaking Free
+	id = tai.1
+	title = tai.1.t
+	desc = tai.1.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.1.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = tai.30
+				days = 14
+			}
+		}
+		set_province_name = {
+			id = 1091
+			name = Chiayi
+		}
+		set_province_name = {
+			id = 7186
+			name = Taipei
+		}
+		set_province_name = {
+			id = 12068
+			name = Kaohsiung
+		}
+	}
+	option = {
+		name = tai.1.b
+		ai_chance = { factor = 0 }
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = {
+				id = tai.30
+				days = 14
+			}
+		}
+		set_province_name = {
+			id = 1091
+			name = Chiayi
+		}
+		set_province_name = {
+			id = 7186
+			name = Taipei
+		}
+		set_province_name = {
+			id = 12068
+			name = Kaohsiung
+		}
+	}
+}
+
+country_event = { #Taiwan in 1936
+	id = tai.1001
+	title = tai.1001.t
+	desc = tai.1001.d
+	picture = "GFX_mona_rudao"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.1001.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		swap_ideas = {
+			remove_idea = TAI_native_rebels
+			add_idea = TAI_native_rebels2
+		}
+		hidden_effect = {
+			country_event = {
+				id = tai.29
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = tai.1001.b
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		swap_ideas = {
+			remove_idea = TAI_native_rebels
+			add_idea = TAI_native_influences
+		}
+		hidden_effect = {
+			country_event = {
+				id = tai.29
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = { #Free Elections Organised
+	id = tai.2
+	title = tai.2.t
+	desc = tai.2.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.2.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.13
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.06
+		}
+		hidden_effect = {
+			country_event = {
+				id = tai.28
+				days = 365
+			}
+		}
+		
+	}
+	option = {
+		name = tai.2.b
+		ai_chance = { factor = 0 }
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.13
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.06
+		}
+		hidden_effect = {
+			country_event = {
+				id = tai.28
+				days = 365
+			}
+		}
+	}
+}
+
+country_event = { #The Chaos descends
+	id = tai.3
+	title = tai.3.t
+	desc = tai.3.d
+	picture = "TAI_the_chaos"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.3.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			TAI = {
+				country_event = { id = tai.4 days = 3 }
+			}
+		}
+		
+	}
+	option = {
+		name = tai.3.b
+		ai_chance = { factor = 0 }
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.05
+		}
+		hidden_effect = {
+			TAI = {
+				country_event = { id = tai.4 days = 3 }
+			}
+		}
+		
+	}
+}
+
+country_event = { #Left attacks Gov't
+	id = tai.4
+	title = tai.4.t
+	desc = tai.4.d
+	picture = "GFX_coup"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.4.a
+		ai_chance = { factor = 100 }
+		
+		
+	}
+	option = {
+		name = tai.4.b
+		ai_chance = { factor = 0 }
+		
+		
+	}
+}
+
+country_event = { #TCP wins
+	id = tai.5
+	title = tai.5.t
+	desc = tai.5.d
+	picture = "GFX_executions"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.5.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = vanguard_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = -0.15
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.25
+		}
+		add_stability = 0.25
+		
+	}
+	option = {
+		name = tai.5.b
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = vanguard_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = -0.15
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.25
+		}
+		add_stability = 0.25
+	}
+}
+
+country_event = { #TPP wins
+	id = tai.6
+	title = tai.6.t
+	desc = tai.6.d
+	picture = "GFX_executions"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.6.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = social_democratism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.25
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.15
+		}
+		add_stability = 0.25
+		
+	}
+	option = {
+		name = tai.6.b
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = social_democratism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.25
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.15
+		}
+		add_stability = 0.25
+	}
+}
+
+country_event = { #Radicals in the streets
+	id = tai.7
+	title = tai.7.t
+	desc = tai.7.d
+	picture = "GFX_street_bullies"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.7.a
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.13
+		}
+	}
+	option = {
+		name = tai.7.b
+		ai_chance = { factor = 0 }
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.13
+		}
+	}
+}
+
+country_event = { #Liaos libs win election
+	id = tai.8
+	title = tai.8.t
+	desc = tai.8.d
+	picture = "GFX_democracy_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.8.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.35
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.1
+		}
+		add_stability = 0.25
+	}
+	option = {
+		name = tai.8.b
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = liberalism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = 0.35
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.1
+		}
+		add_stability = 0.25
+	}
+}
+
+country_event = { #Lin's coalition takes power
+	id = tai.9
+	title = tai.9.t
+	desc = tai.9.d
+	picture = "GFX_democracy_1"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.9.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.35
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.1
+		}
+		add_stability = 0.25
+	}
+	option = {
+		name = tai.9.b
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = conservatism
+			popularity = 0.35
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = -0.1
+		}
+		add_stability = 0.25
+	}
+}
+
+country_event = { #Tan takes over publicly - cult path
+	id = tai.10
+	title = tai.10.t
+	desc = tai.10.d
+	picture = "GFX_infiltration"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.10.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_stability = 0.25
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+	}
+	option = {
+		name = tai.10.b
+		ai_chance = { factor = 0 }
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_stability = 0.25
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+	}
+}
+
+country_event = { #Tan takes over - Artistic taiwan
+	id = tai.11
+	title = tai.11.t
+	desc = tai.11.d
+	picture = "GFX_infiltration"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.11.a
+		ai_chance = { factor = 100 }
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_stability = 0.25
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+	}
+	option = {
+		name = tai.11.b
+		ai_chance = { factor = 0 }
+		set_politics = {
+			ruling_party = accelerationism
+			elections_allowed = no
+		}
+		add_stability = 0.25
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+	}
+}
+
+country_event = { #JPR fwend
+	id = tai.12
+	title = tai.12.t
+	desc = tai.12.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.12.a
+		ai_chance = { factor = 60 }
+		#improve relations
+		#send equipment
+		JPR = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = JAP
+			}
+		}
+	}
+	option = {
+		name = tai.12.b
+		ai_chance = { factor = 40 }
+		#send a volunteer div
+		JPR = {
+			division_template = {
+				name = "Tainan Volunteers"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 282 }
+				create_unit = {
+					division = "name = \"Tainan Volunteers\" division_template = \"Tainan Volunteers\" start_experience_factor = 0.25"
+					owner = JPR
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Liao curtails corporate
+	id = tai.13
+	title = tai.13.t
+	desc = tai.13.d
+	picture = "MO2_the_trial"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.13.a
+		ai_chance = { factor = 100 }
+		add_ideas = {
+			TAI_corporate_curtailed
+		}
+		
+	}
+	option = {
+		name = tai.13.b
+		ai_chance = { factor = 0 }
+		add_ideas = {
+			TAI_corporate_curtailed
+		}
+	}
+}
+
+country_event = { #Lin invites Corporations
+	id = tai.14
+	title = tai.14.t
+	desc = tai.14.d
+	picture = "GFX_report_event_textiles"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.14.a
+		ai_chance = { factor = 100 }
+		add_ideas = {
+			TAI_corporate_invited
+		}
+		
+	}
+	option = {
+		name = tai.14.b
+		ai_chance = { factor = 0 }
+		add_ideas = {
+			TAI_corporate_invited
+		}
+		
+	}
+}
+
+country_event = { #Anglo deal - weihaiwei and Pulo Condore for offmap civs
+	id = tai.15
+	title = tai.15.t
+	desc = tai.15.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.15.a
+		ai_chance = { factor = 100 }
+		ENG = {
+			country_event = { id = tai.151 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.15.b
+		ai_chance = { factor = 0 }
+		ENG = {
+			country_event = { id = tai.151 days = 7 }
+		}
+		
+	}
+}
+country_event = { #Anglo deal - weihaiwei and Pulo Condore for offmap civs
+	id = tai.151
+	title = tai.151.t
+	desc = tai.151.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.151.a
+		ai_chance = { factor = 50 }
+		ENG = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+		TAI = {
+			country_event = { id = tai.152 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.151.b
+		ai_chance = { factor = 50 }
+		TAI = {
+			country_event = { id = tai.153 days = 7 }
+		}
+		
+	}
+}
+country_event = { #Anglo deal - yes
+	id = tai.152
+	title = tai.152.t
+	desc = tai.152.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.152.a
+		ai_chance = { factor = 100 }
+		TAI = {
+			transfer_state = 839
+			transfer_state = 980
+		}
+	}
+}
+country_event = { #Anglo deal - no
+	id = tai.153
+	title = tai.153.t
+	desc = tai.153.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.153.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #Dutch Deal - Rubber for offmap civ
+	id = tai.16
+	title = tai.16.t
+	desc = tai.16.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.16.a
+		ai_chance = { factor = 100 }
+		HOL = {
+			country_event = { id = tai.161 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.16.b
+		ai_chance = { factor = 0 }
+		HOL = {
+			country_event = { id = tai.161 days = 7 }
+		}
+		
+	}
+}
+country_event = { #Dutch Deal - Rubber for offmap civ
+	id = tai.161
+	title = tai.161.t
+	desc = tai.161.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.161.a
+		ai_chance = { factor = 70 }
+		
+		HOL = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		HOL = {
+			country_event = { id = tai.162 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.161.b
+		ai_chance = { factor = 30 }
+		HOL = {
+			country_event = { id = tai.163 days = 7 }
+		}
+		
+	}
+}
+country_event = { #Dutch Deal - yes
+	id = tai.162
+	title = tai.162.t
+	desc = tai.162.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.162.a
+		ai_chance = { factor = 100 }
+		TAI = {
+			add_resource = {
+				type = rubber
+				amount = 9
+				state = 524
+			}
+		}
+	}
+}
+country_event = { #Dutch Deal - no
+	id = tai.163
+	title = tai.163.t
+	desc = tai.163.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.163.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #US deal - Guam for offmap civs
+	id = tai.17
+	title = tai.17.t
+	desc = tai.17.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.17.a
+		ai_chance = { factor = 100 }
+		USA = {
+			country_event = { id = tai.171 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.17.b
+		ai_chance = { factor = 0 }
+		USA = {
+			country_event = { id = tai.171 days = 7 }
+		}
+		
+	}
+}
+country_event = { #US deal - Guam for offmap civs
+	id = tai.171
+	title = tai.171.t
+	desc = tai.171.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.171.a
+		ai_chance = { factor = 50 }
+		
+		USA = {
+			give_military_access = TAI
+		}
+		USA = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		TAI = {
+			country_event = { id = tai.172 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.171.b
+		ai_chance = { factor = 50 }
+		TAI = {
+			country_event = { id = tai.173 days = 7 }
+		}
+		
+	}
+}
+country_event = { #US deal - yes
+	id = tai.172
+	title = tai.172.t
+	desc = tai.172.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.172.a
+		ai_chance = { factor = 100 }
+		TAI = {
+			transfer_state = 638
+		}
+		TAI = {
+			give_military_access = USA
+			diplomatic_relation = {
+				country = USA
+				relation = docking_rights
+				active = yes
+			}
+		}
+	}
+}
+country_event = { #US deal - no
+	id = tai.173
+	title = tai.173.t
+	desc = tai.173.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.173.a
+		ai_chance = { factor = 100 }
+		
+	}
+}
+
+country_event = { #AST deal - Steel for offmap civ
+	id = tai.18
+	title = tai.18.t
+	desc = tai.18.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.18.a
+		ai_chance = { factor = 100 }
+		AST = {
+			country_event = { id = tai.181 days = 7 }
+		}
+		
+	}
+	option = {
+		name = tai.18.b
+		ai_chance = { factor = 0 }
+		AST = {
+			country_event = { id = tai.181 days = 7 }
+		}
+		
+	}
+}
+country_event = { #AST deal - Steel for offmap civ
+	id = tai.181
+	title = tai.181.t
+	desc = tai.181.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.181.a
+		ai_chance = { factor = 60 }
+		AST = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+		TAI = {
+			country_event = { id = tai.182 days = 5 }
+		}
+		
+	}
+	option = {
+		name = tai.181.b
+		ai_chance = { factor = 40 }
+		TAI = {
+			add_stability = -0.01
+		}
+		TAI = {
+			country_event = { id = tai.183 days = 5 }
+		}
+		
+	}
+}
+country_event = { #AST deal - yah
+	id = tai.182
+	title = tai.182.t
+	desc = tai.182.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.182.a
+		ai_chance = { factor = 100 }
+		TAI = {
+			add_resource = {
+				type = steel
+				amount = 7
+				state = 524
+			}
+		}
+	}
+}
+country_event = { #AST deal - nah
+	id = tai.183
+	title = tai.183.t
+	desc = tai.183.d
+	picture = ""
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.183.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #Formosa Pact - Island fortress
+	id = tai.19
+	title = tai.19.t
+	desc = tai.19.d
+	picture = "GFX_navy"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.19.a
+		ai_chance = { factor = 100 }
+		ENG = {
+			diplomatic_relation = {
+				country = TAI
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		HOL = {
+			diplomatic_relation = {
+				country = TAI
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		TAI = {
+			give_military_access = HOL
+			give_military_access = ENG
+			diplomatic_relation = {
+				country = ENG
+				relation = docking_rights
+				active = yes
+			}
+			diplomatic_relation = {
+				country = HOL
+				relation = docking_rights
+				active = yes
+			}
+		}
+	}
+	option = {
+		name = tai.19.b
+		ai_chance = { factor = 0 }
+		ENG = {
+			diplomatic_relation = {
+				country = TAI
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		HOL = {
+			diplomatic_relation = {
+				country = TAI
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		TAI = {
+			give_military_access = HOL
+			give_military_access = ENG
+			diplomatic_relation = {
+				country = ENG
+				relation = docking_rights
+				active = yes
+			}
+			diplomatic_relation = {
+				country = HOL
+				relation = docking_rights
+				active = yes
+			}
+		}
+	}
+}
+
+country_event = { #Pacific Trade Org - Interventionist Naval power
+	id = tai.20
+	title = tai.20.t
+	desc = tai.20.d
+	picture = "GFX_navy"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.20.a
+		ai_chance = { factor = 100 }
+		USA = {
+			give_military_access = TAI
+		}
+	}
+	option = {
+		name = tai.20.b
+		ai_chance = { factor = 0 }
+		USA = {
+			give_guarantee = TAI
+			give_military_access = TAI
+		}		
+	}
+}
+
+country_event = { #Infil the cities
+	id = tai.21
+	title = tai.21.t
+	desc = tai.21.d
+	picture = "GFX_spy"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.21.a
+		ai_chance = { factor = 100 }
+		
+		FJN = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_timed_idea = {
+				idea = TAI_infiltration
+				days = 180
+			}
+		}
+		GDP = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_timed_idea = {
+				idea = TAI_infiltration
+				days = 180
+			}
+		}
+		KMT = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_timed_idea = {
+				idea = TAI_infiltration
+				days = 180
+			}
+		}
+		SHA = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_timed_idea = {
+				idea = TAI_infiltration
+				days = 180
+			}
+		}
+		XIA = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.12
+			}
+			add_timed_idea = {
+				idea = TAI_infiltration
+				days = 180
+			}
+		}
+		
+	}
+}
+
+country_event = { #Infil the countryside
+	id = tai.22
+	title = tai.22.t
+	desc = tai.22.d
+	picture = "GFX_jap_camp"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.22.a
+		ai_chance = { factor = 100 }
+		
+		FJN = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.06
+			}
+		}
+		GDP = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.06
+			}
+		}
+		KMT = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.06
+			}
+		}
+		SHA = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.06
+			}
+		}
+		XIA = {
+			add_stability = -0.12
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.06
+			}
+		}
+		
+	}
+}
+
+country_event = { #Cities revolt
+	id = tai.23
+	title = tai.23.t
+	desc = tai.23.d
+	picture = "GFX_asia_assassin"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.23.a
+		ai_chance = { factor = 100 }
+		FJN = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = FJN
+						social_democratism > 0.25
+					}
+				}
+				FJN = {
+					country_event = { id = tai.231 days = 2 }
+				}
+			}
+		}
+		KMT = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = KMT
+						social_democratism > 0.25
+					}
+				}
+				KMT = {
+					country_event = { id = tai.231 days = 2 }
+				}
+			}
+		}
+		XIA = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = XIA
+						social_democratism > 0.25
+					}
+				}
+				XIA = {
+					country_event = { id = tai.231 days = 2 }
+				}
+			}
+		}
+		GDP = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = GDP
+						social_democratism > 0.25
+					}
+				}
+				GDP = {
+					country_event = { id = tai.231 days = 2 }
+				}
+			}
+		}
+		SHA = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = SHA
+						social_democratism > 0.25
+					}
+				}
+				SHA = {
+					country_event = { id = tai.231 days = 2 }
+				}
+			}
+		}
+	}
+}
+#CITIES#
+country_event = { #if the revolt can take place, annex SD cliques
+	id = tai.231
+	title = tai.231.t
+	desc = tai.231.d
+	picture = "GFX_militia_training"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.231.a
+		ai_chance = { factor = 60 }
+		TAI = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			hidden_effect = {
+				ROOT = {
+					every_unit_leader = {
+						set_nationality = TAI
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = tai.231.b
+		ai_chance =  { factor = 30 }
+		TAI = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+	}
+	option = {
+		name = tai.231.c
+		ai_chance =  { factor = 10 }
+		TAI = {
+			puppet = ROOT
+		}
+	}
+}
+country_event = { #Agricultural Revolutionaries
+	id = tai.24
+	title = tai.24.t
+	desc = tai.24.d
+	picture = "GFX_militia_training"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.24.a
+		ai_chance = { factor = 100 }
+		FJN = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = FJN
+						social_democratism > 0.25
+					}
+				}
+				FJN = {
+					country_event = { id = tai.241 days = 2 }
+				}
+			}
+		}
+		KMT = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = KMT
+						social_democratism > 0.25
+					}
+				}
+				KMT = {
+					country_event = { id = tai.241 days = 2 }
+				}
+			}
+		}
+		XIA = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = XIA
+						social_democratism > 0.25
+					}
+				}
+				XIA = {
+					country_event = { id = tai.241 days = 2 }
+				}
+			}
+		}
+		GDP = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = GDP
+						social_democratism > 0.25
+					}
+				}
+				GDP = {
+					country_event = { id = tai.241 days = 2 }
+				}
+			}
+		}
+		SHA = {
+			if = {
+				limit = {
+					AND = {
+						country_exists = SHA
+						social_democratism > 0.25
+					}
+				}
+				SHA = {
+					country_event = { id = tai.241 days = 2 }
+				}
+			}
+		}
+		
+	}
+}
+#RURAL#
+country_event = { #if the revolt can take place, transfer these states, spawn militias
+	id = tai.241
+	title = tai.241.t
+	desc = tai.241.d
+	picture = "GFX_militia_training"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.241.a
+		ai_chance = { factor = 60 }
+		TAI = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			hidden_effect = {
+				ROOT = {
+					every_unit_leader = {
+						set_nationality = TAI
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = tai.241.b
+		ai_chance =  { factor = 30 }
+		TAI = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+	}
+	option = {
+		name = tai.241.c
+		ai_chance =  { factor = 10 }
+		TAI = {
+			puppet = ROOT
+		}
+	}
+}
+
+country_event = { #Fast purge - Reacts
+	id = tai.25
+	title = tai.25.t
+	desc = tai.25.d
+	picture = "GFX_coup"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.25.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.03
+		
+	}
+	option = {
+		name = tai.25.b
+		ai_chance = { factor = 0 }
+		add_war_support = -0.03
+		
+	}
+}
+
+country_event = { #Fast purge - Socialists
+	id = tai.26
+	title = tai.26.t
+	desc = tai.26.d
+	picture = "GFX_coup"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.26.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+		
+	}
+	option = {
+		name = tai.26.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.03
+		
+	}
+}
+
+country_event = { #Fast purge - Technocrats
+	id = tai.27
+	title = tai.27.t
+	desc = tai.27.d
+	picture = "GFX_coup"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.27.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+	}
+	option = {
+		name = tai.27.b
+		ai_chance = { factor = 0 }
+		add_stability = -0.03
+	}
+}
+
+country_event = { #Robin Hood
+	id = tai.28
+	title = tai.28.t
+	desc = tai.28.d
+	picture = "GFX_asia_assassin"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.28.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+	}
+}
+country_event = { #noodle man
+	id = tai.29
+	title = tai.29.t
+	desc = tai.29.d
+	picture = "GFX_report_event_mr_andoson"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.28.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.03
+		hidden_effect = {
+			country_event = {
+				id = tai.31
+				days = 365
+			}
+		}
+	}
+}
+country_event = { #Japanese live in fear
+	id = tai.30
+	title = tai.30.t
+	desc = tai.30.d
+	picture = "GFX_report_event_jap_taiwan"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.30.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+	}
+}
+country_event = { #tax evasion
+	id = tai.31
+	title = tai.31.t
+	desc = tai.31.d
+	picture = "GFX_report_event_mr_andoson"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.31.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+	}
+}
+country_event = { #nrf
+	id = tai.101
+	title = tai.101.t
+	desc = tai.101.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.101.a
+		ai_chance = { factor = 100 }
+		GER = {	
+			country_event = {
+				id = tai.1011
+			}
+		}
+	}
+	option = {
+		name = tai.101.b
+		ai_chance = { factor = 0 }
+		create_faction = "new_revolutionary_front"
+		XIA = {
+			country_event = {
+				id = tai.1012
+			}
+		}
+	}
+}
+country_event = { #German delegation
+	id = tai.1011
+	title = tai.1011.t
+	desc = tai.1011.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = tai.1011.a
+		ai_chance = { factor = 5 }
+		GER = {
+			add_to_faction = TAI
+		}
+		hidden_effect = {
+			TAI = {
+				country_event = {
+					id = tai.10111
+				}
+			}
+		}
+	}
+	option = {
+		name = tai.1011.b
+		ai_chance = { factor = 95 }
+		TAI = {
+			create_faction = "new_revolutionary_front"
+		}
+		hidden_effect = {
+			TAI = {
+				country_event = {
+					id = tai.10112
+				}
+			}
+		}
+	}
+}
+country_event = { #Germany accepts
+	id = tai.10111
+	title = tai.10111.t
+	desc = tai.10111.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = tai.10111.a
+		ai_chance = { factor = 5 }
+		add_political_power = 10
+	}
+}
+country_event = { #Germany declines
+	id = tai.10112
+	title = tai.10112.t
+	desc = tai.10112.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = tai.10112.a
+		ai_chance = { factor = 5 }
+		add_political_power = -10
+	}
+}
+country_event = { #nrf - XIA decides
+	id = tai.1012
+	title = tai.1012.t
+	desc = tai.1012.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.1012.a
+		ai_chance = { factor = 50 }
+		TAI = {
+			add_to_faction = XIA
+		}
+		hidden_effect = {
+			TAI = {
+				country_event = {
+					id = tai.10121
+				}
+			}
+		}
+	}
+	option = {
+		name = tai.1012.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+			TAI = {
+				country_event = {
+					id = tai.10122
+				}
+			}
+		}
+	}
+}
+country_event = { #Hunan accepts
+	id = tai.10121
+	title = tai.10121.t
+	desc = tai.10121.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = tai.10121.a
+		ai_chance = { factor = 5 }
+		add_political_power = 10
+	}
+}
+country_event = { #Hunan declines
+	id = tai.10122
+	title = tai.10122.t
+	desc = tai.10122.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#
+		name = tai.10122.a
+		ai_chance = { factor = 5 }
+		add_political_power = -10
+	}
+}
+country_event = { #pwl
+	id = tai.102
+	title = tai.102.t
+	desc = tai.102.d
+	picture = GFX_report_event_chinese_pol_crowd
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.102.a
+		ai_chance = { factor = 100 }
+		JPR = {
+			country_event = { id = tai.1021 days = 5 }
+		}
+	
+	}
+	option = {
+		name = tai.102.b
+		ai_chance = { factor = 0 }
+		JPR = {
+			country_event = { id = tai.1021 days = 5 }
+		}
+		
+	}
+}
+country_event = { #pwl JPR decides
+	id = tai.1021
+	title = tai.1021.t
+	desc = tai.1021.d
+	picture = GFX_report_event_chinese_pol_crowd
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #yes
+		name = tai.1021.a
+		ai_chance = { factor = 70 }
+		JPR = { add_to_faction = TAI }
+		TAI = {
+			country_event = { id = tai.1022 days = 1 }
+		}
+	}
+	option = { #no
+		name = tai.1021.b
+		ai_chance = { factor = 30 }
+		TAI = {
+			country_event = { id = tai.1023 days = 1 }
+		}
+	}
+}
+country_event = { #pwl JPR yes
+	id = tai.1022
+	title = tai.1022.t
+	desc = tai.1022.d
+	picture = GFX_report_event_chinese_pol_crowd
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = tai.1022.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.02
+	}
+	option = { #
+		name = tai.1022.b
+		ai_chance = { factor = 100 }
+		add_stability = 0.02
+	}
+}
+country_event = { #pwl JPR no
+	id = tai.1023
+	title = tai.1023.t
+	desc = tai.1023.d
+	picture = GFX_report_event_chinese_pol_crowd
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #
+		name = tai.1023.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.02
+	}
+	option = { #
+		name = tai.1023.b
+		ai_chance = { factor = 100 }
+		add_stability = -0.02
+	}
+}
+country_event = { #fra
+	id = tai.103
+	title = tai.103.t
+	desc = tai.103.d
+	picture = GFX_exhalted_leader
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = tai.103.a
+		ai_chance = { factor = 100 }
+		add_ideas = {
+			TAI_france_art
+		}
+	
+	}
+	option = {
+		name = tai.103.b
+		ai_chance = { factor = 0 }
+		add_ideas = {
+			TAI_france_mil
+		}
+		
+	}
+}

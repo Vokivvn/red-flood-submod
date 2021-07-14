@@ -1,0 +1,60 @@
+﻿l_english:
+
+#COSMETIC
+BYJ_JAP:0 "Pekin Provisional Government"
+BYJ_JAP_DEF:0 "Provisional Government of the Republic of North China"
+BYJ_JAP_ADJ:0 "Pekin"
+#PARTIES#
+BYJ_vanguard_socialism_party:0 "WPC"
+BYJ_libertarian_marxism_party:0 "PPC"
+BYJ_revolutionary_anarchism_party:0 "CAM"
+BYJ_revisionist_socialism_party:0 "CLA"
+BYJ_social_democratism_party:0 "RL"
+BYJ_liberalism_party:0 "PS"
+BYJ_conservatism_party:0 "SRP"
+BYJ_right_authoritarianism_party:0 "SC"
+BYJ_despotism_party:0 "SMC"
+BYJ_reactionism_party:0 "RS"
+BYJ_accelerationism_party:0 "CYP"
+BYJ_vanguard_socialism_party_long:0 "Workers' Party of China"
+BYJ_libertarian_marxism_party_long:0 "People's Party of China"
+BYJ_revolutionary_anarchism_party_long:0 "Chinese Anarchist Movement"
+BYJ_revisionist_socialism_party_long:0 "Chinese Leftist Association"
+BYJ_social_democratism_party_long:0 "Reformation League"
+BYJ_liberalism_party_long:0 "Prosperity Consortium"
+BYJ_conservatism_party_long:0 "Shanxi Republic Party"
+BYJ_right_authoritarianism_party_long:0 "Shanxi Clique"
+BYJ_despotism_party_long:0 "Shanxi Military Clique"
+BYJ_reactionism_party_long:0 "Renaissance Society"
+BYJ_accelerationism_party_long:0 "Chinese Youth Party"
+
+#LEADER DESCRITIONS#
+
+#IDEAS#
+BYJ_egg_dancer:0 "Egg Dancing"
+BYJ_egg_dancer_desc:0 "The Beiyang government pursued an “existentialist diplomatic” strategy and maintained an equal and neutral relationship with all foreign forces. According to Yan Xishan, this is “Dance on fifteen eggs, and not one of them shall be broken”.As long as it is beneficial to the development of industry of north China, Yan Xishan will open the embrace of welcome. But it also makes some countries upset..."
+BYJ_industrial_investment:0 "Industrial Investment"
+BYJ_industrial_investment_desc:0 "The Ten-year Construction Plan for North China, enacted in 1932, extended the Shanxi model to the whole of northern China, aiming to build an industrial system of mutual support between government-run heavy industry and privately-operated light industry through government-led industrial investment, and to be implemented under the supervision of an authoritarian institution directly under Yan Xishan,the Industry Steering Committee."
+BYJ_fengtian_threat:0 "Fengtian Threat"
+BYJ_fengtian_threat_desc:0 "Operation “June Storm”, Huabei War and the Japanese invasion did not completely destroy the Fengtian clique. After token resistance, Fengtian army led by Zhang Zuolin retreat pass Shanhai Pass, and Yan Xishan, forced by domestic public opinion,cannot suppress this “Brave anti-japanese army” directly, had to acquiesce in their place in government. The conflict between Shanxi and Fengtian tore apart the Beiyang government to some extent. Fortunately, most of the parliamentary factions were still loyal to Yan Xishan."
+BYJ_compulsory_education:0 "Compulsory Education"
+BYJ_compulsory_education_desc:0 "It is extremely difficult to popularize compulsory education in north China. The success of Shanxi Province is attributed to the effective control of the Shanxi army over the whole province. However, under the constraints of Fengtian army and Guomin army, this model encountered a significant bottleneck. The military reform and redeployment conference is not on the agenda. Maybe Yan has another plan?"
+
+#CUSTOM TOOLTIPS AND FLAGS#
+
+BYJ_SETTING_SUN_DESC:0 "The Beiyang Government is the dominant force in China, after decades of fighting and shifting alliances the KMT have fallen into disarray at the failure of the Northern Expedition, Yan Xishan has positioned his government in Beijing to unite the nation at last. First however he must beat back the Japanese who are eager to break his Republic and open the gates to all of China."
+
+#DECISIONS (1.5 Update)#
+
+#EVENTS#
+byj.1.t:0 "The Mantetsu Collapse"
+byj.1.d:0 "The Japanese have paid dearly for their arrogance, their empire is now collapsing around them, the corporate interests in Mantetsu are running scared or preparing their private armies for a stand in the name of the Emperor. We can easily wipe them aside and reclaim a portion of Manchuria for ourselves. One piece at a time we will reclaim all of China."
+byj.1.a:0 "We should take advantage of the situation!"
+
+byj.2.t:0 "The Rebellions"
+byj.2.d:0 "Yan's failures have brought a reckoning upon the Shanxi Clique, the various Northern factions are now in open revolt against the perceived weakness of Taiyuan and its leaders. Yan Xishan may be gone but Fu Xuiyang is not popular enough to be the man to peacefully unify the government."
+byj.2.a:0 "Yan is past his best, remove him."
+byj.2.b:0 "Join the Yellow secret society."
+byj.2.c:0 "Join the Guominjun."
+
+#FOCUSES#

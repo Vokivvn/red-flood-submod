@@ -1,0 +1,24 @@
+state={
+	id=750
+	name="STATE_750"
+	provinces={
+		4896 7101 7201 7279 7434 10006 10822 12086
+	}
+	manpower=8000000
+	buildings_max_level_factor=1.000
+	state_category = town
+	history={
+		owner = XIA
+		add_core_of = XIA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 2
+			air_base = 2
+		}
+		victory_points = {
+			7101 10
+		}
+
+	}
+}

@@ -1,0 +1,165 @@
+##############
+## Armenian Events #
+##############
+
+add_namespace = ARM
+
+##Event: The Fragile Democracy
+country_event = {
+	id = ARM.1
+	title = ARM.1.title
+	desc = ARM.1.desc
+	picture = GFX_report_event_hungary_parliament
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.1.a
+		ai_chance = { factor = 50 }
+		complete_national_focus = ARM_businessasusual
+	}
+	option = {
+		name = ARM.1.b
+		ai_chance = { factor = 50 }
+		complete_national_focus = ARM_theyfindout
+	}
+}
+
+##Event: Business as Usual
+country_event = {
+	id = ARM.2
+	title = ARM.2.title
+	desc = ARM.2.desc
+	picture = GFX_report_event_finnish_letter
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.2.a
+		add_political_power = 100
+		add_stability = 0.10	
+	}
+}
+
+##Event: 1936 Armenian Elections
+country_event = {
+	id = ARM.3
+	title = ARM.3.title
+	desc = ARM.3.desc
+	picture = GFX_report_event_poland_rejects
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.3.a
+		ai_chance = { factor = 50 }
+		complete_national_focus = ARM_dashnakswin
+	}
+	option = {
+		name = ARM.3.b
+		ai_chance = { factor = 50 }
+		complete_national_focus = ARM_huntchakianvictory
+	}
+}
+
+##Event: Dashnak Victory!
+country_event = {
+	id = ARM.4
+	title = ARM.4.title
+	desc = ARM.4.desc
+	picture = GFX_report_event_japanese_reply
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.4.a
+		retire_country_leader = yes
+
+		create_country_leader = {
+			name = "Sirakn Tigranyan"
+			desc = "POLITICS_PETER_II_DESC"
+			picture = "Portrait_Sirakn.tga"
+			expire = "1965.1.1"
+			ideology = progressivism
+			traits = { }
+		}
+	}
+}
+
+##Event: Huntchakian Victory!
+country_event = {
+	id = ARM.5
+	title = ARM.5.title
+	desc = ARM.5.desc
+	picture = GFX_report_event_generic_sign_treaty1
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.5.a
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = 0.40
+		}
+	}
+}
+
+##Event: Garegin Saves Armenia
+country_event = {
+	id = ARM.6
+	title = ARM.6.title
+	desc = ARM.6.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.6.a
+		complete_national_focus = ARM_theyfindout
+		set_politics = {
+			ruling_party = reactionism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.30
+		}
+	}
+}
+
+country_event = {
+	id = ARM.11
+	title = ARM.11.title
+	desc = ARM.11.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.11.a
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.20
+		}
+		230 = {
+			add_manpower = -112543
+		}
+	}
+}
+
+country_event = {
+	id = ARM.12
+	title = ARM.12.title
+	desc = ARM.12.desc
+	picture = GFX_report_event_yugoslavian_cavalry
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ARM.12.a
+	}
+}

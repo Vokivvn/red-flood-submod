@@ -1,0 +1,1269 @@
+focus_tree = {
+	id = ALT
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ALT
+		}
+	}
+
+	continuous_focus_position = { x = 50 y = 1500 }
+	#Focus for Kagyrodov survives!
+	focus = {
+		id = ALT_kagyrodovsurvives
+		icon = GFX_kagyrodovsurvives
+		x = 25
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_ourfuture }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = right_authoritarianism
+		}
+	}
+
+	#Focus for Faith In Christ
+	focus = {
+		id = ALT_faithinchrist
+		icon = GFX_faithinchrist
+		x = 19
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_rasputinsmysticstakeover }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.10
+			}
+			add_stability = 0.15
+		}
+	}
+
+	#Focus for Rasputin's Mystics Take Over
+	focus = {
+		id = ALT_rasputinsmysticstakeover
+		icon = GFX_rasputinsmysticstakeover
+		x = 19
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_ourfuture }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = accelerationism
+		}
+		available = {
+			has_government = accelerationism
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Our Future
+	focus = {
+		id = ALT_ourfuture
+		icon = GFX_ourfuture
+		x = 14
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_thesurvival }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 100
+			hidden_effect = {
+				country_event = {
+					days = 20
+					id = alt.4
+				}
+				914 = {
+					add_core_of = ALT
+				}
+				915 = {
+					add_core_of = ALT
+				}
+				612 = {
+					add_core_of = ALT
+				}
+				330 = {
+					add_core_of = ALT
+				}
+				793 = {
+					add_core_of = ALT
+				}
+				
+			}
+		}
+	}
+
+	#Focus for The Survival
+	focus = {
+		id = ALT_thesurvival
+		icon = GFX_thesurvival
+		x = 14
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_holdoffthebaron }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Hold off the Baron
+	focus = {
+		id = ALT_holdoffthebaron
+		icon = GFX_holdoffthebaron
+		x = 14
+		y = 3
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_theemergency }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = ALT_emergencytactics
+				days = 365
+			}
+		}
+	}
+
+	#Focus for Peaceful Syncretic Nation
+	focus = {
+		id = ALT_peacefulsyncreticnation
+		icon = GFX_peacefulsyncreticnation
+		x = 25
+		y = 10
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_supresstheradicals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_peace
+		}
+	}
+
+	#Focus for Revived National Identity
+	focus = {
+		id = ALT_revivednationalidentity
+		icon = GFX_revivednationalidentity
+		x = 25
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_embraceturkicculture 
+		}
+		prerequisite = { 
+			focus = ALT_embracerussianculture 
+		}
+		prerequisite = { 
+			focus = ALT_nationalunity 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.20
+		}
+	}
+
+	#Focus for Supress The Radicals
+	focus = {
+		id = ALT_supresstheradicals
+		icon = GFX_supresstheradicals
+		x = 25
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_revivednationalidentity }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.15
+			}
+			add_stability = -0.10
+			add_political_power = -200
+		}
+	}
+
+	#Focus for Embrace Russian Culture
+	focus = {
+		id = ALT_embracerussianculture
+		icon = GFX_embracerussianculture
+		x = 27
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_kagyrodovsurvives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_rus
+		}
+	}
+
+	#Focus for Embrace Turkic Culture
+	focus = {
+		id = ALT_embraceturkicculture
+		icon = GFX_embraceturkicculture
+		x = 23
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_kagyrodovsurvives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_tur
+		}
+	}
+
+	#Focus for Altaic Chaos
+	focus = {
+		id = ALT_altaicchaos
+		icon = GFX_altaicchaos
+		x = 14
+		y = 1
+		cost = 6
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.30
+			remove_ideas = ALT_chaos
+		}
+	}
+
+	#Focus for The Emergency
+	focus = {
+		id = ALT_theemergency
+		icon = GFX_theemergency
+		x = 14
+		y = 2
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_altaicchaos }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TAN
+			}
+		}
+	}
+
+	#Focus for And Sin On Earth
+	focus = {
+		id = ALT_andsinonearth
+		icon = GFX_andsinonearth
+		x = 19
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_faithinchrist }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_hedonism
+			hidden_effect = {
+				country_event = {
+					id = alt.12
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for Supress the Old Believers
+	focus = {
+		id = ALT_supresstheoldbelievers
+		icon = GFX_supresstheoldbelievers
+		x = 17
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_rasputinsmysticstakeover }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.15
+			}
+			hidden_effect = {
+				country_event = {
+					id = alt.13
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for Terrify the Baron
+	focus = {
+		id = ALT_terrifythebaron
+		icon = GFX_terrifythebaron
+		x = 17
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_supresstheoldbelievers }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			TAN = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = alt.2
+			}
+		}
+	}
+
+	#Focus for God's Realm of Transgression
+	focus = {
+		id = ALT_godsrealmoftransgression
+		icon = GFX_godsrealmoftransgression
+		x = 19
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_andsinonearth }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_constanttransgression
+		}
+	}
+
+	#Focus for Reduce Military Spending
+	focus = {
+		id = ALT_reducemilitaryspending
+		icon = GFX_reducemilitaryspending
+		x = 21
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_rasputinsmysticstakeover }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Tsarist Mythos
+	focus = {
+		id = ALT_tsaristmythos
+		icon = GFX_tsaristmythos
+		x = 21
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_reducemilitaryspending }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_tsaristmythos
+			hidden_effect = {
+				country_event = {
+					id = alt.11
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for Unshakable Loyalty to the Great Lover
+	focus = {
+		id = ALT_unshakableloyaltytothegreatlover
+		icon = GFX_unshakableloyaltytothegreatlover
+		x = 19
+		y = 10
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_godsrealmoftransgression 
+		}
+		prerequisite = { 
+			focus = ALT_terrifythebaron 
+		}
+		prerequisite = { 
+			focus = ALT_tsaristmythos 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_greatlover
+		}
+	}
+
+	#Focus for Bokii's Mystic Bolshevism
+	focus = {
+		id = ALT_bokiismysticbolshevism
+		icon = GFX_bokiismysticbolshevism
+		x = 12
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_ourfuture }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = revisionist_socialism
+		}
+		available = {
+			has_government = revisionist_socialism
+		}
+	}
+
+	#Focus for Call Upon the Altaic Race
+	focus = {
+		id = ALT_calluponthealtaicrace
+		icon = GFX_calluponthealtaicrace
+		x = 14
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_bokiismysticbolshevism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.20
+		}
+	}
+
+	#Focus for Claims in Dalai
+	focus = {
+		id = ALT_claimsindalai
+		icon = GFX_claimsindalai
+		x = 14
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_calluponthealtaicrace }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_core = 964
+			add_state_core = 564
+			add_state_core = 563
+		}
+	}
+
+	#Focus for Great Curse upon the Bourgeoise
+	focus = {
+		id = ALT_greatcurseuponthebourgeoise
+		icon = GFX_greatcurseuponthebourgeoise
+		x = 12
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_bokiismysticbolshevism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.15
+			}
+			add_stability = -0.05
+			hidden_effect = {
+				country_event = {
+					id = alt.8
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for Crush The Traitors
+	focus = {
+		id = ALT_crushthetraitors
+		icon = GFX_crushthetraitors
+		x = 12
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_greatcurseuponthebourgeoise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.20
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 1
+			}
+		}
+	}
+
+	#Focus for Grandiose Rituals
+	focus = {
+		id = ALT_grandioserituals
+		icon = GFX_grandioserituals
+		x = 10
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_bokiismysticbolshevism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.20
+			add_ideas = ALT_superstition
+		}
+	}
+
+	#Focus for Sacred Realm of Socialism
+	focus = {
+		id = ALT_sacredrealmofsocialism
+		icon = GFX_sacredrealmofsocialism
+		x = 10
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_grandioserituals }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			remove_ideas = ALT_superstition
+			add_ideas = ALT_mysticism
+		}
+	}
+
+	#Focus for Shamanic Empire
+	focus = {
+		id = ALT_shamanicempire
+		icon = GFX_shamanicempire
+		x = 12
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_sacredrealmofsocialism 
+		}
+		prerequisite = { 
+			focus = ALT_crushthetraitors 
+		}
+		prerequisite = { 
+			focus = ALT_claimsindalai 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_shamanicempire
+			hidden_effect = {
+				country_event = {
+					id = alt.10
+					days = 3
+				}
+			}
+		}
+	}
+
+	#Focus for Grigorii's Burkhanism
+	focus = {
+		id = ALT_grigoriisburkhanism
+		icon = GFX_grigoriisburkhanism
+		x = 5
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_ourfuture }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = reactionism
+		}
+		available = {
+			has_government = reactionism
+		}
+	}
+
+	#Focus for Destroy Hostile Shamanism
+	focus = {
+		id = ALT_destroyhostileshamanism
+		icon = GFX_destroyhostileshamanism
+		x = 5
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_grigoriisburkhanism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.40
+			}
+			add_ideas = ALT_shaman_partisans
+			hidden_effect = {
+				country_event = {
+					id = alt.6
+					days = 15
+				}
+			}
+		}
+	}
+
+	#Focus for Embrace Orthodox Elements
+	focus = {
+		id = ALT_embraceorthodoxelements
+		icon = GFX_embraceorthodoxelements
+		x = 5
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_destroyhostileshamanism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	#Focus for Syncretism and Balance
+	focus = {
+		id = ALT_syncretismandbalance
+		icon = GFX_syncretismandbalance
+		x = 5
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_embraceorthodoxelements }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ALT_shaman_partisans
+				add_idea = ALT_syncretism
+			}
+		}
+	}
+
+	#Focus for Millenarian Cult
+	focus = {
+		id = ALT_millenariancult
+		icon = GFX_millenariancult
+		x = 3
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_grigoriisburkhanism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			hidden_effect = {
+				country_event = {
+					id = alt.5
+					days = 25
+				}
+			}
+		}
+	}
+
+	#Focus for A Great New Age
+	focus = {
+		id = ALT_agreatnewage
+		icon = GFX_agreatnewage
+		x = 3
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_millenariancult }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_millenarianism
+		}
+	}
+
+	#Focus for Cooperate with the Rich
+	focus = {
+		id = ALT_cooperatewiththerich
+		icon = GFX_cooperatewiththerich
+		x = 7
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_grigoriisburkhanism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			hidden_effect = {
+				country_event = {
+					id = alt.7
+					days = 8
+				}
+			}
+		}
+	}
+
+	#Focus for Lower Taxes
+	focus = {
+		id = ALT_lowertaxes
+		icon = GFX_lowertaxes
+		x = 7
+		y = 9
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_cooperatewiththerich }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_lowertaxes
+		}
+	}
+
+	#Focus for Traditionalism and Nationalism
+	focus = {
+		id = ALT_traditionalismandnationalism
+		icon = GFX_traditionalismandnationalism
+		x = 5
+		y = 10
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = ALT_agreatnewage 
+		}
+		prerequisite = { 
+			focus = ALT_syncretismandbalance 
+		}
+		prerequisite = { 
+			focus = ALT_lowertaxes 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Industrial Nescessities
+	focus = {
+		id = ALT_industrialnescessities
+		icon = GFX_industrialnescessities
+		x = 30
+		y = 3
+		cost = 6
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Focus for Military Bases
+	focus = {
+		id = ALT_militarybases
+		icon = GFX_militarybases
+		x = 32
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_industrialnescessities }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Infrastructure Projects
+	focus = {
+		id = ALT_infrastructureprojects
+		icon = GFX_infrastructureprojects
+		x = 30
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_industrialnescessities }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			654 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes					
+				}
+			}
+		}
+	}
+
+	#Focus for Civilian Industry Expansion
+	focus = {
+		id = ALT_civilianindustryexpansion
+		icon = GFX_civilianindustryexpansion
+		x = 28
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_industrialnescessities }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for To Gorno-Altaysk
+	focus = {
+		id = ALT_togornoaltaysk
+		icon = GFX_togornoaltaysk
+		x = 30
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_railwaysfromkamenogorsk }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			654 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Gorno Industrial Zone
+	focus = {
+		id = ALT_gornoindustrialzone
+		icon = GFX_gornoindustrialzone
+		x = 28
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_civilianindustryexpansion }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Railways from Kamenogorsk
+	focus = {
+		id = ALT_railwaysfromkamenogorsk
+		icon = GFX_railwaysfromkamenogorsk
+		x = 30
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_infrastructureprojects }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Concrete Ocean
+	focus = {
+		id = ALT_concreteocean
+		icon = GFX_concreteocean
+		x = 28
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_gornoindustrialzone }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_concrete
+		}
+	}
+
+	#Focus for Kamenogorsk Base
+	focus = {
+		id = ALT_kamenogorskbase
+		icon = GFX_kamenogorskbase
+		x = 32
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_militarybases }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				ROOT = { set_country_flag = aviation_effort_AB }
+			}
+		}
+	}
+
+	#Focus for A Gun for Every Citizen
+	focus = {
+		id = ALT_agunforeverycitizen
+		icon = GFX_agunforeverycitizen
+		x = 32
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_kamenogorskbase }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 3000
+				producer = ALT 
+			}
+		}
+	}
+
+	#Focus for The Altaic High Command
+	focus = {
+		id = ALT_thealtaichighcommand
+		icon = GFX_thealtaichighcommand
+		x = 37
+		y = 3
+		cost = 6
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	#Focus for New Officers
+	focus = {
+		id = ALT_newofficers
+		icon = GFX_newofficers
+		x = 37
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_thealtaichighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 30
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 3.0
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for New Guns
+	focus = {
+		id = ALT_newguns
+		icon = GFX_newguns
+		x = 37
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_newofficers }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 2.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Focus for Buy some Airplanes
+	focus = {
+		id = ALT_buysomeairplanes
+		icon = GFX_buysomeairplanes
+		x = 39
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_thealtaichighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 250
+				producer = ALT 
+			}
+			add_political_power = -200
+		}
+	}
+
+	#Focus for Riverine Military Bases
+	focus = {
+		id = ALT_riverinemilitarybases
+		icon = GFX_riverinemilitarybases
+		x = 35
+		y = 4
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_thealtaichighcommand }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 30
+		}
+	}
+
+	#Focus for Encourage Consumer Industries
+	focus = {
+		id = ALT_encourageconsumerindustries
+		icon = GFX_encourageconsumerindustries
+		x = 27
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_embracerussianculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_consumer
+		}
+	}
+
+	#Focus for National Unity
+	focus = {
+		id = ALT_nationalunity
+		icon = GFX_nationalunity
+		x = 25
+		y = 7
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_kagyrodovsurvives }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+
+	#Focus for Dual Language
+	focus = {
+		id = ALT_duallanguage
+		icon = GFX_duallanguage
+		x = 23
+		y = 8
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = ALT_embraceturkicculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = ALT_dual
+		}
+	}
+
+#End of focuses 
+}

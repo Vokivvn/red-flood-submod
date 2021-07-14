@@ -1,0 +1,56 @@
+﻿
+### events about norway ###
+
+
+add_namespace = nor
+
+country_event = {
+	id = nor.1
+	title = nor.1.t
+	desc = nor.1.d
+	picture = GFX_report_event_airplane_factory
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		country_exists = SWE
+	}
+
+	option = {
+	    name = nor.1.a
+		ai_chance = { 
+			base = 3
+		}
+		
+		NOR = { create_wargoal = { type = annex_everything target = SWE } }
+		
+	}
+
+	option = {
+		name = nor.1.b
+		ai_chance = {
+			base = 1
+			modifier = {
+				#
+			}
+		}
+		
+		NOR = { transfer_state = 110
+	    }
+    }
+}
+
+
+
+country_event = {
+ id = nor.2
+ title = nor.2.t
+ desc = nor.1.desc
+ picture = GFX_news_event_aid_pact
+ is_triggered_only = yes
+ fire_only_once = yes
+ major = yes
+option = {
+}
+}
+

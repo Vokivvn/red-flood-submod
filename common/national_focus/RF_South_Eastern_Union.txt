@@ -1,0 +1,3434 @@
+focus_tree = {
+	id = RF_south_eastern_union
+	country = {
+		factor = 0
+		modifier = {
+			add = 100
+			original_tag = DKB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+
+	focus = {
+		id = DKB_krug_gathering
+		icon = GFX_goal_DKB_krug_gathering
+		cost = 4
+		x = 10
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			country_event = {
+				id = dkb.1
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_chernomortsy_victorious
+		icon = GFX_goal_DKB_chernomortsy_victorious
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = -7
+		y = 1
+		available = {
+			has_country_flag = DKB_chernomortsy_alone
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_death_of_union
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = right_authoritarianism 
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DKB_kaledin_marches_forward
+		icon = GFX_goal_DKB_kaledin_marches_forward
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = 0
+		y = 1
+		available = {
+			has_country_flag = DKB_chernomortsy_lineytsy_coalition
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_death_of_union
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_party_name = { 
+					ideology = despotism 
+					long_name = DKB_despotism_party_dynamic_long 
+					name = DKB_despotism_party_dynamic 
+				}
+				set_party_name = { 
+					ideology = right_authoritarianism 
+					long_name = DKB_despotism_party_dynamic_long 
+					name = DKB_despotism_party_dynamic 
+				}
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DKB_lineytsy_victorious
+		icon = GFX_goal_DKB_lineytsy_victorious
+		cost = 1
+		relative_position_id = DKB_krug_gathering
+		x = 7
+		y = 1
+		available = {
+			OR = {
+				has_country_flag = DKB_lineytsy_alone
+				has_country_flag = DKB_grabbe_wins
+			}
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_death_of_union
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			retire_country_leader = yes
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = DKB_death_of_union
+		icon = GFX_goal_DKB_death_of_union
+		cost = 6
+		relative_position_id = DKB_krug_gathering
+		x = 11
+		y = 1
+		available = {
+			has_country_flag = DKB_chernomortsy_scythists_coalition
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			country_event = {
+				id = dkb.12
+			}
+		}
+	}
+	focus = {
+		id = DKB_gorgulov_at_stage
+		icon = GFX_goal_DKB_gorgulov_at_stage
+		cost = 8
+		relative_position_id = DKB_krug_gathering
+		x = 15
+		y = 1
+		available = {
+			OR = {
+				has_country_flag = DKB_scythists_alone
+				has_country_flag = DKB_gorgulov_wins
+			}
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_krug_gathering
+		}
+		mutually_exclusive = {
+			focus = DKB_chernomortsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_kaledin_marches_forward
+		}
+		mutually_exclusive = {
+			focus = DKB_lineytsy_victorious
+		}
+		mutually_exclusive = {
+			focus = DKB_death_of_union
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = accelerationism 
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			set_cosmetic_tag = "DKB_GREAT_SCYTHIA"
+			RUS = {
+				end_puppet = DKB
+			}
+			set_autonomy = {
+			    target = DKB
+			    autonomy_state = autonomy_free
+			}
+			remove_ideas = RUS_warlord_indifference
+		}
+	}
+
+	### Chernomortsy ###
+
+	focus = {
+		id = DKB_officialize_ukrainian_education
+		icon = GFX_goal_DKB_officialize_ukrainian_education
+		cost = 5
+		relative_position_id = DKB_chernomortsy_victorious
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+		}
+		completion_reward = {
+			UKR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_ideas = DKB_ukrainian_education
+		}
+	}
+	focus = {
+		id = DKB_print_hryvnia
+		icon = GFX_goal_DKB_print_hryvnia
+		cost = 3
+		relative_position_id = DKB_officialize_ukrainian_education
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_officialize_ukrainian_education
+		}
+		completion_reward = {
+			add_ideas = DKB_hryvnia_currency
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = DKB_drift_away_from_russia
+		icon = GFX_goal_DKB_drift_away_from_russia
+		cost = 2
+		relative_position_id = DKB_print_hryvnia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_print_hryvnia
+		}
+		completion_reward = {
+			UKR = { add_opinion_modifier = { target = DKB modifier = large_increase } }
+			swap_ideas = {
+				remove_idea = DKB_ukrainian_education
+				add_idea = DKB_ukrainian_education1
+			}
+			swap_ideas = {
+				remove_idea = DKB_hryvnia_currency
+				add_idea = DKB_hryvnia_currency1
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_decentralize_military
+		icon = GFX_goal_DKB_decentralize_military
+		cost = 3
+		relative_position_id = DKB_chernomortsy_victorious
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_ideas = DKB_decentralized_army
+		}
+	}
+	focus = {
+		id = DKB_require_visa
+		icon = GFX_goal_DKB_require_visa
+		cost = 3
+		relative_position_id = DKB_decentralize_military
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_decentralize_military
+		}
+		completion_reward = {
+			add_ideas = DKB_legal_immigration
+		}
+	}
+	focus = {
+		id = DKB_land_of_freedom
+		icon = GFX_goal_DKB_land_of_freedom
+		cost = 3
+		relative_position_id = DKB_require_visa
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_require_visa
+		}
+		completion_reward = {
+			add_stability = 0.2
+			swap_ideas = {
+				remove_idea = DKB_legal_immigration
+				add_idea = DKB_legal_immigration1
+			}
+		}
+	}
+	focus = {
+		id = DKB_intensify_reforms
+		icon = GFX_goal_DKB_intensify_reforms
+		cost = 5
+		relative_position_id = DKB_land_of_freedom
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_drift_away_from_russia
+		}
+		prerequisite = {
+			focus = DKB_land_of_freedom
+		}
+		prerequisite = {
+			focus = DKB_open_to_europe
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = DKB_legal_immigration1
+				add_idea = DKB_legal_immigration2
+			}
+			swap_ideas = {
+				remove_idea = DKB_hryvnia_currency1
+				add_idea = DKB_hryvnia_currency2
+			}
+			swap_ideas = {
+				remove_idea = DKB_decentralized_army
+				add_idea = DKB_decentralized_army1
+			}
+			swap_ideas = {
+				remove_idea = DKB_ukrainian_education1
+				add_idea = DKB_ukrainian_education2
+			}
+		}
+	}
+
+	##########
+
+	focus = {
+		id = DKB_free_trade_zone_of_taganrog
+		icon = GFX_goal_DKB_free_trade_zone_of_taganrog
+		cost = 7
+		relative_position_id = DKB_chernomortsy_victorious
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = DKB_chernomortsy_victorious
+			focus = DKB_kaledin_marches_forward
+		}
+		completion_reward = {
+			218 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = DKB_expand_donbass_coal_trade
+		icon = GFX_goal_DKB_expand_donbass_coal_trade
+		cost = 7
+		relative_position_id = DKB_free_trade_zone_of_taganrog
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_free_trade_zone_of_taganrog
+		}
+		completion_reward = {
+			add_resource = {
+    			type = oil
+    			amount = 10
+    			state = 218
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				technology = synth_oil_experiments
+				technology = oil_processing
+				technology = improved_oil_processing
+				technology = advanced_oil_processing
+			}
+		}
+	}
+	focus = {
+		id = DKB_open_to_europe
+		icon = GFX_goal_DKB_open_to_europe
+		cost = 2
+		relative_position_id = DKB_expand_donbass_coal_trade
+		x = -1
+		y = 1
+		available = {
+			has_completed_focus = DKB_chernomortsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_expand_donbass_coal_trade
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_europe_idea
+			UKR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = UKR modifier = medium_increase }
+			POL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = POL modifier = medium_increase }
+			BLR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BLR modifier = medium_increase }
+			LIT = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = LIT modifier = medium_increase }
+			GER = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = GER modifier = medium_increase }
+			CZE = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = CZE modifier = medium_increase }
+			PRS = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = PRS modifier = medium_increase }
+			ROM = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ROM modifier = medium_increase }
+			MOL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = MOL modifier = medium_increase }
+			BUL = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BUL modifier = medium_increase }
+		}
+	}
+	focus = {
+		id = DKB_guns_for_caucasian_tatars
+		icon = GFX_goal_DKB_guns_for_caucasian_tatars
+		cost = 2
+		relative_position_id = DKB_expand_donbass_coal_trade
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = DKB_kaledin_marches_forward
+		}
+		prerequisite = {
+			focus = DKB_expand_donbass_coal_trade
+		}
+		completion_reward = {
+			AZR = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = AZR modifier = medium_increase }
+			AZR = {
+				add_equipment_to_stockpile = {
+  					type = infantry_equipment
+   					amount = 3000
+    				producer = DKB
+				}
+				add_war_support = 0.1
+			}
+		}
+	}
+
+	### Kaledin ###
+
+	focus = {
+		id = DKB_union_of_all_peoples
+		icon = GFX_goal_DKB_union_of_all_peoples
+		cost = 2
+		relative_position_id = DKB_kaledin_marches_forward
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_kaledin_marches_forward
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_ideas = DKB_federalism
+		}
+	}
+	focus = {
+		id = DKB_be_wary_of_change
+		icon = GFX_goal_DKB_be_wary_of_change
+		cost = 2
+		relative_position_id = DKB_union_of_all_peoples
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_union_of_all_peoples
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = DKB_invest_in_all_education
+		icon = GFX_goal_DKB_invest_in_all_education
+		cost = 2
+		relative_position_id = DKB_be_wary_of_change
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_be_wary_of_change
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = 0.05
+			add_ideas = DKB_pluralistic_education
+		}
+	}
+	focus = {
+		id = DKB_independent_diplomacy
+		icon = GFX_goal_DKB_independent_diplomacy
+		cost = 2
+		relative_position_id = DKB_invest_in_all_education
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_guns_for_caucasian_tatars
+		}
+		prerequisite = {
+			focus = DKB_invest_in_all_education
+		}
+		prerequisite = {
+			focus = DKB_open_to_world
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DKB_open_to_world_idea
+				add_idea = DKB_open_to_world_idea1
+			}
+			add_political_power = 50
+		}
+	}
+
+	##########
+
+	focus = {
+		id = DKB_free_trade_zone_of_astrakhan
+		icon = GFX_goal_DKB_free_trade_zone_of_astrakhan
+		cost = 7
+		relative_position_id = DKB_lineytsy_victorious
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = DKB_kaledin_marches_forward
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			236 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			RUS = { add_opinion_modifier = { target = DKB modifier = small_increase } }
+			add_opinion_modifier = { target = RUS modifier = small_increase }
+		}
+	}
+	focus = {
+		id = DKB_expand_factory_tsaritsyn
+		icon = GFX_goal_DKB_expand_factory_tsaritsyn
+		cost = 7
+		relative_position_id = DKB_free_trade_zone_of_astrakhan
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_free_trade_zone_of_astrakhan
+		}
+		completion_reward = {
+			217 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = armor
+			}
+		}
+	}
+	focus = {
+		id = DKB_open_to_world
+		icon = GFX_goal_DKB_open_to_world
+		cost = 2
+		relative_position_id = DKB_expand_factory_tsaritsyn
+		x = -1
+		y = 1
+		available = {
+			has_completed_focus = DKB_kaledin_marches_forward
+		}
+		prerequisite = {
+			focus = DKB_expand_factory_tsaritsyn
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_world_idea
+			GER = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = GER modifier = medium_increase }
+			ITA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ITA modifier = medium_increase }
+			ENG = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = ENG modifier = medium_increase }
+			USA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = USA modifier = medium_increase }
+			JAP = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = JAP modifier = medium_increase }
+			BRA = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = BRA modifier = medium_increase }
+			CAN = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = CAN modifier = medium_increase }
+		}
+	}
+	focus = {
+		id = DKB_open_to_russia
+		icon = GFX_goal_DKB_open_to_russia
+		cost = 2
+		relative_position_id = DKB_expand_factory_tsaritsyn
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = DKB_lineytsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_expand_factory_tsaritsyn
+		}
+		completion_reward = {
+			add_ideas = DKB_open_to_russia_idea
+			RUS = { add_opinion_modifier = { target = DKB modifier = medium_increase } }
+			add_opinion_modifier = { target = RUS modifier = medium_increase }
+		}
+	}
+
+	### Lineytsy ### 
+
+	focus = {
+		id = DKB_move_towards_centralism
+		icon = GFX_goal_DKB_move_towards_centralism
+		cost = 3
+		relative_position_id = DKB_lineytsy_victorious
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = DKB_officialize_russification
+		icon = GFX_goal_DKB_officialize_russification
+		cost = 5
+		relative_position_id = DKB_move_towards_centralism
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_move_towards_centralism
+		}
+		completion_reward = {
+			add_ideas = DKB_russification
+		}
+	}
+	focus = {
+		id = DKB_invite_settlers
+		icon = GFX_goal_DKB_invite_settlers
+		cost = 5
+		relative_position_id = DKB_officialize_russification
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_officialize_russification
+		}
+		completion_reward = {
+			add_ideas = DKB_russian_immigration
+			257 = { add_manpower = -35986 }
+			258 = { add_manpower = -40874 }
+			223 = { add_manpower = -23140 }
+
+			1056 = { add_manpower = 16523 }
+			235 = { add_manpower = 24891 }
+			217 = { add_manpower = 26046 }
+			407 = { add_manpower = 32540 }
+		}
+	}
+
+	focus = {
+		id = DKB_continue_using_ruble
+		icon = GFX_goal_DKB_continue_using_ruble
+		cost = 2
+		relative_position_id = DKB_lineytsy_victorious
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_lineytsy_victorious
+		}
+		completion_reward = {
+			add_ideas = DKB_ruble_currency
+		}
+	}
+	focus = {
+		id = DKB_unify_our_troops
+		icon = GFX_goal_DKB_unify_our_troops
+		cost = 3
+		relative_position_id = DKB_continue_using_ruble
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_continue_using_ruble
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = DKB_centralized_army
+		}
+	}
+	focus = {
+		id = DKB_solve_separatist_problem
+		icon = GFX_goal_DKB_solve_separatist_problem
+		cost = 2
+		relative_position_id = DKB_unify_our_troops
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_unify_our_troops
+		}
+		completion_reward = {
+			add_political_power = -70
+			add_stability = 0.05
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.25
+			}
+		}
+	}
+	focus = {
+		id = DKB_loyal_south_east
+		icon = GFX_goal_DKB_loyal_south_east
+		cost = 4
+		relative_position_id = DKB_invite_settlers
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_open_to_russia
+		}
+		prerequisite = {
+			focus = DKB_invite_settlers
+		}
+		prerequisite = {
+			focus = DKB_solve_separatist_problem
+		}
+		completion_reward = {
+			RUS = { add_opinion_modifier = { target = DKB modifier = large_increase } }
+			add_opinion_modifier = { target = RUS modifier = large_increase }
+			add_research_slot = 1
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = DKB_open_to_russia_idea
+				add_idea = DKB_open_to_russia_idea1
+			}
+		}
+	}
+
+	### Diplomacy ###
+
+	focus = {
+		id = DKB_stay_away_from_drozdovsky
+		icon = GFX_goal_DKB_stay_away_from_drozdovsky
+		cost = 2
+		relative_position_id = DKB_independent_diplomacy
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_intensify_reforms
+			focus = DKB_independent_diplomacy
+			focus = DKB_loyal_south_east
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			diplomatic_relation = {
+    			country = SRU
+    			relation = non_aggression_pact
+  				active = yes
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = DKB_denounce_dutov
+		icon = GFX_goal_DKB_denounce_dutov
+		cost = 6
+		relative_position_id = DKB_stay_away_from_drozdovsky
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_stay_away_from_drozdovsky
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = ORE
+				}
+				add_claim_by = DKB
+			}
+			ORE = { add_opinion_modifier = { target = DKB modifier = large_decrease } }
+		}
+	}
+	focus = {
+		id = DKB_conquer_orenburg
+		icon = GFX_goal_DKB_conquer_orenburg
+		cost = 10
+		relative_position_id = DKB_denounce_dutov
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_denounce_dutov
+		}
+		available = { 
+			is_subject = no
+		}
+		will_lead_to_war_with = ORE
+		completion_reward = {
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = DKB_return_to_sich
+		icon = GFX_goal_DKB_return_to_sich
+		cost = 10
+		relative_position_id = DKB_conquer_orenburg
+		x = -6
+		y = 1
+		available = {
+			ORE = { exists = no }
+			has_completed_focus = DKB_chernomortsy_victorious
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_conquer_orenburg
+		}
+		mutually_exclusive = {
+			focus = DKB_join_intermarium
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_cousins
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_brothers
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = UKR modifier = huge_increase }
+			UKR = { add_opinion_modifier = { target = DKB modifier = huge_increase } }
+			custom_effect_tooltip = "DKB_RETURN_TO_SICH_TT"
+		}
+	}
+	focus = {
+		id = DKB_join_intermarium
+		icon = GFX_goal_DKB_join_intermarium
+		cost = 10
+		relative_position_id = DKB_conquer_orenburg
+		x = -2
+		y = 1
+		available = {
+			ORE = { exists = no }
+			OR = {
+				has_completed_focus = DKB_chernomortsy_victorious
+				has_completed_focus = DKB_kaledin_marches_forward
+			}
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_conquer_orenburg
+		}
+		mutually_exclusive = {
+			focus = DKB_return_to_sich
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_cousins
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_brothers
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_JOIN_INRERMARIUM_TT"
+		}
+	}
+	focus = {
+		id = DKB_our_russian_cousins
+		icon = GFX_goal_DKB_our_russian_cousins
+		cost = 10
+		relative_position_id = DKB_conquer_orenburg
+		x = 2
+		y = 1
+		available = {
+			ORE = { exists = no }
+			OR = {
+				has_completed_focus = DKB_kaledin_marches_forward
+				has_completed_focus = DKB_lineytsy_victorious
+			}
+			is_subject = no
+		}
+		prerequisite = {
+			focus = DKB_conquer_orenburg
+		}
+		mutually_exclusive = {
+			focus = DKB_return_to_sich
+		}
+		mutually_exclusive = {
+			focus = DKB_join_intermarium
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_brothers
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = DKB_lineytsy_victorious
+				}
+				custom_effect_tooltip = "DKB_RUSSIAN_COUSINS_TT"
+			}
+			else = {
+				diplomatic_relation = {
+    				country = RUS
+    				relation = non_aggression_pact
+  					active = yes
+				}
+				give_guarantee = RUS
+				give_guarantee = SRU
+			}
+		}
+	}
+	focus = {
+		id = DKB_our_russian_brothers
+		icon = GFX_goal_DKB_our_russian_brothers
+		cost = 10
+		relative_position_id = DKB_conquer_orenburg
+		x = 6
+		y = 1
+		available = {
+			ORE = { exists = no }
+			has_completed_focus = DKB_lineytsy_victorious
+		}
+		prerequisite = {
+			focus = DKB_conquer_orenburg
+		}
+		mutually_exclusive = {
+			focus = DKB_return_to_sich
+		}
+		mutually_exclusive = {
+			focus = DKB_join_intermarium
+		}
+		mutually_exclusive = {
+			focus = DKB_our_russian_cousins
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_RUSSIAN_BROTHERS_TT"
+		}
+	}
+
+	### Gorgulov ###
+
+	focus = {
+		id = DKB_national_peasant_program
+		icon = GFX_goal_DKB_national_peasant_program
+		cost = 10
+		relative_position_id = DKB_gorgulov_at_stage
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_gorgulov_at_stage
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.1
+			}
+			add_ideas = DKB_npp
+		}
+	}
+	focus = {
+		id = DKB_no_capitalists
+		icon = GFX_goal_DKB_no_capitalists
+		cost = 10
+		relative_position_id = DKB_national_peasant_program
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_manpower = -4912
+			1056 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			841 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			855 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = DKB_chervonets_currency
+		}
+	}
+	focus = {
+		id = DKB_no_minorities
+		icon = GFX_goal_DKB_no_minorities
+		cost = 10
+		relative_position_id = DKB_national_peasant_program
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_stability = -0.1
+			add_ideas = DKB_slavic_scythian_supremacy
+		}
+	}
+	focus = {
+		id = DKB_no_monarchists
+		icon = GFX_goal_DKB_no_monarchists
+		cost = 10
+		relative_position_id = DKB_national_peasant_program
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			add_manpower = -5293
+			add_ideas = DKB_purge_of_russian_monarchists
+		}
+	}
+	focus = {
+		id = DKB_no_communists
+		icon = GFX_goal_DKB_no_communists
+		cost = 10
+		relative_position_id = DKB_national_peasant_program
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = DKB_national_peasant_program
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_manpower = -7346
+			add_ideas = DKB_revolutionary_anti_communism
+		}
+	}
+	focus = {
+		id = DKB_rebirth_of_great_scythia
+		icon = GFX_goal_DKB_rebirth_of_great_scythia
+		cost = 10
+		relative_position_id = DKB_national_peasant_program
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = DKB_no_capitalists
+		}
+		prerequisite = {
+			focus = DKB_no_minorities
+		}
+		prerequisite = {
+			focus = DKB_no_monarchists
+		}
+		prerequisite = {
+			focus = DKB_no_communists
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					DKB_npp
+					DKB_chervonets_currency
+					DKB_slavic_scythian_supremacy
+					DKB_purge_of_russian_monarchists
+					DKB_revolutionary_anti_communism
+				}
+				add_ideas = DKB_scythian_rebirth
+			}
+			custom_effect_tooltip = "DKB_SCYTHIAN_REBIRTH_TOOLTIP"
+		}
+	}
+	focus = {
+		id = DKB_total_state_control
+		icon = GFX_goal_DKB_total_state_control
+		cost = 10
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = DKB_rebirth_of_great_scythia
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = DKB_totalitarian_state
+		}
+	}
+	focus = {
+		id = DKB_youth_participation
+		icon = GFX_goal_DKB_youth_participation
+		cost = 10
+		relative_position_id = DKB_total_state_control
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_total_state_control
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = DKB_gorgulovite_youth
+		}
+	}
+	focus = {
+		id = DKB_burn_unscythian_literature
+		icon = GFX_goal_DKB_burn_unscythian_literature
+		cost = 10
+		relative_position_id = DKB_total_state_control
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_total_state_control
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			swap_ideas = {
+				remove_idea = DKB_totalitarian_state
+				add_idea = DKB_totalitarian_state1
+			}
+			234 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			RUS = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			SRU = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			UKR = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			POL = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			KAV = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			GER = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			FRA = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			FIU = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			ITA = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+			ENG = { add_opinion_modifier = { target = DKB modifier = DKB_scythian_barbarians } }
+		}
+	}
+	focus = {
+		id = DKB_military_of_scythians
+		icon = GFX_goal_DKB_military_of_scythians
+		cost = 10
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = DKB_rebirth_of_great_scythia
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 5
+				category = cat_mobile_warfare
+				category = cat_superior_firepower
+				category = cat_grand_battle_plan
+				category = cat_mass_assault
+			}
+		}
+	}
+	focus = {
+		id = DKB_green_comissars
+		icon = GFX_goal_DKB_green_comissars
+		cost = 10
+		relative_position_id = DKB_military_of_scythians
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_military_of_scythians
+		}
+		completion_reward = {
+			add_ideas = DKB_commissars_and_orchestras
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = military_police_tech
+			}
+		}
+	}
+	focus = {
+		id = DKB_metal_horse
+		icon = GFX_goal_DKB_metal_horse
+		cost = 10
+		relative_position_id = DKB_military_of_scythians
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_military_of_scythians
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 4
+				category = armor
+				category = cat_mechanized_equipment
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = DKB_violet_will_overthrow_machine
+		icon = GFX_goal_DKB_violet_will_overthrow_machine
+		cost = 10
+		relative_position_id = DKB_rebirth_of_great_scythia
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = DKB_youth_participation
+		}
+		prerequisite = {
+			focus = DKB_burn_unscythian_literature
+		}
+		prerequisite = {
+			focus = DKB_green_comissars
+		}
+		prerequisite = {
+			focus = DKB_metal_horse
+		}
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					DKB_scythian_rebirth
+					DKB_totalitarian_state1
+					DKB_commissars_and_orchestras
+					DKB_gorgulovite_youth
+				}
+				add_ideas = DKB_chosen_of_vozhd
+			}
+			custom_effect_tooltip = "DKB_CHOSEN_OF_VOZHD_TOOLTIP"
+		}
+	}
+	focus = {
+		id = DKB_we_are_scythians_we_are_asians
+		icon = GFX_goal_DKB_we_are_scythians_we_are_asians
+		cost = 10
+		relative_position_id = DKB_violet_will_overthrow_machine
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_violet_will_overthrow_machine
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = DKB_chosen_of_vozhd
+				add_idea = DKB_chosen_of_vozhd1
+			}
+			add_stability = 0.3
+			add_war_support = 0.3
+			hidden_effect = {
+				add_state_core = 260
+				add_state_core = 859
+				add_state_core = 228
+				add_state_core = 227
+				add_state_core = 200
+				add_state_core = 196
+				add_state_core = 137
+				add_state_core = 853
+				add_state_core = 221
+				add_state_core = 240
+				add_state_core = 220
+				add_state_core = 258
+				add_state_core = 259
+				add_state_core = 225
+				add_state_core = 854
+				add_state_core = 224
+				add_state_core = 222
+			}
+			custom_effect_tooltip = "DKB_NOVOROSSIYA_CORES_TT"
+		}
+	}
+	focus = {
+		id = DKB_bashkirs_shouldnt_exist
+		icon = GFX_goal_DKB_bashkirs_shouldnt_exist
+		cost = 10
+		relative_position_id = DKB_we_are_scythians_we_are_asians
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_we_are_scythians_we_are_asians
+		}
+		will_lead_to_war_with = ORE
+		available = {
+			OR = {
+				is_neighbor_of = ORE
+				ORE = { exists = no }
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_state_core = 406
+				add_state_core = 402
+				add_state_core = 652
+				add_state_core = 582
+				add_state_core = 732
+				add_state_core = 572
+			}
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+			custom_effect_tooltip = "DKB_ORENBURG_CORES_TT"
+		}
+	}
+	focus = {
+		id = DKB_steppe_isnt_kirgiz
+		icon = GFX_goal_DKB_steppe_isnt_kirgiz
+		cost = 10
+		relative_position_id = DKB_we_are_scythians_we_are_asians
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = DKB_we_are_scythians_we_are_asians
+		}
+		will_lead_to_war_with = STE
+		available = {
+			OR = {
+				is_neighbor_of = STE
+				STE = { exists = no }
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_state_core = 571
+				add_state_core = 588
+				add_state_core = 590
+				add_state_core = 583
+				add_state_core = 404
+				add_state_core = 589
+				add_state_core = 842
+				add_state_core = 586
+				add_state_core = 794
+			}
+			create_wargoal = {
+				target = STE
+				type = annex_everything
+			}
+			custom_effect_tooltip = "DKB_STEPPES_CORES_TT"
+		}
+	}
+	focus = {
+		id = DKB_end_mongolian_treachery
+		icon = GFX_goal_DKB_end_mongolian_treachery
+		cost = 10
+		relative_position_id = DKB_bashkirs_shouldnt_exist
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_bashkirs_shouldnt_exist
+		}
+		prerequisite = {
+			focus = DKB_steppe_isnt_kirgiz
+		}
+		will_lead_to_war_with = ALT
+		will_lead_to_war_with = TAN
+		will_lead_to_war_with = SIK
+		will_lead_to_war_with = MON
+		will_lead_to_war_with = MO2
+		available = {
+			ORE = { exists = no }
+			STE = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = ALT
+					}
+					add_core_of = DKB
+				}
+				every_state = {
+					limit = {
+						is_core_of = TAN
+					}
+					add_core_of = DKB
+				}
+				every_state = {
+					limit = {
+						is_core_of = SIK
+					}
+					add_core_of = DKB
+				}
+			}
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SIK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MO2
+				type = annex_everything
+			}
+			custom_effect_tooltip = "DKB_MONGOLIA_CORES_TT"
+		}
+	}
+	focus = {
+		id = DKB_burn_kolchaks_nest
+		icon = GFX_goal_DKB_burn_kolchaks_nest
+		cost = 10
+		relative_position_id = DKB_steppe_isnt_kirgiz
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_bashkirs_shouldnt_exist
+		}
+		prerequisite = {
+			focus = DKB_steppe_isnt_kirgiz
+		}
+		will_lead_to_war_with = RUS
+		will_lead_to_war_with = SRU
+		available = {
+			OR = {
+				is_neighbor_of = RUS
+				is_neighbor_of = SRU
+				AND = {
+					SRU = { exists = no }
+					RUS = { exists = no }
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = RUS
+					}
+					add_core_of = DKB
+				}
+			}
+			create_wargoal = {
+				target = RUS
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SRU
+				type = annex_everything
+			}
+			custom_effect_tooltip = "DKB_RUSSIA_CORES_TT"
+		}
+	}
+	focus = {
+		id = DKB_agony_of_intermarium
+		icon = GFX_goal_DKB_agony_of_intermarium
+		cost = 10
+		relative_position_id = DKB_burn_kolchaks_nest
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = DKB_end_mongolian_treachery
+		}
+		will_lead_to_war_with = POL
+		will_lead_to_war_with = LIT
+		will_lead_to_war_with = BLR
+		will_lead_to_war_with = UKR
+		prerequisite = {
+			focus = DKB_burn_kolchaks_nest
+		}
+		available = {
+			OR = {
+				is_neighbor_of = UKR
+				is_neighbor_of = POL
+				is_neighbor_of = BLR
+				is_neighbor_of = LIT
+				AND = {
+					POL = { exists = no }
+					UKR = { exists = no }
+					BLR = { exists = no }
+				}
+			}
+			ORE = { exists = no }
+			STE = { exists = no }
+			ALT = { exists = no }
+			TAN = { exists = no }
+			MON = { exists = no }
+			SIK = { exists = no }
+			MO2 = { exists = no }
+			owns_state = 219
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = POL
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BLR
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = DKB_we_will_conquer_eurasia
+		icon = GFX_goal_DKB_we_will_conquer_eurasia
+		cost = 10
+		relative_position_id = DKB_agony_of_intermarium
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_agony_of_intermarium
+		}
+		available = {
+			UKR = { exists = no }
+			BLR = { exists = no }
+			POL = { exists = no }
+			ORE = { exists = no }
+			STE = { exists = no }
+			ALT = { exists = no }
+			TAN = { exists = no }
+			MON = { exists = no }
+			SIK = { exists = no }
+			MO2 = { exists = no }
+			owns_state = 219
+			owns_state = 202
+			owns_state = 206
+			owns_state = 10
+			owns_state = 96
+			owns_state = 652
+			owns_state = 590
+			owns_state = 195
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_CONQUER_EURASIA_TT"
+		}
+	}
+	focus = {
+		id = DKB_and_go_beyond
+		icon = GFX_goal_DKB_and_go_beyond
+		cost = 10
+		relative_position_id = DKB_we_will_conquer_eurasia
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = DKB_we_will_conquer_eurasia
+		}
+		available = {
+			SIB = { exists = no }
+			KCK = { exists = no }
+			ZHR = { exists = no }
+			KAV = { exists = no }
+			ARM = { exists = no }
+			CCD = { exists = no }
+			AZR = { exists = no }
+			ASY = { exists = no }
+			ETS = { exists = no }
+			TUC = { exists = no }
+			BKR = { exists = no }
+			AQT = { exists = no }
+			TRK = { exists = no }
+			TUK = { exists = no }
+			KHW = { exists = no }
+			owns_state = 49
+			owns_state = 47
+			owns_state = 48
+			owns_state = 105
+			owns_state = 107
+			owns_state = 46
+			owns_state = 43
+			owns_state = 9
+			owns_state = 763
+			owns_state = 1058
+			owns_state = 111
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "DKB_CONQUER_EURASIA_TT"
+			every_owned_state = {
+                limit = {
+                    NOT = { is_core_of = DKB }
+                    is_claimed_by = DKB
+                }
+                add_core_of = DKB
+            }
+			country_event = {
+				id = dkb.96
+			}
+		}
+	}
+
+	### Generic ###
+
+	focus = {
+		id = DKB_army_effort
+		icon = GFX_focus_army
+		x = 32
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_completed_focus = DKB_conquer_orenburg
+				has_completed_focus = DKB_we_are_scythians_we_are_asians
+			}
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_equipment_effort
+		icon = GFX_focus_equipment_1
+		prerequisite = { focus = DKB_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = DKB_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_motorization_effort
+		icon = GFX_focus_motorization
+		prerequisite = { focus = DKB_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = DKB_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_doctrine_effort
+		icon = GFX_focus_doctrine_1
+		prerequisite = { focus = DKB_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_equipment_effort_2
+		icon = GFX_focus_equipment_2
+		prerequisite = { focus = DKB_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_mechanization_effort
+		icon = GFX_focus_mechanized
+		prerequisite = { focus = DKB_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_doctrine_effort_2
+		icon = GFX_focus_doctrine_2
+		prerequisite = { focus = DKB_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_equipment_effort_3
+		icon = GFX_focus_equipment_3
+		prerequisite = { focus = DKB_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = DKB_equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_armor_effort
+		icon = GFX_focus_armor
+		prerequisite = { focus = DKB_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_special_forces
+		icon = GFX_focus_special_forces
+		prerequisite = { focus = DKB_equipment_effort_3 }
+		prerequisite = { focus = DKB_doctrine_effort_2 }
+		prerequisite = { focus = DKB_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = DKB_equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = DKB_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = DKB_aviation_effort
+		icon = GFX_focus_aviation1
+		x = 36
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_completed_focus = DKB_conquer_orenburg
+				has_completed_focus = DKB_we_are_scythians_we_are_asians
+			}
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = DKB_aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_fighter_focus
+		icon = GFX_focus_fighter
+		prerequisite = { focus = DKB_aviation_effort }
+		mutually_exclusive = { focus = DKB_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = DKB_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_bomber_focus
+		icon = GFX_focus_bomber
+		prerequisite = { focus = DKB_aviation_effort }
+		mutually_exclusive = { focus = DKB_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = DKB_aviation_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_aviation_effort_2
+		icon = GFX_focus_aviation2
+		prerequisite = { focus = DKB_bomber_focus focus = DKB_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = DKB_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = DKB_aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = DKB_aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = DKB_aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_CAS_effort
+		icon = GFX_focus_CASeffort
+		prerequisite = { focus = DKB_aviation_effort_2 }
+		prerequisite = { focus = DKB_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = DKB_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_rocket_effort
+		icon = GFX_focus_rocket_effort
+		prerequisite = { focus = DKB_aviation_effort_2 }
+		prerequisite = { focus = DKB_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = DKB_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_NAV_effort
+		icon = GFX_focus_naveffort
+		prerequisite = { focus = DKB_aviation_effort_2 }
+		prerequisite = { focus = DKB_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = DKB_aviation_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_naval_effort
+		icon = GFX_focus_navaleffort
+		x = 40
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+			OR = {
+				has_completed_focus = DKB_conquer_orenburg
+				has_completed_focus = DKB_we_are_scythians_we_are_asians
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = DKB_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = DKB_naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = DKB_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = DKB_naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = DKB_flexible_navy
+		icon = GFX_focus_flexible_navy
+		prerequisite = { focus = DKB_naval_effort }
+		mutually_exclusive = { focus = DKB_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = DKB_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_large_navy
+		icon = GFX_focus_large
+		prerequisite = { focus = DKB_naval_effort }
+		mutually_exclusive = { focus = DKB_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = DKB_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_submarine_effort
+		icon = GFX_focus_submarine
+		prerequisite = { focus = DKB_flexible_navy focus = DKB_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = DKB_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_cruiser_effort
+		icon = GFX_focus_cruisers
+		prerequisite = { focus = DKB_large_navy focus = DKB_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = DKB_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_destroyer_effort
+		icon = GFX_focus_destroyers
+		prerequisite = { focus = DKB_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = DKB_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_capital_ships_effort
+		icon = GFX_focus_capitalships
+		prerequisite = { focus = DKB_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = DKB_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_industrial_effort
+		icon = GFX_focus_industry
+		x = 44
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			OR = {
+				has_completed_focus = DKB_conquer_orenburg
+				has_completed_focus = DKB_we_are_scythians_we_are_asians
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DKB_construction_effort
+		icon = GFX_focus_construction_1
+		prerequisite = { focus = DKB_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = DKB_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_production_effort
+		icon = GFX_focus_production_1
+		prerequisite = { focus = DKB_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = DKB_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_construction_effort_2
+		icon = GFX_focus_construction_2
+		prerequisite = { focus = DKB_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = DKB_construction_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_production_effort_2
+		icon = GFX_focus_production_2
+		prerequisite = { focus = DKB_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = DKB_production_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_infrastructure_effort
+		icon = GFX_focus_infrastructure_1
+		prerequisite = { focus = DKB_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DKB_construction_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_production_effort_3
+		icon = GFX_focus_production_3
+		prerequisite = { focus = DKB_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DKB_production_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_infrastructure_effort_2
+		icon = GFX_focus_infrastructure_2
+		prerequisite = { focus = DKB_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = DKB_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_construction_effort_3
+		icon = GFX_focus_construction_3
+		prerequisite = { focus = DKB_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = DKB_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = DKB_construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_nuclear_effort
+		icon = GFX_focus_Nuclear_Effort
+		prerequisite = { focus = DKB_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = DKB_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DKB_extra_tech_slot
+		icon = GFX_focus_extra_tech1
+		prerequisite = { focus = DKB_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DKB_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = DKB_extra_tech_slot_2
+		icon = GFX_focus_extra_tech2
+		prerequisite = { focus = DKB_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = DKB_extra_tech_slot
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			always = yes
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = DKB_secret_weapons
+		icon = GFX_focus_Secret_Weapons
+		prerequisite = { focus = DKB_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = DKB_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+}

@@ -1,0 +1,307 @@
+shared_focus = {
+	id = ITA_not_marches
+	icon = GFX_focus_ITA_not_marches
+	x = 6
+	y = 0
+
+	cost = 2
+	completion_reward = {
+		remove_ideas = ITA_bulwark_of_democracy
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+}
+shared_focus = {
+	id = ITA_restore_order
+	icon = GFX_focus_ITA_restore_order
+	relative_position_id = ITA_not_marches
+	x = 0
+	y = 1
+	cost = 7
+	prerequisite = {
+		focus = ITA_not_marches
+	}
+	completion_reward = {
+		add_manpower = -5000
+		add_political_power = 100
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.05
+		}
+	}
+}
+shared_focus = {
+	id = ITA_sweep_anarchists
+	icon = GFX_focus_ITA_sweep_anarchists
+	relative_position_id = ITA_not_marches
+	x = -2
+	y = 2
+	cost = 5
+	prerequisite = {
+		focus = ITA_restore_order
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = -0.15
+		}
+	}
+}
+shared_focus = {
+	id = ITA_disarm_democrats
+	icon = GFX_focus_ITA_disarm_democrats
+	relative_position_id = ITA_not_marches
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = {
+		focus = ITA_restore_order
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = social_democratism
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = liberalism
+			popularity = -0.15
+		}
+		add_stability = 0.03
+	}
+}
+shared_focus = {
+	id = ITA_break_rossoni
+	icon = GFX_focus_ITA_break_rossoni
+	relative_position_id = ITA_not_marches
+	x = 2
+	y = 2
+	cost = 5
+	prerequisite = {
+		focus = ITA_restore_order
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = -0.15
+		}
+		kill_ideology_leader = libertarian_marxism
+		hidden_effect = {
+			create_country_leader = {
+				name = "Amadeo Bordiga"
+				desc = ""
+				picture = "Portrait_ITA_Amadeo_Bordiga.tga"
+				expire = "1965.1.1"
+				ideology = council_communism
+				traits = {
+				}
+			}
+		}
+	}
+}
+shared_focus = {
+	id = ITA_secure_empire
+	icon = GFX_focus_ITA_secure_empire
+	relative_position_id = ITA_not_marches
+	x = 0
+	y = 3
+	cost = 5
+	prerequisite = {
+		focus = ITA_break_rossoni
+	}
+	prerequisite = {
+		focus = ITA_disarm_democrats
+	}
+	prerequisite = {
+		focus = ITA_sweep_anarchists
+	}
+	completion_reward = {
+		add_stability = 0.2
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.15
+		}
+	}
+}
+shared_focus = {
+	id = ITA_crush_mukhtar
+	icon = GFX_focus_ITA_crush_mukhtar
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = {
+		focus = ITA_secure_empire
+	}
+	completion_reward = {
+		add_manpower = -50000
+		add_war_support = 0.1
+		remove_ideas = ITA_the_libyan_war
+		661 = {
+			set_demilitarized_zone = no
+		}
+		449 = {
+			set_demilitarized_zone = no
+		}
+		662 = {
+			set_demilitarized_zone = no
+		}
+		663 = {
+			set_demilitarized_zone = no
+		}
+	}
+}
+shared_focus = {
+	id = ITA_direct_rule
+	icon = GFX_focus_ITA_direct_rule
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 2
+	cost = 5
+	prerequisite = {
+		focus = ITA_crush_mukhtar
+	}
+	completion_reward = {
+		remove_ideas = ITA_overburdened_administration
+	}
+}
+shared_focus = {
+	id = ITA_not_race
+	icon = GFX_focus_ITA_not_race
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 3
+	cost = 5
+	prerequisite = {
+		focus = ITA_direct_rule
+	}
+	completion_reward = {
+		add_ideas = ITA_italian_imperialism
+	}
+}
+shared_focus = {
+	id = ITA_economic_questions
+	icon = GFX_focus_ITA_economic_questions
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 4
+	cost = 1
+	prerequisite = {
+		focus = ITA_not_race
+	}
+	completion_reward = {
+		add_political_power = 50
+	}
+}
+shared_focus = {
+	id = ITA_industrial_problem
+	icon = GFX_focus_ITA_industrial_problem
+	relative_position_id = ITA_secure_empire
+	x = -3
+	y = 5
+	cost = 5
+	prerequisite = {
+		focus = ITA_economic_questions
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_industrial_problem_ed
+	}
+}
+shared_focus = {
+	id = ITA_farming_problem
+	icon = GFX_focus_ITA_farming_problem
+	relative_position_id = ITA_secure_empire
+	x = -1
+	y = 5
+	cost = 5
+	prerequisite = {
+		focus = ITA_economic_questions
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_farming_problem_ed
+	}
+}
+shared_focus = {
+	id = ITA_financial_problem
+	icon = GFX_focus_ITA_financial_problem
+	relative_position_id = ITA_secure_empire
+	x = 1
+	y = 5
+	cost = 5
+	prerequisite = {
+		focus = ITA_economic_questions
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_financial_problem_ed
+	}
+}
+shared_focus = {
+	id = ITA_trade_problem
+	icon = GFX_focus_ITA_trade_problem
+	relative_position_id = ITA_secure_empire
+	x = 3
+	y = 5
+	cost = 5
+	prerequisite = {
+		focus = ITA_economic_questions
+	}
+	completion_reward = {
+		custom_effect_tooltip = ITA_trade_problem_ed
+	}
+}
+shared_focus = {
+	id = ITA_encourage_unions
+	icon = GFX_focus_ITA_encourage_unions
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 6
+	cost = 5
+	prerequisite = {
+		focus = ITA_trade_problem
+	}
+	prerequisite = {
+		focus = ITA_financial_problem
+	}
+	prerequisite = {
+		focus = ITA_farming_problem
+	}
+	prerequisite = {
+		focus = ITA_industrial_problem
+	}
+	completion_reward = {
+		add_ideas = ITA_pacified_unions
+	}
+}
+shared_focus = {
+	id = ITA_fertility_incentives
+	icon = GFX_focus_ITA_fertility_incentives
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 7
+	cost = 5
+	prerequisite = {
+		focus = ITA_encourage_unions
+	}
+	completion_reward = {
+		add_ideas = ITA_italian_family
+	}
+}
+shared_focus = {
+	id = ITA_conference_holiness
+	icon = GFX_focus_ITA_conference_holiness
+	relative_position_id = ITA_secure_empire
+	x = 0
+	y = 8
+	cost = 3
+	prerequisite = {
+		focus = ITA_fertility_incentives
+	}
+	completion_reward = {
+		country_event = { id = italy.22 }
+		load_focus_tree = {
+			tree = italy_natrej_pt2
+			keep_completed = yes
+		}
+	}
+}

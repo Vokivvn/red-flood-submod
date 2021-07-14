@@ -1,0 +1,619 @@
+focus_tree = {
+	id = FIU_shimoi_postwar
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	shared_focus = FIU_The_Soul_of_Italy
+	#Shimoi post-war. why is there so much please kill me  
+
+	focus = {
+		id = FIU_Sheathe_the_Sword
+		icon = GFX_focus_FIU_Sheathe_the_Sword
+						
+		x = 8
+		y = 13
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ITA = {
+				OR = {
+					exists = no
+					is_puppet_of = FRA
+					is_puppet_of = FIU
+					has_capitulated = yes
+				}
+			}
+		}
+
+		bypass = {
+		}
+
+		select_effect = {
+			country_event = {
+				id = fiume.92
+				days = 1
+			}
+		}
+
+		completion_reward = {
+			remove_ideas = {
+				FIU_prepared_offensive
+			}
+			add_ideas = FIU_democrat_rebels
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Integrate_the_Blackshirts
+		icon = GFX_focus_FIU_Integrate_the_Blackshirts
+		prerequisite = { focus = FIU_Sheathe_the_Sword }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FIU_blackshirts_aligned
+				add_idea = FIU_blackshirts_integrated
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Arrest_the_Liberals
+		icon = GFX_focus_FIU_Arrest_the_Liberals
+		prerequisite = { focus = FIU_Integrate_the_Blackshirts }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.15
+			remove_ideas = FIU_democrat_rebels
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Crush_the_Leftists
+		icon = GFX_focus_FIU_Crush_the_Leftists
+		prerequisite = { focus = FIU_Integrate_the_Blackshirts }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = -2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Smash_the_Church
+		icon = GFX_focus_FIU_Smash_the_Church
+		prerequisite = { focus = FIU_Integrate_the_Blackshirts }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_stability = -0.15
+			add_ideas = FIU_fiumean_shintoism
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Expand_the_National_Police
+		icon = GFX_focus_FIU_Expand_the_National_Police
+		prerequisite = { focus = FIU_Arrest_the_Liberals }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_expanded_police
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Massive_Propaganda
+		icon = GFX_focus_FIU_Massive_Propaganda
+		prerequisite = { focus = FIU_Arrest_the_Liberals }
+		prerequisite = { focus = FIU_Smash_the_Church }
+		prerequisite = { focus = FIU_Crush_the_Leftists }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = -4
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_massive_propaganda
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Recalibrating_the_Economy
+		icon = GFX_focus_FIU_Recalibrating_the_Economy
+		prerequisite = { focus = FIU_Arrest_the_Liberals }
+		prerequisite = { focus = FIU_Smash_the_Church }
+		prerequisite = { focus = FIU_Crush_the_Leftists }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = -2
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_recalibrated_economy
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Appoint_Provincial_Governors
+		icon = GFX_focus_FIU_Appoint_Provincial_Governors
+		prerequisite = { focus = FIU_Arrest_the_Liberals }
+		prerequisite = { focus = FIU_Smash_the_Church }
+		prerequisite = { focus = FIU_Crush_the_Leftists }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 2
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ITA
+				}
+				add_core_of = FIU
+			}
+			set_capital = 2
+			set_cosmetic_tag = FIU_italian_shogunate
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Reopen_Institutions
+		icon = GFX_focus_FIU_Reopen_Institutions
+		prerequisite = { focus = FIU_Arrest_the_Liberals }
+		prerequisite = { focus = FIU_Smash_the_Church }
+		prerequisite = { focus = FIU_Crush_the_Leftists }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 4
+		y = 3
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_reopened_institutions
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Total_Centralization
+		icon = GFX_focus_FIU_Total_Centralization
+		prerequisite = { focus = FIU_Reopen_Institutions }
+		prerequisite = { focus = FIU_Appoint_Provincial_Governors }
+		prerequisite = { focus = FIU_Recalibrating_the_Economy }
+		prerequisite = { focus = FIU_Massive_Propaganda }
+		prerequisite = { focus = FIU_Expand_the_National_Police }
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 4
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_total_centralization
+			remove_ideas = FIU_reopened_institutions
+			remove_ideas = FIU_recalibrated_economy
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Looking_Abroad
+		icon = GFX_focus_FIU_Looking_Abroad
+		prerequisite = { focus = FIU_Total_Centralization }
+		
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 5
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MNT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GRE
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_Mobilize_the_Diplomats
+		icon = GFX_focus_FIU_Mobilize_the_Diplomats
+		prerequisite = { focus = FIU_Looking_Abroad }
+		
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 6
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					MAN = {
+						has_government = accelerationism
+					}
+				}
+				MAN = {
+					add_opinion_modifier = {
+						target = FIU
+						modifier = rome_tokyo_pact
+					}
+					add_opinion_modifier = {
+						target = FRA
+						modifier = rome_tokyo_pact
+					}
+				}
+				FRA = {
+					add_opinion_modifier = {
+						target = MAN
+						modifier = rome_tokyo_pact
+					}
+				}
+				FIU = {
+					add_opinion_modifier = {
+						target = MAN
+						modifier = rome_tokyo_pact
+					}
+				}
+			}
+			JAP = {
+				add_opinion_modifier = {
+					target = FIU
+					modifier = rome_tokyo_pact
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = rome_tokyo_pact
+				}
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.3
+				}
+			}
+			FIU = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = rome_tokyo_pact
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = JAP
+					modifier = rome_tokyo_pact
+				}
+			}
+			every_country = {
+				limit = {
+					has_government = accelerationism
+				}
+				add_opinion_modifier = {
+					target = FIU
+					modifier = medium_increase
+				}
+			}
+			MOG = {
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.3
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	focus = {
+		id = FIU_A_New_International_Order
+		icon = GFX_focus_FIU_A_New_International_Order
+		prerequisite = { focus = FIU_Mobilize_the_Diplomats }
+		
+						
+		relative_position_id = FIU_Sheathe_the_Sword
+		x = 0
+		y = 7
+
+		cost = 15
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BUL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MAR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EGY
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SPR
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FAL
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+}

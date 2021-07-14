@@ -1,0 +1,27 @@
+
+state={
+	id=501
+	name="STATE_501"
+	resources={
+		steel=15.000
+	}
+
+	history={
+		owner = BRA
+		add_core_of = BRA
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 2
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		2167 2185 7476 8148 8210 10360 10945 12438 12479 12977 
+	}
+	manpower=1199200
+	buildings_max_level_factor=1.000
+	state_category=city
+}

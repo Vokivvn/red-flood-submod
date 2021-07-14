@@ -1,0 +1,129 @@
+France_escadron = {
+	name = "France Escadron Plan"
+	desc = "Standard France"
+
+	enable = {
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_route
+				option = ESCADRON
+			}
+			has_country_flag = FRA_ai_path_1
+		}	
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		FRA_adventure_in_spain
+		FRA_artistic_state
+		FRA_collaborate_with_the_escadron
+		FRA_centralise_corporate_structure
+		FRA_full_speed_world
+		FRA_rattachisme
+		FRA_state_beyond_labor
+		FRA_heroic_capitalism
+		FRA_all_national_front_of_labour
+		FRA_escadron_for_all
+		FRA_guerre_de_cultur
+		FRA_legacy_of_revolution
+		FRA_culture_of_free_spirits
+		FRA_oppose_vatican
+		FRA_brutes_with_culture
+		FRA_culture_of_speed
+		FRA_raise_street_warriors
+		FRA_expand_our_ranks
+		FRA_end_perverted_societies
+		FRA_united_for_art
+		FRA_modernisation_without_mercy
+		FRA_on_ruins_of_old
+		FRA_austrian_comrades
+		FRA_warrior_priests
+		FRA_children_of_the_patron
+		FRA_embrace_countryside
+		FRA_rebirth_of_gnostic_faith
+		FRA_techno_catharism
+		FRA_fast_messiah
+		FRA_faster
+		FRA_question_status_quo
+		FRA_against_councilism
+		FRA_artaud_prophet
+		FRA_pan_islamic_congress
+		FRA_bulgarian_coup
+		FRA_fast_sword_of_allah
+		FRA_side_with_true_germany
+		FRA_islam_of_the_future
+		FRA_comrades_in_faith
+		FRA_support_finland
+		FRA_embrace_anti_colonialism
+		FRA_freedom_under_france
+		FRA_arms_to_mayakovsky
+		FRA_opportunities_in_india
+		FRA_deal_with_anglo_devil
+		FRA_end_communism
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+FRA_minor_allies = { #used to make minor European nations like France more
+	name = "Minor French Allies"
+
+	enable = {
+		OR = {
+			has_government = accelerationism
+			accelerationism > 0.5
+		}
+		is_in_faction = no
+		FRA = {
+			has_government = accelerationism
+		}
+	}
+	abort = {
+		FRA = {
+			NOT = {
+				has_government = accelerationism
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = 100
+	}
+}

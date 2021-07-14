@@ -1,0 +1,281 @@
+###############
+#Tuareg Events#
+###############
+
+add_namespace = tuareg
+
+country_event = {
+	id = tuareg.1
+	title = tuareg.1.t
+	desc = tuareg.1.desc
+	picture = GFX_report_event_TUA_ourpresent
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tuareg.1.a
+    }
+}
+country_event = {
+	id = tuareg.2
+	title = tuareg.2.t
+	desc = tuareg.2.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.2.a
+        
+    }
+}
+country_event = {
+	id = tuareg.3
+	title = tuareg.3.t
+	desc = tuareg.3.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.3.a
+        
+
+    }
+}
+country_event = {
+	id = tuareg.4
+	title = tuareg.4.t
+	desc = tuareg.4.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.4.a
+        
+
+    }
+}
+country_event = {
+	id = tuareg.5
+	title = tuareg.5.t
+	desc = tuareg.5.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.5.a
+        
+
+    }
+}
+country_event = {
+	id = tuareg.6
+	title = tuareg.6.t
+	desc = tuareg.6.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.6.a
+        
+		set_country_flag = TUA_unifier
+    }
+	option = { 
+		name = tuareg.6.b
+        
+		set_country_flag = TUA_liberator
+    }
+	option = { 
+		name = tuareg.6.c
+        
+		set_country_flag = TUA_wraith
+    }
+	option = {
+		name = tuareg.6.d
+		set_country_flag = TUA_neverchange
+	}
+}
+country_event = {
+	id = tuareg.7
+	title = tuareg.7.t
+	desc = tuareg.7.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.7.a
+		add_political_power = 100
+    }
+}
+country_event = {
+	id = tuareg.8
+	title = tuareg.8.t
+	desc = tuareg.8.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.8.a
+		add_ideas = {
+			TUA_bureaucracy
+		}
+    }
+}
+country_event = {
+	id = tuareg.9
+	title = tuareg.9.t
+	desc = tuareg.9.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.9.a
+		add_ideas = {
+			TUA_esoteric_artaudism
+		}
+    }
+}
+country_event = {
+	id = tuareg.10
+	title = tuareg.10.t
+	desc = tuareg.10.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.10.a
+		FRA = {
+			country_event = tuareg.11
+		}
+    }
+}
+country_event = {
+	id = tuareg.11
+	title = tuareg.11.t
+	desc = tuareg.11.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.11.a
+		puppet = TUA
+    }
+	option = { 
+		name = tuareg.11.b
+		add_political_power = -50
+    }
+}
+country_event = {
+	id = tuareg.12
+	title = tuareg.12.t
+	desc = tuareg.12.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.12.a
+		NGA = {
+			country_event = tuareg.13
+		}
+		FRA = {
+			country_event = tuareg.14
+		}
+		UPV = {
+			country_event = tuareg.15
+		}
+    }
+}
+country_event = {
+	id = tuareg.13
+	title = tuareg.13.t
+	desc = tuareg.13.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.13.a
+		transfer_state = 781
+    }
+}
+country_event = {
+	id = tuareg.14
+	title = tuareg.14.t
+	desc = tuareg.14.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.14.a
+		transfer_state = 977
+    }
+}
+country_event = {
+	id = tuareg.15
+	title = tuareg.15.t
+	desc = tuareg.15.desc
+	#picture = 
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.15.a
+		transfer_state = 939
+    }
+}
+country_event = {
+	id = tuareg.16
+	title = tuareg.16.t
+	desc = tuareg.16.desc
+	picture = GFX_report_event_TUA_euros
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = tuareg.16.a
+		add_stability = 0.02
+    }
+}

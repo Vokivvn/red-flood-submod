@@ -1,0 +1,117 @@
+FRA_support_revolutions = {
+	nigerian_revolt = {
+		cost = 0
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = ger_military_buildup
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			add_to_variable = {
+				var = nigeria_revolt
+				value = 10
+			}
+			clamp_variable = {
+					var = nigeria_revolt
+					min = 0
+					max = 100
+			}
+			custom_effect_tooltip = "nigerian_revolt_tooltip" 
+		}
+		days_re_enable = 30
+	}
+	begin_nigerian_revolt = {
+		cost = 0
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = GFX_decision_revolt
+		available = {
+			check_variable = {
+				nigeria_revolt = 100
+			}
+			FRA = {
+				has_war_with = ENG
+			}
+		}
+		complete_effect  = {
+			ENG = {
+				country_event = {
+					id = nigeria.1
+				}
+			}
+			custom_effect_tooltip = "begin_nigerian_revolt_tooltip" 
+		}
+		fire_only_once = yes
+	}
+	syrian_revolt = {
+		cost = 0
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = ger_military_buildup
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = FRA
+			}
+			add_to_variable = {
+				var = syria_revolt
+				value = 10
+			}
+			clamp_variable = {
+					var = syria_revolt
+					min = 0
+					max = 100
+			}
+			custom_effect_tooltip = "syrian_revolt_tooltip" 
+		}
+		days_re_enable = 30
+	}
+	begin_syrian_revolt = {
+		cost = 0
+		ai_will_do = {
+			factor = 0.5
+		}
+		icon = GFX_decision_revolt
+		available = {
+			check_variable = {
+				syria_revolt = 100
+			}
+			FRA = {
+				has_war_with = ENG
+			}
+		}
+		complete_effect  = {
+			SYR = {
+				country_event = {
+					id = syria.1
+				}
+			}
+			custom_effect_tooltip = "begin_syrian_revolt_tooltip" 
+		}
+		fire_only_once = yes
+	}
+}
+		

@@ -1,0 +1,37 @@
+﻿
+units= {
+
+	##### NAVAL UNITS #####
+	
+	### Pacific Fleet -- Nikolayevsk
+	fleet = {
+		name = "Tikhookeanskiy Flot"
+		naval_base = 12559 # Nikolayevsk
+		task_force = {				
+			name = "Tikhookeanskiy Flot"
+			location = 12559 # Nikolayevsk
+			# 8ya Flotiliya Esmintsev
+			ship = { name = "Krivoshein" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ZHR } } }
+			ship = { name = "Nekrasov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = ZHR } } }
+		}	
+		task_force = {	
+			name = "Tihookyeanskiy Podvodniy Flot"
+			location = 12559 # Nikolayevsk
+			# 10iy Podvodniy Flot
+			ship = { name = "Shch-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-105" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-106" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			# 11iy Podvodniy Flot
+			ship = { name = "Shch-107" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-108" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-109" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-110" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-111" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+			ship = { name = "Shch-112" definition = submarine equipment = { submarine_1 = { amount = 1 owner = ZHR } } }			
+		}		
+	}
+} 
+#####################

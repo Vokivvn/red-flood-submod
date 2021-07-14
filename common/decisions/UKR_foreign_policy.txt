@@ -1,0 +1,457 @@
+UKR_foreign_policy = {
+	
+	UKR_demand_lwow = {
+		cost = 100
+		complete_effect  = {
+			POL = {
+				country_event = {
+					id = ukraine.29
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	UKR_demand_lublin = {
+		cost = 100
+		available = {
+			owns_state = 91
+			owns_state = 89
+		}
+		complete_effect  = {
+			POL = {
+				country_event = {
+					id = ukraine.30
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_rewrite_history
+				has_completed_focus = ukraine_claim_greater
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_alliance_conquest
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	UKR_polissya_and_beresteyshchyna = {
+		cost = 100
+		complete_effect  = {
+			BLR = {
+				country_event = {
+					id = ukraine.31
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 150
+		}
+	}
+
+	UKR_bessarabia = {
+		cost = 100
+		complete_effect  = {
+			MOL = {
+				country_event = {
+					id = ukraine.32
+				}
+			}
+			add_state_core = 1014
+			add_state_core = 78
+			add_state_core = 766
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 180
+		}
+	}
+
+	UKR_bukovina = {
+		cost = 100
+		available = {
+			owns_state = 89
+			owns_state = 91
+		}
+		complete_effect  = {
+			MOL = {
+				country_event = {
+					id = ukraine.33
+				}
+			}
+			add_state_core = 80
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	UKR_carpathia = {
+		cost = 100
+		available = {
+			owns_state = 91
+			owns_state = 89
+		}
+		complete_effect  = {
+			add_state_core = 73
+			if = {
+				limit = {
+					73 = {
+						is_owned_and_controlled_by = POL
+					}
+				}
+				POL = {
+					country_event = {
+						id = ukraine.34
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					73 = {
+						is_owned_and_controlled_by = CZE
+					}
+				}
+				CZE = {
+					country_event = {
+						id = ukraine.34
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					73 = {
+						is_owned_and_controlled_by = AUS
+					}
+				}	
+				AUS = {
+					country_event = {
+						id = ukraine.34
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	UKR_lemkovyna = {
+		cost = 100
+		available = {
+			owns_state = 73
+		}
+		complete_effect  = {
+			add_state_core = 975
+			if = {
+				limit = {
+					975 = {
+						is_owned_and_controlled_by = POL
+					}
+				}
+				POL = {
+					country_event = {
+						id = ukraine.35
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					975 = {
+						is_owned_and_controlled_by = CZE
+					}
+				}
+				CZE = {
+					country_event = {
+						id = ukraine.35
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					975 = {
+						is_owned_and_controlled_by = AUS
+					}
+				}	
+				AUS = {
+					country_event = {
+						id = ukraine.35
+					}
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_ride_future
+                has_completed_focus = ukraine_alliance_conquest
+				has_completed_focus = ukraine_claim_greater
+				has_completed_focus = ukraine_rewrite_history
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	UKR_left_bank_ukraine = {
+		cost = 200
+		complete_effect  = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = RUS
+			}
+			create_wargoal = {
+    			type = take_state_focus
+    			target = SRU
+			}
+			add_state_core = 224
+			add_state_core = 222
+			add_state_core = 258
+			add_state_core = 260
+			add_state_core = 859
+			add_state_core = 240
+			add_state_core = 220
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	UKR_our_cossack_brethen = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = DKB
+			}
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				add_core_of = UKR
+			}
+			add_state_core = 257
+			add_state_core = 250
+			add_state_core = 251
+			add_state_core = 255
+			add_state_core = 239
+			add_state_core = 401
+		}
+		available = {
+			OR = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = DKB
+					}
+				}
+				DKB = { exists = no }
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_claim_greater
+				has_completed_focus = ukraine_alliance_conquest
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	UKR_orenburg = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ORE
+			}
+			every_state = {
+				limit = {
+					is_core_of = ORE
+				}
+				add_core_of = UKR
+			}
+		}
+		available = {
+			OR = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = ORE
+					}
+				}
+				ORE = { exists = no }
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_alliance_conquest
+				has_completed_focus = ukraine_claim_greater
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	UKR_claim_grey_ukraine = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = STE
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = TRK
+			}
+			every_state = {
+				limit = {
+					is_core_of = STE
+				}
+				add_core_of = UKR
+			}
+		}
+		available = {
+			OR = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = STE
+					}
+				}
+				STE = { exists = no }
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_alliance_conquest
+				has_completed_focus = ukraine_claim_greater
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	UKR_pacific_corridor = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ALT
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = TAN
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = MO2
+			}
+			create_wargoal = {
+    			type = annex_everything
+    			target = SIB
+			}
+			every_state = {
+				limit = {
+					is_core_of = MO2
+				}
+				add_core_of = UKR
+			}
+		}
+		available = {
+			any_owned_state = {
+				any_neighbor_state = {
+					is_owned_and_controlled_by = SIB
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_alliance_conquest
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+
+	UKR_take_zheltorossiya = {
+		cost = 150
+		complete_effect  = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = ZHR
+			}
+			every_state = {
+				limit = {
+					is_core_of = ZHR
+				}
+				add_core_of = UKR
+			}
+		}
+		available = {
+			any_owned_state = {
+				any_neighbor_state = {
+					is_owned_and_controlled_by = ZHR
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = ukraine_reforge_everything
+				has_completed_focus = ukraine_ride_future
+				has_completed_focus = ukraine_pan_state
+				has_completed_focus = ukraine_alliance_conquest
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}

@@ -1,0 +1,269 @@
+﻿capital = 500
+
+oob = "BRA_1936"
+
+set_research_slots = 3
+
+set_convoys = 175
+
+add_ideas = {
+	BRA_oligarchic_madness
+	BRA_local_army
+	BRA_revolutionary_scars
+	BRA_famine
+}
+
+country_event = { id = brazil.1 days = 1 }
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		transport = 1
+	}
+	set_naval_oob = "BRA_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "BRA_1936_naval"	
+}
+
+set_politics = {
+	ruling_party = vanguard_socialism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 12
+	libertarian_marxism = 28
+	revolutionary_anarchism = 12
+	revisionist_socialism = 4
+	social_democratism = 5
+	liberalism = 12
+	conservatism = 2
+	right_authoritarianism = 13
+	despotism = 1
+	reactionism = 7
+	accelerationism = 4
+}
+
+set_stability = 0.2
+
+create_country_leader = {
+	name = "Luís Carlos Prestes"
+	desc = "POLITICS_PRESTES_DESC"
+	picture = "Portrait_BRA_Luis_Carlos_Prestes.tga"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Filinto Müller"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_BRA_filinto_muller.dds"
+	expire = "1965.1.1"
+	ideology = national_vanguardism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Francisco de Aquino Correia"
+	desc = "POLITICS_AQUINO_DESC"
+	picture = "BRA_Francisco_Aquino.dds"
+	expire = "1965.1.1"
+	ideology = religious_socialism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Chamber of Deputies"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_BRA_Chamber.dds"
+	expire = "2000.1.1"
+	ideology = oligarchy
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Filinto Müller"
+	picture = "Portrait_BRA_filinto_muller_general.tga"
+	traits = { offensive_doctrine politically_connected war_hero }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Isidoro Dias Lopes"
+	picture = "Portrait_BRA_Isidoro_Dias_Lopes.tga"
+	traits = { old_guard offensive_doctrine infantry_officer brilliant_strategist politically_connected war_hero }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+}
+create_corps_commander = {
+	name = "João Cabanas"
+	picture = "Portrait_BRA_Joao_Cabanas.tga"
+	traits = { infantry_officer adaptable }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Henrique Cordeiro Oest"
+	picture = "Portrait_BRA_Henrique_Oest.tga"
+	traits = { career_officer infantry_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Agildo Barat"
+	picture = "Portrait_BRA_Agildo_Barat.tga"
+	traits = { infantry_officer trait_cautious }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Kardiac Lemme"
+	picture = "Portrait_BRA_Kardiac_Lemme.tga"
+	traits = { infantry_officer adaptable }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Eugenio Pinto"
+	picture = "Portrait_BRA_Eugenio_Pinto.tga"
+	traits = { commando trait_engineer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Jefferson Cardim de Alencar Osório"
+	picture = "Portrait_BRA_Jefferson_Osorio.tga"
+	traits = { jungle_rat ranger }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "Minas Geras Class"
+		type = ship_hull_heavy_1
+		name_group = BRA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Bahia Class"
+		type = ship_hull_cruiser_1
+		name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Para Class"
+		type = ship_hull_light_1
+		name_group = BRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Humaytá Class"
+		type = ship_hull_submarine_2
+		name_group = BRA_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+}

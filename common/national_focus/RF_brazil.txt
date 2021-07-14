@@ -1,0 +1,1825 @@
+focus_tree = {
+	id = BRA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRA
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 1100 }
+	
+	focus = { 
+		id = BRA_morning_after
+		icon = GFX_focus_BRA_morning_after
+		x = 12
+		y = 0
+		cost = 1
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		} 
+		completion_reward = {
+			country_event = {
+				id = brazil.2
+			}
+		}
+	}
+	focus = { 
+		id = BRA_the_venue
+		icon = GFX_focus_BRA_the_venue
+		x = 10
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BRA_morning_after
+		}
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		} 
+		completion_reward = {
+			country_event = {
+				id = brazil.3
+			}
+		}
+	}
+	focus = { 
+		id = BRA_the_delegates
+		icon = GFX_focus_BRA_the_delegates
+		x = 12
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BRA_morning_after
+		}
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		} 
+		completion_reward = {
+			country_event = {
+				id = brazil.4
+			}
+		}
+	}
+	focus = { 
+		id = BRA_the_security
+		icon = GFX_focus_BRA_the_security
+		x = 14
+		y = 1
+		cost = 3
+		prerequisite = {
+			focus = BRA_morning_after
+		}
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		} 
+		completion_reward = {
+			country_event = {
+				id = brazil.5
+			}
+		}
+	}
+	focus = { 
+		id = BRA_primeiro_conshelo
+		icon = GFX_focus_BRA_primeiro_conshelo
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = BRA_the_security 
+		}
+		prerequisite = {
+			focus = BRA_the_venue
+		}
+		prerequisite = {
+			focus = BRA_the_delegates
+		}
+		cost = 1
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		} 
+		completion_reward = {
+			country_event = {
+				id = brazil.6
+			}
+		}
+	}
+	#Aquino RevSoc
+	focus = { 
+		id = BRA_aquino
+		icon = GFX_focus_BRA_aquino
+		relative_position_id = BRA_primeiro_conshelo
+		x = -7
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			has_government = revisionist_socialism
+		}
+		prerequisite = {
+			focus = BRA_primeiro_conshelo
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { 
+		id = BRA_mission_love
+		icon = GFX_focus_BRA_mission_love
+		relative_position_id = BRA_primeiro_conshelo
+		x = -7
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_aquino
+		}
+		completion_reward = {
+			add_ideas = BRA_christian_socialism
+			hidden_effect = {
+			country_event = {
+			id = brazil.41
+			days = 20
+			}
+			}
+		}
+	}
+	focus = { 
+		id = BRA_equal_society
+		icon = GFX_focus_BRA_equal_society
+		relative_position_id = BRA_primeiro_conshelo
+		x = -9
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_mission_love
+		}
+		completion_reward = {
+			add_ideas = BRA_catholic_egalitarianism
+		}
+	}  
+	focus = { 
+		id = BRA_down_witchcraft
+		icon = GFX_focus_BRA_down_witchcraft
+		relative_position_id = BRA_primeiro_conshelo
+		x = -9
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_equal_society
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = { 
+		id = BRA_catholic_schools
+		icon = GFX_focus_BRA_catholic_schools
+		relative_position_id = BRA_primeiro_conshelo
+		x = -9
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_down_witchcraft
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_catholic_egalitarianism
+				add_idea = BRA_catholic_egalitarianism_1
+			}
+		}
+	}
+	focus = { 
+		id = BRA_paternalism
+		icon = GFX_focus_BRA_paternalism
+		relative_position_id = BRA_primeiro_conshelo
+		x = -7
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_mission_love
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.15
+			}
+			remove_ideas = BRA_oligarchic_madness
+		}
+	}
+	focus = { 
+		id = BRA_legion_jesus
+		icon = GFX_focus_BRA_legion_jesus
+		relative_position_id = BRA_primeiro_conshelo
+		x = -7
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_paternalism
+		}
+		completion_reward = {
+			add_ideas = BRA_religious_militias
+		}
+	}
+	focus = { 
+		id = BRA_no_hunger
+		icon = GFX_focus_BRA_no_hunger
+		relative_position_id = BRA_primeiro_conshelo
+		x = -7
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_legion_jesus
+		}
+		completion_reward = {
+			add_political_power = -200
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.15
+			}
+			remove_ideas = BRA_famine
+		}
+	}
+	focus = { 
+		id = BRA_communal_homes
+		icon = GFX_focus_BRA_communal_homes
+		relative_position_id = BRA_primeiro_conshelo
+		x = -5
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_mission_love
+		}
+		completion_reward = {
+			add_ideas = BRA_social_housing
+			remove_ideas = BRA_revolutionary_scars
+		}
+	}
+	focus = { 
+		id = BRA_agrarian_economy
+		icon = GFX_focus_BRA_agrarian_economy
+		relative_position_id = BRA_primeiro_conshelo
+		x = -5
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_communal_homes
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_social_housing
+				add_idea = BRA_social_housing_1
+			}
+		}
+	}
+	focus = { 
+		id = BRA_redirect_money
+		icon = GFX_focus_BRA_redirect_money
+		relative_position_id = BRA_primeiro_conshelo
+		x = -5
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_agrarian_economy
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+	#Prestes LibMarx
+	focus = { 
+		id = BRA_prestes
+		icon = GFX_focus_BRA_prestes
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			has_government = libertarian_marxism
+		}
+		prerequisite = {
+			focus = BRA_primeiro_conshelo
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = { 
+		id = BRA_german_ideal
+		icon = GFX_focus_BRA_german_ideal
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_prestes
+		}
+		completion_reward = {
+			add_ideas = BRA_germanic_communism
+		}
+	}
+	focus = { 
+		id = BRA_socialist_democracy
+		icon = GFX_focus_BRA_socialist_democracy
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_german_ideal
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BRA_germanic_communism
+				add_idea = BRA_municipal_socialism
+			}
+		}
+	}
+	focus = { 
+		id = BRA_on_religion
+		icon = GFX_focus_BRA_on_religion
+		relative_position_id = BRA_primeiro_conshelo
+		x = -2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_socialist_democracy
+		}
+		completion_reward = {
+			country_event = {
+			id = brazil.39
+			}
+		}
+	}
+	focus = { 
+		id = BRA_economic_policy
+		icon = GFX_focus_BRA_economic_policy
+		relative_position_id = BRA_primeiro_conshelo
+		x = -2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_on_religion
+		}
+		completion_reward = {
+			country_event = {
+			id = brazil.40
+			}
+		}
+	}
+	focus = { 
+		id = BRA_gentle_industrialization
+		icon = GFX_focus_BRA_gentle_industrialization
+		relative_position_id = BRA_primeiro_conshelo
+		x = -2
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_economic_policy
+		}
+		completion_reward = {
+			502 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			499 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = { 
+		id = BRA_fate_traitors
+		icon = GFX_focus_BRA_fate_traitors
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_socialist_democracy
+		}
+		completion_reward = {
+				add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.20 
+				}
+				add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.20 
+				}
+				add_stability = -0.10
+		}
+	}
+	focus = { 
+		id = BRA_fate_businesses
+		icon = GFX_focus_BRA_fate_businesses
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_fate_traitors
+		}
+		completion_reward = {
+					add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.20 
+				}
+					add_popularity = {
+				ideology = reactionism
+				popularity = -0.20 
+				}
+				add_popularity = {
+				ideology = liberalism
+				popularity = -0.20 
+				}
+		remove_ideas = BRA_oligarchic_madness
+		}
+	}
+	focus = { 
+		id = BRA_cooperativism
+		icon = GFX_focus_BRA_cooperativism
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_fate_businesses
+		}
+		completion_reward = {
+			add_ideas = BRA_cooperativism_idea
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.10 
+			}
+		}
+	}
+	focus = { 
+		id = BRA_feed_poor
+		icon = GFX_focus_BRA_feed_poor
+		relative_position_id = BRA_primeiro_conshelo
+		x = 2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_socialist_democracy
+		}
+		completion_reward = {
+		add_stability = 0.20
+		remove_ideas = BRA_famine
+		add_political_power = -100
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.10 
+			}
+		}
+	}
+	focus = { 
+		id = BRA_protect_culture
+		icon = GFX_focus_BRA_protect_culture
+		relative_position_id = BRA_primeiro_conshelo
+		x = 2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_feed_poor
+		}
+		completion_reward = {
+		add_ideas = BRA_culture
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.10 
+			}
+		}
+	}
+	focus = { 
+		id = BRA_fund_education
+		icon = GFX_focus_BRA_fund_education
+		relative_position_id = BRA_primeiro_conshelo
+		x = 2
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_protect_culture
+		}
+		completion_reward = {
+		add_research_slot = 1
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.10 
+			}
+		}
+	}
+	focus = { 
+		id = BRA_liberty_late
+		icon = GFX_focus_BRA_liberty_late
+		relative_position_id = BRA_primeiro_conshelo
+		x = 0
+		y = 7
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_fund_education
+		}
+		prerequisite = {
+			focus = BRA_cooperativism
+		}
+		prerequisite = {
+			focus = BRA_gentle_industrialization
+		}
+		completion_reward = {
+		remove_ideas = BRA_revolutionary_scars
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.15 
+			}
+		}
+	}
+	#Amazonas VanSoc
+	focus = { 
+		id = BRA_amazonas
+		icon = GFX_focus_BRA_amazonas
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			has_government = vanguard_socialism
+		}
+		prerequisite = {
+			focus = BRA_primeiro_conshelo
+		}
+		completion_reward = {
+			add_political_power = 50
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "João Amazonas" 
+				desc = "POLITICS_AMAZONAS_DESC" 
+				picture = "BRA_Joao_Amazonas.dds" 
+				expire = "2003.1.1" 
+				ideology = totalism 
+				traits = { } 
+			}
+		}
+	}
+	focus = { 
+		id = BRA_abolish_parties
+		icon = GFX_focus_BRA_abolish_parties
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_amazonas
+		}
+		completion_reward = {
+				add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.30
+				}
+	add_stability = -0.15
+		}
+	}
+	focus = { 
+		id = BRA_purge_opposition
+		icon = GFX_focus_BRA_purge_opposition
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		}
+		prerequisite = {
+			focus = BRA_abolish_parties
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = vanguard_socialism
+		popularity = 0.30
+		}
+		add_stability = -0.20
+		}
+	}
+	focus = { 
+		id = BRA_destroy_reactionaries
+		icon = GFX_focus_BRA_destroy_reactionaries
+		relative_position_id = BRA_primeiro_conshelo
+		x = 5
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_purge_opposition
+		}
+		completion_reward = {
+			remove_ideas = BRA_oligarchic_madness
+			hidden_effect = {
+				country_event = {
+					id = brazil.11
+					days = 40
+				}
+			}
+		}
+	}
+	focus = { 
+		id = BRA_internal_terror
+		icon = GFX_focus_BRA_internal_terror
+		relative_position_id = BRA_primeiro_conshelo
+		x = 5
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_destroy_reactionaries
+		}
+		completion_reward = {
+		add_ideas = BRA_internal_terror_idea
+		}
+	}
+	focus = { 
+		id = BRA_infrastructure_projects
+		icon = GFX_focus_BRA_infrastructure_projects
+		relative_position_id = BRA_primeiro_conshelo
+		x = 5
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_internal_terror
+		}
+		completion_reward = {
+		495 = {
+	add_building_construction = {
+	type = infrastructure
+	level = 3
+	instant_build = yes }
+	}
+	add_manpower = -1253
+	495 = {
+	add_manpower = -42034
+	}
+	497 = {
+	add_building_construction = {
+	type = infrastructure
+	level = 3
+	instant_build = yes }
+	}
+		}
+	}
+	focus = { 
+		id = BRA_hardline_concepts
+		icon = GFX_focus_BRA_hardline_concepts
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_purge_opposition
+		}
+		completion_reward = {
+			add_ideas = BRA_hardlinemarxism
+			swap_ideas = {
+				remove_idea = BRA_revolutionary_scars
+				add_idea = BRA_permanent_scars
+			}
+			hidden_effect = {
+				country_event = {
+					id = brazil.12
+					days = 40
+				}
+			}
+		}
+	}
+	focus = { 
+		id = BRA_campaign_landowners
+		icon = GFX_focus_BRA_campaign_landowners
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_hardline_concepts
+		}
+		completion_reward = {
+		remove_ideas = BRA_famine
+		add_stability = 0.15
+		}
+	}
+	focus = { 
+		id = BRA_state_collectives
+		icon = GFX_focus_BRA_state_collectives
+		relative_position_id = BRA_primeiro_conshelo
+		x = 7
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_campaign_landowners
+		}
+		completion_reward = {
+		add_ideas = BRA_state_collectives
+		}
+	}
+	focus = { 
+		id = BRA_mass_industrialising
+		icon = GFX_focus_BRA_mass_industrialising
+		relative_position_id = BRA_primeiro_conshelo
+		x = 9
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_purge_opposition
+		}
+		completion_reward = {
+		add_ideas = BRA_mass_industry
+				random_owned_controlled_state = {
+	limit = {
+	free_building_slots = {
+	building = industrial_complex
+	size > 0
+	include_locked = yes
+	}
+	}
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+	}
+	}
+				random_owned_controlled_state = {
+	limit = {
+	free_building_slots = {
+	building = industrial_complex
+	size > 0
+	include_locked = yes
+	}
+	}
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+	}
+	}
+				random_owned_controlled_state = {
+	limit = {
+	free_building_slots = {
+	building = industrial_complex
+	size > 0
+	include_locked = yes
+	}
+	}
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+	type = industrial_complex
+	level = 2
+	instant_build = yes
+	}
+	}
+	add_stability = -0.15
+	add_political_power = -200
+		}
+	}
+	focus = { 
+		id = BRA_expand_cities
+		icon = GFX_focus_BRA_expand_cities
+		relative_position_id = BRA_primeiro_conshelo
+		x = 9
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_mass_industrialising
+		}
+		completion_reward = {
+	501 = {
+	add_building_construction = {
+	type = infrastructure
+	level = 3
+	instant_build = yes }
+	}
+	502 = {
+	add_building_construction = {
+	type = infrastructure
+	level = 3
+	instant_build = yes }
+	}
+	498 = {
+	add_building_construction = {
+	type = infrastructure
+	level = 3
+	instant_build = yes }
+	}
+	}
+	}
+	focus = { 
+		id = BRA_urban_culture
+		icon = GFX_focus_BRA_urban_culture
+		relative_position_id = BRA_primeiro_conshelo
+		x = 9
+		y = 6
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = BRA_expand_cities
+		}
+		completion_reward = {
+		add_ideas = BRA_urban_culture_idea
+		}
+	}
+	#Military focuses
+	focus = { 
+		id = BRA_revolutionary_brigades
+		icon = GFX_focus_BRA_revolutionary_brigades
+		x = 28
+		y = 0
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			has_completed_focus = BRA_primeiro_conshelo
+			
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+		army_experience = 100
+		}
+	}
+	focus = { 
+		id = BRA_doctrine_prestes
+		icon = GFX_focus_BRA_doctrine_prestes
+		relative_position_id = BRA_revolutionary_brigades
+		x = -2
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		OR = {
+		has_government = libertarian_marxism
+		has_government = revisionist_socialism
+		}
+		}
+		prerequisite = {
+			focus = BRA_revolutionary_brigades
+		}
+		completion_reward = {
+		army_experience = 100
+		}
+	}
+	focus = { 
+		id = BRA_local_militias
+		icon = GFX_focus_BRA_local_militias
+		relative_position_id = BRA_revolutionary_brigades
+		x = -2
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_doctrine_prestes
+		}
+		completion_reward = {
+		add_ideas = BRA_local_militias
+		}
+	}
+	focus = { 
+		id = BRA_specialize_old_guns
+		icon = GFX_focus_BRA_specialize_old_guns
+		relative_position_id = BRA_revolutionary_brigades
+		x = -2
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_local_militias
+		}
+		completion_reward = {
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}
+		}
+	}
+	focus = { 
+		id = BRA_military_hospitals
+		icon = GFX_focus_BRA_military_hospitals
+		relative_position_id = BRA_revolutionary_brigades
+		x = -2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_specialize_old_guns
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 2.0
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	focus = { 
+		id = BRA_the_Sleeping_red_capivara
+		icon = GFX_focus_BRA_the_Sleeping_red_capivara
+		relative_position_id = BRA_revolutionary_brigades
+		x = -2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_military_hospitals
+		}
+		completion_reward = {
+		add_war_support = 0.20
+		}
+	}#2nd tree
+	focus = { 
+		id = BRA_doctrine_lopes
+		icon = GFX_focus_BRA_doctrine_lopes
+		relative_position_id = BRA_revolutionary_brigades
+		x = 2
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		has_government = vanguard_socialism
+		}
+		prerequisite = {
+			focus = BRA_revolutionary_brigades
+		}
+		completion_reward = {
+		add_war_support = 0.10
+		add_stability = 0.15
+		}
+	}
+	focus = { 
+		id = BRA_red_army
+		icon = GFX_focus_BRA_red_army
+		relative_position_id = BRA_revolutionary_brigades
+		x = 2
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_doctrine_lopes
+		}
+		completion_reward = {
+		add_ideas = BRA_red_army_idea
+		add_stability = 0.10
+		remove_ideas = BRA_local_army
+		}
+	}
+	focus = { 
+		id = BRA_indestructible_wave
+		icon = GFX_focus_BRA_indestructible_wave
+		relative_position_id = BRA_revolutionary_brigades
+		x = 2
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_red_army
+		}
+		completion_reward = {
+		add_ideas = BRA_indestructible_wave_idea
+		}
+	}
+	focus = { 
+		id = BRA_militarised_society
+		icon = GFX_focus_BRA_militarised_society
+		relative_position_id = BRA_revolutionary_brigades
+		x = 2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_indestructible_wave
+		}
+		completion_reward = {
+		add_ideas = BRA_militarised_society_idea
+		}
+	}
+	focus = { 
+		id = BRA_study_Vietnamese_insurgencies
+		icon = GFX_focus_BRA_study_Vietnamese_insurgencies
+		relative_position_id = BRA_revolutionary_brigades
+		x = 2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_militarised_society
+		}
+		completion_reward = {
+		add_ideas = BRA_asian_insurgencies
+		}
+	}
+	#Foreign Policy Focuses
+	focus = { 
+		id = BRA_Foreign_policy
+		icon = GFX_focus_BRA_Foreign_policy
+		x = 37
+		y = 0
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			date > 1938.1.1
+			is_subject = no
+		}
+		prerequisite = {
+			
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+	focus = { 
+		id = BRA_pacifism_and_cooperation
+		icon = GFX_focus_BRA_pacifism_and_cooperation
+		relative_position_id = BRA_Foreign_policy
+		x = -2
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		has_government = revisionist_socialism
+		}
+		prerequisite = {
+			focus = BRA_Foreign_policy
+		}
+		completion_reward = {
+		add_stability = 0.20
+		add_war_support = -0.20
+		add_ideas = BRA_pacifism
+		}
+	}
+	focus = { 
+		id = BRA_beacon_of_socialism
+		icon = GFX_focus_BRA_beacon_of_socialism
+		relative_position_id = BRA_Foreign_policy
+		x = -2
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_pacifism_and_cooperation
+		}
+		completion_reward = {
+		add_ideas = BRA_beacon_of_socialism_idea
+		}
+	}
+	focus = { 
+		id = BRA_international_volunteer_army
+		icon = GFX_focus_BRA_international_volunteer_army
+		relative_position_id = BRA_Foreign_policy
+		x = -2
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_beacon_of_socialism
+		}
+		completion_reward = {
+		add_ideas = BRA_volunteer_army_idea
+		}
+	}
+	focus = { 
+		id = BRA_reapproach_our_latin_neighbours
+		icon = GFX_focus_BRA_reapproach_our_latin_neighbours
+		relative_position_id = BRA_Foreign_policy
+		x = -2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_international_volunteer_army
+		}
+		completion_reward = {
+			add_opinion_modifier = { target = BOL modifier = large_increase }
+			add_opinion_modifier = { target = URG modifier = large_increase }
+			add_opinion_modifier = { target = ARG modifier = large_increase }
+			add_opinion_modifier = { target = PAR modifier = large_increase }
+		}
+	}
+	focus = { 
+		id = BRA_protection_to_all
+		icon = GFX_focus_BRA_protection_to_all
+		relative_position_id = BRA_Foreign_policy
+		x = -2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		prerequisite = {
+			focus = BRA_reapproach_our_latin_neighbours
+		}
+		completion_reward = {
+		give_guarantee = BOL
+		give_guarantee = PAR
+		give_guarantee = ARG
+		give_guarantee = ECU
+		give_guarantee = COL
+		give_guarantee = CHL
+		}
+	}#2nd tree
+	focus = { 
+		id = BRA_aggressive_stance
+		icon = GFX_focus_BRA_aggressive_stance
+		relative_position_id = BRA_Foreign_policy
+		x = 2
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+		has_government = libertarian_marxism
+		}
+		prerequisite = {
+			focus = BRA_Foreign_policy
+		}
+		completion_reward = {
+		add_war_support = 0.20
+		add_stability = -0.05
+		}
+	}
+	focus = { 
+		id = BRA_train_special_units
+		icon = GFX_focus_BRA_train_special_units
+		relative_position_id = BRA_Foreign_policy
+		x = 2
+		y = 2
+		cost = 15
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_aggressive_stance
+		}
+		completion_reward = {
+		add_ideas = BRA_special_forces
+		hidden_effect = {
+		load_oob = "BRA_marines"
+		}
+	custom_effect_tooltip = "BRA_marines_tooltip"
+		}
+	}
+	focus = { 
+		id = BRA_the_smoking_snake
+		icon = GFX_focus_BRA_the_smoking_snake
+		relative_position_id = BRA_Foreign_policy
+		x = 2
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_train_special_units
+		}
+		completion_reward = {
+		add_war_support = 0.15
+		}
+	}
+	focus = { 
+		id = BRA_deutschbrazillien_gesselchaft
+		icon = GFX_focus_BRA_deutschbrazillien_gesselchaft
+		relative_position_id = BRA_Foreign_policy
+		x = 2
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_the_smoking_snake
+		}
+		completion_reward = {
+		add_opinion_modifier = { target = GER modifier = huge_increase }
+		}
+	}
+	focus = { 
+		id = BRA_germanophillia
+		icon = GFX_focus_BRA_germanophillia
+		relative_position_id = BRA_Foreign_policy
+		x = 2
+		y = 5
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			
+			
+		}
+		prerequisite = {
+			focus = BRA_deutschbrazillien_gesselchaft
+		}
+		completion_reward = {
+		add_ideas = BRA_germanophillia
+		}
+	}#3rd tree
+	focus = { 
+		id = BRA_south_american_maximallat
+		icon = GFX_focus_BRA_south_american_maximallat
+		relative_position_id = BRA_Foreign_policy
+		x = 5
+		y = 1
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		available = {
+			has_government = vanguard_socialism
+		}
+		prerequisite = {
+			focus = BRA_Foreign_policy
+		}
+		completion_reward = {
+		add_war_support = 0.50
+		add_political_power = 150
+		}
+	}
+	focus = { 
+		id = BRA_coup_terra
+		icon = GFX_focus_BRA_coup_terra
+		relative_position_id = BRA_Foreign_policy
+		x = 5
+		y = 2
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_south_american_maximallat
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = {
+				id = brazil.18
+			}
+			URG = {
+				add_popularity = {
+					ideology = vanguard_socialism
+					popularity = 0.20
+				}
+			}
+		}
+	}
+	focus = { 
+		id = BRA_strange_the_argentines
+		icon = GFX_focus_BRA_strange_the_argentines
+		relative_position_id = BRA_Foreign_policy
+		x = 5
+		y = 3
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_coup_terra
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARG
+			}
+			ARG = {
+				add_ideas = BRA_embargo
+			}
+		}
+	}
+	focus = { 
+		id = BRA_great_andean_wars
+		icon = GFX_focus_BRA_great_andean_wars
+		relative_position_id = BRA_Foreign_policy
+		x = 5
+		y = 4
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_strange_the_argentines
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ECU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CHL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = COL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = VEN
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BOL
+			}
+		}
+	}
+	focus = { 
+		id = BRA_establish_the_american_maximalitat
+		icon = GFX_focus_BRA_establish_the_american_maximalitat
+		relative_position_id = BRA_Foreign_policy
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_great_andean_wars
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			set_cosmetic_tag = BRA_MAX
+			add_state_core = 300
+			add_state_core = 301
+			add_state_core = 302
+			add_state_core = 688
+			add_state_core = 487
+			unlock_decision_category_tooltip = destroy_the_spanish_language
+			hidden_effect = {
+				add_timed_idea = {
+					idea = BRA_maxlanguageissues
+					days = 1000
+				}
+			set_country_flag = BRA_is_maximalitat
+			}
+		}
+	}
+
+	focus = { 
+		id = BRA_estabilish_a_command_economy
+		icon = GFX_focus_BRA_estabilish_a_command_economy
+		x = 42
+		y = 7
+		cost = 7
+		allow_branch = {
+			has_country_flag = BRA_is_maximalitat
+		}
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = closed_economy
+			clr_country_flag = BRA_is_maximalitat
+		}
+	}
+	focus = {
+		id = BRA_total_isolation
+		icon = GFX_focus_BRA_total_isolation
+		x = 44
+		y = 9
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_estabilish_a_command_economy
+		}
+		relative_position_id = BRA_estabilish_a_command_economy
+		completion_reward = {
+			add_ideas = isolation
+			leave_faction = yes
+			separate_peace_all_wars = yes
+		}
+	}
+	focus = { 
+		id = BRA_south_american_consumer_goods
+		icon = GFX_focus_BRA_south_american_consumer_goods
+		x = 38
+		y = 9
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_estabilish_a_command_economy
+		}
+		relative_position_id = BRA_estabilish_a_command_economy
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = { 
+		id = BRA_black_hole_of_new_world
+		icon = GFX_focus_BRA_black_hole_of_new_world
+		x = 41
+		y = 11
+		cost = 7
+		available_if_capitulated = yes 
+		ai_will_do = { 
+		factor = 1
+		}
+		prerequisite = {
+			focus = BRA_south_american_consumer_goods
+		}
+		prerequisite = {
+			focus = BRA_total_isolation
+		}
+		relative_position_id = BRA_estabilish_a_command_economy
+		completion_reward = {
+			add_ideas = BRA_black_hole
+		}
+	}
+}

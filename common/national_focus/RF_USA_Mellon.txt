@@ -1,0 +1,429 @@
+### Mellon Term 1 tree ###
+focus_tree = {
+	id = USA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = USA
+		}
+	}
+	continuous_focus_position = { x = 2300 y = 1100 }
+	default = no
+	shared_focus = USA_hunt_bonnie_and_clyde
+	shared_focus = USA_second_vinson_act
+	shared_focus = USA_billy_mitchels_air
+	shared_focus = USA_reviewmilitaryspending
+	shared_focus = USA_our_direction
+	#Twilight's Last Gleaming
+	focus = {
+		id = USA_twilightslastgleaming
+		icon = GFX_focus_USA_twilight_last_gleaming
+		x = 8
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.56
+			}
+		}
+	}
+	#Examine the Economic Situation 
+	focus = {
+		id = USA_examinetheeconomicsituation
+		icon = GFX_focus_USA_examine_econ
+		x = 8
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_twilightslastgleaming
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.57
+			}
+		}
+	}
+	#Agricultural Situation
+	focus = {
+		id = USA_agriculturalsituation
+		icon = GFX_focus_USA_agricultural_situation
+		x = 6
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_examinetheeconomicsituation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.58
+			}
+		}
+	}
+	#Industrial Collapse
+	focus = {
+		id = USA_industrialcollapse
+		icon = GFX_focus_USA_industrial_collapse
+		x = 8
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_examinetheeconomicsituation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.59
+			}
+		}
+	}
+	#Radicalism and Lawlessness
+	focus = {
+		id = USA_RadicalismandLawlessness
+		icon = GFX_focus_USA_radicalism_and_lawlessness
+		x = 10
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_examinetheeconomicsituation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.60
+			}
+		}
+	}
+	#Call a Cabinet Meeting
+	focus = {
+		id = USA_callacabinetmeeting
+		icon = GFX_focus_USA_i_see
+		x = 8
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_agriculturalsituation
+		}
+		prerequisite = {
+			focus = USA_industrialcollapse
+		}
+		prerequisite = {
+			focus = USA_RadicalismandLawlessness
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.61
+			}
+		}
+	}
+	#A Light but Firm Hand
+	focus = {
+		id = USA_alightbutfirmhand
+		icon = GFX_focus_USA_a_light_but_firm_hand
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_callacabinetmeeting
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.62
+			}
+		}
+	}
+	#Open for Bussiness
+	focus = {
+		id = USA_openforbussiness
+		icon = GFX_focus_USA_reopen_for_business
+		x = 6
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_alightbutfirmhand
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.63
+			}
+		}
+	}
+	#A New Deal with Britain?
+	focus = {
+		id = USA_merryoldengland
+		icon = GFX_focus_USA_merry_old_england
+		x = 6
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_openforbussiness
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.64
+			}
+		}
+	}
+	#A Special Relationship
+	focus = {
+		id = USA_aspecialrelationship
+		icon = GFX_focus_USA_special_relationship
+		x = 6
+		y = 7
+		cost = 5
+		available = {
+			has_country_flag = britainsaidyes
+		}
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_merryoldengland
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.65
+			}
+		}
+	}
+	#Bandits and Criminals 
+	focus = {
+		id = USA_banditsandcriminals
+		icon = GFX_focus_USA_bandits_and_criminals
+		x = 10
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_alightbutfirmhand
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				days = 1
+				id = usa.66
+			}
+		}
+	}
+	#Our Disspossessed Farmers
+	focus = {
+		id = USA_ourdisspossessedfarmers
+		icon = GFX_focus_USA_disposessed_farmers
+		x = 10
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_banditsandcriminals
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		#	country_event = {
+		#		days = 1
+		#		id = usa.67
+		#	}
+		}
+	}
+	#Communists and Labor Radicalism
+	focus = {
+		id = USA_communistsandlaborradicalism
+		icon = GFX_focus_USA_communists_labor_radicalism
+		x = 10
+		y = 7
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_ourdisspossessedfarmers
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.2
+			add_political_power = -20
+		}
+	}
+	#Final Liquidations
+	focus = {
+		id = USA_finalliquidations
+		icon = GFX_focus_USA_final_liquidations
+		x = 8
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_alightbutfirmhand
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+	#What remains to purge
+	focus = {
+		id = USA_whatremainstopurge
+		icon = GFX_focus_USA_what_remains_to_purge
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_finalliquidations
+		}
+		relative_position_id = USA_finalliquidations
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = -100
+		}
+	}
+	#Address the National Credit Association
+	focus = {
+		id = USA_addressthenationalcreditassociation
+		icon = GFX_focus_USA_adress_nca
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_whatremainstopurge
+		}
+		relative_position_id = USA_whatremainstopurge
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = {
+				id = usa.67
+				days = 1
+			}
+		}
+	}
+	#Gearing up for another term
+	focus = {
+		id = USA_gearingupforanotherterm
+		icon = GFX_focus_USA_gearing_up_for_term
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_addressthenationalcreditassociation
+		}
+		relative_position_id = USA_addressthenationalcreditassociation
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	#Silence the Progressives
+	focus = {
+		id = USA_silencetheprogressives
+		icon = GFX_focus_USA_silence_progressives
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_gearingupforanotherterm
+		}
+		relative_position_id = USA_gearingupforanotherterm
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	#Unite the Party
+	focus = {
+		id = USA_unitetheparty
+		icon = GFX_focus_USA_unite_party
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_silencetheprogressives
+		}
+		relative_position_id = USA_silencetheprogressives
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 55
+		}
+	}
+	#Let the Campaign Begin
+	focus = {
+		id = USA_letthecampaignbegin
+		icon = GFX_focus_USA_campaign_begin
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = USA_unitetheparty
+		}
+		relative_position_id = USA_unitetheparty
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		}
+	}
+}

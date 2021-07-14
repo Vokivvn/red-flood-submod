@@ -1,0 +1,100 @@
+﻿division_template = {
+	name = "Colonial Garrison"
+	division_names_group = ENG_COL_01
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"
+	division_names_group = ENG_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+division= {
+	     name = "Madras Guards"
+	     location = 10278
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "1st Madurai Division"
+	     location = 1409
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+division= {
+	     name = "2nd Madurai Division"
+	     location = 7363
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "Travancore Remnant Division"
+	     location = 4327
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "1st Bombary Remnant Division"
+	     location = 10756
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "2nd Bombary Remnant Division"
+	     location = 4321
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "1st Madras Division"
+	     location = 10897
+	     division_template = "Colonial Garrison"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    division= {
+	     name = "Andhra Garrison"
+	     location = 10116
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+        division= {
+	     name = "2nd Madras Division"
+	     location = 10149
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+        division= {
+	     name = "3rd Madras Division"
+	     location = 10808
+	     division_template = "Cavalry Brigade"
+	     start_experience_factor = 0.5
+	     start_equipment_factor = 1
+    }
+    

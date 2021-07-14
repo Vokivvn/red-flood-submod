@@ -1,0 +1,22 @@
+
+state={
+	id=193
+	name="STATE_193" # Kiev
+	manpower = 700310
+
+	state_category = city
+
+	history={
+		owner = UKR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+
+		add_core_of = UKR
+	}
+
+	provinces={
+		582 9543 11557 489 11530
+	}
+}

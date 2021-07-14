@@ -1,0 +1,454 @@
+FIN_destroyrussianlanguage = {
+	
+	FIN_integrateestonia = {
+		cost = 50
+		days_remove = 35
+		available = {
+			controls_state = 13
+			controls_state = 191
+		}
+		remove_effect  = {
+			13 = {
+				add_core_of = FIN
+			}
+			191 = {
+				add_core_of = FIN
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_razepetrograd = {
+		cost = 150
+		days_remove = 70
+		available = {
+			controls_state = 195
+			controls_state = 208
+			controls_state = 244
+			controls_state = 264
+		}
+		remove_effect  = {
+			195 = {
+				add_core_of = FIN
+			}
+			208 = {
+				add_core_of = FIN
+			}
+			244 = {
+				add_core_of = FIN
+			}
+			264 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_manpower = -53971
+			195 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+				remove_building = {
+					type = infrastructure
+					level = 3
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_removerussiansfromkarelia = {
+		cost = 100
+		days_remove = 70
+		available = {
+			controls_state = 216
+			controls_state = 215
+			controls_state = 147
+			controls_state = 213
+			controls_state = 722
+		}
+		remove_effect  = {
+			216 = {
+				add_core_of = FIN
+			}
+			215 = {
+				add_core_of = FIN
+			}
+			147 = {
+				add_core_of = FIN
+			}
+			213 = {
+				add_core_of = FIN
+			}
+			722 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_manpower = -3012
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_endrussianinarkangelin = {
+		cost = 150
+		days_remove = 70
+		available = {
+			controls_state = 214
+			controls_state = 351
+		}
+		remove_effect  = {
+			214 = {
+				add_core_of = FIN
+			}
+			351 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_manpower = -30785
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_endrussianinurals = {
+		cost = 200
+		days_remove = 70
+		available = {
+			controls_state = 400
+			controls_state = 397
+			controls_state = 262
+			controls_state = 398
+		}
+		remove_effect  = {
+			400 = {
+				add_core_of = FIN
+			}
+			397 = {
+				add_core_of = FIN
+			}
+			262 = {
+				add_core_of = FIN
+			}
+			398 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_manpower = -45802
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+FIN_castratemuscovitehorde = {
+	
+	FIN_integrateestonia1 = {
+		cost = 50
+		days_remove = 35
+		available = {
+			controls_state = 13
+			controls_state = 191
+		}
+		remove_effect  = {
+			13 = {
+				add_core_of = FIN
+			}
+			191 = {
+				add_core_of = FIN
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_massmigrationtopetrograd = {
+		cost = 150
+		days_remove = 70
+		available = {
+			controls_state = 195
+			controls_state = 208
+			controls_state = 244
+			controls_state = 264
+		}
+		remove_effect  = {
+			195 = {
+				add_core_of = FIN
+			}
+			208 = {
+				add_core_of = FIN
+			}
+			244 = {
+				add_core_of = FIN
+			}
+			264 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_manpower = -2677
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_cleanseallkarelia = {
+		cost = 100
+		days_remove = 70
+		available = {
+			controls_state = 216
+			controls_state = 215
+			controls_state = 147
+			controls_state = 213
+			controls_state = 722
+		}
+		remove_effect  = {
+			216 = {
+				add_core_of = FIN
+			}
+			215 = {
+				add_core_of = FIN
+			}
+			147 = {
+				add_core_of = FIN
+			}
+			213 = {
+				add_core_of = FIN
+			}
+			722 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.05
+			add_manpower = -9345
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_sterilizerussiansinarkhangelskandvologda = {
+		cost = 150
+		days_remove = 70
+		available = {
+			controls_state = 214
+			controls_state = 351
+		}
+		remove_effect  = {
+			214 = {
+				add_core_of = FIN
+			}
+			351 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	FIN_colonisationofurals = {
+		cost = 150
+		days_remove = 70
+		available = {
+			controls_state = 400
+			controls_state = 397
+			controls_state = 262
+			controls_state = 398
+		}
+		remove_effect  = {
+			400 = {
+				add_core_of = FIN
+			}
+			397 = {
+				add_core_of = FIN
+			}
+			262 = {
+				add_core_of = FIN
+			}
+			398 = {
+				add_core_of = FIN
+			}
+		}
+		complete_effect = {
+			add_stability = -0.1
+			add_manpower = -11954
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+FIR_raidourneighbors = {
+	FIR_sackpetrograd = {
+		cost = 50
+		days_remove = 15
+		available = {
+		has_country_flag = FIR_banditraiding
+		}
+		remove_effect  = {
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 146
+        num_provinces = 2
+        on_win = finland_border_conflict.1
+        on_lose = finland_border_conflict.2
+        on_cancel = finland_border_conflict.3
+    }
+				
+    defender = {
+        state = 195
+        num_provinces = 2
+        on_win = finland_border_conflict.2
+        on_lose = finland_border_conflict.1
+        on_cancel = finland_border_conflict.3
+    }
+}
+		}
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FIR_takekarelia = {
+		cost = 50
+		days_remove = 15
+		available = {
+		has_country_flag = FIR_banditraiding
+		}
+		remove_effect  = {
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 148
+        num_provinces = 4
+        on_win = finland_border_conflict.4
+        on_lose = finland_border_conflict.2
+        on_cancel = finland_border_conflict.3
+    }
+				
+    defender = {
+        state = 147
+        num_provinces = 4
+        on_win = finland_border_conflict.2
+        on_lose = finland_border_conflict.4
+        on_cancel = finland_border_conflict.3
+    }
+}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FIR_raidsweden = {
+		cost = 50
+		days_remove = 15
+		available = {
+		has_country_flag = FIR_banditraiding
+		}
+		remove_effect  = {
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 148
+        num_provinces = 3
+        on_win = finland_border_conflict.1
+        on_lose = finland_border_conflict.2
+        on_cancel = finland_border_conflict.3
+    }
+				
+    defender = {
+        state = 666
+        num_provinces = 3
+        on_win = finland_border_conflict.2
+        on_lose = finland_border_conflict.1
+        on_cancel = finland_border_conflict.3
+    }
+}
+		}
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	FIR_raidnorway = {
+		cost = 50
+		days_remove = 15
+		available = {
+		has_country_flag = FIR_banditraiding
+		}
+		remove_effect  = {
+start_border_war = {
+    change_state_after_war = no
+    attacker = {
+        state = 148
+        num_provinces = 2
+        on_win = finland_border_conflict.1
+        on_lose = finland_border_conflict.2
+        on_cancel = finland_border_conflict.3
+    }
+				
+    defender = {
+        state = 847
+        num_provinces = 2
+        on_win = finland_border_conflict.2
+        on_lose = finland_border_conflict.1
+        on_cancel = finland_border_conflict.3
+    }
+}
+		}
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

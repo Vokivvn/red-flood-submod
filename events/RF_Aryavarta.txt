@@ -1,0 +1,134 @@
+add_namespace = aryavarta
+
+##Event: Vinayak has been murdered!
+country_event = {
+	id = aryavarta.1
+	title = aryavarta.1.title
+	desc = aryavarta.1.desc
+	picture = GFX_report_event_spr_anarchist_uprising2
+
+	fire_only_once = yes
+	
+	trigger = {
+        tag = ARY
+        owns_state = 428
+	}
+	
+	mean_time_to_happen = {
+		days = 12
+	}
+	
+	option = {
+		name = aryavarta.1.a
+		ai_chance = { factor = 80}
+		set_country_flag = Vinayak_death_flag 
+        add_stability = -0.10
+        kill_ideology_leader = right_authoritarianism
+		create_country_leader = {
+			name = "Balakrishna Shivram Moonje"
+			desc = ""
+			picture = ""
+			expire = "1965.1.1"
+			ideology = authoritarian_conservatism
+		}
+		hidden_effect = {
+			country_event = {
+				id = aryavarta.2
+				days = 5
+			}
+		}
+    }
+}
+##Event: B. S. Moonje takes temporary charge of the nation
+country_event = {
+	id = aryavarta.2
+	title = aryavarta.2.title
+	desc = aryavarta.2.desc
+	picture = GFX_report_event_soviet_in_riga
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aryavarta.2.a
+		ai_chance = { factor = 80}
+		add_stability = 0.02 
+        clr_country_flag = Vinayak_death_flag                                                                                                                   
+        set_country_flag = congress_time
+		hidden_effect = {
+			country_event = {
+				id = aryavarta.3
+				days = 67
+			}
+		}
+	}
+}
+
+##Event: The Hindu Mahasabha extraordinary party congress
+country_event = {
+	id = aryavarta.3
+	title = aryavarta.3.title
+	desc = aryavarta.3.desc
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = aryavarta.3.a
+		ai_chance = { factor = 25}
+		add_popularity = { 
+            ideology = conservatism 
+            popularity = 0.2 
+		}
+        retire_country_leader = yes
+
+		set_politics = {
+			ruling_party = conservatism
+			elections_allowed = no			
+        }
+	}
+
+	option = {
+		name = aryavarta.3.b
+		ai_chance = { factor = 35}
+		add_stability = 0.05
+        add_popularity = { 
+            ideology = right_authoritarianism
+            popularity = 0.1 
+		}
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = right_authoritarianism
+			elections_allowed = no
+		}
+	}
+
+	option = {
+		name = aryavarta.3.c
+		ai_chance = { factor = 25}
+		add_stability = 0.02
+        add_popularity = { 
+            ideology = despotism 
+            popularity = 0.1 
+		}
+        retire_country_leader = yes
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+        }
+	}
+	option = {
+		name = aryavarta.3.d
+		ai_chance = { factor = 15}
+		add_political_power = -100
+        add_popularity = { 
+            ideology = reactionism
+            popularity = 0.2 
+        }
+		retire_country_leader = yes
+		set_politics = {
+			ruling_party = reactionism
+			elections_allowed = no
+		}
+	}
+}

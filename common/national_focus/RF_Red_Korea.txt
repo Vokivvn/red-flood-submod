@@ -1,0 +1,2491 @@
+#####################
+#	Korea - Baba	#
+#####################
+
+focus_tree = {
+	id = JKR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = JKR
+		}
+	}
+	
+	continuous_focus_position = { x = 150 y = 5000 }
+	
+	#Focus for Juche Eductation
+	focus = {
+		id = JKR_juche_eductation
+		icon = GFX_focus_juche_education
+		x = 6
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_two_alphabets }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = JKR_two_alphabets
+				add_idea = JKR_juche_education
+			}
+		}
+	}
+
+	#Focus for Subvert the Russians
+	focus = {
+		id = JKR_subvert_the_russians
+		icon = GFX_focus_subvert_the_russians
+		x = 10
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_destroy_the_japanese }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event for stirring up trouble in ZhR
+			country_event = {
+				id = kor.9
+			}
+		}
+	}
+
+	#Focus for Unite the Republic
+	focus = {
+		id = JKR_unite_the_republic
+		icon = GFX_focus_unite_the_republic
+		x = 4
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_go_with_the_communists }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+			#propaganda event and effects
+			country_event = {
+				id = kor.10
+			}
+			add_stability = 0.1
+		}
+	}
+
+	#Focus for The New Regime
+	focus = {
+		id = JKR_the_new_regime
+		icon = GFX_focus_the_new_regime
+		x = 5
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_execute_kazushige
+		}
+		prerequisite = { 
+			focus = JKR_fortify_the_border
+			focus = JKR_denounce_the_provisional_government
+		}
+		available = { 
+			has_full_control_of_state = 830
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_capital = 830
+			}
+			985 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			986 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			527 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Dictatorship of the Proletariat
+	focus = {
+		id = JKR_dictatorship_of_the_proletariat
+		icon = GFX_focus_dictatorship_of_the_proletariat
+		x = 2
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_pay_lipservice_to_the_international 
+		}
+		prerequisite = { 
+			focus = JKR_unite_the_republic 
+		}
+		available = {
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_stability = 0.12
+			add_war_support = -0.6
+			add_political_power = 150
+		}
+	}
+
+	#Focus for Request Ships
+	focus = {
+		id = JKR_request_ships
+		icon = GFX_focus_JKR_request_ships
+		x = 2
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_cooperate_with_shumei }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event 50/50 JPR gives 4 destroyers or 4 subs
+			country_event = {
+				id = kor.11
+			}
+		}
+	}
+
+	#Focus for Pirates in Shandong
+	focus = {
+		id = JKR_pirates_in_shandong
+		icon = GFX_focus_JKR_pirates_in_shandong
+		x = 4
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_cooperate_with_the_leftkmt }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#gain 20 convoys and 500 guns, 50 arty
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = FJN
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 50
+				producer = XIA
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 25
+				producer = FJN
+			}
+		}
+	}
+
+	#Focus for Execute Kazushige
+	focus = {
+		id = JKR_execute_kazushige
+		icon = GFX_focus_execute_kasushige
+		x = 5
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_collaborators_get_the_bullet }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#rip
+			add_stability = 0.03
+			create_country_leader = {
+				name = "Yamanashi Hanzō"
+				desc = "POLITICS_YAMANASHI_HANZO_DESC"
+				picture = "Portrait_Yamanashi_Hanzo.dds"
+				expire = "1965.1.1"
+				ideology = constitutional_dictatorship
+				traits = {
+					#popular_figurehead
+				}
+			}
+		}
+	}
+
+	#Focus for Denounce the Provisional Government
+	focus = {
+		id = JKR_denounce_the_provisional_government
+		icon = GFX_focus_denounce_the_provisional_goverment
+		x = 3
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_execute_syngman }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			#event annoucning that the provisional leaders are traitors
+			country_event = {
+				id = kor.33
+				days = 1
+			}
+		}
+	}
+
+	#Focus for Korea is Ours
+	focus = {
+		id = JKR_korea_is_ours
+		icon = GFX_focus_korea_is_ours
+		x = 4
+		y = 4
+		cost = 4
+		available_if_capitulated = no
+		mutually_exclusive = { focus = JKR_the_north_is_ours }
+		available = {
+			JKR = {
+				AND = {
+					has_full_control_of_state = 830
+					has_full_control_of_state = 829
+					has_full_control_of_state = 828
+				}
+			}
+			KOR = {
+				exists = no
+			}
+			IKR = {
+				exists = no
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 300
+		}
+		completion_reward = {	#eliminate rival cores from peninsula
+			527 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			984 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			986 = {
+				remove_core_of = KOR
+				remove_claim_by = IKR
+			}
+			830 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			985 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			988 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			829 = {
+				remove_core_of = KOR
+				remove_claim_by = IKR
+			}
+			525 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			987 = {
+				remove_core_of = KOR
+				remove_claim_by = IKR
+			}
+			989 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			828 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			set_province_name = {
+				id = 6944
+				name = Raijin-Sonbong
+			}
+			set_capital = 830
+		}
+	}
+
+	#Focus for The North is Ours
+	focus = {
+		id = JKR_the_north_is_ours
+		icon = GFX_focus_the_north_is_ours
+		x = 6
+		y = 4
+		cost = 4
+		available_if_capitulated = no
+		mutually_exclusive = { focus = JKR_korea_is_ours }
+		available = { 
+			JKR = {
+				NOT = {
+					has_full_control_of_state = 829
+				}
+				has_war = no
+				has_full_control_of_state = 830
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 300
+		}
+		completion_reward = {	#eliminate IKR cores in the north
+			527 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			984 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			986 = {
+				remove_core_of = KOR
+				remove_claim_by = IKR
+			}
+			830 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			985 = {
+				remove_core_of = KOR
+				remove_core_of = IKR
+			}
+			set_province_name = {
+				id = 6944
+				name = Raijin-Sonbong
+			}
+		}
+	}
+
+	#Focus for Collaborators get the Bullet
+	focus = {
+		id = JKR_collaborators_get_the_bullet
+		icon = GFX_focus_collaborators_get_the_bullet
+		x = 5
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_korea_is_ours 
+			focus = JKR_the_north_is_ours 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#-25k manpower, -10 war support, temp idea - purge
+			add_manpower = -25000
+			add_war_support = -0.1
+			add_timed_idea = {
+				idea = JKR_bullet
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Request Guns
+	focus = {
+		id = JKR_request_guns
+		icon = GFX_focus_JKR_request_guns
+		x = 6
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_seek_backing_from_the_russians }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event requesting small arms from ZhR
+			country_event = {
+				id = kor.12
+			}
+		}
+	}
+
+	#Focus for Request Advisors
+	focus = {
+		id = JKR_request_advisors
+		icon = GFX_focus_JKR_request_advisors
+		x = 6
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_request_guns }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#request military attache from ZhR
+			country_event = {
+				id = kor.13
+			}
+		}
+	}
+
+	#Focus for Threadbare Campagining
+	focus = {
+		id = JKR_threadbare_campagining
+		icon = GFX_focus_JKR_threadbare_campaigns
+		x = 3
+		y = 3
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_pirates_in_shandong 
+			focus = JKR_request_ships 
+		}
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#timed idea - supply grace, entrenchment
+			add_timed_idea = {
+				idea = JKR_threadbare
+				days = 120
+			}
+		}
+	}
+
+	#Focus for Seek Backing From the Russians
+	focus = {
+		id = JKR_seek_backing_from_the_russians
+		icon = GFX_focus_JKR_seek_backing_from_the_russians
+		x = 6
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#request support from ZhR - 250 guns + small manpower boost boost relations
+			country_event = {
+				id = kor.14
+			}
+		}
+	}
+
+	#Focus for Cooperate with Shumei
+	focus = {
+		id = JKR_cooperate_with_shumei
+		icon = GFX_focus_JKR_cooperate_with_shumei
+		x = 2
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#boost relations with JPR, recieve small shipment of convoys and guns
+			JKR = {
+				diplomatic_relation = {
+					country = JPR
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			add_opinion_modifier = {
+				target = JPR
+				modifier = offered_support
+			}
+			JPR = {
+				add_opinion_modifier = {
+					target = JKR
+					modifier = offered_support
+				}
+			}
+		}
+	}
+
+	#Focus for Cooperate with the Left-KMT
+	focus = {
+		id = JKR_cooperate_with_the_leftkmt
+		icon = GFX_focus_JKR_cooperate_with_kmt
+		x = 4
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#request aid from XIA+FJN, potentially 3 light divs spawn, boost relations
+			country_event = {
+				id = kor.15
+			}
+		}
+	}
+
+	#Focus for Push South
+	focus = {
+		id = JKR_push_south
+		icon = GFX_focus_JKR_push_south
+		x = 0
+		y = 3
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_secure_the_central_regions }
+		available = {
+			KOR = {
+				exists = yes
+			}
+			NOT = {
+				has_full_control_of_state = 830
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#attack KOR
+			declare_war_on = {
+				target = KOR
+				type = annex_everything
+			}
+		}
+	}
+
+	#Focus for Secure the Central Regions
+	focus = {
+		id = JKR_secure_the_central_regions
+		icon = GFX_focus_JKR_secure_the_central_regions
+		x = 0
+		y = 2
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_secure_the_north }
+		available = { 
+			NOT = {
+				has_full_control_of_state = 829
+				
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#add one cav division
+			division_template = {
+				name = "Pyongyang Revolutionaries"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				} 
+			}
+			random_owned_controlled_state = {
+				prioritize = { 830 }
+				create_unit = {
+					division = "name = \"Pyongyang Cavalry\" division_template = \"Pyongyang Revolutionaries\" start_experience_factor = 0.75"
+					owner = JKR
+				}
+			}
+		}
+	}
+
+	#Focus for Revolution!
+	focus = {
+		id = JKR_revolution
+		icon = GFX_focus_JKR_revolution
+		x = 3
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#nat spirit for being stubborn bastards
+			set_province_name = {
+				id = 6922
+				name = Seongjin
+			}
+			add_stability = 0.07
+			add_war_support = 0.07
+		}
+	}
+
+	#Focus for Secure the North
+	focus = {
+		id = JKR_secure_the_north
+		icon = GFX_focus_JKR_secure_the_north
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revolution }
+		available = { 
+			OR = {
+				has_war_with = IKR
+				has_war_with = KOR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event inviting Kims anarchists from Andong to help - 2 divs
+			country_event = {
+				id = kor.8
+			}
+		}
+	}
+
+	#Focus for Execute Syngman
+	focus = {
+		id = JKR_execute_syngman
+		icon = GFX_focus_execute_syngman
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_korea_is_ours }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#kill Rhee
+			add_stability = 0.03
+			create_country_leader = {
+				name = "Lee Beom-seok"
+				desc = "POLITICS_LEE_BEOM_SEOK_DESC"
+				picture = "Portrait_Lee_Beom_seok.dds"
+				expire = "1965.1.1"
+				ideology = military_junta
+				traits = {
+					#popular_figurehead
+				}
+			}
+		}
+	}
+
+	#Focus for Move to Pyongyang
+	focus = {
+		id = JKR_move_to_pyongyang
+		icon = GFX_focus_move_to_pyonyang
+		x = 7
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_north_is_ours }
+		available = { 
+			has_full_control_of_state = 830
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#capital to 830
+			set_capital = 830
+			add_political_power = 50
+			830 = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	#Focus for Fortify Pyongyang
+	focus = {
+		id = JKR_fortify_the_border
+		icon = GFX_focus_fortify_pyonyang
+		x = 7
+		y = 6
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_move_to_pyongyang }
+		available = { 
+			has_full_control_of_state = 830
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#fortify the north/south border
+			830 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4052
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4052
+				}
+			}
+		}
+	}
+
+	#Focus for Juche!
+	focus = {
+		id = JKR_juche
+		icon = GFX_focus_juche_korea
+		x = 8
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_revolutionary_coalition }
+		mutually_exclusive = { focus = JKR_go_with_the_communists }
+		mutually_exclusive = { focus = JKR_the_free_korean_people  }
+		available = { 
+			has_government = accelerationism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#Sin takes charge
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.12
+			}
+			set_cosmetic_tag = JKR_juche
+		}
+	}
+
+	#Focus for The Revolutionary Coalition
+	focus = {
+		id = JKR_the_revolutionary_coalition
+		icon = GFX_focus_the_revolutionary_coalition
+		x = 5
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_new_regime }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#the coalition of left-nats collapses as the vanguard clashes with anarchist factions, Kim pledges to Sin and Cho to Pak
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+			country_event = {
+				id = kor.20
+			}
+		}
+	}
+
+	#Focus for Go with the Communists
+	focus = {
+		id = JKR_go_with_the_communists
+		icon = GFX_focus_go_with_the_communists
+		x = 2
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_revolutionary_coalition }
+		mutually_exclusive = { focus = JKR_juche }
+		mutually_exclusive = { focus = JKR_the_free_korean_people }
+		available = { 
+			has_government = vanguard_socialism
+		}
+		bypass = { }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#vanguard takes over in coalition with rev-socs
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.2
+			}
+			set_cosmetic_tag = JKR_lenin
+		}
+	}
+
+	#Focus for Revive the Minjok
+	focus = {
+		id = JKR_revive_the_minjok
+		icon = GFX_focus_revive_the_minjok
+		x = 8
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_juche }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#national vigour spirit
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+			#propaganda event and effects
+			country_event = {
+				id = kor.17
+			}
+		}
+	}
+
+	#Focus for More than a Peninsula
+	focus = {
+		id = JKR_more_than_a_peninsula
+		icon = GFX_focus_more_than_a_peninsula
+		x = 8
+		y = 11
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revive_the_minjok }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#claim andong
+			add_state_claim = 809
+			add_state_claim = 909
+			add_timed_idea = {
+				idea = JKR_andong
+				days = 90
+			}
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Legacy of King Muyeol
+	focus = {
+		id = JKR_legacy_of_king_muyeol
+		icon = GFX_focus_legacy_of_king
+		x = 8
+		y = 12
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_more_than_a_peninsula }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#claim all manchuria
+			add_state_claim = 328
+			add_state_claim = 408
+			add_state_claim = 409
+			add_state_claim = 537
+			add_state_claim = 610
+			add_state_claim = 612
+			add_state_claim = 655
+			add_state_claim = 714
+			add_state_claim = 715
+			add_state_claim = 716
+			add_state_claim = 717
+			add_state_claim = 745
+			add_state_claim = 761
+			add_state_claim = 789
+			add_state_claim = 810
+			add_state_claim = 881
+			add_state_claim = 912
+			add_state_claim = 930
+			add_state_claim = 978
+			
+			add_political_power = 50
+			add_stability = 0.1
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	#Focus for Goguryeo
+	focus = {
+		id = JKR_goguryeo
+		icon = GFX_focus_goguryeo
+		x = 7
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_legacy_of_king_muyeol }
+		available = { 
+			#has certain manchurian states
+			has_full_control_of_state = 809
+			has_full_control_of_state = 978
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#cosmetic tag once lands are reclaimed, cores added to Manchuria
+			set_cosmetic_tag = JKR_accel_goguryeo
+			add_state_core = 809
+			add_state_core = 717
+			add_state_core = 909
+			add_political_power = 75
+		}
+	}
+
+	#Focus for Pay Lipservice to the International
+	focus = {
+		id = JKR_pay_lipservice_to_the_international
+		icon = GFX_focus_pay_service_to_international
+		x = 0
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_go_with_the_communists }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#relations with the 3rd int'l
+			add_opinion_modifier = {
+				target = GER
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = BRA
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = HUN
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = BUL
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = NOR
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = CUB
+				modifier = offered_support
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	#Focus for Destroy the Japanese
+	focus = {
+		id = JKR_destroy_the_japanese
+		icon = GFX_focus_destroy_the_japanese
+		x = 10
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revive_the_minjok }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = { #purge japanese from korea
+			add_timed_idea = {
+				idea = JKR_no_nihon
+				days = 180
+			}
+		}
+	}
+
+	#Focus for Cultural Unity with the Manchus
+	focus = {
+		id = JKR_cultural_unity_with_the_manchus
+		icon = GFX_focus_cultural_unity_with_manchus
+		x = 9
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_legacy_of_king_muyeol }
+		available = { 
+			has_full_control_of_state = 328
+			has_full_control_of_state = 408
+			has_full_control_of_state = 409
+			has_full_control_of_state = 610
+			has_full_control_of_state = 612
+			has_full_control_of_state = 714
+			has_full_control_of_state = 715
+			has_full_control_of_state = 716
+			has_full_control_of_state = 717
+			has_full_control_of_state = 745
+			has_full_control_of_state = 761
+			has_full_control_of_state = 789
+			has_full_control_of_state = 810
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 930
+			has_full_control_of_state = 978
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#
+			add_state_core = 328
+			add_state_core = 408
+			add_state_core = 409
+			add_state_core = 610
+			add_state_core = 612
+			add_state_core = 714
+			add_state_core = 715
+			add_state_core = 716
+			add_state_core = 717
+			add_state_core = 745
+			add_state_core = 761
+			add_state_core = 789
+			add_state_core = 810
+			add_state_core = 881
+			add_state_core = 909
+			add_state_core = 912
+			add_state_core = 930
+			add_state_core = 978
+			
+			add_stability = 0.1
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.12
+			}
+		}
+	}
+
+	#Focus for Two Alphabets
+	focus = {
+		id = JKR_two_alphabets
+		icon = GFX_focus_two_alphabets
+		x = 6
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_revive_the_minjok }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event, hangul + the other one
+			add_ideas = {
+				JKR_two_alphabets
+			}
+		}
+	}
+
+	#Focus for Surpass Buyeo
+	focus = {
+		id = JKR_surpass_buyeo
+		icon = GFX_focus_surpass_buyeo
+		x = 8
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_goguryeo 
+		}
+		prerequisite = { 
+			focus = JKR_cultural_unity_with_the_manchus 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#national literature society and the Goguryeo Nationalist Cause
+			add_ideas = {
+				JKR_buyeo
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for By Lenin's Playbook
+	focus = {
+		id = JKR_by_lenins_playbook
+		icon = GFX_focus_by_lenins_playbook
+		x = 2
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_dictatorship_of_the_proletariat }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#Big boost to relations with ZhR if Trots is in charge/Germany if Goebbels is in charge. Add 2 civs
+			if = {
+				limit = {
+					ZHR = {
+						has_government = vanguard_socialism
+					}
+				}
+				add_opinion_modifier = {
+					target = ZHR
+					modifier = offered_support
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = vanguard_socialism
+					}
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = offered_support
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Centralised Democracy
+	focus = {
+		id = JKR_centralised_democracy
+		icon = GFX_focus_centralised_democracy
+		x = 4
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_unite_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#consolidate coalition party grip, reduced pol power growth, decrease law cost/minister cost
+			add_political_power = 75
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.1
+			}
+			add_ideas = {
+				JKR_com_dem
+			}
+		}
+	}
+
+	#Focus for Korean Self-Determination
+	focus = {
+		id = JKR_korean_selfdetermination
+		icon = GFX_focus_korean_self_determination
+		x = 0
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_pay_lipservice_to_the_international }
+		available = { 
+			has_full_control_of_state = 984
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#self-reliance doctrine
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 984
+			}
+			add_resource = {
+				type = oil
+				amount = 3
+				state = 984
+			}
+			add_resource = {
+				type = rubber
+				amount = 3
+				state = 984
+			}
+			add_resource = {
+				type = tungsten
+				amount = 6
+				state = 984
+			}
+			add_political_power = 50
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Appease the Agrarian Factions
+	focus = {
+		id = JKR_appease_the_agrarian_factions
+		icon = GFX_focus_appease_the_agrarian_faction
+		x = 2
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_by_lenins_playbook }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#event with the opportunity to coup Pak and have Cho take over.
+			country_event = {
+				id = kor.18
+			}
+			add_political_power = -50
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.12
+			}
+		}
+	}
+
+	#Focus for The Prelude
+	focus = {
+		id = JKR_the_prelude
+		icon = GFX_focus_the_prelude
+		x = 2
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_appease_the_agrarian_factions }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			custom_effect_tooltip = JKR_the_prelude_tooltip
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MAN
+			}
+			add_state_core = 809
+			add_state_core = 717
+			add_state_core = 909
+		}
+	}
+
+	#Focus for Return Favours
+	focus = {
+		id = JKR_return_favours
+		icon = GFX_focus_return_favours
+		x = 0
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_korean_selfdetermination }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#trade opinion with XIA and FJN
+			add_ideas = {
+				JKR_favours
+			}
+		}
+	}
+
+	#Focus for Guarantee Seats to the Party
+	focus = {
+		id = JKR_guarantee_seats_to_the_party
+		icon = GFX_focus_guarantee_seats_to_the_party
+		x = 4
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_centralised_democracy }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	#bloc pp, boost stab, war support, 
+			add_political_power = 125
+			add_stability = 0.12
+			add_war_support = 0.12
+		}
+	}
+	
+	#Focus for Lateral Power
+	focus = {
+		id = JKR_lateral_power
+		icon = GFX_focus_horizontal_power
+		x = 17
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_literal_democracy 
+		}
+		prerequisite = { 
+			focus = JKR_classless_society 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_political_power = -75
+			add_ideas = {
+				JKR_lateral_power
+			}
+		}
+	}
+
+	#Focus for Volunteerism
+	focus = {
+		id = JKR_volunteerism
+		icon = GFX_focus_volunteerism
+		x = 13
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_cooperative_economy 
+		}
+		prerequisite = { 
+			focus = JKR_freedom_of_religion 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_ideas = {
+				JKR_volunteers
+			}
+		}
+	}
+
+	#Focus for Classless Society
+	focus = {
+		id = JKR_classless_society
+		icon = GFX_focus_classless_society
+		x = 18
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_the_kpam_model 
+			focus = JKR_united_communes_of_korea 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_stability = 0.2
+			add_war_support = 0.12
+			add_ideas = {
+				JKR_classlessness
+			}
+		}
+	}
+
+	#Focus for Re-Organise the Provinces
+	focus = {
+		id = JKR_reorganise_the_provinces
+		icon = GFX_focus_reorganise_the_provinces
+		x = 15
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_free_korean_people }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.25
+			}
+			add_state_claim = 809
+			add_state_claim = 909
+			add_state_claim = 717
+		}
+	}
+
+	#Focus for Literal Democracy
+	focus = {
+		id = JKR_literal_democracy
+		icon = GFX_focus_build_consensus_democracy
+		x = 16
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_the_kpam_model 
+			focus = JKR_united_communes_of_korea 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_stability = 0.12
+			add_political_power = 75
+			add_ideas = {
+				JKR_full_dem
+			}
+		}
+	}
+
+	#Focus for Co-operative Economy
+	focus = {
+		id = JKR_cooperative_economy
+		icon = GFX_focus_cooperative_economy
+		x = 12
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_united_communes_of_korea 
+			focus = JKR_the_kpam_model 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Freedom of Religion
+	focus = {
+		id = JKR_freedom_of_religion
+		icon = GFX_focus_freedom_of_religion
+		x = 14
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_united_communes_of_korea 
+			focus = JKR_the_kpam_model 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_ideas = {
+				JKR_free_rel
+			}
+		}
+	}
+
+	#Focus for The KPAM Model
+	focus = {
+		id = JKR_the_kpam_model
+		icon = GFX_focus_the_kpam_model
+		x = 16
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_reorganise_the_provinces }
+		mutually_exclusive = { focus = JKR_united_communes_of_korea }
+		available = { 
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.05
+			}
+			add_stability = 0.05
+			add_war_support = -0.05
+			hidden_effect = {
+				set_cosmetic_tag = JKR_KPAM
+			}
+		}
+	}
+
+	#Focus for United Communes of Korea
+	focus = {
+		id = JKR_united_communes_of_korea
+		icon = GFX_focus_united_communes_of_korea
+		x = 14
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_reorganise_the_provinces }
+		mutually_exclusive = { focus = JKR_the_kpam_model }
+		available = {
+			is_puppet = no
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					KOR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KOR
+				}
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.15
+			}
+			add_stability = -0.05
+			add_war_support = 0.05
+			hidden_effect = {
+				set_cosmetic_tag = JKR_united_communes
+			}
+		}
+	}
+
+	#Focus for Comrade Kim
+	focus = {
+		id = JKR_comrade_kim
+		icon = GFX_focus_comrade_kim_charter
+		x = 17
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_lateral_power }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_ideas = {
+				JKR_com_kim
+			}
+			#event
+		}
+	}
+
+	#Focus for Kropotkin's Korea
+	focus = {
+		id = JKR_kropotkins_korea
+		icon = GFX_focus_codify_korean_anarchism
+		x = 13
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_volunteerism }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_ideas = {
+				JKR_kropotkin
+			}
+			#event
+		}
+	}
+	
+	#Focus for The Free Korean People
+	focus = {
+		id = JKR_the_free_korean_people
+		icon = GFX_focus_the_free_korean_people
+		x = 15
+		y = 9
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_the_revolutionary_coalition }
+		mutually_exclusive = { 
+			focus = JKR_juche 
+		}
+		mutually_exclusive = { 
+			focus = JKR_go_with_the_communists 
+		}
+		available = { 
+			has_government = revolutionary_anarchism
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {	
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.12
+			}
+			add_stability = 0.06
+		}
+	}
+	
+	#Focus for Guard the Skies
+	focus = {
+		id = JKR_guard_the_skies
+		icon = GFX_focus_JKR_guard_the_skies
+		x = 26
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#plane techs
+			add_tech_bonus = { bonus = 1 uses = 3 category = air_doctrine }
+		}
+	}
+
+	#Focus for National Defence
+	focus = {
+		id = JKR_national_defence
+		icon = GFX_focus_JKR_national_defence
+		x = 12
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#army techs
+			add_tech_bonus = { bonus = 3 uses = 1 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Guard the Seas
+	focus = {
+		id = JKR_guard_the_seas
+		icon = GFX_focus_JKR_guard_the_seas
+		x = 19
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		available = { 
+			NOT = {
+				has_war_with = IKR
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#destroyer techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = dd_tech }
+			navy_experience = 15
+		}
+	}
+
+	#Focus for New Arsenals
+	focus = {
+		id = JKR_new_arsenals
+		icon = GFX_focus_JKR_new_arsenals
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_armoury_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#3 mils
+			random_owned_controlled_state = {
+				limit = {
+					arms_factory > 0
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Busan Fleet
+	focus = {
+		id = JKR_busan_fleet
+		icon = GFX_focus_JKR_pyongyang_fleet
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#cruiser techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = cl_tech category = ca_tech }
+		}
+	}
+
+	#Focus for Legacy of Yi Sun-sin
+	focus = {
+		id = JKR_legacy_of_yi_sunsin
+		icon = GFX_focus_JKR_legacy_of_yi_sun_sin
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_busan_fleet }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#battleship techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = bb_tech }
+		}
+	}
+
+	#Focus for Busan Shipyard
+	focus = {
+		id = JKR_busan_shipyard
+		icon = GFX_focus_JKR_pyongyang_shipyards
+		x = 17
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_seas }
+		available = { 
+			has_full_control_of_state = 830
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#4 dockyards
+			830 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Contest the Sea of Japan
+	focus = {
+		id = JKR_contest_the_sea_of_japan
+		icon = GFX_focus_JKR_contest_the_sea_of_japan
+		x = 21
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_seas }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#sub tehcs, mine techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = ss_tech }
+		}
+	}
+
+	#Focus for Busan Naval Academy
+	focus = {
+		id = JKR_busan_naval_academy
+		icon = GFX_focus_JKR_pyongyang_naval_academy
+		x = 17
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_busan_shipyard }
+		available = { 
+			has_full_control_of_state = 830
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#naval xp +100
+			navy_experience = 100
+		}
+	}
+
+	#Focus for Turtle Ships
+	focus = {
+		id = JKR_turtle_ships
+		icon = GFX_focus_JKR_turtle_ships
+		x = 19
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_legacy_of_yi_sunsin }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	
+			add_ideas = {
+				JKR_turtle
+			}
+		}
+	}
+
+	#Focus for Combined Arms
+	focus = {
+		id = JKR_combined_arms
+		icon = GFX_focus_JKR_combined_arms
+		x = 14
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_lessons_from_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#air and army doctrine
+			add_tech_bonus = { bonus = 1 uses = 2 category = land_doctrine category = air_doctrine }
+		}
+	}
+
+	#Focus for New Air Wings
+	focus = {
+		id = JKR_new_air_wings
+		icon = GFX_focus_JKR_new_air_wings
+		x = 26
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#add 50 fighters to stockpile +1 airbase level in state
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Air Defence Network
+	focus = {
+		id = JKR_air_defence_network
+		icon = GFX_focus_JKR_air_defence_network
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_camouflage }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#lvl 2 AA in 2 states
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Women in the Air
+	focus = {
+		id = JKR_women_in_the_air
+		icon = GFX_focus_JKR_women_in_the_air
+		x = 25
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_new_air_wings }
+		mutually_exclusive = { focus = JKR_martyrs_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#women aces rule
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_manpower = 25000
+		}
+	}
+
+	#Focus for Pilot Schools
+	focus = {
+		id = JKR_pilot_schools
+		icon = GFX_focus_JKR_pilot_schools
+		x = 26
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = JKR_women_in_the_air 
+			focus = JKR_martyrs_in_the_air 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#air xp +100
+			air_experience = 100
+		}
+	}
+
+	#Focus for Camouflage
+	focus = {
+		id = JKR_camouflage
+		icon = GFX_focus_JKR_camouflage
+		x = 23
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#CAS defence for troops, intercept defence for bombers
+			add_ideas = {
+				JKR_air_camouflage
+			}
+		}
+	}
+
+	#Focus for Harass the Bombers
+	focus = {
+		id = JKR_harass_the_bombers
+		icon = GFX_focus_JKR_harass_the_bombers
+		x = 29
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_guard_the_skies }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#fighter efficency
+			add_ideas = {
+				JKR_harassment
+			}
+		}
+	}
+
+	#Focus for Armoury of the Republic
+	focus = {
+		id = JKR_armoury_of_the_republic
+		icon = GFX_focus_JKR_armoury_of_republic
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#small arms techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = infantry_weapons }
+		}
+	}
+
+	#Focus for Promote Partisan Leaders
+	focus = {
+		id = JKR_promote_partisan_leaders
+		icon = GFX_focus_JKR_promote_partisan_leaders
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_army_of_the_republic }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#leader promote cost, add Kang Kon
+			create_corps_commander = {
+				name = "Kang Kon"
+				#picture = "Portrait_Kang_Kon.dds"
+				traits = { }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Kim Il-Sung"
+				picture = "Portrait_Kim_Il_sung.dds"
+				traits = { politically_connected }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			add_ideas = {
+				JKR_promote_pl
+			}
+		}
+	}
+
+	#Focus for Army of the Republic
+	focus = {
+		id = JKR_army_of_the_republic
+		icon = GFX_focus_JKR_army_of_republic
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#conscription, core territory stats
+			army_experience = 50
+		}
+	}
+
+	#Focus for Establish a Marine Corps
+	focus = {
+		id = JKR_establish_a_marine_corps
+		icon = GFX_focus_JKR_establish_a_marine_corps
+		x = 21
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_contest_the_sea_of_japan }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#marine techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = marine_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = tp_tech }
+		}
+	}
+
+	#Focus for Lessons from Japan
+	focus = {
+		id = JKR_lessons_from_japan
+		icon = GFX_focus_JKR_lessons_from_japan
+		x = 14
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_national_defence }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#mech + armour techs
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_light_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cat_heavy_armor }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	#Focus for Politicise the Army
+	focus = {
+		id = JKR_politicise_the_army
+		icon = GFX_focus_JKR_politicise_army
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_promote_partisan_leaders }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#div morale up
+			add_political_power = 50
+			add_command_power = 35
+		}
+	}
+
+	#Focus for Martyrs in the Air
+	focus = {
+		id = JKR_martyrs_in_the_air
+		icon = GFX_focus_JKR_martyrs_in_the_air
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_new_air_wings }
+		mutually_exclusive = { focus = JKR_women_in_the_air }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#kamikaze planes
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+		}
+	}
+
+	#Focus for Dogfighting Pedigree
+	focus = {
+		id = JKR_dogfighting_pedigree
+		icon = GFX_focus_JKR_dogfighting_pedigree
+		x = 29
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = JKR_harass_the_bombers }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {	#
+			add_ideas = {
+				JKR_dogfighting
+			}
+		}
+	}
+
+#End of focuses 
+ }

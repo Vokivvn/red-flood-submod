@@ -1,0 +1,43 @@
+﻿capital = 548
+
+load_oob = "UGD_revolt" 
+
+set_research_slots = 2 
+
+add_ideas = {
+
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+}
+
+set_politics = {
+	ruling_party = libertarian_marxism
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 65
+	revolutionary_anarchism = 5
+	revisionist_socialism = 0
+	social_democratism = 15
+	liberalism = 10
+	conservatism = 0
+	right_authoritarianism = 0
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Ignatius K. Musaazi"
+	desc = "POLITICS_MUSAAZI_DESC"
+	picture = "Portrait_Uganda_Ignatius_Musaazi.dds"
+	expire = "1965.1.1"
+	ideology = council_communism
+	}

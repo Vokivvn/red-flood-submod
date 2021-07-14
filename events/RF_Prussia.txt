@@ -1,0 +1,1916 @@
+﻿add_namespace = prussia
+
+country_event = { #Intro event
+	id = prussia.1
+	title = prussia.1.t
+	desc = prussia.1.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.1.a
+		ai_chance = {
+			factor = 1
+		}		
+	}
+}
+country_event = { #Democratic Election of Reichsmarshal
+	id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.2.a
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = PRS_heinz_guderian_hog
+	}
+	option = {
+		name = prussia.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = PRS_fritz_schulenburg_hog
+	}
+	option = {
+		name = prussia.2.c
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = PRS_heinrich_schnee_hog
+	}
+	option = {
+		name = prussia.2.d
+		ai_chance = {
+			factor = 1
+		}
+		add_ideas = PRS_rudiger_goltz_hog
+	}
+}
+country_event = { #Bloody January
+	id = prussia.3
+	title = prussia.3.t
+	desc = prussia.3.desc
+	picture = GFX_report_event_military_car_street
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.3.a
+		add_ideas = PRS_bloody_january
+		add_stability = -0.1
+		complete_national_focus = PRS_Bloody_Jan
+		hidden_effect = {
+			country_event = {
+				id = prussia.24
+				days = 90
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}		
+	}
+	option = {
+		name = prussia.3.b
+		hidden_effect = {
+			country_event = {
+				id = prussia.4
+				days = 4
+			}
+		}
+		add_stability = 0.1
+		ai_chance = {
+			factor = 0
+		}		
+	}
+}
+country_event = { #The Prussian Spring
+	id = prussia.4
+	title = prussia.4.t
+	desc = prussia.4.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.4.a
+		ai_chance = {
+			factor = 10
+		}
+		set_politics = {
+			ruling_party = social_democratism
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = -0.2
+		}
+		add_ideas = {
+			PRS_otto_braun_socdem_hog
+		}
+		remove_ideas = PRS_disloyal_proletariat
+		complete_national_focus = PRS_Prussian_Spring
+	}
+}
+country_event = { #The Rise of Braun
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.5.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = accelerationism
+			popularity = 0.2
+		}
+		complete_national_focus = PRS_ottos_traum
+		add_ideas = PRS_wilhelm_august
+	}
+}
+country_event = { #The Ascent of Wessel
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.6.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.2
+		}
+		complete_national_focus = PRS_screw_farts
+		add_ideas = PRS_wilhelm_august
+	}
+}
+country_event = { #A meeting with the Homeland
+	id = prussia.7
+	title = prussia.7.t
+	desc = prussia.7.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.7.a
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			GER = {
+				has_government = revisionist_socialism
+			}
+		}
+		GER = {
+			country_event = {
+				id = prussia.8
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.7.b
+		ai_chance = {
+			factor = 10
+		}
+		trigger = {
+			NOT = {
+				GER = {
+					has_government = revisionist_socialism
+				}
+			}
+		}
+		GER = {
+			country_event = {
+				id = prussia.10
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Prussia seeks reconciliation
+	id = prussia.8
+	title = prussia.8.t
+	desc = prussia.8.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.8.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.9
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Prussia rejoins Germany
+	id = prussia.9
+	title = prussia.9.t
+	desc = prussia.9.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.9.a
+		ai_chance = {
+			factor = 10
+		}
+		remove_ideas = {
+			PRS_disloyal_proletariat
+			PRS_junkerstaat
+			PRS_power_of_freikorps
+		}
+		GER = {
+			puppet = PRS
+		}
+	}
+	option = {
+		name = prussia.9.b
+		ai_chance = {
+			factor = 10
+		}
+		remove_ideas = {
+			PRS_disloyal_proletariat
+			PRS_junkerstaat
+			PRS_power_of_freikorps
+		}
+		GER = {
+			puppet = PRS
+		}
+		GER = {
+			change_tag_from = ROOT
+		}
+	}
+}
+country_event = { #Prussia seeks an agreement
+	id = prussia.10
+	title = prussia.10.t
+	desc = prussia.10.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.10.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.11
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.10.b
+		ai_chance = {
+			factor = 1
+		}
+		PRS = {
+			country_event = {
+				id = prussia.12
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #German deceit!
+	id = prussia.11
+	title = prussia.11.t
+	desc = prussia.11.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.11.a
+		ai_chance = {
+			factor = 10
+		}
+		GER = { #Rework this
+			puppet = PRS
+		}
+	}
+}
+
+country_event = { #Germans agree to the pact
+	id = prussia.12
+	title = prussia.12.t
+	desc = prussia.12.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.12.a
+		ai_chance = {
+			factor = 10
+		}
+		diplomatic_relation = {
+			country = GER
+			relation = non_aggression_pact
+			active = yes
+		}
+		GER = {
+			diplomatic_relation = {
+				country = PRS
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+}
+country_event = { #Choosing the monarch of Prussia
+	id = prussia.13
+	title = prussia.13.t
+	desc = prussia.13.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.13.a
+		ai_chance = {
+			factor = 1
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Wilhelm III"
+			desc = "POLITICS_WILHELM_AUGUST_DESC"
+			picture = "Portrait_PRS_Wilhelm_August.tga"
+			expire = "1966.1.1"
+			ideology = military_junta
+		}
+		complete_national_focus = PRS_Crown_Madman
+	}
+	option = {
+		name = prussia.13.b
+		ai_chance = {
+			factor = 8
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Oskar I"
+			desc = "POLITICS_OSKAR_DESC"
+			picture = "Portrait_PRS_Prinz_Oskar.tga"
+			expire = "1958.1.1"
+			ideology = military_junta
+		}
+		complete_national_focus = PRS_Benevolent_Usurp
+		hidden_effect = {
+			country_event = {
+				id = prussia.14
+				days = 12
+			}
+			create_country_leader = {
+				name = "August Wilhelm"
+				desc = "POLITICS_WILHELM_AUGUST_DESC"
+				picture = "Portrait_PRS_Wilhelm_August.tga"
+				expire = "1966.1.1"
+				ideology = national_rejuvenatism
+			}
+		}
+	}
+	option = {
+		name = prussia.13.c
+		ai_chance = {
+			factor = 1
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Viktoria Luise I"
+			desc = "POLITICS_LUISE_DESC"
+			picture = "Portrait_PRS_Prinz_Oskar.tga"
+			expire = "1958.1.1"
+			ideology = military_junta
+		}
+		complete_national_focus = PRS_Queen_Coup
+		hidden_effect = {
+			country_event = {
+				id = prussia.14
+				days = 12
+			}
+		}
+	}
+}
+country_event = { #August Wilhelm's coup
+	id = prussia.14
+	title = prussia.14.t
+	desc = prussia.14.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.14.a
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = usurper_civil_war
+		PRS_usurper_war = yes
+	}
+	option = {
+		name = prussia.14.b
+		ai_chance = {
+			factor = 0
+		}
+		set_global_flag = usurper_civil_war
+		PRS_usurper_war = yes
+		PRR = {
+			change_tag_from = PRS
+		}
+	}
+}
+country_event = { #End of the civil war - August Wilhelm win
+	id = prussia.15
+	title = prussia.15.t
+	desc = prussia.15.desc
+	#picture = GFX_report_event_military_planning
+	trigger = {
+		tag = PRR
+		763 = {
+			owner = {
+				has_war = no
+				has_country_leader = {
+					name = "Wilhelm III"
+					ruling_only = yes
+				}
+				has_global_flag = usurper_civil_war
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.15.a
+		ai_chance = {
+			factor = 10
+		}
+		PRR_victory = yes
+		add_timed_idea = {
+			idea = PRS_aftermath_coup
+			days = 720
+		}
+		add_popularity = {
+			ideology = accelerationism 
+			popularity = 0.1
+		}
+		complete_national_focus = PRS_March_Eagles
+	}
+}
+country_event = { #End of the civil war - August Wilhelm loss
+	id = prussia.16
+	title = prussia.16.t
+	desc = prussia.16.desc
+	#picture = GFX_report_event_military_planning
+	trigger = {
+		tag = PRS
+		763 = {
+			owner = {
+				has_war = no
+				NOT = {
+					has_country_leader = {
+						name = "Wilhelm III"
+						ruling_only = yes
+					}
+				}
+				original_tag = PRS
+				has_global_flag = usurper_civil_war
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.16.a
+		ai_chance = {
+			factor = 10
+		}
+		add_timed_idea = {
+			idea = PRS_aftermath_coup
+			days = 720
+		}
+		add_popularity = {
+			ideology = accelerationism 
+			popularity = -0.1
+		}
+	}
+}
+country_event = { #The coronation of Wilhelm III
+	id = prussia.17
+	title = prussia.17.t
+	desc = prussia.17.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.17.a
+		ai_chance = {
+			factor = 10
+		}
+		
+	}
+}
+country_event = { #The coronation of Oskar I
+	id = prussia.18
+	title = prussia.18.t
+	desc = prussia.18.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.18.a
+		ai_chance = {
+			factor = 10
+		}
+
+	}
+}
+country_event = { #The coronation of Viktoria-Luise I
+	id = prussia.19
+	title = prussia.19.t
+	desc = prussia.19.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.19.a
+		ai_chance = {
+			factor = 10
+		}
+
+	}
+}
+country_event = { #Aftermath of Bloody January
+	id = prussia.20
+	title = prussia.20.t
+	desc = prussia.20.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.20.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = -0.1
+		}
+	}
+}
+country_event = { #The Generals' Report
+	id = prussia.21
+	title = prussia.21.t
+	desc = prussia.21.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		add_ideas = PRS_dissenting_officers
+	}
+	option = {
+		name = prussia.21.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.22
+			days = 5
+		}
+	}
+	option = {
+		name = prussia.21.b
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.23
+			days = 2
+		}
+	}
+}
+country_event = { #von Schleicher's "retirement"
+	id = prussia.23
+	title = prussia.23.t
+	desc = prussia.23.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.23.a
+		ai_chance = {
+			factor = 10
+		}
+		remove_ideas = PRS_dissenting_officers
+		add_ideas = PRS_uncertain_succession
+		complete_national_focus = PRS_Reichsmarschall
+	}
+}
+country_event = { #Recovery from Bloody January
+	id = prussia.24
+	title = prussia.24.t
+	desc = prussia.24.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.24.a
+		ai_chance = {
+			factor = 10
+		}
+		swap_ideas = {
+			remove_idea = PRS_bloody_january
+			add_idea = PRS_bloody_january_aftermath
+		}
+		custom_effect_tooltip = "PRS_bloody_january_aftermath_tooltip"
+	}
+}
+country_event = { #The Junta's Election
+	id = prussia.25
+	title = prussia.25.t
+	desc = prussia.25.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = prussia.25.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_guderian_elected
+		retire_country_leader = yes
+	}
+	option = {
+		name = prussia.25.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_goltz_elected
+	}
+	option = {
+		name = prussia.25.c
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_schulenburg_elected
+	}
+	option = {
+		name = prussia.25.d
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_schnee_elected
+	}
+}
+country_event = { #Restoration of the Prussian Monarchy
+	id = prussia.26
+	title = prussia.26.t
+	desc = prussia.26.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.26.a
+		ai_chance = {
+			factor = 10
+		}
+		remove_ideas = PRS_uncertain_succession
+		add_stability = 0.05
+	}
+}
+country_event = { #Beginning of the White Terror
+	id = prussia.27
+	title = prussia.27.t
+	desc = prussia.27.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.27.a
+		ai_chance = {
+			factor = 10
+		}
+		swap_ideas = {
+			remove_idea = PRS_disloyal_proletariat
+			add_idea = PRS_worker_surpression
+		}
+		hidden_effect = {
+			country_event = {
+				id = prussia.28
+				days = 90
+			}
+		}
+	}
+}
+country_event = { #White Terror - The Trade Unions
+	id = prussia.28
+	title = prussia.28.t
+	desc = prussia.28.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.28.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = -0.05
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = prussia.29
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = prussia.28.b
+		ai_chance = {
+			factor = 5
+		}
+		swap_ideas = {
+			remove_idea = PRS_worker_surpression
+			add_idea = PRS_hampered_proletariat
+		}
+	}
+}
+country_event = { #White Terror - The Colleges and Universities
+	id = prussia.29
+	title = prussia.29.t
+	desc = prussia.29.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.29.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = revisionist_socialism
+			popularity = -0.05
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = prussia.30
+				days = 30
+			}
+		}
+	}
+	option = {
+		name = prussia.29.b
+		ai_chance = {
+			factor = 5
+		}
+		swap_ideas = {
+			remove_idea = PRS_worker_surpression
+			add_idea = PRS_beaten_proletariat
+		}
+	}
+}
+country_event = { #White Terror - The Red Count
+	id = prussia.30
+	title = prussia.30.t
+	desc = prussia.30.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.30.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = -0.05
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+		remove_ideas = PRS_worker_surpression
+	}
+}
+country_event = { #Rebirth of the Oberste Heeresleitung
+	id = prussia.31
+	title = prussia.31.t
+	desc = prussia.31.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.31.a
+		ai_chance = {
+			factor = 10
+		}
+		GER = {
+			remove_unit_leader = 11
+			remove_unit_leader = 13
+			remove_unit_leader = 14
+		}
+		create_corps_commander = {
+			name = "Erich Manstein"
+			picture = "Portrait_PRS_Erich_Manstein_general.tga"
+			traits = { brilliant_strategist trickster panzer_leader trait_engineer  }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+		create_corps_commander = {
+			name = "Günter Kluge"
+			picture = "Portrait_PRS_Günter_Kluge_general.tga"
+			traits = { career_officer armor_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+		create_corps_commander = {
+			name = "Sigfrid Henrici"
+			picture = "Portrait_PRS_Sigfrid_Henrici_general.tga"
+			traits = { panzer_leader offensive_doctrine }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}
+country_event = { #Renegotiation of the Danzig Corridor
+	id = prussia.32
+	title = prussia.32.t
+	desc = prussia.32.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.32.a
+		ai_chance = {
+			factor = 10
+		}
+		POL = {
+			country_event = {
+				id = prussia.33
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.32.b
+		ai_chance = {
+			factor = 5
+		}
+		POL = {
+			country_event = {
+				id = prussia.36
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.32.c
+		ai_chance = {
+			factor = 0
+		}
+		POL = {
+			country_event = {
+				id = prussia.38
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Polish response to demilitarise 
+	id = prussia.33
+	title = prussia.33.t
+	desc = prussia.33.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.33.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -25
+		PRS = {
+			country_event = {
+				id = prussia.34
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.33.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 25
+		PRS = {
+			country_event = {
+				id = prussia.35
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Poland accepts Danzig
+	id = prussia.34
+	title = prussia.34.t
+	desc = prussia.34.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.34.a
+		ai_chance = {
+			factor = 10
+		}
+		848 = {
+			set_demilitarized_zone = no
+		}
+		POL = {
+			give_military_access = PRS
+		}
+	}
+}
+country_event = { #Poland refuses
+	id = prussia.35
+	title = prussia.35.t
+	desc = prussia.35.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.35.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_poland_uncooperative
+		add_political_power = -25
+	}
+}
+country_event = { #Polish response to East Pommern 
+	id = prussia.36
+	title = prussia.36.t
+	desc = prussia.36.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.36.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		PRS = {
+			country_event = {
+				id = prussia.37
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.36.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 50
+		PRS = {
+			country_event = {
+				id = prussia.35
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Poland accepts East Pommern
+	id = prussia.37
+	title = prussia.37.t
+	desc = prussia.37.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.37.a
+		ai_chance = {
+			factor = 10
+		}
+		848 = {
+			set_demilitarized_zone = no
+		}
+		PRS = {
+			transfer_state = 85
+		}
+	}
+}
+country_event = { #Polish response to former German lands
+	id = prussia.38
+	title = prussia.38.t
+	desc = prussia.38.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.38.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -100
+		add_stability = -0.1
+		PRS = {
+			country_event = {
+				id = prussia.39
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.38.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 100
+		PRS = {
+			country_event = {
+				id = prussia.35
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #Poland accepts East Pommern
+	id = prussia.39
+	title = prussia.39.t
+	desc = prussia.39.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.39.a
+		ai_chance = {
+			factor = 10
+		}
+		848 = {
+			set_demilitarized_zone = no
+		}
+		86 = {
+			add_claim_by = PRS
+		}
+		85 = {
+			add_claim_by = PRS
+		}
+		PRS = {
+			transfer_state = 85
+			transfer_state = 86
+		}
+	}
+}
+country_event = { #Funding the Southern Loyalists
+	id = prussia.40
+	title = prussia.40.t
+	desc = prussia.40.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.40.a
+		ai_chance = {
+			factor = 10
+		}
+		add_timed_idea = {
+			idea = PRS_funding_loyalists
+			days = 180
+		}
+		hidden_effect = {
+			country_event = {
+				id = prussia.41
+				days = 181
+			}
+		}
+	}
+	option = {
+		name = prussia.40.b
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 50
+	}
+}
+country_event = { #Bavarian Loyalists prepared
+	id = prussia.41
+	title = prussia.41.t
+	desc = prussia.41.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.41.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = PRS_bavaria_connection
+	}
+}
+country_event = { #The Battle of Munich
+	id = prussia.42
+	title = prussia.42.t
+	desc = prussia.42.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.42.a
+		ai_chance = {
+			factor = 10
+		}
+		BAV = {
+			transfer_state = 52
+			load_oob = "BAV_revolt"
+			add_to_war = {
+				targeted_alliance = PRS
+				enemy = GER
+			}
+		}
+		54 = {
+			add_claim_by = BAV
+		}
+		53 = {
+			add_claim_by = BAV
+		}
+		
+	}
+}
+country_event = { #The Old Rival
+	id = prussia.43
+	title = prussia.43.t
+	desc = prussia.43.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.43.a
+		ai_chance = {
+			factor = 10
+		}
+		RUS = {
+			country_event = {
+				id = prussia.44
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = prussia.43.b
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 50
+	}
+}
+country_event = { #Prussians seeks an alliance
+	id = prussia.44
+	title = prussia.44.t
+	desc = prussia.44.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.44.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.45
+				days = 3
+			}
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = prussia.44.b
+		ai_chance = {
+			factor = 5
+		}
+		PRS = {
+			country_event = {
+				id = prussia.46
+				days = 3
+			}
+		}
+		add_political_power = -25
+	}
+	option = {
+		name = prussia.44.c
+		ai_chance = {
+			factor = 5
+		}
+		PRS = {
+			country_event = {
+				id = prussia.47
+				days = 3
+			}
+		}
+		add_political_power = 50
+	}
+}
+country_event = { #Russia accepts, but demands partition of the Intermarium
+	id = prussia.45
+	title = prussia.45.t
+	desc = prussia.45.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.45.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_partition_intermarium
+		set_country_flag = PRS_russian_alliance
+	}
+	option = {
+		name = prussia.45.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #Russia accepts
+	id = prussia.46
+	title = prussia.46.t
+	desc = prussia.46.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.46.a
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = PRS_russian_alliance
+	}
+}
+country_event = { #Russia refuses
+	id = prussia.47
+	title = prussia.47.t
+	desc = prussia.47.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.47.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #Petition the British
+	id = prussia.48
+	title = prussia.48.t
+	desc = prussia.48.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.48.a
+		ai_chance = {
+			factor = 10
+		}
+		ENG = {
+			country_event = {
+				id = prussia.49
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.48.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 25
+	}
+}
+country_event = { #The Prussians request aid
+	id = prussia.49
+	title = prussia.49.t
+	desc = prussia.49.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.49.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {	
+			country_event = {
+				id = prussia.50
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.49.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {	
+			country_event = {
+				id = prussia.51
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = prussia.49.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {	
+			country_event = {
+				id = prussia.52
+				days = 2
+			}
+		}
+		add_political_power = 50
+	}
+}
+country_event = { #Britain accepts, but demands our adherence to a naval treaty
+	id = prussia.50
+	title = prussia.50.t
+	desc = prussia.50.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.50.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = PRS_london_treaty
+		ENG = {
+			set_country_flag = ENG_assisting_prussia
+		}
+	}
+	option = {
+		name = prussia.50.b
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #Britain accepts
+	id = prussia.51
+	title = prussia.51.t
+	desc = prussia.51.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.51.a
+		ai_chance = {
+			factor = 10
+		}
+		add_ideas = PRS_london_treaty
+		ENG = {
+			set_country_flag = ENG_assisting_prussia
+		}
+	}
+}
+country_event = { #Britain refuses
+	id = prussia.52
+	title = prussia.52.t
+	desc = prussia.52.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.52.a
+		ai_chance = {
+			factor = 10
+		}
+		add_war_support = -0.03
+	}
+}
+country_event = { #Invite to Baltic Conference
+	id = prussia.53
+	title = prussia.53.t
+	desc = prussia.53.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #accept
+		name = prussia.53.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.54
+				days = 2
+			}
+		}
+	}
+	option = { #refuse
+		name = prussia.53.b
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.55
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #[FROM] accepts
+	id = prussia.54
+	title = prussia.54.t
+	desc = prussia.54.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.54.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 10
+		PRS = {
+			add_to_faction = FROM
+		}
+	}
+}
+country_event = { #[FROM] refuses
+	id = prussia.55
+	title = prussia.55.t
+	desc = prussia.55.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.55.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -10
+	}
+}
+country_event = { #Prussia demands our subjugation
+	id = prussia.56
+	title = prussia.56.t
+	desc = prussia.56.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.56.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.57
+				days = 2
+			}
+		}
+		set_country_flag = PRS_refuse_nordconfed
+	}
+	option = {
+		name = prussia.56.b
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			country_event = {
+				id = prussia.58
+				days = 2
+			}
+		}
+	}
+}
+country_event = { #[FROM] refuses the NordConfed
+	id = prussia.57
+	title = prussia.57.t
+	desc = prussia.57.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.57.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #[FROM] accepts the NordConfed
+	id = prussia.58
+	title = prussia.58.t
+	desc = prussia.58.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.58.a
+		ai_chance = {
+			factor = 10
+		}
+		PRS = {
+			puppet = FROM
+		}
+	}
+}
+country_event = { #Schnee Letter
+	id = prussia.59
+	title = prussia.59.t
+	desc = prussia.59.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.59.a
+		ai_chance = {
+			factor = 10
+		}
+		ENG = {
+			country_event = {
+				id = prussia.60
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = prussia.59.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 25
+	}
+}
+country_event = { #Britain receives the Schnee Letter
+	id = prussia.60
+	title = prussia.60.t
+	desc = prussia.60.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.60.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -50
+		PRS = {
+			country_event = {
+				id = prussia.61
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = prussia.60.b
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 50
+		PRS = {
+			country_event = {
+				id = prussia.62
+				days = 3
+			}
+		}
+	}
+}
+country_event = { #Britain agrees to the Schnee Letter
+	id = prussia.61
+	title = prussia.61.t
+	desc = prussia.61.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.61.a
+		ai_chance = {
+			factor = 10
+		}
+		#load_oob = "PRS_schnee"
+		add_timed_idea = {
+			idea = PRS_schnee_debt
+			days = 180
+		}
+		ENG = {
+			add_timed_idea = {
+				idea = PRS_schnee_debt_eng
+				days = 180
+			}
+		}
+	}
+}
+country_event = { #Britain refuses the Schnee Letter
+	id = prussia.62
+	title = prussia.62.t
+	desc = prussia.62.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.62.a
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = -25
+		add_war_support = -0.03
+	}
+}
+country_event = { #Trial of Pabst
+	id = prussia.63
+	title = prussia.63.t
+	desc = prussia.63.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Ensure a free trial
+		name = prussia.63.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.64
+			days = 2
+		}
+	}
+	option = { #Pull some strings
+		name = prussia.63.b
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.65
+			days = 2
+		}
+		add_political_power = -25
+	}
+}
+country_event = { #Pabst is quickly convicted
+	id = prussia.64
+	title = prussia.64.t
+	desc = prussia.64.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Arrest the Freikorps
+		name = prussia.64.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.66
+			days = 2
+		}
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = -0.05
+		}
+	}
+	option = { #Arrest the students
+		name = prussia.64.b
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.66
+			days = 2
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_democratism
+			popularity = -0.05
+		}
+	}
+}
+country_event = { #Pabst is convicted on lesser charges
+	id = prussia.65
+	title = prussia.65.t
+	desc = prussia.65.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Allow the protest march
+		name = prussia.65.a
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.67
+			days = 2
+		}
+		add_popularity = {
+			ideology = social_democratism
+			popularity = 0.05
+		}
+	}
+	option = { #Call in the Freikorps
+		name = prussia.65.b
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = prussia.68
+			days = 2
+		}
+	}
+}
+country_event = { #Execution of Pabst
+	id = prussia.66
+	title = prussia.66.t
+	desc = prussia.66.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Allow the protest march
+		name = prussia.66.a
+		ai_chance = {
+			factor = 10
+		}
+		swap_ideas = {
+			remove_idea = PRS_power_of_freikorps
+			add_idea = PRS_uncooperative_freikorps
+		}
+	}
+}
+country_event = { #Imprisonment of Pabst
+	id = prussia.67
+	title = prussia.67.t
+	desc = prussia.67.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Allow the protest march
+		name = prussia.67.a
+		ai_chance = {
+			factor = 10
+		}
+		swap_ideas = {
+			remove_idea = PRS_power_of_freikorps
+			add_idea = PRS_hamstrung_freikorps
+		}
+		add_stability = 0.05
+	}
+}
+country_event = { #Aftermath of Freikorps attack
+	id = prussia.68
+	title = prussia.68.t
+	desc = prussia.68.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = prussia.68.a
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.1
+		add_manpower = -500
+	}
+}
+country_event = { #Wartime Union Cooperation
+	id = prussia.69
+	title = prussia.69.t
+	desc = prussia.69.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Allow the protest march
+		name = prussia.69.a
+		ai_chance = {
+			factor = 10
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.05
+		}
+		add_stability = 0.05
+	}
+}
+country_event = { #The People's Guard
+	id = prussia.70
+	title = prussia.70.t
+	desc = prussia.70.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = prussia.70.a
+		ai_chance = {
+			factor = 10
+		}
+		add_manpower = 5000
+	}
+}
+country_event = { #The Homecoming War
+	id = prussia.71
+	title = prussia.71.t
+	desc = prussia.71.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = prussia.71.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #Negotiate with the Reds
+	id = prussia.72
+	title = prussia.72.t
+	desc = prussia.72.desc
+	#picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = prussia.72.a
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+country_event = { #Prusso-Finnish alliance
+	id = prussia.999
+	title = prussia.999.t
+	desc = prussia.999.desc
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #
+		name = prussia.999.a
+		ai_chance = {
+			factor = 10
+		}
+		FIN = {
+			add_to_faction = PRS
+		}
+	}
+	option = { #
+		name = prussia.999.b
+		ai_chance = {
+			factor = 10
+		}
+		FIN = {
+			leave_faction = yes
+		}
+	}
+}

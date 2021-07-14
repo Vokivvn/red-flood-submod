@@ -1,0 +1,212 @@
+KCK_foreign_policy = {
+	KCK_decision_treaty_of_cooperation = {
+		icon = eng_trade_unions_support
+		cost = 0
+		complete_effect  = {
+			SIB = {
+				add_to_faction = KCK
+			}
+		}
+		available = {
+			SIB = {
+				has_completed_focus = SIB_sign_a_treaty
+			}
+		}
+		visible = {
+			OR = {
+				has_completed_focus = KCK_become_a_signatory
+				has_completed_focus = KCK_european_culture
+			}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	KCK_decision_our_rightful_masters = {
+		icon = generic_nationalism
+		cost = 0
+		complete_effect  = {
+			if = {
+				limit = {
+					any_neighbor_country = { tag = RUS }
+				}
+				RUS = { country_event = kck.12 }
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = { tag = SRU }
+				}
+				SRU = { country_event = kck.12 }
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = { tag = ORE }
+				}
+				ORE = { country_event = kck.12 }
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = { tag = DKB }
+				}
+				DKB = {	country_event = kck.12 }
+			}
+			else_if = {
+				limit = {
+					any_neighbor_country = { tag = BLR }
+				}
+				BLR = {	country_event = kck.12 }
+			}
+		}
+		available = {
+			any_neighbor_country = {
+				OR = {
+					tag = RUS
+					tag = SRU
+					tag = DKB
+					tag = ORE
+					tag = BLR
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = KCK_wait_for_reunification
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+KCK_internal_policy = {
+	KCK_decision_create_magadan = {
+	icon = generic_nationalism
+	cost = 100
+	ai_will_do = {
+			factor = 100
+		}
+			visible = {
+			has_country_flag = magadan_city_KCK
+		}
+		available = {
+			has_country_flag = magadan_city_KCK
+		}
+	fire_only_once = yes
+	days_remove = 90
+	complete_effect = {
+		add_victory_points = {
+		province = 12683
+		value = 1   
+		}
+	set_province_name = {
+    id = 12683
+    name = "Magadan"
+	}
+	}
+	}
+	KCK_decision_create_eastport = {
+	icon = generic_nationalism
+	cost = 100
+	ai_will_do = {
+			factor = 100
+		}
+			visible = {
+			has_country_flag = eastport_city_KCK
+		}
+		available = {
+			has_country_flag = eastport_city_KCK
+		}
+	fire_only_once = yes
+	days_remove = 90
+	complete_effect = {
+		add_victory_points = {
+		province = 12683
+		value = 1   
+		}
+	set_province_name = {
+    id = 12683
+    name = "Eastport"
+	}
+	}
+	}
+	KCK_decision_create_dezhnevsk = {
+	icon = generic_nationalism
+	cost = 100
+	ai_will_do = {
+			factor = 100
+		}
+			visible = {
+			has_country_flag = dezhnevsk_city_KCK
+		}
+		available = {
+			has_country_flag = dezhnevsk_city_KCK
+		}
+	fire_only_once = yes
+	days_remove = 90
+	complete_effect = {
+		add_victory_points = {
+		province = 12683
+		value = 1   
+		}
+	set_province_name = {
+    id = 12683
+    name = "Dezhnevsk"
+	}
+	}
+	}
+	KCK_decision_create_showaichi = {
+	icon = generic_nationalism
+	cost = 100
+	ai_will_do = {
+			factor = 100
+		}
+			visible = {
+			has_country_flag = showaichi_city_KCK
+		}
+		available = {
+			has_country_flag = showaichi_city_KCK
+		}
+	fire_only_once = yes
+	days_remove = 90
+	complete_effect = {
+		add_victory_points = {
+		province = 12683
+		value = 1   
+		}
+	set_province_name = {
+    id = 12683
+    name = "Showaichi"
+	}
+	}
+	}
+}
+KCK_remilitarize = {
+	KCK_remilitarize_aldan = {
+		cost = 100
+		icon = hol_draw_up_staff_plans
+		complete_effect  = {
+			1036 = {
+				set_demilitarized_zone = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	KCK_remilitarize_okhost = {
+		cost = 100
+		icon = hol_draw_up_staff_plans
+		complete_effect  = {
+			562 = {
+				set_demilitarized_zone = no
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,24 @@
+state={
+	id=215
+	name="STATE_215"
+	resources={
+		steel=30 # was: 52.000
+	}
+
+	history={
+		owner = RUS
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = RUS
+	}
+
+	provinces={
+		36 86 94 134 155 170 176 3121 9162 3008 3071 3189 6021 6029 6096 9195 11045 11175 13130
+	}
+	manpower=214858
+
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

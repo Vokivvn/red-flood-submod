@@ -1,0 +1,1156 @@
+add_namespace = ukraine
+
+# Madman's Rant #
+country_event = { #dude smonking weed lmao
+	id = ukraine.1
+	title = ukraine.1.t
+	desc = ukraine.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.1.a
+		UKR = {
+			complete_national_focus = ukraine_information_fake
+		}
+		ai_chance = {
+			base = 4
+			modifier = {
+				factor = 1000
+				OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_STATUSQUO
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_LIBERALS
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_CONSERVATIVES
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_SOCIALISTS
+						}
+				}		
+			}
+		}
+	}
+	option = {
+		name = ukraine.1.b
+		country_event = {
+			id = ukraine.2
+			days = 3
+		}
+		ai_chance = {
+			base = 6
+			modifier = {
+				factor = 1000
+				NOT = {
+					has_game_rule = {
+						rule = UKR_ai_route
+						option = RANDOM
+					}
+				}
+				NOT = {
+					OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_STATUSQUO
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_LIBERALS
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_CONSERVATIVES
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_DEMOCRACY_SOCIALISTS
+						}
+					}
+				}		
+			}
+		}
+	}
+}
+
+# Airport check #
+country_event = {
+	id = ukraine.2
+	title = ukraine.2.t
+	desc = ukraine.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.2.a
+		country_event = {
+			id = ukraine.3
+			days = 5
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_TELIHA
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_BANDERA
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_NEWART
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_SELFSUFFICIENCY
+						}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.2.b
+		country_event = {
+			id = ukraine.4
+			days = 5
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_AUTHORITARIANISM_DICTATORSHIP
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_AUTHORITARIANISM_REPUBLIC
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_AUTHORITARIANISM_MONARCHY
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_AUTHORITARIANISM_COSSACKS
+						}
+				}
+			}
+		}
+	}
+}
+
+# Siege of Central Rada #
+country_event = {
+	id = ukraine.3
+	title = ukraine.3.t
+	desc = ukraine.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.3.a
+		UKR = {
+			complete_national_focus = ukraine_information_accelerationists
+		}
+	}
+}
+
+# Red Menace Stopped #
+country_event = {
+	id = ukraine.4
+	title = ukraine.4.t
+	desc = ukraine.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.4.a
+		UKR = {
+			complete_national_focus = ukraine_information_saves
+		}
+	}
+}
+
+# 1936 Elections #
+country_event = {
+	id = ukraine.5
+	title = ukraine.5.t
+	desc = ukraine.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.5.a
+		set_country_flag = UKR_socdem
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_DEMOCRACY_STATUSQUO
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.5.b
+		set_country_flag = UKR_lib
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_DEMOCRACY_LIBERALS
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.5.c
+		set_country_flag = UKR_con
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_DEMOCRACY_CONSERVATIVES
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.5.d
+		set_country_flag = UKR_revsoc
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_DEMOCRACY_SOCIALISTS
+				}
+			}
+		}
+	}
+}
+
+# Supreme Commander's Choice #
+country_event = {
+	id = ukraine.6
+	title = ukraine.6.t
+	desc = ukraine.6.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { #elections
+		name = ukraine.6.a
+		set_country_flag = UKR_fastelections
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 1000
+				OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_BANDERA
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_NEWART
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_SELFSUFFICIENCY
+						}
+				}
+			}
+		}
+	}
+	option = { #olena
+		name = ukraine.6.b
+		set_country_flag = UKR_olena
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_ACCELERATIONISM_TELIHA
+				}
+			}
+		}
+	}
+}
+
+# Accel elections #
+country_event = {
+	id = ukraine.7
+	title = ukraine.7.t
+	desc = ukraine.7.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.7.a
+		set_country_flag = UKR_znuvivkr
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_ACCELERATIONISM_BANDERA
+				}
+			}
+		}
+		
+	}
+	option = {
+		name = ukraine.7.b
+		set_country_flag = UKR_upwp
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 1000
+				OR = {
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_NEWART
+						}
+						has_game_rule = {
+							rule = UKR_ai_route
+							option = UKR_ACCELERATIONISM_SELFSUFFICIENCY
+						}
+				}
+			}
+		}
+	}
+}
+
+# UPWP Congress #
+country_event = {
+	id = ukraine.8
+	title = ukraine.8.t
+	desc = ukraine.8.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.8.a
+		set_country_flag = UKR_newart
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_ACCELERATIONISM_NEWART
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.8.b
+		set_country_flag = UKR_selfsufficiency
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1000
+				has_game_rule = {
+					rule = UKR_ai_route
+					option = UKR_ACCELERATIONISM_SELFSUFFICIENCY
+				}
+			}
+		}
+	}
+}
+
+# Skoropadsky proclaims Junta #
+country_event = {
+	id = ukraine.9
+	title = ukraine.9.t
+	desc = ukraine.9.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.9.a
+	}
+}
+
+# A newspaper article #
+country_event = {
+	id = ukraine.10
+	title = ukraine.10.t
+	desc = ukraine.10.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.10.a
+	}
+}
+
+# Thot patrol #
+country_event = {
+	id = ukraine.11
+	title = ukraine.11.t
+	desc = ukraine.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.11.a
+	}
+}
+
+# Perspectives #
+country_event = {
+	id = ukraine.12
+	title = ukraine.12.t
+	desc = ukraine.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.12.a
+	}
+}
+
+# Sounds of Progress #
+country_event = {
+	id = ukraine.13
+	title = ukraine.13.t
+	desc = ukraine.13.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.13.a
+	}
+}
+
+# Not even in the wildest dreams #
+country_event = {
+	id = ukraine.14
+	title = ukraine.14.t
+	desc = ukraine.14.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.14.a
+	}
+}
+
+# Future is here #
+country_event = {
+	id = ukraine.15
+	title = ukraine.15.t
+	desc = ukraine.15.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.15.a
+	}
+}
+
+# No shadows in Heaven #
+country_event = {
+	id = ukraine.16
+	title = ukraine.16.t
+	desc = ukraine.16.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.16.a
+	}
+}
+
+# Moya Borot'ba #
+country_event = {
+	id = ukraine.17
+	title = ukraine.17.t
+	desc = ukraine.17.desc
+	fire_only_once = yes
+	
+	trigger = {
+	    original_tag = UKR
+		UKR = {
+			AND = {
+				owns_state = 1014
+				owns_state = 78
+				owns_state = 766
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 120
+	}
+
+	option = {
+		name = ukraine.17.a
+	}
+}
+
+# Spirits of Vengeance #
+country_event = {
+	id = ukraine.18
+	title = ukraine.18.t
+	desc = ukraine.18.desc
+	fire_only_once = yes
+	
+	trigger = {
+	    original_tag = UKR
+		UKR = {
+			OR = {
+				has_war_with = RUS
+				has_war_with = SRU
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	option = {
+		name = ukraine.18.a
+	}
+}
+
+# Contrabandists caught near moldovan border #
+country_event = {
+	id = ukraine.19
+	title = ukraine.19.t
+	desc = ukraine.19.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.19.a
+		country_event = {
+			id = ukraine.20
+			days = 2
+		}
+	}
+}
+
+# Investigation begins #
+country_event = {
+	id = ukraine.20
+	title = ukraine.20.t
+	desc = ukraine.20.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.20.a
+		country_event = {
+			id = ukraine.21
+			days = 2
+		}
+	}
+}
+
+# Interrogation #
+country_event = {
+	id = ukraine.21
+	title = ukraine.21.t
+	desc = ukraine.21.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.21.a
+		hidden_effect = {
+			country_event = {
+				id = ukraine.22
+				days = 7
+			}
+		}
+	}
+	option = {
+		name = ukraine.21.b
+	}
+}
+
+# Battle for the police station #
+country_event = {
+	id = ukraine.22
+	title = ukraine.22.t
+	desc = ukraine.22.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.22.a
+	}
+}
+
+# A gesture of good will towards north-asians #
+country_event = {
+	id = ukraine.23
+	title = ukraine.23.t
+	desc = ukraine.23.desc
+	fire_only_once = yes
+
+	trigger = {
+	    original_tag = UKR
+		AND = {
+			UKR = {
+				OR = {
+					has_full_control_of_state = 566
+					has_full_control_of_state = 567
+					has_full_control_of_state = 568
+					has_full_control_of_state = 569
+					has_full_control_of_state = 570
+					has_full_control_of_state = 40
+				}
+			}
+			SIB = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.23.a
+		UKR = {
+			transfer_state = 565
+			transfer_state = 566
+			transfer_state = 567
+			transfer_state = 568
+			transfer_state = 569
+			transfer_state = 570
+			transfer_state = 40
+			transfer_state = 403
+		}
+		KCK = {
+			transfer_state = 575
+			transfer_state = 576
+			transfer_state = 577
+			transfer_state = 579
+			transfer_state = 516
+			transfer_state = 580
+		}
+	}
+}
+
+# Death of a dog #
+country_event = {
+	id = ukraine.24
+	title = ukraine.24.t
+	desc = ukraine.24.desc
+	fire_only_once = yes
+	
+	trigger = {
+	    original_tag = UKR
+		UKR = {
+			controls_state = 221
+		}
+	}
+
+	option = {
+		name = ukraine.24.a
+	}
+}
+
+# Realised destiny #
+country_event = {
+	id = ukraine.25
+	title = ukraine.25.t
+	desc = ukraine.25.desc
+	fire_only_once = yes
+	
+	trigger = {
+	    original_tag = UKR
+		UKR = {
+			controls_state = 137
+		}
+	}
+
+	option = {
+		name = ukraine.25.a
+	}
+}
+
+# Leave Intermarium #
+country_event = {
+	id = ukraine.26
+	title = ukraine.26.t
+	desc = ukraine.26.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.26.a
+		leave_faction = yes
+		remove_opinion_modifier = { target = POL modifier = intermarium_friendship }
+		POL = { remove_opinion_modifier = { target = UKR modifier = intermarium_friendship } }
+		remove_opinion_modifier = { target = BLR modifier = intermarium_friendship }
+		BLR = { remove_opinion_modifier = { target = UKR modifier = intermarium_friendship } }
+		remove_opinion_modifier = { target = LIT modifier = intermarium_friendship }
+		LIT = { remove_opinion_modifier = { target = UKR modifier = intermarium_friendship } }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 5
+				OR = {
+					BLR = {
+						has_government = accelerationism
+					}
+					BLR = {
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.26.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# Kavkaz event #
+country_event = {
+	id = ukraine.27
+	title = ukraine.27.t
+	desc = ukraine.27.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.27.a
+		add_political_power = 100
+	}
+}
+
+# All-futurist alliance #
+country_event = {
+	id = ukraine.28
+	title = ukraine.28.t
+	desc = ukraine.28.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.28.a
+		leave_faction = yes
+		if = {
+			limit = {
+				tag = FRA
+			}
+			dismantle_faction = yes
+		}
+		UKR = {
+			add_to_faction = ROOT
+		}
+		ai_chance = {
+			base = 7
+			modifier = {
+				factor = 0
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.28.b
+		ai_chance = {
+			base = 3
+		}
+	}
+}
+
+# Ukraine wants Red Ruthenia #
+country_event = {
+	id = ukraine.29
+	title = ukraine.29.t
+	desc = ukraine.29.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.29.a
+		UKR = {
+			transfer_state = 91
+			transfer_state = 89
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = ukraine.29.b
+		UKR = {
+			add_opinion_modifier = { target = POL modifier = medium_decrease }
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 3
+				POL = {
+					has_government = accelerationism
+				}
+			}
+			modifier = {
+				factor = 3000
+				POL = {
+					OR = {
+						has_government = right_authoritarianism
+						has_government = despotism
+					}
+				}
+			}
+		}
+	}
+}
+
+# Ukraine wants Lublin #
+country_event = {
+	id = ukraine.30
+	title = ukraine.30.t
+	desc = ukraine.30.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.30.a
+		UKR = {
+			transfer_state = 92
+			add_state_core = 92
+		}
+		POL = {
+			add_opinion_modifier = { target = UKR modifier = medium_decrease }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = ukraine.30.b
+		UKR = {
+			add_state_core = 92
+		}
+		ai_chance = {
+			base = 9
+			modifier = {
+				factor = 1000
+				POL = {
+					OR = {
+						has_government = accelerationism
+						has_government = right_authoritarianism
+						has_government = despotism
+					}
+				}
+			}
+		}
+	}
+}
+
+# Ukraine wants Polesie and shit #
+country_event = {
+	id = ukraine.31
+	title = ukraine.31.t
+	desc = ukraine.31.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.31.a
+		UKR = {
+			transfer_state = 94
+			transfer_state = 194
+			add_state_core = 94
+			add_state_core = 194
+		}
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				BLR = {
+					OR = {
+						has_government = accelerationism
+						has_government = reactionism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.31.b
+		UKR = {
+			add_state_core = 94
+			add_state_core = 194
+		}
+		ai_chance = {
+			base = 7
+		}
+	}
+}
+
+# Ukraine wants Bessarabia #
+country_event = {
+	id = ukraine.32
+	title = ukraine.32.t
+	desc = ukraine.32.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.32.a
+		UKR = {
+			transfer_state = 1014
+			transfer_state = 78
+			transfer_state = 766
+		}
+	}
+	option = {
+		name = ukraine.32.b
+		UKR = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = MOL
+			}
+		}
+	}
+}
+
+# Ukraine wants Bukovina #
+country_event = {
+	id = ukraine.33
+	title = ukraine.33.t
+	desc = ukraine.33.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.33.a
+		UKR = {
+			transfer_state = 80
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+	option = {
+		name = ukraine.33.b
+		add_political_power = -100
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# Ukraine wants Carpathia #
+country_event = {
+	id = ukraine.34
+	title = ukraine.34.t
+	desc = ukraine.34.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.34.a
+		UKR = {
+			transfer_state = 73
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = ukraine.34.b
+		trigger = {
+			original_tag = CZE
+		}
+		UKR = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = CZE
+			}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 3
+				UKR = {
+					OR = {
+						has_government = social_democratism
+						has_government = conservatism
+						has_government = liberalism
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.34.b
+		trigger = {
+			original_tag = AUS
+		}
+		UKR = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = AUS
+			}
+		}
+		ai_chance = {
+			base = 3
+			modifier = {
+				factor = 3
+				UKR = {
+					OR = {
+						has_government = social_democratism
+						has_government = conservatism
+						has_government = liberalism
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.34.b
+		trigger = {
+			original_tag = POL
+		}
+		add_political_power = -150
+		UKR = { add_opinion_modifier = { target = POL modifier = small_decrease } }
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+# Ukraine wants Lemkovyna #
+country_event = {
+	id = ukraine.35
+	title = ukraine.35.t
+	desc = ukraine.35.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ukraine.35.a
+		UKR = {
+			transfer_state = 975
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = ukraine.35.b
+		trigger = {
+			original_tag = CZE
+		}
+		UKR = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = CZE
+			}
+		}
+		ai_chance = {
+			base = 4
+			modifier = {
+				factor = 3
+				UKR = {
+					OR = {
+						has_government = social_democratism
+						has_government = conservatism
+						has_government = liberalism
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.35.b
+		trigger = {
+			original_tag = AUS
+		}
+		UKR = {
+			create_wargoal = {
+    			type = take_state_focus
+    			target = AUS
+			}
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 3
+				UKR = {
+					OR = {
+						has_government = social_democratism
+						has_government = conservatism
+						has_government = liberalism
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = ukraine.35.b
+		trigger = {
+			original_tag = POL
+		}
+		add_political_power = -150
+		UKR = { add_opinion_modifier = { target = POL modifier = small_decrease } }
+		ai_chance = {
+			base = 4
+		}
+	}
+}
+
+#The Golden Calf#
+country_event = {
+	id = ukraine.36
+	title = ukraine.36.t
+	desc = ukraine.36.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		AND = {
+			UKR = {
+				has_government = accelerationism
+				has_full_control_of_state = 192
+				has_full_control_of_state = 590
+			}
+		}
+	}
+
+	option = {
+		name = ukraine.36.a
+		UKR = {
+			add_stability = 0.01
+		}
+	}
+}

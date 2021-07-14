@@ -1,0 +1,343 @@
+spriteTypes = {
+	##Icon For: Korea
+	SpriteType = {
+		name = "GFX_focus_KOR_amend_the_japanese_migration_policy" 
+		texturefile = "gfx/interface/goals/KOR/KOR_amend_the_japanese_migration_policy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_call_on_the_kmt" 
+		texturefile = "gfx/interface/goals/KOR/KOR_call_on_the_kmt.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_delegitimise_the_nobles" 
+		texturefile = "gfx/interface/goals/KOR/KOR_delegitimise_the_nobles.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_dig_into_the_tabek_mountains" 
+		texturefile = "gfx/interface/goals/KOR/KOR_dig_into_the_tabek_mountains.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_egalitarianism_at_work" 
+		texturefile = "gfx/interface/goals/KOR/KOR_egalitarianism_at_work.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_everything_for_the_liberation_effort" 
+		texturefile = "gfx/interface/goals/KOR/KOR_everything_for_the_liberation_effort.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_extend_industrial_quotas" 
+		texturefile = "gfx/interface/goals/KOR/KOR_extend_industrial_quotas.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_ferry_in_the_liberation_army" 
+		texturefile = "gfx/interface/goals/KOR/KOR_ferry_in_the_liberation_army.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_korean_revolution" 
+		texturefile = "gfx/interface/goals/KOR/KOR_korean_revolution.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_making_the_best_of_the_worst" 
+		texturefile = "gfx/interface/goals/KOR/KOR_making_the_best_of_the_worst.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_mobilise_dongnipgun" 
+		texturefile = "gfx/interface/goals/KOR/KOR_mobilise_dongnipgun.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_national_mobilisation" 
+		texturefile = "gfx/interface/goals/KOR/KOR_national_mobilisation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_prepare_for_the_guerilla_war" 
+		texturefile = "gfx/interface/goals/KOR/KOR_prepare_for_the_guerilla_war.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_question_of_land_ownership" 
+		texturefile = "gfx/interface/goals/KOR/KOR_question_of_land_ownership.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_question_of_manpower" 
+		texturefile = "gfx/interface/goals/KOR/KOR_question_of_manpower.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_rally_the_masses" 
+		texturefile = "gfx/interface/goals/KOR/KOR_rally_the_masses.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_stand_up_and_fight" 
+		texturefile = "gfx/interface/goals/KOR/KOR_stand_up_and_fight.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_status_of_cultural_preservation" 
+		texturefile = "gfx/interface/goals/KOR/KOR_status_of_cultural_preservation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_all_in_the_name_of_heaven" 
+		texturefile = "gfx/interface/goals/KOR/all_in_the_name_of_heaven.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_embrace_modernity" 
+		texturefile = "gfx/interface/goals/KOR/embrace_modernity.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_minjung_theology" 
+		texturefile = "gfx/interface/goals/KOR/minjung_theology.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_new_age_faith" 
+		texturefile = "gfx/interface/goals/KOR/new_age_faith.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_new_spiritual_awakening" 
+		texturefile = "gfx/interface/goals/KOR/new_spiritual_awakening.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_open_new_churches" 
+		texturefile = "gfx/interface/goals/KOR/open_new_churches.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_strengthen_the_jinbohoe" 
+		texturefile = "gfx/interface/goals/KOR/strengthen_the_jinbohoe.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_legacy_of_gang_il_sun" 
+		texturefile = "gfx/interface/goals/KOR/the_legacy_of_gang_il_sun.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_supreme_enlightened_god" 
+		texturefile = "gfx/interface/goals/KOR/the_supreme_enlightened_god.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_teachings_of_christ" 
+		texturefile = "gfx/interface/goals/KOR/the_teachings_of_christ.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_tian_principle" 
+		texturefile = "gfx/interface/goals/KOR/the_tian_principle.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_union_under_syncretism" 
+		texturefile = "gfx/interface/goals/KOR/union_under_syncretism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_western_faith" 
+		texturefile = "gfx/interface/goals/KOR/western_faith.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_aegukga" 
+		texturefile = "gfx/interface/goals/KOR/aegukga.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_against_the_left" 
+		texturefile = "gfx/interface/goals/KOR/against_the_left.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_against_the_right" 
+		texturefile = "gfx/interface/goals/KOR/against_the_right.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_american_exchange_programs" 
+		texturefile = "gfx/interface/goals/KOR/american_exchange_programs.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_appoint_rhee_emergency_president" 
+		texturefile = "gfx/interface/goals/KOR/appoint_rhee_emergency_president.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_changho_stays_in_power" 
+		texturefile = "gfx/interface/goals/KOR/changho_stays_in_power.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_confidence_in_the_conservatives" 
+		texturefile = "gfx/interface/goals/KOR/confidence_in_the_conservatives.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_democracy_with_korean_characteristics" 
+		texturefile = "gfx/interface/goals/KOR/democracy_with_korean_characteristics.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_echo_the_three_principles" 
+		texturefile = "gfx/interface/goals/KOR/echo_the_three_principles.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_emphasis_on_education" 
+		texturefile = "gfx/interface/goals/KOR/emphasis_on_education.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_empower_the_kcia" 
+		texturefile = "gfx/interface/goals/KOR/empower_the_kcia.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_establish_the_chaebols" 
+		texturefile = "gfx/interface/goals/KOR/establish_the_chaebols.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_exploit_the_new_age_religions" 
+		texturefile = "gfx/interface/goals/KOR/exploit_the_new_age_religions.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_extend_the_liberalisation" 
+		texturefile = "gfx/interface/goals/KOR/extend_the_liberalisation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_go_ahead_with_elections" 
+		texturefile = "gfx/interface/goals/KOR/go_ahead_with_elections.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_gyeongsesong_university" 
+		texturefile = "gfx/interface/goals/KOR/gyeongsesong_university.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_kims_presidency" 
+		texturefile = "gfx/interface/goals/KOR/kims_presidency.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_nationalism" 
+		texturefile = "gfx/interface/goals/KOR/nationalism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_no_until_the_reds_are_gone" 
+		texturefile = "gfx/interface/goals/KOR/no_until_the_reds_are_gone.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_overseas_trade_ties" 
+		texturefile = "gfx/interface/goals/KOR/overseas_trade_ties.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_popular_rule" 
+		texturefile = "gfx/interface/goals/KOR/popular_rule.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_reach_out_to_the_west" 
+		texturefile = "gfx/interface/goals/KOR/reach_out_to_the_west.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_rehabilitate_the_communists" 
+		texturefile = "gfx/interface/goals/KOR/rehabilitate_the_communists.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_steady_the_course" 
+		texturefile = "gfx/interface/goals/KOR/steady_the_course.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_support_patriotic_organisations" 
+		texturefile = "gfx/interface/goals/KOR/support_patriotic_organisations.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_suppress_the_leftists" 
+		texturefile = "gfx/interface/goals/KOR/suppress_the_leftists.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_moderates" 
+		texturefile = "gfx/interface/goals/KOR/the_moderates.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_the_new_white_terror" 
+		texturefile = "gfx/interface/goals/KOR/the_new_white_terror.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_work_with_christian_groups" 
+		texturefile = "gfx/interface/goals/KOR/work_with_christian_groups.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_air_defence_network" 
+		texturefile = "gfx/interface/goals/KOR/air_defence_network.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_armoury_of_republic" 
+		texturefile = "gfx/interface/goals/KOR/armoury_of_republic.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_army_of_republic" 
+		texturefile = "gfx/interface/goals/KOR/army_of_republic.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_busan_fleet" 
+		texturefile = "gfx/interface/goals/KOR/busan_fleet.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_busan_naval_academy" 
+		texturefile = "gfx/interface/goals/KOR/busan_naval_academy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_busan_shipyards" 
+		texturefile = "gfx/interface/goals/KOR/busan_shipyards.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_camouflage" 
+		texturefile = "gfx/interface/goals/KOR/camouflage.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_combined_arms" 
+		texturefile = "gfx/interface/goals/KOR/combined_arms.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_contest_the_sea_of_japan" 
+		texturefile = "gfx/interface/goals/KOR/contest_the_sea_of_japan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_dogfighting_pedigree" 
+		texturefile = "gfx/interface/goals/KOR/dogfighting_pedigree.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_establish_a_marine_corps" 
+		texturefile = "gfx/interface/goals/KOR/establish_a_marine_corps.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_guard_the_seas" 
+		texturefile = "gfx/interface/goals/KOR/guard_the_seas.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_guard_the_skies" 
+		texturefile = "gfx/interface/goals/KOR/guard_the_skies.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_harass_the_bombers" 
+		texturefile = "gfx/interface/goals/KOR/harass_the_bombers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_legacy_of_yi_sun_sin" 
+		texturefile = "gfx/interface/goals/KOR/legacy_of_yi_sun_sin.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_lessons_from_japan" 
+		texturefile = "gfx/interface/goals/KOR/lessons_from_japan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_martyrs_in_the_air" 
+		texturefile = "gfx/interface/goals/KOR/martyrs_in_the_air.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_national_defence" 
+		texturefile = "gfx/interface/goals/KOR/national_defence.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_new_air_wings" 
+		texturefile = "gfx/interface/goals/KOR/new_air_wings.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_new_arsenals" 
+		texturefile = "gfx/interface/goals/KOR/new_arsenals.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_pilot_schools" 
+		texturefile = "gfx/interface/goals/KOR/pilot_schools.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_politicise_army" 
+		texturefile = "gfx/interface/goals/KOR/politicise_army.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_promote_partisan_leaders" 
+		texturefile = "gfx/interface/goals/KOR/promote_partisan_leaders.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_turtle_ships" 
+		texturefile = "gfx/interface/goals/KOR/turtle_ships.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_women_in_the_air" 
+		texturefile = "gfx/interface/goals/KOR/women_in_the_air.dds" 
+	}
+}

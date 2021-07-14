@@ -1,0 +1,44 @@
+#United States - annexation_USA_CONQ
+can_release_america = {
+	state = 361 #Washington
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = USA_CONQ
+			country_exists = USA
+		}
+	}
+}
+#Canada - annexation_CAN_CONQ
+can_release_canada = {
+	state = 276 #Ottowa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = CAN_CONQ
+			country_exists = CAN
+		}
+	}
+}
+#Quebec - annexation_QUE_CONQ
+can_release_quebec = {
+	state = 276 #Ottowa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = QUE_CONQ
+			country_exists = QUE
+		}
+	}
+}
+#Greenland - annexation_GRN_CONQ
+can_release_greenland = {
+	state = 101 #Greenland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			country_exists = GRN
+			has_country_flag = GRN_CONQ
+		}
+	}
+}

@@ -1,0 +1,255 @@
+ideas = {
+	
+##National Spirits - Food##
+	country = {
+		HUM_famine = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine 
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.4
+				industrial_capacity_factory = -0.2
+				monthly_population = -0.5
+				conscription_factor = -0.5
+				stability_factor = -0.1
+			}
+		}
+
+		HUM_famine_2 = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine 
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.4
+				industrial_capacity_factory = -0.2
+				monthly_population = -0.3
+				conscription_factor = -0.4
+				stability_factor = -0.05
+				
+			}
+		}
+
+		HUM_famine_3 = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				monthly_population = -0.2
+				conscription_factor = -0.3
+				
+			}
+		}
+
+		HUM_famine_whybacks = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				monthly_population = -0.2
+				
+			}
+		}
+
+		HUM_famine_whybacks_2 = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				conscription_factor = 0.1
+				
+			}
+		}
+
+		HUM_famine_hard = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				monthly_population = -0.2
+				conscription_factor = -0.3
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		HUM_famine_hard_2 = {
+			allowed = { always = no }
+			picture = raj_risk_of_famine
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				monthly_population = -0.2
+				conscription_factor = -0.3
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+##National Spirits - Other##
+
+		HUM_guilt = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				industrial_capacity_factory = -0.05
+				conscription = -0.05
+				#-20 recruitable population
+			}	
+		}	
+
+		HUM_guilt_2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.05
+				conscription = -0.1
+				#-20 recruitable population
+				#-20 monthly population growth
+			}	
+		}	
+
+		HUM_guilt_3 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = -0.1
+				conscription = -0.1
+				#-10 recruitable population
+			}	
+		}	
+
+		HUM_non_infastructure = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				local_resources_factor = -0.2
+			}	
+		}	
+
+		HUM_panic = {
+			allowed = { always = no }
+			##picture =
+			allowed_civil_war = { always = yes }
+			modifier = {
+
+			}
+		}
+
+##National Spirits - Seeds of Industry##
+
+		HUM_seeds_workexchange = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.1
+			}	
+		}	
+
+		HUM_seeds_forsale = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.2
+			}	
+		}	
+
+		HUM_seeds_raids = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = -0.05
+				supply_consumption_factor = 0.1
+			}	
+		}	
+
+##National Spirits - Military Tree##
+
+		HUM_cobbled_together_army = {
+			allowed = { always = no }
+			##picture = 
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = -0.4
+				army_defence_factor = -0.4
+				army_org_factor = -0.2
+				army_morale_factor = -0.2
+			}
+		}
+
+		HUM_military_expertise = {
+			allowed = { always = no }
+			##picture = 
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor  = 0.1
+				army_defence_factor = 0.05
+			}
+			research_bonus = {
+				infantry_weapons = -0.08
+			} 
+		}
+
+##National Spirits - Office of Language##
+
+		HUM_officelanguage = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.1
+			}	
+		}	
+
+		HUM_officelanguage_universal = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_gain = 0.25
+			}	
+		}	
+
+	HUM_officelanguage_multi = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+	
+}

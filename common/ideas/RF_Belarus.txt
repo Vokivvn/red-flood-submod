@@ -1,0 +1,1247 @@
+ideas = {
+	country = {
+		BLR_welfare_state = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+			picture = BLR_icon_welfare_state
+		}
+		BLR_human_rights_court = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				resistance_target = -0.1
+				stability_weekly = 0.01
+			}
+			picture = BLR_icon_human_rights_court
+		}
+		BLR_deregulation = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+			}
+			picture = BLR_icon_deregulation
+		}
+		BLR_patriotic_education = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conscription_factor = 0.1
+			}
+			picture = BLR_icon_patriotic_education
+		}
+		BLR_free_press = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				political_power_factor = 0.1
+				drift_defence_factor = -0.15
+			}
+			picture = BLR_icon_free_press
+		}
+
+		BLR_empire_of_five_races = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conscription_factor = 0.2
+				resistance_target = -0.15
+			}
+			picture = BLR_icon_five_races
+		}
+
+		BLR_rcap = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				revisionist_socialism_drift = 0.1
+			}
+			picture = BLR_icon_rcap
+		}
+		BLR_agrsoc = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				consumer_goods_factor = -0.07
+				production_speed_industrial_complex_factor = 0.1
+				stability_factor = 0.05	
+			}
+			picture = BLR_icon_agrarian_socialism
+		}
+		BLR_socialist_black_market = {
+			allowed = {
+				original_tag = BLR
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.01
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.1 instant = yes
+					reliability = 0.01
+				}
+			}
+			modifier = {
+				trade_opinion_factor = 0.1
+			}
+			picture = BLR_icon_socialist_black_market
+		}
+		BLR_united_again = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conscription = 0.015
+			}
+			picture = BLR_icon_united_partisants
+		}
+		BLR_alliance_with_black_cat = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.07
+			}
+			picture = BLR_icon_alliance_black_cat
+		}
+
+		BLR_purge_on_atamans_clique = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				despotism_drift = -0.1
+				stability_factor = -0.05
+			}
+			picture = BLR_icon_purge_on_clique
+		}
+		BLR_black_cat_paramilitary = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conscription = 0.025
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.02
+				}
+			}
+			picture = BLR_icon_black_cat_paramilitary
+		}
+		BLR_ethnic_nationalism = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				political_power_factor = 0.4
+				stability_factor = -0.05
+			}
+			picture = BLR_icon_ethnic_nationalism
+		}
+		BLR_ethnic_nationalism_1 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				political_power_factor = 0.4
+				stability_factor = -0.15
+				resistance_target = -0.15
+			}
+			picture = BLR_icon_ethnic_nationalism
+		}
+		BLR_karycnievy_teror = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				resistance_target = -0.05
+			}
+			picture = BLR_icon_karycnievy_teror
+		}
+		BLR_national_economics = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.15
+				consumer_goods_factor = -0.07
+			}
+			picture = BLR_icon_national_economics
+		}
+		BLR_reactionary_beacon = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				research_speed_factor = -0.05
+			}
+			picture = BLR_icon_reactionary_beacon
+		}
+		BLR_reactionary_beacon_1 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				research_speed_factor = -0.05
+				attrition = -0.05
+			}
+			picture = BLR_icon_reactionary_beacon
+		}
+		BLR_hermits = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				army_core_defence_factor = 0.15
+				political_power_factor = 0.2
+			}
+			picture = BLR_icon_hermit_kingdom
+		}
+
+		BLR_synchronization = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				political_power_factor = 0.25
+				resistance_target = -0.1
+			}
+			picture = BLR_icon_synchronization
+		}
+		BLR_teachings_of_new_messiah = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				political_power_factor = 0.3
+				resistance_target = -0.1
+				conscription_factor = 0.05
+			}
+			picture = BLR_icon_teachings_of_modern_messiah
+		}
+		BLR_teachings_of_new_messiah_1 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.25
+				political_power_factor = 0.3
+				resistance_target = -0.1
+				conscription = 0.03
+				army_core_defence_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			picture = BLR_icon_teachings_of_modern_messiah
+		}
+		BLR_new_education = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_education_1 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				accelerationism_drift = 0.07
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_education_2 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				research_speed_factor = 0.08
+				accelerationism_drift = 0.07
+				license_purchase_cost = -0.2
+			}
+			picture = BLR_icon_new_byelorussian_education
+		}
+		BLR_new_culture = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				attrition = -0.05
+				conversion_cost_mil_to_civ_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+			}
+			picture = BLR_icon_new_byelorussian_culture
+		}
+		BLR_new_culture_1 = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				attrition = -0.05
+				conversion_cost_mil_to_civ_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				accelerationism_drift = 0.07
+				political_power_factor = 0.1
+			}
+			picture = BLR_icon_new_byelorussian_culture
+		}
+		BLR_brotherhood_of_elohim = {
+			allowed = {
+				original_tag = BLR
+			}
+			modifier = {
+				conscription = 0.04
+				consumer_goods_factor = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					reliability = 0.04
+				}
+			}
+			picture = BLR_icon_brotherhood_of_elohim
+		}
+	}
+
+	head_of_government = {
+		BLR_hog_jan_sierada_des = {
+			picture = GFX_idea_BLR_hog_jan_sierada_des
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_anton_luckievich_scd = {
+			picture = GFX_idea_BLR_hog_anton_luckievich_scd
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_roman_skirmunt_con = {
+			picture = GFX_idea_BLR_hog_roman_skirmunt_con
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_juliusz_rommel_emp = {
+			picture = GFX_idea_BLR_hog_juliusz_rommel_emp
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_leanard_zajac_revs = {
+			picture = GFX_idea_BLR_hog_leanard_zajac_revs
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_janka_bylina_rea = {
+			picture = GFX_idea_BLR_hog_janka_bylina_rea
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_hog_janka_kupala_acc = {
+			picture = GFX_idea_BLR_hog_janka_kupala_acc
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_government
+				hog_corporate_suit
+			}
+			available = {
+				has_completed_focus = BLR_messiah
+			}
+			cancel = { 
+				
+			}
+		}
+	}
+
+	economy_minister = {
+		BLR_eco_szymon_rak_michajlowski_des = {
+			picture = GFX_idea_BLR_eco_szymon_rak_michajlowski_des
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_usevalad_ignatouski_scd = {
+			picture = GFX_idea_BLR_eco_usevalad_ignatouski_scd
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_arkadz_smolicz_con = {
+			picture = GFX_idea_BLR_eco_arkadz_smolicz_con
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_brunon_kostecki_emp = {
+			picture = GFX_idea_BLR_eco_brunon_kostecki_emp
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_sciapan_niekraszewicz_revs = {
+			picture = GFX_idea_BLR_eco_sciapan_niekraszewicz_revs
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_kazimier_svajak_rea = {
+			picture = GFX_idea_BLR_eco_kazimier_svajak_rea
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_steel_magnate
+			}
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_eco_dzmitryj_pryshchepau_acc = {
+			picture = GFX_idea_BLR_eco_dzmitryj_pryshchepau_acc
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_completed_focus = BLR_messiah
+			}
+			cancel = { 
+				
+			}
+		}
+	}
+
+	foreign_minister = {
+		BLR_for_jazep_liosik_des = {
+			picture = GFX_idea_BLR_for_jazep_liosik_des
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_ivan_kraskouski_scd = {
+			picture = GFX_idea_BLR_for_ivan_kraskouski_scd
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_completed_focus = BLR_bsh_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_paval_aliaksiuk_con = {
+			picture = GFX_idea_BLR_for_paval_aliaksiuk_con
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_completed_focus = BLR_bnp_coalition
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_aliaksandr_dalgarukau_emp = {
+			picture = GFX_idea_BLR_for_aliaksandr_dalgarukau_emp
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_tomasz_hryb_revs = {
+			picture = GFX_idea_BLR_for_tomasz_hryb_revs
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_mikola_abramcyk_rea = {
+			picture = GFX_idea_BLR_for_mikola_abramcyk_rea
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_for_larysa_hienijus_acc = {
+			picture = GFX_idea_BLR_for_larysa_hienijus_acc
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_completed_focus = BLR_messiah
+			}
+			cancel = { 
+				
+			}
+		}
+	}
+
+	security_minister = {
+		BLR_int_kiprijan_kandratovic_des = {
+			picture = GFX_idea_BLR_int_kiprijan_kandratovic_des
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			available = {
+				NOT = {
+					has_completed_focus = BLR_one_way_or_another
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_int_kliment_dyadorau_emp = {
+			picture = GFX_idea_BLR_int_kliment_dyadorau_emp
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_int_fabian_szantyr_revs_scd = {
+			picture = GFX_idea_BLR_int_fabian_szantyr_revs_scd
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				OR = {
+					has_completed_focus = BLR_pale_horse
+					has_completed_focus = BLR_bsh_coalition
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_int_ivan_luckievich_con_rea = {
+			picture = GFX_idea_BLR_int_ivan_luckievich_con_rea
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			available = {
+				OR = {
+					has_completed_focus = BLR_actions_of_vituska
+					has_completed_focus = BLR_bnp_coalition
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_int_vasiliy_korzh_acc = {
+			picture = GFX_idea_BLR_int_vasiliy_korzh_acc
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			available = {
+				has_completed_focus = BLR_messiah
+			}
+			cancel = { 
+				
+			}
+		}
+	}
+
+	head_of_intel = {
+		BLR_intel_jakub_kolas_scd = {
+			picture = GFX_idea_BLR_intel_jakub_kolas_scd
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_intel_jazep_mamonka_con_des = {
+			picture = GFX_idea_BLR_intel_jazep_mamonka_con_des
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = conservatism
+				}
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_intel_eugeniusz_tinz_emp = {
+			picture = GFX_idea_BLR_intel_eugeniusz_tinz_emp
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_completed_focus = BLR_foreign_clique
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_intel_paluta_badunova_revs = {
+			picture = GFX_idea_BLR_intel_paluta_badunova_revs
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			available = {
+				has_completed_focus = BLR_pale_horse
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_intel_branislau_kaminski_rea = {
+			picture = GFX_idea_BLR_intel_branislau_kaminski_rea
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = BLR_actions_of_vituska
+			}
+			cancel = { 
+				
+			}
+		}
+
+		BLR_intel_ber_borochov_acc = {
+			picture = GFX_idea_BLR_intel_ber_borochov_acc
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = BLR_messiah
+			}
+			cancel = { 
+				
+			}
+		}
+	}
+
+	chief_of_staff = {
+		BLR_staff_aliaksandr_prushinsky = {
+			picture = GFX_idea_BLR_staff_aliaksandr_prushinsky
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cos_school_of_psychology
+			}
+		}
+
+		BLR_staff_kipryjan_kandratavic = {
+			picture = GFX_idea_BLR_staff_kipryjan_kandratavic
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+	}
+
+	chief_of_army = {
+		BLR_army_boris_permikin = {
+			picture = GFX_idea_BLR_army_boris_permikin
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+
+		BLR_army_mikalay_dziamidau = {
+			picture = GFX_idea_BLR_army_mikalay_dziamidau
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		BLR_naval_research_institute_of_minsk = {
+			picture = GFX_idea_BLR_naval_research_institute_of_minsk
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+
+		BLR_river_patrol_central_command = {
+			picture = GFX_idea_BLR_river_patrol_central_command
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cnav_base_control_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		BLR_air_benjamin_adamowicz = {
+			picture = GFX_idea_BLR_air_benjamin_adamowicz
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+
+		BLR_air_donat_makijonek = {
+			picture = GFX_idea_BLR_air_donat_makijonek
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		BLR_theo_donat_makijonek = {
+			picture = GFX_idea_BLR_theo_donat_makijonek
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				supperior_firepower_theorist
+			}
+			research_bonus = {
+				cat_superior_firepower = 0.1
+			}
+		}
+
+		BLR_theo_hassan_kanapatsky = {
+			picture = GFX_idea_BLR_theo_hassan_kanapatsky
+			allowed = {
+				original_tag = BLR
+			}
+			traits = {
+				strategic_destruction_theorist
+			}
+			research_bonus = {
+				cat_strategic_destruction = 0.1
+			}
+		}
+	}
+
+	industrial_concern = {
+		Minsk_Polytechnic_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		Minsk_Factory_Complex = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.05
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+
+	weapons_manufacturer = {
+		designer = yes
+		Minsk_Arsenal = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				artillery_producer_mass_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		Grodno_Military_Research_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				infantry_equipment_producer_allround_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+		Armor_Research_Institute = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				small_tank_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		MAZ_company = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	air_naval_manufacturer = {
+		designer = yes
+		Baltic_Shipyards = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				cruiser_producer_defense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				dd_tech = 0.1
+				ss_tech = 0.1
+				bb_tech = 0.1
+			}
+		}
+		Atamanska_Sport_Aircraft_Factory = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		Astrouski_Aircraft_Bureau = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Radchenka_Design_Bureau = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				bomber_producer_mass_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Hydroaeronautics_Club = {
+			allowed = {
+				original_tag = BLR
+			}
+			available = {
+				original_tag = BLR
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				naval_bomber = 0.15
+			}
+		}
+	}
+}

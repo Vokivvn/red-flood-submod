@@ -1,0 +1,581 @@
+ideology_generic_category = {
+#Revolutionary Anarchist
+	anarchist_stability = {
+		cost = 100
+		available = {
+			has_government = revolutionary_anarchism
+			has_stability < 1
+		}
+		visible = {
+			has_government = revolutionary_anarchism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.25
+			army_org_factor = -0.1
+		}
+		days_remove = 180
+	}
+	anarchist_popularity = {
+		cost = 100
+		available = {
+			has_government = revolutionary_anarchism
+			revolutionary_anarchism < 1
+		}
+		visible = {
+			has_government = revolutionary_anarchism
+		}
+		modifier  = {
+			revolutionary_anarchism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	anarchist_war_support = {
+		cost = 100
+		available = {
+			has_government = revolutionary_anarchism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = revolutionary_anarchism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			production_speed_industrial_complex_factor = -0.05
+			political_power_gain = -0.1
+		}
+		days_remove = 180
+	}
+#Vanguard Socialist
+	vanguard_stability = {
+		cost = 100
+		available = {
+			has_government = vanguard_socialism
+			has_stability < 1
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.25
+			RF_economy_cost_factor = 0.25
+			chief_of_staff_cost_factor = 0.25
+			RF_mobilization_laws_cost_factor = 0.25
+			RF_trade_laws_cost_factor = 0.25
+		}
+		days_remove = 180
+	}
+	vanguard_popularity = {
+		cost = 100
+		available = {
+			has_government = vanguard_socialism
+			vanguard_socialism < 1
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		modifier  = {
+			vanguard_socialism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	vanguard_war_support = {
+		cost = 100
+		available = {
+			has_government = vanguard_socialism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = vanguard_socialism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			army_org_factor = -0.05
+			production_factory_efficiency_gain_factor = -0.05
+		}
+		days_remove = 180
+	}
+#Libertarian Marxist
+	libertarian_stability = {
+		cost = 100
+		available = {
+			has_government = libertarian_marxism
+			has_stability < 1
+		}
+		visible = {
+			has_government = libertarian_marxism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.25
+			stability_factor = -0.1
+		}
+		days_remove = 180
+	}
+	libertarian_popularity = {
+		cost = 100
+		available = {
+			has_government = libertarian_marxism
+			libertarian_marxism < 1
+		}
+		visible = {
+			has_government = libertarian_marxism
+		}
+		modifier  = {
+			libertarian_marxism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	libertarian_war_support = {
+		cost = 100
+		available = {
+			has_government = libertarian_marxism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = libertarian_marxism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			mobilization_speed = -0.2
+			consumer_goods_factor = 0.05
+		}
+		days_remove = 180
+	}
+#Revisionist Socialist
+	revisionist_stability = {
+		cost = 100
+		available = {
+			has_government = revisionist_socialism
+			has_stability < 1
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.25
+			war_support_factor = -0.2
+		}
+		days_remove = 180
+	}
+	revisionist_popularity = {
+		cost = 100
+		available = {
+			has_government = revisionist_socialism
+			revisionist_socialism < 1
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		modifier  = {
+			revisionist_socialism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	revisionist_war_support = {
+		cost = 100
+		available = {
+			has_government = revisionist_socialism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = revisionist_socialism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			industrial_capacity_factory = -0.1
+			local_resources_factor = -0.15
+		}
+		days_remove = 180
+	}
+#Social Democrat
+	social_stability = {
+		cost = 100
+		available = {
+			has_government = social_democratism
+			has_stability < 1
+		}
+		visible = {
+			has_government = social_democratism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.5
+		}
+		days_remove = 180
+	}
+	social_popularity = {
+		cost = 100
+		available = {
+			has_government = social_democratism
+			social_democratism < 1
+		}
+		visible = {
+			has_government = social_democratism
+		}
+		modifier  = {
+			social_democratism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	social_war_support = {
+		cost = 100
+		available = {
+			has_government = social_democratism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = social_democratism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			production_factory_efficiency_gain_factor = -0.2
+			production_factory_max_efficiency_factor = -0.2
+		}
+		days_remove = 180
+	}
+#Liberal
+	liberal_stability = {
+		cost = 100
+		available = {
+			has_government = liberalism
+			has_stability < 1
+		}
+		visible = {
+			has_government = liberalism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			political_power_factor = -0.25
+			consumer_goods_factor = 0.05
+		}
+		days_remove = 180
+	}
+	liberal_popularity = {
+		cost = 100
+		available = {
+			has_government = liberalism
+			liberalism < 1
+		}
+		visible = {
+			has_government = liberalism
+		}
+		modifier  = {
+			liberalism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	liberal_war_support = {
+		cost = 100
+		available = {
+			has_government = liberalism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = liberalism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			trade_opinion_factor = -0.5
+			min_export = 0.25
+		}
+		days_remove = 180
+	}
+#Conservative
+	conservative_stability = {
+		cost = 100
+		available = {
+			has_government = conservatism
+			has_stability < 1
+		}
+		visible = {
+			has_government = conservatism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			consumer_goods_factor = 0.1
+		}
+		days_remove = 180
+	}
+	conservative_popularity = {
+		cost = 100
+		available = {
+			has_government = conservatism
+			conservatism < 1
+		}
+		visible = {
+			has_government = conservatism
+		}
+		modifier  = {
+			conservatism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	conservative_war_support = {
+		cost = 100
+		available = {
+			has_government = conservatism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = conservatism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			political_power_gain = -0.5
+		}
+		days_remove = 180
+	}
+#Right Authoritarian
+	authoritarian_stability = {
+		cost = 100
+		available = {
+			has_government = right_authoritarianism
+			has_stability < 1
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			weekly_manpower = -1000
+		}
+		days_remove = 180
+	}
+	authoritarian_popularity = {
+		cost = 100
+		available = {
+			has_government = right_authoritarianism
+			right_authoritarianism < 1
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		modifier  = {
+			right_authoritarianism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	authoritarian_war_support = {
+		cost = 100
+		available = {
+			has_government = right_authoritarianism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = right_authoritarianism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			army_morale_factor = -0.1
+			stability_factor = -0.05
+		}
+		days_remove = 180
+	}
+#Despotic
+	despotic_stability = {
+		cost = 100
+		available = {
+			has_government = despotism
+			has_stability < 1
+		}
+		visible = {
+			has_government = despotism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			production_speed_buildings_factor = -0.1
+		}
+		days_remove = 180
+	}
+	despotic_popularity = {
+		cost = 100
+		available = {
+			has_government = despotism
+			despotism < 1
+		}
+		visible = {
+			has_government = despotism
+		}
+		modifier  = {
+			despotism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	despotic_war_support = {
+		cost = 100
+		available = {
+			has_government = despotism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = despotism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			political_power_gain = -0.25
+			consumer_goods_factor = 0.05
+		}
+		days_remove = 180
+	}
+#Reactionary
+	reactionism_stability = {
+		cost = 100
+		available = {
+			has_government = reactionism
+			has_stability < 1
+		}
+		visible = {
+			has_government = reactionism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			industrial_capacity_factory = -0.05
+			production_factory_max_efficiency_factor = -0.05
+		}
+		days_remove = 180
+	}
+	reactionism_popularity = {
+		cost = 100
+		available = {
+			has_government = reactionism
+			reactionism < 1
+		}
+		visible = {
+			has_government = reactionism
+		}
+		modifier  = {
+			reactionism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	reactionism_war_support = {
+		cost = 100
+		available = {
+			has_government = reactionism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = reactionism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			stability_factor = -0.1
+		}
+		days_remove = 180
+	}
+#Accelerationism
+	accelerationism_stability = {
+		cost = 100
+		available = {
+			has_government = accelerationism
+			has_stability < 1
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		modifier  = {
+			stability_weekly = 0.01
+			research_speed_factor = -0.1
+			political_power_gain = -0.1
+		}
+		days_remove = 180
+	}
+	accelerationism_popularity = {
+		cost = 100
+		available = {
+			has_government = accelerationism
+			accelerationism < 1
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		modifier  = {
+			accelerationism_drift = 0.01
+		}
+		remove_effect = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.05
+			}
+		}
+		days_remove = 180
+	}
+	accelerationism_war_support = {
+		cost = 100
+		available = {
+			has_government = accelerationism
+			has_war_support < 1
+		}
+		visible = {
+			has_government = accelerationism
+		}
+		modifier  = {
+			war_support_weekly = 0.01
+			weekly_manpower = -1000
+		}
+		days_remove = 180
+	}
+}

@@ -1,0 +1,31 @@
+add_namespace = GRE
+
+country_event = {
+	id = GRE.1
+	title = GRE.1.t
+	desc = GRE.1.d
+	picture = GRE_walk
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRE.1.a
+		country_event = {
+			id = GRE.2
+		}
+	}
+}
+country_event = {
+	id = GRE.2
+	title = GRE.2.t
+	desc = GRE.2.d
+	picture = GRE_kill
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GRE.2.a
+		add_stability = 0.03
+		add_manpower = -3
+	}
+}

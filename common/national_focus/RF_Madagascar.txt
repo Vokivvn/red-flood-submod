@@ -1,0 +1,1535 @@
+focus_tree = {
+	id = MAG
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAG
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1500 }
+	
+	@soclib_tree_left = 0
+	@soclib_tree_center = 2
+	@soclib_tree_right = 4
+	
+	@despotic_tree_left = 6
+	@despotic_tree_center = 8
+	@despotic_tree_right = 10
+	
+	@libmarx_tree_left = 12
+	@libmarx_tree_center = 14
+	@libmarx_tree_right = 16
+	
+	@accel_tree_left = 18
+	@accel_tree_center = 20
+	@accel_tree_right = 22
+	
+	@army_tree_left = 24
+	@army_tree_center = 26
+	@army_tree_right = 28
+	
+	@air_tree_center = 30
+	@navy_tree_center = 26
+	
+	#Focus for The Realm of the Malagasy
+	focus = {
+		id = MAG_therealmofthemalagasy
+		icon = GFX_therealmofthemalagasy
+		x = @despotic_tree_center
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	
+	#Focus for Death of the Queen
+	focus = {
+		id = MAG_deathofthequeen
+		icon = GFX_deathofthequeen
+		relative_position_id = MAG_therealmofthemalagasy
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_therealmofthemalagasy }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+	
+	###LIBERAL TREE STARTS HERE
+	
+	#Focus for Liberal Coup
+	focus = {
+		id = MAG_liberalcoup
+		icon = GFX_liberalcoup
+		x = @soclib_tree_center
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_deathofthequeen }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = liberalism
+		}
+		available = {
+			has_government = liberalism
+		}
+		completion_reward = {
+			hidden_effect = {
+				country_event = { days = 20 id = mag.5 }
+			}
+		}
+	}
+
+	
+	###LEFT LIBERAL TREE STARTS
+	
+	#Focus for Strengthen Democracy
+	focus = {
+		id = MAG_strengthendemocracy
+		icon = GFX_strengthendemocracy
+		x = @soclib_tree_left
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_liberalcoup }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.20
+		}
+	}
+	
+	#Focus for Direct Elections
+	focus = {
+		id = MAG_directelections
+		icon = GFX_directelections
+		relative_position_id = MAG_strengthendemocracy
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_strengthendemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_directdemocracy
+		}
+	}
+	
+	#Focus for Look to Switzerland
+	focus = {
+		id = MAG_looktoswitzerland
+		icon = GFX_looktoswitzerland
+		relative_position_id = MAG_directelections
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_directelections }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_political_power = -250
+			add_ideas = mag_confederalism
+		}
+	}
+	
+	###LEFT LIBERAL TREE ENDS	
+	
+	###CENTER LIBERAL TREE STARTS
+	
+	#Focus for Expand Constitutional Parliamentarism
+	focus = {
+		id = MAG_expandconstitutionalparliamentarism
+		icon = GFX_expandconstitutionalparliamentarism
+		x = @soclib_tree_center
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_liberalcoup }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.20
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.20
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.20
+			}
+		country_event = mag.6
+		}
+	}
+	
+	#Focus for Meritocracy
+	focus = {
+		id = MAG_meritocracy
+		icon = GFX_meritocracy
+		relative_position_id = MAG_expandconstitutionalparliamentarism
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandconstitutionalparliamentarism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.20
+			add_political_power = 150
+			add_ideas = mag_meritocracy
+		}
+	}
+	
+	#Focus for Rally The Republic
+	focus = {
+		id = MAG_rallytherepublic
+		icon = GFX_rallytherepublic
+		relative_position_id = MAG_meritocracy
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_meritocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_rally
+			add_war_support = 0.30
+		}
+	}
+
+	###CENTER LIBERAL TREE ENDS	
+	
+	
+	### RIGHT LIBERAL TREE STARTS
+	
+	#Focus for Neutral Paradise
+	focus = {
+		id = MAG_neutralparadise
+		icon = GFX_neutralparadise
+		x = @soclib_tree_right
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_liberalcoup }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_neutrality
+		}
+	}
+
+	#Focus for Expand Plantation Systems
+	focus = {
+		id = MAG_expandplantationsystems
+		icon = GFX_expandplantationsystems
+		relative_position_id = MAG_neutralparadise
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_neutralparadise }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_farms
+			hidden_effect = {
+			country_event = {
+			id = mag.14
+			days = 5
+			}
+			}
+		}
+	}
+	
+	#Focus for Destroy Radicalism
+	focus = {
+		id = MAG_destroyradicalism
+		icon = GFX_destroyradicalism
+		relative_position_id = MAG_expandplantationsystems
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandplantationsystems }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_political_power = -300
+			add_ideas = mag_radicalismdestroyed
+		}
+	}
+
+	### RIGHT LIBERAL TREE ENDS	
+	### LIBERAL TREE ENDS!
+	
+	###DESPOTIC TREE STARTS
+	
+		#Focus for Succession Crisis Resolved
+	focus = {
+		id = MAG_successioncrisisresolved
+		icon = GFX_successioncrisisresolved
+		x = @despotic_tree_center
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_deathofthequeen }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = despotism
+		}
+	}
+	
+	###LEFT DESPOTIC TREE STARTS
+	
+	#Focus for The Queen and her Realm
+	focus = {
+		id = MAG_thequeenandherrealm
+		icon = GFX_thequeenandherrealm
+		x = @despotic_tree_left
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_successioncrisisresolved }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	
+	#Focus for Fortification Systems
+	focus = {
+		id = MAG_fortificationsystems
+		icon = GFX_fortificationsystems
+		relative_position_id = MAG_thequeenandherrealm
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_thequeenandherrealm }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+	543 = {
+	add_building_construction = {
+    type = bunker
+    level = 4
+    instant_build = yes
+    province = 5222
+		}
+		}
+	}
+	}
+	
+	#Focus for Farm Subsidies
+	focus = {
+		id = MAG_farmsubsidies
+		icon = GFX_farmsubsidies
+		relative_position_id = MAG_fortificationsystems
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_fortificationsystems }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		random_owned_controlled_state = {
+		limit = 
+		{
+			free_building_slots = 
+			{
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+		}
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = 
+			{
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+		limit = 
+		{
+			free_building_slots = 
+			{
+				building = industrial_complex
+				size > 0
+				include_locked = yes
+			}
+		}
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = 
+			{
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+	}
+	
+	###LEFT DESPOTIC TREE ENDS
+	
+	###CENTER DESPOTIC STARTS
+	
+		#Focus for Mixed System
+	focus = {
+		id = MAG_mixedsystem
+		icon = GFX_mixedsystem
+		x = @despotic_tree_center
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_successioncrisisresolved }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+
+
+	#Focus for Bolster the Aristocracy
+	focus = {
+		id = MAG_bolsterthearistocracy
+		icon = GFX_bolsterthearistocracy
+		relative_position_id = MAG_mixedsystem
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_mixedsystem }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = 
+		{
+			add_popularity = 
+			{
+				ideology = despotism
+				popularity = 0.20
+			}
+		}
+	}
+	
+	#Focus for Smuggle French Refugees
+	focus = {
+		id = MAG_smugglefrenchrefugees
+		icon = GFX_smugglefrenchrefugees
+		relative_position_id = MAG_bolsterthearistocracy
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_bolsterthearistocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_refugees
+		}
+	}
+	
+	###CENTER DESPOTIC ENDS
+	
+	###RIGHT DESPOTIC STARTS
+	#Focus for Parties Must be Loyal
+	focus = {
+		id = MAG_partiesmustbeloyal
+		icon = GFX_partiesmustbeloyal
+		x = @despotic_tree_right
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_successioncrisisresolved }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = 
+			{
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+	}
+
+	#Focus for Protect The Peasants
+	focus = {
+		id = MAG_protectthepeasants 
+		icon = GFX_protectthepeasants
+		relative_position_id = MAG_partiesmustbeloyal
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_partiesmustbeloyal }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_welfare
+		}
+	}
+	
+	#Focus for State Protestantism
+	focus = {
+		id = MAG_stateprotestantism
+		icon = GFX_stateprotestantism
+		relative_position_id =MAG_protectthepeasants
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_protectthepeasants }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+add_political_power = -150
+		}
+	}
+	
+	###RIGHT DESPOTIC ENDS
+	
+	###DESPOTIC TREE ENDS!
+	
+	###LIBMARX TREE STARTS!
+	
+	#Focus for Poinciana Revolution
+	focus = {
+		id = MAG_poincianarevolution
+		icon = GFX_poincianarevolution
+		x = @libmarx_tree_center
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_deathofthequeen }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = libertarian_marxism
+		}
+		available = {
+			has_government = libertarian_marxism
+		}
+	}
+	
+	###LEFT LIBMARX TREE START
+	
+	#Focus for Anti-Imperialist Mythos
+	focus = {
+		id = MAG_antiimperialistmythos
+		icon = GFX_antiimperialistmythos
+		x = @libmarx_tree_left
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_poincianarevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.30
+			add_political_power = 100
+			hidden_effect = {
+			country_event = {
+			id = mag.10
+			days = 5
+			}
+			}
+		}
+	}
+	
+	#Focus for Internationale Membership?
+	focus = {
+		id = MAG_internationalemembership
+		icon = GFX_internationalemembership
+		relative_position_id = MAG_antiimperialistmythos
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_antiimperialistmythos }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			GER = {
+			country_event = { days = 1 id = mag.4}
+			}
+		}
+	}
+
+		#Focus for Socialist Powerhouse
+	focus = {
+		id = MAG_socialistpowerhouse
+		icon = GFX_socialistpowerhouse
+		relative_position_id = MAG_internationalemembership
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_internationalemembership }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+			}
+			hidden_effect = {
+				country_event = {
+					id = mag.11
+					days = 7
+				}
+			}
+			add_tech_bonus = { bonus = 2.0 uses = 4 category = industry }
+		}
+	}
+	###LEFT LIBMARX TREE ENDS
+	
+	###CENTER LIBMARX TREE START
+	
+	
+	#Focus for Fate of the Monarchy
+	focus = {
+		id = MAG_fateofthemonarchy
+		icon = GFX_fateofthemonarchy
+		x = @libmarx_tree_center
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_poincianarevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+			ideology = despotism
+			popularity = -0.1 }
+		}
+	}
+	
+		#Focus for Seize Property
+	focus = {
+		id = MAG_seizeproperty
+		icon = GFX_seizeproperty
+		relative_position_id = MAG_fateofthemonarchy
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_fateofthemonarchy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.25
+			543 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 6
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			543 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	#Focus for Freedom for All
+	focus = {
+		id = MAG_freedomforall
+		icon = GFX_freedomforall
+		relative_position_id = MAG_seizeproperty
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_seizeproperty }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+ideology = libertarian_marxism
+popularity = 0.25 }
+			hidden_effect = {
+			country_event = {
+			id = mag.12
+			days = 5
+			}
+			}
+		}
+	}
+	
+	###CENTER LIBMARX TREE ENDS	
+	
+	###RIGHT LIBMARX TREE START
+	
+		#Focus for Communalism
+	focus = {
+		id = MAG_communalism
+		icon = GFX_communalism
+		x = @libmarx_tree_right
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_poincianarevolution }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_communalism
+			hidden_effect = {
+			country_event = {
+			id = mag.13
+			days = 30
+			}
+			}
+		}
+	}
+
+	#Focus for Fate of Tradition
+	focus = {
+		id = MAG_fateoftradition
+		icon = GFX_fateoftradition
+		relative_position_id = MAG_communalism
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_communalism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = mag_tradition
+		}
+	}
+	
+		#Focus for Revive Malagasy Language
+	focus = {
+		id = MAG_revivemalagasylanguage
+		icon = GFX_revivemalagasylanguage
+		relative_position_id = MAG_fateoftradition
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_fateoftradition }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		add_political_power = -250
+			add_ideas = mag_language
+		}
+	}
+	###RIGHT LIBMARX TREE ENDS
+	###LIBMARX TREE ENDS!
+	
+	###ACCEL TREE STARTS
+
+	#Focus for Rabearivelo Marches on Tana
+	focus = {
+		id = MAG_rabearivelomarchesontana
+		icon = GFX_rabearivelomarchesontana
+		x = @accel_tree_center
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_deathofthequeen }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			has_government = accelerationism
+		}
+		available = {
+			has_government = accelerationism
+		}
+	}	
+	
+	###LEFT ACCEL PATH STARTS
+
+	#Focus for Surrealisme
+	focus = {
+		id = MAG_surrealisme
+		icon = GFX_surrealisme
+		x = @accel_tree_left
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_rabearivelomarchesontana }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_surrealisme
+			hidden_effect = {
+			country_event = {
+			id = mag.15
+			days = 5
+			}
+			}
+		}
+	}
+	
+		#Focus for Welcome French Culture
+	focus = {
+		id = MAG_welcomefrenchculture
+		icon = GFX_welcomefrenchculture
+		relative_position_id = MAG_surrealisme
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_surrealisme }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+	ideology = accelerationism
+	popularity = 0.15
+}
+add_political_power = 150
+add_stability = 0.1
+		}
+	}
+
+	#Focus for Miaramilan'ny Mafana Yo
+	focus = {
+		id = MAG_miaramilannymafanayo
+		icon = GFX_miaramilannymafanayo
+		relative_position_id = MAG_welcomefrenchculture
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_welcomefrenchculture }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_squadron
+			country_event = mag.7
+		}
+	}
+
+	###LEFT ACCEL PATH ENDS
+	
+	###CENTER ACCEL PATH STARTS
+	
+	#Focus for National Myth
+	focus = {
+		id = MAG_nationalmyth
+		icon = GFX_nationalmyth
+		x = @accel_tree_center
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_rabearivelomarchesontana }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			country_event = mag.8
+			add_war_support = 0.40
+			add_ideas = mag_nationalmyth
+		}
+	}
+	
+	#Focus for Strengthen Malagasy Religion
+	focus = {
+		id = MAG_strengthenmalagasyreligion
+		icon = GFX_strengthenmalagasyreligion
+		relative_position_id = MAG_nationalmyth
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_nationalmyth }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.2
+	add_popularity = {
+	ideology = accelerationism
+	popularity = 0.20
+}
+		}
+	}		
+		
+	#Focus for Demand The Port
+	focus = {
+		id = MAG_demandtheport
+		icon = GFX_demandtheport
+		relative_position_id = MAG_strengthenmalagasyreligion
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_strengthenmalagasyreligion }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			FRA = {
+			country_event = { days = 1 id = mag.2 }
+			}
+			MAG = {
+			add_state_core = 997
+			}
+		}
+	}
+
+	###CENTER ACCEL PATH ENDS
+	
+	###RIGHT ACCEL PATH STARTS
+		#Focus for Malagasy Futurism
+	focus = {
+		id = MAG_malagasyfuturism
+		icon = GFX_malagasyfuturism
+		x = @accel_tree_right
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_rabearivelomarchesontana }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 2
+		}
+	}
+
+	#Focus for Agressive Urbanism
+	focus = {
+		id = MAG_agressiveurbanism
+		icon = GFX_agressiveurbanism
+		relative_position_id = MAG_malagasyfuturism
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_malagasyfuturism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.4
+add_political_power = -250
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = industrial_complex
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 10
+add_building_construction = {
+type = industrial_complex
+level = 3
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = arms_factory
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+		}
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = industrial_complex
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 10
+add_building_construction = {
+type = industrial_complex
+level = 3
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = arms_factory
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = arms_factory
+level = 2
+instant_build = yes
+}
+		}
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = industrial_complex
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 10
+add_building_construction = {
+type = industrial_complex
+level = 1
+instant_build = yes
+}
+}
+random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = arms_factory
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = arms_factory
+level = 1
+instant_build = yes
+}
+		}
+	
+	}
+	}
+	
+	
+		#Focus for Highways From Both Capes
+	focus = {
+		id = MAG_highwaysfrombothcapes
+		icon = GFX_highwaysfrombothcapes
+		relative_position_id = MAG_agressiveurbanism
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_agressiveurbanism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		1067 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+		}
+		1068 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+		}
+		543 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+		}
+		}
+	}
+	
+	
+	###RIGHT ACCEL PATH ENDS
+	###ACCEL TREE ENDS!	
+	###ALL IDEOLOGY TREES END
+	
+	###ARMY TREE STARTS
+
+	#Focus for Expand The Malagasy Defence Militia
+	focus = {
+		id = MAG_expandthemalagasydefencemilitia
+		icon = GFX_expandthemalagasydefencemilitia
+		x = @army_tree_center
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 1
+        ahead_reduction = 1
+	uses = 3
+	category = infantry_weapons
+}
+		}
+	}
+
+	#Focus for Tank Experiments
+	focus = {
+		id = MAG_tankexperiments
+		icon = GFX_tankexperiments
+		x = @army_tree_left
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandthemalagasydefencemilitia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+	name = electronics_bonus
+	bonus = 2
+        ahead_reduction = 2
+	uses = 2
+	category = 	armor
+}
+		}
+	}	
+	
+	
+	#Focus for Expand Army Research
+	focus = {
+		id = MAG_expandarmyresearch
+		icon = GFX_expandarmyresearch
+		x = @army_tree_center
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandthemalagasydefencemilitia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			army_experience = 35
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 2.0
+				uses = 5
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Focus for Call Local Tribes
+	focus = {
+		id = MAG_calllocaltribes
+		icon = GFX_calllocaltribes
+		x = @army_tree_right
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandthemalagasydefencemilitia }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = mag_localtribes
+		}
+	}
+	
+
+	#Focus for Hospitals For Every Division
+	focus = {
+		id = MAG_hospitalsforeverydivision
+		icon = GFX_hospitalsforeverydivision
+		relative_position_id = MAG_expandarmyresearch
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandarmyresearch }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+	name = assembly_bonus
+	bonus = 0.5
+	uses = 2
+	technology = improved_machine_tools	
+	technology = advanced_machine_tools
+	technology = assembly_line_production
+	technology = flexible_line
+	technology = streamlined_line
+	}
+		}
+	}
+	
+	###ARMY TREE ENDS
+
+
+	#Focus for Create The Ministry of Sea
+	focus = {
+		id = MAG_createtheministryofsea
+		icon = GFX_createtheministryofsea
+		x = @navy_tree_center
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	
+	#Focus for Our First Cruiser
+	focus = {
+		id = MAG_ourfirstcruiser
+		icon = GFX_ourfirstcruiser
+	    relative_position_id = MAG_createtheministryofsea
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_createtheministryofsea }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+	
+	#Focus for Buy Old Battleships
+	focus = {
+		id = MAG_buyoldbattleships
+		icon = GFX_buyoldbattleships
+		relative_position_id = MAG_ourfirstcruiser
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_ourfirstcruiser }
+		ai_will_do = {
+			factor = 1
+			}
+				completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	#Focus for Submarine Technology
+	focus = {
+		id = MAG_submarinetechnology
+		icon = GFX_submarinetechnology
+		relative_position_id = MAG_buyoldbattleships
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_buyoldbattleships }
+		ai_will_do = {
+			factor = 1
+		}
+				completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	#Focus for Expand Madagascar Air
+	focus = {
+		id = MAG_expandmadagascarair
+		icon = GFX_expandmadagascarair
+		x = @air_tree_center
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for Buy Old Airplanes
+	focus = {
+		id = MAG_buyoldairplanes
+		icon = GFX_buyoldairplanes
+		relative_position_id = MAG_expandmadagascarair
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_expandmadagascarair }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	#Focus for Consumer Airports
+	focus = {
+		id = MAG_consumerairports
+		icon = GFX_consumerairports
+		relative_position_id = MAG_buyoldairplanes
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_buyoldairplanes }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Focus for Bomber Research
+	focus = {
+		id = MAG_bomberresearch
+		icon = GFX_bomberresearch
+		relative_position_id = MAG_consumerairports
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAG_consumerairports }
+		ai_will_do = {
+			factor = 1
+		}
+			completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+#End of focuses 
+ }

@@ -1,0 +1,39 @@
+division_template = {
+	name = "Buonaparte Division#TODO"			# Infantry
+	division_names_group = ITA_CORSICA
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+units = {
+
+	division = {
+		name = "X"
+		location = 11804
+		division_template = "Buonaparte Division#TODO"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Y"
+		location = 9851
+		division_template = "Buonaparte Division#TODO"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Z"
+		location = 3838
+		division_template = "Buonaparte Division#TODO"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}

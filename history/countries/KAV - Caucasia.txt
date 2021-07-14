@@ -1,0 +1,235 @@
+capital = 231
+
+oob = "KAV_1936"
+
+set_research_slots = 3
+
+set_convoys = 75
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_support = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	gwtank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+	fighter1 = 1
+}
+### Navy - MtG ###
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+### Navy - no MtG ###
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = accelerationism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 5
+	libertarian_marxism = 0
+	revolutionary_anarchism = 10
+	revisionist_socialism = 5
+	social_democratism = 5
+	liberalism = 0
+	conservatism = 0
+	right_authoritarianism = 5
+	despotism = 0
+	reactionism = 5
+	accelerationism = 65
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Vladimir Mayakovsky"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "portrait_vladimir_mayakovsky.tga"
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+	traits = {
+		KAV_demigod_of_poetry
+	}
+}
+create_corps_commander = {
+	name = "Mikhail Velikanov"
+	picture = "General_Mikhail_Velikanov.dds"
+	traits = {
+		infantry_officer
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ivan Bagramyan"
+	picture = "General_Ivan_Begramyan.dds"
+	traits = {
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Anatoliy Gekker"
+	picture = "General_Anatoliy_Gekker.dds"
+	traits = {
+		cavalry_officer
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Giorgi Mazniev"
+	picture = "General_Giorgi_Mazniev.dds"
+	traits = {
+		brilliant_strategist
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Kaikhosro Chelokayev"
+	picture = "General_Kaikhosro_Chelokayev.dds"
+	traits = {
+		harsh_leader
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Valiko Jugheli"
+	picture = "General_Valiko_Jugheli.dds"
+	traits = {
+		media_personality
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Aleksandr Chkheidze"
+	picture = "General_Aleksandr_Chkheidze.dds"
+	traits = {
+		career_officer
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Aleksandr Andronikov"
+	picture = "General_Aleksandr_Andronikov.dds"
+	traits = {
+		career_officer
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Avel Makaev"
+	picture = "General_Avel_Makaev.dds"
+	traits = {
+		cavalry_officer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Giorgi Kvinitadze"
+	picture = "General_Giorgi_Kvanitadze.dds"
+	traits = {
+		war_hero
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_navy_leader = {
+	name = "Ivan Rogov"
+	picture = "Admiral_Ivan_Rogov.dds"
+	traits = { aviation_enthusiast }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 2
+}
+create_navy_leader = {
+	name = "Lev Vladimirsky"
+	picture = "Admiral_Lev_Vladimirsky.dds"
+	traits = { career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}

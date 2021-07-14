@@ -1,0 +1,36 @@
+
+state={
+	id=408
+	name="STATE_408"
+	resources={
+		chromium=18
+	}
+
+	history={
+		owner = JAP
+		victory_points = {
+			957 10
+		}
+		buildings = {
+			infrastructure = 4
+			dockyard = 2
+			industrial_complex = 1
+			air_base = 5
+			957 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+
+	}
+
+		add_core_of = ZHR
+
+	}
+
+	provinces={
+		957 11879 3977
+	}
+	manpower=441465
+	buildings_max_level_factor=1.000
+	state_category=city
+}

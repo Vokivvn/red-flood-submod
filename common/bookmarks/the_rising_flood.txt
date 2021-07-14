@@ -1,0 +1,294 @@
+bookmarks = {
+	bookmark = {
+		name = "RISING_FLOOD_NAME"
+		desc = "RISING_FLOOD_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"RUS"={
+			history = "KOLCHAK_RUSSIAN_DESC"
+			ideology = liberalism
+			ideas = {
+				victor_in_the_velikaya_voyna
+				monopolized_industry
+				unstable_political_system
+			}
+			focuses = {
+				RUS_kolchak_continues
+				RUS_revise_policy
+				RUS_alt_black_bloc
+			}
+		}
+		"GER"={
+			history = "DEUTSCHE_RATEREPUBLIK_DESC"
+			ideology = libertarian_marxism
+			ideas = {
+				GER_spectre_communism
+				GER_forced_isolation
+				GER_backward_south
+			}
+			focuses = {
+				GER_mandateofthecouncils
+				GER_viiiweltkongressderinternationale
+				GER_neuerdeutschersozialismus
+			}
+		}
+		"FRA"={
+			history = "FRANCE_FUTURIST_DESC"
+			ideology = accelerationism
+			ideas = {
+				FRA_divided_nation
+				FRA_terre_futur
+				FRA_abolish_army
+			}
+			focuses = {
+				FRA_question_status_quo
+				FRA_hurray_for_greenshirts
+				FRA_escadron_for_all
+			}
+		}
+		"ENG"={
+			history = "UNITED_KINGDOM_DESC"
+			ideology = conservatism
+			ideas = {
+				ENG_economic_catastrophe
+				ENG_divided_nation
+				ENG_imperial_eclipse
+			}
+			focuses = {
+				ENG_commonwealth_war_games
+				ENG_Snap_Election
+				ENG_Britain_At_War
+			}
+		}
+		"ITA"={
+			history = "ITALIAN_EMPIRE_DESC"
+			ideology = liberalism
+			ideas = {
+				ITA_bulwark_of_democracy
+				ITA_pudi_hegemony
+				ITA_the_libyan_war
+			}
+			focuses = {
+				ITA_christian_socialism
+				ITA_partido_radical
+				ITA_forgone_conclusion
+			}
+		}
+		"USA"={
+			history = "UNITED_STATES_DESC"
+			ideology = liberalism
+			ideas = {
+				USA_land_of_the_free
+				USA_great_depression
+				USA_organized_crime
+			}
+			focuses = {
+				USA_letthecampaignbegin
+				USA_take_out_al_capone
+				USA_enforce_monore_doctrine
+			}
+		}
+		"POL"={
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = accelerationism
+			ideas = {
+			
+			}
+			focuses = {
+				POL_expand_political_freedom
+				POL_national_collective
+				POL_cult_marshal
+			}
+		}
+		"AUS"={
+			minor = yes
+			history = "AUS_DESC_MENU"
+			ideology = conservatism
+			ideas = {
+				AUS_nationalist_millitarism
+			}
+			focuses = {
+				AUS_strengthentheultranationalists
+				AUS_powertothemoderates
+				AUS_glorytotherepublic
+			}
+		}
+		"FIU"={
+			minor = yes
+			history = "FIU_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+
+			}
+			focuses = {
+				FIU_Maintain_The_Experiments
+				FIU_Cultural_Rejuvenation
+				FIU_Strength_Through_Unity
+			}
+		}
+		"BRA"={
+			minor = yes
+			history = "BRA_DESC_MENU"
+			ideology = vanguard_socialism
+			ideas = {
+				BRA_oligarchic_madness
+				BRA_local_army
+				BRA_revolutionary_scars
+				BRA_famine
+			}
+			focuses = {
+				BRA_german_ideal
+				BRA_morning_after
+				BRA_mission_love
+			}
+		}
+		"ARM"={
+			minor = yes
+			history = "ARM_DESC_MENU"
+			ideology = social_democratism
+			ideas = {
+			}
+			focuses = {
+				ARM_speed
+				ARM_interdictturkishtrade
+				ARM_agressiveindustrialization
+			}
+		}
+		"BLR"={
+			minor = yes
+			history = "BLR_DESC_MENU"
+			ideology = despotism
+			ideas = {
+
+			}
+			focuses = {
+				BLR_power_struggle
+				BLR_belarussian_democracy
+				BLR_manifesto
+			}
+		}
+		"UKR"={
+			minor = yes
+			history = "UKR_DESC_MENU"
+			ideology = social_democratism
+			ideas = {
+
+			}
+			focuses = {
+				ukraine_information_fake
+				ukraine_Hetman_cult
+				ukraine_cultural_revolution_below
+			}
+		}
+		"YUG"={
+			minor = yes
+			history = "YUG_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+				
+			}
+			focuses = {
+				YUG_godandslavs
+				YUG_technoslavia
+				YUG_balkanhyperborea
+			}
+		}
+		#"MNT"={
+		#	minor = yes
+		#	history = "MNT_DESC_MENU"
+		#	ideology = despotism
+		#	ideas = {
+		#		MNT_yugoslavian_refugees
+		#	}
+		#	focuses = {
+		#		MNT_rivalry_for_roman
+		#		MNT_absolute_autocrat
+		#		MNT_new_roman_army
+		#	}
+		#}
+		"FIN"={
+			minor = yes
+			history = "FIN_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				FIN_storm_in_central_russia
+				FIN_carve_out_a_land_just_for_finns
+				FIN_sail_to_our_ancestral_lands
+			}
+		}
+		"ASY"={
+			minor = yes
+			history = "ASY_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				ASY_back_to_the_nineveh_plains
+				ASY_mother_russia_greets_her_sons
+				ASY_holy_rule_is_secured
+			}
+		}
+		"KAV"={
+			minor = yes
+			history = "KAV_DESC_MENU"
+			ideology = accelerationism
+			ideas = {
+				
+			}
+			focuses = {
+				KAV_we_live_in_a_society
+				KAV_forward_to_utopia
+				KAV_a_utopia_of_warriorpoets
+			}
+		}
+		"DKB"={
+			minor = yes
+			history = "DKB_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				DKB_return_to_sich
+				DKB_our_russian_brothers
+				DKB_rebirth_of_great_scythia
+			}
+		}
+		"WRU"={
+			minor = yes
+			history = "WRU_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				WRU_retvrn_rights_to_german_aristocracy
+				WRU_invite_BORT
+				WRU_russophiles_in_gov
+			}
+		}
+		"ORE"={
+			minor = yes
+			history = "ORE_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				Orenburg_orinbors_peoples_republic_proclaimed
+				Orenburg_eurasian_ideocracy
+				Orenburg_dutov_asserts_dominance
+			}
+		}
+        "---"={
+			history = "OTHER_THE_RISING_FLOOD_DESC"
+		}
+}
+}

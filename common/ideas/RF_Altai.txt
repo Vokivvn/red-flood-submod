@@ -1,0 +1,303 @@
+ideas = {
+	country = {
+		ALT_hedonism = {
+			picture = FRA_factory_strikes
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+				stability_factor = -0.10
+				trade_opinion_factor = 0.2
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.10
+				MONTHLY_POPULATION = 1.20
+			}
+		}
+		ALT_tsaristmythos = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = -0.10
+				war_support_factor = 0.20
+			}
+		}
+		ALT_constanttransgression = {
+			picture = generic_spy_coup
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.12
+			}
+		}
+		ALT_greatlover = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			war_support_factor = 0.20
+			army_morale_factor = 0.20
+			army_org = 0.15
+			}
+		}
+		ALT_emergencytactics = {
+			picture = FRA_national_mobilization_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			war_support_factor = -0.15
+			army_morale_factor = 0.05
+			army_org = 0.05
+			army_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			stability_factor = -0.10
+			}
+		}
+		ALT_superstition = {
+			picture = trotskyite_plot_purged
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = -0.25
+			stability_factor = 0.20
+			}
+		}
+		ALT_mysticism = {
+			picture = generic_spy_political
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = -0.05
+			stability_factor = 0.25
+			war_support_factor = 0.10
+			political_power_gain = 0.20
+			}
+		}
+		ALT_shamanicempire = {
+			picture = FRA_scw_intervention_nationalists_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			war_support_factor = 0.10
+			political_power_gain = 0.25
+			surrender_limit	= 0.1
+			stability_weekly = 0.01
+			}
+		}
+		ALT_shaman_partisans = {
+			picture = officers_purged
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			war_support_factor = 0.10
+			political_power_gain = -0.50
+			surrender_limit	= -0.25
+			stability_weekly = -0.01
+			}
+		}
+		ALT_syncretism = {
+			picture = officers_purged
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			war_support_factor = 0.10
+			political_power_gain = 0.15
+			stability_weekly = 0.03
+			}
+		}
+		ALT_millenarianism = {
+			picture = generic_intel_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.05
+			surrender_limit	= 0.10
+			stability_weekly = 0.05
+			}
+		}
+		ALT_lowertaxes = {
+			picture = generic_research_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.05
+			political_power_gain = 0.10
+			consumer_goods_factor = -0.10
+			}
+		}
+		ALT_chaos = {
+			picture = ast_abandon_the_westminster_system_fascism
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			stability_weekly = -0.20
+			surrender_limit = -0.40
+			political_power_gain = -1
+			consumer_goods_factor = 0.10
+			}
+		}
+		ALT_concrete = {
+			picture = generic_research_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.10
+			production_speed_arms_factory_factor = 0.15
+			production_speed_buildings_factor = 0.15
+			production_speed_bunker_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			}
+		}
+		ALT_tur = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.05
+			political_power_gain = 0.01
+			consumer_goods_factor = -0.05
+			}
+		}
+		ALT_rus = {
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.05
+			political_power_gain = -0.05
+			war_support_factor = 0.20
+			}
+		}
+		ALT_dual = {
+			picture = triumphant_will
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			research_speed_factor = 0.05
+			stability_factor = 0.10
+			}
+		}
+		ALT_consumer = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			consumer_goods_factor = 0.03
+			stability_factor = 0.10
+			}
+		}
+		ALT_peace = {
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = ALT
+			}
+			modifier = {
+			stability_factor = 0.20
+			war_support_factor = -0.30
+			enemy_justify_war_goal_time = 0.90
+			}
+		}
+	}
+	head_of_government = {
+		ALT_oyogostur_omogoyovich_makhcharov_hog = {
+			picture = GFX_idea_ALT_oyogostur_omogoyovich_makhcharov_hog.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				head_of_government
+				ALT_altaic_mystic
+			}
+			cancel_if_invalid = yes
+		}
+		ALT_george_gurdjieff_hog = {
+			picture = GFX_idea_ALT_george_gurdjieff_hog.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	economy_minister = {
+		ALT_tryi_akemchi_eco = {
+			picture = GFX_idea_ALT_tryi_akemchi_eco.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	foreign_minister = {
+		ALT_maria_rasputin_for = {
+			picture = GFX_idea_ALT_maria_rasputin_for.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				foreign_minister
+				hog_flamboyant_tough_guy
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	security_minister = {
+		ALT_dulustaan_michilovich_bobutov_sec = {
+			picture = GFX_idea_ALT_dulustaan_michilovich_bobutov_sec.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				security_minister
+				ALT_yukat_explorer
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	head_of_intel = {
+		ALT_praskovya_rasputin_int = {
+			picture = GFX_idea_ALT_praskovya_rasputin_int.tga
+			allowed = { original_tag = ALT }
+			traits = {
+				head_of_intel
+				ALT_despotic_loyalist
+			}
+			cancel_if_invalid = yes
+		}
+	}
+
+}

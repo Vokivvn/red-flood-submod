@@ -1,0 +1,454 @@
+focus_tree = {
+	id = PRI
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRI
+		}
+	}
+	
+	continuous_focus_position = { x = 150 y = 4000 }
+	
+	#Focus for Dawn of Cisamur
+	focus = {
+		id = PRI_dawn_of_cisamur
+		icon = GFX_DawnOfCisamur
+		x = 3
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Yakutian-Russian Volunteers
+	focus = {
+		id = PRI_yakutianrussian_volunteers
+		icon = GFX_YakutRussianVolunteers
+		x = 0
+		y = 1
+		cost = 3
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_dawn_of_cisamur }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = KCK
+				modifier = offered_support
+			}
+			add_manpower = 10000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = KCK
+			}
+		}
+	}
+
+	#Focus for Mobilise the Zemskaya Rat'
+	focus = {
+		id = PRI_mobilise_the_zemskaya_rat
+		icon = GFX_MobilizeZemskayaRat
+		x = 2
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_dawn_of_cisamur }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+
+	#Focus for Rouse the Sailors
+	focus = {
+		id = PRI_rouse_the_sailors
+		icon = GFX_RouseTheSailors
+		x = 4
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_dawn_of_cisamur }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Question of Transbaikal
+	focus = {
+		id = PRI_question_of_transbaikal
+		icon = GFX_QuestionOfTransbaikal
+		x = 6
+		y = 1
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_dawn_of_cisamur }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = PRI_question_of_transbaikal_category
+		}
+	}
+
+	#Focus for Strike Green Ukraine
+	focus = {
+		id = PRI_strike_green_ukraine
+		icon = GFX_StrikeGreenUkraine
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PRI_mobilise_the_zemskaya_rat 
+		}
+		prerequisite = { 
+			focus = PRI_rouse_the_sailors 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GUK
+			}
+			#add_state_claim = all of GUK
+		}
+	}
+
+	#Focus for Root Out Separatism
+	focus = {
+		id = PRI_root_out_separatism
+		icon = GFX_RootOutSeparatism
+		x = 3
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_strike_green_ukraine }
+		available = { 
+			GUK = {
+				exists = no
+			}
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#cores GUK
+			add_state_core = 409
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 657
+		}
+	}
+
+	#Focus for "Democratic" Russification
+	focus = {
+		id = PRI_democratic_russification
+		icon = GFX_DemocraticRussification
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_root_out_separatism }
+		mutually_exclusive = { focus = PRI_multilingual_local_governments }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.2
+			}
+		}
+	}
+
+	#Focus for Multilingual Local Governments
+	focus = {
+		id = PRI_multilingual_local_governments
+		icon = GFX_MultilingualLocalGovernments
+		x = 4
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_root_out_separatism }
+		mutually_exclusive = { focus = PRI_democratic_russification }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+	}
+
+	#Focus for Order In Vladivostock
+	focus = {
+		id = PRI_order_in_vladivostock
+		icon = GFX_OrderOnTheStreatsOfVladivostok
+		x = 3
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = PRI_multilingual_local_governments 
+			focus = PRI_democratic_russification 
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Look Across the Amur
+	focus = {
+		id = PRI_look_across_the_amur
+		icon = GFX_LookToTheOtherSideOfAmur
+		x = 3
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_order_in_vladivostock }
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 3 category = land_doctrine  }
+		}
+	}
+
+	#Focus for Maintain Full Neutrality
+	focus = {
+		id = PRI_maintain_full_neutrality
+		icon = GFX_MaintainNeutrality
+		x = 0
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_look_across_the_amur }
+		mutually_exclusive = {
+			focus = PRI_restore_zheltorossiya
+		}
+		mutually_exclusive = {
+			focus = PRI_pacify_the_yellow_peril
+		}
+		mutually_exclusive = {
+			focus = PRI_for_a_fee_russian_republic
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = MNS
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+
+	#Focus for Pacify the Yellow Peril
+	focus = {
+		id = PRI_pacify_the_yellow_peril
+		icon = GFX_PacifyYellowPeril
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_look_across_the_amur }
+		mutually_exclusive = {
+			focus = PRI_restore_zheltorossiya
+		}
+		mutually_exclusive = {
+			focus = PRI_for_a_fee_russian_republic
+		}
+		mutually_exclusive = {
+			focus = PRI_maintain_full_neutrality
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MNS
+			}
+			#when theyre puppeted they get a cosmetic tag
+		}
+	}
+
+	#Focus for Restore Zheltorossiya
+	focus = {
+		id = PRI_restore_zheltorossiya
+		icon = GFX_RestoreZheltorossiya
+		x = 4
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_look_across_the_amur }
+		mutually_exclusive = {
+			focus = PRI_for_a_fee_russian_republic
+		}
+		mutually_exclusive = {
+			focus = PRI_pacify_the_yellow_peril
+		}
+		mutually_exclusive = {
+			focus = PRI_maintain_full_neutrality
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core MNS + HAR
+			add_state_core = 978
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 881
+			add_state_core = 810
+			add_state_core = 912
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+			if = {
+				limit = {
+					country_exists = ZHR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ZHR
+				}
+			}
+			unlock_decision_category_tooltip = PRI_become_zheltorossiya_category
+		}
+	}
+
+	#Focus for For a Free Russian Republic
+	focus = {
+		id = PRI_for_a_fee_russian_republic
+		icon = GFX_ForAFreeRussianRepublic
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PRI_look_across_the_amur }
+		mutually_exclusive = {
+			focus = PRI_restore_zheltorossiya
+		}
+		mutually_exclusive = {
+			focus = PRI_pacify_the_yellow_peril
+		}
+		mutually_exclusive = {
+			focus = PRI_maintain_full_neutrality
+		}
+		available = { 
+		
+		}
+		bypass = { }        
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			#core MNS + HAR
+			add_state_core = 978
+			add_state_core = 761
+			add_state_core = 714
+			add_state_core = 881
+			add_state_core = 810
+			add_state_core = 912
+			create_wargoal = {
+				type = annex_everything
+				target = MNS
+			}
+			if = {
+				limit = {
+					country_exists = ZHR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ZHR
+				}
+			}
+			unlock_decision_category_tooltip = PRI_become_zheltorossiya_category
+		}
+	}
+
+#End of focuses 
+ }

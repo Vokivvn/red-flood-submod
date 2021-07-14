@@ -1,0 +1,142 @@
+### LAND DOCTRINES
+###
+### How to use these scripted triggers:
+###
+### These are only necessary if your country has a choice of land doctrines in its focus tree - it will prevent the AI from researching
+### a doctrine if it doesn't get bonuses for that doctrine, or prevent it from taking focuses for a doctrine if it's already researched a different
+### one on its own. Note that it doesn't make a country more or less likely to research specific doctrines - that's all handled in the
+### ai_will_do's in the technology files
+###
+### 1) if your country has a choice between doctrines, put their tag in the "never_research_XXX" list for doctrines it shouldn't research at all
+### 2) for the doctrines your country can take, put it in the "dont_research_XXX_if_choicemade" lists - with whatever conditions/focuses
+###    that should prevent it from taking that (ie. when the focus for another doctrine has already been taken)
+### 3) add the "already_has_doctrine_XXX" into the ai_will_do for any focuses where the choice would be made, which prevents the focus
+###    from being taken by the AI if it's already researched it
+###
+### If you want the country to *never* research a doctrine until a focus has been taken, it needs to follow steps #1 and #2 above, and the
+### "dont_research_XXX_if_choicemade" lists should instead include the conditions that should stop it from researching (such as
+### "NOT = { has_completed_focus = RUS_reform_markov }" ...meaning once RUS_reform_markov has been taken, the doctrine can now be researched
+
+
+# these countries will never research the first level of Mobile Warfare
+# because they have focuses which require other doctrines
+# note that countries NOT on this list will only research MW if they
+# have a higher level of military factories
+never_research_mobile_warfare = {
+	OR = {
+
+	}
+}
+
+# these countries have choices in their focus trees between land doctrines
+# this list is for countries that have a choice of Mobile Warfare, but shouldn't
+# research it if they've already made their choice for another doctrine
+dont_research_mobile_warfare_if_choice_made = {
+	OR = {
+
+	}
+}
+
+# these countries will never research the first level of Superior Firepower
+# because they have focuses which require other doctrines
+never_research_superior_firepower = {
+	OR = {
+
+	}
+}
+
+# these countries have choices in their focus trees between land doctrines
+# this list is for countries that have a choice of Superior Firepower, but shouldn't
+# research it if they've already made their choice for another doctrine
+dont_research_superior_firepower_if_choice_made = {
+	OR = {
+	}
+}
+
+# these countries will never research the first level of Grand Battle Plan
+# because they have focuses which require other doctrines
+never_research_grand_battle_plan = {
+	OR = {
+
+	}
+}
+
+# these countries have choices in their focus trees between land doctrines
+# this list is for countries that have a choice of Grand Battle Plan, but shouldn't
+# research it if they've already made their choice for another doctrine
+dont_research_grand_battleplan_if_choice_made = {
+	OR = {
+
+	}
+}
+
+# these countries will never research the first level of Mass Assault
+# because they have focuses which require other doctrines
+# note that countries not on this list will only research MA if they
+# have a great deal of excess manpower (ie. China, India)
+never_research_mass_assault = {
+	OR = {
+
+	}
+}
+
+# these countries have choices in their focus trees between land doctrines
+# this list is for countries that have a choice of Mass Assault, but shouldn't
+# research it if they've already made their choice for another doctrine
+dont_research_mass_assault_if_choice_made = {
+	OR = {
+
+	}
+}
+
+# these are for putting into focus trees, to prevent a focus from being
+# taken if other land doctrines have already been started or researched
+already_has_other_doctrine_MW = {
+	OR = {
+
+	}
+}
+
+already_has_other_doctrine_SF = {
+	OR = {
+
+	}
+}
+
+already_has_other_doctrine_GBP = {
+	OR = {
+
+	}
+}
+
+already_has_other_doctrine_MA = {
+	OR = {
+
+	}
+}
+
+country_has_armor_focus = {
+	OR = {
+
+	}
+}
+
+ai_land_doctrine_tier_1_trigger = {
+	OR = {
+		has_tech = elastic_defence
+		has_tech = mobile_defence
+		has_tech = grand_assault
+		has_tech = defence_in_depth
+	}
+}
+
+ai_land_doctrine_tier_2_trigger = {
+	OR = {
+		has_tech = kampfgruppe
+		has_tech = mechanised_offensive
+		has_tech = branch_interoperation
+		has_tech = infiltration_assault
+		has_tech = vast_offensives
+		has_tech = large_front_offensive
+	}
+}

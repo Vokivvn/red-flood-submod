@@ -1,0 +1,14 @@
+focus_tree = {
+	id = italy_natrej_pt1
+	country = {
+		factor=0
+		modifier = {
+			add = 8
+			tag = ITA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2300 }
+default = no
+shared_focus = ITA_sigh_relief
+shared_focus = ITA_not_marches
+}

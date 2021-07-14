@@ -1,0 +1,282 @@
+capital = 111
+
+oob = "FIN_1936"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "FIN_1936_naval_mtg"
+	else = {
+		set_naval_oob = "FIN_1936_naval_legacy"
+	}
+}
+set_research_slots = 3 
+set_stability = 0.2
+set_war_support = 0.15
+
+set_convoys = 175
+
+add_ideas = {
+	RUS_warlord_indifference
+	FIN_senate_hog
+	FIN_senate_for
+	FIN_senate_eco
+	FIN_senate_int
+	FIN_senate_ntl
+}
+
+set_cosmetic_tag = FIN_RUS
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	CAS1 = 1
+	early_bomber = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_heavy_cruiser = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		coastal_defense_ships = 1
+	}
+}
+
+# Events
+country_event = { id = fin.1 days = 3 }
+
+# Politics
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+    vanguard_socialism = 8
+    libertarian_marxism = 13
+    revolutionary_anarchism = 01
+    revisionist_socialism = 01
+    social_democratism = 15
+    liberalism = 9
+    conservatism = 15
+    right_authoritarianism = 10
+    despotism = 07
+    reactionism = 15
+    accelerationism = 06
+} 
+
+create_country_leader = {
+	name = "Franz Albert Seyn"
+	desc = "POLITICS_ALBERT_SEYN_DESC"
+	picture = "Franz_Albert_Seyn.dds"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+		#popular_figurehead
+	}
+} 
+
+create_country_leader = {
+	name = "Urho Kekkonen"
+	desc = "POLITICS_KEKKONEN_DESC"
+	picture = "portrait_kekkonen.tga"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Sigurd Wettenhovi-Aspa"
+	desc = "POLITICS_ASPA_DESC"
+	picture = "portrait_aspa.tga"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Ragnar Furuhjelm"
+	desc = "POLITICS_FURUHJELM_DESC"
+	picture = "portrait_ragnar.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Juho Kusti Paasikivi"
+	desc = "POLITICS_PAASIKIVI_DESC"
+	picture = "portrait_paasikivi.tga"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_country_leader = {
+	name = "Väinö Tanner"
+	desc = "POLITICS_VALNO_TANNER_DESC"
+	picture = "portrait_vaino.tga"
+	expire = "1965.1.1"
+	ideology = liberal_socialism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Kyösti Kallio"
+	desc = "POLITICS_KALLIO_DESC"
+	picture = "portrait_kyosti.tga"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_corps_commander = {
+	name = "Einar Vihma"
+	picture = "portrait_vihma.tga"
+	traits = { defensive_doctrine ranger}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Aarne Edward Juutilainen"
+	picture = "portrait_edward_juutilainen.tga"
+	traits = { infantry_officer trickster brilliant_strategist trait_reckless}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+}
+create_corps_commander = {
+	name = "Antero Svensson"
+	picture = "portrait_antero.tga"
+	traits = { infantry_officer trickster old_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Karl Walden"
+	picture = "portrait_walden.tga"
+	traits = { infantry_officer old_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Aksel Airo"
+	picture = "portrait_aksel.tga"
+	traits = { adaptable commando trait_engineer war_hero old_guard media_personality }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Hannu Hannuksela"
+	picture = "portrait_hannu.tga"
+	traits = { trait_engineer brilliant_strategist infantry_officer ranger }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Karl Oesch"
+	picture = "portrait_oesch.tga"
+	traits = { politically_connected }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### VARIANTS ###
+# 1936 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Vetehinen Class"								
+		type = ship_hull_submarine_1
+		name_group = FIN_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	create_equipment_variant = {
+		name = "Vesikko Class"								
+		type = ship_hull_submarine_1
+		name_group = FIN_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Väinämöinen Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = FIN_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+   

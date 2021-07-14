@@ -1,0 +1,12 @@
+Russia_path_2 = {
+	enable = {
+        original_tag = RUS
+		has_game_rule = {
+			rule = RUS_ai_route
+			option = LIBERALIZATION
+		}
+	}
+	ai_national_focuses = {
+		RUS_liberalization_lead_prosperity
+	}
+}

@@ -1,0 +1,71 @@
+# Used to check if a nation...wait for it...uses generic concerns! Wow!
+uses_generic_concerns = {
+	NOT = {
+		original_tag = FRA
+		original_tag = RUS
+		original_tag = SRU
+		original_tag = ZHR
+		original_tag = JAP
+		original_tag = JPR
+		original_tag = ENG
+		original_tag = YUG
+		original_tag = TUA
+		original_tag = KAV
+		original_tag = POL
+		original_tag = BLR
+		original_tag = UKR
+		original_tag = LIT
+		original_tag = FIN
+		original_tag = PRS
+		original_tag = AUS
+		original_tag = FIU
+		original_tag = MNT
+		original_tag = ITA
+		original_tag = KOR
+	}
+}
+is_a_russian_unifier = {
+	OR = {
+		original_tag = RUS
+		original_tag = SRU
+		original_tag = ZHR
+		AND = {
+			original_tag = SIB
+			has_government = accelerationism
+		}
+		AND = {
+			original_tag = STE
+			OR = {
+				has_country_flag = STE_kornilovs_quest
+				has_country_flag = STE_gulidovs_quest
+			}
+		}
+		AND = {
+			original_tag = ORE
+			has_government = right_authoritarianism
+		}
+		AND = {
+			original_tag = DKB
+			has_government = accelerationism
+		}
+		AND = {
+			original_tag = BLR
+			OR = {
+				has_completed_focus = BLR_pale_horse
+				has_completed_focus = BLR_foreign_clique
+			}
+		}
+		AND = {
+			original_tag = DKB
+			has_government = accelerationism
+		}
+	}
+}
+has_reached_division_limit = {
+	OR = {
+		AND = {
+			original_tag = ITA
+			num_divisions > 44
+		}
+	}
+}

@@ -1,0 +1,65 @@
+division_template = {
+	name = "Infantry Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Cavarly Division"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Infantry Regiment"
+		location = 1591
+		division_template = "Infantry Division"
+		start_experience_factor = 0.1
+	}
+
+	division = {
+		name = "1st Cavarly Regiment"
+		location = 12601
+		division_template = "Cavarly Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Cavarly Regiment"
+		location = 7866
+		division_template = "Cavarly Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd Cavarly Regiment"
+		location = 12583
+		division_template = "Cavarly Division"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "4th Cavarly Regiment"
+		location = 1591
+		division_template = "Cavarly Division"
+		start_experience_factor = 0.1
+	}
+}

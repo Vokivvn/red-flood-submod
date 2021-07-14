@@ -1,0 +1,104 @@
+﻿capital = 329
+oob = "TAN_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+	TAN_religious_tensions
+	TAN_divided_tribes
+	TAN_guerilla_army
+	TAN_industrial_dinosaur
+}
+
+add_ideas = {
+	TAN_Roman_von_Ungern-Sternberg_hog
+	#TAN_Ferdynand_Antoni_Ossendowski_for
+	#TAN_Gombozozhavyn_Luvsantseveen_eco
+	#TAN_Nikolai_Kazagrandi_sec
+	#TAN_Boris_Rezukhin_int
+	
+	#TAN_Roman_von_Ungern-Sternberg_cof
+	TAN_Roman_von_Ungern-Sternberg_coa
+	#TAN_Roman_von_Ungern-Sternberg_con
+	#TAN_Roman_von_Ungern-Sternberg_coaf
+}
+
+add_manpower = 25000
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	support_weapons = 1
+	tech_support = 1
+	gw_artillery = 1	
+	early_fighter = 1
+	early_bomber = 1
+	transport = 1
+
+}
+
+set_politics = {
+	ruling_party = reactionism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 0
+	liberalism = 0
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 35
+	reactionism = 45
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Roman von Ungern-Sternberg"
+	desc = "POLITICS_Roman_von_Ungern-Sternberg_DESC"
+	picture = "Portrait_Roman_von_Ungern-Sternberg.dds"
+	expire = "1965.1.1"
+	ideology = religious_fundamentalism
+	traits = {
+		TAN_roman
+	}
+}
+
+create_field_marshal = {
+	name = "Roman von Ungern-Sternberg"
+	picture = "Roman_von_Ungern-Sternberg_general.dds"
+	traits = { offensive_doctrine trait_reckless war_hero trickster charismatic }
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	id = 300
+}
+create_corps_commander = {
+	name = "Boris Rezukhin"
+	picture = "boris.dds"
+	traits = { thorough_planner politically_connected }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+	id = 301
+}
+create_corps_commander = {
+	name = "Nikolai Kazagrandi"
+	picture = "nikolai.dds"
+	traits = { fortress_buster charismatic }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 302
+}

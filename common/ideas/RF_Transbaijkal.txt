@@ -1,0 +1,443 @@
+#######################
+# Transbaikal - Baba #
+#######################
+
+ideas = {
+	country = {
+		MO2_border_raids = {
+			picture = chi_army_corruption2
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = -0.15
+				consumer_goods_factor = -0.03
+			}
+		}
+		
+		MO2_wild_far_east = {
+			picture = generic_purge
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = -0.2
+				research_speed_factor = -0.25
+			}
+		}
+		
+		MO2_wild_far_east2 = {
+			picture = generic_purge
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = -0.1
+				research_speed_factor = -0.12
+			}
+		}
+		
+		MO2_wild_far_east3 = {
+			picture = generic_purge
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = -0.05
+			}
+		}
+		
+		MO2_white_expats = {
+			picture = HUN_secret_rearmament
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		MO2_district_militias = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				conscription_factor = 0.02
+				stability_factor = 0.12
+			}
+		}
+		MO2_siberian_army = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				army_org_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		MO2_education = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
+		MO2_ready_for_siberia = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		MO2_church = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = 0.2
+				political_power_factor = 0.2
+			}
+		}
+		MO2_cossack_nation_1 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.05
+			}
+		}
+		MO2_cossack_nation_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				enemy_justify_war_goal_time = 0.5
+			}
+		}
+		MO2_i_like_trains = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		MO2_minorities_good = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = 0.2
+				consumer_goods_factor = 0.1
+			}
+		}
+		MO2_minorities_bad = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		MO2_language = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = 0.05
+				stability_factor = -0.05
+			}
+		}
+		MO2_loyal_officers = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				max_command_power = 25
+				command_power_gain = 0.25
+			}
+		}
+		MO2_discipline = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				army_org_factor = 0.10
+			}
+		}
+		MO2_wages = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		MO2_poverty = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		MO2_protection = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				
+			}
+		}
+		MO2_violent_economy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		MO2_railway_assoc = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				mobilization_speed = 0.1
+				production_speed_infrastructure_factor = 0.25
+			}
+		}
+		MO2_FE_trade_comp = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.07
+				local_resources_factor = 0.2
+			}
+		}
+		MO2_charge = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				offence = 0.1
+			}
+		}
+		MO2_winter_soldiers = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				army_org_factor = 0.05
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				winter_attrition_factor = -0.25
+				supply_consumption_factor = -0.1
+			}
+		}
+		MO2_terror = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				root_out_resistance_effectiveness_factor = 0.2
+			}
+		}
+		MO2_agri = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MO2
+			}
+			modifier = {
+				monthly_population = 0.03
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+	}
+	#Gov't
+	######################
+	head_of_government = {
+		MO2_Semyonov_hog = {
+			allowed = {
+				original_tag = MO2
+			}
+			available = {
+				has_completed_focus = Transbaikal_siberiandespot
+			}
+			traits = { 
+				head_of_government
+				hog_local_tyrant
+			}
+		}
+		MO2_kosmyn_hog = {
+			picture = GFX_idea_kosmyn_hog
+			allowed = {
+				original_tag = MO2
+			}
+			available = {
+				has_government = despotism
+			}
+			traits = { 
+				head_of_government
+				hog_political_protege
+			}
+		}
+		MO2_Taskin_hog = {
+			allowed = {
+				original_tag = MO2
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = { 
+				head_of_government
+				hog_ambitious_union_boss
+			}
+		}
+		MO2_Sorokin_hog = {
+			allowed = {
+				original_tag = MO2
+			}
+			available = {
+				has_government = liberalism
+			}
+			traits = { 
+				head_of_government
+				hog_spiritual_leader
+			}
+		}
+	}
+	
+	foreign_minister = {
+		MO2_Vitalevich_for = {
+			picture = GFX_idea_verngo_for
+			allowed = {
+				original_tag = MO2
+			}
+			traits = { 
+				foreign_minister
+				for_biased_intellectual
+			}
+		}
+	}
+	economy_minister = {
+		MO2_Taskin_eco = {
+			
+			allowed = {
+				original_tag = MO2
+				has_government = despotism
+			}
+			traits = { 
+				economy_minister
+				eco_railway_magnate
+			}
+		}
+	}
+	security_minister = {
+		MO2_Verzhbitsky_sec = {
+			picture = GFX_idea_verzhbitsky_sec
+			allowed = {
+				original_tag = MO2
+			}
+			traits = { 
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+	head_of_intel = {
+		MO2_Nesmelov_int = {
+			picture = GFX_idea_nesmelov_int
+			allowed = {
+				original_tag = MO2
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	#Military
+#	chief_of_staff = {
+#		MO2_X_cos = {
+#			allowed = {
+#				original_tag = MO2
+#			}
+#			available = {
+#				
+#			}
+#			traits = { 
+#				army_chief_maneuver_2
+#			}
+#		}
+#	}
+#	chief_of_army = {
+#		MO2_cao = {
+#			allowed = {
+#				original_tag = MO2
+#			}
+#			traits = { 
+#				army_chief_offensive_2
+#			}
+#		}
+#	}
+#	chief_of_navy = {
+#		MO2_con = {
+#			allowed = {
+#				original_tag = MO2
+#			}
+#			traits = { 
+#				navy_chief_decisive_battle_2
+#			}
+#		}
+#	}
+#	chief_of_air_force = {
+#		MO2_caof = {
+#			allowed = {
+#				original_tag = MO2
+#			}
+#			traits = { 
+#				air_chief_ground_support_2
+#			}
+#		}
+#	}
+}

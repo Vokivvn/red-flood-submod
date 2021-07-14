@@ -1,0 +1,82 @@
+﻿#capital = 336
+capital = 831
+
+oob = "MAL_1936"
+
+set_research_slots = 2
+
+set_convoys = 175
+
+add_ideas = {
+	MAL_economic_downturn
+	MAL_communist_resurgence
+	MAL_centralisation_issues
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+#set_cosmetic_tag = MAL_UK
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 35
+	libertarian_marxism = 5
+	revolutionary_anarchism = 0
+	revisionist_socialism = 15
+	social_democratism = 0
+	liberalism = 10
+	conservatism = 5
+	right_authoritarianism = 25
+	despotism = 0
+	reactionism = 5
+	accelerationism = 0
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Shenton Thomas"
+	desc = "POLITICS_SHENTON_THOMAS_DESC"
+	picture = "Portrait_Malaysia_Shenton_Thomas.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+		#popular_figurehead
+	}
+} 
+
+create_field_marshal = {
+	name = "Launcelot Kiggell"
+	picture = "Portrait_MAL_Launcelot_Kiggell.dds"
+	traits = { old_guard inflexible_strategist}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Herbert Lawerence"
+	picture = "Portrait_MAL_Herbert_Lawerence.dds"
+	traits = { old_guard infantry_leader}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}

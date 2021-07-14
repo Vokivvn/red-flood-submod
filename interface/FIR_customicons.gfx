@@ -1,0 +1,421 @@
+spriteTypes = { 
+	##Icon For: Industrialize Abo-Gelsingfors Area
+	SpriteType = { 
+		name = "GFX_FIR_industrialize_abogelsingfors_area-30147"
+		texturefile = "gfx/interface/goals/GFX_FIR_industrialize_abogelsingfors_area-30147.dds"
+	}
+
+	##Icon Shine For: Industrialize Abo-Gelsingfors Area
+	SpriteType = { 
+		name = "GFX_FIR_industrialize_abogelsingfors_area-30147_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_industrialize_abogelsingfors_area-30147.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_industrialize_abogelsingfors_area-30147.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_industrialize_abogelsingfors_area-30147.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Infrastructure Projects in North Finland
+	SpriteType = { 
+		name = "GFX_FIR_infrastructure_projects_in_north_finland-30151"
+		texturefile = "gfx/interface/goals/GFX_FIR_infrastructure_projects_in_north_finland-30151.dds"
+	}
+
+	##Icon Shine For: Infrastructure Projects in North Finland
+	SpriteType = { 
+		name = "GFX_FIR_infrastructure_projects_in_north_finland-30151_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_infrastructure_projects_in_north_finland-30151.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_infrastructure_projects_in_north_finland-30151.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_infrastructure_projects_in_north_finland-30151.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Join Germany in the World Struggle
+	SpriteType = { 
+		name = "GFX_FIR_join_germany_in_the_world_struggle-30152"
+		texturefile = "gfx/interface/goals/GFX_FIR_join_germany_in_the_world_struggle-30152.dds"
+	}
+
+	##Icon Shine For: Join Germany in the World Struggle
+	SpriteType = { 
+		name = "GFX_FIR_join_germany_in_the_world_struggle-30152_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_join_germany_in_the_world_struggle-30152.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_join_germany_in_the_world_struggle-30152.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_join_germany_in_the_world_struggle-30152.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: From People to People
+	SpriteType = { 
+		name = "GFX_FIR_from_people_to_people-30145"
+		texturefile = "gfx/interface/goals/GFX_FIR_from_people_to_people-30145.dds"
+	}
+
+	##Icon Shine For: From People to People
+	SpriteType = { 
+		name = "GFX_FIR_from_people_to_people-30145_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_from_people_to_people-30145.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_from_people_to_people-30145.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_from_people_to_people-30145.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Forced Collectivization
+	SpriteType = { 
+		name = "GFX_FIR_forced_collectivization-30144"
+		texturefile = "gfx/interface/goals/GFX_FIR_forced_collectivization-30144.dds"
+	}
+
+	##Icon Shine For: Forced Collectivization
+	SpriteType = { 
+		name = "GFX_FIR_forced_collectivization-30144_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_forced_collectivization-30144.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_forced_collectivization-30144.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_forced_collectivization-30144.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: People's Councils
+	SpriteType = { 
+		name = "GFX_FIR_peoples_councils-30143"
+		texturefile = "gfx/interface/goals/GFX_FIR_peoples_councils-30143.dds"
+	}
+
+	##Icon Shine For: People's Councils
+	SpriteType = { 
+		name = "GFX_FIR_peoples_councils-30143_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_peoples_councils-30143.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_peoples_councils-30143.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_peoples_councils-30143.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Dictatorship of the Proletariat
+	SpriteType = { 
+		name = "GFX_FIR_dictatorship_of_the_proletariat-30129"
+		texturefile = "gfx/interface/goals/GFX_FIR_dictatorship_of_the_proletariat-30129.dds"
+	}
+
+	##Icon Shine For: Dictatorship of the Proletariat
+	SpriteType = { 
+		name = "GFX_FIR_dictatorship_of_the_proletariat-30129_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_dictatorship_of_the_proletariat-30129.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_dictatorship_of_the_proletariat-30129.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_dictatorship_of_the_proletariat-30129.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Radicals in Power
+	SpriteType = { 
+		name = "GFX_FIR_radicals_in_power-30106"
+		texturefile = "gfx/interface/goals/GFX_FIR_radicals_in_power-30106.dds"
+	}
+
+	##Icon Shine For: Radicals in Power
+	SpriteType = { 
+		name = "GFX_FIR_radicals_in_power-30106_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_radicals_in_power-30106.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_radicals_in_power-30106.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_radicals_in_power-30106.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Rise of Red Finland
+	SpriteType = { 
+		name = "GFX_FIR_rise_of_red_finland-30094"
+		texturefile = "gfx/interface/goals/GFX_FIR_rise_of_red_finland-30094.dds"
+	}
+
+	##Icon Shine For: Rise of Red Finland
+	SpriteType = { 
+		name = "GFX_FIR_rise_of_red_finland-30094_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_rise_of_red_finland-30094.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_rise_of_red_finland-30094.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_rise_of_red_finland-30094.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Moderates in Power
+	SpriteType = { 
+		name = "GFX_FIR_moderates_in_power-30107"
+		texturefile = "gfx/interface/goals/GFX_FIR_moderates_in_power-30107.dds"
+	}
+
+	##Icon Shine For: Moderates in Power
+	SpriteType = { 
+		name = "GFX_FIR_moderates_in_power-30107_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_moderates_in_power-30107.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_moderates_in_power-30107.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_moderates_in_power-30107.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Purge the Enemies
+	SpriteType = { 
+		name = "GFX_FIR_purge_the_enemies-30132"
+		texturefile = "gfx/interface/goals/GFX_FIR_purge_the_enemies-30132.dds"
+	}
+
+	##Icon Shine For: Purge the Enemies
+	SpriteType = { 
+		name = "GFX_FIR_purge_the_enemies-30132_shine"
+		texturefile = "gfx/interface/goals/GFX_FIR_purge_the_enemies-30132.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_purge_the_enemies-30132.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_FIR_purge_the_enemies-30132.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+ 
+ }

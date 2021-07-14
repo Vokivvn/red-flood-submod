@@ -1,0 +1,243 @@
+scripted_gui = {
+
+	Pax_Super_Event_Window = {
+		context_type = player_context
+		window_name = "Super_Event_Window"
+
+		visible = {
+			has_global_flag = Super_Event_Visible
+		}
+
+		triggers = {
+			Super_Event_Image_japanese_invasion_of_china_visible = {
+				has_global_flag = JAP_japanese_invasion_of_china_Super_Event_Visible
+			}
+			Super_Event_Image_brazil_collapse_visible = {
+				has_global_flag = BRA_brazil_collapse_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_rosenbaum_visible = {
+				has_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_chapayev_visible = {
+				has_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_trotsky_visible = {
+				has_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_gastev_visible = {
+				has_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_kerensky_visible = {
+				has_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_blackbloc_visible = {
+				has_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_novykurs_visible = {
+				has_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_mladorossi_visible = {
+				has_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_diterikhs_visible = {
+				has_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+			}
+			Super_Event_Image_CONGO_PCN_visible = {
+				has_global_flag = CONGO_PCN_Super_Event_Visible
+			}
+			Super_Event_Image_CONGO_PCN_Brody_visible = {
+				has_global_flag = CONGO_PCN_Brody_Super_Event_Visible
+			}
+			Super_Event_Image_CONGO_NBE_visible = {
+				has_global_flag = CONGO_NBE_Super_Event_Visible
+			}
+			Super_Event_Image_CONGO_KIV_visible = {
+				has_global_flag = CONGO_KIV_Super_Event_Visible
+			}
+			Super_Event_Image_CONGO_CFS_visible = {
+				has_global_flag = CONGO_CFS_Super_Event_Visible
+			}
+			Super_Event_Image_etat_irreal_visible = {
+				has_global_flag = etat_irreal_Super_Event_Visible
+			}
+			Super_Event_Image_UPI_Churchill_visible = {
+				has_global_flag = UPI_Churchill_Super_Event_Visible
+			}
+			Super_Event_Image_UPI_Kali_visible = {
+				has_global_flag = UPI_Kali_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_savinkov_visible = {
+				has_global_flag = RUS_uni_savinkov_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_ruthenia_visible = {
+				has_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+			}
+			Super_Event_Image_dor_visible = {
+				has_global_flag = DOR_Super_Event_Visible
+			}
+			Super_Event_Image_USA_collapse_visible = {
+				has_global_flag = USA_collapse_Super_Event_Visible
+			}
+			Super_Event_Image_DEV_civil_war_visible = {
+				has_global_flag = DEV_civil_war_Super_Event_Visible
+			}
+			Super_Event_Image_SPA_civil_war_visible = {
+				has_global_flag = SPA_civil_war_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_blackhundreds_visible = {
+				has_global_flag = RUS_uni_blackhundreds_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_solidarists_visible = {
+				has_global_flag = RUS_uni_solidarists_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_scythia_visible = {
+				has_global_flag = RUS_uni_scythia_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_eurasia_visible = {
+				has_global_flag = RUS_uni_eurasia_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_kornilov_visible = {
+				has_global_flag = RUS_uni_kornilov_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_gulidov_visible = {
+				has_global_flag = RUS_uni_gulidov_Super_Event_Visible
+			}
+			Super_Event_Image_ww2_visible = {
+				has_global_flag = ww2_Super_Event_Visible
+			}
+			Super_Event_Image_ITA_victory_visible = {
+				has_global_flag = ITA_victory_Super_Event_Visible
+			}
+			Super_Event_Image_ITA_balbo_visible = {
+				has_global_flag = ITA_balbo_Super_Event_Visible
+			}
+			Super_Event_Image_ITA_nitti_visible = {
+				has_global_flag = ITA_nitti_Super_Event_Visible
+			}
+			Super_Event_Image_usauni_bodin_visible = {
+				has_global_flag = usauni_bodin_Super_Event_Visible
+			}
+			Super_Event_Image_usauni_sinclair_visible = {
+				has_global_flag = usauni_sinclair_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_libs_visible = {
+				has_global_flag = RUS_uni_Libs_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_oln_visible = {
+				has_global_flag = RUS_uni_Oln_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_tri_visible = {
+				has_global_flag = RUS_uni_Tri_Super_Event_Visible
+			}
+			Super_Event_Image_rusuni_kamenev_visible = {
+				has_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+			}
+			Super_Event_Image_YUG_hyperborea_visible = {
+				has_global_flag = YUG_hyperborea_Super_Event_Visible
+			}
+		}
+
+		properties = {
+			Super_Event_Image_Default = {
+				image = "[get_my_superevent_texture]"
+			}
+		}
+
+		effects = {
+			Super_Event_Close_click = {
+				clr_global_flag = Super_Event_Visible
+
+				if = {
+					limit = {
+						OR = {
+							has_global_flag = JAP_japanese_invasion_of_china_Super_Event_Visible
+							has_global_flag = BRA_brazil_collapse_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+							has_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+							has_global_flag = CONGO_PCN_Brody_Super_Event_Visible
+							has_global_flag = CONGO_PCN_Super_Event_Visible
+							has_global_flag = CONGO_KIV_Super_Event_Visible
+							has_global_flag = CONGO_CFS_Super_Event_Visible
+							has_global_flag = CONGO_NBE_Super_Event_Visible
+							has_global_flag = etat_irreal_Super_Event_Visible
+							has_global_flag = UPI_Churchill_Super_Event_Visible
+							has_global_flag = UPI_Kali_Super_Event_Visible
+							has_global_flag = RUS_uni_savinkov_Super_Event_Visible
+							has_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+							has_global_flag = DOR_Super_Event_Visible
+							has_global_flag = USA_collapse_Super_Event_Visible
+							has_global_flag = DEV_civil_war_Super_Event_Visible
+							has_global_flag = SPA_civil_war_Super_Event_Visible
+							has_global_flag = RUS_uni_blackhundreds_Super_Event_Visible
+							has_global_flag = RUS_uni_solidarists_Super_Event_Visible
+							has_global_flag = RUS_uni_scythia_Super_Event_Visible
+							has_global_flag = RUS_uni_eurasia_Super_Event_Visible
+							has_global_flag = RUS_uni_kornilov_Super_Event_Visible
+							has_global_flag = RUS_uni_gulidov_Super_Event_Visible
+							has_global_flag = ww2_Super_Event_Visible
+							has_global_flag = ITA_victory_Super_Event_Visible
+							has_global_flag = ITA_balbo_Super_Event_Visible
+							has_global_flag = ITA_nitti_Super_Event_Visible
+							has_global_flag = usauni_bodin_Super_Event_Visible
+							has_global_flag = usauni_sinclair_Super_Event_Visible
+							has_global_flag = RUS_uni_Libs_Super_Event_Visible
+							has_global_flag = RUS_uni_Oln_Super_Event_Visible
+							has_global_flag = RUS_uni_Tri_Super_Event_Visible
+							has_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+							has_global_flag = YUG_hyperborea_Super_Event_Visible
+						}
+					}
+					clr_global_flag = JAP_japanese_invasion_of_china_Super_Event_Visible
+					clr_global_flag = BRA_brazil_collapse_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+					clr_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+					clr_global_flag = CONGO_PCN_Brody_Super_Event_Visible
+					clr_global_flag = CONGO_PCN_Super_Event_Visible
+					clr_global_flag = CONGO_KIV_Super_Event_Visible
+					clr_global_flag = CONGO_CFS_Super_Event_Visible
+					clr_global_flag = CONGO_NBE_Super_Event_Visible
+					clr_global_flag = etat_irreal_Super_Event_Visible
+					clr_global_flag = UPI_Churchill_Super_Event_Visible
+					clr_global_flag = UPI_Kali_Super_Event_Visible
+					clr_global_flag = RUS_uni_savinkov_Super_Event_Visible
+					clr_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+					clr_global_flag = DOR_Super_Event_Visible
+					clr_global_flag = USA_collapse_Super_Event_Visible
+					clr_global_flag = DEV_civil_war_Super_Event_Visible
+					clr_global_flag = SPA_civil_war_Super_Event_Visible
+					clr_global_flag = RUS_uni_blackhundreds_Super_Event_Visible
+					clr_global_flag = RUS_uni_solidarists_Super_Event_Visible
+					clr_global_flag = RUS_uni_scythia_Super_Event_Visible
+					clr_global_flag = RUS_uni_eurasia_Super_Event_Visible
+					clr_global_flag = RUS_uni_kornilov_Super_Event_Visible
+					clr_global_flag = RUS_uni_gulidov_Super_Event_Visible
+					clr_global_flag = ww2_Super_Event_Visible
+					clr_global_flag = ITA_victory_Super_Event_Visible
+					clr_global_flag = ITA_balbo_Super_Event_Visible
+					clr_global_flag = ITA_nitti_Super_Event_Visible
+					clr_global_flag = usauni_bodin_Super_Event_Visible
+					clr_global_flag = usauni_sinclair_Super_Event_Visible
+					clr_global_flag = RUS_uni_Libs_Super_Event_Visible
+					clr_global_flag = RUS_uni_Oln_Super_Event_Visible
+					clr_global_flag = RUS_uni_Tri_Super_Event_Visible
+					clr_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+					clr_global_flag = YUG_hyperborea_Super_Event_Visible
+				}
+			}
+		}
+	}
+}

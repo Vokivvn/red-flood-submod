@@ -1,0 +1,225 @@
+﻿l_english:
+#COUNTRY NAME#
+SWE_swenor_vanguard_socialism:0 "Peoples Republic of Sweden-Norway"
+SWE_swenor_vanguard_socialism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_vanguard_socialism_DEF:0 "Sweden-Norway"
+SWE_swenor_revolutionary_anarchism:0 "Free Territory of Sweden-Norway"
+SWE_swenor_revolutionary_anarchism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_revolutionary_anarchism_DEF:0 "Sweden-Norway"
+SWE_swenor_libertarian_marxism:0 "Peoples Republic of Sweden-Norway"
+SWE_swenor_libertarian_marxism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_libertarian_marxism_DEF:0 "Sweden-Norway"
+SWE_swenor_revisionist_socialism:0 "Peoples Republic of Sweden-Norway"
+SWE_swenor_revisionist_socialism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_revisionist_socialism_DEF:0 "Sweden-Norway"
+SWE_swenor_social_democratism:0 "Sweden-Norway"
+SWE_swenor_social_democratism_DEF:0 "The Union of Sweden and Norway"
+SWE_swenor_social_democratism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_liberalism:0 "Sweden-Norway"
+SWE_swenor_liberalism_DEF:0 "Kingdom of Sweden and Norway"
+SWE_swenor_liberalism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_conservatism:0 "Sweden-Norway"
+SWE_swenor_conservatism_DEF:0 "Kingdom of Sweden and Norway"
+SWE_swenor_conservatism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_right_authoritarianism:0 "Sweden-Norway"
+SWE_swenor_right_authoritarianism_DEF:0 "Kingdom of Sweden and Norway"
+SWE_swenor_right_authoritarianism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_reactionism:0 "Greater Sweden"
+SWE_swenor_reactionism_DEF:0 "Kingdom of Sweden-Norway"
+SWE_swenor_reactionism_ADJ:0 "Swedish-Norwegian"
+SWE_swenor_accelerationism:0 "Scandinavian Technate"
+SWE_swenor_accelerationism_DEF:0 "Scandinavia"
+SWE_swenor_accelerationism_ADJ:0 "Swedish-Norwegian"
+
+#PARTIES#
+#LEADER DESCRITIONS AND BOOKMARK#
+POLITICS_PER_ALBIN_HANSSON_DESC:0 "Per Albin Hansson got elected as Prime Minister in the year 1932 when his party 'Social Democrats' won the Election. Ever since then, he has lead the country to greatness and helping Norway in their civil war and taking them in under the protection of a union with Sweden."
+POLITICS_NILS_FLYG_DESC:0 "Lorem ipsum"
+SWEDEN_NORWAY_DESC:0 "During the Velikaya Voyna, Sweden has become a strong neutral country by refusing to participate in the war. Sweden refused to help Germany take over Finland, and signed the neutrality pact instead alongside with Norway and Denmark. Germany did not take to this kindly, and in a last ditch effort attacked Denmark. Sweden quickly responded by sending troops to Copenhagen and helping them fight against the Germans. However, the Danish government fell quickly, forcing Sweden to install a Swedish government in Denmark to ensure stablity and to repel the socialists. After Denmark managed to form a stable government, Sweden guaranteed their indepedence. Sweden helped Norway fight off the socialist uprising, and in the end got into a union with Norway."
+#IDEAS#
+SWE_no_socialists_in_our_country:0 "The Socialist purge!"
+SWE_no_socialists_in_our_country_desc:0 "The election did not go well for the Left Party!\nThe winning party has started a strong political campaign against the Socialists!"
+SWE_socialists_in_our_country:0 "The Left Party has won!"
+SWE_socialists_in_our_country_desc:0 "For the first time ever, the Left Party has won the elections! It is time to bring order to Sweden!"
+SWE_rationing_goods:0 "Rationing is the way!"
+SWE_rationing_goods_desc:0 "By rationing our resoruces, we can teach our people to be not use too much of our dear resources!"
+SWE_london_market_crash:0 "London Market Crash"
+SWE_london_market_crash_desc:0 "In 1934, the London Stock Market crashed. This brought huge concern to our Union and almost destroyed our economy!"
+SWE_london_market_crash2:0 "Recovering from the crash"
+SWE_london_market_crash2_desc:0 "The Union has started putting in some work into the economics!"
+SWE_london_market_crash_recovered:0 "Recovered from the crash"
+SWE_london_market_crash_recovered_desc:0 "The Union has recovered from the London Market crash!"
+SWE_entrepeneur:0 "Investing in the People"
+SWE_entrepeneur_desc:0 "The Union is investing in the academics minds!"
+SWE_better_labour:0 "Workers Condition"
+SWE_better_labour_desc:0 "The Union is investing a lot in the labour workers!"
+#CUSTOM FLAGS#
+SWE_elections_flag:0 "Swedish elections has started!"
+SWE_socialdemocrats_rule_flag:0 "The Social Democrat party has won the election."
+SWE_socialists_rule_flag:0 "The Left Wing party has won the election."
+SWE_conservatives_rule_flag:0 "The Social Conservative party has won the election."
+#CUSTOM TOOLTIPS#
+SWE_forest_tt:0 "§!Forest Training §Wwill enhance our ability to fight in all kinds of forested areas.\n"
+
+#CUSTOM TECH#
+SWE_forest_warfare_effect:0 "Enables §HForest Training§!\n§HAll legged units\n    Forest§!\n      Attack: §G+10%§!\n      Defence: §G+5%§!\n      Movement: §G+5%§!\n\n"
+
+#DECISIONS (1.5 Update)#
+#EVENTS#
+sweden.1.t:0 "Elections in Sweden!" 
+sweden.1.d:0 "The general election in Sweden has begun! Will the people get their will through and choose the Social Democrats again and peacefully get through the post-war period, or will the Left Party somehow win and complete their thoughts on a united Scandinavia through an iron hand?"
+sweden.1.a:0 "We hope for the best."
+
+#FOCUSES#
+##ARMY##
+SWE_forsvarsbeslutet:0 "Försvarsbeslutet"
+SWE_forsvarsbeslutet_desc:0 "A defense decision is usually made by the Swedish Parliament, every four years, about how the structure and development of the Armed Forces will look in the coming years."
+SWE_forsvarsstaben:0 "Försvarsstaben"
+SWE_forsvarsstaben_desc:0 "A modern Defense Force is needed, and will be tasked with designing the use of the state's defense agents and performing counter-intelligence acts to all enemies of Sweden."
+SWE_ledningsregementet:0 "Ledningsregementet"
+SWE_ledningsregementet_desc:0 "Because of our advances in Radio technology, we can now put it to good use!"
+SWE_mandatoryconscription:0 "Mandatory Conscription"
+SWE_mandatoryconscription_desc:0 "Ever since Norway decided to form an union with Sweden, there has been talks about gathering all the Norweigan men and incorporate them into the Swedish army. The Parliament has now issued a bill where all fit-for-service men in Ostlandet are conscripted into the Swedish Armed Forces."
+SWE_mountaintrainingsf:0 "Mountain Training"
+SWE_mountaintrainingsf_desc:0 "The union of Sweden-Norway will benefit from having Special Forces training in Norway's mountains."
+SWE_foresttrainingsf:0 "Forest Training"
+SWE_foresttrainingsf_desc:0 "The union of Sweden-Norway will benefit from having Special Forces training in Sweden's forests."
+SWE_rations:0 "Rationing"
+SWE_rations_desc:0 "By teaching our people on how to better use our resoruces, they will not waste any!"
+SWE_lottorna:0 "Lottakåren"
+SWE_lottorna_desc:0 "Lottakåren is an auxiliary defence organization, that consist of approximately 100,000 women of all ages throughout the Union! Lottakåren's purpose is to recruit and educate women for tasks in the Swedish total defense, and to conduct comprehensive defense training."
+SWE_unionwidearmy:0 "Unionwide Army Effort"
+SWE_unionwidearmy_desc:0 "By using the government's power, we can directly construct more military factories that will prepare us for any attack by the red! We will not let awful wars like the Norweigan civil war happen again!"
+SWE_army:0 "Alla för Unionen!"
+SWE_army_desc:0 "The SNAF needs to be quick, precise and effective in our own land!\nWe need to be able to defend ourselves against any future attacks!"
+SWE_improved_guns:0 "Improved Guns"
+SWE_improved_guns_desc:0 "These old guns will not do the job any more! We need to produce more modern guns!"
+SWE_support1:0 "Support Our Troops!"
+SWE_support1_desc:0 "We need to modernise our support companies!"
+SWE_motorized_cavalry:0 "Modern Cavalry"
+SWE_motorized_cavalry_desc:0 "Focusing on switching out the horses for fast and reliable trucks will benefit us greatly!"
+SWE_tanks:0 "Big Tanks"
+SWE_tanks_desc:0 "Focusing on creating great tanks will benefit our troops!"
+SWE_field_hospitals:0 "Field Hospitals"
+SWE_field_hospitals_desc:0 "Having hospitals at the frontlines is a neccessity!"
+
+
+
+
+
+
+### INDUSTRIAL/INRASTRUCTURE ###
+SWE_industrialeffort:0 "Industrial Effort"
+SWE_industrialeffort_desc:0 "It is time to industrilize the northern part of Sweden, starting with building more civilian factories!"
+SWE_steelmines:0 "Steel Mines"
+SWE_steelmines_desc:0 "We should try to make the Kiruna mine more effective!"
+SWE_tungstenmines:0 "Tungsten Mines"
+SWE_tungstenmines_desc:0 "DESC HERE"
+SWE_northernrailways:0 "Northern Railways"
+SWE_northernrailways_desc:0 "The war against the Norweigan socialists has left a awful taste in our mouths after they completely shut us out from the mountains because of the bad infrastructure in Norway. \nWe shall not allow this to happen in the Union ever again!"
+SWE_southernrailways:0 "Southern Railways"
+SWE_southernrailways_desc:0 "Building out the infrastructure in the southern part of Sweden-Norway should give us an advantage incase somebody tries to invade Denmark again!"
+SWE_industrialresearch1:0 "Industrial Research"
+SWE_industrialresearch1_desc:0 "Our brilliant minds have an idea about effectivly increasing our production!"
+SWE_rebuildoil:0 "Rebuild Oil Factory in Ostlandet"
+SWE_rebuildoil_desc:0 "The oil factory in Ostlandet got overrun by the Socialist, and got burned down to the ground!\nRebuilding the oil factory will give the Union oil again!"
+SWE_rebuildfactories:0 "Rebuild Civilian Factories in Ostlandet"
+SWE_rebuildfactories_desc:0 "Rebuilding the factories in Ostlandet is nothing but good for the Union!"
+SWE_navyports:0 "Expand the Malmö ports"
+SWE_fund_arms_factories:0 "Fund Bofors"
+SWE_navyports2:0 "Expand the Stockholm ports"
+SWE_fund_arms_factories2:0 "Fund SAAB"
+SWE_connectnorwaytosweden:0 "Railway from Oslo to Stockholm"
+
+
+
+##POLITICAL##
+SWE_election1936:0 "Elections 1936"
+SWE_election1936_desc:0 "It is time for general elections."
+SWE_sidewiththesocialdemocrats:0 "Social Democrats"
+SWE_sidewiththesocialdemocrats_desc:0 "The Social Democrats has won the elections, with ideas to reunite Scandinavia under peaceful terms and to make sure no attack like the one on Denmark will happen to any of us again!"
+SWE_sidewiththesocialconservatives:0 "Social Conservatives"
+SWE_sidewiththesocialconservatives_desc:0 "The Social Conservatives has once again won the election!\nIt is time to reorganize and reunite Scandinavia by purging all socialists from our land!"
+SWE_sidewiththesocialists:0 "Socialists"
+SWE_sidewiththesocialists_desc:0 "DESC HERE"
+
+SWE_giveequipmenttodenmark:0 "Send Equipment to Denmark"
+SWE_giveequipmenttodenmark_desc:0 "Denmark hasn't fully recovered from the distasteful invasion of Germany during the war.\nWe need to send them some infantry equipment and help them train their troops"
+SWE_ensurethepublic:0 "Ensure the Union"
+SWE_ensurethepublic_desc:0 "The Union of Sweden-Norway will not tolerate the foolish attempts of the violent Socialists!\nWe should tell the people of the world, that Social Democracy is the peaceful way to practicing Socialism and Liberalism!"
+SWE_formtheunion1:0 "Invite Denmark"
+SWE_formtheunion1_desc:0 "We should invite Denmark to work with our military and vice versa!\nThe Union helped them once before, we can help them in the future too!"
+SWE_formtheunion2:0 "Give ultimatum to Socialist Norway"
+SWE_formtheunion2_desc:0 "We should retake our rightful land from the violent Socialists in the north!\nIt is time to retake what is rightfully ours!"
+###SOCIAL DEMOCRAT###
+SWE_givehelptodenmark:0 "Help Denmark to rebuild"
+SWE_givehelptodenmark_desc:0 "DESC HERE"
+###SOCIAL CONSERVATIVE###
+SWE_constitutional_monarchy:0 "Constitutional Monarchy"
+SWE_constitutional_monarchy_desc:0 "We love our king, but it is time to limit his power and give it to the Riksdag!"
+SWE_capitalist_market_economy:0 "Capitalistic Market Economy"
+SWE_capitalist_market_economy_desc:0 "The Moderate Party has a vision of a working union where the jobs are created by the people, companies are run by the people and the state has nothing to do with it."'
+SWE_state_funded_construction:0 "State Funded Companies"
+SWE_state_funded_construction_desc:0 "With the capitalistic market economy, the state wants to fund new companies to help them out."
+SWE_unity_through_scandinavia:0 "Unity through an united Scandinavia"
+SWE_unity_through_scandinavia_desc:0 "The Scandinavians are people sharing the same culture and same languages.\nWe have to help each other, and not allow anybody to mess with us!"
+SWE_ban_socialism:0 "No Socialism in the Union!"
+SWE_ban_socialism_desc:0 "The Socialist are violent and refuse to listen to reason!\nWe do not need this kind ignorence in our union!"
+SWE_reach_out_to_finland:0 "Reach out to Finland"
+SWE_reach_out_to_finland_desc:0 "The Finns are one of us. We have to support them in all ways possible."
+SWE_nordic_conference:0 "Nordic Conference"
+SWE_nordic_conference_desc:0 "The Union wants to gather all of the Nordic countries and talk about the worrying situation in the Nordics."
+SWE_rebuild_norway:0 "Rebuild Norway"
+SWE_threat_assessment:0 "Threat Assessment"
+SWE_threat_assessment_desc:0 "We have to prepare us ourselves. The Socialists to our north will attack again, it is only a matter of time!"
+SWE_en_svensk_tiger:0 "En Svensk Tiger"
+SWE_en_svensk_tiger_desc:0 "..."
+SWE_a_defensive_line:0 "A Defensive Line"
+SWE_a_defensive_line_desc:0 "We should fortify Ostlandet in case of another war with the Socialists in the north!"
+SWE_scandinavia:0 "Form Scandinavia"
+SWE_scandinavia_desc:0 "The people of the Nordics have spoken!\nIt is time to form Scandinavia once again."
+
+####RESEARCH####
+SWE_researchwiththedanish:0 "Research Agreement with Denmark"
+SWE_researchwiththedanish_desc:0 "Creating a Scandinavian research group would only benefit the Union. We should start off by getting Denmark to share their research with us."
+SWE_studentsindenmark:0 "Students in Denmark"
+SWE_studentsindenmark_desc:0 "By getting an exchange program with the universities in Denmark, we can share our research even better, and educate the Union's students better!"
+
+##ECONOMY##
+SWE_free_economy:0 "A Great Economy"
+SWE_free_economy_desc:0 "The crash of London Market was deadly and unneccessary! We can not depend on such things ever again!\nThe Union needs a good working economy where all citizens are allowed to take part in!"
+SWE_free_based_economy:0 "Free Trade"
+SWE_free_based_economy_desc:0 "We should focus on having an open market where everybody is allowed to trade in!"
+SWE_public_works:0 "Fund Public Work"
+SWE_public_works_desc:0 "By funding the people's projects, the Union can grow faster!"
+SWE_entrepeneurship:0 "Investing in the People"
+SWE_entrepeneurship_desc:0 "Investing in the young and the brave, they shall not be limited by their own money! The Union will help them!"
+SWE_work_school:0 "Labour Reform"
+SWE_work_school_desc:0 "The Union needs more labour workers! By making sure they get paid more and have better conditions, we will get an expanding workforce!"
+SWE_economy_army1:0 "Invest in Military factories"
+SWE_economy_civilian1:0 "Invest in Civilian factories"
+SWE_free_economy_2:0 "Recover from the Crash!"
+SWE_free_economy_2_desc:0 "By finalizing the work we've put into the economics of the Union, we can finally recover from the London Market crash!"
+
+
+
+
+
+
+#EVENTS#
+sweden.1.t:0 "Elections in Sweden!"
+sweden.1.d:0 "The general election in Sweden has begun! Will the people get their will through and choose the Social Democrats again and peacefully get through the post-war period, or will the Left Party somehow win and complete their thoughts on a united Scandinavia through an iron hand?"
+sweden.1.a:0 "We hope for the best."
+sweden.2.t:0 "Election result"
+sweden.2.d:0 "After countless of hours counting the votes, the results are finally in!"
+sweden.2.a:0 "The Social Democrats wins!"
+sweden.2.b:0 "The Left Party wins!"
+sweden.2.c:0 "The Social Conservatives wins!"
+
+sweden.3.t:0 "Where are the poltical focuses?!"
+sweden.3.d:0 "Do not worry! The political focuses are there, however they are currently invisible for you.\n\nWe are testing a new feature that was implmented in patch 1.5.0, where we are able to load parts of the focus tree when we need them. This will make the focus tree be less cluttered and only show the information that is needed."
+sweden.3.a:0 "Cool!"
+
+sweden.4.t:0 "The Prime Minister speaks!"
+sweden.4.d:0 "We are disgusted by the awfulness of the violent socialists!\nWe stand by our peaceful politics, and therefore we are not allowing the spread of violent socialism! Social democracy is the only way to practice a better variant of both liberalism and socialism!\nScandinavia needs to work together, to reclaim our rightful land and drive the troublemakers out of it! We should all work together against this evil!"
+sweden.4.a:0 "Out with the Socialists!"

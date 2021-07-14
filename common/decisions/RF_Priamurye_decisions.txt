@@ -1,0 +1,104 @@
+PRI_become_zheltorossiya_category = {
+	PRI_become_zheltorossiya = {
+		icon = generic_form_nation
+		cost = 50
+		available = {
+			NOT = { country_exists = MNS }
+			NOT = { country_exists = HAR }
+		}
+		complete_effect  = {
+			set_cosmetic_tag = PRI_ZHR
+			if = {
+				limit = {
+					has_completed_focus = PRI_for_a_fee_russian_republic
+				}
+				unlock_decision_category_tooltip = HAR_general_foreign_policy
+			}
+		}
+		visible = {
+
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+PRI_question_of_transbaikal_category = {
+	PRI_western_values = {
+		cost = 50
+		available = {
+			has_war = no
+			NOT = { country_exists = GUK }
+			SIB = {
+				OR = {
+					has_government = social_democratism
+					has_government = liberalism
+					has_government = conservatism
+				}
+				has_decision = SIB_ratify_treaty
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					SIB = {
+						has_idea = SIB_member_of_the_eu_2
+					}
+				}
+				add_ideas = SIB_member_of_the_eu_2
+			}
+			else = {
+				add_ideas = SIB_member_of_the_eu_1
+			}
+			add_to_faction = EUROPEAN_UNION
+		}
+		visible = {
+
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PRI_form_far_east_republic = {
+		icon = generic_form_nation
+		cost = 50
+		available = {
+			has_war = no
+			NOT = { country_exists = GUK }
+			MO2 = {
+				OR = {
+					exists = no
+					has_government = despotism
+				}
+			}
+		}
+		complete_effect  = {
+			set_cosmetic_tag = PRI_republic_far_east
+			#MO2
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 964
+			if = {
+				limit = {
+					country_exists = MO2
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = MO2
+				}
+			}
+		}
+		visible = {
+
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,960 @@
+##################
+#####-HARBIN-#####
+####-REWORKED-####
+##################
+focus_tree = {
+	id = HAR
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = HAR
+		}
+	}
+	
+	continuous_focus_position = { x = 2000 y = 0 }
+	
+	#Focus for Democracy From Disaster
+	focus = {
+		id = HAR_democracy_from_disaster
+		icon = GFX_DemocracyFromDisaster
+		x = 3
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = right_authoritarianism
+			date > 1938.01.01
+		}
+		completion_reward = {
+			set_popularities = {
+				liberalism = 40
+				social_democratism = 30
+				reactionism = 20
+				accelerationism = 10
+			}
+			set_country_flag = HAR_hide_ministers
+			hidden_effect = {
+				add_ideas = {
+					ZHR_Emergency_Directorate_head
+					ZHR_Emergency_Directorate_foreign
+					ZHR_Emergency_Directorate_economy
+					ZHR_Emergency_Directorate_security
+					#ZHR_Emergency_Directorate_intel
+				}
+			}
+			country_event = {
+				id = HAR.1
+			}
+		}
+	}
+
+	#Black Hundreds Branch
+	#Focus for New Black Hundreds
+	focus = {
+		id = HAR_new_black_hundreds
+		icon = GFX_NewBlackHundreds
+		relative_position_id = HAR_democracy_from_disaster
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_democracy_from_disaster }
+		mutually_exclusive = { focus = HAR_broad_leftist_coalition }
+		mutually_exclusive = { focus = HAR_followers_of_russian_liberalism }
+		mutually_exclusive = { focus = HAR_kwantung_uia }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_zaborovsky_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_zaborovsky_wins
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.4
+			}
+			set_politics = {
+				ruling_party = reactionism
+			}
+			set_cosmetic_tag = ZHR2_reactionary
+		}
+	}
+
+	#Focus for Reactionary Transformation
+	focus = {
+		id = HAR_reactionary_transformation
+		icon = GFX_ReactionaryTransformation
+		relative_position_id = HAR_new_black_hundreds
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_new_black_hundreds }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				HAR_repentance
+			}
+		}
+	}
+
+	#Focus for Pray For Salvation
+	focus = {
+		id = HAR_pray_for_salvation
+		icon = GFX_Pray
+		relative_position_id = HAR_reactionary_transformation
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_reactionary_transformation }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HAR_repentance
+				add_idea = HAR_salvation
+			}
+		}
+	}
+
+	#Focus for Letter to Russia
+	focus = {
+		id = HAR_letter_to_russia
+		icon = GFX_LetterToRussia
+		relative_position_id = HAR_pray_for_salvation
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_pray_for_salvation }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					RUS = {
+						exists = yes
+					}
+				}
+				add_opinion_modifier = {
+					target = RUS
+					modifier = huge_increase
+				}
+			}
+			else = {
+				add_opinion_modifier = {
+					target = SRU
+					modifier = huge_increase
+				}
+			}
+			set_country_flag = HAR_politicdone
+			mark_focus_tree_layout_dirty = yes
+			
+		}
+	}
+
+	#Leftist Branch
+	#Focus for Broad Leftist Coalition
+	focus = {
+		id = HAR_broad_leftist_coalition
+		icon = GFX_BroadCoalition
+		relative_position_id = HAR_democracy_from_disaster
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_democracy_from_disaster }
+		mutually_exclusive = { focus = HAR_new_black_hundreds }
+		mutually_exclusive = { focus = HAR_kwantung_uia }
+		mutually_exclusive = { focus = HAR_followers_of_russian_liberalism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_myakotin_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_myakotin_wins
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.4
+			}
+			set_politics = {
+				ruling_party = social_democratism
+			}
+		}
+	}
+
+	#Focus for Attempts at Welfare
+	focus = {
+		id = HAR_attempts_at_welfare
+		icon = GFX_WelfareProviding
+		relative_position_id = HAR_broad_leftist_coalition
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_broad_leftist_coalition }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				HAR_soup_kitchens
+			}
+		}
+	}
+
+	#Focus for Equality for All
+	focus = {
+		id = HAR_equality_for_all
+		icon = GFX_EqualityForAll
+		relative_position_id = HAR_attempts_at_welfare
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_attempts_at_welfare }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.1
+			}
+			swap_ideas = {
+				remove_idea = HAR_soup_kitchens
+				add_idea = HAR_equality
+			}
+		}
+	}
+
+	#Focus for Letter to Our Comrades
+	focus = {
+		id = HAR_letter_to_our_comrades
+		icon = GFX_LetterToComrades
+		relative_position_id = HAR_equality_for_all
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_equality_for_all }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = AQT
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = HUN
+				modifier = huge_increase
+			}
+			set_country_flag = HAR_politicdone
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	#Liberal Branch
+	#Focus for Followers of Russian Liberalism
+	focus = {
+		id = HAR_followers_of_russian_liberalism
+		icon = GFX_Followers
+		relative_position_id = HAR_democracy_from_disaster
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_democracy_from_disaster }
+		mutually_exclusive = { 
+			focus = HAR_new_black_hundreds 
+		}
+		mutually_exclusive = { 
+			focus = HAR_broad_leftist_coalition 
+		}
+		mutually_exclusive = { 
+			focus = HAR_kwantung_uia
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_milyukov_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_milyukov_wins
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.2
+			}
+			set_politics = {
+				ruling_party = liberalism
+			}
+		}
+	}
+
+	#Focus for Utilise Kadet Infrastructure
+	focus = {
+		id = HAR_utilise_kadet_infrastructure
+		icon = GFX_Infrastructure
+		relative_position_id = HAR_followers_of_russian_liberalism
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_followers_of_russian_liberalism }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				HAR_crisis_hope
+			}
+		}
+	}
+	
+	#Focus for Protect Individual Liberties
+	focus = {
+		id = HAR_protect_individual_liberties
+		icon = GFX_Liberties
+		relative_position_id = HAR_utilise_kadet_infrastructure
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_utilise_kadet_infrastructure }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HAR_crisis_hope
+				add_idea = HAR_crisis_hope2
+			}
+		}
+	}
+	
+	#Focus for Letter to the West
+	focus = {
+		id = HAR_letter_to_the_west
+		icon = GFX_LetterToWest
+		relative_position_id = HAR_protect_individual_liberties
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_protect_individual_liberties }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ENG
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = HOL
+				modifier = huge_increase
+			}
+			add_opinion_modifier = {
+				target = SWI
+				modifier = huge_increase
+			}
+			set_country_flag = HAR_politicdone
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	#GUK Branch
+	#Focus for Kwantung U.I.A.
+	focus = {
+		id = HAR_kwantung_uia
+		icon = GFX_KwantungUIA
+		relative_position_id = HAR_democracy_from_disaster
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_democracy_from_disaster }
+		mutually_exclusive = { 
+			focus = HAR_new_black_hundreds 
+		}
+		mutually_exclusive = { 
+			focus = HAR_broad_leftist_coalition 
+		}
+		mutually_exclusive = { 
+			focus = HAR_followers_of_russian_liberalism 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_fajda_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_fajda_wins
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.4
+			}
+			add_opinion_modifier = {
+				target = GUK
+				modifier = huge_increase
+			}
+			set_politics = {
+				ruling_party = accelerationism
+			}
+			set_cosmetic_tag = ZHR2_accelerationary
+		}
+	}
+
+	#Focus for Public Works
+	focus = {
+		id = HAR_public_works
+		icon = GFX_PublicWorks
+		relative_position_id = HAR_kwantung_uia
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_kwantung_uia }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = {
+				HAR_DPW
+			}
+		}
+	}
+
+	#Focus for Promote Ukrainian Culture
+	focus = {
+		id = HAR_promote_ukrainian_culture
+		icon = GFX_PromoteCulture
+		relative_position_id = HAR_public_works
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_public_works }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = HAR_DPW
+				add_idea = HAR_DPW2
+			}
+		}
+	}
+
+	#Focus for Letter to Ukraine
+	focus = {
+		id = HAR_letter_to_ukraine
+		icon = GFX_LetterToUkraine
+		relative_position_id = HAR_promote_ukrainian_culture
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_promote_ukrainian_culture }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = UKR
+				modifier = huge_increase
+			}
+			set_country_flag = HAR_politicdone
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+
+	#Unification Section
+	#Focus for Our Final Push - version BH
+	focus = {
+		id = HAR_our_final_push_bh
+		icon = GFX_Finalpush
+		relative_position_id = HAR_democracy_from_disaster
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_zaborovsky_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_zaborovsky_wins
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_ideas = {
+				tot_economic_mobilisation
+				closed_economy
+				all_adults_serve
+				HAR_directive_227_idea
+			}
+		}
+	}
+
+	#Focus for Our Final Push - Version KAD
+	focus = {
+		id = HAR_our_final_push_kad
+		icon = GFX_Finalpush
+		relative_position_id = HAR_democracy_from_disaster
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_milyukov_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_milyukov_wins
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_ideas = {
+				tot_economic_mobilisation
+				closed_economy
+				all_adults_serve
+				HAR_directive_227_idea
+			}
+		}
+	}
+
+	#Focus for Our Final Push - version LEF
+	focus = {
+		id = HAR_our_final_push_lef
+		icon = GFX_Finalpush
+		relative_position_id = HAR_democracy_from_disaster
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_myakotin_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_myakotin_wins
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_ideas = {
+				tot_economic_mobilisation
+				closed_economy
+				all_adults_serve
+				HAR_directive_227_idea
+			}
+		}
+	}
+
+	#Focus for Our Final Push - version KWA
+	focus = {
+		id = HAR_our_final_push_kwa
+		icon = GFX_Finalpush
+		relative_position_id = HAR_democracy_from_disaster
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_fajda_wins
+		}
+		allow_branch = {
+			has_country_flag = HAR_politicdone
+			has_country_flag = HAR_fajda_wins
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_ideas = {
+				tot_economic_mobilisation
+				closed_economy
+				all_adults_serve
+				HAR_directive_227_idea
+			}
+		}
+	}
+
+	#Focus for We Need Help - Version BH
+	focus = {
+		id = HAR_we_need_help_bh
+		icon = GFX_WeNeedHelp
+		relative_position_id = HAR_our_final_push_bh
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_bh }
+		mutually_exclusive = { focus = HAR_we_are_victorious_bh }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.01.01
+			has_war_with = MNS
+			MNS = {
+				surrender_progress < 0.5
+			}
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = HAR_BH_Calls
+	
+		}
+	}
+	
+	#Focus for We Need Help - Version Leftist
+	focus = {
+		id = HAR_we_need_help_lef
+		icon = GFX_WeNeedHelp
+		relative_position_id = HAR_our_final_push_lef
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_lef }
+		mutually_exclusive = { focus = HAR_we_are_victorious_lef }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.01.01
+			has_war_with = MNS
+			MNS = {
+				surrender_progress < 0.5
+			}
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = HAR_cant_beat_join
+		}
+	}
+
+	#Focus for We Need Help - Version Kadets
+	focus = {
+		id = HAR_we_need_help_kad
+		icon = GFX_WeNeedHelp
+		relative_position_id = HAR_our_final_push_kad
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_kad }
+		mutually_exclusive = { focus = HAR_we_are_victorious_kad }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.01.01
+			has_war_with = MNS
+			MNS = {
+				surrender_progress < 0.5
+			}
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = HAR_unity_against_enemies_of_westernization
+		}
+	}
+
+	#Focus for We Need Help - Version UIA
+	focus = {
+		id = HAR_we_need_help_kwa
+		icon = GFX_WeNeedHelp
+		relative_position_id = HAR_our_final_push_kwa
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_kwa }
+		mutually_exclusive = { focus = HAR_we_are_victorious_kwa }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date > 1940.01.01
+			has_war_with = MNS
+			MNS = {
+				surrender_progress < 0.5
+			}
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = HAR_welcome_our_liberators
+		}
+	}
+
+	#Focus for We are Victorious - Version BH
+	focus = {
+		id = HAR_we_are_victorious_bh
+		icon = GFX_WeAreVictorious
+		relative_position_id = HAR_our_final_push_bh
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_bh }
+		mutually_exclusive = { focus = HAR_we_need_help_bh }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date >1941.01.01
+			MNS = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			GUK = {
+				exists = no
+			}
+			has_full_control_of_state = 978
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 810
+			has_full_control_of_state = 714
+			has_full_control_of_state = 761
+			has_full_control_of_state = 561
+			has_full_control_of_state = 560
+			has_full_control_of_state = 409
+			has_full_control_of_state = 930
+			has_full_control_of_state = 408
+		}
+		completion_reward = {
+			add_stability = 0.1
+			set_cosmetic_tag = ZHR2_reactionary
+			unlock_decision_category_tooltip = HAR_general_foreign_policy
+			unlock_decision_category_tooltip = HAR_hold_zemsky_sobor
+
+		}
+	}
+	#Focus for We are Victorious - Version Left
+	focus = {
+		id = HAR_we_are_victorious_lef
+		icon = GFX_WeAreVictorious
+		relative_position_id = HAR_our_final_push_lef
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_lef }
+		mutually_exclusive = { focus = HAR_we_need_help_lef }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date >1941.01.01
+			MNS = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			GUK = {
+				exists = no
+			}
+			has_full_control_of_state = 978
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 810
+			has_full_control_of_state = 714
+			has_full_control_of_state = 761
+			has_full_control_of_state = 561
+			has_full_control_of_state = 560
+			has_full_control_of_state = 409
+			has_full_control_of_state = 930
+			has_full_control_of_state = 408
+		}
+		completion_reward = {
+			add_stability = 0.1
+			unlock_decision_category_tooltip = HAR_general_foreign_policy
+			unlock_decision_category_tooltip = HAR_peoples_front
+			unlock_decision_category_tooltip = HAR_young_russia_hail_victorious
+		}
+	}
+	#Focus for We are Victorious - Version Kadets
+	focus = {
+		id = HAR_we_are_victorious_kad
+		icon = GFX_WeAreVictorious
+		relative_position_id = HAR_our_final_push_kad
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_kad }
+		mutually_exclusive = { focus = HAR_we_need_help_kad }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date >1941.01.01
+			MNS = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			GUK = {
+				exists = no
+			}
+			has_full_control_of_state = 978
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 810
+			has_full_control_of_state = 714
+			has_full_control_of_state = 761
+			has_full_control_of_state = 561
+			has_full_control_of_state = 560
+			has_full_control_of_state = 409
+			has_full_control_of_state = 930
+			has_full_control_of_state = 408
+		}
+		completion_reward = {
+			add_stability = 0.1
+			unlock_decision_category_tooltip = HAR_general_foreign_policy
+			unlock_decision_category_tooltip = HAR_letter_to_romanovsky
+			unlock_decision_category_tooltip = HAR_young_russia_hail_victorious
+		}
+	}
+	#Focus for We are Victorious - Version UIA
+	focus = {
+		id = HAR_we_are_victorious_kwa
+		icon = GFX_WeAreVictorious
+		relative_position_id = HAR_our_final_push_kwa
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = HAR_our_final_push_kwa }
+		mutually_exclusive = { focus = HAR_we_need_help_kwa }
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			date >1941.01.01
+			MNS = {
+				exists = no
+			}
+			PRI = {
+				exists = no
+			}
+			GUK = {
+				exists = no
+			}
+			has_full_control_of_state = 978
+			has_full_control_of_state = 881
+			has_full_control_of_state = 912
+			has_full_control_of_state = 810
+			has_full_control_of_state = 714
+			has_full_control_of_state = 761
+			has_full_control_of_state = 561
+			has_full_control_of_state = 560
+			has_full_control_of_state = 409
+			has_full_control_of_state = 930
+			has_full_control_of_state = 408
+		}
+		completion_reward = {
+			add_stability = 0.1
+			unlock_decision_category_tooltip = HAR_general_foreign_policy
+			unlock_decision_category_tooltip = HAR_toast_for_united_ukraine
+		}
+	}
+
+}
+#End of foci

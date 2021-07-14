@@ -1,0 +1,1202 @@
+focus_tree = {
+	id = WRR_baltic_duchy
+	country = {
+		factor = 0
+		modifier = {
+			add = 1000
+			tag = WRR
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1600 }
+	focus = {
+		id = WRR_black_dawn
+		icon = GFX_goal_WRR_black_dawn
+		x = 9
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 75
+			country_event = { 
+				id = wru.101
+			}
+		}
+	}
+
+	focus = {
+		id = WRR_cut_ties_to_russia
+		icon = GFX_goal_WRR_cut_ties_to_russia
+		prerequisite = {
+			focus = WRR_black_dawn
+		}
+		relative_position_id = WRR_black_dawn
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = -0.02
+			RUS = { add_opinion_modifier = { target = WRR modifier = medium_decrease } }
+			SRU = { add_opinion_modifier = { target = WRR modifier = medium_decrease } }
+			DKB = { add_opinion_modifier = { target = WRR modifier = medium_decrease } }
+			SIB = { add_opinion_modifier = { target = WRR modifier = medium_decrease } }
+		}
+	}
+	focus = {
+		id = WRR_monitor_former_russian_officers
+		icon = GFX_goal_WRR_monitor_former_russian_officers
+		prerequisite = {
+			focus = WRR_cut_ties_to_russia
+		}
+		relative_position_id = WRR_cut_ties_to_russia
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = -0.03
+			add_ideas = WRR_germanized_ranks
+		}
+	}
+	focus = {
+		id = WRR_crusaders_in_pskov
+		icon = GFX_goal_WRR_crusaders_in_pskov
+		prerequisite = {
+			focus = WRR_monitor_former_russian_officers
+		}
+		relative_position_id = WRR_monitor_former_russian_officers
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			209 = {
+				add_manpower = -1025
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WRR_break_any_resistance
+		icon = GFX_goal_WRR_break_any_resistance
+		prerequisite = {
+			focus = WRR_black_dawn
+		}
+		relative_position_id = WRR_black_dawn
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			858 = {
+				add_manpower = -11244
+			}
+		}
+	}
+	focus = {
+		id = WRR_establish_sicherheitssektion
+		icon = GFX_goal_WRR_establish_sicherheitssektion
+		prerequisite = {
+			focus = WRR_break_any_resistance
+		}
+		relative_position_id = WRR_break_any_resistance
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRR_sicherheitssektion
+		}
+	}
+	focus = {
+		id = WRR_truly_united_duchy
+		icon = GFX_goal_WRR_truly_united_duchy
+		prerequisite = {
+			focus = WRR_establish_sicherheitssektion
+		}
+		relative_position_id = WRR_establish_sicherheitssektion
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.2
+			}
+		}
+	}
+
+	focus = {
+		id = WRR_appease_the_masses
+		icon = GFX_goal_WRR_appease_the_masses
+		prerequisite = {
+			focus = WRR_black_dawn
+		}
+		relative_position_id = WRR_black_dawn
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			add_political_power = 70
+		}
+	}
+	focus = {
+		id = WRR_positive_christianity
+		icon = GFX_goal_WRR_positive_christianity
+		prerequisite = {
+			focus = WRR_appease_the_masses
+		}
+		relative_position_id = WRR_appease_the_masses
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRR_positive_christianity_idea
+		}
+	}
+	focus = {
+		id = WRR_carrot_and_stick_germanization
+		icon = GFX_goal_WRR_carrot_and_stick_germanization
+		prerequisite = {
+			focus = WRR_positive_christianity
+		}
+		relative_position_id = WRR_positive_christianity
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRR_positive_christianity_idea
+				add_idea = WRR_positive_christianity_idea1	
+			}
+		}
+	}
+
+	focus = {
+		id = WRR_save_our_brothers
+		icon = GFX_goal_WRR_save_our_brothers
+		prerequisite = {
+			focus = WRR_crusaders_in_pskov
+		}
+		prerequisite = {
+			focus = WRR_truly_united_duchy
+		}
+		prerequisite = {
+			focus = WRR_carrot_and_stick_germanization
+		}
+		relative_position_id = WRR_truly_united_duchy
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 150
+			create_faction = EISENPAKT
+		}
+	}
+
+	focus = {
+		id = WRR_host_baltic_security_conference
+		icon = GFX_goal_WRR_host_baltic_security_conference
+		prerequisite = {
+			focus = WRR_save_our_brothers
+		}
+		relative_position_id = WRR_save_our_brothers
+		x = -6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			PRS = {
+				country_event = {
+					id = wru.40
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_bypass_lithuania
+		icon = GFX_goal_WRR_bypass_lithuania
+		prerequisite = {
+			focus = WRR_host_baltic_security_conference
+		}
+		relative_position_id = WRR_host_baltic_security_conference
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = LIT
+				}
+				add_core_of = WRR
+			}
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = WRR_backstab_prussia
+		icon = GFX_goal_WRR_backstab_prussia
+		prerequisite = {
+			focus = WRR_bypass_lithuania
+		}
+		relative_position_id = WRR_bypass_lithuania
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_neighbor_of = PRS
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_core = 188
+			add_state_core = 763
+			add_state_core = 5
+			add_state_core = 848
+			add_state_core = 85
+			PRS = {
+				country_event = {
+					id = wru.43
+					days = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_contacts_with_pagan_socialists
+		icon = GFX_goal_WRR_contacts_with_pagan_socialists
+		prerequisite = {
+			focus = WRR_host_baltic_security_conference
+		}
+		relative_position_id = WRR_host_baltic_security_conference
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			GER = {
+				add_timed_idea = {
+					idea = WRR_pagan_agitation
+					days = 400
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_never_fight_on_two_fronts
+		icon = GFX_goal_WRR_never_fight_on_two_fronts
+		prerequisite = {
+			focus = WRR_contacts_with_pagan_socialists
+		}
+		relative_position_id = WRR_contacts_with_pagan_socialists
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_neighbor_of = GER
+			NOT = { has_war_with = GER }
+			is_subject = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				add_state_core = 28
+				add_state_core = 42	
+				add_state_core = 50
+				add_state_core = 51
+				add_state_core = 52
+				add_state_core = 53
+				add_state_core = 54
+				add_state_core = 55
+				add_state_core = 56
+				add_state_core = 57
+				add_state_core = 58
+				add_state_core = 59
+				add_state_core = 60
+				add_state_core = 61
+				add_state_core = 62
+				add_state_core = 63
+				add_state_core = 64
+				add_state_core = 65
+				add_state_core = 66
+				add_state_core = 67
+				add_state_core = 68
+				add_state_core = 844
+				add_state_core = 959
+				add_state_core = 991
+			}
+			custom_effect_tooltip = "WRR_GERMANY_CORES_TT"
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = WRR_reclaim_germanic_patrimony
+		icon = GFX_goal_WRR_reclaim_germanic_patrimony
+		prerequisite = {
+			focus = WRR_backstab_prussia
+		}
+		prerequisite = {
+			focus = WRR_never_fight_on_two_fronts
+		}
+		relative_position_id = WRR_backstab_prussia
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 64
+			GER = { exists = no }
+			is_subject = no
+		}
+		completion_reward = {
+			set_capital = 64
+			add_state_core = 86
+			add_state_core = 762
+			add_state_core = 74
+			add_state_core = 69
+			add_state_core = 913
+			add_state_core = 901
+			add_state_core = 4
+			add_state_core = 152
+			add_state_core = 153
+			add_state_core = 102
+			add_state_core = 39
+			add_state_core = 845
+			add_state_core = 151
+			add_state_core = 3
+			add_state_core = 846
+			add_state_core = 796
+			add_state_core = 99
+			add_state_core = 37
+		}
+	}
+	focus = {
+		id = WRR_tod_in_flandern
+		icon = GFX_goal_WRR_tod_in_flandern
+		prerequisite = {
+			focus = WRR_reclaim_germanic_patrimony
+		}
+		relative_position_id = WRR_reclaim_germanic_patrimony
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_core = 36
+			add_state_core = 7
+			add_state_core = 35
+			add_state_core = 6
+			add_state_core = 799
+			add_state_core = 34
+			add_state_core = 8
+			add_state_core = 958
+			add_state_core = 956
+			add_state_core = 957
+		}
+	}
+
+	focus = {
+		id = WRR_opposite_direction
+		icon = GFX_goal_WRR_opposite_direction
+		prerequisite = {
+			focus = WRR_save_our_brothers
+		}
+		relative_position_id = WRR_save_our_brothers
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_state_claim = 263
+			add_state_claim = 208
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = WRR_infiltrate_peterburg
+		icon = GFX_goal_WRR_infiltrate_peterburg
+		prerequisite = {
+			focus = WRR_opposite_direction
+		}
+		relative_position_id = WRR_opposite_direction
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			195 = {
+				owner = {
+					add_stability = -0.1
+					add_timed_idea = {
+						idea = WRR_peterburg_infiltration
+						days = 300
+					}
+					add_opinion_modifier = { target = WRR modifier = medium_decrease }
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_prepare_quick_strike
+		icon = GFX_goal_WRR_prepare_quick_strike
+		prerequisite = {
+			focus = WRR_infiltrate_peterburg
+		}
+		relative_position_id = WRR_infiltrate_peterburg
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	focus = {
+		id = WRR_get_scandinavian_help
+		icon = GFX_goal_WRR_get_scandinavian_help
+		prerequisite = {
+			focus = WRR_opposite_direction
+		}
+		relative_position_id = WRR_opposite_direction
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = "WRR_DIPLOMACY_DECISION_TOOLTIP"
+		}
+	}
+	focus = {
+		id = WRR_be_certain_of_belarus
+		icon = GFX_goal_WRR_be_certain_of_belarus
+		prerequisite = {
+			focus = WRR_get_scandinavian_help
+		}
+		relative_position_id = WRR_get_scandinavian_help
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			custom_effect_tooltip = "WRR_DIPLOMACY_DECISION_TOOLTIP"
+		}
+	}
+	focus = {
+		id = WRR_meshchera_crusade
+		icon = GFX_goal_WRR_meshchera_crusade
+		prerequisite = {
+			focus = WRR_prepare_quick_strike
+		}
+		prerequisite = {
+			focus = WRR_be_certain_of_belarus
+		}
+		relative_position_id = WRR_prepare_quick_strike
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					RUS = { exists = yes }
+				}
+				create_wargoal = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {
+					SRU = { exists = yes }
+				}
+				create_wargoal = {
+					target = SRU
+					type = annex_everything
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_question_of_reichskommissariats
+		icon = GFX_goal_WRR_question_of_reichskommissariats
+		prerequisite = {
+			focus = WRR_meshchera_crusade
+		}
+		relative_position_id = WRR_meshchera_crusade
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = "WRR_REICHSKOMMISSARIATS_DECISION_TOOLTIP"
+		}
+	}
+
+	focus = {
+		id = WRR_ducal_economy
+		icon = GFX_goal_WRR_ducal_economy
+		prerequisite = {
+			focus = WRR_save_our_brothers
+		}
+		relative_position_id = WRR_save_our_brothers
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_land_grants_to_german_veterans
+		icon = GFX_goal_WRR_land_grants_to_german_veterans
+		prerequisite = {
+			focus = WRR_ducal_economy
+		}
+		relative_position_id = WRR_ducal_economy
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = WRR_baltic_frontier_colonization
+		}
+	}
+	focus = {
+		id = WRR_der_ostarbeiter
+		icon = GFX_goal_WRR_der_ostarbeiter
+		prerequisite = {
+			focus = WRR_land_grants_to_german_veterans
+		}
+		relative_position_id = WRR_land_grants_to_german_veterans
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRR_baltic_frontier_colonization
+				add_idea = WRR_baltic_frontier_colonization1
+			}
+			custom_effect_tooltip = "WRR_HVM_DECISION_TOOLTIP"
+		}
+	}
+	focus = {
+		id = WRR_subsidize_civilian_industry
+		icon = GFX_goal_WRR_subsidize_civilian_industry
+		prerequisite = {
+			focus = WRR_ducal_economy
+		}
+		relative_position_id = WRR_ducal_economy
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = WRR_form_vhtn
+		icon = GFX_goal_WRR_form_vhtn
+		prerequisite = {
+			focus = WRR_subsidize_civilian_industry
+		}
+		relative_position_id = WRR_subsidize_civilian_industry
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_ideas = WRR_vhtn_idea
+		}
+	}
+	focus = {
+		id = WRR_entrench_corporatism
+		icon = GFX_goal_WRR_entrench_corporatism
+		prerequisite = {
+			focus = WRR_der_ostarbeiter
+		}
+		prerequisite = {
+			focus = WRR_form_vhtn
+		}
+		relative_position_id = WRR_der_ostarbeiter
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = WRR_positive_christianity_idea1
+				add_idea = 	WRR_positive_christianity_idea2
+			}
+		}
+	}
+	focus = {
+		id = WRR_prepare_for_total_war
+		icon = GFX_goal_WRR_prepare_for_total_war
+		prerequisite = {
+			focus = WRR_entrench_corporatism
+		}
+		relative_position_id = WRR_entrench_corporatism
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = tot_economic_mobilisation
+		}
+	}
+
+	focus = {
+		id = WRR_baltic_german_military
+		icon = GFX_goal_WRR_baltic_german_military
+		prerequisite = {
+			focus = WRR_save_our_brothers
+		}
+		relative_position_id = WRR_save_our_brothers
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRR_germanized_ranks
+				add_idea = WRR_baltischwehr
+			}
+		}
+	}
+	focus = {
+		id = WRR_balanced_ground_army
+		icon = GFX_goal_WRR_balanced_ground_army
+		prerequisite = {
+			focus = WRR_baltic_german_military
+		}
+		relative_position_id = WRR_baltic_german_military
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = WRR_baltischwehr
+				add_idea = WRR_baltischwehr1
+			}
+		}
+	}
+	focus = {
+		id = WRR_paratroopers_and_air_doctrine
+		icon = GFX_goal_WRR_paratroopers_and_air_doctrine
+		prerequisite = {
+			focus = WRR_balanced_ground_army
+		}
+		relative_position_id = WRR_balanced_ground_army
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = WRR_form_elite_osel_marines
+		icon = GFX_goal_WRR_form_elite_osel_marines
+		prerequisite = {
+			focus = WRR_baltic_german_military
+		}
+		relative_position_id = WRR_baltic_german_military
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = marine_tech
+			}
+		}
+	}
+	focus = {
+		id = WRR_discuss_naval_doctrine
+		icon = GFX_goal_WRR_discuss_naval_doctrine
+		prerequisite = {
+			focus = WRR_form_elite_osel_marines
+		}
+		relative_position_id = WRR_form_elite_osel_marines
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = naval_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+				category = bb_tech
+			}
+		}
+	}
+	focus = {
+		id = WRR_aircraft_carrier_terra_mariana
+		icon = GFX_goal_WRR_aircraft_carrier_terra_mariana
+		prerequisite = {
+			focus = WRR_paratroopers_and_air_doctrine
+		}
+		prerequisite = {
+			focus = WRR_discuss_naval_doctrine
+		}
+		relative_position_id = WRR_paratroopers_and_air_doctrine
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cv_tech
+			}
+			1058 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = "WRR_TERRA_MARIANA_DECISION_TOOLTIP"
+		}
+	}
+	focus = {
+		id = WRR_expand_military_industry
+		icon = GFX_goal_WRR_expand_military_industry
+		prerequisite = {
+			focus = WRR_aircraft_carrier_terra_mariana
+		}
+		relative_position_id = WRR_aircraft_carrier_terra_mariana
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = WRR_rosenbergs_germania
+		icon = GFX_goal_WRR_rosenbergs_germania
+		prerequisite = {
+			focus = WRR_tod_in_flandern
+		}
+		prerequisite = {
+			focus = WRR_question_of_reichskommissariats
+		}
+		prerequisite = {
+			focus = WRR_prepare_for_total_war
+		}
+		prerequisite = {
+			focus = WRR_expand_military_industry
+		}
+		relative_position_id = WRR_save_our_brothers
+		x = 0
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			owns_state = 1058
+			owns_state = 763
+			owns_state = 64
+			owns_state = 52
+			owns_state = 991
+			owns_state = 4
+			owns_state = 3
+			owns_state = 7
+		}
+		completion_reward = {
+			set_cosmetic_tag = "WRR_germania"
+			add_political_power = 150
+			hidden_effect = {
+				random_country = {
+					limit = {
+						is_ai = no
+					}
+					#country_event = { #Superevent for proclaimation of greater germania
+					#	id = news.
+					#}
+				}
+			}
+		}
+	}
+}

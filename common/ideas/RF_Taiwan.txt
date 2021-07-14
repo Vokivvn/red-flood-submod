@@ -1,0 +1,577 @@
+#####################
+#	Taiwan - Baba	#
+#####################
+
+ideas = {
+	country = {
+		TAI_freedom = {
+			picture = generic_volunteer_expedition_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.10
+				political_power_gain = -0.10
+			}
+		}
+		TAI_freedom2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				right_authoritarianism_drift = -0.05
+				political_power_gain = 0.10
+			}
+			picture =generic_volunteer_expedition_bonus
+		}
+		TAI_chaos = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				political_power_gain = -0.20
+				right_authoritarianism_drift = -0.10
+				revolutionary_anarchism_drift = 0.02
+				vanguard_socialism_drift = 0.02
+				libertarian_marxism_drift = 0.02
+				revisionist_socialism_drift = 0.02
+				social_democratism_drift = 0.02
+			}
+			picture = FRA_scw_intervention_republicans_focus
+		}
+		TAI_native_rebels = {
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				reactionism_drift = 0.02
+				stability_factor = -0.1
+			}
+		}
+		TAI_native_rebels2 = {
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				social_democratism_drift = -0.02
+				vanguard_socialism_drift = -0.02
+				stability_factor = -0.15
+			}
+		}
+		TAI_native_influences = {	#Austronesian Spirit
+			picture = generic_deal_with_the_devil2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				
+			}
+		}
+		TAI_market_economy = {
+			picture = generic_foreign_capital
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				consumer_goods_factor = 0.08
+				stability_factor = 0.08
+				production_factory_max_efficiency_factor = 0.08
+				war_support_factor = -0.08
+			}
+		}
+		TAI_corporate_curtailed = {
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		TAI_corporate_invited = {
+			picture = generic_constitutional_guarantees
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		TAI_jewel = {
+			picture = generic_pp_unity_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				trade_opinion_factor = -0.25
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
+				
+			}
+		}
+		TAI_social_progs = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				war_support_factor = -0.05
+				consumer_goods_factor = 0.04
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		TAI_liberty = {
+			picture = generic_democratic_drift_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				drift_defence_factor = 0.5
+				army_core_defence_factor = 0.25
+			}
+		}
+		TAI_race = {
+			picture = generic_disjointed_gov
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				conscription_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+		TAI_feminism = {
+			picture = generic_victors_of_ww1
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				conscription_factor = 0.25
+				war_support_factor = -0.15
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		TAI_chinese_ideal = {
+			picture = chi_chinese_unity
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.1
+			}
+		}
+		TAI_socialism = {
+			picture = FRA_scw_intervention_republicans_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.05
+				training_time_factor = -0.15
+				vanguard_socialism_drift = 0.01
+			}
+		}
+		TAI_infiltration = {
+			picture = generic_spy_intel
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				social_democratism_drift = 0.02
+			}
+		}
+		TAI_religion = { # 
+			picture = generic_agrarian_society
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.25
+				war_support_factor = 0.25
+			}
+		}
+		TAI_formosa_pact = { # 
+			picture = generic_trade
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.07
+				research_speed_factor = 0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		TAI_PTO = { #
+			picture = generic_trade
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+				research_speed_factor = 0.05
+				trade_opinion_factor = -0.2
+				send_volunteer_divisions_required = 5
+				send_volunteer_size = 12
+			}
+		}
+		TAI_cultural_rev = { # 
+			picture = jap_supremacy_of_will
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = 0.3
+				war_support_factor = 0.25
+				surrender_limit = 0.25
+			}
+		}
+		TAI_artistic_state = { # 
+			picture = generic_morale_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		TAI_surreal = { # civ, air base, port, dockyard, radar etc. construction speed
+			picture = office_of_strategic_services
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				production_speed_infrastructure_factor = -0.05
+				production_speed_industrial_complex_factor = 0.03
+				production_speed_arms_factory_factor = 0.03
+				production_speed_dockyard_factor = 0.03
+				production_speed_fuel_silo_factor = 0.05
+				production_speed_synthetic_refinery_factor = 0.05
+				production_speed_naval_base_factor = 0.05
+				production_speed_radar_station_factor = 0.07
+				production_speed_air_base_factor = 0.07
+				production_speed_anti_air_building_factor = -0.04
+				production_speed_bunker_factor = -0.05
+				production_speed_coastal_bunker_factor = -0.05
+				production_speed_rocket_site_factor = 0.05
+				production_speed_nuclear_reactor_factor = 0.1
+			}
+		}
+		TAI_dreamscape = { #production speed
+			picture = vittoria_mutilata
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		TAI_yellow = { #build speed
+			picture = ROM_king_carol_ii_hedonist
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+		TAI_statues = { #
+			picture = country_focus_efficency
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.15
+				industrial_capacity_factory = 0.1
+				generate_wargoal_tension = -0.2
+				root_out_resistance_effectiveness_factor = 0.2
+			}
+		}
+		TAI_present = { #division training time
+			picture = guns_shield
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				max_command_power = 15
+				command_power_gain = 0.15
+				chief_of_staff_cost_factor = -0.10
+				chief_of_air_force_cost_factor = -0.10
+				chief_of_army_cost_factor = -0.10
+				chief_of_navy_cost_factor = -0.10
+			}
+		}
+		TAI_past = { #+production cap
+			picture = generic_flexible_foreign_policy
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				training_time_army_factor = -0.10
+			}
+		}
+		TAI_future = { #+production gain pp gain
+			picture = generic_flexible_foreign_policy2
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				political_power_gain = 0.25
+				production_factory_efficiency_gain_factor = 0.1
+				monthly_population = 0.25
+			}
+		}
+		TAI_northsouth = {	#acclimatisation
+			picture = ast_all_in
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.12
+				acclimatization_hot_climate_gain_factor = 0.12
+			}
+		}
+		TAI_occidentalist = {	#build and conversion speed, small reseach buff
+			picture = generic_research_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				conversion_cost_civ_to_mil_factor = 0.1
+				production_speed_buildings_factor = 0.07
+			}
+		}
+		TAI_chairmen = {	#pp loss, comm power and stab boost
+			picture = country_focus_political
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				political_power_gain = -0.05
+				command_power_gain = 0.08
+				stability_factor = 0.05
+			}
+		}
+		TAI_eco_equality = {	#consumer goods, pop growth and conscription
+			picture = generic_neutrality_drift_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				consumer_goods_factor = 0.06
+				monthly_population = 0.01
+				conscription_factor = 0.07
+			}
+		}
+		TAI_france_art = {	#
+			picture = jap_supremacy_of_technology
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				stability_factor = 0.02
+				political_power_gain = 0.05
+			}
+		}
+		TAI_france_mil = {	#
+			picture = generic_license_production
+			removal_cost = -1
+			allowed = {
+				original_tag = TAI
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				training_time_army_factor = -0.1
+				army_speed_factor = 0.05
+			}
+		}
+	}
+	#Gov't
+	foreign_minister = {
+		TAI_Lin_for = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				OR = {
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			visible = {
+				
+			}
+			traits = { 
+				foreign_minister
+				for_apologetic_clerk
+			}
+		}
+		TAI_Thomas_for = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				OR = {
+					has_government = conservatism
+					has_government = social_democratism
+				}
+			}
+			visible = {
+				
+			}
+			traits = { 
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+	}
+	economy_minister = {
+		TAI_Lin_eco = {
+			allowed = {
+				original_tag = TAI
+				OR = {
+					has_government = conservatism
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_bank_president
+			}
+		}
+		TAI_Thomas_eco = {
+			allowed = {
+				original_tag = TAI
+				OR = {
+					has_government = conservatism
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				economy_minister
+				eco_keynesian_economy
+			}
+		}
+	}
+	head_of_intel = {
+		TAI_x_int = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+				}
+			}
+			traits = { 
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+		TAI_z_int = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	#Military
+	chief_of_staff = {
+		TAI_chiang_ting_cof = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+		TAI_yu_qingfang_cof = {
+			#picture = #
+			allowed = {
+				original_tag = TAI
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+}

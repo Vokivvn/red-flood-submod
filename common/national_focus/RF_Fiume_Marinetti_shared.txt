@@ -1,0 +1,881 @@
+#Marinetti Tree I want to die
+
+	shared_focus = {
+		id = FIU_The_Engine_of_Man
+		icon = GFX_focus_FIU_The_Engine_of_Man
+		#prerequisite = { focus = FIU_Mobilize_the_Diplomats }
+
+		x = 8
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_political_power = 200
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_No_Limits_to_Progess
+		icon = GFX_focus_FIU_No_Limits_to_Progess
+		prerequisite = { focus = FIU_The_Engine_of_Man }
+		
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_dynamic_modifier = {
+				modifier = FIU_unstoppable_machinery
+				scope = FIU
+			}
+			add_war_support = 0.15
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Scrapping_the_Councils
+		icon = GFX_focus_FIU_Scrapping_the_Councils
+		prerequisite = { focus = FIU_No_Limits_to_Progess }
+
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    add_political_power = -60
+			add_to_variable = {
+				var = unstoppable_machinery_political_power_gain
+				value = 0.2
+			}
+			custom_effect_tooltip = "FIU_Scrapping_the_Councils_tooltip"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Scrapping_the_Corperations
+		icon = GFX_focus_FIU_Scrapping_the_Corperations
+		prerequisite = { focus = FIU_No_Limits_to_Progess }
+		
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    add_to_variable = {
+				var = unstoppable_machinery_consumer_goods
+				value = -0.05
+			}
+			add_to_variable = {
+				var = unstoppable_machinery_factory_output
+				value = 0.05
+			}
+			add_to_variable = {
+				var = unstoppable_machinery_production_cap
+				value = 0.02
+			}
+			custom_effect_tooltip = "FIU_Scrapping_the_Corperations_tooltip"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Scrapping_the_Laws
+		icon = GFX_focus_FIU_Scrapping_the_Laws
+		prerequisite = { focus = FIU_No_Limits_to_Progess }
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    add_stability = -0.15
+			add_to_variable = {
+				var = unstoppable_machinery_stability_weekly
+				value = 0.002
+			}
+			custom_effect_tooltip = "FIU_Scrapping_the_Laws_tooltip"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Scrapping_the_Institutions
+		icon = GFX_focus_FIU_Scrapping_the_Institutions
+		prerequisite = { focus = FIU_No_Limits_to_Progess }
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_to_variable = {
+				var = unstoppable_machinery_research_speed
+				value = 0.05
+			}
+			custom_effect_tooltip = "FIU_Scrapping_the_Institutions_tooltip"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Scrapping_the_Militia
+		icon = GFX_focus_FIU_Scrapping_the_Militia
+		prerequisite = { focus = FIU_No_Limits_to_Progess }
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_manpower = -500
+			add_to_variable = {
+				var = unstoppable_machinery_conscription_factor
+				value = 0.1
+			}
+			custom_effect_tooltip = "FIU_Scrapping_the_Militia_tooltip"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Pedal_to_the_Floor
+		icon = GFX_focus_FIU_Pedal_to_the_Floor
+		prerequisite = { focus = FIU_Scrapping_the_Militia }
+		prerequisite = { focus = FIU_Scrapping_the_Institutions }
+		prerequisite = { focus = FIU_Scrapping_the_Laws }
+		prerequisite = { focus = FIU_Scrapping_the_Corperations }
+		prerequisite = { focus = FIU_Scrapping_the_Councils }
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			    add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+			        type = arms_factory
+				    level = 2
+				    instant_build = yes
+			    }
+		    }
+		    add_war_support = 0.3
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_A_Horde_of_Motors
+		icon = GFX_focus_FIU_A_Horde_of_Motors
+		prerequisite = { focus = FIU_Scrapping_the_Militia }
+		prerequisite = { focus = FIU_Scrapping_the_Corperations }
+		prerequisite = { focus = FIU_Pedal_to_the_Floor }
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 2000
+    			producer = FIU
+			}
+			add_equipment_to_stockpile = {
+  				type = motorized_equipment
+   				amount = 800
+    			producer = FIU
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Two_Legs_to_Four_Wheels
+		icon = GFX_focus_FIU_Two_Legs_to_Four_Wheels
+		prerequisite = { focus = FIU_A_Horde_of_Motors }
+		
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Embracing_Armor
+		icon = GFX_focus_FIU_Embracing_Armor
+		prerequisite = { focus = FIU_A_Horde_of_Motors }
+		
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 3
+				category = armor
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Dash_and_Surprise
+		icon = GFX_focus_FIU_Dash_and_Surprise
+		prerequisite = { focus = FIU_Embracing_Armor }
+		prerequisite = { focus = FIU_Two_Legs_to_Four_Wheels }
+		
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = -2
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_bolting_through
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Cultural_Rejuvenation
+		icon = GFX_focus_FIU_Cultural_Rejuvenation
+		prerequisite = { focus = FIU_Scrapping_the_Laws }
+		prerequisite = { focus = FIU_Scrapping_the_Institutions }
+		prerequisite = { focus = FIU_Pedal_to_the_Floor }
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 2
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_rejuvenation
+			random_owned_controlled_state = {
+			    add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+			        type = industrial_complex
+				    level = 2
+				    instant_build = yes
+			    }
+		    }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Cult_of_the_Dead
+		icon = GFX_focus_FIU_Cult_of_the_Dead
+		prerequisite = { focus = FIU_Cultural_Rejuvenation }
+			
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 3
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_resource = {
+    			type = steel
+    			amount = 3
+    			state = 736
+			}
+			hidden_effect = {
+				load_oob = FIU_arditi_2
+			}
+			custom_effect_tooltip = "We will train 2 Arditi Divisions"
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Burn_the_Relics
+		icon = GFX_focus_FIU_Burn_the_Relics
+		prerequisite = { focus = FIU_Cultural_Rejuvenation }
+			
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 1
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			163 = {
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			every_owned_state = {
+				remove_building = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_The_Heroic_Scientist
+		icon = GFX_focus_FIU_The_Heroic_Scientist
+		prerequisite = { focus = FIU_Burn_the_Relics }
+		prerequisite = { focus = FIU_Cult_of_the_Dead }
+			
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 2
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_ideas = FIU_heroic_scientist
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Crack_the_Whip
+		icon = GFX_focus_FIU_Crack_the_Whip
+		prerequisite = { focus = FIU_The_Heroic_Scientist }
+		prerequisite = { focus = FIU_Dash_and_Surprise }
+			
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    add_stability = -0.10
+			army_experience = 30
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_We_Need_More
+		icon = GFX_focus_FIU_We_Need_More
+		prerequisite = { focus = FIU_Crack_the_Whip }
+				
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 8
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			    add_extra_state_shared_building_slots = 3
+			    add_building_construction = {
+			        type = arms_factory
+				    level = 2
+				    instant_build = yes
+			    }
+		    }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Our_Next_Move
+		icon = GFX_focus_FIU_Our_Next_Move
+		prerequisite = { focus = FIU_We_Need_More }
+				
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 200
+				producer = FIU
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 120
+				producer = FIU
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Ready
+		icon = GFX_focus_FIU_Ready
+		prerequisite = { focus = FIU_Our_Next_Move }
+				
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 10
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+		    add_ideas = FIU_prepare_for_departure
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Set
+		icon = GFX_focus_FIU_Set
+		prerequisite = { focus = FIU_Ready }
+				
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 11
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		completion_reward = {
+			set_war_support = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_GO
+		icon = GFX_focus_FIU_GO
+		prerequisite = { focus = FIU_Set }
+				
+		
+		
+						
+		relative_position_id = FIU_The_Engine_of_Man				
+		x = 0
+		y = 12
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			declare_war_on = {
+			    target = ITA
+				type = annex_everything
+			}
+			load_focus_tree = {
+				tree = FIU_marinetti_postwar
+				keep_completed = yes
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = ITA
+					}
+					add_claim_by = FIU
+				}
+				FRA = {
+					country_event = {
+						id = fiume.55
+						days = 2
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}

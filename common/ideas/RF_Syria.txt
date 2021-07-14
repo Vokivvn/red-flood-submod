@@ -1,0 +1,46 @@
+#############
+# Westralia #
+#############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		SYR_underground_resistance = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea SYR_underground_resistance"}
+			modifier = {
+				stability_factor = -0.3
+			}
+			picture = generic_spy_coup
+		}
+		
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

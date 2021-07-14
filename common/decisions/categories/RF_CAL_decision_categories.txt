@@ -1,0 +1,13 @@
+CAL_foreign_policy = {
+	allowed = {
+		original_tag = CAL
+	}
+	priority = 100
+	visible = {
+	tag = CAL
+	OR = {
+	has_completed_focus = CAL_greater_california_idea
+	has_completed_focus = CAL_entrench_ourselves
+	}
+	}
+}

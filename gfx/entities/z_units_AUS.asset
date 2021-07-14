@@ -1,0 +1,206 @@
+
+# Infantry
+
+
+	entity = {
+		clone = "GER_infantry_entity"
+		name = "AUS_infantry_entity"
+		pdxmesh = "AUS_infantry_rifle_mesh"
+	}
+	
+	entity = {
+		clone = "GER_infantry_2_entity"
+		name = "AUS_infantry_2_entity"
+		pdxmesh = "AUS_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "AUS_infantry_2_entity"
+		name = "AUS_infantry_3_entity"
+	}
+
+
+# Cavalry
+
+
+	entity = {
+		clone = "GER_infantry_rider_entity"
+		name = "AUS_infantry_rider_entity"
+		pdxmesh = "AUS_infantry_rifle_mesh"
+	}
+
+	entity = {
+		clone = "GER_infantry_mg_rider_entity"
+		name = "AUS_infantry_mg_rider_entity"
+		pdxmesh = "AUS_infantry_mg_mesh"
+	}
+	
+	entity = {
+		clone = "GER_cavalry_rifle_combined_entity"
+		name = "AUS_cavalry_rifle_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "AUS_infantry_rider_entity" }
+	}
+
+	entity = {
+		clone = "GER_cavalry_mg_combined_entity"
+		name = "AUS_cavalry_mg_combined_entity"
+		
+		attach = { 	name = "infantry_unit"		Saddle_Node = "AUS_infantry_mg_rider_entity" }
+	}
+
+	entity = {
+		clone = "GER_cavalry_entity"
+		name = "AUS_cavalry_entity"
+
+		attach = { 	name = "infantry"		infantry = "AUS_infantry_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "AUS_cavalry_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "GER_cavalry_2_entity"
+		name = "AUS_cavalry_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "AUS_infantry_mg_rider_entity" }
+		attach = { 	name = "cavalry"		cavalry = "AUS_cavalry_mg_combined_entity" }
+	}
+
+
+# Cars
+
+
+	entity = {
+		clone = "motorized_entity"
+		name = "AUS_motorized_entity"
+		
+		attach = { name = "infantry" 	infantry = "AUS_infantry_entity" }
+	}
+
+	entity = {
+		clone = "motorized_entity"
+		name = "AUS_mechanized_entity"
+
+		attach = { name = "vehicle" 	vehicle = "GER_mechanized_entity" }
+		attach = { name = "infantry" 	infantry = "AUS_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "artillery_entity"
+		name = "AUS_artillery_entity"
+		
+		attach = { name = infantry		infantry = "AUS_infantry_entity" }
+	}
+	
+	entity = {
+		clone = "anti_tank_entity"
+		name = "AUS_anti_tank_entity"
+	
+		attach = { name = infantry			infantry = "AUS_infantry_entity" }
+	}
+	
+
+# Bycicles
+
+	
+	entity = {
+		clone = "JAP_bicycle_entity"
+		name = "AUS_bicycle_entity"
+		
+		attach = { 	name = "infantry"		infantry = "AUS_bicycle_rider_rifle_entity" }	
+		attach = { 	name = "combined"		combined = "AUS_bicycle_rifle_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_rifle_combined_entity"
+		name = "AUS_bicycle_rifle_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "AUS_bicycle_rider_rifle_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_rifle_entity"
+		name = "AUS_bicycle_rider_rifle_entity"
+		pdxmesh = "AUS_infantry_rifle_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_rifle_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_rifle_left_entity" }
+		attach = { 	name = "rifle4"	Root_node_2 = "GER_infantry_weapon_rifle_right_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_2_entity"
+		name = "AUS_bicycle_2_entity"
+		
+		attach = { 	name = "infantry"		infantry = "AUS_bicycle_rider_mg_entity" }	
+		attach = { 	name = "combined"		combined = "AUS_bicycle_mg_combined_entity" }
+	}
+	
+	entity = {
+		clone = "JAP_bicycle_mg_combined_entity"
+		name = "AUS_bicycle_mg_combined_entity"
+		
+		attach = { 	name = "rider"	bike_center = "AUS_bicycle_rider_mg_entity" }
+	}
+
+	entity = {
+		clone = "JAP_bicycle_rider_mg_entity"
+		name = "AUS_bicycle_rider_mg_entity"
+		pdxmesh = "AUS_infantry_mg_mesh"	
+		
+		attach = { 	name = "rifle1"	Right_Hand_node = "GER_infantry_weapon_mg_right_entity" }	
+		attach = { 	name = "rifle2"	Left_Hand_node = "GER_infantry_weapon_mg_left_entity" }
+	}
+	
+#Fighters
+
+entity = {
+	name = "AUS_light_plane_entity"
+	pdxmesh = "AUS_plane_light_mesh"
+	state = { name = "fire" animation = "idle" 
+		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
+		event = { time = 0.02 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
+	}
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle"
+		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+		}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	scale = 0.124
+}
+entity = {
+	name = "AUS_medium_plane_entity"
+	pdxmesh = "AUS_plane_medium_mesh"
+
+	locator = { name = "engine1"	position =	{ 5 0 -10	} }
+	locator = { name = "engine2"	position =	{ -5 0 -10	} }
+	locator = { name = "bomb"		position = 	{ 0 0 0		} }
+
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	scale = 0.122
+}
+
+#
+
+

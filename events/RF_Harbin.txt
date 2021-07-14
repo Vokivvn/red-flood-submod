@@ -1,0 +1,332 @@
+﻿###########################
+##### Harbin Events #######
+###########################
+
+add_namespace = HAR
+
+##Zhelto Collapse: The Sidelines
+#Manchus
+country_event = {
+	id = HAR.11
+	title = HAR.11.t
+	desc = HAR.11.desc
+	is_triggered_only = yes
+
+	#Change to MNS
+	option = {
+		name = HAR.11.A
+		MNS = {
+			transfer_state = 912
+			transfer_state = 881
+			transfer_state = 810
+			transfer_state = 761
+			transfer_state = 714
+			add_state_core = 912
+			add_state_core = 881
+			add_state_core = 810
+			add_state_core = 761
+			add_state_core = 714
+			hidden_effect = {
+			    load_oob = MNS_1936
+			    add_ideas = {
+					MNS_zaitao_hog
+					MNS_zaitao_for
+					MNS_aisin_gioro_xiqia_eco
+					MNS_yinchang_sec
+			    }
+			}
+			change_tag_from = HAR
+		}
+		ZHR = {
+			if = {
+				limit = {
+					has_full_control_of_state = 717
+				}
+				MNS = {
+					transfer_state = 717
+					add_state_core = 717
+				}
+			}
+		}
+		HAR = {
+			hidden_effect = {
+				country_event = {
+					id = HAR.12
+					days = 2
+				}
+			}
+		}
+
+	}
+
+	#Stay
+	option = {
+		name = HAR.11.B
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = HAR.12
+				days = 2
+			}
+		}
+		MNS = {
+			transfer_state = 912
+			transfer_state = 881
+			transfer_state = 810
+			transfer_state = 761
+			transfer_state = 714
+			add_state_core = 912
+			add_state_core = 881
+			add_state_core = 810
+			add_state_core = 761
+			add_state_core = 714
+			hidden_effect = {
+			    load_oob = MNS_1936
+			    add_ideas = {
+					MNS_zaitao_hog
+					MNS_zaitao_for
+					MNS_aisin_gioro_xiqia_eco
+					MNS_yinchang_sec
+			    }
+			}
+		}
+		ZHR = {
+			if = {
+				limit = {
+					has_full_control_of_state = 717
+				}
+				MNS = {
+					transfer_state = 717
+					add_state_core = 717
+				}
+			}
+		}
+		
+	}
+}
+
+#Priamurye
+country_event = {
+	id = HAR.12
+	title = HAR.12.t
+	desc = HAR.12.desc
+	is_triggered_only = yes
+
+	#Change to Priamurye
+	option = {
+		name = HAR.12.A
+		PRI = {
+			transfer_state = 930
+			transfer_state = 408
+			add_state_core = 930
+			add_state_core = 408
+			hidden_effect = {
+			    load_oob = PRI_1936
+			    add_ideas = {
+					PRI_spiridon_merkulov_hog
+					PRI_nikolay_wojciechowski_for
+					PRI_nikolay_merkulov_eco
+					PRI_innokentiy_eremeyev_sec
+			    }
+			}
+			change_tag_from = HAR
+		}
+		HAR = {
+			hidden_effect = {
+				country_event = {
+					id = HAR.12
+					days = 2
+				}
+			}
+		}
+	}
+
+	#Stay
+	option = {
+		name = HAR.12.B
+		add_political_power = 10
+		hidden_effect = {
+			country_event = {
+				id = HAR.13
+				days = 2
+			}
+		}
+		PRI = {
+			transfer_state = 930
+			transfer_state = 408
+			add_state_core = 930
+			add_state_core = 408
+			hidden_effect = {
+			    load_oob = PRI_1936
+			    add_ideas = {
+					PRI_spiridon_merkulov_hog
+					PRI_nikolay_wojciechowski_for
+					PRI_nikolay_merkulov_eco
+					PRI_innokentiy_eremeyev_sec
+			    }
+			}
+		}
+		
+	}
+}
+
+#Green Ukraine
+country_event = {
+	id = HAR.13
+	title = HAR.13.t
+	desc = HAR.13.desc
+	is_triggered_only = yes
+
+	#Change to Green Ukraine
+	option = {
+		name = HAR.13.A
+		GUK = {
+			transfer_state = 657
+			transfer_state = 561
+			transfer_state = 560
+			transfer_state = 409
+			add_state_core = 657
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			hidden_effect = {
+			    load_oob = GUK_1936
+			    add_ideas = {
+					GUK_borys_khreshchatytskyi_hog
+					GUK_dmytro_borovyk_for
+					GUK_kost_andrushchenko_eco
+					GUK_oleksandr_dovzhenko_sec
+			    }
+			}
+			change_tag_from = HAR
+		}
+		hidden_effect = {
+			ZHR = {
+				if = {
+					limit = {
+						has_full_control_of_state = 574
+					}
+					HAR = {
+						hidden_effect = {
+							country_event = {
+								id = HAR.14
+								days = 2
+							
+						}
+					}
+				}
+			}
+			}
+		}
+
+	}
+
+	#Stay
+	option = {
+		name = HAR.13.B
+		add_political_power = 10
+		hidden_effect = {
+			ZHR = {
+				if = {
+					limit = {
+						has_full_control_of_state = 574
+					}
+					HAR = {
+						hidden_effect = {
+							country_event = {
+								id = HAR.14
+								days = 2
+							
+						}
+					}
+				}
+			}
+			}
+		}
+		GUK = {
+			transfer_state = 657
+			transfer_state = 561
+			transfer_state = 560
+			transfer_state = 409
+			add_state_core = 657
+			add_state_core = 561
+			add_state_core = 560
+			add_state_core = 409
+			hidden_effect = {
+			    load_oob = GUK_1936
+			    add_ideas = {
+					GUK_borys_khreshchatytskyi_hog
+					GUK_dmytro_borovyk_for
+					GUK_kost_andrushchenko_eco
+					GUK_oleksandr_dovzhenko_sec
+			    }
+			}
+		}
+		
+	}
+}
+
+#Yakutia
+country_event = {
+	id = HAR.14
+	title = HAR.14.t
+	desc = HAR.14.desc
+	is_triggered_only = yes
+
+	#Yakutia breaks free
+	option = {
+		name = HAR.14.A
+		KCK = {
+			transfer_state = 574
+			transfer_state = 562
+			transfer_state = 1036
+			transfer_state = 644
+			transfer_state = 637
+			load_oob = KCK_1936
+			hidden_effect = {
+				set_country_flag = KCK_ksenofontov_path_unlock
+			}
+		}
+
+	}
+}
+
+
+#Harbin Directorate Elections
+#Results are in
+country_event = {
+	id = HAR.1
+	title = HAR.1.t
+	desc = HAR.1.desc
+	#picture = GFX_report_event_robot_skull_face
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = HAR.1.a
+		ai_chance = { factor = 40 }
+		set_country_flag = HAR_milyukov_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = HAR.1.b
+		ai_chance = { factor = 30 }
+		set_country_flag = HAR_myakotin_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = HAR.1.c
+		ai_chance = { factor = 20 }
+		set_country_flag = HAR_zaborovsky_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+
+	option = {
+		name = HAR.1.d
+		ai_chance = { factor = 10 }
+		set_country_flag = HAR_fajda_wins
+		mark_focus_tree_layout_dirty = yes
+	}
+}

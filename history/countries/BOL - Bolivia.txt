@@ -1,0 +1,65 @@
+﻿capital = 302
+
+oob = "BOL_1936"
+
+set_research_slots = 3 
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+		vanguard_socialism = 0
+		libertarian_marxism = 0
+		revolutionary_anarchism = 0
+		revisionist_socialism = 0
+		liberalism = 0
+		conservatism = 0
+		right_authoritarianism = 0
+		despotism = 100
+		reactionism = 0
+		accelerationism = 0
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Daniel Salamanca Urey"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "portrait_daniel_salamca.dds"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+		#popular_figurehead
+	}
+}
+
+create_corps_commander = {
+	name = "Carlos Quintanilla"
+		picture = "Carlos_Quintanilla_g.dds"
+	traits = {
+		trickster trait_engineer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}

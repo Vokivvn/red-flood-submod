@@ -1,0 +1,80 @@
+add_namespace = neu
+
+##Event: Introduction
+country_event = {
+	 id = neu.1
+	 title = neu.1.t
+	 desc = neu.1.desc
+	 picture = GFX_report_event_NEU_deutsch_brazilien
+	 fire_only_once = yes
+	 
+	trigger = {
+		TAG = NEU
+		NEU = {
+			controls_state = 1024
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = neu.1.a
+	}
+}
+country_event = {
+	id = neu.2
+	title = neu.2.t
+	desc = neu.2.desc
+	picture = GFX_report_event_NEU_porto_alegre
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = NEU
+		NEU = {
+			controls_state	= 502
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {
+		name = neu.2.a
+	}
+}
+country_event = {
+	id = neu.3
+	title = neu.3.t
+	desc = neu.3.desc
+	picture = GFX_report_event_NEU_junker
+	fire_only_once = yes
+	
+	trigger = {
+		TAG = NEU
+		NEU = {
+			controls_state	= 502
+			date > 1939.2.10
+		}
+	}
+	
+	option = {
+		name = neu.3.a
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}

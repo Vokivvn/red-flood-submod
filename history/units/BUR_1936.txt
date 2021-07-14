@@ -1,0 +1,127 @@
+﻿division_template = {
+	name = "Infantry Division"		
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Elite Mountaineers"	
+	division_names_group = RAJ_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }	
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 	
+	}
+}
+division_template = {
+	name = "Elite Cavalry" 	
+	division_names_group = RAJ_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      
+	}
+}
+units = {
+	division= {	
+		location = 4336
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4293
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7441
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 1492
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 1142
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 7122
+		division_template = "Infantry Division"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4654
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 11966
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 3999
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 4454
+		division_template = "Elite Mountaineers"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 1330
+		division_template = "Elite Cavalry"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division= {	
+		location = 12335
+		division_template = "Elite Cavalry"
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+}
+air_wings = {
+	640 = { 
+		tac_bomber_equipment_0 = {
+			owner = "BUR" 
+			amount = 20
+		}
+		fighter_equipment_0 = {
+			owner = "BUR"
+			amount = 40
+		}
+	}
+}

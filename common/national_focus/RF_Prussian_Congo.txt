@@ -1,0 +1,1025 @@
+focus_tree = {
+	id = PCN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PCN
+		}
+	}
+	continuous_focus_position = { x = 1700 y = 1900 }
+	#Focus for Disband Civil Liberties
+	focus = {
+		id = PCN_disbandcivilliberties
+		icon = GFX_disbandcivilliberties
+		x = 14
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_lebensborn }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.25
+			}
+		}
+	}
+
+	#Focus for Lebensborn
+	focus = {
+		id = PCN_lebensborn
+		icon = GFX_lebensborn
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointhuttig }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_lebensborn
+		}
+	}
+
+	#Focus for Äquatorstadt Military Camps
+	focus = {
+		id = PCN_quatorstadtmilitarycamps
+		icon = GFX_quatorstadtmilitarycamps
+		x = 18
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointhuttig }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 538} #Äquatorstadt military camps are in Äquatorstadt!
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for A Militaristic State
+	focus = {
+		id = PCN_amilitaristicstate
+		icon = GFX_amilitaristicstate
+		x = 16
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_subjugatethe99 }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_militarism
+		}
+	}
+
+	#Focus for Subjugate the 99%
+	focus = {
+		id = PCN_subjugatethe99
+		icon = GFX_subjugatethe99
+		x = 16
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointhuttig }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = 250
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.30
+			}
+		}
+	}
+
+	#Focus for Bring Them Development
+	focus = {
+		id = PCN_bringthemdevelopment
+		icon = GFX_bringthemdevelopment
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_quatorstadtlocaldevelopmentzone }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Bring Them Light
+	focus = {
+		id = PCN_bringthemlight
+		icon = GFX_bringthemlight
+		x = 2
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_newaskariunits }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_light_of_westernism
+		}
+	}
+
+	#Focus for Äquatorstadt Local Development Zone
+	focus = {
+		id = PCN_quatorstadtlocaldevelopmentzone
+		icon = GFX_quatorstadtlocaldevelopmentzone
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointbrody }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for New Askari Units
+	focus = {
+		id = PCN_newaskariunits
+		icon = GFX_newaskariunits
+		x = 2
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointbrody }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_askari
+		}
+	}
+
+	#Focus for A Welfare State
+	focus = {
+		id = PCN_awelfarestate
+		icon = GFX_awelfarestate
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_nativecitizenship }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_welfare_state
+		}
+	}
+
+	#Focus for Native Citizenship
+	focus = {
+		id = PCN_nativecitizenship
+		icon = GFX_nativecitizenship
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_appointbrody }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.25
+			add_political_power = -250
+		}
+	}
+
+	#Focus for The Unification War
+	focus = {
+		id = PCN_theunificationwar
+		icon = GFX_theunificationwar
+		x = 10
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = PCN_disbandcivilliberties  
+			focus = PCN_ultramilitaryexpansion
+			focus = PCN_bringthemlight
+			focus = PCN_bringthemdevelopment 
+		}
+		available = {
+			OR = {
+				if = {
+					has_completed_focus = PCN_disbandcivilliberties
+					has_completed_focus = PCN_ultramilitaryexpansion
+				}
+				if = {
+					has_completed_focus = PCN_bringthemlight
+					has_completed_focus = PCN_bringthemdevelopment
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Appoint Brody
+	focus = {
+		id = PCN_appointbrody
+		icon = GFX_appointbrody
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_futureofthecongo }
+		mutually_exclusive = {
+			focus = PCN_appointhuttig
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+
+	#Focus for Appoint Huttig
+	focus = {
+		id = PCN_appointhuttig
+		icon = GFX_appointhuttig
+		x = 16
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_futureofthecongo }
+		mutually_exclusive = {
+			focus = PCN_appointbrody
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+	}
+
+	#Focus for Future of the Congo
+	focus = {
+		id = PCN_futureofthecongo
+		icon = GFX_futureofthecongo
+		x = 10
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_aloneinthedark }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+			HIDDEN_EFFECT = {
+				country_event = { days = 1 id = pcn.1 }
+			}
+		}
+	}
+
+	#Focus for Alone in the Dark
+	focus = {
+		id = PCN_aloneinthedark
+		icon = GFX_aloneinthedark
+		x = 10
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Focus for Destroy The Kivu Cult
+	focus = {
+		id = PCN_destroythekivucult
+		icon = GFX_destroykivu
+		x = 22
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_industrialreforms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -1
+			}
+			add_stability = -0.15
+		}
+	}
+
+	#Focus for Backwards No More
+	focus = {
+		id = PCN_backwardsnomore
+		icon = GFX_backwardsnm
+		x = 22
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_contacttheuhmk }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			navy_experience = 50			
+			add_tech_bonus = { bonus = 1 uses = 5 category = naval_equipment}
+			295 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Focus for Industrial Reforms
+	focus = {
+		id = PCN_industrialreforms
+		icon = GFX_industrialreform
+		x = 22
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_backwardsnomore }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_industrialized
+		}
+	}
+
+	#Focus for The End Of The Unification
+	focus = {
+		id = PCN_theendoftheunification
+		icon = GFX_endtounification
+		x = 22
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			PCN = { owns_state = 295 }
+			PCN = { owns_state = 788 }
+			PCN = { owns_state = 916 }
+			PCN = { owns_state = 998 }
+			PCN = { owns_state = 999 }
+			PCN = { owns_state = 538 }
+			PCN = { owns_state = 1000 }
+			PCN = { owns_state = 1001 }
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			hidden_effect = {
+				country_event = {
+					id = pcn.2
+				}
+			}
+		}
+	}
+
+	#Focus for Contact the UHMK
+	focus = {
+		id = PCN_contacttheuhmk
+		icon = GFX_contactuhmk
+		x = 22
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_theendoftheunification }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.3
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Mob Rule
+	focus = {
+		id = PCN_mobrule
+		icon = GFX_mobrule
+		x = 7
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_truedemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_mob_rule
+		}
+	}
+
+	#Focus for Merciless Westernization
+	focus = {
+		id = PCN_mercilesswesternization
+		icon = GFX_mercilesswesternization
+		x = 1
+		y = 16
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_newjerusalemofafrica }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_ideas = PCN_westernized
+			remove_ideas = PCN_light_of_westernism
+		}
+	}
+
+	#Focus for The Ultimatum
+	focus = {
+		id = PCN_theultimatum
+		icon = GFX_theultimatum
+		x = 4
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_expandedwelfareprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			HIDDEN_EFFECT = {
+				country_event = { days = 1 id = pcn.6 }
+			}
+		}
+	}
+
+	#Focus for True Democracy
+	focus = {
+		id = PCN_truedemocracy
+		icon = GFX_truedemocracy
+		x = 7
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_theultimatum }
+		mutually_exclusive = { focus = PCN_newjerusalemofafrica }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.15
+			}
+			add_stability = -0.15
+			add_war_support = 1
+			add_ideas = PCN_true_democracy
+		}
+	}
+
+	#Focus for Calm and Balance
+	focus = {
+		id = PCN_calmandbalance
+		icon = GFX_calmandbalance
+		x = 10
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_cautiousindividualism }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+
+	#Focus for Expanded Welfare Programs
+	focus = {
+		id = PCN_expandedwelfareprograms
+		icon = GFX_expandedwelfareprograms
+		x = 4
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_localeducationprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_welfare_state
+		}
+	}
+
+	#Focus for Renewed Thirst
+	focus = {
+		id = PCN_renewedthirst
+		icon = GFX_renewedthirst
+		x = 16
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_huttigseizespower }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = PCN_renewed_thirst
+		}
+	}
+
+	#Focus for End All Political Parties
+	focus = {
+		id = PCN_endallpoliticalparties
+		icon = GFX_endallpoliticalparties
+		x = 16
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_renewedthirst }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 150
+add_stability = -0.05
+add_popularity = {
+	ideology = reactionism
+	popularity = 0.25
+}
+		}
+	}
+
+	#Focus for Expanded Civilian Industry Programs
+	focus = {
+		id = PCN_expandedcivilianindustryprograms
+		icon = GFX_expandedcivilianindustryprograms
+		x = 10
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_jngercomesoutontop }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+limit = {
+free_building_slots = {
+building = industrial_complex
+size > 0
+include_locked = yes
+}
+}
+add_extra_state_shared_building_slots = 3
+add_building_construction = {
+type = industrial_complex
+level = 3
+instant_build = yes
+}
+}
+		}
+	}
+
+	#Focus for Cautious Individualism
+	focus = {
+		id = PCN_cautiousindividualism
+		icon = GFX_cautiousindividualism
+		x = 10
+		y = 12
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_expandedcivilianindustryprograms }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.15
+add_popularity = {
+	ideology = right_authoritarianism
+	popularity = -0.05
+}
+		}
+	}
+
+	#Focus for Local Education Programs
+	focus = {
+		id = PCN_localeducationprograms
+		icon = GFX_localeducationprograms
+		x = 4
+		y = 11
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_brodysavesthecongo }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Brody Saves The Congo
+	focus = {
+		id = PCN_brodysavesthecongo
+		icon = GFX_brodysavesthecongo
+		x = 4
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_killtheprotector }
+		prerequisite = { focus = PCN_destroytherepublic }
+		prerequisite = { focus = PCN_crushthebelgianmisery }
+		prerequisite = { focus = PCN_destroythegaranganze }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		custom_trigger_tooltip = { 
+			tooltip = PCN_Conquered_Congo_tt
+			owns_state = 718
+			}
+			hidden_trigger = {
+				always = no
+			}
+		}
+	}
+
+	#Focus for Ultra Military Expansion
+	focus = {
+		id = PCN_ultramilitaryexpansion
+		icon = GFX_ultramilitaryexpansion
+		x = 18
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_quatorstadtmilitarycamps }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Jünger Comes Out on Top
+	focus = {
+		id = PCN_jngercomesoutontop
+		icon = GFX_jngercomesoutontop
+		x = 10
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_killtheprotector }
+		prerequisite = { focus = PCN_destroytherepublic }
+		prerequisite = { focus = PCN_crushthebelgianmisery }
+		prerequisite = { focus = PCN_destroythegaranganze }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		custom_trigger_tooltip = { 
+			tooltip = PCN_Conquered_Congo_tt
+			owns_state = 718
+			}
+			hidden_trigger = {
+			always = no
+			}
+		}
+	}
+
+	#Focus for Huttig Seizes Power
+	focus = {
+		id = PCN_huttigseizespower
+		icon = GFX_huttigseizespower
+		x = 16
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_killtheprotector }
+		prerequisite = { focus = PCN_destroytherepublic }
+		prerequisite = { focus = PCN_crushthebelgianmisery }
+		prerequisite = { focus = PCN_destroythegaranganze }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		custom_trigger_tooltip = { 
+			tooltip = PCN_Conquered_Congo_tt
+			owns_state = 718
+			}
+			hidden_trigger = {
+			always = no
+			}
+		}
+	}
+
+	#Focus for Destroy The Republic
+	focus = {
+		id = PCN_destroytherepublic
+		icon = GFX_destroytherepublic
+		x = 7
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		available = {
+			has_completed_focus = PCN_theunificationwar
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		will_lead_to_war_with = CFS
+		bypass = {
+			CFS = { exists = no }
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = CFS }
+		}
+	}
+
+	#Focus for Crush The Belgian Misery
+	focus = {
+		id = PCN_crushthebelgianmisery
+		icon = GFX_crushthebelgianmisery
+		x = 11
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		bypass = {
+			NBE = { exists = no }
+		}
+		available = {
+			is_neighbor_of = NBE
+			MWA = { exists = no }
+			CFS = { exists = no }
+			is_subject = no
+		}
+		will_lead_to_war_with = NBE
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = NBE }
+		}
+	}
+
+	#Focus for Kill The Protector
+	focus = {
+		id = PCN_killtheprotector
+		icon = GFX_killtheprotector
+		x = 13
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		bypass = {
+			KIV = { exists = no }
+		}
+		available = {
+			is_neighbor_of = KIV
+			NBE = { exists = no }
+			MWA = { exists = no }
+			CFS = { exists = no }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		will_lead_to_war_with = KIV
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = KIV }
+		}
+	}
+	
+	#Focus for Destroy The Garanganze
+	focus = {
+		id = PCN_destroythegaranganze
+		icon = GFX_destroythegaranganze
+		x = 9
+		y = 9
+		cost = 10
+		available_if_capitulated = yes
+		will_lead_to_war_with = MWA
+		bypass = {
+			MWA = { exists = no }
+		}
+		available = {
+			is_neighbor_of = MWA
+			CFS = { exists = no }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = MWA }
+		}
+	}
+
+	#Focus for Domination And Servitude
+	focus = {
+		id = PCN_dominationandservitude
+		icon = GFX_dominationandservitude
+		x = 16
+		y = 13
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_endallpoliticalparties }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_ideas = PCN_domination
+		}
+	}
+
+	#Focus for New Jerusalem Of Africa
+	focus = {
+		id = PCN_newjerusalemofafrica
+		icon = GFX_newjerusalemofafrica
+		x = 1
+		y = 14
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = PCN_theultimatum }
+		mutually_exclusive = { focus = PCN_truedemocracy }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+			add_popularity = {
+	ideology = social_democratism
+	popularity = 0.25
+}
+add_stability = -0.15
+		}
+	}
+
+#End of focuses 
+ }

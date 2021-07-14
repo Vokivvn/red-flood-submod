@@ -1,0 +1,150 @@
+﻿###########################
+# Israel Events
+###########################
+
+add_namespace = ISR
+country_event = { 
+	id = ISR.victory
+	title = ISR.victory.t
+	desc = ISR.victory.desc
+	#picture = 
+	fire_only_once = yes
+
+    mean_time_to_happen = {
+        days = 1
+    }
+    trigger = {
+    		tag = ISR
+    		has_war_with = SYR
+			SYR = { surrender_progress > 0.4}
+    }
+
+	immediate = {
+		white_peace = {
+		    tag = SYR
+		}
+		ISR = {
+			set_state_owner = 454
+			set_state_controller = 454
+			set_state_owner = 1004
+			set_state_controller = 1004
+			set_state_owner = 1003
+			set_state_controller = 1003
+			set_capital = 1003
+		}
+		JOR = {
+			set_state_owner = 455
+			set_state_controller = 455
+			load_oob = "JOR_spawn"
+		}
+		LEB = {
+			set_state_owner = 553
+			set_state_controller = 553
+			load_oob = "LEB_spawn"
+		}
+	}
+	option = {
+		name = ISR.victory.a
+	}
+	option = {
+		name = ISR.victory.b
+			LEB = {
+				hidden_effect = {
+					country_event = {
+						id = leb.1
+						days = 1
+					}	
+				}
+				change_tag_from = ISR
+			}
+	}
+
+}
+
+country_event = { 
+	id = ISR.3
+	title = ISR.3.t
+	desc = ISR.3.desc
+	#picture = 
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			tag = SYR
+		    date > 1937.1.4
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = ISR.3.a
+		SYR = {
+			country_event = { days = 40 id = ISR.4 }
+		}
+	}
+
+}
+
+country_event = { 
+	id = ISR.4
+	title = ISR.4.t
+	desc = ISR.4.desc
+	#picture = 
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = ISR.4.a
+		ai_chance = {
+			factor = 2
+		}
+		add_stability = -0.5
+		add_popularity = {
+			ideology = right_authoritarianism
+			popularity = -0.3
+		}
+		454 = { set_demilitarized_zone = yes }
+	}
+	option = { 
+		name = ISR.4.b
+		ai_chance = {
+			factor = 6
+		}
+		ENG = { 
+			set_autonomy = { target = SYR autonomy_state = autonomy_free } 
+			remove_from_faction	= SYR
+			add_opinion_modifier = { target = SYR modifier = hostile_status }
+		}
+
+		SYR = {
+			add_opinion_modifier = { target = ENG modifier = hostile_status }
+			set_cosmetic_tag = KSYR
+			add_war_support = 0.3
+			add_stability = 0.3
+			remove_ideas = {SYR_underground_resistance}
+		}
+
+		ISR_Revolting = yes
+	}
+	option = { 
+		name = ISR.4.c
+		ai_chance = {
+			factor = 0
+		}
+		ENG = { 
+			set_autonomy = { target = SYR autonomy_state = autonomy_free } 
+			remove_from_faction	= SYR
+			add_opinion_modifier = { target = SYR modifier = hostile_status }
+		}
+
+		SYR = {
+			add_opinion_modifier = { target = ENG modifier = hostile_status }
+			set_cosmetic_tag = KSYR
+			add_war_support = 0.3
+			add_stability = 0.3
+			remove_ideas = {SYR_underground_resistance}
+		}
+
+		ISR_Revolting = yes
+		ISR  = { change_tag_from = SYR}
+	}
+}

@@ -1,0 +1,2628 @@
+ideas = {
+	country = {
+		ENG_economic_catastrophe = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.1	
+			}
+		}
+		
+        ENG_divided_nation = {
+			removal_cost = -1 
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.1	
+				political_power_gain = -0.5
+				right_authoritarianism_drift = 0.01
+				libertarian_marxism_drift = 0.01
+			}
+		}
+			
+        ENG_shadow_of_the_somme = {
+			removal_cost = -1 
+			picture = generic_victors_of_ww1
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				conscription_factor = -0.25
+				war_support_factor = -0.2
+				training_time_army_factor = 0.20 	
+			}
+		}
+			
+        ENG_imperial_eclipse = {
+			removal_cost = -1 
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				justify_war_goal_time = +0.25	
+			}
+		}
+		
+		ENG_edward_viii = {
+			removal_cost = -1 
+			picture = ENG_idea_edward_viii
+			allowed = {
+				original_tag = ENG
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = revisionist_socialism
+						has_government = libertarian_marxism
+						has_government = revolutionary_anarchism
+					}
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor	= 0.03
+				political_power_gain = -0.5
+			}
+		}
+		
+		ENG_political_honeymoon = {
+			removal_cost = -1 
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.25
+			}
+		}
+		
+		ENG_brittania_rules_the_waves = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				naval_speed_factor = 0.10
+				navy_capital_ship_attack_factor = 0.05
+				navy_screen_attack_factor = 0.10
+			}
+		}
+		
+		ENG_glorious_army = {
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				training_time_army_factor = -0.25
+				army_org = 0.20
+				army_morale_factor = 0.2
+			}
+		}
+		
+		ENG_scrap_into_spitfires = {
+			removal_cost = -1
+			picture = GER_volksding
+			allowed = {
+				original_tag = ENG
+			}                       
+			equipment_bonus = {
+				fighter_equipment = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+
+		ENG_knights_of_the_sky = {
+			removal_cost = -1
+			picture = GER_volksding
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+			}
+		}
+
+		ENG_geddes_axe = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		ENG_balenced_budget = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				political_power_gain = 0.25
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		ENG_the_lion_roars = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		ENG_company_government_cooperation = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				conversion_cost_civ_to_mil_factor = -0.25
+			}
+		}
+		
+		ENG_reduced_tarrifs = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		ENG_portuguese_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		ENG_atlantic_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.04
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		
+		ENG_global_trade = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.15
+				global_building_slots_factor = 0.10
+			}
+		}
+		
+		ENG_farmer_insurance = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+		
+		ENG_home_market_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				weekly_manpower = 1000
+				local_building_slots_factor = 0.10
+			}
+		}
+		
+		ENG_coal_mining_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		
+		ENG_regulation_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ENG_conservative_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				weekly_manpower = 1000
+				local_building_slots_factor = 0.10
+				local_resources_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ENG_compassionate_conservatism = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+				foreign_minister_cost_factor = -0.20
+				economy_minister_cost_factor = -0.20
+				security_minister_cost_factor = -0.20
+				head_of_intel_cost_factor = -0.20
+			}
+		}
+		
+		ENG_national_development_council = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.2
+			}
+		}
+		
+		ENG_liberal_economic_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_liberal_economic_reforms_2 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		
+		ENG_liberal_economic_reforms_3 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		ENG_liberal_economic_reforms_4 = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.02
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		ENG_education_reforms = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				research_speed_factor = 0.15
+			}
+		}
+		
+		ENG_liberal_powerhouse = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+				foreign_minister_cost_factor = -0.20
+				economy_minister_cost_factor = -0.20
+				security_minister_cost_factor = -0.20
+				head_of_intel_cost_factor = -0.20
+			}
+		}
+		
+		ENG_booming_economy = {
+		removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = -0.2
+				industrial_capacity_factory = 0.2
+				production_speed_buildings_factor = 0.15
+			}
+		}
+
+		ENG_keynesian_economics_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		ENG_socialist_reconstruction_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		ENG_the_new_jerusalam = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.15
+				consumer_goods_factor = 0.10
+				political_power_factor = 0.20
+				drift_defence_factor = 0.30
+			}
+		}
+		
+		ENG_increased_welfare = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
+				drift_defence_factor = 0.10
+			}
+		}
+		
+		ENG_socialist_reconstruction_complete_idea = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				industrial_capacity_factory = 0.25
+				consumer_goods_factor = 0.15
+			}
+	    }
+		
+	    ENG_maternity_care = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				weekly_manpower = 250
+			}
+	    }
+		
+	    ENG_national_health_service = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				weekly_manpower = 500
+				stability_factor = 0.10
+				consumer_goods_factor = 0.05
+			}
+	    }
+		
+		ENG_house_of_lords_abolish = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = -0.03
+				political_power_factor = 0.05
+			}
+	    }
+		
+		ENG_labour_construction_programs = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		ENG_indian_sinkhole = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		
+		ENG_volunteer_corps = {
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				send_volunteers_tension = -0.50	
+				send_volunteer_size = 3
+				}
+		}
+	
+		ENG_national_unity_government = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+	 	
+		ENG_air_raid_shelters = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				industry_air_damage_factor = -0.15
+			}
+		}
+		
+		ENG_anti_bombing_preparation = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.05
+			}
+	    }
+		
+		ENG_anti_bombing_preparation2 = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.05
+				industry_air_damage_factor = -0.05
+			}
+		}
+		
+		ENG_anti_bombing_preparation3 = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				stability_factor = 0.07
+				industry_air_damage_factor = -0.05
+			}
+		}
+		
+		ENG_woman_land_army = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				conscription = 0.01
+			}
+	    }
+		
+		ENG_britain_shall_not_burn = {
+			removal_cost = -1 
+			picture = great_depression
+			allowed = {
+				original_tag = ENG
+			}
+			modifier = {
+				army_core_defence_factor = 0.2
+			}
+		}
+	}
+
+############
+# Minister #
+############
+
+    #### Head of Government ####
+    head_of_government = {
+        austen_chamberlain = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				has_government = conservatism
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+	    mark_sykes = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		john_anderson = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		leopold_amery = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	
+		nancy_astor = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		christopher_addison = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		herbert_samuel = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		clement_davis = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		goronwy_owen = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		herbert_morrison = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		clement_attlee = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+		
+		aneurin_bevan = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		Nancy_Mitford = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ernest_bevin = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		arthur_greenwood = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = { hog_naive_optimist }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		charles_maxwell_knight = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		edmund_ironside = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		lord_david_mitford = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = reactionism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_corporate_suit
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		archibald_ramsay = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		rotha_lintorn_orman = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		diana_mitford = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		arthur_horner = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		tom_wintringham = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		jessica_mitford = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+
+    }
+
+    #### Foreign Minister ####
+    foreign_minister = {
+        fom_mark_sykes = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		edward_wood = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		neville_chamberlain = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		anthony_eden = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		john_simon = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		robert_cecil = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		rufus_isaac = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		walter_ruciman = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		stafford_cripps = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		fom_ernest_bevin = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		emanuel_shinwell = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		malcolm_macdonald = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		claude_auchinleck = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		arthur_percival = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = despotism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		AK_chesterton = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		john_amery = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		harry_dobson = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		rajani_dutt = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+    }
+	#### Economy Minister ####
+	economy_minister = {
+	    ecm_john_anderson = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		alfred_robert_grindlay = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_construction_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		kingsley_wood = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		robert_horne = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ecmgoronwy_owen = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		archibald_sinclair = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		eng_reginald_mckenna = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		frank_hodges = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		john_keynes = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		oliver_bullied = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_railway_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		stephen_owen_davis = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		john_strachey = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		william_aitken = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = despotism
+				    has_government = reactionism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		arthur_harris = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = despotism
+				    has_government = reactionism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_battlefield_support_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		econ_archibald_ramsay = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = despotism
+				    has_government = reactionism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		cecil_dudgeon = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = despotism
+				    has_government = reactionism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		econ_arthur_horner = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		william_gallacher = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	####Security Minister ####
+	security_minister = {
+	    stanley_baldwin = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = { sec_compassionate_gentleman }
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		arthur_boscawen = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		esmond_harmsworth = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = conservatism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		eng_herbert_asquith = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		eng_robert_hutchinson = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+        eng_int_christopher_addison = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = liberalism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		wilfred_owen = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		hamilton_fyfe = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		moi_herbert_morrison = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_back_stabber
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		james_ede = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		richard_tawney = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = social_democratism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		int_stewart_menzies = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = right_authoritarianism
+				    has_government = despotism
+				    has_idea = ENG_national_unity_government
+				}
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		william_joyce = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = despotism
+				    has_government = reactionism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		mary_sophia_allen = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = reactionism
+				    has_government = despotism
+				    has_government = accelerationism
+				}
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		harry_pollitt = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				security_minister
+				sec_crooked_kleptocrat
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		thomas_nicholas = {
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				OR = {
+				    has_government = vanguard_socialism
+				    has_government = libertarian_marxism
+				    has_government = revolutionary_anarchism
+				    has_government = revisionist_socialism
+				}
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	####Head of Intel ####
+	head_of_intel = {
+	    vernon_kell = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		stewart_menzies = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		hugh_sinclair = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_naval_intelligence_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		david_petrie = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		percy_sillitoe = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		guy_liddell = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		hoi_charles_knight = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		joan_miller = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+	}
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	designer = yes
+		aioc = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea aioc"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		english_electric = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea english_electric"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.15
+			}
+		}
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	designer = yes
+		
+		rsaf_enfield = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea rsaf_enfield"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				infantry_equipment_producer_defense_1
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+		
+		vauxhall = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vauxhall"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				motorised_equipment_producer_offense_1
+			}
+			research_bonus = {
+				motorized_equipment = 0.05
+			}
+		}
+		
+		royal_arsenal = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea royal_arsenal"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				artillery_producer_defense_1
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+	}
+
+	#### Tanks ####
+	tank_manufacturer = {
+	designer = yes
+		vickers_armstrong_eng = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vickers_armstrong_eng"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				medium_tank_producer_defense_1
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		
+		vauxhall_armor = {
+			name = vauxhall
+			picture = vauxhall
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea vauxhall_armor"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				small_tank_producer_defense_1
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	designer = yes
+		
+		yarrow_shipbuilders = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea yarrow_shipbuilders"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { cruiser_producer_defense_2 }
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		harland_wolff = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea harland_wolff"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				capital_ship_producer_defense_2
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		cammell_laird = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea cammell_laird"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				capital_ship_producer_offense_1
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+		
+		john_brown_company = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea john_brown_company"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				cruiser_producer_mass_1
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}	
+
+		supermarine = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea supermarine"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				fighter_producer_offense_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		hawker = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea hawker"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				fighter_producer_mass_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}	
+		
+		de_havilland = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea de_havilland"}
+			allowed = { original_tag = ENG }
+			traits = {
+				fighter_producer_defense_2
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		avro = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea avro"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		fairey_aviation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea fairey_aviation"}
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}			
+	}
+
+	
+#################################
+# Chief of Staff and Theorist	#
+#################################
+	chief_of_staff = {
+		archibald_montgomery_massingberd = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_defence
+			}
+		}
+		
+		ENG_john_dill = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+		}
+		
+		ENG_edmund_ironside = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_fire_support
+			}
+		}
+		
+		ENG_alan_brooke = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_staff
+				cos_school_of_mass_combat
+			}
+		}
+		
+		ENG_bernard_montgomery = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {	
+				chief_of_staff
+				cos_school_of_manoeuvre
+			}
+		}
+	}
+	
+	chief_of_army = {
+	    ENG_henry_wilson = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_army
+				carm_static_defence_doctrine
+			}
+		}
+		
+		ENG_army_claude_auchinleck = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_army
+				carm_elastic_defence_doctrine
+			}
+		}
+		
+		ENG_harold_alexander = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_army
+				carm_decisive_battle_doctrine
+			}
+		}
+		
+		ENG_oliver_leese = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_army
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+	chief_of_navy = {
+	    ENG_navy_andrew_cunningham = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { cnav_decisive_battle_doctrine }
+		}
+		
+		ENG_bertram_ramsay = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_navy
+				cnav_open_seas_doctrine
+			}
+		}
+		
+		ENG_charles_lambe = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_navy
+				cnav_indirect_approach_doctrine
+			}
+		}
+		
+		ENG_tom_phillips = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_navy
+				cnav_power_projection_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+	    ENG_charles_portal = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_air_force
+				cair_carpet_bombing_doctrine
+			}
+		}
+		
+		ENG_hugh_dowding = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_air_force
+				cair_air_superiority_doctrine
+			}
+		}
+		
+		ENG_sholto_douglas = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_air_force
+				cair_battlefield_support_doctrine
+			}
+		}
+		
+		ENG_cyril_newall = {
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				chief_of_air_force
+				cair_vertical_envelopment_doctrine
+			}
+		}
+	}
+	theorist = { #removed because that's not how it works in this minister system
+		
+	}
+}

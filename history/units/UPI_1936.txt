@@ -1,0 +1,78 @@
+﻿division_template = {
+	name = "Elite Infantry"		
+	division_names_group = RAJ_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 } 
+	}
+}
+units = {
+	division = {
+		location = 12137
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4045
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 5040
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 7938
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 12786
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 9973
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4299
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 1377
+		division_template = "Elite Infantry"		
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+}
+air_wings = {
+	438 = { 
+		tac_bomber_equipment_0 =  {	
+			owner = "UPI" 
+			amount = 50
+		}
+		fighter_equipment_0 = {
+			owner = "UPI"
+			amount = 25
+		}
+	}
+}

@@ -1,0 +1,421 @@
+spriteTypes = {
+#Europe#
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_RUS"
+		texturefile = "gfx/flags/small/RUS.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_SRU"
+		texturefile = "gfx/flags/small/SRU.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_RUS_acc"
+		texturefile = "gfx/flags/small/RUS_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_RUS_reac"
+		texturefile = "gfx/flags/small/RUS_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BLR"
+		texturefile = "gfx/flags/small/BLR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BLR_ruthenia"
+		texturefile = "gfx/flags/small/BLR_ruthenia.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BLR_reactionism"
+		texturefile = "gfx/flags/small/BLR_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BLR_accelerationism"
+		texturefile = "gfx/flags/small/BLR_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIN"
+		texturefile = "gfx/flags/small/FIN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIN_independent"
+		texturefile = "gfx/flags/small/FIN.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIN_independent_despotism"
+		texturefile = "gfx/flags/small/FIN_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIN_independent_accelerationism"
+		texturefile = "gfx/flags/small/FIN_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIR"
+		texturefile = "gfx/flags/small/FIR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIR_revolutionary_anarchism"
+		texturefile = "gfx/flags/small/FIR_revolutionary_anarchism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIR_free_territory_revolutionary_anarchism"
+		texturefile = "gfx/flags/small/FIR_free_territory_revolutionary_anarchism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR"
+		texturefile = "gfx/flags/small/UKR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR_revsoc"
+		texturefile = "gfx/flags/small/UKR_revisionist_socialism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR2_despotism"
+		texturefile = "gfx/flags/small/UKR2_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR3_despotism"
+		texturefile = "gfx/flags/small/UKR3_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR4_accelerationism"
+		texturefile = "gfx/flags/small/UKR4_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR5_accelerationism"
+		texturefile = "gfx/flags/small/UKR5_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR6_accelerationism"
+		texturefile = "gfx/flags/small/UKR6_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_UKR7_accelerationism"
+		texturefile = "gfx/flags/small/UKR7_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ITA"
+		texturefile = "gfx/flags/small/ITA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_AUS_despotism"
+		texturefile = "gfx/flags/small/AUS_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_AUS_accelerationism"
+		texturefile = "gfx/flags/small/AUS_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_AUS_alpine"
+		texturefile = "gfx/flags/small/AUS_alpine.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_AUS"
+		texturefile = "gfx/flags/small/AUS.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIU_italian_republic"
+		texturefile = "gfx/flags/small/FIU_italian_republic.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIU_italian_combine"
+		texturefile = "gfx/flags/small/FIU_italian_combine.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FIU_italian_shogunate"
+		texturefile = "gfx/flags/small/FIU_italian_shogunate.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_POL"
+		texturefile = "gfx/flags/small/POL.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_POL_toporzel_flag_accelerationism"
+		texturefile = "gfx/flags/small/POL_toporzel_flag_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_POL_despotism"
+		texturefile = "gfx/flags/small/POL_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ENG"
+		texturefile = "gfx/flags/small/ENG.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FRA"
+		texturefile = "gfx/flags/small/FRA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FRA_acephale_accelerationism"
+		texturefile = "gfx/flags/small/FRA_acephale_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_FRA_druidists"
+		texturefile = "gfx/flags/small/FRA_druidist.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_GER"
+		texturefile = "gfx/flags/small/GER.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_GER_nmapd"
+		texturefile = "gfx/flags/small/GER_nmapd.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_GER_heidnischer_sozialismus"
+		texturefile = "gfx/flags/small/GER_heidnischer_sozialismus.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_GER_social_democratism"
+		texturefile = "gfx/flags/small/GER_social_democratism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_YUG_accelerationism"
+		texturefile = "gfx/flags/small/YUG_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_YUG_reactionism"
+		texturefile = "gfx/flags/small/YUG_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_WRU"
+		texturefile = "gfx/flags/small/WRU.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_WRU_vanguard_socialism"
+		texturefile = "gfx/flags/small/WRU_vanguard_socialism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_WRT_reactionism"
+		texturefile = "gfx/flags/small/WRT_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_WRR_reactionism"
+		texturefile = "gfx/flags/small/WRR_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_LAT_accelerationism"
+		texturefile = "gfx/flags/small/LAT_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_EST"
+		texturefile = "gfx/flags/small/EST.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_DKB"
+		texturefile = "gfx/flags/small/DKB.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_DKB_accelerationism"
+		texturefile = "gfx/flags/small/DKB_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+#Americas#
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_USA"
+		texturefile = "gfx/flags/small/USA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BRA"
+		texturefile = "gfx/flags/small/BRA.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BRA_revsoc"
+		texturefile = "gfx/flags/small/BRA_revisionist_socialism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_BRR"
+		texturefile = "gfx/flags/small/BRR.tga"
+		legacy_lazy_load = no
+	}
+#Africa#
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_LIB"
+		texturefile = "gfx/flags/small/LIB.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_LIB_acc"
+		texturefile = "gfx/flags/small/LIB_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_LIB_rw"
+		texturefile = "gfx/flags/small/LIB_right_authoritarianism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_LIB_vansoc"
+		texturefile = "gfx/flags/small/LIB_vanguard_socialism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_MAG"
+		texturefile = "gfx/flags/small/MAG.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_MAG_conservatism"
+		texturefile = "gfx/flags/small/MAG_conservatism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_MAG_libmarx"
+		texturefile = "gfx/flags/small/MAG_libertarian_marxism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_MAG_acc"
+		texturefile = "gfx/flags/small/MAG_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+#Asia#
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ORE"
+		texturefile = "gfx/flags/small/ORE.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ORE_conservatism"
+		texturefile = "gfx/flags/small/ORE_conservatism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ORE_right_authoritarianism"
+		texturefile = "gfx/flags/small/ORE_right_authoritarianism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_STE"
+		texturefile = "gfx/flags/small/STE.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_STE_revisionist_socialism"
+		texturefile = "gfx/flags/small/STE_revisionist_socialism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_STE_social_democratism"
+		texturefile = "gfx/flags/small/STE_social_democratism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_STE_cossack_despotism"
+		texturefile = "gfx/flags/small/STE_cossack_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_STE_reactionism"
+		texturefile = "gfx/flags/small/STE_reactionism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_SIB"
+		texturefile = "gfx/flags/small/SIB.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_SIB_social_democratism"
+		texturefile = "gfx/flags/small/SIB_social_democratism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_SIB_accelerationism"
+		texturefile = "gfx/flags/small/SIB_accelerationism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_JAP"
+		texturefile = "gfx/flags/small/JAP.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_JPR"
+		texturefile = "gfx/flags/small/JPR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ZHR"
+		texturefile = "gfx/flags/small/ZHR.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ZHR_despotism"
+		texturefile = "gfx/flags/small/ZHR_despotism.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_ZHR_ONE"
+		texturefile = "gfx/flags/small/ZHR_ONE.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_KCK"
+		texturefile = "gfx/flags/small/KCK.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_KCK_independent"
+		texturefile = "gfx/flags/small/KCK_independent.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_RF_game_rule_flag_KCK_japanese"
+		texturefile = "gfx/flags/small/KCK_japanese.tga"
+		legacy_lazy_load = no
+	}
+}

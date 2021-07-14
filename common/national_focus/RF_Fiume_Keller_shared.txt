@@ -1,0 +1,829 @@
+#Keller Tree
+
+	shared_focus = {
+		id = FIU_Poetry_In_Motion
+		icon = GFX_focus_FIU_Poetry_In_Motion
+		#prerequisite = { focus = FIU_The_Emergency_State }
+		x = 8
+		y = 0
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_political_power = 200
+			#country_event = {
+			#   id = #Insert ID of the event where Keller lays out his program
+		    #}	
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Maintain_The_Experiments
+		icon = GFX_focus_FIU_Maintain_The_Experiments
+		prerequisite = { focus = FIU_Poetry_In_Motion }
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 1
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_stability = 0.15
+		    add_war_support = 0.15
+			add_dynamic_modifier = {
+				modifier = FIU_keller_aint_broken
+				scope = FIU
+			}
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Examining_The_Councils
+		icon = GFX_focus_FIU_Examining_The_Councils
+		prerequisite = { focus = FIU_Maintain_The_Experiments }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_political_power = 50
+			add_to_variable = {
+				var = keller_aint_broken_political_power_gain
+				value = 0.2
+			}
+			custom_effect_tooltip = "FIU_Examining_The_Councils_tooltip"
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Examining_Corperations
+		icon = GFX_focus_FIU_Examining_Corperations
+		prerequisite = { focus = FIU_Maintain_The_Experiments }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = -2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			 add_to_variable = {
+				var = keller_aint_broken_consumer_goods
+				value = -0.03
+			 }
+			add_to_variable = {
+				var = keller_aint_broken_factory_output
+				value = 0.05
+			 }
+			 add_to_variable = {
+				var = keller_aint_broken_production_cap
+				value = 0.02
+			 }
+			 custom_effect_tooltip = "FIU_Examining_Corperations_tooltip"
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Examining_The_Militia
+		icon = GFX_focus_FIU_Examining_The_Militia
+		prerequisite = { focus = FIU_Maintain_The_Experiments }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = -4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+		    add_to_variable = {
+				var = keller_aint_broken_conscription_factor
+				value = 0.1
+			}
+			custom_effect_tooltip = "FIU_Examining_The_Militia_tooltip"
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Examining_The_Laws
+		icon = GFX_focus_FIU_Examining_The_Laws
+		prerequisite = { focus = FIU_Maintain_The_Experiments }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 2
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+			add_stability = 0.05
+		    add_to_variable = {
+				var = keller_aint_broken_stability_weekly
+				value = 0.005
+			}
+			custom_effect_tooltip = "FIU_Examining_The_Laws_tooltip"
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_Examining_The_Institutions
+		icon = GFX_focus_FIU_Examining_The_Institutions
+		prerequisite = { focus = FIU_Maintain_The_Experiments }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 4
+		y = 2
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		completion_reward = {
+		    add_to_variable = {
+				var = keller_aint_broken_research_speed
+				value = 0.02
+			}
+			custom_effect_tooltip = "FIU_Examining_The_Institutions_tooltip"
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_The_Show_Goes_On
+		icon = GFX_focus_FIU_The_Show_Goes_On
+		prerequisite = { focus = FIU_Examining_The_Councils }
+		prerequisite = { focus = FIU_Examining_Corperations }
+		prerequisite = { focus = FIU_Examining_The_Institutions }
+		prerequisite = { focus = FIU_Examining_The_Laws }
+		prerequisite = { focus = FIU_Examining_The_Militia }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 3
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_ideas = FIU_spirit_of_19 
+		    add_war_support = 0.25
+		}
+	}
+
+	shared_focus = {
+		id = FIU_The_Bound
+		icon = GFX_focus_FIU_The_Bound
+		prerequisite = { focus = FIU_The_Show_Goes_On }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 4
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_ideas = FIU_bounding_ahead
+		    add_war_support = 0.1
+		}
+	}
+
+	shared_focus = {
+		id = FIU_The_Great_Aerodrome
+		icon = GFX_focus_FIU_The_Great_Aerodrome
+		prerequisite = { focus = FIU_The_Bound }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    random_owned_controlled_state = {
+			    add_building_construction = {
+			        type = air_base
+				    level = 5
+				    instant_build = yes
+		        }
+			}
+			random_owned_controlled_state = {
+			    add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+			        type = arms_factory
+				    level = 2
+				    instant_build = yes
+			    }
+		    }
+        }			
+	}
+
+	shared_focus = {
+		id = FIU_Expand_The_Arditi
+		icon = GFX_focus_FIU_Expand_The_Arditi
+		prerequisite = { focus = FIU_The_Bound }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = -2
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_manpower = -30000
+			hidden_effect = {
+				load_oob = FIU_arditi
+			}
+			custom_effect_tooltip = "FIU_Expand_The_Arditi_tooltip"
+		}
+		
+	}
+
+	shared_focus = {
+		id = FIU_Contacts_In_The_Veneto
+		icon = GFX_focus_FIU_Contacts_In_The_Veneto
+		prerequisite = { focus = FIU_The_Bound }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 2
+		y = 5
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			ITA = {
+				has_government = accelerationism
+			}
+		}
+		completion_reward = {
+			ITA = {
+				add_popularity = {
+					ideology = accelerationism
+					popularity = 0.05
+				}
+			}
+			custom_effect_tooltip = "FIU_Contacts_In_The_Veneto_tooltip"
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+	}
+
+	shared_focus = {
+		id = FIU_The_Sprint
+		icon = GFX_focus_FIU_The_Sprint
+		prerequisite = { focus = FIU_The_Great_Aerodrome }
+		prerequisite = { focus = FIU_Contacts_In_The_Veneto }
+		prerequisite = { focus = FIU_Expand_The_Arditi }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 6
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    swap_ideas = {
+			    remove_idea = FIU_bounding_ahead
+				add_idea = FIU_dead_sprint
+			}
+			add_political_power = -100
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Fill_The_Hangars
+		icon = GFX_focus_FIU_Fill_The_Hangars
+		prerequisite = { focus = FIU_The_Sprint}
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_1
+				amount = 300
+				producer = FIU
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_1
+				amount = 200
+				producer = FIU
+			}
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Turn_The_Captains
+		icon = GFX_focus_FIU_Turn_The_Captains
+		prerequisite = { focus = FIU_The_Sprint}
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = -2
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			ITA = {
+				transfer_ship = {
+					type = heavy_cruiser
+					target = FIU
+				}
+				transfer_ship = {
+					type = heavy_cruiser
+					target = FIU
+				}
+				transfer_ship = {
+					type = light_cruiser
+					target = FIU
+				}
+				transfer_ship = {
+					type = light_cruiser
+					target = FIU
+				}
+				transfer_ship = {
+					type = light_cruiser
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				transfer_ship = {
+					type = destroyer
+					target = FIU
+				}
+				custom_effect_tooltip = "FIU_Turn_The_Captains_tooltip"
+			}
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Speak_To_Balbo
+		icon = GFX_focus_FIU_Speak_To_Balbo
+		prerequisite = { focus = FIU_The_Sprint}
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = -4
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					ITA = {
+						has_government = despotism
+					}
+				}
+				ITA = {
+					add_political_power = -100
+					add_stability = -0.1
+					add_opinion_modifier = { target = FIU modifier = medium_decrease }
+				}
+			}
+			else = {
+				ITA = {
+					add_timed_idea = {
+						idea = FIU_blackshirt_agitation
+						days = 270
+					}
+				}
+			}
+		}
+	}
+
+	shared_focus = {
+		id = FIU_Industrial_Authority
+		icon = GFX_focus_FIU_Industrial_Authority
+		prerequisite = { focus = FIU_The_Sprint}
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 2
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_stability = -0.10
+			random_owned_controlled_state = {
+			    add_extra_state_shared_building_slots = 3
+			    add_building_construction = {
+			        type = arms_factory
+				    level = 3
+				    instant_build = yes
+			    }
+		    }
+		}
+		
+	}
+
+	shared_focus = {
+		id = FIU_Inform_The_Councils
+		icon = GFX_focus_FIU_Inform_The_Councils
+		prerequisite = { focus = FIU_The_Sprint}
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 4
+		y = 7
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    set_war_support = 1
+		}
+	}
+
+	shared_focus = {
+		id = FIU_And_Now
+		icon = GFX_focus_FIU_And_Now
+		prerequisite = { focus = FIU_Fill_The_Hangars }
+		prerequisite = { focus = FIU_Turn_The_Captains }
+		prerequisite = { focus = FIU_Speak_To_Balbo }
+		prerequisite = { focus = FIU_Industrial_Authority }
+		prerequisite = { focus = FIU_Inform_The_Councils }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 8
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    add_ideas = FIU_militia_mobilized
+		}
+	}
+
+	shared_focus = {
+		id = FIU_The_Leap
+		icon = GFX_focus_FIU_The_Leap
+		prerequisite = { focus = FIU_And_Now }
+		
+		relative_position_id = FIU_Poetry_In_Motion
+		x = 0
+		y = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		    remove_ideas = FIU_dead_sprint
+			declare_war_on = {
+			    target = ITA
+				type = annex_everything
+			}
+			160 = {
+				set_demilitarized_zone = no
+			}
+			load_focus_tree = {
+				tree = FIU_keller_postwar
+				keep_completed = yes
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = ITA
+					}
+					add_claim_by = FIU
+				}
+				FRA = {
+					country_event = {
+						id = fiume.55
+						days = 2
+					}
+				}
+			}
+		}
+	}

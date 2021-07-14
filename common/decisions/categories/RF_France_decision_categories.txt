@@ -1,0 +1,49 @@
+FRA_worldwide_futurism = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = FRA
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = FRA_full_speed_world
+		is_subject = no
+	}
+}
+FRA_support_revolutions = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = FRA
+		OR = {
+			country_exists = ENG
+			NOT = {
+				ENG = {
+					is_puppet_of = FRA
+				}
+			}
+		}
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = FRA_aid_revolutions
+		is_subject = no
+	}
+}
+FRA_against_councilism_cat = {
+	picture = decision_cat_picture_FRA_worldwide_futurism
+	allowed = {
+		original_tag = FRA
+		OR = {
+			country_exists = GER
+			NOT = {
+				GER = {
+					is_puppet_of = FRA
+				}
+			}
+		}
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = FRA_against_councilism
+		is_subject = no
+	}
+}

@@ -1,0 +1,72 @@
+capital = 1026
+
+oob = "MOG_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+set_convoys = 10
+
+set_popularities = {
+        accelerationism = 0
+        reactionism = 0
+        despotism = 32
+        right_authoritarianism = 0
+        conservatism = 40
+        liberalism = 20
+        social_democratism = 8
+        libertarian_marxism = 0
+        vanguard_socialism = 0
+        revolutionary_anarchism = 0
+
+}
+
+set_politics = {
+	
+	ruling_party = conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+create_country_leader = {
+	name = "Mitsuyo Maeda"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/MOG/Portrait_Mitsuyo_Maeda.tga"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Junji Kikawa"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "gfx/leaders/MOG/Portrait_Junji_Kikawa.tga"
+	expire = "1965.1.1"
+	ideology = constitutional_dictatorship
+	traits = {
+	}
+}
+create_corps_commander = {
+	name = "Tomessada Matsuzaki"
+	picture = "Portrait_Tomessada_Matsuzaki.tga"
+	traits = { }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Junji Kikawa"
+	picture = "Portrait_Junji_Kikawa_General.tga"
+	traits = { offensive_doctrine politically_connected }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+

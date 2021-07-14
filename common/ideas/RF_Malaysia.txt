@@ -1,0 +1,67 @@
+############
+# Malaysia #
+############
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		MAL_economic_downturn = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAL_economic_downturn"}
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.4
+################trade_laws_cost_factor = 0.25
+				production_speed_buildings_factor = -0.3
+			}
+			picture = great_depression
+		}
+		
+		MAL_communist_resurgence = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAL_communist_resurgence"}
+			modifier = {
+				stability_factor = -0.25
+				army_morale_factor = -0.1
+				vanguard_socialism_drift = 0.1
+			}
+			picture = great_depression
+		}
+		
+		MAL_centralisation_issues = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MAL_centralisation_issues"}
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.2 
+			}
+			picture = great_depression
+		}
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

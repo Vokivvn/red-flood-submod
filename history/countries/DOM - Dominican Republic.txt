@@ -1,0 +1,51 @@
+﻿capital = 319
+
+oob = "DOM_1936"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 10
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 10
+	liberalism = 10
+	conservatism = 40
+	right_authoritarianism = 10
+	despotism = 0
+	reactionism = 10
+	accelerationism = 10
+}
+create_country_leader = {
+	name = "Horacio Vasquez"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Horacio_Vasquez.dds"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+} 
+set_stability = 0.5
+

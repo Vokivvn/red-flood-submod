@@ -1,0 +1,219 @@
+ideas = {
+	country = {
+	
+		PCN_lebensborn = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				monthly_population = 2.0
+				stability_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		PCN_militarism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				conscription = 0.02
+				army_core_attack_factor = 0.1
+			}
+		}
+		
+		PCN_light_of_westernism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		
+		PCN_askari = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				conscription = 0.05
+				stability_factor = 0.10
+				war_support_factor = 0.10
+			}
+		}
+		
+		PCN_welfare_state = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.10
+			}
+		}
+		
+		PCN_industrialized = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.20
+				industrial_capacity_factory = 0.15
+			}
+		}
+		
+		PCN_mob_rule = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				research_speed_factor = -0.2
+				political_power_gain = 1
+			}
+		}
+		PCN_westernized = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_gain = 0.50
+				social_democratism_drift = 0.05
+			}
+		}
+		
+		PCN_true_democracy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				political_power_gain = 0.50
+				social_democratism_drift = 0.05
+				political_power_cost = -0.50
+			}
+		}
+		
+		PCN_renewed_thirst = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				army_core_defence_factor = 0.25
+				army_core_attack_factor = 0.25
+			}
+		}
+		
+		PCN_domination = {
+			removal_cost = -1
+			allowed = {
+				original_tag = PCN
+			}
+			modifier = {
+				stability_factor = -0.1
+				reactionism_drift = 0.10
+			}
+		}
+	}
+	
+	head_of_government = {
+		PCN_Ernst_Junger_hog = {
+			allowed = { original_tag = PCN }
+			available = {  }
+			traits = {
+				head_of_government
+				hog_reformist_soldier
+			}
+			cancel_if_invalid = yes
+		}
+		
+		PCN_Hans_Huttig_hog = {
+			allowed = { original_tag = PCN }
+			available = { has_country_flag = PCN_appointhuttig }
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			cancel_if_invalid = yes
+		}
+		
+		PCN_Louis_Brody_hog = {
+			allowed = { original_tag = PCN }
+			available = { has_country_flag = PCN_appointbrody }
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	foreign_minister = {
+		PCN_Theodor_von_Hippel_fom = {
+			picture = GFX_idea_PCN_Theodor_von_Hippel_fom
+			allowed = { original_tag = PCN }
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	economy_minister = {
+		PCN_Paul_Von_Lettow_eco = {
+			picture = GFX_idea_PCN_Paul_Von_Lettow_eco
+			allowed = { original_tag = PCN }
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	security_minister = {
+		PCN_Heinrich_Kirchheim_sec = {
+			allowed = { original_tag = PCN }
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	head_of_intel = {
+		PCN_Julian_Scherner_int = {
+			picture = GFX_idea_PCN_Julian_Scherner_int
+			allowed = { original_tag = PCN }
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	chief_of_staff = {
+		PCN_Muhammed_Husan_cof = {
+			picture = GFX_idea_PCN_Muhammed_Husan_cof
+			allowed = { original_tag = PCN }
+			traits = {
+				chief_of_staff
+				cos_school_of_psychology
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

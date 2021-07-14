@@ -1,0 +1,27 @@
+state= {
+	id=341
+	name="STATE_341"
+	manpower = 404509
+	resources={
+		chromium=84
+		steel = 20
+	}
+	
+	state_category = city
+
+	history= {
+		add_core_of = BUL
+		owner = BUL
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			9902 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = TUR
+	}
+	provinces = {
+		922  11842	9902	9888
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=842
+	name="STATE_842"
+
+	history={
+		owner = STE
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = STE
+		#add_core_of = BKR
+		#add_core_of = KAZ
+
+	}
+
+	provinces={
+		4651 4773 7711 7795 7856 10146 10547 13148 10550 4845 10619 12529 13149 13197
+	}
+	manpower=491400
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

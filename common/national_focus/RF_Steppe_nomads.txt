@@ -1,0 +1,540 @@
+focus_tree = {
+	id = RF_Steppe_Nomads
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			original_tag = STE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = STE_army_effort
+	shared_focus = STE_aviation_effort
+	shared_focus = STE_naval_effort
+	shared_focus = STE_industrial_effort
+
+	############### NOMADS ###############
+
+	focus = {
+		id = STE_the_nomads_have_won
+		icon = GFX_goal_STE_the_nomads_have_won
+		cost = 5
+		x = 7
+		y = 0
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			hidden_effect = {
+				delete_unit = { id = 1000 }
+				load_oob = "STE_kazakhified"
+			}
+
+			remove_unit_leader = 9019
+			remove_unit_leader = 9020
+			remove_unit_leader = 9021
+			remove_unit_leader = 9022
+			create_corps_commander = {
+				name = "Amangeldy Imanov"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Amangeldy_Imanov_general.tga"
+				traits = { cavalry_officer }
+				skill = 4
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Mirzhakyp Dulatuly"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Mirzhakyp_Dulatuly.tga"
+				traits = { trait_cautious }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Tokash Bokin"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Tokash_Bokin.tga"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Alikhan Bukeikhanov"
+				portrait_path = "gfx/leaders/STE/Portrait_STE_Alikhan_Bukeikhanov.tga"
+				traits = { politically_connected }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				remove_ideas = {
+					STE_Vasiliy_Scheglov
+					STE_Nikolay_Babiyev
+					STE_Vladimir_Yakunin
+					STE_Sergey_Biryukov
+					STE_Vladimir_Indeykin
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_disregard_infrastructure
+		icon = GFX_goal_STE_disregard_infrastructure
+		cost = 10
+		relative_position_id = STE_the_nomads_have_won
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = STE_the_nomads_have_won
+		}
+		completion_reward = {
+			add_ideas = STE_reign_of_nature
+		}
+	}
+	focus = {
+		id = STE_peasants_are_not_important
+		icon = GFX_goal_STE_peasants_are_not_important
+		cost = 10
+		relative_position_id = STE_disregard_infrastructure
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_disregard_infrastructure
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = STE_make_room_for_horses
+		icon = GFX_goal_STE_make_room_for_horses
+		cost = 10
+		relative_position_id = STE_peasants_are_not_important
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_peasants_are_not_important
+		}
+		completion_reward = {
+			add_stability = -0.2
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = STE_decentralize_arms_production
+		icon = GFX_goal_STE_decentralize_arms_production
+		cost = 10
+		relative_position_id = STE_the_nomads_have_won
+		x = -3
+		y = 2
+		prerequisite = {
+			focus = STE_the_nomads_have_won
+		}
+		completion_reward = {
+			add_ideas = STE_steppe_workshops
+		}
+	}
+	focus = {
+		id = STE_blood_tax
+		icon = GFX_goal_STE_blood_tax
+		cost = 10
+		relative_position_id = STE_decentralize_arms_production
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_decentralize_arms_production
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_steppe_workshops
+				add_idea = STE_steppe_levies
+			}
+		}
+	}
+	focus = {
+		id = STE_learn_from_ottomans
+		icon = GFX_goal_STE_learn_from_ottomans
+		cost = 10
+		relative_position_id = STE_blood_tax
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_blood_tax
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_steppe_levies
+				add_idea = STE_steppe_levies1
+			}
+		}
+	}
+	focus = {
+		id = STE_black_kirgiz_cavalry
+		icon = GFX_goal_STE_black_kirgiz_cavalry
+		cost = 10
+		relative_position_id = STE_learn_from_ottomans
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = STE_make_room_for_horses
+		}
+		prerequisite = {
+			focus = STE_learn_from_ottomans
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_steppe_levies1
+				add_idea = STE_steppe_levies2
+			}
+		}
+	}
+
+	focus = {
+		id = STE_our_ambitions
+		icon = GFX_goal_STE_our_ambitions
+		cost = 10
+		relative_position_id = STE_the_nomads_have_won
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_the_nomads_have_won
+		}
+		completion_reward = {
+			add_war_support = 0.4
+		}
+	}
+	focus = {
+		id = STE_conquest_of_kishi_zhuz
+		icon = GFX_goal_STE_conquest_of_kishi_zhuz
+		cost = 10
+		relative_position_id = STE_our_ambitions
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_our_ambitions
+		}
+		completion_reward = {
+			add_state_core = 406
+			add_state_core = 402
+			add_state_core = 652
+			add_state_core = 582
+			add_state_core = 732
+			add_state_core = 572
+			add_state_core = 1043
+			add_state_core = 852
+			create_wargoal = {
+				target = ORE
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TRK
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = STE_finish_the_red_threat
+		icon = GFX_goal_STE_finish_the_red_threat
+		cost = 10
+		relative_position_id = STE_conquest_of_kishi_zhuz
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_conquest_of_kishi_zhuz
+		}
+		available = {
+			ORE = { exists = no }
+		}
+		completion_reward = {
+			add_state_core = 587
+			create_wargoal = {
+				target = AQT
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = STE_challenge_mongols
+		icon = GFX_goal_STE_challenge_mongols
+		cost = 10
+		relative_position_id = STE_finish_the_red_threat
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_finish_the_red_threat
+		}
+		completion_reward = {
+			add_state_core = 838
+			add_state_core = 654
+			add_state_core = 898
+			add_state_claim = 618
+			add_state_claim = 617
+			add_state_claim = 760
+			add_state_claim = 793
+			add_state_claim = 961
+			add_state_claim = 329
+			add_state_claim = 962
+			add_state_claim = 915
+			add_state_claim = 330
+			add_state_claim = 914
+			add_state_claim = 612
+			add_state_claim = 564
+			add_state_claim = 563
+			add_state_claim = 964
+			create_wargoal = {
+				target = ALT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = TAN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = SIK
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MON
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = MO2
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = STE_restore_uly_zhuz
+		icon = GFX_goal_STE_restore_uly_zhuz
+		cost = 10
+		relative_position_id = STE_the_nomads_have_won
+		x = 3
+		y = 2
+		prerequisite = {
+			focus = STE_the_nomads_have_won
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+			hidden_effect = {
+				add_ideas = {
+					STE_Kurultay_hog
+					STE_Kurultay_for
+					STE_Kurultay_eco
+					STE_Kurultay_sec
+					STE_Kurultay_int
+				}	
+			}
+		}
+	}
+	focus = {
+		id = STE_force_invaders_out
+		icon = GFX_goal_STE_force_invaders_out
+		cost = 10
+		relative_position_id = STE_restore_uly_zhuz
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_restore_uly_zhuz
+		}
+		completion_reward = {
+			590 = {
+				add_manpower = -11402
+			}
+		}
+	}
+	focus = {
+		id = STE_disarm_sedentary_peoples
+		icon = GFX_goal_STE_disarm_sedentary_peoples
+		cost = 10
+		relative_position_id = STE_force_invaders_out
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_force_invaders_out
+		}
+		completion_reward = {
+			571 = {
+				add_manpower = -5630
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = STE
+			}
+		}
+	}
+	focus = {
+		id = STE_glory_to_new_khan
+		icon = GFX_goal_STE_glory_to_new_khan
+		cost = 10
+		relative_position_id = STE_disarm_sedentary_peoples
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_disarm_sedentary_peoples
+		}
+		prerequisite = {
+			focus = STE_away_with_alash
+		}
+		completion_reward = {
+			add_country_leader_trait = dictator
+			add_ideas = STE_new_great_khan
+		}
+	}
+
+	focus = {
+		id = STE_violent_purge
+		icon = GFX_goal_STE_violent_purge
+		cost = 10
+		relative_position_id = STE_the_nomads_have_won
+		x = 4
+		y = 1
+		prerequisite = {
+			focus = STE_the_nomads_have_won
+		}
+		completion_reward = {
+			404 = {
+				add_manpower = -15002
+			}
+		}
+	}
+	focus = {
+		id = STE_force_russians_to_bow
+		icon = GFX_goal_STE_force_russians_to_bow
+		cost = 10
+		relative_position_id = STE_violent_purge
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_violent_purge
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = despotism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -1
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = STE_away_with_alash
+		icon = GFX_goal_STE_away_with_alash
+		cost = 10
+		relative_position_id = STE_force_russians_to_bow
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = STE_force_russians_to_bow
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -1
+			}
+		}
+	}
+
+	focus = {
+		id = STE_steppe_bows_to_noone
+		icon = GFX_goal_STE_steppe_bows_to_noone
+		cost = 10
+		relative_position_id = STE_challenge_mongols
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_black_kirgiz_cavalry
+		}
+		prerequisite = {
+			focus = STE_challenge_mongols
+		}
+		prerequisite = {
+			focus = STE_glory_to_new_khan
+		}
+		available = {
+			ORE = { exists = no }
+			AQT = { exists = no }
+			SIK = { exists = no }
+			MON = { exists = no }
+			MO2 = { exists = no }
+			TAN = { exists = no }
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_state_core = 618
+			add_state_core = 617
+			add_state_core = 760
+			add_state_core = 793
+			add_state_core = 961
+			add_state_core = 329
+			add_state_core = 962
+			add_state_core = 915
+			add_state_core = 330
+			add_state_core = 914
+			add_state_core = 612
+			add_state_core = 564
+			add_state_core = 563
+			add_state_core = 964
+			every_state = {
+				limit = {
+					is_core_of = DKB
+				}
+				add_claim_by = STE
+			}
+			hidden_effect = {
+				remove_ideas = {
+					STE_reign_of_nature
+					STE_steppe_levies2
+					STE_new_great_khan
+				}
+				add_ideas = STE_golden_horde_reborn
+			}
+			custom_effect_tooltip = "STE_GOLDEN_HORDE_REBORN_TOOLTIP"
+		}
+	}
+}

@@ -1,0 +1,251 @@
+focus_tree = {
+	id = RF_Siberia_Revisionist_CW
+	country = {
+		factor = 0
+		modifier = {
+			add = 1
+			original_tag = SIB
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = SIB_army_effort
+	shared_focus = SIB_aviation_effort
+	shared_focus = SIB_naval_effort
+	shared_focus = SIB_industrial_effort
+	focus = {
+		id = SIB_for_the_republic
+		icon = GFX_goal_SIB_for_the_republic
+		cost = 2
+		x = 5
+		y = 0
+		available = {
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = SIB_revolt_of_the_masses
+		icon = GFX_goal_SIB_revolt_of_the_masses
+		cost = 4
+		relative_position_id = SIB_for_the_republic
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = SIB_for_the_republic
+		}
+		completion_reward = {
+			add_ideas = service_by_requirement
+		}
+	}
+	focus = {
+		id = SIB_seize_arms
+		icon = GFX_goal_SIB_seize_arms
+		cost = 4
+		relative_position_id = SIB_for_the_republic
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = SIB_for_the_republic
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 20000
+				producer = SIB
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SIB_wartime_reforms
+		icon = GFX_goal_SIB_wartime_reforms
+		cost = 4
+		relative_position_id = SIB_for_the_republic
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = SIB_revolt_of_the_masses
+		}
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	focus = {
+		id = SIB_arm_the_peasantry
+		icon = GFX_goal_SIB_arm_the_peasantry
+		cost = 4
+		relative_position_id = SIB_for_the_republic
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = SIB_seize_arms
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = -10000
+				producer = SIB
+			}
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = SIB_history_is_on_our_side
+		icon = GFX_goal_SIB_history_is_on_our_side
+		cost = 2
+		relative_position_id = SIB_for_the_republic
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = SIB_wartime_reforms
+		}
+		prerequisite = {
+			focus = SIB_arm_the_peasantry
+		}
+		completion_reward = {
+			add_ideas = {
+				SIB_upcos_hog
+				SIB_upcos_for
+				SIB_upcos_eco
+				SIB_upcos_sec
+				SIB_upcos_int
+				closed_economy
+			}
+		}
+	}
+	focus = {
+		id = SIB_triumph_at_novonikolayevsk
+		icon = GFX_goal_SIB_triumph_at_novonikolayevsk
+		cost = 2
+		relative_position_id = SIB_history_is_on_our_side
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = SIB_history_is_on_our_side
+		}
+		mutually_exclusive = {
+			focus = SIB_ceasefire_at_krasnoyarsk
+			focus = SIB_we_need_help
+		}
+		available = {
+			SIB = {
+				surrender_progress > 0.5
+			}
+		}
+		bypass = {
+			SIB = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			country_event = {
+				id = sib.10
+			}
+		}
+	}
+	focus = {
+		id = SIB_ceasefire_at_krasnoyarsk
+		icon = GFX_goal_SIB_ceasefire_at_krasnoyarsk
+		cost = 2
+		relative_position_id = SIB_history_is_on_our_side
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = SIB_history_is_on_our_side
+		}
+		mutually_exclusive = {
+			focus = SIB_triumph_at_novonikolayevsk
+			focus = SIB_we_need_help
+		}
+		available = {
+			MO4 = {
+				surrender_progress < 0.5
+			}
+			SIB = {
+				surrender_progress < 0.5
+			}
+		}
+		bypass = {
+			SIB = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			set_country_flag = SIB_ceasefire_event
+			effect_tooltip = {
+				country_event = {
+					id = sib.9
+				}
+			}
+		}
+	}
+	focus = {
+		id = SIB_we_need_help
+		icon = GFX_goal_SIB_we_need_help
+		cost = 2
+		relative_position_id = SIB_history_is_on_our_side
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = SIB_history_is_on_our_side
+		}
+		mutually_exclusive = {
+			focus = SIB_triumph_at_novonikolayevsk
+			focus = SIB_ceasefire_at_krasnoyarsk
+		}
+		available = {
+			MO4 = {
+				surrender_progress > 0.5
+			}
+		}
+		bypass = {
+			SIB = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {	target = ZHR	modifier = large_increase	}
+			ZHR = { add_opinion_modifier = {	target = MO4	modifier = large_increase	} }
+			ZHR ={
+				change_tag_from = MO4
+			}
+		}
+	}
+	focus = {
+		id = SIB_our_russian_comrades
+		icon = GFX_goal_SIB_our_russian_comrades
+		cost = 1
+		relative_position_id = SIB_history_is_on_our_side
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = SIB_triumph_at_novonikolayevsk
+			focus = SIB_ceasefire_at_krasnoyarsk
+			focus = SIB_we_need_help
+		}
+		available = {
+			has_war = no
+			any_neighbor_country = {
+				tag = ZHR
+			}
+			ZHR = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = libertarian_marxism
+					has_government = revisionist_socialism
+					has_government = revolutionary_anarchism
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+			country_event = {
+				id = sib.11
+			}
+		}
+	}
+}

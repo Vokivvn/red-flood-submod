@@ -1,0 +1,54 @@
+﻿division_template = {
+	name = "División de Infanteria"
+	division_names_group = SPAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = { 
+		name =  "1st Honduran Division"
+		location = 12865
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { 
+		name =  "2nd Honduran Division"
+		location = 2031
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division = { 
+		name =  "3rd Honduran Division"
+		location = 12823
+		division_template = "División de Infanteria"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "HON"
+		}
+		requested_factories = 1
+		progress = 0.51
+		efficiency = 100
+	}
+}

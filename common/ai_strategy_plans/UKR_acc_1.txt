@@ -1,0 +1,15 @@
+Ukraine_path_9 = {
+	enable = {
+		original_tag = UKR
+		has_game_rule = {
+			rule = UKR_ai_route
+			option = UKR_ACCELERATIONISM_TELIHA
+		}
+	}
+	ai_national_focuses = {
+		ukraine_mikhnovsky_scandal
+		ukraine_information_accelerationists
+		ukraine_bolbochan_steps_down
+		ukraine_olena_president
+	}
+}

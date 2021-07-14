@@ -1,0 +1,30 @@
+add_namespace = trk
+
+country_event = {
+	id = trk.1
+	title = trk.1.t
+	desc = trk.1.desc
+	picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = no
+
+	trigger = {
+		RUS = {
+			has_war_with = SRU
+		}
+		tag = TRK
+	}
+
+	option = {
+		name = por.1.a
+		RUS = {
+			end_puppet = TRK
+		}
+		set_autonomy = {
+		    target = TRK
+		    autonomy_state = autonomy_free
+		}
+		remove_ideas = RUS_warlord_indifference
+		set_cosmetic_tag = "TRK_independent"
+	}
+}

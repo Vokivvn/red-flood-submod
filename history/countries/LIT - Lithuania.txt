@@ -1,0 +1,151 @@
+capital = 96
+
+oob = "LIT_1936"
+
+set_research_slots = 3 
+
+set_convoys = 175
+
+add_ideas = {
+#
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = conservatism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	vanguard_socialism = 4
+	libertarian_marxism = 10
+	revolutionary_anarchism = 2
+	revisionist_socialism = 2
+	social_democratism = 10
+	liberalism = 8
+	conservatism = 40
+	right_authoritarianism = 14
+	despotism = 6
+	reactionism = 3
+	accelerationism = 1
+}
+
+set_stability = 0.8
+
+LIT = {
+	add_opinion_modifier = {
+		target = POL
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = BLR
+		modifier = intermarium_friendship
+	}
+	add_opinion_modifier = {
+		target = UKR
+		modifier = intermarium_friendship
+	}
+}
+
+create_country_leader = {
+	name = "Antanas Sniečkus"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.tga"
+	expire = "1965.1.1"
+	ideology = totalism
+	traits = {
+		popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Petras Cvirka"
+	desc = ""
+	picture = "Portrait_Lithuania_Antanas_Snieckus.dds"
+	expire = "1965.1.1"
+	ideology = council_communism
+	traits = {
+		popular_figurehead
+	}
+} 
+create_country_leader = {
+	name = "Alexander Berkman"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = social_anarchism
+	traits = {
+		popular_figurehead
+	}
+} 
+create_country_leader = {
+	name = "Juozas Vitas"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = religious_socialism
+	traits = {
+		popular_figurehead
+	}
+} 
+create_country_leader = {
+	name = "Mykolas Biržiška"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	traits = {
+		popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Kazys Grinius"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_LIT_Kazys_Grinius.tga"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {
+		popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Antanas Smetona"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism 
+	traits = {
+		popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Augustinas Voldemaras"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = reactionary_populism
+	traits = {
+		popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Vytautas Kairiūkštis"
+	desc = ""
+	picture = "Portrait_Russia_Alexei.dds"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+		popular_figurehead
+	}
+	}

@@ -1,0 +1,16 @@
+Russia_path_1 = {
+	enable = {
+        OR = {
+            original_tag = RUS
+            original_tag = SRU
+        }
+		has_game_rule = {
+			rule = RUS_ai_route
+			option = BLACKBLOCK
+		}
+	}
+	ai_national_focuses = {
+		RUS_alt_black_bloc
+        RUS_black_bloc
+	}
+}

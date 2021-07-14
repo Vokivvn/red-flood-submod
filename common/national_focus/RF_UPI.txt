@@ -1,0 +1,2460 @@
+focus_tree = {
+	id = RF_churchill
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = UPI
+		}
+	}
+	continuous_focus_position = { x = 2100 y = 50 }
+	
+	default = no
+
+	focus = {
+		id = UPI_churchill_horror
+		icon = GFX_focus_UPI_churchill_horror
+		cost = 3
+		x = 18
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = UPI.1
+			}
+		}
+	}
+	focus = {
+		id = UPI_churchill_companion
+		icon = GFX_focus_UPI_churchill_companion
+		cost = 2
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = UPI_churchill_horror
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.2
+			}
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = UPI_churchill_isolation
+		icon = GFX_focus_UPI_churchill_isolation
+		cost = 2
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = UPI_churchill_companion
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.3
+			}
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = UPI_sir_stop_drinking
+		icon = GFX_focus_UPI_sir_stop_drinking
+		cost = 2
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = UPI_churchill_isolation
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.4
+			}
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = UPI_sir_out_house
+		icon = GFX_focus_UPI_sir_out_house
+		cost = 2
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = UPI_churchill_isolation
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.5
+			}
+			add_stability = -0.02
+		}
+	}
+	focus = {
+		id = UPI_churchill_contemplation
+		icon = GFX_focus_UPI_churchill_contemplation
+		cost = 3
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = UPI_sir_out_house
+		}
+		prerequisite = {
+			focus = UPI_sir_stop_drinking
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.6
+			}
+		}
+	}
+	focus = {
+		id = UPI_now_what
+		icon = GFX_focus_UPI_now_what
+		cost = 1
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = UPI_churchill_contemplation
+		}
+		relative_position_id = UPI_churchill_horror
+		completion_reward = {
+			country_event = {
+				id = UPI.7
+			}
+		}
+	}
+
+	# Democratic Path #
+	focus = {
+		id = UPI_old_british_values
+		icon = GFX_focus_UPI_old_british_values
+		cost = 5
+		x = 5
+		y = 6
+		available = {
+			has_country_flag = UPI_democraticpath
+		}
+		prerequisite = {
+			focus = UPI_now_what
+		}
+		mutually_exclusive = {
+			focus = UPI_steady_go
+		}
+		mutually_exclusive = {
+			focus = UPI_night_library
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.8
+			}
+			hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Winston Churchill"
+					desc = "UPI_winston_churchill"
+					picture = "Portrait_UPI_Bloomer_Churchill_0.tga"
+					expire = "1965.1.1"
+					ideology = military_dictatorship
+					traits = {
+						UPI_brutal_colonizer
+					}
+				}
+			}
+			add_dynamic_modifier = {
+				modifier = UPI_democratization
+				scope = UPI
+			}
+		}
+	}
+	focus = {
+		id = UPI_form_parliament
+		icon = GFX_focus_UPI_form_parliament
+		cost = 10
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = UPI_old_british_values
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			add_to_variable = {
+				var = UPI_democratization_pp
+				value = 0.1
+			}
+			custom_effect_tooltip = "UPI_PARLIAMENT_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_sober_second
+		icon = GFX_focus_UPI_sober_second
+		cost = 10
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = UPI_form_parliament
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			add_to_variable = {
+				var = UPI_democratization_stab
+				value = 0.1
+			}
+			custom_effect_tooltip = "UPI_SOBER_THOUGHT_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_civilian_court
+		icon = GFX_focus_UPI_civilian_court
+		cost = 10
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = UPI_old_british_values
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			add_to_variable = {
+				var = UPI_democratization_stab
+				value = 0.1
+			}
+			add_to_variable = {
+				var = UPI_democratization_subv
+				value = -0.1
+			}
+			custom_effect_tooltip = "UPI_CIVILIAN_COURT_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_disarm_police
+		icon = GFX_focus_UPI_disarm_police
+		cost = 10
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = UPI_civilian_court
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			country_event = {
+				id = UPI.9
+			}
+			remove_ideas = UPI_brutal_putdowns
+		}
+	}
+	focus = {
+		id = UPI_census_people
+		icon = GFX_focus_UPI_census_people
+		cost = 10
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = UPI_old_british_values
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			country_event = {
+				id = UPI.10
+			}
+			add_to_variable = {
+				var = UPI_democratization_subv
+				value = -0.1
+			}
+			custom_effect_tooltip = "UPI_CENSUS_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_administrative_expansion
+		icon = GFX_focus_UPI_administrative_expansion
+		cost = 10
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = UPI_census_people
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			add_to_variable = {
+				var = UPI_democratization_goods
+				value = -0.03
+			}
+			add_to_variable = {
+				var = UPI_democratization_org
+				value = 0.05
+			}
+			custom_effect_tooltip = "UPI_ADMINISTRATIVE_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_place_indian
+		icon = GFX_focus_UPI_place_indian
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = UPI_administrative_expansion
+		}
+		prerequisite = {
+			focus = UPI_disarm_police
+		}
+		prerequisite = {
+			focus = UPI_sober_second
+		}
+		relative_position_id = UPI_old_british_values
+		completion_reward = {
+			country_event = {
+				id = UPI.11
+			}
+		}
+	}
+	focus = {
+		id = UPI_english_system
+		icon = GFX_focus_UPI_english_system
+		cost = 5
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = UPI_place_indian
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_universal_suffrage
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_universal_suffrage
+		icon = GFX_focus_UPI_universal_suffrage
+		cost = 5
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = UPI_place_indian
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_english_system
+		}
+		completion_reward = {
+			add_stability = 0.1
+			set_country_flag = UPI_deva_is_in
+		}
+	}
+	focus = {
+		id = UPI_controlled_parties
+		icon = GFX_focus_UPI_controlled_parties
+		cost = 5
+		x = -1
+		y = 2
+		prerequisite = {
+			focus = UPI_universal_suffrage
+			focus = UPI_english_system
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_free_speech
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_popularities = {
+				libertarian_marxism = 5
+				revisionist_socialism = 5
+				social_democratism = 20
+				liberalism = 20
+				conservatism = 20
+				right_authoritarianism = 5
+				despotism = 20
+				reactionism = 5
+				}
+			}
+			custom_effect_tooltip = "UPI_CONTROLLED_PARTIES_TOOLTIP"
+			add_political_power = -80
+		}
+	}
+	focus = {
+		id = UPI_free_speech
+		icon = GFX_focus_UPI_free_speech
+		cost = 5
+		x = 1
+		y = 2
+		prerequisite = {
+			focus = UPI_universal_suffrage
+			focus = UPI_english_system
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_controlled_parties
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_popularities = {
+				revolutionary_anarchism = 10
+				vanguard_socialism = 10
+				libertarian_marxism = 10
+				revisionist_socialism = 10
+				social_democratism = 10
+				liberalism = 10
+				conservatism = 10
+				right_authoritarianism = 5
+				despotism = 10
+				reactionism = 10
+				accelerationism = 5
+				}
+			}
+			custom_effect_tooltip = "UPI_FREE_SPEECH_TOOLTIP"
+		}
+	}
+	focus = {
+		id = UPI_limit_dissent
+		icon = GFX_focus_UPI_limit_dissent
+		cost = 5
+		x = -1
+		y = 3
+		prerequisite = {
+			focus = UPI_controlled_parties
+			focus = UPI_free_speech
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_right_protest
+		}
+		completion_reward = {
+			add_ideas = UPI_civil_obedience
+		}
+	}
+	focus = {
+		id = UPI_right_protest
+		icon = GFX_focus_UPI_right_protest
+		cost = 5
+		x = 1
+		y = 3
+		prerequisite = {
+			focus = UPI_controlled_parties
+			focus = UPI_free_speech
+		}
+		relative_position_id = UPI_place_indian
+		mutually_exclusive = {
+			focus = UPI_limit_dissent
+		}
+		completion_reward = {
+			add_ideas = UPI_freedom_assembly
+		}
+	}
+	focus = {
+		id = UPI_anglo_indian_democracy
+		icon = GFX_focus_UPI_anglo_indian_democracy
+		cost = 10
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = UPI_limit_dissent
+			focus = UPI_right_protest
+		}
+		relative_position_id = UPI_place_indian
+		completion_reward = {
+			set_politics = {
+				ruling_party = conservatism
+			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Winston Churchill"
+					desc = "UPI_winston_churchill"
+					picture = "Portrait_UPI_Bloomer_Churchill_2.tga"
+					expire = "1965.1.1"
+					ideology = social_conservatism
+					traits = {
+						
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_churchill_campaign
+		icon = GFX_focus_UPI_churchill_campaign
+		cost = 5
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = UPI_anglo_indian_democracy
+		}
+		relative_position_id = UPI_place_indian
+		completion_reward = {
+			country_event = {
+				id = UPI.12
+			}
+		}
+	}
+	focus = {
+		id = UPI_international_relations
+		icon = GFX_focus_UPI_international_relations
+		cost = 5
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = UPI_churchill_campaign
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = UPI_speak_bihar
+		icon = GFX_focus_UPI_speak_bihar
+		cost = 1
+		x = -4
+		y = 2
+		prerequisite = {
+			focus = UPI_international_relations
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.13
+			}
+		}
+	}
+	focus = {
+		id = UPI_commitment_to_unification
+		icon = GFX_focus_UPI_commitment_to_unification
+		cost = 5
+		x = -2
+		y = 2
+		prerequisite = {
+			focus = UPI_international_relations
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.16
+			}
+			add_ideas = UPI_unificationcomitee
+		}
+	}
+	focus = {
+		id = UPI_without_good_faith
+		icon = GFX_focus_UPI_without_good_faith
+		cost = 1
+		x = -4
+		y = 3
+		prerequisite = {
+			focus = UPI_speak_bihar
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.14
+			}
+		}
+	}
+	focus = {
+		id = UPI_commitment_to_safety
+		icon = GFX_focus_UPI_commitment_to_safety
+		cost = 5
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = UPI_commitment_to_unification
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.17
+			}
+			add_ideas = UPI_indian_guard 
+		}
+	}
+	focus = {
+		id = UPI_did_what_had_to
+		icon = GFX_focus_UPI_did_what_had_to
+		cost = 1
+		x = -4
+		y = 4
+		prerequisite = {
+			focus = UPI_without_good_faith
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.15
+			}
+			reverse_add_opinion_modifier = {
+				target = BIH
+				modifier = large_decrease
+			}
+		}
+	}
+	focus = {
+		id = UPI_commitment_to_india
+		icon = GFX_focus_UPI_commitment_to_india
+		cost = 5
+		x = -2
+		y = 4
+		prerequisite = {
+			focus = UPI_commitment_to_safety
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.18
+			}
+			add_ideas = UPI_indianimprovementassociation
+		}
+	}
+	focus = {
+		id = UPI_dealing_discontent
+		icon = GFX_focus_UPI_dealing_discontent
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = UPI_churchill_campaign
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.19
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = UPI_visiting_protectors
+		icon = GFX_focus_UPI_visiting_protectors
+		cost = 5
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = UPI_dealing_discontent
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_war_support = 0.1
+			438 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_touring_nation
+		icon = GFX_focus_UPI_touring_nation
+		cost = 10
+		x = 0
+		y = 3
+		prerequisite = {
+			focus = UPI_visiting_protectors
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.20
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = UPI_meeting_competition
+		icon = GFX_focus_UPI_meeting_competition
+		cost = 5
+		x = 0
+		y = 4
+		prerequisite = {
+			focus = UPI_touring_nation
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.21
+			}
+		}
+	}
+	focus = {
+		id = UPI_wooing_people
+		icon = GFX_focus_UPI_wooing_people
+		cost = 5
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = UPI_churchill_campaign
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.22
+			}
+		}
+	}
+	focus = {
+		id = UPI_speech_people
+		icon = GFX_focus_UPI_speech_people
+		cost = 5
+		x = 2
+		y = 2
+		prerequisite = {
+			focus = UPI_wooing_people
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.23
+			}
+		}
+	}
+	focus = {
+		id = UPI_speech_powerful
+		icon = GFX_focus_UPI_speech_powerful
+		cost = 5
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = UPI_speech_people
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.24
+			}
+			438 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_speech_all
+		icon = GFX_focus_UPI_speech_all
+		cost = 5
+		x = 2
+		y = 4
+		prerequisite = {
+			focus = UPI_speech_powerful
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_sloganeering
+		icon = GFX_focus_UPI_sloganeering
+		cost = 5
+		x = 4
+		y = 2
+		prerequisite = {
+			focus = UPI_wooing_people
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 45
+		}
+	}
+	focus = {
+		id = UPI_radio_broadcasts
+		icon = GFX_focus_UPI_radio_broadcasts
+		cost = 5
+		x = 4
+		y = 3
+		prerequisite = {
+			focus = UPI_sloganeering
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.25
+			}
+			hidden_effect = {
+				country_event = {
+					id = UPI.27
+					days = 15
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				technology = radio
+				technology = radio_detection
+				technology = decimetric_radar
+				technology = improved_decimetric_radar
+			}
+		}
+	}
+	focus = {
+		id = UPI_door_to_door
+		icon = GFX_focus_UPI_door_to_door
+		cost = 5
+		x = 4
+		y = 4
+		prerequisite = {
+			focus = UPI_radio_broadcasts
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 20
+			438 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_final_days
+		icon = GFX_focus_UPI_final_days
+		cost = 1
+		x = 0
+		y = 5
+		prerequisite = {
+			focus = UPI_door_to_door
+		}
+		prerequisite = {
+			focus = UPI_speech_all
+		}
+		prerequisite = {
+			focus = UPI_meeting_competition
+		}
+		prerequisite = {
+			focus = UPI_commitment_to_india
+		}
+		prerequisite = {
+			focus = UPI_did_what_had_to
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			add_stability = -0.05
+			country_event = {
+				id = UPI.26
+			}
+		}
+	}
+	focus = {
+		id = UPI_purdah
+		icon = GFX_focus_UPI_purdah
+		cost = 1
+		x = 0
+		y = 6
+		prerequisite = {
+			focus = UPI_final_days
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			country_event = {
+				id = UPI.28
+			}
+		}
+	}
+	focus = {
+		id = UPI_election_day
+		icon = GFX_focus_UPI_election_day
+		cost = 1
+		x = 0
+		y = 7
+		prerequisite = {
+			focus = UPI_purdah
+		}
+		relative_position_id = UPI_churchill_campaign
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = UPI_Winston_Churchill_hog
+			}
+			custom_effect_tooltip = "UPI_ELECTION_DAY_TOOLTIP"
+			hidden_effect = {
+				if = {	#Liberal Win
+					limit = {
+						OR = {
+							AND = {
+								check_variable = {
+									upi_liberal_win > upi_tory_win
+								}
+								check_variable = {
+									upi_liberal_win > upi_labour_win
+								}
+							}
+							AND = {
+								check_variable = {
+									upi_liberal_win > upi_tory_win
+								}
+								check_variable = {
+									upi_labour_win > upi_tory_win
+								}
+								check_variable = {
+									upi_liberal_win = upi_labour_win
+								}
+							}
+						}
+					}
+					country_event = {
+						id = UPI.29
+						days = 1
+					}
+				}
+				if = {	#Labour Win w Narendra
+					limit = {
+						has_country_flag = UPI_deva_is_in
+						OR = {
+							AND = {
+								check_variable = {
+									upi_labour_win > upi_tory_win
+								}
+								check_variable = {
+									upi_labour_win > upi_liberal_win
+								}
+							}
+							AND = {
+								check_variable = {
+									upi_labour_win > upi_liberal_win
+								}
+								check_variable = {
+									upi_tory_win > upi_liberal_win
+								}
+								check_variable = {
+									upi_labour_win = upi_tory_win
+								}
+							}
+						}
+					}
+					country_event = {
+						id = UPI.30
+						days = 1
+					}
+				}
+				if = {	#Labour Win no Narendra
+					limit = {
+						NOT = {
+							has_country_flag = UPI_deva_is_in
+						}
+						OR = {
+							AND = {
+								check_variable = {
+									upi_labour_win > upi_tory_win
+								}
+								check_variable = {
+									upi_labour_win > upi_liberal_win
+								}
+							}
+							AND = {
+								check_variable = {
+									upi_labour_win > upi_liberal_win
+								}
+								check_variable = {
+									upi_tory_win > upi_liberal_win
+								}
+								check_variable = {
+									upi_labour_win = upi_tory_win
+								}
+							}
+						}
+					}
+					country_event = {
+						id = UPI.31
+						days = 1
+					}
+				}
+				if = {	#Tory Win
+					limit = {
+						OR = {
+							AND = {
+								check_variable = {
+									upi_tory_win > upi_labour_win
+								}
+								check_variable = {
+									upi_tory_win > upi_liberal_win
+								}
+							}
+							AND = {
+								check_variable = {
+									upi_tory_win > upi_labour_win
+								}
+								check_variable = {
+									upi_liberal_win > upi_labour_win
+								}
+								check_variable = {
+									upi_tory_win = upi_liberal_win
+								}
+							}
+						}
+					}
+					country_event = {
+						id = UPI.32
+						days = 1
+					}
+				}
+			}
+		}
+	}
+
+	# New You Old Boy Path #
+	focus = {
+		id = UPI_night_library
+		icon = GFX_focus_UPI_night_library
+		cost = 1
+		x = 32
+		y = 6
+		prerequisite = {
+			focus = UPI_now_what
+		}
+		mutually_exclusive = {
+			focus = UPI_steady_go
+		}
+		mutually_exclusive = {
+			focus = UPI_old_british_values
+		}
+		available = {
+			has_country_flag = UPI_newyoupath
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.57
+			}
+		}
+	}
+	focus = {
+		id = UPI_reading_books
+		icon = GFX_focus_UPI_reading_books
+		cost = 2
+		x = -1
+		y = 1
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_night_library
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.58
+			}
+		}
+	}
+	focus = {
+		id = UPI_reading_books_rule
+		icon = GFX_focus_UPI_reading_books_rule
+		cost = 2
+		x = 1
+		y = 1
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_night_library
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.59
+			}
+		}
+	}
+	focus = {
+		id = UPI_new_you
+		icon = GFX_focus_UPI_new_you
+		cost = 2
+		x = 0
+		y = 2
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_reading_books_rule
+		}
+		prerequisite = {
+			focus = UPI_reading_books
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.60
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_new_declarations
+		icon = GFX_focus_UPI_new_declarations
+		cost = 2
+		x = 0
+		y = 3
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_new_you
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.61
+			}
+		}
+	}
+	focus = {
+		id = UPI_english_supremacy
+		icon = GFX_focus_UPI_english_supremacy
+		cost = 2
+		x = 0
+		y = 4
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_new_declarations
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.62
+			}
+		}
+	}
+	focus = {
+		id = UPI_convincing_officers
+		icon = GFX_focus_UPI_convincing_officers
+		cost = 5
+		x = -2
+		y = 5
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_english_supremacy
+		}
+		completion_reward = {
+			army_experience = 5
+			remove_ideas = UPI_shadow_gallipoli
+			country_event = {
+				id = UPI.63
+			}
+		}
+	}
+	focus = {
+		id = UPI_revoke_officer_titles
+		icon = GFX_focus_UPI_revoke_officer_titles
+		cost = 5
+		x = -2
+		y = 6
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_convincing_officers
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = UPI_churchill_manifesto
+		icon = GFX_focus_UPI_churchill_manifesto
+		cost = 5
+		x = 0
+		y = 5
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_english_supremacy
+		}
+		completion_reward = {
+			add_ideas = UPI_new_british_india
+			country_event = {
+				id = UPI.64
+			}
+		}
+	}
+	focus = {
+		id = UPI_natives_in_line
+		icon = GFX_focus_UPI_natives_in_line
+		cost = 5
+		x = 0
+		y = 6
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_churchill_manifesto
+		}
+		completion_reward = {
+			add_manpower = -3042
+			add_stability = -0.05
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.07
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.05
+			}
+			country_event = {
+				id = UPI.65
+			}
+		}
+	}
+	focus = {
+		id = UPI_cheaper_labour
+		icon = GFX_focus_UPI_cheaper_labour
+		cost = 5
+		x = 2
+		y = 5
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_english_supremacy
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = UPI_forced_labour
+				remove_idea = UPI_alone_unsupplied_cutoff
+			}
+		}
+	}
+	focus = {
+		id = UPI_impossible_standardisation
+		icon = GFX_focus_UPI_impossible_standardisation
+		cost = 5
+		x = 2
+		y = 6
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_cheaper_labour
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = UPI_forced_labour_1
+				remove_idea = UPI_forced_labour
+			}
+			438 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_to_seas
+		icon = GFX_focus_UPI_to_seas
+		cost = 2
+		x = -6
+		y = 8
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_external_affairs
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_state_claim = 431
+			add_state_claim = 435
+		}
+	}
+	focus = {
+		id = UPI_preparing_expedition
+		icon = GFX_focus_UPI_preparing_expedition
+		cost = 5
+		x = -6
+		y = 9
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_to_seas
+		}
+		completion_reward = {
+			add_ideas = UPI_reunion_fervour
+		}
+	}
+	focus = {
+		id = UPI_king_country
+		icon = GFX_focus_UPI_king_country
+		cost = 1
+		x = -6
+		y = 10
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_preparing_expedition
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = BIH
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = UPI_external_affairs
+		icon = GFX_focus_UPI_external_affairs
+		cost = 5
+		x = -2
+		y = 7
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_revoke_officer_titles
+		}
+		prerequisite = {
+			focus = UPI_natives_in_line
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = UPI_to_north
+		icon = GFX_focus_UPI_to_north
+		cost = 2
+		x = -2
+		y = 8
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_external_affairs
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_state_claim = 439
+		}
+	}
+	focus = {
+		id = UPI_every_soldier
+		icon = GFX_focus_UPI_every_soldier
+		cost = 5
+		x = -3
+		y = 9
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_to_north
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.75
+				uses = 2
+			}
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 1500
+    			producer = UPI
+			}
+		}
+	}
+	focus = {
+		id = UPI_attritional_warfare_doctrine
+		icon = GFX_focus_UPI_attritional_warfare_doctrine
+		cost = 5
+		x = -1
+		y = 9
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_to_north
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = UPI_liberate_delhi
+		icon = GFX_focus_UPI_liberate_delhi
+		cost = 1
+		x = -2
+		y = 10
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_attritional_warfare_doctrine
+		}
+		prerequisite = {
+			focus = UPI_every_soldier
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = ARY
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = UPI_unwelcome_liberators
+		icon = GFX_focus_UPI_unwelcome_liberators
+		cost = 5
+		x = -4
+		y = 11
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_liberate_delhi
+		}
+		prerequisite = {
+			focus = UPI_king_country
+		}
+		available = {
+			controls_state = 439
+			controls_state = 435
+		}
+		completion_reward = {
+			UPI = {
+				add_state_core = 435
+				add_state_core = 439
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = UPI_next_plans
+		icon = GFX_focus_UPI_next_plans
+		cost = 1
+		x = -4
+		y = 13
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_unwelcome_liberators
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_new_british_india
+				add_idea = UPI_new_british_india1
+			}
+			country_event = {
+				id = UPI.72
+			}
+		}
+	}
+	focus = {
+		id = UPI_internal_affairs
+		icon = GFX_focus_UPI_internal_affairs
+		cost = 5
+		x = 2
+		y = 7
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_impossible_standardisation
+		}
+		prerequisite = {
+			focus = UPI_natives_in_line
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_problem_manpower
+		icon = GFX_focus_UPI_problem_manpower
+		cost = 5
+		x = 1
+		y = 8
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_internal_affairs
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_manpower = 3000
+			country_event = {
+				id = UPI.67
+			}
+		}
+	}
+	focus = {
+		id = UPI_problem_production
+		icon = GFX_focus_UPI_problem_production
+		cost = 5
+		x = 3
+		y = 8
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_internal_affairs
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_forced_labour_1
+				add_idea = UPI_production_quotas
+			}
+			add_stability = -0.05
+			438 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_problem_resources
+		icon = GFX_focus_UPI_problem_resources
+		cost = 5
+		x = 5
+		y = 8
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_internal_affairs
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_resource = {
+				type = steel
+				amount = 4
+				state = 438
+			}
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 438
+			}
+			country_event = {
+				id = UPI.68
+			}
+		}
+	}
+	focus = {
+		id = UPI_native_regiments
+		icon = GFX_focus_UPI_native_regiments
+		cost = 5
+		x = 2
+		y = 9
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_problem_manpower
+		}
+		prerequisite = {
+			focus = UPI_problem_production
+		}
+		completion_reward = {
+			add_ideas = UPI_british_tigers
+		}
+	}
+	focus = {
+		id = UPI_encourage_collaboration
+		icon = GFX_focus_UPI_encourage_collaboration
+		cost = 5
+		x = 2
+		y = 10
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_native_regiments
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_british_tigers
+				add_idea = UPI_british_tigers1
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			country_event = {
+				id = UPI.69
+			}
+		}
+	}
+	focus = {
+		id = UPI_dealing_rumors
+		icon = GFX_focus_UPI_dealing_rumors
+		cost = 5
+		x = 4
+		y = 9
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_problem_resources
+		}
+		prerequisite = {
+			focus = UPI_problem_production
+		}
+		completion_reward = {
+			add_ideas = UPI_censorship
+		}
+	}
+	focus = {
+		id = UPI_dealing_dissent
+		icon = GFX_focus_UPI_dealing_dissent
+		cost = 5
+		x = 4
+		y = 10
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_dealing_rumors
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.15
+			}
+			add_manpower = -14509
+			add_stability = -0.05
+			country_event = {
+				id = UPI.70
+			}
+		}
+	}
+	focus = {
+		id = UPI_anglo_indian
+		icon = GFX_focus_UPI_anglo_indian
+		cost = 5
+		x = 3
+		y = 11
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_dealing_dissent
+		}
+		prerequisite = {
+			focus = UPI_encourage_collaboration
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_british_tigers1
+				add_idea = UPI_new_indian
+			}
+			country_event = {
+				id = UPI.71
+			}
+		}
+	}
+	focus = {
+		id = UPI_prodigal_sons
+		icon = GFX_focus_UPI_prodigal_sons
+		cost = 5
+		x = 3
+		y = 12
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_anglo_indian
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = UPI_india_my_image
+		icon = GFX_focus_UPI_india_my_image
+		cost = 1
+		x = 3
+		y = 13
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_prodigal_sons
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = UPI_force_will
+		icon = GFX_focus_UPI_force_will
+		cost = 5
+		x = 0
+		y = 14
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_india_my_image
+		}
+		prerequisite = {
+			focus = UPI_next_plans
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.25
+			}
+			438 = {
+				add_manpower = -23596
+			}
+			439 = {
+				add_manpower = -33187
+			}
+			435 = {
+				add_manpower = -15892
+			}
+			436 = {
+				add_manpower = -17080
+			}
+			country_event = {
+				id = UPI.73
+			}
+		}
+	}
+	focus = {
+		id = UPI_exploit_conflicts
+		icon = GFX_focus_UPI_exploit_conflicts
+		cost = 5
+		x = 0
+		y = 15
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_force_will
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_new_british_india1
+				add_idea = UPI_new_british_india2
+			}
+			country_event = {
+				id = UPI.74
+			}
+		}
+	}
+	focus = {
+		id = UPI_protests_every_city
+		icon = GFX_focus_UPI_protests_every_city
+		cost = 5
+		x = 0
+		y = 16
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_exploit_conflicts
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_new_british_india2
+				add_idea = UPI_new_british_india3
+			}
+		}
+	}
+	focus = {
+		id = UPI_isnt_working
+		icon = GFX_focus_UPI_isnt_working
+		cost = 5
+		x = 0
+		y = 17
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_protests_every_city
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.75
+			}
+		}
+	}
+	focus = {
+		id = UPI_open_trade_britain
+		icon = GFX_focus_UPI_open_trade_britain
+		cost = 5
+		x = -9
+		y = 14
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_king_country
+			focus = UPI_air_or_sea
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			431 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_need_guns
+		icon = GFX_focus_UPI_need_guns
+		cost = 5
+		x = -10
+		y = 15
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_open_trade_britain
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = UPI.401
+					days = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_need_equipment
+		icon = GFX_focus_UPI_need_equipment
+		cost = 5
+		x = -8
+		y = 15
+		relative_position_id = UPI_night_library
+		prerequisite = {
+			focus = UPI_open_trade_britain
+		}
+		completion_reward = {
+			ENG = {
+				country_event = {
+					id = UPI.402
+					days = 2
+				}
+			}
+		}
+	}
+
+	# Doomer Path #
+	focus = {
+		id = UPI_steady_go
+		icon = GFX_focus_UPI_steady_go
+		cost = 5
+		x = 18
+		y = 6
+		prerequisite = {
+			focus = UPI_now_what
+		}
+		mutually_exclusive = {
+			focus = UPI_old_british_values
+		}
+		mutually_exclusive = {
+			focus = UPI_night_library
+		}
+		available = {
+			has_country_flag = UPI_doomerpath
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.33
+			}
+		}
+	}
+	focus = {
+		id = UPI_life_leader
+		icon = GFX_focus_UPI_life_leader
+		cost = 2
+		x = -3
+		y = 1
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_steady_go
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.34
+			}
+		}
+	}
+	focus = {
+		id = UPI_smoke_break
+		icon = GFX_focus_UPI_smoke_break
+		cost = 2
+		x = -4
+		y = 2
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_life_leader
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.35
+			}
+		}
+	}
+	focus = {
+		id = UPI_paperwork
+		icon = GFX_focus_UPI_paperwork
+		cost = 2
+		x = -4
+		y = 3
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_smoke_break
+		}
+		completion_reward = {
+			add_stability = 0.08
+		}
+	}
+	focus = {
+		id = UPI_lunch_break
+		icon = GFX_focus_UPI_lunch_break
+		cost = 2
+		x = -2
+		y = 2
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_life_leader
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.36
+			}
+		}
+	}
+	focus = {
+		id = UPI_phone
+		icon = GFX_focus_UPI_phone
+		cost = 2
+		x = -2
+		y = 3
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_lunch_break
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = UPI_nap
+		icon = GFX_focus_UPI_nap
+		cost = 3
+		x = -3
+		y = 4
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_phone
+		}
+		prerequisite = {
+			focus = UPI_paperwork
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.42
+			}
+		}
+	}
+	focus = {
+		id = UPI_banging_door
+		icon = GFX_focus_UPI_banging_door
+		cost = 1
+		x = -3
+		y = 5
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_nap
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.43
+			}
+		}
+	}
+	focus = {
+		id = UPI_life_officer
+		icon = GFX_focus_UPI_life_officer
+		cost = 2
+		x = 3
+		y = 1
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_steady_go
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.37
+			}
+		}
+	}
+	focus = {
+		id = UPI_resource_problem
+		icon = GFX_focus_UPI_resource_problem
+		cost = 4
+		x = 3
+		y = 2
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_life_officer
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.38
+			}
+		}
+	}
+	focus = {
+		id = UPI_rationing
+		icon = GFX_focus_UPI_rationing
+		cost = 4
+		x = 3
+		y = 3
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_resource_problem
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.39
+			}
+		}
+	}
+	focus = {
+		id = UPI_harsh_putdowns
+		icon = GFX_focus_UPI_harsh_putdowns
+		cost = 4
+		x = 2
+		y = 4
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_rationing
+		}
+		mutually_exclusive = {
+			focus = UPI_gentle_hand
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.40
+			}
+		}
+	}
+	focus = {
+		id = UPI_gentle_hand
+		icon = GFX_focus_UPI_gentle_hand
+		cost = 4
+		x = 4
+		y = 4
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_rationing
+		}
+		mutually_exclusive = {
+			focus = UPI_harsh_putdowns
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.41
+			}
+		}
+	}
+	focus = {
+		id = UPI_demand_churchill
+		icon = GFX_focus_UPI_demand_churchill
+		cost = 1
+		x = 3
+		y = 5
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_gentle_hand
+			focus = UPI_harsh_putdowns
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = UPI_gas_indians
+		icon = GFX_focus_UPI_gas_indians
+		cost = 5
+		x = 0
+		y = 6
+		relative_position_id = UPI_steady_go
+		prerequisite = {
+			focus = UPI_demand_churchill
+		}
+		prerequisite = {
+			focus = UPI_banging_door
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.44
+			}
+		}
+	}
+	focus = {
+		id = UPI_need_help
+		icon = GFX_focus_UPI_need_help
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_gas_indians
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.45
+			}
+		}
+	}
+	focus = {
+		id = UPI_chemical_friends
+		icon = GFX_focus_UPI_chemical_friends
+		cost = 5
+		x = -2
+		y = 2
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_need_help
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_chamicalweapons
+				add_idea = UPI_chamicalweapons1
+			}
+		}
+	}
+	focus = {
+		id = UPI_take_every_gun
+		icon = GFX_focus_UPI_take_every_gun
+		cost = 5
+		x = 2
+		y = 2
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_need_help
+		}
+		completion_reward = {
+			438 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 1500
+    			producer = UPI
+			}
+			add_equipment_to_stockpile = {
+  				type = support_equipment
+   				amount = 300
+    			producer = UPI
+			}
+			add_equipment_to_stockpile = {
+  				type = artillery_equipment
+   				amount = 500
+    			producer = UPI
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = UPI_radical_solutions
+		icon = GFX_focus_UPI_radical_solutions
+		cost = 5
+		x = 0
+		y = 3
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_take_every_gun
+		}
+		prerequisite = {
+			focus = UPI_chemical_friends
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.47
+			}
+			add_state_core = 435
+			add_state_core = 431
+		}
+	}
+	focus = {
+		id = UPI_last_war
+		icon = GFX_focus_UPI_last_war
+		cost = 5
+		x = -2
+		y = 4
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_radical_solutions
+		}
+		completion_reward = {
+			remove_ideas = UPI_shadow_gallipoli
+		}
+	}
+	focus = {
+		id = UPI_what_wrong
+		icon = GFX_focus_UPI_what_wrong
+		cost = 5
+		x = -2
+		y = 5
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_last_war
+		}
+		completion_reward = {
+			add_ideas = UPI_newstrategy
+		}
+	}
+	focus = {
+		id = UPI_conscription_laws
+		icon = GFX_focus_UPI_conscription_laws
+		cost = 5
+		x = 2
+		y = 4
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_radical_solutions
+		}
+		completion_reward = {
+			add_ideas = UPI_expandedconscription
+		}
+	}
+	focus = {
+		id = UPI_every_gun
+		icon = GFX_focus_UPI_every_gun
+		cost = 5
+		x = 2
+		y = 5
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_conscription_laws
+		}
+		completion_reward = {
+			438 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+  				type = infantry_equipment
+   				amount = 300
+    			producer = UPI
+			}
+			add_equipment_to_stockpile = {
+  				type = support_equipment
+   				amount = 50
+    			producer = UPI
+			}
+			add_equipment_to_stockpile = {
+  				type = artillery_equipment
+   				amount = 50
+    			producer = UPI
+			}
+			add_stability = -0.05
+			hidden_effect = {
+				country_event = {
+					id = UPI.48
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_push_ocean
+		icon = GFX_focus_UPI_push_ocean
+		cost = 5
+		x = 0
+		y = 6
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_every_gun
+		}
+		prerequisite = {
+			focus = UPI_what_wrong
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BIH
+			}
+		}
+	}
+	focus = {
+		id = UPI_air_or_sea
+		icon = GFX_focus_UPI_air_or_sea
+		cost = 5
+		x = 0
+		y = 7
+		relative_position_id = UPI_gas_indians
+		available = {
+			controls_state = 431
+			controls_state = 435
+		}
+		prerequisite = {
+			focus = UPI_push_ocean
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.49
+			}
+			remove_ideas = UPI_alone_unsupplied_cutoff
+			hidden_effect = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Winston Churchill"
+					desc = "UPI_winston_churchill"
+					picture = "Portrait_UPI_Doomer_Churchill_2.tga"
+					expire = "1965.1.1"
+					ideology = military_dictatorship
+					traits = {
+						UPI_brutal_colonizer
+					}
+				}
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = UPI_extremism_rising
+		icon = GFX_focus_UPI_extremism_rising
+		cost = 5
+		x = 0
+		y = 8
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_air_or_sea
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.50
+			}
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = UPI_solution_backfires
+		icon = GFX_focus_UPI_solution_backfires
+		cost = 5
+		x = 0
+		y = 9
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_extremism_rising
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.51
+			}
+			hidden_effect = {
+				country_event = {
+					id = UPI.52
+					days = 40
+				}
+			}
+		}
+	}
+	focus = {
+		id = UPI_army_desertions
+		icon = GFX_focus_UPI_army_desertions
+		cost = 5
+		x = -1
+		y = 10
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_solution_backfires
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_expandedconscription
+				add_idea = UPI_expandedconscription1
+			}
+		}
+	}
+	focus = {
+		id = UPI_low_supplies
+		icon = GFX_focus_UPI_low_supplies
+		cost = 5
+		x = 1
+		y = 10
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_solution_backfires
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_siegeofluckow
+				add_idea = UPI_siegeofluckow1
+			}
+		}
+	}
+	focus = {
+		id = UPI_police_everywhere
+		icon = GFX_focus_UPI_police_everywhere
+		cost = 5
+		x = 0
+		y = 11
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_low_supplies
+		}
+		prerequisite = {
+			focus = UPI_army_desertions
+		}
+		completion_reward = {
+			add_stability = -0.1
+			country_event = {
+				id = UPI.53
+			}
+			hidden_effect = {
+				country_event = {
+					id = UPI.54
+					days = 40
+				}
+			}
+			add_ideas = UPI_martiallaw
+		}
+	}
+	focus = {
+		id = UPI_desperate_measures
+		icon = GFX_focus_UPI_desperate_measures
+		cost = 5
+		x = -1
+		y = 12
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_police_everywhere
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_martiallaw
+				add_idea = UPI_martiallaw1
+			}
+		}
+	}
+	focus = {
+		id = UPI_urban_chemical
+		icon = GFX_focus_UPI_urban_chemical
+		cost = 5
+		x = 1
+		y = 12
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_police_everywhere
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UPI_chamicalweapons1
+				add_idea = UPI_chamicalweapons2
+			}
+			add_stability = -0.15
+		}
+	}
+	focus = {
+		id = UPI_boiling_point
+		icon = GFX_focus_UPI_boiling_point
+		cost = 5
+		x = 0
+		y = 13
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_desperate_measures
+		}
+		prerequisite = {
+			focus = UPI_urban_chemical
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.55
+			}
+		}
+	}
+	focus = {
+		id = UPI_ashes_to_ashes
+		icon = GFX_focus_UPI_ashes_to_ashes
+		cost = 1
+		x = 0
+		y = 14
+		relative_position_id = UPI_gas_indians
+		prerequisite = {
+			focus = UPI_boiling_point
+		}
+		completion_reward = {
+			country_event = {
+				id = UPI.56
+			}
+		}
+	}
+}

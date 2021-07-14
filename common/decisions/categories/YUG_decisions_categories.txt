@@ -1,0 +1,11 @@
+YUG_foreign_policy = {
+	icon = GFX_KAV_diplomacy_icon
+	allowed = {
+		original_tag = YUG
+	}
+	priority = 100
+	visible = {
+		has_completed_focus = YUG_thefutureofyugoslavia
+		is_subject = no
+	}
+}

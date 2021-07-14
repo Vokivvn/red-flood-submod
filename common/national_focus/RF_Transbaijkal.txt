@@ -1,0 +1,1793 @@
+#########################
+#	Transbaikal - Baba	#
+#########################
+
+focus_tree = {
+	id = MO2
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = MO2
+		}
+	}
+	#Focus for Secure the Railway
+	focus = {
+		id = Transbaikal_securetherailway
+		icon = GFX_focus_securetherailway
+		x = 4
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_onwardstochina }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#claim southern Manchuria
+			add_state_claim = 714
+			add_state_claim = 761
+			add_state_claim = 912
+			add_state_claim = 881
+			add_state_claim = 978
+			add_state_claim = 810
+			add_state_claim = 717
+		}
+	}
+
+	#Focus for Race for Mongolia
+	focus = {
+		id = Transbaikal_raceformongolia
+		icon = GFX_focus_raceformongolia
+		x = 2
+		y = 0
+		cost = 2
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+			MO2 = {
+				has_completed_focus = Transbaikal_ridoftheanarchy
+			}
+			is_subject = no
+		}
+		completion_reward = {	#claim MON states
+			country_event = { id = mo2.1 }
+		}
+	}
+
+	#Focus for One to Rule them all
+	focus = {
+		id = Transbaikal_onetorulethemall
+		icon = GFX_focus_onetorulethemall
+		x = 1
+		y = 2
+		cost = 2
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_territorialsecurity }
+		mutually_exclusive = { focus = Transbaikal_obstacletoglory }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#mutual guarantees TAN
+			TAN = {
+				give_guarantee = MO2
+			}
+			MO2 = {
+				give_guarantee = TAN
+			} 
+		}
+	}
+
+	#Focus for Territorial Security
+	focus = {
+		id = Transbaikal_territorialsecurity
+		icon = GFX_focus_territorialsecurity
+		x = 2
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_raceformongolia }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+			#owns eatern mongolia
+		}
+		completion_reward = {	#fortify the border lvl 1
+			564 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4766
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 12507 
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 7860
+				}
+			}
+			563 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 10683
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 7786
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4677
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 4719
+				}
+			}
+		}
+	}
+
+	#Focus for Ataman of All Mongolia
+	focus = {
+		id = Transbaikal_atamanofallmongolia
+		icon = GFX_focus_atamanofallmongols
+		x = 3
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_obstacletoglory focus = Transbaikal_onetorulethemall }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#cores Mongolia and claim xinjiang
+			330 = {
+				add_core_of = MO2
+			}
+			914 = {
+				add_core_of = MO2
+			}
+			915 = {
+				add_core_of = MO2
+			}
+			612 = {
+				add_core_of = MO2
+			}
+			329 = {
+				add_core_of = MO2
+			}
+			961 = {
+				add_core_of = MO2
+			}
+			962 = {
+				add_core_of = MO2
+			}
+		}
+	}
+
+	#Focus for Imperial Pact
+	focus = {
+		id = Transbaikal_imperialpact
+		icon = GFX_focus_imperialpact
+		x = 1
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_onetorulethemall }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#faction with TAN - Imperial pact
+			create_faction = "imperial_pact"
+			add_to_faction = TAN
+			country_event = { id = mo2.100 }
+		}
+	}
+
+	#Focus for Onwards to China
+	focus = {
+		id = Transbaikal_onwardstochina
+		icon = GFX_focus_onwardstochina
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_reclaimthedesert }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#claim inner mongolia
+			add_state_claim = 746
+			add_state_claim = 611
+			add_state_claim = 621
+		}
+	}
+
+	#Focus for Obstacle to Glory
+	focus = {
+		id = Transbaikal_obstacletoglory
+		icon = GFX_focus_obstacletoglory
+		x = 3
+		y = 2
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_territorialsecurity }
+		mutually_exclusive = { focus = Transbaikal_onetorulethemall }
+		ai_will_do = {
+			factor = 5
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#WG on TAN
+			create_wargoal = {
+				type = annex_everything
+				target = TAN
+			}
+		}
+	}
+
+	#Focus for Reclaim the Desert
+	focus = {
+		id = Transbaikal_reclaimthedesert
+		icon = GFX_focus_reclaimthedesert
+		x = 3
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_atamanofallmongolia }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#North XSM + shanxi valley?
+			add_state_claim = 616
+		}
+	}
+
+	#Focus for Church Support
+	focus = {
+		id = Transbaikal_churchsupport
+		icon = GFX_focus_churchsupport
+		x = 11
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_siberiandespot }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				MO2_church
+			}
+			country_event = { id = mo2.2 }
+		}
+	}
+
+	#Focus for The Minorities
+	focus = {
+		id = Transbaikal_theminorities
+		icon = GFX_focus_theminorities
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_alignthemongolchiefs 
+			focus = Transbaikal_thetrial 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#event choice to integrate or give autonomy
+			country_event = { id = mo2.3 }
+		}
+	}
+
+	#Focus for Secure Chahar
+	focus = {
+		id = Transbaikal_securechahar
+		icon = GFX_focus_securechahar
+		x = 2
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_onwardstochina }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#cores for chahar + ordos	621 746
+			add_state_core = 621
+			add_state_core = 746
+			add_state_core = 611
+			
+		}
+	}
+
+	#Focus for Great Visionary
+	focus = {
+		id = Transbaikal_greatvisionary
+		icon = GFX_focus_greatvisionary
+		x = 9
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_sellrussianlabour 
+		}
+		prerequisite = { 
+			focus = Transbaikal_siberiandespot 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#
+			add_political_power = 100
+			add_war_support = 0.1
+		}
+	}
+
+	#Focus for Cossack Nationalism
+	focus = {
+		id = Transbaikal_cossacknationalism
+		icon = GFX_focus_cossacknationalism
+		x = 8
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_greatvisionary }
+		mutually_exclusive = { focus = Transbaikal_localblackhundredschapter }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_ideas = { MO2_cossack_nation_2 }
+			add_manpower = 7500
+			set_cosmetic_tag = "MO2_baikal_hetmanate"
+		}
+	}
+
+	#Focus for One Language
+	focus = {
+		id = Transbaikal_onelanguage
+		icon = GFX_focus_onelanguage
+		x = 23
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_wagereform }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#pp gain and research speed?
+			country_event = { id = mo2.5 }
+		}
+	}
+
+	#Focus for Expand the Logistics Department
+	focus = {
+		id = Transbaikal_expandthelogisticsdepartment
+		icon = GFX_focus_expandthelogisticsdepartment
+		x = 25
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_ridoftheanarchy }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#tech for logistics and signal comps
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+
+	#Focus for Siberian Army
+	focus = {
+		id = Transbaikal_siberianarmy
+		icon = GFX_focus_siberianarmy
+		x = 26
+		y = 3
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_therailwayassociation 
+		}
+		prerequisite = { 
+			focus = Transbaikal_expandthelogisticsdepartment 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				MO2_siberian_army
+			}
+		}
+	}
+
+	#Focus for Loyal Officers
+	focus = {
+		id = Transbaikal_loyalofficers
+		icon = GFX_focus_loyalofficers
+		x = 21
+		y = 2
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_wagereform }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#comm power gain, recruit cost and promote cost
+			add_ideas = {
+				MO2_loyal_officers
+			}
+		}
+	}
+
+	#Focus for Discipline the Cossacks
+	focus = {
+		id = Transbaikal_disciplinethecossacks
+		icon = GFX_focus_disciplinethecossacks
+		x = 24
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#div org?
+			add_ideas = {
+				MO2_discipline
+			}
+		}
+	}
+
+	#Focus for Wage Reform
+	focus = {
+		id = Transbaikal_wagereform
+		icon = GFX_focus_wagereform
+		x = 22
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_disciplinethecossacks }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#consumer goods up
+			add_timed_idea = {
+				idea = MO2_wages
+				days = 730
+			}
+			remove_ideas = {
+				MO2_white_expats
+			}
+		}
+	}
+
+	#Focus for Rid of the Anarchy
+	focus = {
+		id = Transbaikal_ridoftheanarchy
+		icon = GFX_focus_ridoftheanarchy
+		x = 26
+		y = 1
+		cost = 7
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_disciplinethecossacks }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#less wild far-east
+			country_event = { id = mo2.6 }
+		}
+	}
+
+	#Focus for The Trial
+	focus = {
+		id = Transbaikal_thetrial
+		icon = GFX_focus_thetrial
+		x = 15
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_manofthepeople }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#Tribune deposes Semyonov, provisional council installed. Event trial
+			country_event = { id = mo2.9 }
+			create_corps_commander = {
+				name = "Ivan Shilnikov"
+				picture = "Ivan_Shilnikov_lib_general.dds"
+				traits = {   }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			remove_unit_leader = 56301
+			remove_ideas = {
+				MO2_Semyonov_hog
+			}
+		}
+	}
+
+	#Focus for Solve the Poverty
+	focus = {
+		id = Transbaikal_solvethepoverty
+		icon = GFX_focus_solvethepoverty
+		x = 14
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_thetrial }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#consumer goods up
+			add_ideas = {
+				MO2_poverty
+			}
+		}
+	}
+
+	#Focus for Cossack Protection
+	focus = {
+		id = Transbaikal_cossackprotection
+		icon = GFX_focus_cossackprotection
+		x = 15
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_solvethepoverty }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#consumer down?
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry		
+			}
+		}
+	}
+
+	#Focus for Siberian Despot
+	focus = {
+		id = Transbaikal_siberiandespot
+		icon = GFX_focus_siberiandespot
+		x = 10
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_screwkolchak }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#hog_semyonov
+			add_political_power = 50
+		}
+	}
+
+	#Focus for Economy of Violence
+	focus = {
+		id = Transbaikal_economyofviolence
+		icon = GFX_focus_economyofviolence
+		x = 7
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_sellrussianlabour }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#consumer down
+			add_ideas = {
+				MO2_violent_economy
+			}
+		}
+	}
+
+	#Focus for Align the Mongol Princes
+	focus = {
+		id = Transbaikal_alignthemongolchiefs
+		icon = GFX_focus_alignthemongolprinces
+		x = 10
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_allforataman }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#stab buff and pp
+			add_war_support = 0.15
+		}
+	}
+
+	#Focus for Screw Kolchak
+	focus = {
+		id = Transbaikal_screwkolchak
+		icon = GFX_focus_tohellwithkolchak
+		x = 8
+		y = 1
+		cost = 4
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_allforataman }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#claim Yakut GG and Irkustsk, piss off russia
+			add_state_claim = 565
+			add_state_claim = 566
+			create_wargoal = {
+				type = take_state_focus
+				target = SIB
+			}
+		}
+	}
+
+	#Focus for Sell Russian Labour
+	focus = {
+		id = Transbaikal_sellrussianlabour
+		icon = GFX_focus_penallabour
+		x = 8
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_alignthemongolchiefs }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#early mobilisation
+			add_ideas = {
+				low_economic_mobilisation
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 563
+			}
+		}
+	}
+
+	#Focus for Talks with Harbin
+	focus = {
+		id = Transbaikal_talkswithharbin
+		icon = GFX_focus_talkswithharbin
+		x = 17
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_solvethecorruption }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { 
+			ZHR = {
+				OR = {
+					has_government = accelerationism
+					has_government = despotism
+					has_government = vanguard_socialism
+					has_government = revolutionary_anarchism
+				}
+			}
+		}
+		available = {
+			ZHR = {
+				OR = {
+				has_government = liberalism
+				has_government = social_democratism
+				}
+			}
+		}
+		completion_reward = {	#event for industry pact
+			add_opinion_modifier = {
+				target = ZHR
+				modifier = USA_special_relationship
+			}
+			country_event = { id = mo2.10 }
+		}
+	}
+
+	#Focus for Education Programs
+	focus = {
+		id = Transbaikal_educationprograms
+		icon = GFX_focus_educationprograms
+		x = 13
+		y = 3
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_solvethepoverty }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				MO2_education
+			}
+		}
+	}
+
+	#Focus for Abolish the Military Districts
+	focus = {
+		id = Transbaikal_abolishthemilitarydistricts
+		icon = GFX_focus_abolishthemilitarydistricts
+		x = 15
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_firstelections }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#
+			add_stability = 0.03
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.03
+			}
+			add_war_support = -0.05
+		}
+	}
+
+	#Focus for First Elections
+	focus = {
+		id = Transbaikal_firstelections
+		icon = GFX_focus_thefirstelections
+		x = 16
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_fatherlandforall }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#event for elections
+			country_event = { id = mo2.11 }
+		}
+	}
+
+	#Focus for State with an Army
+	focus = {
+		id = Transbaikal_statewithanarmy
+		icon = GFX_focus_statewithanarmy
+		x = 17
+		y = 6
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_firstelections }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#pp gain army xp and mil-comp cost
+			army_experience = 25
+		}
+	}
+
+	#Focus for Russian Democracy
+	focus = {
+		id = Transbaikal_russiandemocracy
+		icon = GFX_focus_russiandemocracy
+		x = 16
+		y = 7
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_abolishthemilitarydistricts 
+		}
+		prerequisite = { 
+			focus = Transbaikal_statewithanarmy 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#popularities
+			country_event = { id = mo2.14 }
+		}
+	}
+
+	#Focus for District Militias
+	focus = {
+		id = Transbaikal_districtmilitias
+		icon = GFX_focus_districtmilitias
+		x = 22
+		y = 3
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_loyalofficers 
+		}
+		prerequisite = { 
+			focus = Transbaikal_onelanguage 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				MO2_district_militias
+			}
+		}
+	}
+
+	#Focus for The Railway Association
+	focus = {
+		id = Transbaikal_therailwayassociation
+		icon = GFX_focus_therailwayassociation
+		x = 27
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_ridoftheanarchy }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#infra?/build speed
+			add_ideas = {
+				MO2_i_like_trains
+			}
+		}
+	}
+
+	#Focus for Local Black Hundreds Chapter
+	focus = {
+		id = Transbaikal_localblackhundredschapter
+		icon = GFX_focus_localblackhundredschapter
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_greatvisionary }
+		mutually_exclusive = { focus = Transbaikal_cossacknationalism }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#units and react popularity, war support
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+			division_template = {
+				name = "Black Hundreds"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+					cavalry = { x = 2 y = 2 }
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 564 }
+				create_unit = {
+					division = "name = \"Black Hundreds\" division_template = \"Black Hundreds\" start_experience_factor = 0.75"
+					owner = MO2
+				}
+				create_unit = {
+					division = "name = \"Black Hundreds\" division_template = \"Black Hundreds\" start_experience_factor = 0.75"
+					owner = MO2
+				}
+			}
+		}
+	}
+
+	#Focus for All for Ataman
+	focus = {
+		id = Transbaikal_allforataman
+		icon = GFX_focus_allforataman
+		x = 9
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = Transbaikal_manofthepeople }
+		ai_will_do = {
+			factor = 10
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#pop/stab buff
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			add_stability = 0.1
+			add_political_power = 25
+		}
+	}
+
+	#Focus for Man of the People
+	focus = {
+		id = Transbaikal_manofthepeople
+		icon = GFX_focus_manofthepeople
+		x = 15
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		mutually_exclusive = { focus = Transbaikal_allforataman }
+		ai_will_do = {
+			factor = 5
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#popularity/war_support/stab/pp
+			add_political_power = 50
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.2
+			}
+			country_event = { id = mo2.102 days = 1 }
+		}
+	}
+
+	#Focus for Solve the Corruption
+	focus = {
+		id = Transbaikal_solvethecorruption
+		icon = GFX_focus_solvethecorruption
+		x = 17
+		y = 2
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_thetrial }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#stab nerf
+			country_event = { id = mo2.7 }
+		}
+	}
+
+	#Focus for Fatherland for All
+	focus = {
+		id = Transbaikal_fatherlandforall
+		icon = GFX_focus_fatherlandforall
+		x = 16
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_cossackprotection 
+			focus = Transbaikal_talkswithharbin
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#build slots
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	#Focus for The Swiss Model
+	focus = {
+		id = Transbaikal_theswissmodel
+		icon = GFX_focus_theswissmodel
+		x = 14
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_pacificties 
+		}
+		prerequisite = { 
+			focus = Transbaikal_anewidentity 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#remove wild far east2	buff defence and fort build
+			country_event = { id = mo2.15 }
+		}
+	}
+
+	#Focus for Form the Far-East Republic
+	focus = {
+		id = Transbaikal_formthefareastrepublic
+		icon = GFX_focus_formthefareastrepublic
+		x = 18
+		y = 10
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_organiseacoup 
+			focus = Transbaikal_negotiatewithharbin 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#remove wild far east2,	core the far east
+			country_event = { id = mo2.16 }
+		}
+	}
+
+	#Focus for Negotiate with Harbin
+	focus = {
+		id = Transbaikal_negotiatewithharbin
+		icon = GFX_focus_negotiatewithharbin
+		x = 19
+		y = 9
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_planswithzheltorossiya }
+		mutually_exclusive = { focus = Transbaikal_organiseacoup }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			ZHR = {
+				OR = {
+					has_government = liberalism
+					has_government = social_democratism
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {	#event for integration
+			country_event = { id = mo2.20 }
+		}
+	}
+
+	#Focus for An Independent Republic
+	focus = {
+		id = Transbaikal_anindependentrepublic
+		icon = GFX_focus_anindependentrepublic
+		x = 14
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_russiandemocracy }
+		mutually_exclusive = { focus = Transbaikal_planswithzheltorossiya }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.03
+			}
+		}
+	}
+
+	#Focus for Pacific Ties
+	focus = {
+		id = Transbaikal_pacificties
+		icon = GFX_focus_pacificties
+		x = 13
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_anindependentrepublic }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#relations with pacific democracies
+			add_opinion_modifier = {
+				target = PHI
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = AST
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = NZL
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = CAN
+				modifier = offered_support
+			}
+			add_opinion_modifier = {
+				target = USA
+				modifier = offered_support
+			}
+		}
+	}
+
+	#Focus for A New Identity
+	focus = {
+		id = Transbaikal_anewidentity
+		icon = GFX_focus_anewidentity
+		x = 15
+		y = 9
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_anindependentrepublic }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#Other tags lose cores and event for new nationalism
+			add_ideas = {
+				MO2_cossack_nation_1
+			}
+			hidden_effect = {
+				TAN = {
+					remove_state_core = 563
+					remove_state_core = 564
+					remove_state_core = 964
+				}
+				MON = {
+					remove_state_core = 563
+					remove_state_core = 564
+					remove_state_core = 964
+				}
+			}
+		}
+	}
+
+	#Focus for Organise a Coup
+	focus = {
+		id = Transbaikal_organiseacoup
+		icon = GFX_focus_organiseacoup
+		x = 17
+		y = 9
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_planswithzheltorossiya }
+		mutually_exclusive = { focus = Transbaikal_negotiatewithharbin }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+			ZHR = {
+				OR = {
+					has_government = vanguard_socialism
+					has_government = revolutionary_anarchism
+					has_government = accelerationism
+					has_government = despotism
+				}
+			}
+		}
+		completion_reward = {	#Coup ZHR if it is not moderate - has a low chance of success
+			country_event = { id = mo2.17 }
+		}
+	}
+
+	#Focus for Plans with Zheltorossiya
+	focus = {
+		id = Transbaikal_planswithzheltorossiya
+		icon = GFX_focus_planswithzheltorossia
+		x = 18
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_russiandemocracy }
+		mutually_exclusive = { focus = Transbaikal_anindependentrepublic }
+		ai_will_do = {
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {	#MO2 begins internal plans for ZHR
+			country_event = { id = mo2.21 }
+		}
+	}
+
+	#Focus for Fund the Schools
+	focus = {
+		id = Transbaikal_fundtheschools
+		icon = GFX_focus_fundtheschools
+		x = 33
+		y = 2
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_electrification 
+			focus = Transbaikal_modernisetheagriculture 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Focus for Crush the Bandits
+	focus = {
+		id = Transbaikal_crushthebandits
+		icon = GFX_focus_crushthebandits
+		x = 22
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_districtmilitias }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+			has_idea = MO2_wild_far_east2
+		}
+		completion_reward = {
+			remove_ideas = {
+				MO2_border_raids
+			}
+			country_event = { id = mo2.8 }
+		}
+	}
+
+	#Focus for Aircraft Purchases
+	focus = {
+		id = Transbaikal_aircraftpurchases
+		icon = GFX_focus_aircraftpurchases
+		x = 27
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_machineandmaneuver }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#aircraft designs/tech
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = light_fighter }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cas_bomber }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = tactical_bomber }
+		}
+	}
+
+	#Focus for Rejuvinate the Cities
+	focus = {
+		id = Transbaikal_rejuvinatethecities
+		icon = GFX_focus_rejuvenatethecities
+		x = 31
+		y = 2
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_electrification }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#civ factories/build speed
+			563 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	}
+
+	#Focus for Begin Industrialisation
+	focus = {
+		id = Transbaikal_beginindustrialisation
+		icon = GFX_focus_beginindustrialisation
+		x = 35
+		y = 2
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_modernisetheagriculture }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#civ/milfactories
+			564 ={
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+			} 
+		}
+	}
+
+	#Focus for Expand the Railway
+	focus = {
+		id = Transbaikal_expandtherailway
+		icon = GFX_focus_expandtherailway
+		x = 29
+		y = 3
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_therailwayassociation 
+		}
+		prerequisite = { 
+			focus = Transbaikal_rejuvinatethecities 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#infra/ build boost
+			563 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			564 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			964 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Focus for Far-East Trading Company
+	focus = {
+		id = Transbaikal_fareasttradingcompany
+		icon = GFX_focus_fareasttradingcompany
+		x = 33
+		y = 0
+		cost = 8
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#resource stuff? free upgrade to export economy?
+			add_ideas = {
+				MO2_FE_trade_comp
+			}
+		}
+	}
+
+	#Focus for Electrification
+	focus = {
+		id = Transbaikal_electrification
+		icon = GFX_focus_electrification
+		x = 32
+		y = 1
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_fareasttradingcompany }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#electrionics tech
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	#Focus for And Charge!
+	focus = {
+		id = Transbaikal_andcharge
+		icon = GFX_focus_andcharge
+		x = 9
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_readythecossacks }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#div speed?
+			add_ideas = {
+				MO2_charge
+			}
+		}
+	}
+
+	#Focus for Winter Soldiers
+	focus = {
+		id = Transbaikal_wintersoldiers
+		icon = GFX_focus_wintersoldiers
+		x = 26
+		y = 4
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_siberianarmy }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#climate adaptation boost
+			swap_ideas = {
+				remove_idea = MO2_siberian_army
+				add_idea = MO2_winter_soldiers
+			}
+		}
+	}
+
+	#Focus for Machine and Maneuver
+	focus = {
+		id = Transbaikal_machineandmaneuver
+		icon = GFX_focus_machineandmaneuver
+		x = 26
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_wintersoldiers }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#mech tech and doctrine
+			add_tech_bonus = { bonus = 0.5 uses = 2 category = land_doctrine }
+			add_tech_bonus = { bonus = 1 uses = 1 category = motorized_equipment }
+		}
+	}
+
+	#Focus for Northern Terror
+	focus = {
+		id = Transbaikal_northernterror
+		icon = GFX_focus_northernterror
+		x = 22
+		y = 5
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_crushthebandits }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#resistance tick
+			add_ideas = {
+				MO2_terror
+			}
+		}
+	}
+
+	#Focus for Ready for Siberia
+	focus = {
+		id = Transbaikal_readyforsiberia
+		icon = GFX_focus_readyforsiberia
+		x = 24
+		y = 6
+		cost = 12
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_northernterror 
+		}
+		prerequisite = { 
+			focus = Transbaikal_machineandmaneuver 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {
+			add_ideas = {
+				MO2_ready_for_siberia
+			}
+		}
+	}
+
+	#Focus for Ready the Cossacks
+	focus = {
+		id = Transbaikal_readythecossacks
+		icon = GFX_focus_readythecossacks
+		x = 9
+		y = 5
+		cost = 6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = Transbaikal_cossacknationalism 
+			focus = Transbaikal_localblackhundredschapter 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#add troops
+			add_manpower = 4500
+			division_template = {
+				name = "Cossack Volunteers"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+				}
+			}
+			563 = {
+				create_unit = {
+					division = "name = \"Cossack Volunteers\" division_template = \"Cossack Volunteers\" start_experience_factor = 0.90 start_equipment_factor = 0.95"
+					owner = MO2
+				}
+			}
+		}
+	}
+
+	#Focus for Modernise the Agriculture
+	focus = {
+		id = Transbaikal_modernisetheagriculture
+		icon = GFX_focus_modernisetheagriculture
+		x = 34
+		y = 1
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_fareasttradingcompany }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#pop growth?
+			add_ideas = {
+				MO2_agri
+			}
+		}
+	}
+
+	#Focus for Hunter Regiments
+	focus = {
+		id = Transbaikal_hunterregiments
+		icon = GFX_focus_hunterregiments
+		x = 21
+		y = 6
+		cost = 8
+		available_if_capitulated = yes
+		prerequisite = { focus = Transbaikal_northernterror }
+		ai_will_do = {
+			factor = 1
+		}
+		bypass= { }
+		available = {
+		
+		}
+		completion_reward = {	#recon company techs
+			add_tech_bonus = { bonus = 1 uses = 1 category = mountaineers_tech }
+			add_tech_bonus = { bonus = 1 uses = 1 category = recon_tech }
+		}
+	}
+
+#End of focuses 
+ }

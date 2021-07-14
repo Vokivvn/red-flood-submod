@@ -1,0 +1,38 @@
+ITA_slump_change = {
+	if = {
+		limit = {
+			has_idea = ITA_the_slump
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump
+			add_idea = ITA_the_slump_s1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s1
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s1
+			add_idea = ITA_the_slump_s2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s2
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s2
+			add_idea = ITA_the_slump_s3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = ITA_the_slump_s3
+		}
+		swap_ideas = {
+			remove_idea = ITA_the_slump_s3
+			add_idea = ITA_the_slump_s4
+		}
+	}
+}

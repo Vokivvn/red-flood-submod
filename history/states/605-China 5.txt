@@ -1,0 +1,28 @@
+state=
+{
+	id=605
+	name="STATE_605" # Sichuan
+	manpower = 32119621
+
+	state_category = large_town
+
+	resources={
+		steel = 4
+		oil = 1
+	}
+	history=
+	{
+		owner = SZC
+		add_core_of = SZC
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 1
+		}
+
+	}
+	provinces={
+		1367 2030 2091 5048 7256 8026 10132 10144 11865 12274 12767
+	}
+}

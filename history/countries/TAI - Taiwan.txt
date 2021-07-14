@@ -1,0 +1,179 @@
+﻿#####################
+#	Taiwan - Baba	#
+#####################
+
+capital = 524
+
+load_oob = "TAI_1936"
+
+set_research_slots = 3 
+
+set_convoys = 25
+
+add_ideas = {
+TAI_freedom
+TAI_native_rebels
+}
+country_event = {
+	id = tai.1001
+	days = 30
+}
+set_technology = {
+	### ARMY ####
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	### AIR ###
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+	CAS1 = 1
+	cv_CAS1 = 1
+	cv_naval_bomber1 = 1
+	cv_early_fighter = 1
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		cruiser_submarines = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 15
+	libertarian_marxism = 10
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 15
+	liberalism = 15
+	conservatism = 10
+	right_authoritarianism = 10
+	despotism = 10
+	reactionism = 5
+	accelerationism = 10
+}
+
+set_stability = 0.3
+#set_cosmetic_tag =
+
+create_country_leader = {
+	name = "Provisional Independence Council"
+	desc = "PIC_DESC"
+	picture = "Portrait_Council_Taiwan.dds"
+	expire = "1940.1.1"
+	ideology = military_junta
+}
+
+create_country_leader = {
+	name = "Xie Xuehong"
+	desc = "XIE_DESC"
+	picture = "Portrait_Xie_Xuehong.dds"
+	expire = "1965.1.1"
+	ideology = national_vanguardism
+}
+
+create_country_leader = {
+	name = "Tan Ting-pho"
+	desc = "TAN_TINGPHO_DESC"
+	picture = "Portrait_Tan_Ting_Pho.dds"
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+}
+
+create_country_leader = {
+	name = "Chiang Wei-shui"
+	desc = "CHIANG_WEI_DESC"
+	picture = "Portrait_Chiang_Wei.dds"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+}
+
+create_country_leader = {
+	name  = "Thomas Liao"
+	desc = "THOMAS_LIAO_DESC"
+	picture = "Portrait_Thomas_Liao.dds"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+}
+create_country_leader = {
+	name  = "Lin Hsiung-cheng"
+	desc = "LIN_DESC"
+	picture = "Portrait_Lin_Hsiung_Cheng.dds"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+}
+
+create_corps_commander = {
+	name = "Chiang Ting"
+	picture = "Portrait_Chiang_Ting.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Yu Qingfang"
+	picture = "Portrait_Yu_Qingfang.dds"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}

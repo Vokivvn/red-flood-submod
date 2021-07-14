@@ -1,0 +1,41 @@
+AUS_hitler_speeches = {
+	icon = GFX_AUS_hitlermancat
+	allowed = {
+		original_tag = AUS
+	}
+
+	visible = {
+		has_completed_focus = AUS_rousingspeeches
+	}
+}
+AUS_austrosphere = {
+	icon = GFX_AUS_hitlermancat
+	allowed = {
+		original_tag = AUS
+	}
+
+	visible = {
+		OR = {
+			CRO = {
+				is_puppet_of = AUS
+			}
+			YUG = {
+				is_puppet_of = AUS
+			}
+			CZE = {
+				is_puppet_of = AUS
+			}
+		}
+
+ 	}
+}
+AUS_hundemands = {
+	icon = GFX_AUS_hitlermancat
+	allowed = {
+		original_tag = HUN
+	}
+
+	visible = {
+			has_idea = AUS_huntorture
+	}
+}

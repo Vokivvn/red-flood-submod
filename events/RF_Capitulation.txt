@@ -1,0 +1,359 @@
+﻿###########################
+# Capitulation Events
+###########################
+
+add_namespace = capt
+
+### German Capitulation
+
+# Main German capitulation event
+country_event = {
+	id = capt.1
+	title = capt.1.t
+	desc = capt.1.d
+	picture = GFX_report_event_german_reichstag_bombed
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		is_subject = no
+		has_war = yes
+		OR = {
+			surrender_progress > 0.8
+			AND = {
+				NOT = { controls_state = 64 } #Brandenburg
+				surrender_progress > 0.75
+			}
+			NOT = {
+				controls_state = 28 #Elsass
+				controls_state = 959 #Lothringen
+				controls_state = 51 #Ostrheinland
+				controls_state = 55 #Hessen
+				controls_state = 50 #Wurttemberg
+				controls_state = 52 #Oberbayern
+				controls_state = 59 #Hannover
+			}
+			AND = {
+				NOT = {
+					controls_state = 66 #Niederschlesien
+					controls_state = 62 #Pommern
+					controls_state = 64 #Brandenburg
+				}
+				OR = {
+					NOT = {
+						controls_state = 55 #Hessen
+						controls_state = 51 #Ostrheinland
+						controls_state = 28 #Elsass
+						controls_state = 959 #Lothringen
+					}
+					NOT = {
+						controls_state = 52 #Oberbayern
+						controls_state = 55 #Hessen
+						controls_state = 60 #Thuringen
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event capt.1"
+		hidden_effect = {
+			#country_event = worldtension.25
+
+			if = { #Checking for ENG involvement in the war
+				limit = {
+					ENG = {
+						has_war_with = GER
+						OR = {
+							any_war_score > 10
+							controls_state = 56
+							controls_state = 58
+							controls_state = 59
+						}
+					}
+				}
+				set_global_flag = ENG_war_par_1
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_war_with = GER
+						OR = {
+							any_war_score > 25
+							AND = {
+								controls_state = 5
+								controls_state = 62
+								controls_state = 86
+							}
+							controls_state = 64
+						}
+					}
+				}
+				set_global_flag = ENG_war_par_2
+			}
+
+			#random_other_country = {
+			#	limit = { has_war_with = GER }
+			#	news_event = worldnews.145
+			#}
+
+		}
+	}
+
+	#option = { #Flee Option
+	#	name = capt.1.a #Assume control of DESIGNATED PUPPET We shall fight on from there
+	#	trigger = {
+	#		has_global_flag = GER_flees_to_brazil
+	#	}
+	#	log = "		-- Germany is fleeing to Brazil"
+	#	set_country_flag = GER_capitulated
+	#	if = {
+	#		limit = {
+	#			ALG = { is_ai = no }
+	#		}
+	#		#ALG = { country_event = capt. }
+	#	}
+	#	#else = {
+	#	#	hidden_effect = {
+	#	#		country_event = capt.
+	#	#	}
+	#	#}
+	#}
+	option = {
+		name = capt.1.b #There is nowhere to run. Surrender!
+		#trigger = {
+		#	NOT = { has_global_flag = GER_flees_to_brazil }
+		#}
+		set_country_flag = GER_capitulated
+		custom_effect_tooltip = GER_will_capitulate
+		hidden_effect = {
+			country_event = capt.22
+		}
+	}
+}
+
+
+# Hidden event to peace out internationale members
+country_event = {
+	id = capt.10
+	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.10" }
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		# First European faction leaders peace out with any non-neighbors outside of Europe
+		if = {
+			limit = {
+				is_in_europe = yes
+				is_faction_leader = yes
+			}
+			every_country = {
+				limit = {
+					has_country_flag = former_internationale_member
+					is_valid_peace_target = yes
+					has_war_with = ROOT
+					OR = {
+						is_in_europe = no
+						AND = {
+							ROOT = { tag = RUS }
+							NOT = {
+								is_actual_neighbor_of_ROOT_or_ally = yes
+								any_owned_state = {
+									any_neighbor_state = {
+										owner = {
+											is_actual_neighbor_of_ROOT_or_ally = yes
+										}
+									}
+								}
+							}
+						}	
+					}
+					OR = {
+						tag = BRA
+						NOT = {
+							tag = GER
+							has_capitulated = yes
+							is_in_europe = yes
+							AND = {
+								tag = AUS
+								ROOT = {
+									OR = {
+										tag = SER
+										tag = ROM
+										tag = POL
+										tag = ITA
+									}
+								}
+							}
+							is_actual_neighbor_of_ROOT_or_ally = yes
+							any_owned_state = {
+								is_coastal = yes
+								is_controlled_by_ROOT_or_ally = yes
+							}
+							any_country = {
+								is_subject_of = PREV
+								OR = {
+									is_actual_neighbor_of_ROOT_or_ally = yes
+									any_owned_state = {
+										is_coastal = yes
+										is_controlled_by_ROOT_or_ally = yes
+									}
+								}
+							}
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = yes
+								any_country = {
+									is_in_faction_with = PREV
+									is_faction_leader = no
+									OR = {
+										is_actual_neighbor_of_ROOT_or_ally = yes
+										any_owned_state = {
+											is_coastal = yes
+											is_controlled_by_ROOT_or_ally = yes
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				white_peace_with_ROOT = yes
+			}
+		}
+		# Then Asian faction leaders peace out with any non-neighbours outside of Asia
+		else_if = {
+			limit = {
+				is_in_asia = yes
+				is_faction_leader = yes
+			}
+			every_country = {
+				limit = {
+					has_country_flag = former_internationale_member
+					is_valid_peace_target = yes
+					has_war_with = ROOT
+					NOT = {
+						tag = GER
+						has_capitulated = yes
+						is_in_asia = yes
+						AND = {
+							tag = HOL
+							ROOT = { tag = DEI }
+						}
+						is_actual_neighbor_of_ROOT_or_ally = yes
+						any_owned_state = {
+							is_coastal = yes
+							is_controlled_by_ROOT_or_ally = yes
+						}
+						any_country = {
+							is_subject_of = PREV
+							OR = {
+								is_actual_neighbor_of_ROOT_or_ally = yes
+								any_owned_state = {
+									is_coastal = yes
+									is_controlled_by_ROOT_or_ally = yes
+								}
+							}
+						}
+					}
+				}
+				white_peace_with_ROOT = yes
+			}
+		}
+		# Then everyone else peaces out with any non-neighbours
+		else = {
+			every_country = {
+				limit = {
+					has_country_flag = former_internationale_member
+					is_valid_peace_target = yes
+					has_war_with = ROOT
+					OR = {
+						tag = BRA
+						NOT = {
+							tag = GER
+							has_capitulated = yes
+							AND = {
+								tag = HOL
+								ROOT = { tag = DEI }
+							}
+							AND = {
+								tag = AUS
+								ROOT = {
+									OR = {
+										tag = SER
+										tag = ROM
+										tag = POL
+										tag = ITA
+									}
+								}
+							}
+							is_actual_neighbor_of_ROOT_or_ally = yes
+							any_owned_state = {
+								is_coastal = yes
+								is_controlled_by_ROOT_or_ally = yes
+							}
+							any_country = {
+								is_subject_of = PREV
+								OR = {
+									is_actual_neighbor_of_ROOT_or_ally = yes
+									any_owned_state = {
+										is_coastal = yes
+										is_controlled_by_ROOT_or_ally = yes
+									}
+								}
+							}
+							AND = {
+								is_in_faction = yes
+								is_faction_leader = yes
+								any_country = {
+									is_in_faction_with = PREV
+									is_faction_leader = no
+									OR = {
+										is_actual_neighbor_of_ROOT_or_ally = yes
+										any_owned_state = {
+											is_coastal = yes
+											is_controlled_by_ROOT_or_ally = yes
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				white_peace_with_ROOT = yes
+			}
+		}
+	}
+}
+
+# Hidden event to remove German ideas and force them to surrender
+country_event = {
+	id = capt.11
+	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.11" }
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		add_timed_idea = {
+			idea = GER_ready_to_surrender
+			days = 30
+		}
+	}
+}
+
+# Actual capitulation event (to prevent crashing)
+country_event = {
+	id = capt.22
+	immediate = { log = "[GetDateText]: [Root.GetName]: event capt.22" }
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		germany_capitulates = yes
+	}
+}

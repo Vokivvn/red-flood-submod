@@ -1,0 +1,1933 @@
+ideas = {
+	country = {
+	
+		##Democratic Ideas##
+
+		UKR_socialist_land_reform = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					production_speed_buildings_factor = 0.1
+				}
+				picture = UKR_socialist_land_reform
+		}
+		UKR_united_partison_committee = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					subversive_activites_upkeep = -0.5
+				}
+				picture = UKR_united_partisan_committee
+		}
+		UKR_road_socialism = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					industrial_capacity_factory = 0.05
+					industrial_capacity_dockyard = 0.05
+				}
+				picture = UKR_road_socialism
+		}
+		UKR_road_socialism_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					industrial_capacity_factory = 0.1
+					industrial_capacity_dockyard = 0.1
+					min_export = 0.05
+				}
+				picture = UKR_road_socialism
+		}
+
+		UKR_free_market_policies = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					min_export = 0.1
+					production_factory_max_efficiency_factor = 0.05
+					industrial_capacity_factory = 0.1
+					industrial_capacity_dockyard = 0.1
+				}
+				picture = UKR_free_market_policies				
+		}		
+		UKR_personal_autonomy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.15
+				}
+				picture = UKR_national_personal_autonomy
+		}			
+		UKR_customs_union = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+				}
+				picture = UKR_free_customs_union
+		}						
+		UKR_massive_education_reform = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					research_speed_factor = 0.05
+					political_power_factor = 0.05
+				}
+				picture = UKR_massive_education_reform
+		}
+
+		UKR_democratic_land_reform = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					production_speed_buildings_factor = 0.05
+				}
+				picture = UKR_democratic_land_reform
+		}						
+		UKR_stolypinianism = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.05
+				}
+				equipment_bonus = {
+					infantry_equipment = {
+						reliability = 0.05
+						instant = yes
+					}
+				}
+				picture = UKR_stolypinianism
+		}
+		UKR_anti_socialist_publishing_league = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					political_power_gain = 0.05
+					revisionist_socialism_drift = -0.02
+				}
+				picture = UKR_anti_socialist_publishing_league
+		}		
+		UKR_financial_reforms = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					industrial_capacity_factory = 0.05
+					industrial_capacity_dockyard = 0.05
+				}
+				picture = UKR_financial_reforms
+		}
+
+		UKR_underfunded_education_reform = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					research_speed_factor = 0.02
+					production_speed_buildings_factor = 0.02
+				}
+				picture = UKR_underfunded_education_reform
+		}				
+		UKR_presy = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					subversive_activites_upkeep = -0.05
+				}
+				picture = GFX_idea_UKR_presy
+		}				
+		UKR_people_president = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					production_speed_buildings_factor = 0.04
+					social_democratism_drift = 0.02
+				}
+				picture = UKR_people_president
+		}
+		UKR_democratic_land_reform_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					production_speed_buildings_factor = 0.05
+					social_democratism_drift = 0.02
+				}
+				picture = UKR_democratic_land_reform
+		}				
+		UKR_dwijka_pact = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			targeted_modifier = { tag = POL  license_purchase_cost = -0.2 }
+			modifier = {
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+				research_speed_factor = 0.03
+			}
+			picture = UKR_sbu_dwojka_pact
+		}
+
+		##Junta Ideas##		
+	
+		UKR_purged_military = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+			modifier = {
+				army_org = -5
+				encryption_factor = -0.1
+				decryption_factor = -0.1
+			}
+			picture = 	UKR_purged_military
+		}
+		UKR_rehabilitated_military = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+			modifier = {
+				army_org = 5
+				accelerationism_drift = -0.01
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+			picture = UKR_rehabilitated_military
+		}
+		UKR_cult_skoropadsky = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				army_core_attack_factor = 0.1
+			}
+			picture = UKR_cult_skoropadsky
+		}
+
+		UKR_ministry_veterans_refugee = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				special_forces_cap = 0.08
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.07
+					instant = yes
+				}
+			}
+			picture = UKR_ministry_veterans_refugges
+		}
+		UKR_ministry_veterans_refugee_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				special_forces_cap = 0.08
+				monthly_population = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.07
+					instant = yes
+				}
+			}
+			picture = UKR_ministry_veterans_refugges	
+		}
+		UKR_reformed_parliment = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				right_authoritarianism_drift = 0.03
+			}
+			picture = UKR_reformed_parliment		
+		}	
+		UKR_reformed_parliment_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = UKR
+				}
+			modifier = {
+				right_authoritarianism_drift = 0.03
+				revolutionary_anarchism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				libertarian_marxism_drift = -0.01
+				revisionist_socialism_drift = -0.01
+			}
+			picture = UKR_reformed_parliment	
+		}
+
+		UKR_king_vasyl = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				political_power_factor = 0.05
+			}
+			on_add = {
+				AUS = {
+					add_opinion_modifier = { target = UKR modifier = small_increase }
+				}
+			}
+			picture = UKR_king_vasyl	
+		}
+		UKR_emperor_ivan = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				political_power_factor = 0.1
+				justify_war_goal_time = -0.2
+			}
+			picture = UKR_emperor_ivan
+		}
+		UKR_unity_moscovites = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			targeted_modifier = { tag = RUS attack_bonus_against = 0.2 } 
+			targeted_modifier = { tag = RUS defense_bonus_against = 0.2 } 
+			modifier = {
+				war_support_factor  = 0.1
+			}
+			picture = UKR_unity_muscovites
+		}
+
+		UKR_free_cossack_sufferage = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				reactionism_drift = 0.01
+				attrition = -0.05
+			}
+			picture = UKR_free_cossack_association
+		}
+		UKR_rada_committee_ununkrainian = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				revolutionary_anarchism_drift = -0.01
+				libertarian_marxism_drift = -0.01
+				revisionist_socialism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+			picture = UKR_rada_committee_unukrainian
+		}				
+		UKR_rada_committee_ununkrainian_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				revolutionary_anarchism_drift = -0.01
+				libertarian_marxism_drift = -0.01
+				vanguard_socialism_drift = -0.01
+				revisionist_socialism_drift = -0.01
+				social_democratism_drift = -0.01
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+			picture = UKR_rada_committee_unukrainian
+		}
+
+		UKR_prometheus_tomorrow = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				non_core_manpower = 0.05
+			}
+			picture = UKR_prometheus_tomorrow
+		}					
+		UKR_mala_rada = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				justify_war_goal_time = -0.1
+				political_power_factor = 0.05
+			}
+			picture = UKR_mala_rada
+		}	
+		UKR_national_cultural_revolution = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				justify_war_goal_time = -0.2
+				political_power_factor = 0.2
+				production_speed_buildings_factor = 0.1 
+			}
+			picture = UKR_national_cultural_revolution
+		}	
+		UKR_french_contracts = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			targeted_modifier = { tag = FRA  license_purchase_cost = -0.9 }
+			modifier = {
+				research_speed_factor = 0.05
+				industrial_capacity_factory = 0.1 
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_french_contracts	
+		}	
+		UKR_arditi_advisors = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				special_forces_cap = 0.1
+				attrition = -0.05
+			}
+			equipment_bonus = {
+				special_forces = {
+					max_organisation = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_arditi_training
+		}
+
+		UKR_ukraine_syndicalism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_syndicalism
+		}
+		UKR_ZUNV_paramilitaries = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				conscription = 0.05
+				political_power_factor = 0.10
+			}
+			picture = UKR_zunv_paramilitaries
+		}
+		UKR_vil_radas = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				conscription = 0.02
+				accelerationism_drift = 0.05
+			}
+			picture = UKR_vil_rada
+		}
+		UKR_vil_radas_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				conscription = 0.02
+				accelerationism_drift = 0.05
+				conversion_cost_civ_to_mil_factor = -0.15
+				conversion_cost_mil_to_civ_factor = -0.15				
+				political_power_factor = 0.1
+				subversive_activites_upkeep = -0.2
+			}
+			picture = UKR_vil_rada
+		}
+		UKR_vil_radas_3 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				conscription = 0.02
+				accelerationism_drift = 0.05
+				conversion_cost_civ_to_mil_factor = -0.15
+				conversion_cost_mil_to_civ_factor = -0.15	
+				political_power_factor = 0.1
+				subversive_activites_upkeep = -0.2
+				justify_war_goal_time = -0.3
+			}
+			picture = UKR_vil_rada
+		}
+		UKR_ukraine_syndicalism_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				research_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_syndicalism
+		}
+
+		UKR_grand_cultural_revolution = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				non_core_manpower = 0.05
+				accelerationism_drift = 0.05
+			}
+			picture = UKR_grand_cultural_revolution
+		}
+		UKR_proletarian_nationalism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				political_power_factor = 0.25
+				army_core_defence_factor = 0.15
+			}
+			picture = UKR_proletarian_nationalism
+		}	
+		UKR_grand_cultural_revolution_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				non_core_manpower = 0.07
+				accelerationism_drift = 0.1
+				research_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_grand_cultural_revolution
+		}
+		UKR_grand_cultural_revolution_3 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				non_core_manpower = 0.1
+				accelerationism_drift = 0.1
+				research_speed_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					instant = yes
+				}
+			}
+			picture = UKR_grand_cultural_revolution
+		}			
+		UKR_people_planning_commission = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2		
+			}
+			picture = UKR_urban_planning_commission		
+		}	
+		UKR_people_planning_commission_2 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2	
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.05
+			}
+			picture = UKR_urban_planning_commission
+		}	
+		UKR_people_planning_commission_3 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2	
+				conversion_cost_civ_to_mil_factor = -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.05
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+			}
+			picture = UKR_urban_planning_commission
+		}
+
+		UKR_egalitarian_technocracy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.05
+				attrition = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+			picture = UKR_egalitarism_technocracy
+		}
+		UKR_reverse_brain_drain = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				consumer_goods_factor = -0.07
+				research_speed_factor = 0.05
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+			picture = UKR_reverse_brain_drain
+		}
+		UKR_civic_nationalism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UKR
+			}
+			modifier = {
+				resistance_target = -0.1
+				non_core_manpower = 0.1
+				accelerationism_drift = 0.1
+			}
+			picture = UKR_civic_nationalism
+		}					
+	}
+
+	head_of_government = {
+		UKR_scd_Volodymyr_Chubynskyi = {
+			picture = GFX_idea_UKR_scd_Volodymyr_Chubynskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_completed_focus = ukraine_socdem_victory
+			}
+		}
+		UKR_lib1_Vyacheslav_Prokopovych = {
+			picture = GFX_idea_UKR_lib1_Vyacheslav_Prokopovych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_naive_optimist
+			}
+			available = {
+				has_completed_focus = ukraine_human_rights
+			}
+		}
+		UKR_lib2_Kost_Levytsky = {
+			picture = GFX_idea_UKR_lib2_Kost_Levytsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_completed_focus = ukraine_economic_freedom
+			}
+		}
+		UKR_con_Fedir_Lysohub = {
+			picture = GFX_idea_UKR_con_Fedir_Lysohub
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_completed_focus = ukraine_conservative_victory
+			}
+		}
+		UKR_revsoc_Vsevolod_Holubovych = {
+			picture = GFX_idea_UKR_revsoc_Vsevolod_Holubovych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			available = {
+				has_completed_focus = ukraine_socialist_victory
+			}
+		}
+		UKR_des_Serhiy_Herbel = {
+			picture = GFX_idea_UKR_des_Serhiy_Herbel
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_old_general
+			}
+			available = {
+				has_completed_focus = ukraine_permanent_dictatorship
+			}
+		}
+		UKR_autdem_Mykhailo_Chubynskyi = {
+			picture = GFX_idea_UKR_autdem_Mykhailo_Chubynskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_completed_focus = ukraine_authoritarian_republic
+			}
+		}
+		UKR_mon_Vasyl_Zen_kivs_kyi = {
+			picture = GFX_idea_UKR_mon_Vasyl_Zen_kivs_kyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_spiritual_leader
+			}
+			available = {
+				has_completed_focus = ukraine_monarchism_characteristics
+			}
+		}
+		UKR_reac_Mykola_Sakhno_Ustymovych = {
+			picture = GFX_idea_UKR_reac_Mykola_Sakhno_Ustymovych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			available = {
+				has_completed_focus = ukraine_poltavets_reign
+			}
+		}
+		UKR_teliha_Ostap_Vyshnia = {
+			picture = GFX_idea_UKR_teliha_Ostap_Vyshnia
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_happy_amateur
+			}
+			available = {
+				has_completed_focus = ukraine_olena_president
+			}
+		}
+		UKR_natrej_Osyp_Nazaruk = {
+			picture = GFX_idea_UKR_natrej_Osyp_Nazaruk
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_political_protege
+			}
+			available = {
+				has_completed_focus = ukraine_zunv_victory
+			}
+		}
+		UKR_na_Klyment_Kvitka = {
+			picture = GFX_idea_UKR_na_Klyment_Kvitka
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_completed_focus = ukraine_new_art
+			}
+		}
+		UKR_ss_Olgerd_Boczkowski = {
+			picture = GFX_idea_UKR_ss_Olgerd_Boczkowski
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_government
+				hog_backroom_backstabber
+			}
+			available = {
+				has_completed_focus = ukraine_self_sufficiency
+			}
+		}
+	}
+
+	foreign_minister = {
+		UKR_scd_Mykola_Porsh = {
+			picture = GFX_idea_UKR_scd_Mykola_Porsh
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = ukraine_socdem_victory
+			}
+		}
+		UKR_lib1_Mykola_Rubisov = {
+			picture = GFX_idea_UKR_lib1_Mykola_Rubisov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = ukraine_human_rights
+			}
+		}
+		UKR_lib2_Andrij_Livytskyi = {
+			picture = GFX_idea_UKR_lib2_Andrij_Livytskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			available = {
+				has_completed_focus = ukraine_economic_freedom
+			}
+		}
+		UKR_con_Mykola_Vasylenko = {
+			picture = GFX_idea_UKR_con_Mykola_Vasylenko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_completed_focus = ukraine_conservative_victory
+			}
+		}
+		UKR_revsoc_Mykola_Liubynsky = {
+			picture = GFX_idea_UKR_revsoc_Mykola_Liubynsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_completed_focus = ukraine_socialist_victory
+			}
+		}
+		UKR_des_Vasyl_Orenchuk = {
+			picture = GFX_idea_UKR_des_Vasyl_Orenchuk
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			available = {
+				has_completed_focus = ukraine_permanent_dictatorship
+			}
+		}
+		UKR_autdem_Isaak_Mazepa = {
+			picture = GFX_idea_UKR_autdem_Isaak_Mazepa
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_completed_focus = ukraine_authoritarian_republic
+			}
+		}
+		UKR_mon_Nikolaus_Wassilko_von_Serecki = {
+			picture = GFX_idea_UKR_mon_Nikolaus_Wassilko_von_Serecki
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = ukraine_monarchism_characteristics
+			}
+		}
+		UKR_reac_Stepan_Smal_Stotski = {
+			picture = GFX_idea_UKR_reac_Stepan_Smal_Stotski
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_completed_focus = ukraine_poltavets_reign
+			}
+		}
+		UKR_teliha_Olekdandr_Oles = {
+			picture = GFX_idea_UKR_teliha_Olekdandr_Oles
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_completed_focus = ukraine_olena_president
+			}
+		}
+		UKR_natrej_Dmytro_Dontsov = {
+			picture = GFX_idea_UKR_natrej_Dmytro_Dontsov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_completed_focus = ukraine_zunv_victory
+			}
+		}
+		UKR_na_Pavlo_Tychyna = {
+			picture = GFX_idea_UKR_na_Pavlo_Tychyna
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_completed_focus = ukraine_new_art
+			}
+		}
+		UKR_ss_Osyp_Turiansky = {
+			picture = GFX_idea_UKR_ss_Osyp_Turiansky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_completed_focus = ukraine_self_sufficiency
+			}
+		}
+	}
+
+	economy_minister = {
+		UKR_scd_Borys_Martos = {
+			picture = GFX_idea_UKR_scd_Borys_Martos
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_keynesian_economy
+			}
+			available = {
+				has_completed_focus = ukraine_socdem_victory
+			}
+		}
+		UKR_lib1_Ivan_Feshchenko_Chopivsky = {
+			picture = GFX_idea_UKR_lib1_Ivan_Feshchenko_Chopivsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_completed_focus = ukraine_human_rights
+			}
+		}
+		UKR_lib2_Christofor_Baranowski = {
+			picture = GFX_idea_UKR_lib2_Christofor_Baranowski
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			available = {
+				has_completed_focus = ukraine_economic_freedom
+			}
+		}
+		UKR_con_Anton_Rzepecki = {
+			picture = GFX_idea_UKR_con_Anton_Rzepecki
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_bank_president
+			}
+			available = {
+				has_completed_focus = ukraine_conservative_victory
+			}
+		}
+		UKR_revsoc_Mykola_Stasyuk = {
+			picture = GFX_idea_UKR_revsoc_Mykola_Stasyuk
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			available = {
+				has_completed_focus = ukraine_socialist_victory
+			}
+		}
+		UKR_des_Vasyl_Veselkpvskyi = {
+			picture = GFX_idea_UKR_des_Vasyl_Veselkpvskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			available = {
+				has_completed_focus = ukraine_permanent_dictatorship
+			}
+		}
+		UKR_autdem_Yuriy_Afanasiev = {
+			picture = GFX_idea_UKR_autdem_Yuriy_Afanasiev
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			available = {
+				has_completed_focus = ukraine_authoritarian_republic
+			}
+		}
+		UKR_mon_Vasyl_Kolokoltsov = {
+			picture = GFX_idea_UKR_mon_Vasyl_Kolokoltsov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_construction_magnate
+			}
+			available = {
+				has_completed_focus = ukraine_monarchism_characteristics
+			}
+		}
+		UKR_reac_Roman_Smal_Stocki = {
+			picture = GFX_idea_UKR_reac_Roman_Smal_Stocki
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_reformer
+			}
+			available = {
+				has_completed_focus = ukraine_poltavets_reign
+			}
+		}
+		UKR_teliha_Kostyantyn_Klepachivsky = {
+			picture = GFX_idea_UKR_teliha_Kostyantyn_Klepachivsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_theoretical_scientist
+			}
+			available = {
+				has_completed_focus = ukraine_olena_president
+			}
+		}
+		UKR_natrej_Stepan_Lenkawski = {
+			picture = GFX_idea_UKR_natrej_Stepan_Lenkawski
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				has_completed_focus = ukraine_zunv_victory
+			}
+		}
+		UKR_na_Mykhailo_Poloz = {
+			picture = GFX_idea_UKR_na_Mykhailo_Poloz
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_completed_focus = ukraine_new_art
+			}
+		}
+		UKR_ss_Mykhailo_Volobuyev = {
+			picture = GFX_idea_UKR_ss_Mykhailo_Volobuyev
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			available = {
+				has_completed_focus = ukraine_self_sufficiency
+			}
+		}
+	}
+
+	security_minister = {
+		UKR_scd_Oleksandr_Lotocki = {
+			picture = GFX_idea_UKR_scd_Oleksandr_Lotocki
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			available = {
+				has_completed_focus = ukraine_socdem_victory
+			}
+		}
+		UKR_lib1_Arkadiy_Barbar = {
+			picture = GFX_idea_UKR_lib1_Arkadiy_Barbar
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_completed_focus = ukraine_human_rights
+			}
+		}
+		UKR_lib2_Zeev_Latsky = {
+			picture = GFX_idea_UKR_lib2_Zeev_Latsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_silent_lawyer
+			}
+			available = {
+				has_completed_focus = ukraine_economic_freedom
+			}
+		}
+		UKR_con_Ihor_Kistyakovskyi = {
+			picture = GFX_idea_UKR_con_Ihor_Kistyakovskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_completed_focus = ukraine_conservative_victory
+			}
+		}
+		UKR_revsoc_Pavlo_Khrystiuk = {
+			picture = GFX_idea_UKR_revsoc_Pavlo_Khrystiuk
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			available = {
+				has_completed_focus = ukraine_socialist_victory
+			}
+		}
+		UKR_des_Mykola_Sakhno_Ustymovych = {
+			picture = GFX_idea_UKR_des_Mykola_Sakhno_Ustymovych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			available = {
+				has_completed_focus = ukraine_permanent_dictatorship
+			}
+		}
+		UKR_autdem_Kostyantyn_Vrotnovsky_Syvoshapka = {
+			picture = GFX_idea_UKR_autdem_Kostyantyn_Vrotnovsky_Syvoshapka
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_completed_focus = ukraine_authoritarian_republic
+			}
+		}
+		UKR_mon_Dmytro_Andro = {
+			picture = GFX_idea_UKR_mon_Dmytro_Andro
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_completed_focus = ukraine_monarchism_characteristics
+			}
+		}
+		UKR_reac_Petro_Zaliskyi = {
+			picture = GFX_idea_UKR_reac_Petro_Zaliskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_completed_focus = ukraine_poltavets_reign
+			}
+		}
+		UKR_teliha_Andriy_Melnyk = {
+			picture = GFX_idea_UKR_teliha_Andriy_Melnyk
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_man_of_the_people
+			}
+			available = {
+				has_completed_focus = ukraine_olena_president
+			}
+		}
+		UKR_natrej_Roman_Shukhevych = {
+			picture = GFX_idea_UKR_natrej_Roman_Shukhevych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			available = {
+				has_completed_focus = ukraine_zunv_victory
+			}
+		}
+		UKR_na_Julius_Wagner = {
+			picture = GFX_idea_UKR_na_Julius_Wagner
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_completed_focus = ukraine_new_art
+			}
+		}
+		UKR_ss_Savatiy_Bereznyak = {
+			picture = GFX_idea_UKR_ss_Savatiy_Bereznyak
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			available = {
+				has_completed_focus = ukraine_self_sufficiency
+			}
+		}
+	}
+
+	head_of_intel = {
+		UKR_scd_Otto_Eichelman = {
+			picture = GFX_idea_UKR_scd_Otto_Eichelman
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_socdem_victory
+			}
+		}
+		UKR_lib1_Serhiy_Bachynsky = {
+			picture = GFX_idea_UKR_lib1_Serhiy_Bachynsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_human_rights
+			}
+		}
+		UKR_lib2_Osyp_Mykytka = {
+			picture = GFX_idea_UKR_lib2_Osyp_Mykytka
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_economic_freedom
+			}
+		}
+		UKR_con_Oleksandr_Ragoza = {
+			picture = GFX_idea_UKR_con_Oleksandr_Ragoza
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				OR = {
+					has_completed_focus = ukraine_conservative_victory
+					has_completed_focus = ukraine_permanent_dictatorship
+				}
+			}
+		}
+		UKR_revsoc_Vasyl_Ellanskyi = {
+			picture = GFX_idea_UKR_revsoc_Vasyl_Ellanskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_socialist_victory
+			}
+		}
+		UKR_autdem_Borys_Butenko = {
+			picture = GFX_idea_UKR_autdem_Borys_Butenko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_technical_specialist
+			}
+			available = {
+				OR = {
+					has_completed_focus = ukraine_authoritarian_republic
+					has_completed_focus = ukraine_poltavets_reign
+				}
+			}
+		}
+		UKR_mon_Pavlo_Andrianov = {
+			picture = GFX_idea_UKR_mon_Pavlo_Andrianov
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_monarchism_characteristics
+			}
+		}
+		UKR_teliha_Yaroslav_Stesko = {
+			picture = GFX_idea_UKR_teliha_Yaroslav_Stesko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_olena_president
+			}
+		}
+		UKR_natrej_Mykola_Lebid = {
+			picture = GFX_idea_UKR_natrej_Mykola_Lebid
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_zunv_victory
+			}
+		}
+		UKR_na_Valerian_Pidmohylny = {
+			picture = GFX_idea_UKR_na_Valerian_Pidmohylny
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_completed_focus = ukraine_new_art
+			}
+		}
+		UKR_ss_Volodymyr_Kubijovych = {
+			picture = GFX_idea_UKR_ss_Volodymyr_Kubijovych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_completed_focus = ukraine_self_sufficiency
+			}
+		}
+	}
+
+	chief_of_staff = {
+		UKR_chief_Oleksandr_Rogoza = {
+			picture = GFX_idea_UKR_chief_Oleksandr_Rogoza
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cos_school_of_fire_support
+			}
+		}
+		UKR_chief_Pavlo_Skoropadsky = {
+			picture = GFX_idea_UKR_chief_Pavlo_Skoropadsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cos_school_of_mass_combat
+			}
+		}
+		UKR_chief_Petro_Bolbochan = {
+			picture = GFX_idea_UKR_chief_Petro_Bolbochan
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cos_school_of_commando_operations
+			}
+		}
+	}
+
+	chief_of_army = {
+		UKR_arm_Oleksandr_Lignau = {
+			picture = GFX_idea_UKR_arm_Oleksandr_Lignau
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+		UKR_arm_Oleksandr_Slyvynsky = {
+			picture = GFX_idea_UKR_arm_Oleksandr_Slyvynsky
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				carm_doctrine_of_autonomy
+			}
+		}
+		UKR_arm_Volodymyr_Oskilko = {
+			picture = GFX_idea_UKR_arm_Volodymyr_Oskilko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+	}
+
+	chief_of_navy = {
+		UKR_nav_Andriy_Pokrovskyi = {
+			picture = GFX_idea_UKR_nav_Andriy_Pokrovskyi
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cnav_open_seas_doctrine
+			}
+		}
+		UKR_nav_Oleksandr_Hadd = {
+			picture = GFX_idea_UKR_nav_Oleksandr_Hadd
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cnav_power_projection_doctrine
+			}
+		}
+		UKR_nav_Svyatoslav_Shramchenko = {
+			picture = GFX_idea_UKR_nav_Svyatoslav_Shramchenko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cnav_indirect_approach_doctrine
+			}
+		}
+	}
+
+	chief_of_air_force = {
+		UKR_air_Borys_Guber = {
+			picture = GFX_idea_UKR_air_Borys_Guber
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cair_vertical_envelopment_doctrine
+			}
+		}
+		UKR_air_Levko_Matsiyevych = {
+			picture = GFX_idea_UKR_air_Levko_Matsiyevych
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cair_carpet_bombing_doctrine
+			}
+		}
+		UKR_air_Petro_Franko = {
+			picture = GFX_idea_UKR_air_Petro_Franko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				cair_air_superiority_doctrine
+			}
+		}
+	}
+
+	theorist = {
+		UKR_theo_Oleksandr_Hadd = {
+			picture = GFX_idea_UKR_theo_Oleksandr_Hadd
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				trade_interdiction_theorist
+			}
+			research_bonus = {
+				cat_trade_interdiction = 0.1
+			}
+		}
+		UKR_theo_Oleksandr_Hrekiv = {
+			picture = GFX_idea_UKR_theo_Oleksandr_Hrekiv
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				mobile_warfare_theorist
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.1
+			}
+		}
+		UKR_theo_Petro_Franko = {
+			picture = GFX_idea_UKR_theo_Petro_Franko
+			allowed = {
+				original_tag = UKR
+			}
+			traits = {
+				operational_integrity_theorist
+			}
+			research_bonus = {
+				cat_operational_integrity = 0.1
+			}
+		}
+	}
+
+	industrial_concern = {
+		Kyiv_Polytechnic_Institute = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				electronics_manufacturer
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+		The_Odesa_Consortium = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+			}
+			equipment_bonus = {
+
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+	}
+
+	weapons_manufacturer = {
+		designer = yes
+		Kyiv_Arsenal_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				artillery = 0.1
+			}
+		}
+		Fort_Rifle_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				infantry_equipment_producer_offense_2
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+
+	tank_manufacturer = {
+		designer = yes
+		Fastiv_Design_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				small_tank_producer_mass_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		Berdychiv_Motorcar_Factory = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				motorised_equipment_producer_defense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	air_naval_manufacturer = {
+		designer = yes
+		Mykolaiv_Shipyards = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				capital_ship_producer_defense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				dd_tech = 0.1
+				ss_tech = 0.1
+				bb_tech = 0.1
+			}
+		}
+		Kyiv_Aeronautics_Club = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				fighter_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		Cherkasy_Aircraft_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				tactical_bomber = 0.1
+			}
+		}
+		Antonov_Design_Bureau = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				bomber_producer_offense_1
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				cat_heavy_fighter = 0.2
+			}
+		}
+		Baltic_Black_Sea_Naval_Aeronautics_Society = {
+			allowed = {
+				original_tag = UKR
+			}
+			available = {
+				original_tag = UKR
+			}
+			traits = {
+				nav_cas_producer_offense_2
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				
+			}
+			research_bonus = {
+				naval_bomber = 0.2
+			}
+		}
+	}
+}

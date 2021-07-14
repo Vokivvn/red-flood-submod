@@ -1,0 +1,135 @@
+﻿capital = 440
+
+oob = "PNJ_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	RAJ_shared_economy
+	PNJ_autoritarian_minority_rule
+	PNJ_elite_sikh_army
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 5
+	liberalism = 30
+	conservatism = 20
+	right_authoritarianism = 40
+	despotism = 0
+	reactionism = 5
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Ghulam Hussain Hidayatullah"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = orthodox_leninism 
+}
+
+create_country_leader = {
+	name = "Sohan Singh Bhakna"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = council_communism
+}
+
+create_country_leader = {
+	name = "Har Dayal"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = social_anarchism
+}
+
+create_country_leader = {
+	name = "Mangu Ram Mugowalia"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = democratic_socialism
+}
+
+create_country_leader = {
+	name = "Bhim Sen Sachar"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = progressivism
+}
+
+create_country_leader = {
+	name = "Muhammad Ali Jinnah"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = market_liberalism
+}
+
+create_country_leader = {
+	name = "Sikandar Hayat Khan"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = traditional_conservatism
+}
+
+create_country_leader = {
+	name = "Labh Singh Saini"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = constitutional_dictatorship
+}
+
+create_country_leader = {
+	name = "Syed Faiz-ul Hassan Shah"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = religious_fundamentalism
+}
+
+create_country_leader = {
+	name = "Udham Singh Nagoken"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+}
+
+set_stability = 0.5
+
+create_country_leader = {
+	name = "Sikandar Hayat Khan"
+	desc = "POLITICS_Tara_Singh_DESC"
+	picture = "Portrait_PJB_Tara_Singh.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_conservatism
+    traits = {
+		stout_defender	
+	}
+}

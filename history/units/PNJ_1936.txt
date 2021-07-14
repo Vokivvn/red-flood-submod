@@ -1,0 +1,71 @@
+﻿division_template = {
+	name = "Infantry Brigade"			# Infantry Brigade
+
+	division_names_group = RAJ_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"			# Cavalry Brigade
+
+	division_names_group = RAJ_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	######## LAND OOB ########
+	division = {
+		location = 12822
+		division_template = "Infantry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10772
+		division_template = "Infantry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10843
+		division_template = "Infantry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 4979
+		division_template = "Infantry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 8106
+		division_template = "Infantry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 8007
+		division_template = "Cavalry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+	division = {
+		location = 10139
+		division_template = "Cavalry Brigade"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.7
+	}
+}

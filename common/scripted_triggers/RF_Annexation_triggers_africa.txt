@@ -1,0 +1,466 @@
+#Algeria - annexation_ALG_CONQ
+can_release_algeria = {
+	state = 459 #Algiers
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do France release first
+		OR = {
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+			has_country_flag = FRA_CONQ
+		}
+		NOT = {
+			tag = FRA
+			has_country_flag = ALG_CONQ
+			country_exists = ALG
+		}
+	}
+}
+
+#Angola - annexation_ANG_CONQ
+can_release_angola = {
+	state = 540 #Angola
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = POR
+			has_country_flag = ANG_CONQ
+			country_exists = ANG
+		}
+	}
+}
+
+#Botswana - annexation_BOT_CONQ
+can_release_botswana = {
+	state = 542 #Bechuanaland
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			has_country_flag = BOT_CONQ
+			country_exists = BOT
+		}
+	}
+}
+
+#Congo - annexation_COG_CONQ
+can_release_congo = {
+	state = 295 #Kinshasa
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = COG_CONQ
+			country_exists = COG
+		}
+	}
+}
+
+#Egypt - annexation_EGY_CONQ
+can_release_egypt = {
+	state = 446 #Cairo
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = EGY_CONQ
+			country_exists = EGY
+		}
+	}
+}
+
+#Ethiopia - annexation_ETH_CONQ
+can_release_ethiopia = {
+	state = 271 #Addis Abbba
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ETH_CONQ
+			country_exists = ETH
+		}
+	}
+}
+
+#Guinea - annexation_GNA_CONQ
+can_release_guinea = {
+	state = 780 #Guinea
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = FRA
+			has_country_flag = GUN_CONQ
+			country_exists = GUN
+		}
+	}
+}
+
+#Kenya - annexation_KEN_CONQ
+can_release_kenya = {
+	state = 547 #Kenya
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			has_country_flag = KEN_CONQ
+			country_exists = KEN
+		}
+	}
+}
+
+#Liberia - annexation_LIB_CONQ
+can_release_liberia = {
+	state = 298 #Monrovia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = LIB_CONQ
+			country_exists = LIB
+		}
+	}
+}
+
+#Libya - annexation_LBA_CONQ
+can_release_libya = {
+	state = 448 #Tripoli
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Italy release first
+		OR = {
+			2 = { OR = { is_core_of = var:2.owner is_claimed_by = var:2.owner } }
+			has_country_flag = ITA_CONQ
+		}
+		# Do Algerian release first
+		OR = {
+			459 = { OR = { is_core_of = var:459.owner is_claimed_by = var:459.owner is_owned_by = FRA } }
+			has_country_flag = ALG_CONQ
+		}
+		NOT = {
+			tag = ITA
+			tag = FIU
+			has_country_flag = LBA_CONQ
+			country_exists = LBA
+		}
+	}
+}
+
+#Madagascar - annexation_MAD_CONQ
+can_release_madagascar = {
+	state = 543 #Madagascar
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = MAG_CONQ
+			country_exists = MAG
+		}
+	}
+}
+
+#Mali - annexation_MLI_CONQ
+can_release_mali = {
+	state = 556 #Mali
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = FRA
+			has_country_flag = MLI_CONQ
+			country_exists = MLI
+		}
+	}
+}
+
+#Mauritania - annexation_MRT_CONQ
+can_release_mauritania = {
+	state = 557 #Mauritania
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do France release first
+		OR = {
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+			has_country_flag = FRA_CONQ
+		}
+		# Do Algerian release first
+		OR = {
+			459 = { OR = { is_core_of = var:459.owner is_claimed_by = var:459.owner } }
+			has_country_flag = ALG_CONQ
+		}
+		NOT = {
+			tag = FRA
+			has_country_flag = MRT_CONQ
+			country_exists = MRT
+		}
+	}
+}
+
+#Morocco - annexation_MOR_CONQ
+can_release_morocco = {
+	state = 461 #Casablanca
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Spanish release first
+		OR = {
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+			has_country_flag = SPR_CONQ
+		}
+		# Do Algerian release first
+		OR = {
+			459 = { OR = { is_core_of = var:459.owner is_claimed_by = var:459.owner } }
+			has_country_flag = ALG_CONQ
+		}
+		NOT = {
+			tag = SPR
+			tag = FRA
+			has_country_flag = MOR_CONQ
+			country_exists = MOR
+		}
+	}
+}
+
+#Mozambique - annexation_MZB_CONQ
+can_release_mozambique = {
+	state = 950 #Lourenço Marques
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = POR
+			has_country_flag = MZB_CONQ
+			country_exists = MZB
+		}
+	}
+}
+
+#Nigeria - annexation_NGA_CONQ
+can_release_nigeria = {
+	state = 973 #Lagos
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = WAF
+			has_country_flag = NGA_CONQ
+			country_exists = NGA
+		}
+	}
+}
+
+#Senegal - annexation_SEN_CONQ
+can_release_senegal = {
+	state = 802 #Senegal
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do France release first
+		OR = {
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+			has_country_flag = FRA_CONQ
+		}
+		NOT = {
+			tag = FRA
+			has_country_flag = SEN_CONQ
+			country_exists = SEN
+		}
+	}
+}
+
+
+#Somalia - annexation_SOM_CONQ
+can_release_somalia = {
+	state = 559 #Mogadishu
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ETH
+			has_country_flag = SOM_CONQ
+			country_exists = SOM
+		}
+	}
+}
+
+#South Africa - annexation_SAF_CONQ
+can_release_south_africa = {
+	state = 681 #Western Cape
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SAF_CONQ
+			country_exists = SAF
+		}
+	}
+}
+#South West Africa - annexation_SWF_CONQ
+can_release_south_west_africa = {
+	state = 950 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = SWF_CONQ
+			country_exists = SWF
+		}
+	}
+}
+#Volkstaat - annexation_VOL_CONQ
+can_release_volkstaat = {
+	state = 681 #Western Cape
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = VOL_CONQ
+			country_exists = VOL
+		}
+	}
+}
+
+#Tunisia - annexation_TUN_CONQ
+can_release_tunisia = {
+	state = 458 #Tunis
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do France release first
+		OR = {
+			16 = { OR = { is_core_of = var:16.owner is_claimed_by = var:16.owner } }
+			has_country_flag = FRA_CONQ
+		}
+		# Do Algerian release first
+		OR = {
+			459 = { OR = { is_core_of = var:459.owner is_claimed_by = var:459.owner } }
+			has_country_flag = ALG_CONQ
+		}
+		NOT = {
+			tag = FRA
+			has_country_flag = TUN_CONQ
+			country_exists = TUN
+		}
+	}
+}
+
+#Uganda - annexation_UGA_CONQ
+can_release_uganda = {
+	state = 548 #Uganda
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			has_country_flag = UGD_CONQ
+			country_exists = UGD
+		}
+	}
+}
+
+#Zanzibar - annexation_ZAN_CONQ
+can_release_zanzibar = {
+	state = 813 #South Zambezia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			has_country_flag = ZAN_CONQ
+			country_exists = ZAN
+		}
+	}
+}
+
+#Zimbabwe - annexation_ZIM_CONQ
+can_release_zimbabwe = {
+	state = 545 #Rhodesia
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = ENG
+			has_country_flag = ZIM_CONQ
+			country_exists = ZIM
+		}
+	}
+}
+
+#Chad - annexation_CHA_CONQ
+can_release_chad = {
+	state = 774 #Chad
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Gabon release first
+		OR = {
+			539 = { OR = { is_core_of = var:539.owner is_claimed_by = var:539.owner } }
+			has_country_flag = GBN_CONQ
+		}
+		NOT = {
+			tag = FRA
+			tag = ITA
+			has_country_flag = CHA_CONQ
+			country_exists = CHA
+		}
+	}
+}
+
+#Central African Republic - annexation_CAR_CONQ
+can_release_central_african_republic = {
+	state = 660 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Gabon release first
+		OR = {
+			539 = { OR = { is_core_of = var:539.owner is_claimed_by = var:539.owner } }
+			has_country_flag = GBN_CONQ
+		}
+		NOT = {
+			tag = FRA
+			tag = ITA
+			has_country_flag = CAR_CONQ
+			country_exists = CAR
+		}
+	}
+}
+
+#Gabon - annexation_GBN_CONQ
+can_release_gabon = {
+	state = 539 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Italy release first
+		OR = {
+			2 = { OR = { is_core_of = var:2.owner is_claimed_by = var:2.owner } }
+			has_country_flag = ITA_CONQ
+		}
+		NOT = {
+			tag = FRA
+			tag = ITA
+			has_country_flag = GBN_CONQ
+			country_exists = GBN
+		}
+	}
+}
+
+#Cameroon - annexation_CMR_CONQ
+can_release_cameroon = {
+	state = 773 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		# Do Gabon release first
+		OR = {
+			539 = { OR = { is_core_of = var:539.owner is_claimed_by = var:539.owner } }
+			has_country_flag = GBN_CONQ
+		}
+		NOT = {
+			tag = FRA
+			tag = ITA
+			has_country_flag = CMR_CONQ
+			country_exists = CMR
+		}
+	}
+}
+#Niger - annexation_TUA_CONQ
+can_release_niger = {
+	state = 939 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = FRA
+			has_country_flag = TUA_CONQ
+			country_exists = TUA
+		}
+	}
+}
+#Upper Volta - annexation_UPV_CONQ
+can_release_upper_volta = {
+	state = 778 #
+	is_claim_or_core_of_ROOT = no
+	ROOT = {
+		NOT = {
+			tag = FRA
+			has_country_flag = UPV_CONQ
+			country_exists = UPV
+		}
+	}
+}

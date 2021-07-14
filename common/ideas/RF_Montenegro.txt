@@ -1,0 +1,523 @@
+##############
+# Montenegro #
+##############
+ideas = {
+
+#################
+# Country ideas #
+#################
+	country = {
+		MNT_divided_nation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_divided_nation"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				political_power_gain = -0.2
+			}
+			picture = MNT_divided_nation
+		}
+		MNT_yugoslavian_refugees = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_yugoslavian_refugees"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				stability_factor = -0.1
+				defence = -0.05
+			}
+			picture = MNT_yugoslavian_refugees
+		}
+		MNT_heirs_of_rome = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_heirs_of_rome"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				accelerationism_drift = 0.02
+				drift_defence_factor = 0.05
+			}
+			picture = MNT_heirs_of_rome
+		}
+		MNT_hero_worship = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_hero_worship"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.01	
+			}
+			picture = MNT_hero_worship
+		}
+		MNT_decadent_concessions = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_decadent_concessions"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+			}
+			picture = MNT_decadent_concessions
+		}
+		MNT_imperial_secularism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_imperial_secularism"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				political_power_factor = 0.1
+				army_core_defence_factor = 0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.05
+			}
+			picture = MNT_imperial_secularism
+		}
+		MNT_romanisation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_romanisation"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.02
+				compliance_gain = 0.2
+			}
+			picture = MNT_romanisation
+		}
+		MNT_romans_all = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_romans_all"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				industrial_capacity_factory = 0.1
+			}
+			picture = MNT_romans_all
+		}
+		MNT_populist_economics = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_populist_economics"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.4
+			}
+			picture = MNT_populist_economics
+		}
+		MNT_one_people = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_one_people"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				industrial_capacity_factory = 0.1
+				global_building_slots_factor = 0.4
+				production_factory_max_efficiency_factor = 0.2
+			}
+			picture = MNT_one_people
+		}
+		MNT_patriotic_workers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_patriotic_workers"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+			picture = MNT_patriotic_workers
+		}
+		MNT_roman_majesty = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_roman_majesty"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.03
+				political_power_factor = 0.1
+				non_core_manpower = 0.05
+				compliance_gain = 0.3
+			}
+			picture = MNT_roman_majesty
+		}
+		MNT_roman_civility = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_roman_civility"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.03
+				compliance_gain = 0.3
+			}
+			picture = MNT_roman_civility
+		}
+		MNT_aryan_soul = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_aryan_soul"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				army_morale_factor = 0.1					
+			}
+			picture = MNT_aryan_soul
+		}
+		MNT_slavic_blood = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_slavic_blood"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				offence = 0.1
+			}
+			picture = MNT_slavic_blood
+		}
+		MNT_roman_armour = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_roman_armour"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				offence = 0.1
+				defence = 0.1
+			}
+			picture = MNT_roman_armour
+		}
+		MNT_loyalty_oaths = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_loyalty_oaths"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.02
+			}
+			picture = MNT_loyalty_oaths
+		}
+		MNT_roman_peace = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_roman_peace"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.1
+			}
+			picture = MNT_roman_peace
+		}
+		#Military
+		MNT_new_roman_army_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_new_roman_army_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				army_speed_factor = 0.05	
+			}
+			equipment_bonus = {
+				motorized = {
+					soft_attack = 0.1
+					instant = yes
+				}
+				mechanized = {
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+			picture = generic_intel_bonus
+		}
+		
+		MNT_roman_revanchism_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_roman_revanchism_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.1
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+		
+		MNT_army_discipline_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_army_discipline_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				army_morale_factor = 0.1
+			}
+			picture = FRA_army_of_aggression_focus
+		}
+		
+		MNT_cetinje_military_acedemy_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_cetinje_military_acedemy_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				max_command_power = 20
+			}
+			picture = generic_army_war_college
+		}
+		
+		MNT_modern_roman_army_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_modern_roman_army_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+				army_org_factor = 0.1
+				planning_speed = 0.1
+			}
+			picture = generic_infantry_bonus
+		}
+		
+		MNT_unrestricted_submarine_warfare_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_unrestricted_submarine_warfare_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				submarine = {
+					surface_detection = 0.1 instant = yes
+					sub_visibility = -0.1 instant = yes
+				}
+			}
+			picture = generic_navy_bonus
+		}
+		
+		MNT_dubrovnik_marine_school_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_unrestricted_submarine_warfare_idea"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				naval_coordination = 0.1
+				experience_gain_navy = 0.07
+			}
+			picture = generic_navy_bonus
+		}
+		
+		MNT_fearless_fliers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea MNT_fearless_fliers"}
+			allowed = {
+				original_tag = MNT
+			}
+			modifier = {
+				air_accidents_factor = 0.1
+				air_ace_generation_chance_factor = 0.1
+				army_bonus_air_superiority_factor = 0.05
+			}
+			picture = generic_air_bonus
+		}
+	}
+	
+##############
+# Government #
+##############	
+	
+	head_of_government = {
+		MNT_Radola_Gajda_hog_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					accelerationism_allowed = yes
+					NOT = { has_country_flag = Radola_Gajda_dead }
+					#has_country_flag = can_replace_hog
+				}
+			}
+			visible = {
+				accelerationism_allowed = yes
+				NOT = { has_country_flag = Radola_Gajda_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Radola_Gajda_hog_acc"
+			}
+			traits = {
+				head_of_government
+				accelerationism
+				hog_reformist_soldier
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	foreign_minister = {
+		MNT_Lazar_Mijuskovic_for_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					accelerationism_allowed = yes
+					NOT = { has_country_flag = Lazar_Mijuskovic_dead }
+				}
+			}
+			visible = {
+				accelerationism_allowed = yes
+				NOT = { has_country_flag = Lazar_Mijuskovic_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Radola_Gajda_hog_acc"
+			}
+			traits = {
+				foreign_minister
+				accelerationism
+				for_ideological_crusader
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	economy_minister = {
+		MNT_Milutin_Vucinic_eco_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					accelerationism_allowed = yes
+					NOT = { has_country_flag = Milutin_Vucinic_dead }
+				}
+			}
+			visible = {
+				accelerationism_allowed = yes
+				NOT = { has_country_flag = Milutin_Vucinic_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Milutin_Vucinic_hog_acc"
+			}
+			traits = {
+				economy_minister
+				accelerationism
+				eco_balanced_budget_economy
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	security_minister = {
+		MNT_Sekula_Drljevic_sec_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					accelerationism_allowed = yes
+					NOT = { has_country_flag = Sekula_Drljevic_dead }
+				}
+			}
+			visible = {
+				accelerationism_allowed = yes
+				NOT = { has_country_flag = Sekula_Drljevic_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Sekula_Drljevic_hog_acc"
+			}
+			traits = {
+				security_minister
+				accelerationism
+				sec_silent_lawyer
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	head_of_intel = {
+		MNT_Krsto_Popovoic_int_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					accelerationism_allowed = yes
+					NOT = { has_country_flag = Krsto_Popovoic_dead }
+				}
+			}
+			visible = {
+				accelerationism_allowed = yes
+				NOT = { has_country_flag = Krsto_Popovoic_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Krsto_Popovoic_hog_acc"
+			}
+			traits = {
+				head_of_intel
+				accelerationism
+				int_political_specialist
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	chief_of_staff = {
+		MNT_Mitar_Martinovic_cos_acc = {
+			allowed = { original_tag = MNT }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_available
+					NOT = { has_country_flag = Mitar_Martinovic_dead }
+				}
+			}
+			visible = {
+				NOT = { has_country_flag = Mitar_Martinovic_dead }
+			}
+			on_add = {
+				log = "[GetDateText]: [Root.GetName]: add idea MNT_Mitar_Martinovic_cos_rso"
+			}
+			traits = {
+				chief_of_staff
+				carm_static_defence_doctrine
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	chief_of_army = {
+	
+	}
+	
+	chief_of_navy = {
+	
+	}
+	
+	chief_of_air_force = {
+	
+	}
+	
+#############
+# Companies #
+#############
+
+	#### General ####
+	industrial_concern = {
+	
+	}
+	
+	#### Weapons ####
+	weapons_manufacturer = {
+	
+	}
+	
+	#### Air and Naval ####
+	air_naval_manufacturer = {
+	
+	}
+	
+#############
+# Theorist	#
+#############
+	theorist = {
+		
+	}
+}

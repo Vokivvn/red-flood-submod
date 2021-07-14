@@ -1,0 +1,313 @@
+###-Harbin Reworked Ideas-###
+ideas = {
+	country = {
+		##Harbin Ideas##
+		HAR_repentance = {
+			picture = ZHR_deathoftherepublic 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				reactionism_drift = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		HAR_salvation = {
+			picture = ZHR_deathoftherepublic 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		HAR_soup_kitchens = {
+			picture = ZHR_nationalrepresantativeassembly 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				social_democratism_drift = 0.05
+				industry_air_damage_factor = -0.05
+			}
+		}
+		HAR_equality = {
+			picture = ZHR_nationalrepresantativeassembly 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				social_democratism_drift = 0.1
+				industry_air_damage_factor = -0.05
+			}
+		}
+		HAR_crisis_hope = {
+			picture = ZHR_presidentsspeeches 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				liberalism_drift = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		HAR_crisis_hope2 = {
+			picture = ZHR_presidentsspeeches 
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				liberalism_drift = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		HAR_DPW = {
+			picture = POL_cultmarshal
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				accelerationism_drift = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		HAR_DPW2 = {
+			picture = POL_cultmarshal
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				accelerationism_drift = 0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		HAR_directive_227_idea = {
+			picture = POL_cultmarshal
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				training_time_army_factor = -0.5
+				conscription = 0.1
+				army_org_factor = -0.15
+			}
+		}
+		HAR_popular_front = {
+			picture = POL_cultmarshal
+			allowed = {
+				original_tag = HAR
+			}
+			modifier = {
+				vanguard_socialism_drift = 0.03
+				libertarian_marxism_drift = 0.03
+				revisionist_socialism_drift = 0.03
+				revolutionary_anarchism_drift = 0.03
+				social_democratism_drift = 0.03
+			}
+		}
+	}
+	####################################################################################
+	#Ministers#
+	####################################################################################
+
+
+	#####################################################################
+	#						Companies
+	#####################################################################
+	#### General ####
+	industrial_concern = {
+		HAR_Tereshchenkos_Consortium_Industrial_Concern = {
+			picture = ZHR_Tereshchenkos_Consortium_Industrial_Concern
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				industrial_manufacturer
+				regular
+			}
+			modifier = {
+				production_speed_arms_factory_factor = 0.03
+				production_speed_industrial_complex_factor = 0.1
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+		}
+		
+		HAR_Harbin_Radioelectronics_Institute = {
+			#name = Harbin_Radioelectronics_Institute
+			picture = ZHR_Harbin_Radioelectronics_Institute
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				electronics_manufacturer
+				regular
+			}
+			modifier = {
+				production_speed_radar_station_factor = 0.1
+			}
+			research_bonus = {
+				electronics = 0.1
+			}
+		}
+	}
+
+	#### Weapons Manufacturer ####
+	weapons_manufacturer = {
+		designer = yes
+
+		HAR_Harbin_Arsenal = {
+			picture = ZHR_Harbin_Arsenal
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				infantry_equipment_producer_offense_0
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+
+		HAR_Grabins_Ordnance_Factories_Inc = {
+			picture = ZHR_Grabins_Ordnance_Factories_Inc
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				artillery_producer_offense_0
+			}
+			research_bonus = {
+				artillery = 0.05
+			}
+		}
+
+	}
+
+	#### Heavy Equipment Manufacturer ####
+	tank_manufacturer = {
+		designer = yes
+
+		HAR_Kotin-Mikulin_Engines = {
+			#name = Kotin-Mikulin_Engines
+			picture = ZHR_Kotin-Mikulin_Engines
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				small_tank_producer_offense_0
+			}
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		
+		HAR_Khabarovsk_Motorcar_Factory = {
+			#name = Khabarovsk_Motorcar_Factory
+			picture = ZHR_Khabarovsk_Motorcar_Factory
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				motorised_equipment_producer_mass_0
+			}
+			research_bonus = {
+				motorized_equipment = 0.1
+			}
+		}
+	}
+
+	#### Air and Naval Manufacturer ####
+	air_naval_manufacturer = {
+		designer = yes
+
+		HAR_Khabarovsk_Hydroaeronautics_Bureau = {
+			#name = Khabarovsk_Hydroaeronautics_Bureau
+			picture = ZHR_Khabarovsk_Hydroaeronautics_Bureau
+			allowed = {
+				original_tag = HAR
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				nav_cas_producer_offense_1
+			}
+			research_bonus = {
+				naval_bomber = 0.15
+			}
+		}
+		
+		HAR_Union_of_Pacific_Shipyards = {
+			#name = Union_of_Pacific_Shipyards
+			picture = ZHR_Union_of_Pacific_Shipyards
+			allowed = {
+				original_tag = HAR
+			}
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_owned_and_controlled_by = ROOT
+				}
+			}
+			traits = {
+				capital_ship_producer_offense_0
+			}
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+		}
+
+		HAR_Nikolayevsk_Aeronautics_Factory = {
+			#name = Nikolayevsk_Aeronautics_Factory
+			picture = ZHR_Nikolayevsk_Aeronautics_Factory
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				bomber_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+		
+		HAR_Aerograd_Inc = {
+			#name = Aerograd_Inc
+			picture = ZHR_Aerograd_Inc
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				fighter_producer_offense_0
+			}
+			research_bonus = {
+				light_fighter = 0.1
+			}
+		}
+		HAR_Harbin_Strategic_Aircraft_Bureau = {
+			#name = Harbin_Strategic_Aircraft_Bureau
+			picture = ZHR_Harbin_Strategic_Aircraft_Bureau
+			allowed = {
+				original_tag = HAR
+			}
+			traits = {
+				bomber_producer_offense_0
+			}
+			research_bonus = {
+				air_equipment = 0.05
+			}
+		}
+
+	}
+}

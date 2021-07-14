@@ -1,0 +1,36 @@
+KCK_foreign_policy = {
+	icon = generic_foreign_policy
+	allowed = {
+		original_tag = KCK
+	}
+	priority = 100
+	visible = {
+		always = yes
+		is_subject = no
+	}
+}
+KCK_internal_policy = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = KCK
+	}
+	priority = 99
+	visible = {
+		OR = {
+		has_country_flag = showaichi_city_KCK
+		has_country_flag = eastport_city_KCK
+		has_country_flag = magadan_city_KCK
+		has_country_flag = dezhnevsk_city_KCK
+		}
+	}
+}
+KCK_remilitarize = {
+	icon = military_operation
+	allowed = {
+		original_tag = KCK
+	}
+	priority = 98
+	visible = {
+		always = yes
+	}
+}

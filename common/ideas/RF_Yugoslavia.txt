@@ -1,0 +1,475 @@
+ideas = {
+	country = {
+		YUG_cult_of_saints = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_new_sects
+			modifier = {
+				army_morale_factor = 0.15
+				army_defence_factor = 0.1
+			}
+		}
+		YUG_state_ascetism = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = ASY_caucasian_volunteer
+			modifier = {
+				stability_factor = -0.1
+				consumer_goods_factor = -0.05
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		YUG_christian_capitalism = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = PRS_junkerstaat
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = 0.02
+				trade_opinion_factor = -0.1
+				min_export = -0.2
+			}
+		}
+		YUG_all_for_god = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_patriotism
+			modifier = {
+				conscription_factor = 0.05
+				attrition = -0.1
+			}
+		}
+		YUG_nothing_outside_of_god = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = ASY_assyrian_church
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		YUG_and_nothing_against_him = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = PRS_disloyal_proletariat
+			modifier = {
+				conscription_factor = 0.03
+				political_power_factor = 0.05
+				root_out_resistance_effectiveness_factor = 0.1
+				reactionism_drift = 0.05
+			}
+		}
+		YUG_unity_through_faith = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_warrior_priests
+			modifier = {
+				attrition = -0.1
+				political_power_factor = 0.1
+				root_out_resistance_effectiveness_factor = 0.2
+				conscription_factor = 0.15
+				army_attack_factor = 0.1
+				reactionism_drift = 0.1
+			}
+		}
+
+		YUG_rapid_progress = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_minorities_recognized
+			modifier = {
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.07
+			}
+		}
+		YUG_ruthless_progress = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_industrial_quotas
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.2
+				research_speed_factor = 0.15
+				monthly_population = -0.05
+				consumer_goods_factor = -0.07
+			}
+		}
+		YUG_god_of_electricity = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = AUS_acc
+			modifier = {
+				production_speed_radar_station_factor = 0.25
+			}
+			research_bonus = {
+				electronics = 0.15
+			}
+		}
+		YUG_experimental_industry = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = BLR_icon_new_byelorussian_education
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.35
+				conversion_cost_mil_to_civ_factor = -0.35
+				production_factory_efficiency_gain_factor  = -0.05
+				line_change_production_efficiency_factor = 0.2
+				research_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.03
+					instant = yes
+				}
+			}
+		}
+		YUG_scientific_authority = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = BLR_icon_synchronization
+			modifier = {
+				stability_factor = -0.15
+				stability_weekly = 0.01
+				root_out_resistance_effectiveness_factor = 0.1
+				accelerationism_drift = 0.1
+			}
+		}
+		YUG_techno_slavia = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_centralised_corporate
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.1
+				political_power_factor = 0.1
+				accelerationism_drift = 0.1
+			}
+		}
+
+		YUG_national_avantgarde = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = POL_zermatic_spiritualism
+			modifier = {
+				research_speed_factor = 0.1
+				drift_defence_factor = 0.25
+			}
+		}
+		YUG_vedic_faith = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_religious_futurism
+			modifier = {
+				consumer_goods_factor = -0.03
+				encryption_factor = 0.1
+				attrition = -0.1
+			}
+		}
+		YUG_vedic_faith1 = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_religious_futurism
+			modifier = {
+				consumer_goods_factor = -0.07
+				encryption_factor = 0.2
+				attrition = -0.2
+			}
+		}
+		YUG_yugoslav_syndicalism = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = POL_dreamofzadruga
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		YUG_illyrian_identity = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = AUS_natmil
+			modifier = {
+				army_morale_factor = 0.1
+				training_time_factor = -0.1
+			}
+		}
+		YUG_barbarian_mythos = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = GER_rotfront
+			modifier = {
+				army_attack_factor = 0.15
+				acclimatization_cold_climate_gain_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.1
+			}
+		}
+		YUG_hyperborea = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = FRA_hyperborean_ideal
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		YUG_militant_youth = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = PRS_power_of_freikorps
+			modifier = {
+				conscription = 0.02
+			 	training_time_factor = 0.06
+			}
+		}
+		YUG_underground_production_idea = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = AUS_paracon
+			modifier = {
+				industrial_capacity_factory = 0.03
+				license_purchase_cost = -0.5
+				license_tech_difference_speed = 0.25
+			}
+		}
+
+		YUG_corporate_economy = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_russian_progressivism
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		YUG_corporate_economy1 = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_russian_progressivism
+			modifier = {
+				local_resources_factor = 0.1
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.03
+			}
+		}
+		YUG_corporate_economy2 = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = SIB_russian_progressivism
+			modifier = {
+				local_resources_factor = 0.1
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_bunker_factor = 0.25
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		YUG_socialist_economy = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = ZHR_defendtherevolution
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		YUG_socialist_economy1 = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = ZHR_defendtherevolution
+			modifier = {
+				min_export = -0.03
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+				consumer_goods_factor = -0.03
+			}
+		}
+		YUG_socialist_economy2 = {
+			allowed = {
+				original_tag = YUG
+			}
+			picture = ZHR_defendtherevolution
+			modifier = {
+				min_export = -0.06
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.3
+				consumer_goods_factor = -0.03
+			}
+		}
+	}
+
+	head_of_government = {
+		YUG_ante_trumbic = {
+			picture = GFX_idea_YUG_ante_trumbic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		YUG_dobroslav_jevdevic = {
+			picture = GFX_idea_YUG_dobroslav_jevdevic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				head_of_government
+				hog_local_tyrant
+			}
+			available = {
+				has_government = reactionism
+			}
+		}
+	}
+
+	foreign_minister = {
+		YUG_milos_crnjanski = {
+			picture = GFX_idea_YUG_milos_crnjanski
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		YUG_punisa_racic = {
+			picture = GFX_idea_YUG_punisa_racic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				foreign_minister
+				for_iron_fisted_brute
+			}
+			available = {
+				has_government = reactionism
+			}
+		}
+	}
+
+	economy_minister = {
+		YUG_jovan_karamata = {
+			picture = GFX_idea_YUG_jovan_karamata
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		YUG_ivan_subasic = {
+			picture = GFX_idea_YUG_ivan_subasic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				has_government = reactionism
+			}
+		}
+	}
+
+	security_minister = {
+		YUG_jovan_bijelic = {
+			picture = GFX_idea_YUG_jovan_bijelic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		YUG_milan_acimovic = {
+			picture = GFX_idea_YUG_milan_acimovic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_government = reactionism
+			}
+		}
+	}
+
+	head_of_intel = {
+		YUG_petar_dobrovic = {
+			picture = GFX_idea_YUG_petar_dobrovic
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_government = accelerationism
+			}
+		}
+		YUG_ilija_trifunovic_bircanin = {
+			picture = GFX_idea_YUG_ilija_trifunovic_bircanin
+			allowed = {
+				original_tag = YUG
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_government = reactionism
+			}
+		}
+	}
+}

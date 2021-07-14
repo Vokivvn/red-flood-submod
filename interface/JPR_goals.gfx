@@ -1,0 +1,424 @@
+spriteTypes = {
+	##Icon For: Soc Japan
+	SpriteType = {
+		name = "GFX_focus_JPR_will_of_the_people" 
+		texturefile = "gfx/interface/goals/JPR/JPR_will_of_the_people.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_down_with_the_emperor" 
+		texturefile = "gfx/interface/goals/JPR/JPR_down_with_the_emperor.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_organize_the_ricers" 
+		texturefile = "gfx/interface/goals/JPR/JPR_organize_the_ricers.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_JPR_devalue_the_yen" 
+		texturefile = "gfx/interface/goals/JPR/JPR_devalue_the_yen.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_dismantle_the_zaibatsus" 
+		texturefile = "gfx/interface/goals/JPR/JPR_dismantle_the_zaibatsus.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_champions" 
+		texturefile = "gfx/interface/goals/JPR/JPR_champions_day.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_agriculturalism_policy" 
+		texturefile = "gfx/interface/goals/JPR/JPR_agriculturalism_policy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_autarkic_economy" 
+		texturefile = "gfx/interface/goals/JPR/JPR_autarkic_economy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_centralised_communes" 
+		texturefile = "gfx/interface/goals/JPR/JPR_centralised_communes.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_collectivism_policy" 
+		texturefile = "gfx/interface/goals/JPR/JPR_collectivism_policy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_correct_the_rail_gauges" 
+		texturefile = "gfx/interface/goals/JPR/JPR_correct_the_rail_gauges.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_for_party" 
+		texturefile = "gfx/interface/goals/JPR/JPR_for_party.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_for_people" 
+		texturefile = "gfx/interface/goals/JPR/JPR_for_people.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_for_socialism" 
+		texturefile = "gfx/interface/goals/JPR/JPR_for_socialism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_form_the_national_workers_bureau" 
+		texturefile = "gfx/interface/goals/JPR/JPR_form_the_national_workers_bureau.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_former_colonies" 
+		texturefile = "gfx/interface/goals/JPR/JPR_former_colonies.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_foster_the_cooperative" 
+		texturefile = "gfx/interface/goals/JPR/JPR_foster_the_cooperative.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_institute_egalitarianism" 
+		texturefile = "gfx/interface/goals/JPR/JPR_institute_egalitarianism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_internationalist_solidarity" 
+		texturefile = "gfx/interface/goals/JPR/JPR_internationalist_solidarity.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_lessons_from_fujan" 
+		texturefile = "gfx/interface/goals/JPR/JPR_lessons_from_fujan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_mass_land_redistribution" 
+		texturefile = "gfx/interface/goals/JPR/JPR_mass_land_redistribution.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_mechanised_farms" 
+		texturefile = "gfx/interface/goals/JPR/JPR_mechanised_farms.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_nagasaki_asahigawa_railway"
+		texturefile = "gfx/interface/goals/JPR/JPR_nagasaki_asahigawa_railway.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_national_reformation_act" 
+		texturefile = "gfx/interface/goals/JPR/JPR_national_reformation_act.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_nationalisation_policy" 
+		texturefile = "gfx/interface/goals/JPR/JPR_nationalisation_policy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_new_socialist_hegemon" 
+		texturefile = "gfx/interface/goals/JPR/JPR_new_socialist_hegemon.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_organise_the_youth" 
+		texturefile = "gfx/interface/goals/JPR/JPR_organise_the_youth.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_organize_the_ricers" 
+		texturefile = "gfx/interface/goals/JPR/JPR_organize_the_ricers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_pacific_comrades" 
+		texturefile = "gfx/interface/goals/JPR/JPR_pacific_comrades.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_pan_asianism" 
+		texturefile = "gfx/interface/goals/JPR/JPR_pan_asianism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_power_to_the_people" 
+		texturefile = "gfx/interface/goals/JPR/JPR_power_to_the_people.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_raid_the_barracks" 
+		texturefile = "gfx/interface/goals/JPR/JPR_raid_the_barracks.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_raid_the_palaces" 
+		texturefile = "gfx/interface/goals/JPR/JPR_raid_the_palaces.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_reconstruct_the_countryside"
+		texturefile = "gfx/interface/goals/JPR/JPR_reconstruct_the_countryside.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_restart_industrialisation" 
+		texturefile = "gfx/interface/goals/JPR/JPR_restart_industrialisation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_shatter_the_monopolies" 
+		texturefile = "gfx/interface/goals/JPR/JPR_shatter_the_monopolies.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_socialist_continent" 
+		texturefile = "gfx/interface/goals/JPR/JPR_socialist_continent.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_textile_industries" 
+		texturefile = "gfx/interface/goals/JPR/JPR_textile_industries.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_councils" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_councils.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_new_kenpeitai" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_new_kenpeitai.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_new_order" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_new_order.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_new_worker" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_new_worker.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_sunrise_palace" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_sunrise_palace.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_tokyo_metro" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_tokyo_metro.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_vanguard" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_vanguard.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_wealth_distribution_program" 
+		texturefile = "gfx/interface/goals/JPR/JPR_wealth_distribution_program.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_western_comrades" 
+		texturefile = "gfx/interface/goals/JPR/JPR_western_comrades.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_will_of_the_people" 
+		texturefile = "gfx/interface/goals/JPR/JPR_will_of_the_people.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_advanced_thrusters_experiments" 
+		texturefile = "gfx/interface/goals/JPR/JPR_advanced_thrusters_experiments.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_aerial_defence_initiative" 
+		texturefile = "gfx/interface/goals/JPR/JPR_aerial_defence_initiative.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_airbase_expansion_initiative" 
+		texturefile = "gfx/interface/goals/JPR/JPR_airbase_expansion_initiative.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_combat_integration" 
+		texturefile = "gfx/interface/goals/JPR/JPR_combat_integration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_continue_the_modernisation" 
+		texturefile = "gfx/interface/goals/JPR/JPR_continue_the_modernisation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_create_red_army" 
+		texturefile = "gfx/interface/goals/JPR/JPR_create_red_army.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_crush_factionalism" 
+		texturefile = "gfx/interface/goals/JPR/JPR_crush_factionalism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_defender_of_the_sunset_isles" 
+		texturefile = "gfx/interface/goals/JPR/JPR_defender_of_the_sunset_isles.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_divert_naval_funds" 
+		texturefile = "gfx/interface/goals/JPR/JPR_divert_naval_funds.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_elected_officers" 
+		texturefile = "gfx/interface/goals/JPR/JPR_elected_officers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_expand_marine_guard" 
+		texturefile = "gfx/interface/goals/JPR/JPR_expand_marine_guard.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_for_the_revolution" 
+		texturefile = "gfx/interface/goals/JPR/JPR_for_the_revolution.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_formalise_the_army" 
+		texturefile = "gfx/interface/goals/JPR/JPR_formalise_the_army.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_german_tank_collaboration" 
+		texturefile = "gfx/interface/goals/JPR/JPR_german_tank_collaboration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_heavy_weapons_development" 
+		texturefile = "gfx/interface/goals/JPR/JPR_heavy_weapons_development.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_light_bombers" 
+		texturefile = "gfx/interface/goals/JPR/JPR_light_bombers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_new_aerial_strategies" 
+		texturefile = "gfx/interface/goals/JPR/JPR_new_aerial_strategies.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_organised_militias" 
+		texturefile = "gfx/interface/goals/JPR/JPR_organised_militias.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_pilot_academies" 
+		texturefile = "gfx/interface/goals/JPR/JPR_pilot_academies.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_recruit_esteemed_theorists" 
+		texturefile = "gfx/interface/goals/JPR/JPR_recruit_esteemed_theorists.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_red_flag_bearers" 
+		texturefile = "gfx/interface/goals/JPR/JPR_red_flag_bearers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_reduce_high_command_influence" 
+		texturefile = "gfx/interface/goals/JPR/JPR_reduce_high_command_influence.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_reflection_on_the_revolution" 
+		texturefile = "gfx/interface/goals/JPR/JPR_reflection_on_the_revolution.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_small_arms_development" 
+		texturefile = "gfx/interface/goals/JPR/JPR_small_arms_development.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_socialist_commisars" 
+		texturefile = "gfx/interface/goals/JPR/JPR_socialist_commisars.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_hero" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_hero.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_the_sky_is_no_limit" 
+		texturefile = "gfx/interface/goals/JPR/JPR_the_sky_is_no_limit.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_war_propaganda" 
+		texturefile = "gfx/interface/goals/JPR/JPR_war_propaganda.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_chi_ha_project" 
+		texturefile = "gfx/interface/goals/JPR/JPR_chi_ha_project.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_joint_plane_developments" 
+		texturefile = "gfx/interface/goals/JPR/JPR_joint_plane_developments.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_mass_urbanisation" 
+		texturefile = "gfx/interface/goals/JPR/JPR_mass_urbanisation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_carrier_expansion" 
+		texturefile = "gfx/interface/goals/JPR/JPR_carrier_expansion.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_above_the_clouds" 
+		texturefile = "gfx/interface/goals/JPR/JPR_above_the_clouds.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_against_their_hulls" 
+		texturefile = "gfx/interface/goals/JPR/JPR_against_their_hulls.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_beneath_the_waves"
+		texturefile = "gfx/interface/goals/JPR/JPR_beneath_the_waves.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_bomber_integration" 
+		texturefile = "gfx/interface/goals/JPR/JPR_bomber_integration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_challenge_the_bulldog" 
+		texturefile = "gfx/interface/goals/JPR/JPR_challenge_the_bulldog.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_convert_battleship_hulls" 
+		texturefile = "gfx/interface/goals/JPR/JPR_convert_battleship_hulls.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_convoy_interception" 
+		texturefile = "gfx/interface/goals/JPR/JPR_convoy_interception.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_cruiser_development" 
+		texturefile = "gfx/interface/goals/JPR/JPR_cruiser_development.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_deep_infiltration" 
+		texturefile = "gfx/interface/goals/JPR/JPR_deep_infiltration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_destroyer_horde" 
+		texturefile = "gfx/interface/goals/JPR/JPR_destroyer_horde.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_fortify_the_pacific_bases" 
+		texturefile = "gfx/interface/goals/JPR/JPR_fortify_the_pacific_bases.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_forward_sea_bases" 
+		texturefile = "gfx/interface/goals/JPR/JPR_forward_sea_bases.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_front_line_harrasment" 
+		texturefile = "gfx/interface/goals/JPR/JPR_front_line_harrasment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_grand_fleet" 
+		texturefile = "gfx/interface/goals/JPR/JPR_grand_fleet.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_katayama_class" 
+		texturefile = "gfx/interface/goals/JPR/JPR_katayama_class.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_militarise_trade_posts" 
+		texturefile = "gfx/interface/goals/JPR/JPR_militarise_trade_posts.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_mobile_air_bases" 
+		texturefile = "gfx/interface/goals/JPR/JPR_mobile_air_bases.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_naval_wargames" 
+		texturefile = "gfx/interface/goals/JPR/JPR_naval_wargames.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_new_generation_battleships" 
+		texturefile = "gfx/interface/goals/JPR/JPR_new_generation_battleships.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_no_seas_are_safe" 
+		texturefile = "gfx/interface/goals/JPR/JPR_no_seas_are_safe.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_promote_the_shipyard_industry" 
+		texturefile = "gfx/interface/goals/JPR/JPR_promote_the_shipyard_industry.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_push_the_deck_further" 
+		texturefile = "gfx/interface/goals/JPR/JPR_push_the_deck_further.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_renew_the_coastal_defences" 
+		texturefile = "gfx/interface/goals/JPR/JPR_renew_the_coastal_defences.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_reorganise_red_navy" 
+		texturefile = "gfx/interface/goals/JPR/JPR_reorganise_red_navy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_focus_JPR_sailors_union" 
+		texturefile = "gfx/interface/goals/JPR/JPR_sailors_union.dds" 
+	}
+}

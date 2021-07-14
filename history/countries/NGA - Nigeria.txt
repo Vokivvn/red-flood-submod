@@ -1,0 +1,54 @@
+﻿capital = 558
+
+oob = "NGA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_convoys = 25
+
+set_popularities = {
+	accelerationism = 0
+	reactionism = 10
+	despotism = 24
+	right_authoritarianism = 12
+	conservatism = 30
+	liberalism = 22
+	social_democratism = 0
+	libertarian_marxism = 0
+	vanguard_socialism = 2
+	revolutionary_anarchism = 0
+}
+
+set_politics = {
+	
+	ruling_party = conservatism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+create_country_leader = {
+	name = "Bernard Henry Bourdillon"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Bernard_Henry.tga"
+	expire = "1965.1.1"
+	ideology = social_conservatism
+	traits = {
+		#popular_figurehead
+	}
+}
+create_country_leader = {
+	name = "Benjamin Azikiwe"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "Portrait_Benjamin_Azikiwe.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_democratism
+	traits = {
+		#popular_figurehead
+	}
+}
+

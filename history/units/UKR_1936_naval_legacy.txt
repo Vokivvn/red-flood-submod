@@ -1,0 +1,24 @@
+###OOB File for UKR.txt
+units = {
+	fleet = {
+		name = "Chornomors'kyi Flot"
+		naval_base = 11670 ###Change to proper province number
+		task_force = {
+			name = "Chornomors'kyi Flot"
+			location = 11670 ###Change to proper province number
+			ship = { name = "Ukrayina" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Zavydnyi" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Kubanets" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Donets" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = UKR } } }
+
+			ship = { name = "Volya" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Pamyat' Merkuriya" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Kagul" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = UKR } } }
+			
+			ship = { name = "Kozats'kyi PCh" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Hetmans'kyi PCh" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Udatny PCh" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR } } }
+			ship = { name = "Smilyvyi PCh" definition = submarine equipment = { submarine_1 = { amount = 1 owner = UKR } } }
+		}
+	}
+}

@@ -1,0 +1,2626 @@
+#################################
+#	JAPANESE EVENTS - BABA		#
+#################################
+
+add_namespace = japan
+
+country_event = {
+	id = japan.1
+	title = japan.1.t
+	desc = japan.1.d
+	picture = GFX_sunset_crash
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = japan.1.a
+		ai_chance = { factor = 100 }
+		trigger = {
+			has_war_with = BYJ
+		}
+		add_ideas = { JAP_sunset_crash }
+		hidden_effect = {
+			JAP = { 
+				country_event = { id = japan.103 days = 7 }
+				country_event = { id = japan.29 days = 5 }
+			}
+		}
+	}
+	option = {
+		name = japan.1.b
+		ai_chance = { factor = 100 }
+		trigger = {
+			NOT = {
+				has_war_with = BYJ
+			}
+		}
+		add_ideas = { JAP_sunset_crash }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.06
+		}
+		add_stability = -0.05
+		add_war_support = -0.05
+		add_political_power = 50
+		hidden_effect = {
+			KOR = {
+				load_focus_tree = {
+					tree = generic_focus
+				}
+			}
+			MAN = {
+				load_focus_tree = {
+					tree = generic_focus
+				}
+			}
+			DAI = {
+				load_focus_tree = {
+					tree = generic_focus
+					keep_completed = yes
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = japan.103
+	title = japan.103.t
+	desc = japan.103.d
+	picture = GFX_sunset_crash
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = japan.103.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			JAP = { 
+				country_event = { id = japan.2 days = 7 }
+			}
+		}
+	}
+
+}
+country_event = { # Event: Drama on the Deck
+	id = japan.2
+	title = japan.2.t
+	desc = japan.2.d
+	picture = GFX_dramaonthedeck
+
+	fire_only_once = yes
+	#major = yes
+	#mean_time_to_happen = { days = 60 }
+	is_triggered_only = yes
+
+	option = {
+		name = japan.2.a
+		ai_chance = { factor = 95 }
+		JAP_civil_war = yes
+		JPR = {
+			set_country_flag = JAP_revolution
+			set_rule = {
+				can_join_factions = no
+			}
+		}
+		JAP = {
+			set_country_flag = JAP_revolution
+			set_rule = {
+				can_join_factions = no
+			}
+		}
+		hidden_effect = {
+			JAP = {
+				country_event = { id = japan.24 days = 7 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = JAP_ai_route
+							option = RESTORATION
+						}
+						has_game_rule = {
+							rule = JAP_ai_route
+							option = SHOGUNATE
+						}
+					}
+				}
+				JAP = {
+					add_ideas = JAP_ai_buff
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = JAP_ai_route
+						option = REVOLUTION
+					}
+				}
+				JPR = {
+					add_ideas = JAP_ai_buff
+				}
+			}
+		}
+	}
+	option = {
+		name = japan.2.b
+		ai_chance = { factor = 5 }
+		JAP_civil_war = yes
+		JPR = {
+			change_tag_from = JAP
+			set_country_flag = JAP_revolution
+			set_rule = {
+				can_join_factions = no
+			}
+		}
+		JAP = {
+			set_country_flag = JAP_revolution
+			set_rule = {
+				can_join_factions = no
+			}
+		}
+		hidden_effect = {
+			JAP = {
+				country_event = { id = japan.24 days = 7 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = JAP_ai_route
+							option = RESTORATION
+						}
+						has_game_rule = {
+							rule = JAP_ai_route
+							option = SHOGUNATE
+						}
+					}
+				}
+				JAP = {
+					add_ideas = JAP_ai_buff
+				}
+			}
+			else_if = {
+				limit = {
+					has_game_rule = {
+						rule = JAP_ai_route
+						option = REVOLUTION
+					}
+				}
+				JPR = {
+					add_ideas = JAP_ai_buff
+				}
+			}
+		}
+	}
+}
+country_event = { #The Imperial Loyalists win
+	id = japan.201
+	title = japan.201.t
+	desc = japan.201.d
+	picture = GFX_address_the_troops
+	
+	fire_only_once = yes
+	trigger = {
+		original_tag = JAP
+		JPR = {
+			exists = no
+		}
+		JAP = {
+			NOT = {
+				has_war_with = JPR
+			}
+			has_country_flag = JAP_revolution
+		}
+	}
+	#is_triggered_only = yes
+	
+	option = {
+		name = japan.201.a
+		ai_chance = { factor = 1 }
+		clr_country_flag = JAP_revolution
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = -0.1
+		}
+		hidden_effect = {
+			remove_ideas = JAP_ai_buff
+			every_owned_state = {
+				remove_core_of = JPR
+				remove_claim_by = JPR
+			}
+			diplomatic_relation = {
+				country = KOR
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = MAN
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = BYJ
+				relation = military_access
+				active = no
+			}
+			diplomatic_relation = {
+				country = DAI
+				relation = military_access
+				active = no
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.1010
+					days = 2
+				}
+			}
+		}
+	}
+}
+country_event = { #The commies win
+	id = japan.202
+	title = japan.202.t
+	desc = japan.202.d
+	picture = GFX_civil_war_defeated
+	
+	fire_only_once = yes
+	trigger = {
+		original_tag = JPR
+		JAP = {
+			exists = no
+		}
+		JPR = {
+			NOT = {
+				has_war_with = JAP
+			}
+			has_country_flag = JAP_revolution
+		}
+	}
+	#is_triggered_only = yes
+	
+	option = {
+		name = japan.202.a
+		ai_chance = { factor = 1 }
+		clr_country_flag = red_sun_rising
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = -0.1
+		}
+		hidden_effect = {
+			remove_ideas = JAP_ai_buff
+			every_owned_state = {
+				remove_core_of = JAP
+				remove_claim_by = JAP
+			}
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.102
+					days = 2
+				}
+			}
+		}
+	}
+}
+country_event = {	#exiles
+	id = japan.203
+	title = japan.203.t
+	desc = japan.203.d
+	picture = GFX_report_event_jap_korea_victory
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = japan.203.a	#korea
+		ai_chance = { factor = 5 }
+		trigger = { IKR = { exists = yes is_AI = yes } }
+		hidden_effect = {
+			IKR = { 
+				set_country_flag = JAP_exiles_IKR 
+			}
+		}
+		custom_effect_tooltip = IKR_exile_tooltip
+		add_war_support = -0.5
+		add_stability = -0.5
+		JAP = {
+			remove_ideas = {
+				JAP_yasuhito
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Masaki Jinzaburō"
+				desc = "POLITICS_JINZABURO_MASAKI_DESC"
+				picture = "Portrait_jinzaburo_masaki_d.dds"
+				expire = "1955.1.1"
+				ideology = military_dictatorship
+				traits = {
+					#popular_figurehead
+				}
+			}
+			country_event = {
+				id = japan.2031
+				days = 7
+			}
+		}
+		IKR = {
+			change_tag_from = JAP
+			country_event = {
+				id = kor.16
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = japan.203.b	#Mantetsu
+		ai_chance = { factor = 10 }
+		trigger = { MAN = { exists = yes is_AI = yes } }
+		hidden_effect = {
+			MAN = { 
+				set_country_flag = JAP_exiles_MAN
+				set_country_flag = MAN_japan
+			}
+		}
+		custom_effect_tooltip = MAN_exile_tooltip
+		add_war_support = -0.5
+		add_stability = -0.5
+		JAP = {
+			remove_ideas = {
+				JAP_yasuhito
+			}
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Masaki Jinzaburō"
+				desc = "POLITICS_JINZABURO_MASAKI_DESC"
+				picture = "Portrait_jinzaburo_masaki_d.dds"
+				expire = "1955.1.1"
+				ideology = military_dictatorship
+				traits = {
+					#popular_figurehead
+				}
+			}
+			country_event = {
+				id = japan.2031
+				days = 7
+			}
+		}
+		MAN = {
+			change_tag_from = JAP
+			country_event = {
+				id = man.1
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = japan.203.c
+		ai_chance = { factor = 15 }
+		custom_effect_tooltip = JAP_no_surrender
+		add_political_power = 25
+		add_stability = 0.1
+	}
+}
+country_event = {	#exile path - empire falls
+	id = japan.2031
+	title = japan.2031.t
+	desc = japan.2031.d
+	picture = GFX_report_event_carry_more
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#
+		name = japan.2031.a
+		ai_chance = { factor = 5 }
+		JPR = {
+			annex_country = {
+				target = JAP
+				transfer_troops = no
+			}
+		}
+	}
+}
+country_event = {	#Stalemate breaker - JPR
+	id = japan.204
+	title = japan.204.t
+	desc = japan.204.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	trigger = {
+		tag = JPR
+		JAP = {
+			has_war_with = JPR
+		}
+		JPR = {
+			surrender_progress > 0.5
+		}
+	}
+	option = {	#surrender is iminent, take Kyoto or Osaka to not die in 3 months
+		name = japan.204.a
+		ai_chance = { factor = 5 }
+		JPR = {
+			country_event = {
+				id = japan.205
+				days = 90
+			}
+		}
+	}
+}
+country_event = {	#Stalemate breaker JPR pt2
+	id = japan.205
+	title = japan.205.t
+	desc = japan.205.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#I'll try again - rip
+		name = japan.205.a
+		ai_chance = { factor = 10 }
+		trigger = {
+			JPR = {
+				surrender_progress > 0.5
+			}
+		}
+		JAP = {
+			annex_country = {
+				target = JPR
+				transfer_troops = no
+			}
+		}
+	}
+	option = {	#continue as imperials lmao
+		name = japan.205.b
+		ai_chance = { factor = 0 }
+		trigger = {
+			JPR = {
+				surrender_progress > 0.5
+			}
+		}
+		JAP = {
+			change_tag_from = JPR
+			annex_country = {
+				target = JPR
+				transfer_troops = no
+			}
+		}
+	}
+	option = {	#saved yourself, gg
+		name = japan.205.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			JPR = {
+				surrender_progress < 0.25
+			}
+		}
+		JPR = {
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_manpower = 7500
+		}
+		JAP = {
+			add_stability = -0.1
+			add_war_support = -0.25
+			add_manpower = -7500
+		}
+	}
+}
+country_event = {	#Stalemate breaker JAP
+	id = japan.206
+	title = japan.206.t
+	desc = japan.206.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		JAP = {
+			has_war_with = JPR
+		}
+		JAP = {
+			surrender_progress > 0.5
+		}
+	}
+	option = {	#surrender is iminent, take Kyoto or Osaka to not die in 3 months
+		name = japan.206.a
+		ai_chance = { factor = 5 }
+		JAP = {
+			country_event = {
+				id = japan.207
+				days = 60
+			}
+			country_event = {
+				id = japan.203
+				days = 14
+			}
+		}
+	}
+}
+country_event = {	#Stalemate breaker JAP pt2
+	id = japan.207
+	title = japan.207.t
+	desc = japan.207.d
+	picture = GFX_report_event_gunner_china2
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	#I'll try again - rip
+		name = japan.207.a
+		ai_chance = { factor = 10 }
+		trigger = {
+			JAP = {
+				surrender_progress > 0.5
+			}
+		}
+		JPR = {
+			annex_country = {
+				target = JAP
+				transfer_troops = no
+			}
+		}
+	}
+	option = {	#continue as imperials lmao
+		name = japan.205.b
+		ai_chance = { factor = 0 }
+		trigger = {
+			JAP = {
+				surrender_progress > 0.5
+			}
+		}
+		JPR = {
+			change_tag_from = JAP
+			annex_country = {
+				target = JAP
+				transfer_troops = no
+			}
+		}
+	}
+	option = {	#saved yourself, gg
+		name = japan.205.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			JAP = {
+				surrender_progress < 0.25
+			}
+		}
+		JAP = {
+			add_stability = 0.05
+			add_war_support = 0.1
+			add_manpower = 7500
+		}
+		JPR = {
+			add_stability = -0.1
+			add_war_support = -0.25
+			add_manpower = -7500
+		}
+	}
+}
+country_event = { #Event The Beijing peace proposal
+	id = japan.3
+	title = japan.3.t
+	desc = japan.3.desc
+	picture = GFX_generic_winter
+	fire_only_once = yes
+	#trigger = { #triggered by focus
+	#	#has_country_flag = JAP_revolution
+	#}
+	is_triggered_only = yes
+	option = {
+		name = japan.3.a
+		ai_chance = { factor = 50 }
+		#transfer border but no beijing
+		MAN = {
+			transfer_state = 837
+			transfer_state = 609
+		}
+		JAP = {
+			white_peace = {
+				tag = BYJ
+				message = "The Beijing Compromise"
+			}
+			country_event = { days = 1 id = japan.4 }
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+			set_country_flag = JAP_beijing_peace
+		}
+		DAI = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		KOR = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		MAN = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = japan.3.b
+		ai_chance = { factor = 20 }
+		#transfer border and beijing
+		MAN = {
+			transfer_state = 837
+			transfer_state = 609
+			transfer_state = 608
+		}
+		JAP = {
+			white_peace = {
+				tag = BYJ
+				message = "The Beijing Compromise"
+			}
+			country_event = { days = 1 id = japan.4 }
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+			set_country_flag = JAP_beijing_peace
+		}
+		DAI = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		KOR = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		MAN = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+	}
+	option = { #refusal
+		name = japan.3.c
+		ai_chance = { factor = 0 }
+		#fuck you and your peace deal nippon
+		JAP = {
+			country_event = { days = 1 id = japan.401 }
+		}
+	}
+	option = {
+		name = japan.3.d
+		ai_chance = { factor = 20 }
+		#transfer border but no beijing
+		JAP = {
+			white_peace = {
+				tag = BYJ
+				message = "The Beijing Compromise"
+			}
+			country_event = { days = 1 id = japan.4 }
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+			set_country_flag = JAP_beijing_peace
+		}
+		DAI = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		KOR = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		MAN = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+	}
+}
+country_event = { #Event: The Beijing peace reaction
+	id = japan.4
+	title = japan.4.t
+	desc = japan.4.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = japan.4.a
+		ai_chance = { factor = 1 }
+		JAP = {
+			remove_ideas = {
+				JAP_three_month_camp
+			}
+			add_stability = 0.1
+		}
+	}
+}
+country_event = { #Event: rejection reaction
+	id = japan.401
+	title = japan.401.t
+	desc = japan.401.d
+	picture = "GFX_CHI_winter_soldiers"
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = japan.401.a
+		ai_chance = { factor = 1 }
+		JAP = {
+			add_war_support = -0.4
+		}
+		JPR = {
+			add_war_support = 0.1
+		}
+	}
+}
+#Fate of new japan - commie infighting
+country_event = {
+	id = japan.5
+	title = japan.5.t
+	desc = japan.5.d
+	picture = GFX_coup
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.5.a
+		ai_chance = { factor = 30 }
+		#purge lib marx and kill yamakawa
+		create_country_leader = {
+			name = "Arahata Kanson"
+			desc = "POLITICS_KANSON_ARAHATA_DESC"
+			picture = "Portrait_Kanson_Arahata.dds"
+			expire = "1949.5.5"
+			ideology = council_communism
+			traits = {
+				#popular_figurehead
+			}
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.2
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = -0.2
+		}
+	}
+	option = {
+		name = japan.5.b
+		ai_chance = { factor = 70 }
+		#kill shumei - vanguard loses popularity - lib marx gains
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = libertarian_marxism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = -0.2
+		}
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.2
+		}
+	}
+}
+#Gov't Change Leader_2 commie leadership contest
+country_event = {
+	id = japan.6
+	title = japan.6.t
+	desc = japan.6.desc
+	picture = GFX_report_event_asian_politicians
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Yamakawa
+		name = japan.6.b
+		ai_chance = { factor = 30 }
+		set_politics = {
+			ruling_party = libertarian_marxism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.15
+			}
+		}
+	}
+	option = { #Noe
+		name = japan.6.c
+		ai_chance = { factor = 5 }
+		set_politics = {
+			ruling_party = revolutionary_anarchism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.25
+			}
+		}
+	}
+	option = { #Abe
+		name = japan.6.d
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.25
+			}
+		}
+	}
+}
+#Gov't Change Leader_2 commie leadership contest
+country_event = {
+	id = japan.61
+	title = japan.61.t
+	desc = japan.61.desc
+	picture = GFX_report_event_asian_politicians
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { #Yamakawa
+		name = japan.61.b
+		ai_chance = { factor = 30 }
+		set_politics = {
+			ruling_party = libertarian_marxism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.15
+			}
+		}
+	}
+	option = { #Noe
+		name = japan.61.c
+		ai_chance = { factor = 5 }
+		set_politics = {
+			ruling_party = revolutionary_anarchism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = 0.25
+			}
+		}
+	}
+	option = { #Abe
+		name = japan.61.d
+		ai_chance = { factor = 10 }
+		set_politics = {
+			ruling_party = revisionist_socialism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.61
+				days = 1825
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = 0.25
+			}
+		}
+	}
+}
+#Ma clique intervention offer
+country_event = {
+	id = japan.7
+	title = japan.7.t
+	desc = japan.7.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.7.a	#yes
+		ai_chance = { factor = 25 }
+		JAP = {
+			country_event = { days = 1 id = japan.8 }
+		}
+	}
+	option = {	#no
+		name = japan.7.b
+		ai_chance = { factor = 75 }
+		JAP = {
+			country_event = { days = 1 id = japan.9 }
+		}
+	}
+}
+#Ma Clique accepts
+country_event = {
+	id = japan.8
+	title = japan.8.t
+	desc = japan.8.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.8.a
+		ai_chance = { factor = 1 }
+		add_war_support = 0.03
+		XSM = {
+			add_state_claim = 621
+			add_state_claim = 746
+			add_state_claim = 622
+			add_state_claim = 744
+			declare_war_on = {
+				target = BYJ
+				type = take_state_focus
+				generator = { 621 746 622 744 }
+			}
+		}
+		diplomatic_relation = {
+			country = XSM
+			relation = non_aggression_pact
+			active = yes
+		}
+	}
+}
+#Ma Clique Declines
+country_event = {
+	id = japan.9
+	title = japan.9.t
+	desc = japan.9.d
+	picture = JAP_soldiers_1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.9.a
+		ai_chance = { factor = 1 }
+		JAP = {
+			add_war_support = -0.03
+		}
+	}
+}
+#korean referendum
+
+country_event = {
+	id = japan.10
+	title = japan.10.t
+	desc = japan.10.d
+	picture = GFX_democracy_2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.10.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				829 = {
+					is_owned_by = IKR
+				}
+			}
+			IKR = {
+				country_event = { id = japan.101 }
+			}
+		}
+		if = {
+			limit = {
+				829 = {
+					is_owned_by = KOR
+				}
+			}
+			KOR = {
+				country_event = { id = japan.101 }
+			}
+		}
+		if = {
+			limit = {
+				829 = {
+					is_owned_by = JKR
+				}
+			}
+			JKR = {
+				country_event = { id = japan.101 }
+			}
+		}
+	}
+}
+country_event = {
+	id = japan.101
+	title = japan.101.t
+	desc = japan.101.d
+	picture = GFX_democracy_2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#yes
+		name = japan.101.a
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				has_government = despotism
+				factor = 100
+			}
+		}
+		527 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		984 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		986 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		985 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		#830 = {
+		#	if = {
+		#		limit = { is_owned_by = ROOT }
+		#		add_core_of = JAP
+		#	}
+		#}
+		988 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		#829 = {
+		#	if = {
+		#		limit = { is_owned_by = ROOT }
+		#		add_core_of = JAP
+		#	}
+		#}
+		525 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		987 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		989 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		828 = {
+			if = {
+				limit = { is_owned_by = ROOT }
+				add_core_of = JAP
+			}
+		}
+		JAP = {
+			annex_country = { 
+				target = ROOT 
+				transfer_troops = yes 
+			}
+		}
+		set_country_flag = JAP_KOR_annexed
+	}
+	option = {	#no fuck off
+		name = japan.101.b
+		ai_chance = { factor = 30 }
+		JAP = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {	#ultimatum to Manchuria
+	id = japan.102
+	title = japan.102.t
+	desc = japan.102.d
+	picture = GFX_address_the_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	#fucketh yes
+		name = japan.102.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = despotism
+				factor = 50
+			}
+		}
+		JAP = {
+			puppet = MAN
+		}
+	}
+	option = {	#fucketh no
+		name = japan.102.b
+		ai_chance = {
+			factor = 40
+		}
+		JAP = {
+			create_wargoal = {
+				target = MAN
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+country_event = { #restore the shogunate
+	id = japan.11
+	title = japan.11.t
+	desc = japan.11.d
+	picture = GFX_address_the_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.11.a
+		ai_chance = { factor = 1 }
+		#cosmetic tag
+		set_cosmetic_tag = JAP_shogunate_reactionary
+	}
+}
+country_event = { #JPR colonial management
+	id = japan.12
+	title = japan.12.t
+	desc = japan.12.d
+	picture = GFX_jap_camp
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.12.a
+		ai_chance = { factor = 1 }
+		#non-core manpower idea
+		add_ideas = {
+			JAP_colonial_management
+		}
+	}
+}
+country_event = { #JPR dismantle zaibs
+	id = japan.13
+	title = japan.13.t
+	desc = japan.13.d
+	picture = GFX_infiltration
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.13.a
+		ai_chance = { factor = 1 }
+		remove_ideas = {
+			JAP_zaib_dominion
+		}
+	}
+}
+country_event = { #champions day
+	id = japan.14
+	title = japan.14.t
+	desc = japan.14.d
+	picture = GFX_fireworks
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.14.a
+		ai_chance = { factor = 1 }
+		#champions day every year on one day
+		#stab buff
+		add_timed_idea = {
+			idea = JAP_champions_day
+			days = 30
+		}
+		
+		hidden_effect = {
+			country_event = { id = japan.14 days = 365 }
+		}
+	}
+}
+country_event = { #the growth of Esperanto in Japan
+	id = japan.141
+	title = japan.141.t
+	desc = japan.141.d
+	picture = GFX_democracy_2
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.141.a
+		ai_chance = { factor = 1 }
+		add_political_power = 75
+	}
+}
+country_event = { #Siamese concessions
+	id = japan.15
+	title = japan.15.t
+	desc = japan.15.d
+	picture = GFX_training_2
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # yes
+		name = japan.15.a
+		ai_chance = { factor = 1 }
+		JAP = {
+			country_event = { days = 1 id = japan.151 }
+		}
+		DAI = {
+			add_state_core = 741
+			add_state_core = 670
+		}
+				
+	}
+	option = { #no
+		name = japan.15.b
+		ai_chance = { factor = 1 }
+		JAP = {
+			country_event = { days = 1 id = japan.152 }
+		}
+		DAI = {
+			add_state_claim = 741
+			add_state_claim = 670
+		}
+	}
+}
+country_event = { #Siamese concessions response - yes
+	id = japan.151
+	title = japan.151.t
+	desc = japan.151.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.151.a
+		ai_chance = { factor = 1 }
+		DAI = {
+			transfer_state = 741
+			transfer_state = 670
+		}
+	}
+}
+country_event = { #Siamese concessions response - no
+	id = japan.152
+	title = japan.152.t
+	desc = japan.152.d
+	picture = GFX_JAP_cav
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.152.a
+		ai_chance = { factor = 1 }
+		create_wargoal = {
+			type = take_state_focus
+			target = SIA
+			generator = { 741 670 }
+		}
+	}
+}
+country_event = { #Lotus act buff dominion idea
+	id = japan.16
+	title = japan.16.t
+	desc = japan.16.d
+	picture = GFX_report_event_asian_politicians
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.16.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = JAP_investigation
+			add_idea = JAP_lotus_act
+		}
+	}
+}
+country_event = { #investigate zaibs debuff dominion
+	id = japan.17
+	title = japan.17.t
+	desc = japan.17.d
+	picture = MO2_the_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.17.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = JAP_crackdown
+			add_idea = JAP_investigation
+		}
+	}
+}
+country_event = { #crackdown riots
+	id = japan.18
+	title = japan.18.t
+	desc = japan.18.d
+	picture = GFX_TAI_the_chaos
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.18.a
+		ai_chance = { factor = 1 }
+			remove_ideas = { JAP_zaib_dominion }
+			add_timed_idea = {
+				idea = JAP_crackdown
+				days = 365
+			}
+	}
+}
+country_event = { #japanese empire cosmetic tag
+	id = japan.19
+	title = japan.19.t
+	desc = japan.19.d
+	picture = GFX_address_the_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.19.a
+		ai_chance = { factor = 1 }
+		#Empire restored
+		set_cosmetic_tag = JAP_empire_despotism
+	}
+}
+country_event = { #Kamazawa
+	id = japan.20
+	title = japan.20.t
+	desc = japan.20.d
+	picture = GFX_infiltration
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.20.a
+		ai_chance = { factor = 1 }
+		add_stability = -0.1
+		add_war_support = -0.05
+		add_political_power = -200
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.5
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = -0.5
+		}
+	}
+}
+country_event = { #Event The Beijing peace emergency proposal
+	id = japan.21
+	title = japan.21.t
+	desc = japan.21.d
+	picture = "GFX_CHI_troops_gen"
+	fire_only_once = yes
+	trigger = { #triggered by civil war
+		tag = JAP
+		has_war_with = JPR
+		has_war_with = BYJ
+	}
+	#is_triggered_only = yes
+	option = {
+		name = japan.21.a
+		ai_chance = { factor = 60 }
+		#yes
+		BYJ = {
+			country_event = { days = 3 id = japan.211 }
+		}
+	}
+	
+	option = { #refusal
+		name = japan.21.b
+		ai_chance = { factor = 40 }
+		#nah war!
+		#BYJ = {
+		#	country_event = { days = 3 id = japan.212 }
+		#}
+		JAP = {
+			add_war_support = -0.1
+		}
+	}
+}
+country_event = { #Event: The Beijing peace reaction
+	id = japan.211
+	title = japan.211.t
+	desc = japan.211.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	#trigger = {
+	#	JAP_beijing_peace = no
+	#	has_war_with = BYJ
+	#}
+	is_triggered_only = yes
+	option = {
+		name = japan.211.a
+		ai_chance = { factor = 1 }
+		JAP = {
+			remove_ideas = {
+				JAP_three_month_camp
+			}
+			add_stability = 0.1
+		}
+		MAN = {
+			transfer_state = 837
+			transfer_state = 609
+			transfer_state = 608
+		}
+		JAP = {
+			white_peace = {
+				tag = BYJ
+				message = "The Beijing Compromise"
+			}
+			country_event = { days = 1 id = japan.4 }
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		DAI = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		KOR = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		MAN = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		set_country_flag = JAP_beijing_peace
+	}
+	option = {
+		name = japan.211.b
+		ai_chance = { factor = 1 }
+		JAP = {
+			add_war_support = -0.1
+		}
+	}
+}
+country_event = { #Event: rejection reaction
+	id = japan.212
+	title = japan.212.t
+	desc = japan.212.d
+	picture = "GFX_CHI_winter_soldiers"
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = japan.212.a
+		ai_chance = { factor = 1 }
+		
+	}
+}
+country_event = { #Event: peace between puppets and BYJ
+	id = japan.22
+	title = japan.22.t
+	desc = japan.22.d
+	picture = "GFX_report_event_chinese_japanese_handshake"
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		JAP = {
+			has_war_with = JPR
+			has_country_flag = JAP_revolution
+		}
+		KOR = {
+			has_war_with = BYJ
+		}
+		DAI = {
+			has_war_with = BYJ
+		}
+		MAN = {
+			has_war_with = BYJ
+		}
+		
+	}
+	#is_triggered_only = yes
+	option = {
+		name = japan.22.a
+		ai_chance = { factor = 1 }
+		DAI = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		KOR = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+		MAN = {
+			white_peace = {
+				tag = BYJ
+			}
+			set_truce = {
+				target = BYJ
+				days = 365
+			}
+		}
+	}
+}
+country_event = { #Event: colonies break away
+	id = japan.23
+	title = japan.23.t
+	desc = japan.23.d
+	picture = "GFX_militias_2"
+	fire_only_once = yes
+	trigger = {
+		tag = JAP
+		JAP = {
+			has_war_with = JPR
+			has_country_flag = JAP_revolution
+		}
+	}
+	#is_triggered_only = yes
+	option = {
+		name = japan.23.a
+		ai_chance = { factor = 1 }
+		FJN = {
+			transfer_state = 928
+		}
+		SHA = {
+			transfer_state = 743
+		}
+		DAI = {
+			transfer_state = 983
+			transfer_state = 875
+			transfer_state = 286
+		}
+		GDP = {
+			transfer_state = 591
+			transfer_state = 728
+			transfer_state = 877
+		}
+		MAN = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.25
+			}
+			transfer_state = 745
+		}
+		ZHR = {
+			transfer_state = 408
+		}
+		AST = {
+			transfer_state = 737
+			transfer_state = 634
+		}
+		KMT = {
+			transfer_state = 862
+		}
+	}
+}
+country_event = { #Event: Loyalists spawn
+	id = japan.24
+	title = japan.24.t
+	desc = japan.24.d
+	picture = "GFX_militia_training"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.24.a
+		ai_chance = { factor = 1 }
+		#divisions to Nagasaki
+		division_template = {
+			name = "Loyalist Militia"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				cavalry = { x = 2 y = 0 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+			} 
+		}
+		528 = {
+			create_unit = {
+				division = "name = \"Loyalist Militia\" division_template = \"Loyalist Militia\" start_experience_factor = 0.25"
+				owner = JAP
+			}
+			create_unit = {
+				division = "name = \"Loyalist Militia\" division_template = \"Loyalist Militia\" start_experience_factor = 0.25"
+				owner = JAP
+			}
+		}
+		529 = {
+			create_unit = {
+				division = "name = \"Loyalist Militia\" division_template = \"Loyalist Militia\" start_experience_factor = 0.25"
+				owner = JAP
+			}
+			create_unit = {
+				division = "name = \"Loyalist Militia\" division_template = \"Loyalist Militia\" start_experience_factor = 0.25"
+				owner = JAP
+			}
+		}
+	}
+}
+
+country_event = { #Taiwan breaks free
+	id = japan.25
+	title = japan.25.t
+	desc = japan.25.d
+	picture = "GFX_report_event_asian_politicians"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.25.a
+		ai_chance = { factor = 100 }
+		524 = {
+			add_core_of = TAI
+		}
+		1023 = {
+			add_core_of = TAI
+		}
+		TAI = {
+			transfer_state = 524
+			transfer_state = 1023
+			load_oob = "TAI_1936"
+		}
+		
+	}
+	option = {
+		name = japan.25.b
+		ai_chance = { factor = 0 }
+		524 = {
+			add_core_of = TAI
+		}
+		1023 = {
+			add_core_of = TAI
+		}
+		TAI = {
+			transfer_state = 524
+			transfer_state = 1023
+			load_oob = "TAI_1936"
+		}
+		TAI = {
+			change_tag_from = JAP
+		}
+		
+	}
+}
+
+country_event = {	#day 1
+	id = japan.26
+	title = japan.26.t
+	desc = japan.26.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.26.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = JAP_three_month_camp
+			days = 90
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.27
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = {	#trib act
+	id = japan.27
+	title = japan.27.t
+	desc = japan.27.d
+	picture = GFX_address_the_troops
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.27.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = JAP_tributary_act
+			days = 75
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.271
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {	#litigation trigger
+	id = japan.271
+	title = japan.271.t
+	desc = japan.271.d
+	picture = MO2_the_trial
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.271.a
+		ai_chance = { factor = 100 }
+		add_timed_idea = {
+			idea = JAP_litigation_blockade
+			days = 60
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.28
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {	#negotations with Ma
+	id = japan.28
+	title = japan.28.t
+	desc = japan.28.d
+	picture = GFX_CHI_winter_soldiers
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.28.a
+		ai_chance = { factor = 100 }
+		XSM = {
+			country_event = { id = japan.7 }
+		}
+	}
+}
+
+country_event = {	#compromise trigger
+	id = japan.29
+	title = japan.29.t
+	desc = japan.29.d
+	picture = GFX_civil_war_defeated
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.29.a
+		ai_chance = { factor = 100 }
+		BYJ = {
+			country_event = { id = japan.3 days = 7 }
+		}
+	}
+}
+
+country_event = {	#Mantetsu integration
+	id = japan.30
+	title = japan.30.t
+	desc = japan.30.d
+	picture = GFX_exiles_MAN
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.30.a
+		ai_chance = { factor = 100 }
+		JAP = {
+			country_event = { id = japan.301 }
+		}
+	}
+	option = {
+		name = japan.30.b
+		ai_chance = { factor = 100 }
+		JAP = {
+			country_event = { id = japan.302 }
+		}
+	}
+}
+
+country_event = {	#annex
+	id = japan.301
+	title = japan.301.t
+	desc = japan.301.d
+	picture = GFX_jap_camp
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.301.a
+		ai_chance = { factor = 100 }
+		JAP = {
+			annex_country = {
+				target = MAN
+				transfer_troops = yes
+			}
+			MAN = {
+				every_unit_leader = {
+					set_nationality = JAP
+				}
+			}
+		}
+	}
+}
+
+country_event = {	#Thanos time
+	id = japan.302
+	title = japan.302.t
+	desc = japan.302.d
+	picture = GFX_jap_camp
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.302.a
+		ai_chance = { factor = 100 }
+		JAP = {
+			end_puppet = MAN
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+}
+
+country_event = {	#Sunset Palace
+	id = japan.31
+	title = japan.31.t
+	desc = japan.31.d
+	picture = GFX_BURN
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.31.a	#Burn them
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+		add_stability = -0.1
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = japan.31.b	#Museum
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+		add_stability = 0.05
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = japan.31.c	#residence
+		ai_chance = { factor = 100 }
+		add_political_power = -100
+		add_stability = 0.1
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {	#prostitution
+	id = japan.32
+	title = japan.32.t
+	desc = japan.32.d
+	picture = GFX_report_event_wahmen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.32.a	#Legalise it
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = japan.321
+		}
+	}
+}
+country_event = {	#prostitution
+	id = japan.321
+	title = japan.321.t
+	desc = japan.321.d
+	picture = GFX_report_event_wahmen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.321.a	#Legalise it
+		ai_chance = { factor = 100 }
+		country_event = {
+			id = japan.322
+		}
+	}
+}
+country_event = {	#prostitution
+	id = japan.322
+	title = japan.322.t
+	desc = japan.322.d
+	picture = GFX_report_event_wahmen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.322.a	#Legalise it
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = revolutionary_anarchism
+			popularity = 0.03
+		}
+		add_stability = 0.03
+		swap_ideas = {
+			remove_idea = JPR_egalitarianism
+			add_idea = JPR_egalitarianism_plegal
+		}
+	}
+	option = {
+		name = japan.322.b	#Restrict it
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.03
+		}
+		add_stability = 0.01
+		swap_ideas = {
+			remove_idea = JPR_egalitarianism
+			add_idea = JPR_egalitarianism_pillegal
+		}
+	}
+}
+
+country_event = {	#Vanguard Party rules the supreme diet
+	id = japan.33
+	title = japan.33.t
+	desc = japan.33.d
+	picture = GFX_democracy_1
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.33.a	#
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = vanguard_socialism
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.331
+				days = 180
+			}
+		}
+	}
+}
+country_event = {	#Japanese Department of Islamic Affairs
+	id = japan.331
+	title = japan.331.t
+	desc = japan.331.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.331.a	#
+		ai_chance = { factor = 100 }
+		add_political_power = 50
+	}
+}
+country_event = {	#Councilists majority control, establish the national diet
+	id = japan.34
+	title = japan.34.t
+	desc = japan.34.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.34.a	#
+		ai_chance = { factor = 100 }
+		add_popularity = {
+			ideology = libertarian_marxism
+			popularity = 0.1
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.341
+				days = 180
+			}
+		}
+	}
+}
+country_event = {	#Japanese Religious issue
+	id = japan.341
+	title = japan.341.t
+	desc = japan.341.d
+	#picture = #
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.341.a	#
+		ai_chance = { factor = 100 }
+		add_political_power = 75
+		add_stability = -0.05
+	}
+	option = {
+		name = japan.341.b	#
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		add_stability = 0.05
+	}
+	option = {
+		name = japan.341.c	#
+		ai_chance = { factor = 100 }
+		add_political_power = 100
+		add_stability = -0.1
+	}
+}
+country_event = {	#Socialist Hegemon
+	id = japan.35
+	title = japan.35.t
+	desc = japan.35.d
+	picture = GFX_navy
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.35.a	#
+		ai_chance = { factor = 100 }
+		add_political_power = 200
+	}
+}
+
+country_event = {	#ultimatum to former colonies - Taiwan
+	id = japan.36
+	title = japan.36.t
+	desc = japan.36.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.36.a	#accept
+		ai_chance = { factor = 25 }
+		JPR = {
+			puppet = TAI
+		}
+		set_cosmetic_tag = "TAI_JPR"
+	}
+	
+	option = {
+		name = japan.36.b	#reject
+		ai_chance = { factor = 75 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TAI
+			}
+		}
+	}
+}
+
+country_event = {	#ultimatum to former colonies - Korea
+	id = japan.37
+	title = japan.37.t
+	desc = japan.37.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.37.a	#accept
+		ai_chance = { factor = 25 }
+		JPR = {
+			puppet = KOR
+		}
+		set_cosmetic_tag = "KOR_JPR"
+	}
+	
+	option = {
+		name = japan.37.b	#reject
+		ai_chance = { factor = 75 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = KOR
+			}
+		}
+	}
+}
+country_event = {	#ultimatum to former colonies - Korea
+	id = japan.371
+	title = japan.371.t
+	desc = japan.371.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.371.a	#accept
+		ai_chance = { factor = 50 }
+		JPR = {
+			puppet = JKR
+		}
+		set_cosmetic_tag = "JKR_JPR"
+	}
+	
+	option = {
+		name = japan.371.b	#reject
+		ai_chance = { factor = 50 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JKR
+			}
+		}
+	}
+}
+country_event = {	#ultimatum to former colonies - Korea
+	id = japan.372
+	title = japan.372.t
+	desc = japan.372.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.372.a	#accept
+		ai_chance = { factor = 1 }
+		JPR = {
+			puppet = IKR
+		}
+		set_cosmetic_tag = "IKR_JPR"
+	}
+	
+	option = {
+		name = japan.372.b	#reject
+		ai_chance = { factor = 100 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = IKR
+			}
+		}
+	}
+}
+
+country_event = {	#ultimatum to former colonies - Mantetsu
+	id = japan.38
+	title = japan.38.t
+	desc = japan.38.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.38.a	#accept
+		ai_chance = {
+			factor = 25
+			modifier = {
+				MAN = {
+					NOT = {
+						has_country_flag = MAN_fengtian_govt
+					}
+				}
+				factor = 100
+			}
+		}
+		JPR = {
+			puppet = MAN
+		}
+		set_cosmetic_tag = "MAN_JPR"
+	}
+	
+	option = {
+		name = japan.38.b	#reject
+		ai_chance = { factor = 75 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MAN
+			}
+		}
+	}
+}
+
+country_event = {	#ultimatum to former colonies - Indochina
+	id = japan.39
+	title = japan.39.t
+	desc = japan.39.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.39.a	#accept
+		ai_chance = { factor = 25 }
+		JPR = {
+			puppet = DAI
+		}
+		set_cosmetic_tag = "DAI_JPR"
+	}
+	
+	option = {
+		name = japan.39.b	#reject
+		ai_chance = { factor = 75 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = DAI
+			}
+		}
+	}
+}
+country_event = {	#PWL
+	id = japan.40
+	title = japan.40.t
+	desc = japan.40.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.40.a	#accept
+		ai_chance = { factor = 75 }
+		JPR = { add_to_faction = ROOT }
+	}
+	
+	option = {
+		name = japan.40.b	#reject
+		ai_chance = { factor = 25 }
+		JPR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {	#IJN reforms
+	id = japan.41
+	title = japan.41.t
+	desc = japan.41.d
+	picture = GFX_CHI_troops_gen
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.41.a	#
+		ai_chance = { factor = 33 }
+		add_ideas = {
+			JAP_navy_pay
+		}
+	}
+	
+	option = {
+		name = japan.41.b	#
+		ai_chance = { factor = 33 }
+		add_ideas = {
+			JAP_navy_pensions
+		}
+	}
+	
+	option = {
+		name = japan.41.c	#
+		ai_chance = { factor = 33 }
+		add_ideas = {
+			JAP_navy_reform_commission
+		}
+	}
+}
+country_event = {	#Sunset reforms 1 zaibs
+	id = japan.42
+	title = japan.42.t
+	desc = japan.42.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.42.a	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_sunset_crash
+			add_idea = JAP_bail_out
+		}
+	}
+	
+	option = {
+		name = japan.42.b	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_sunset_crash
+			add_idea = JAP_no_bail_out
+		}
+		random_owned_controlled_state = {
+			limit = {
+				industrial_complex > 2
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	}
+}
+country_event = {	#Sunset reforms 2a taxes
+	id = japan.43
+	title = japan.43.t
+	desc = japan.43.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.43.a	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_bail_out
+			add_idea = JAP_big_four
+		}
+	}
+	
+	option = {
+		name = japan.43.b	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_bail_out
+			add_idea = JAP_small_four
+		}
+	}
+}
+country_event = {	#Sunset reforms 2b taxes
+	id = japan.431
+	title = japan.431.t
+	desc = japan.431.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.431.a	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_no_bail_out
+			add_idea = JAP_big_four
+		}
+	}
+	
+	option = {
+		name = japan.431.b	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_no_bail_out
+			add_idea = JAP_small_four
+		}
+	}
+}
+country_event = {	#Sunset reforms 3 debts
+	id = japan.44
+	title = japan.44.t
+	desc = japan.44.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.44.a	#
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				has_idea = JAP_big_four
+			}
+			swap_ideas = {
+				remove_idea = JAP_big_four
+				add_idea = JAP_business_palace
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = JAP_small_four
+					add_idea = JAP_business_palace
+				}
+			}
+		}
+	}
+}
+country_event = {	#Sunset reforms 4 Palace Reforms
+	id = japan.45
+	title = japan.45.t
+	desc = japan.45.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.45.a	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_business_palace
+			add_idea = JAP_zaibatsu_mic
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		} 
+	}
+	option = {
+		name = japan.45.b	#
+		ai_chance = { factor = 50 }
+		swap_ideas = {
+			remove_idea = JAP_business_palace
+			add_idea = JAP_zaibatsu_mic
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		} 
+	}
+}
+country_event = {	#Sunset reforms 5 New Economy
+	id = japan.46
+	title = japan.46.t
+	desc = japan.46.d
+	#picture = 
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = japan.46.a	#
+		ai_chance = { factor = 50 }
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 4
+				instant_build = yes
+			}
+		} 
+	}
+	
+	option = {
+		name = japan.46.b	#
+		ai_chance = { factor = 50 }
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		} 
+	}
+}

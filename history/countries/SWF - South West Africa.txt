@@ -1,0 +1,73 @@
+capital = 950
+
+oob = SWF_1936
+
+set_research_slots = 3 
+
+set_convoys = 100
+
+set_stability = 0.5
+
+add_ideas = {
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+set_politics = {
+	ruling_party = right_authoritarianism
+	last_election = "1932.2.10"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 9
+	social_democratism = 18
+	liberalism = 10
+	conservatism = 22
+	right_authoritarianism = 41
+	despotism = 0
+	reactionism = 0
+	accelerationism = 0
+}
+
+create_country_leader = {
+	name = "Theodor Seitz"
+	desc = "politics_Theodor_desc"
+	picture = "Portrait_Theodor.tga"
+	expire = "1937.1.1"
+	ideology = oligarchy
+	traits = {
+		#
+	}
+}

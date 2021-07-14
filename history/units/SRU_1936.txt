@@ -1,0 +1,299 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Pekhotnaya Diviziya"			# Infantry Division
+	division_names_group = RUS_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriyskaya Diviziya"	# Cavarly Division
+	division_names_group = RUS_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Avtobronetankovaya Diviziya"			# Tank Division
+	division_names_group = RUS_ARM_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Mekhanizirovannaya Diviziya"			# Motorized Division
+	division_names_group = RUS_MOT_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "Drozdovskaya Dobrovolcheskaya Diviziya"
+		location = 6704
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "Kellerovskaya Dobrovolcheskaya Diviziya"
+		location = 418
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "8ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9ya Pekhotnaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "15ya Pekhotnaya Diviziya"#(HQ-Lugansk)
+		location = 9461
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "31ya Pekhotnaya Diviziya"#(HQ-Kharkov)
+		location = 418
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "33ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "34ya Pekhotnaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "40ya Pekhotnaya Diviziya"#(HQ-Kerch)
+		location = 9680
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "42ya Pekhotnaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "44ya Pekhotnaya Diviziya"#(HQ-Kursk)
+		location = 3580
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "53ya Pekhotnaya Diviziya"#(HQ-Sevastopol)
+		location = 3686
+		division_template = "Pekhotnaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3ya Strelkovaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4ya Strelkovaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ya Kavaleriyskaya Diviziya"#(HQ-Sumy)
+		location = 3520
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8ya Kavaleriyskaya Diviziya"#(HQ-Melitopol)
+		location = 11700
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9ya Kavaleriyskaya Diviziya"#(HQ-Chernigov)
+		location = 3568
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "10ya Kavaleriyskaya Diviziya"#(HQ-Kharkov)
+		location = 418
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11ya Kavaleriyskaya Diviziya"#(HQ-Poltava)
+		location = 511
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12ya Kavaleriyskaya Diviziya"#(HQ-Yuzovka)
+		location = 6474
+		division_template = "Kavaleriyskaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1ya Avtobronetankovaya Diviziya"#(Kharkov)
+		location = 418
+		division_template = "Avtobronetankovaya Diviziya"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "5ya Mekhanizirovannaya Diviziya"#(HQ-Yuzovka)
+		location = 6474
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "7ya Mekhanizirovannaya Diviziya"#(HQ-Alexandrovsk)
+		location = 11405
+		division_template = "Mekhanizirovannaya Diviziya"
+		start_experience_factor = 0.3
+	}
+}
+### Air Wings
+air_wings = {
+	221 = {
+		fighter_equipment_0 = {
+			owner = "SRU"
+			amount = 210
+		}
+		name = "Novorossiyskiy Aviaotrayd Istrebiteley"
+	}
+	221 = {
+		tac_bomber_equipment_0 = {
+			owner = "SRU"
+			amount = 115
+		}
+		name = "Novorossiyskiy Aviaotrayd Bombardirovshchikov"
+	}
+	137 = {
+		fighter_equipment_0 = {
+			owner = "SRU"
+			amount = 60
+		}
+		name = "Tavricheskiy Aviaotrayd Bombardirovshchikov"
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 2
+		progress = 0.82
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.83
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.44
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.29
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = gw_tank_equipment
+		}
+		requested_factories = 1
+		progress = 0.59
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_0
+		}
+		requested_factories = 1
+		progress = 0.48
+		efficiency = 100
+	}
+}	

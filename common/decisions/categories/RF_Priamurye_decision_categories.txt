@@ -1,0 +1,22 @@
+PRI_become_zheltorossiya_category = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = PRI
+	}
+	priority = 1
+	visible = {
+		OR = {
+			has_completed_focus = PRI_restore_zheltorossiya
+			has_completed_focus = PRI_for_a_fee_russian_republic
+		}
+	}
+}
+PRI_question_of_transbaikal_category = {
+	allowed = {
+		original_tag = PRI
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = PRI_question_of_transbaikal
+	}
+}

@@ -1,0 +1,23 @@
+on_actions = {
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					MLI = {
+						exists = yes
+						owns_state = 556
+						NOT = { owns_state = 782 }
+					}
+				}
+				if = {
+					limit = {
+						FROM = { tag = FRA owns_state = 782 }
+					}
+					MLI = {
+						transfer_state = 782
+					}
+				}
+			}
+		}
+	}
+}

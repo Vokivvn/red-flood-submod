@@ -1,0 +1,31 @@
+state= {
+	id=593
+	name="STATE_593"
+	manpower = 9754049
+	state_category = large_town
+	resources={
+		tungsten= 2
+		steel= 4
+	}
+
+	history= {
+		owner = GDP
+		add_core_of = GDP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			9938 = {
+				naval_base = 1
+				coastal_bunker = 1
+				bunker = 1
+			}
+
+		}
+		victory_points = {
+			9978 3
+		}
+	}
+	provinces={
+		1078 1162 4050 4165 4207 7067 7141 7182 9938 9978
+	}
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=657
+	name="STATE_657" # Birobidzhan
+	manpower = 808380
+	resources={
+		steel=24
+	}
+
+
+	state_category = pastoral
+
+	history={
+		owner = ZHR
+		add_core_of = ZHR
+		buildings = {
+			infrastructure = 3
+			air_base = 2
+		}
+		victory_points = {
+			7763 3
+		}
+	}
+
+	provinces={
+		1802 4246 4725 4779 4805 4829 7616 7672 7763 7801 10655 10722 12261 12654 12678
+	}
+}

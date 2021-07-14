@@ -1,0 +1,22 @@
+
+state={
+	id=529
+	name="STATE_529" # San'in
+	manpower = 1237000
+	state_category = town
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			air_base = 2
+		}
+
+	}
+
+	provinces={
+		10055 1167 7145 1191 7050
+	}
+}

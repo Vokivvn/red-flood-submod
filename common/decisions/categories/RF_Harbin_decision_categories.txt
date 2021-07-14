@@ -1,0 +1,147 @@
+##-Harbin Reworked Decisions-##
+
+##Last Stand Policies
+##BH
+HAR_BH_Calls = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = { has_completed_focus = HAR_we_need_help_bh }
+	available = { has_completed_focus = HAR_we_need_help_bh }
+}
+
+##Kadets
+HAR_unity_against_enemies_of_westernization = { 
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = { has_completed_focus = HAR_we_need_help_kad }
+	available = { has_completed_focus = HAR_we_need_help_kad }
+}
+
+##Leftists
+HAR_cant_beat_join = { 
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = { has_completed_focus = HAR_we_need_help_lef }
+	available = { has_completed_focus = HAR_we_need_help_lef }
+}
+
+##Kwantung
+HAR_welcome_our_liberators = { 
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = { has_completed_focus = HAR_we_need_help_kwa }
+	available = { has_completed_focus = HAR_we_need_help_kwa }
+}
+
+##Foreign policies
+##General
+HAR_general_foreign_policy = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {
+		OR = {
+			has_completed_focus = HAR_we_are_victorious_bh
+			has_completed_focus = HAR_we_are_victorious_kad
+			has_completed_focus = HAR_we_are_victorious_kwa
+			has_completed_focus = HAR_we_are_victorious_lef
+			
+		}
+	}
+	available = {
+		OR = {
+			has_completed_focus = HAR_we_are_victorious_bh
+			has_completed_focus = HAR_we_are_victorious_kad
+			has_completed_focus = HAR_we_are_victorious_kwa
+			has_completed_focus = HAR_we_are_victorious_lef
+			
+		}
+	}
+}
+
+##BH Foreign
+HAR_hold_zemsky_sobor = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {has_completed_focus = HAR_we_are_victorious_bh }
+	available = {has_completed_focus = HAR_we_are_victorious_bh }
+}
+
+##KWaUIA Foreign
+HAR_united_ukraine_decision = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {has_completed_focus = HAR_we_are_victorious_kwa }
+	available = {has_completed_focus = HAR_we_are_victorious_kwa }
+}
+
+##Democratic Foreign
+HAR_unite_russia_kad_lef = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {
+		OR = {
+			has_completed_focus = HAR_we_are_victorious_lef
+			has_completed_focus = HAR_we_need_help_kad
+		}
+	}
+	available = {
+		OR = {
+			has_completed_focus = HAR_we_are_victorious_lef
+			has_completed_focus = HAR_we_need_help_kad
+		}
+	}
+}
+
+##Left Foreign
+HAR_peoples_front = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = HAR_we_are_victorious_lef
+	}
+	available = {
+		has_completed_focus = HAR_we_are_victorious_lef
+	}
+}
+
+##Kadets Foreign
+HAR_letter_to_romanovsky = {
+	icon = generic_political_actions
+	allowed = {
+		original_tag = HAR
+	}
+	priority = 1
+	visible = {
+		has_completed_focus = HAR_we_are_victorious_kad
+	}
+	available = {
+		has_completed_focus = HAR_we_are_victorious_kad
+	}
+}

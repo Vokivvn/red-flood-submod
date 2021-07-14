@@ -1,0 +1,248 @@
+#############
+# Assyrian Events #
+#############
+
+add_namespace = asy
+
+	##Event: His Holiness is Dead!
+	country_event = {
+		id = asy.1
+		title = asy.1.title
+		desc = asy.1.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		option = {
+			name = asy.1.a
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Shimun XXI Eshai"
+				desc = "POLITICS_SHIMUN_XXI_ESHAI_DESC"
+				picture = "Portrait_Assyria_Shimun.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy
+			}
+			add_ideas = ASY_shimun_xxi_hog
+			country_event = { id = asy.2 }
+			hidden_effect = {
+				complete_national_focus = ASY_his_holiness_is_dead
+			}
+		}
+	}
+
+	##Event: War Over Hakkari
+	country_event = {
+		id = asy.2
+		title = asy.2.title
+		desc = asy.2.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = { #Church
+			name = asy.2.a
+			ai_chance = { factor = 0.4 }
+			set_country_flag = hakkari_solved
+		}
+		option = { #Republic
+			name = asy.2.b
+			ai_chance = { factor = 0.4 }
+			create_country_leader = {
+				name = "Yusuf Malek"
+				desc = "POLITICS_YUSUF_MALEK_DESC"
+				picture = "Portrait_Assyria_Yusuf_Malek.dds"
+				expire = "1965.1.1"
+				ideology = constitutional_dictatorship
+			}
+			add_ideas = ASY_yusuf_malek_hog
+			set_country_flag = hakkari_solved
+		}
+		option = { #Russian
+			name = asy.2.c
+			ai_chance = { factor = 0.2 }
+			create_country_leader = {
+				name = "Nikolai Baratov"
+				desc = "POLITICS_NIKOLAI_BARATOV_DESC"
+				picture = "Portrait_Assyria_Nikolai_Baratov.dds"
+				expire = "1965.1.1"
+				ideology = military_dictatorship
+			}
+			add_ideas = ASY_nikolai_baratov_hog
+			set_country_flag = hakkari_solved
+		}
+	}
+
+	##Event: New Patriarch is Elected
+	country_event = {
+		id = asy.3
+		title = asy.3.title
+		desc = asy.3.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.3.a
+			add_political_power = 100
+		}
+	}
+
+	##Event: Agha Petros Introduces the Martial Law
+	country_event = {
+		id = asy.4
+		title = asy.4.title
+		desc = asy.4.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.4.a
+			ai_chance = { factor = 1 }
+			add_political_power = 100
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.05
+			}
+			create_corps_commander = {
+				name = "Yusuf Malek"
+				picture = "Portrait_Assyria_Yusuf_Malek3.dds"
+				traits = { politically_connected }
+				skill = 2
+			}
+		}
+	}
+
+	##Event: The Russian Rule is Reestablished
+	country_event = {
+		id = asy.5
+		title = asy.5.title
+		desc = asy.5.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.5.a
+			ai_chance = { factor = 1 }
+			add_political_power = 100
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			add_war_support = 0.05
+			create_corps_commander = {
+				name = "Nikolai Baratov"
+				picture = "Portrait_Assyria_Nikolai_Baratov2.dds"
+				traits = { inflexible_strategist }
+				skill = 3
+			}
+			set_cosmetic_tag = ASY_RUS
+		}
+	}
+
+	##Event: Terms of Elections
+	country_event = {
+		id = asy.6
+		title = asy.6.title
+		desc = asy.6.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.6.a
+			ai_chance = { factor = 1 }
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.05
+			}
+		}
+		option = {
+			name = asy.6.b
+			ai_chance = { factor = 1 }
+		}
+	}
+
+	##Event: Elections
+	country_event = {
+		id = asy.7
+		title = asy.7.title
+		desc = asy.7.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.7.a
+			ai_chance = { factor = 1 }
+			complete_national_focus = ASY_gad_wins
+		}
+		option = {
+			name = asy.7.b
+			ai_chance = { factor = 1 }
+			complete_national_focus = ASY_gsa_wins
+		}
+	}
+	#armenia_fwends
+	country_event = {
+		id = asy.8
+		title = asy.8.title
+		desc = asy.8.desc
+		#picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+		
+		is_triggered_only = yes
+		
+		option = {
+			name = asy.8.a
+			ai_chance = { factor = 1 }
+			ARM = {
+				diplomatic_relation = {
+					country = ASY
+					relation = guarantee
+					active = yes
+				}
+			}
+		}
+		option = {
+			name = asy.8.b
+			ai_chance = { factor = 1 }
+			trigger = {
+				ASY = {
+					has_government = social_democratism
+				}
+			}
+			ARM = {
+				diplomatic_relation = {
+					country = ASY
+					relation = guarantee
+					active = yes
+				}
+			}
+			set_politics = {
+				ruling_party = revisionist_socialism
+				elections_allowed = yes
+			}
+			create_country_leader = {
+				name = "Freydun Atturaya"
+				desc = "POLITICS_FREYDUN_ATTURAYA_DESC"
+				picture = "Portrait_Assyria_Freydun_RevSoc.dds"
+				expire = "1965.1.1"
+				ideology = democratic_socialism
+			}
+		}
+	}

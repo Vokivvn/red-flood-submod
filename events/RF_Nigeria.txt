@@ -1,0 +1,53 @@
+﻿add_namespace = nigeria
+
+#Sokoto Revolt
+country_event = {
+	id = nigeria.1
+	title = nigeria.1.t
+	desc = nigeria.1.desc
+	#picture = GFX_report_event_paul_levi
+	
+	is_triggered_only = yes
+	
+	option = { #Blasted maniacs!
+		name = nigeria.1.a
+		992 = {
+			add_core_of = SOK
+		}
+		558 = {
+			add_core_of = SOK
+		}
+		SOK = {
+			set_state_owner = 992
+			set_state_controller = 992
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "SOK_revolt"
+			}
+		}
+	}
+	option = { #The revolution begins...
+		name = nigeria.1.b
+		992 = {
+			add_core_of = SOK
+		}
+		558 = {
+			add_core_of = SOK
+		}
+		SOK = {
+			set_state_owner = 992
+			set_state_controller = 992
+			declare_war_on = {
+				target = ENG
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "SOK_revolt"
+			}
+		}
+		change_tag_from = ENG
+	}
+}

@@ -1,0 +1,55 @@
+add_namespace = mcm
+
+country_event = {
+	id = mcm.1
+	title = mcm.1.title
+	desc = mcm.1.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mcm.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 100
+	}
+}
+country_event = {
+	id = mcm.2
+	title = mcm.2.title
+	desc = mcm.2.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mcm.2.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.05
+		add_political_power = -100
+	}
+}
+country_event = {
+	id = mcm.3
+	title = mcm.3.title
+	desc = mcm.3.desc
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = mcm.3.a
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.05
+		add_manpower = 12000
+	}
+}

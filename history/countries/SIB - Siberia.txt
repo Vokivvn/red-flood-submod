@@ -1,0 +1,159 @@
+capital = 570
+
+oob = "SIB_1936"
+
+set_research_slots = 3
+
+add_ideas = {
+RUS_warlord_indifference
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_fighter = 1
+
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1933.10.25"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 0
+	libertarian_marxism = 0
+	revolutionary_anarchism = 0
+	revisionist_socialism = 10
+	social_democratism = 15
+	liberalism = 10
+	conservatism = 5
+	right_authoritarianism = 5
+	despotism = 40
+	reactionism = 5
+	accelerationism = 10
+}
+
+set_stability = 0.9
+
+create_country_leader = {
+	name = "Alexsey Grishin-Almazov"
+	desc = "POLITICS_ALEXSEY_GRISHIN_DESC"
+	picture = "Portrait_SIB_Aleksey_Grishin_Almazov.tga"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Aleksandr Gattenberger"
+	desc = "POLITICS_GATTENBERGER_DESC"
+	picture = "Portrait_SIB_Aleksandr_Gattenberger.tga"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Ivan Serebrennikov"
+	desc = "POLITICS_SEREBRENNIKOV_DESC"
+	picture = "Portrait_SIB_Ivan_Serebrennikov.tga"
+	expire = "1965.1.1"
+	ideology = national_conservatism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Nikolay Anov"
+	desc = "POLITICS_NIKOLAI_ANOV_DESC"
+	picture = "Portrait_SIB_Nikolay_Anov.tga"
+	expire = "1965.1.1"
+	ideology = progressivism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Yevgeniy Kolosov"
+	desc = "POLITICS_YEVGENIY_KOLOSOV_DESC"
+	picture = "Portrait_SIB_Yevgeniy_Kolosov.tga"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+	traits = {
+	}
+}
+create_country_leader = {
+	name = "Victor Baydalakov"
+	desc = "POLITICS_VICTOR_BAYDALAKOV_DESC"
+	picture = "Portrait_SIB_Victor_Baydalakov.tga"
+	expire = "1965.1.1"
+	ideology = national_rejuvenatism
+	traits = {
+	}
+}
+
+create_corps_commander = {
+	name = "Vyacheslav Volkov"
+	picture = "Portrait_SIB_Vyacheslav_Volkov.tga"
+	traits = { inflexible_strategist cavalry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Ivan Krasilnikov"
+	picture = "Portrait_SIB_Ivan_Krasilnikov.tga"
+	traits = { ambusher cavalry_officer }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Mikhail Khanzhin"
+	picture = "Portrait_SIB_Mikhail_Khanzhin.tga"
+	traits = { trait_reckless infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Pavel Ivanov-Rinov"
+	picture = "Portrait_SIB_Pavel_Ivanov_Rinov.tga"
+	traits = { brilliant_strategist cavalry_officer }
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Alexsey Grishin-Almazov"
+	picture = "Portrait_SIB_Aleksey_Grishin_Almazov.tga"
+	traits = { organizer politically_connected }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Innokentiy Smolin"
+	picture = "Portrait_SIB_Innokentiy_Smolin.tga"
+	traits = { winter_expert trait_cautious }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}

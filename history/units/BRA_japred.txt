@@ -1,0 +1,20 @@
+division_template = {
+	name = "Kyōsan shugi no Burajiru no minpei"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1st Kyōsan Burajiru no Minpei 'Tokyo'"
+		location = 10513
+		division_template = "Kyōsan shugi no Burajiru no minpei"
+		start_experience_factor = 0.10
+		start_equipment_factor = 0.5
+	}
+}

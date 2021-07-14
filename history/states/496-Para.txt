@@ -1,0 +1,26 @@
+
+state={
+	id=496
+	name="STATE_496"
+	resources={
+		steel=3.000
+	}
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		add_core_of = BRA
+
+	}
+
+	provinces={
+		5223 7589 8233 10419 10931 12422 12938
+	}
+	manpower=4603600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,136 @@
+﻿capital = 543
+
+oob = "MAG_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_convoys = 25
+set_stability = 0.15
+
+# Events
+country_event = { id = mag.1 days = 30 }
+
+# Politics
+set_popularities = {
+	accelerationism = 0
+	reactionism = 40
+	despotism = 50
+	right_authoritarianism = 0
+	conservatism = 10
+	liberalism = 0
+	social_democratism = 0
+	libertarian_marxism = 0
+	vanguard_socialism = 0
+	revolutionary_anarchism = 0
+}
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Ranavalona III"
+	desc = "POLITICS_RANAVALONA_III_DESC"
+	picture = "portrait_ranavalona.tga"
+	expire = "1965.1.1"
+	ideology = absolute_monarchy
+	}
+create_country_leader = {
+	name = "Jean Ralaimongo"
+	desc = "POLITICS_RALAIMONGO_DESC"
+	picture = "portrait_ralaimongo.tga"
+	expire = "1965.1.1"
+	ideology = agrarian_councilism
+	}
+create_country_leader = {
+	name = "Norbert Zafimahova"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "portrait_Zafimahova.tga"
+	expire = "1965.1.1"
+	ideology = traditional_conservatism
+	}
+create_country_leader = {
+	name = "Philibert Tsiranana"
+	desc = "POLITICS_ALEXEI_II_DESC"
+	picture = "portrait_Tsiranana.tga"
+	expire = "1965.1.1"
+	ideology = left_nationalism
+	}
+create_country_leader = {
+	name = "Jean-Joseph Rabearivelo"
+	desc = "POLITICS_RABEARIVELO_DESC"
+	picture = "portrait_Rabearivelo.tga"
+	expire = "1965.1.1"
+	ideology = ethno_futurism
+	}
+create_country_leader = {
+	name = "Francis Didelot"
+	desc = "POLITICS_DIDELOT_DESC"
+	picture = "portrait_francis.tga"
+	expire = "1965.1.1"
+	ideology = market_liberalism
+	}
+create_corps_commander = {
+	name = "Gabriel Ramanatsoa"
+	id = 1341
+	picture = "portrait_gabriel.tga"
+	traits = { politically_connected brilliant_strategist  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Monja Jaona"
+	id = 1340
+	picture = "portrait_monja_jaona.tga"
+	traits = { politically_connected adaptable commando war_hero }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Joseph Andrianavalona Ravoahangy"
+	id = 1339
+	picture = "portrait_joseph_andrianavalona_ravoahangy.tga"
+	traits = { politically_connected infantry_officer trait_engineer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Joseph Raseta"
+	id = 1337
+	picture = "portrait_joseph_raseta.tga"
+	traits = { politically_connected defensive_doctrine war_hero }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Samuel Rakotondrabe"
+	id = 1338
+	picture = "portrait_samuel_rakotondrabe.tga"
+	traits = { politically_connected armor_officer }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+	
+

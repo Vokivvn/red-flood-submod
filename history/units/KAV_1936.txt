@@ -1,0 +1,84 @@
+﻿division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	division_names_group = DKB_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Gorno-Strelkovaya Brigada"				# Mountaineer Brigade
+
+	division_names_group = DKB_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Konnyi Eskadron"                        #"Cavalry Escadron"
+
+	division_names_group = DKB_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+units = {
+	division = {
+		name = "Rat' Obshchestva Budushchego"
+		location = 1599
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.7
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "Apostoly Budushchego"
+		location = 4605
+		division_template = "Strelkovaya Diviziya"	
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "Gruzinskaya Brigada Vol'nykh Dush"
+		location = 6669
+		division_template = "Gorno-Strelkovaya Brigada"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "Eskadron Kirasirov Chernoy Molnii"
+		location = 3653
+		division_template = "Konnyi Eskadron"	
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+}
+
+air_wings = {
+	231 = {
+		# 1st Squadron
+		fighter_equipment_1 =  {
+			owner = "KAV" 
+			amount = 80
+		}
+	}
+}

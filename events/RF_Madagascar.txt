@@ -1,0 +1,797 @@
+add_namespace = mag
+
+country_event = {
+	id = mag.1
+	title = mag.1.title
+	desc = mag.1.desc
+	picture = GFX_/media/get//hoi4/event_gfx/report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.1.a
+		ai_chance = { 
+					modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = MAG_ai_route
+					option = MAG_DEMOCRACY
+				}
+			}
+			factor = 1
+			}
+		hidden_effect = {
+			kill_country_leader = yes
+			complete_national_focus = MAG_deathofthequeen
+			set_politics = {
+				ruling_party = liberalism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.20
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.20
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.20
+			}
+				country_event = {
+					id = news.24
+					days = 1
+				}
+		}
+	}
+	
+	option = {
+		name = mag.1.b
+		ai_chance = {
+					modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = MAG_ai_route
+					option = MAG_SOCIALIST
+				}
+			}
+		factor = 1
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+			complete_national_focus = MAG_deathofthequeen
+			set_politics = {
+				ruling_party = libertarian_marxism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = 0.60
+			}
+				country_event = {
+					id = news.23
+					days = 1
+				}
+		}
+	}
+	
+	option = {
+		name = mag.1.c
+		ai_chance = { 					
+		modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = MAG_ai_route
+					option = MAG_FUTURIST
+				}
+			}
+			factor = 1
+			}
+		hidden_effect = {
+			kill_country_leader = yes
+			complete_national_focus = MAG_deathofthequeen
+			set_politics = {
+				ruling_party = accelerationism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = 0.60
+			}
+			country_event = {
+					id = news.22
+					days = 1
+				}
+		}
+	}
+	
+	option = {
+		name = mag.1.d
+		ai_chance = {
+		modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = MAG_ai_route
+					option = MAG_REGENCY
+				}
+			}		
+		factor = 1
+		}
+		hidden_effect = {
+			kill_country_leader = yes
+			complete_national_focus = MAG_deathofthequeen
+			create_country_leader = { 
+				name = "Regency Council" 
+				desc = "POLITICS_REGENCY_COUNCIL_MADAGASCAR_DESC"
+				picture = "Portrait_Regency_Madagascar.tga"
+				expire = "1965.1.1"
+				ideology = absolute_monarchy 
+				traits = {
+					
+				}
+			}
+				country_event = {
+					id = news.25
+					days = 1
+				}
+				country_event = {
+					id = mag.22
+					days = 5
+				}
+		}
+	}
+}
+
+###French event
+country_event = {
+	id = mag.2
+	title = mag.2.title
+	desc = mag.2.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.2.a
+		ai_chance = { factor = 1 } 
+		MAG = {
+			set_state_controller  = 997
+			set_state_owner  = 997
+			add_state_core = 997
+		}
+		FRA = {	
+			add_political_power = 50
+			hidden_effect = { FRA = {
+				add_to_faction = MAG
+			} }
+		}
+	}
+	
+	option = {
+		name = mag.2.b
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+
+###German
+country_event = {
+	id = mag.4
+	title = mag.4.title
+	desc = mag.4.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.4.a
+		ai_chance = { factor = 100 } 
+		GER = {
+			add_to_faction = MAG
+		}
+	}
+	
+	option = {
+		name = mag.4.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Spring event#
+country_event = {
+	id = mag.5
+	title = mag.5.title
+	desc = mag.5.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.5.a
+		ai_chance = { factor = 100 } 
+	}
+	
+}
+
+###Coalition Event#
+country_event = {
+	id = mag.6
+	title = mag.6.title
+	desc = mag.6.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.6.a
+		ai_chance = { factor = 100 } 
+	}
+}
+
+country_event = {
+	id = mag.7
+	title = mag.7.title
+	desc = mag.7.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.7.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+# National Myth Event
+country_event = {
+	id = mag.8
+	title = mag.8.title
+	desc = mag.8.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.8.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.01
+	}
+}
+country_event = {
+	id = mag.9
+	title = mag.9.title
+	desc = mag.9.desc
+	is_triggered_only = no
+	
+	fire_only_once = yes
+		trigger = {
+		tag = MAG
+		date > 1939.2.1
+		NOT = { 
+			OR = { 
+				has_government = accelerationism 
+				has_government = despotism 
+				has_government = libertarian_marxism 
+			} 
+		}
+	}
+	
+	option = {
+		name = mag.9.a
+		ai_chance = { factor = 100 }
+			set_politics = {
+				ruling_party = social_democratism
+				elections_allowed = no
+			}
+			add_popularity = {
+			ideology = social_democratism
+			popularity = 0.1
+			}
+	}
+	option = {
+		name = mag.9.b
+		ai_chance = { factor = 100 }
+			add_popularity = {
+			ideology = liberalism
+			popularity = 0.1
+			}
+	}
+	option = {
+		name = mag.9.c
+		ai_chance = { factor = 100 }
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = no
+			}
+			add_popularity = {
+			ideology = conservatism
+			popularity = 0.1
+			}
+	}
+}
+country_event = {
+	id = mag.10
+	title = mag.10.title
+	desc = mag.10.desc
+	picture = GFX_report_event_MAG_communalism
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.10.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.10
+	}
+}
+country_event = {
+	id = mag.11
+	title = mag.11.title
+	desc = mag.11.desc
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.11.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.10
+	}
+}
+country_event = {
+	id = mag.12
+	title = mag.12.title
+	desc = mag.12.desc
+	picture = GFX_report_event_MAG_beardisprogress
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.12.a
+		ai_chance = { factor = 100 }
+		add_stability = -0.02
+	}
+	option = {
+		name = mag.12.b
+		ai_chance = { factor = 100 }
+		add_political_power = -10
+	}
+	option = {
+		name = mag.12.c
+		ai_chance = { factor = 100 }
+		add_political_power = -25
+		add_stability = 0.05
+	}
+	option = {
+		name = mag.12.d
+		ai_chance = { factor = 100 }
+		add_stability = -0.02
+	}
+}
+country_event = {
+	id = mag.13
+	title = mag.13.title
+	desc = mag.13.desc
+	picture = GFX_report_event_MAG_nouvellefrance
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.13.a
+		ai_chance = { factor = 100 }
+		add_political_power = -10
+		add_stability = 0.03
+	}
+	option = {
+		name = mag.13.b
+		ai_chance = { factor = 100 }
+		add_stability = -0.03
+		add_popularity = {
+		ideology = libertarian_marxism
+		popularity = 0.03
+		}
+		add_political_power = 10
+	}
+}
+country_event = {
+	id = mag.14
+	title = mag.14.title
+	desc = mag.14.desc
+	picture = GFX_report_event_MAG_bananaswithnobones
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.14.a
+		ai_chance = { factor = 100 }
+		add_war_support = 0.01
+		add_political_power = 5
+	}
+}
+country_event = {
+	id = mag.15
+	title = mag.15.title
+	desc = mag.15.desc
+	picture = GFX_report_event_MAG_lemuria
+	is_triggered_only = yes
+	
+	option = {
+		name = mag.15.a
+		ai_chance = { factor = 100 }
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = mag.17
+	title = mag.17.title
+	desc = mag.17.desc
+	picture = GFX_report_event_MAG_my_love
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+	tag = MAG
+	has_government = accelerationism
+	date > 1939.4.6
+	}
+	
+	option = {
+		name = mag.17.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = "TOOLTIP_RABEARIVELO_LOVE"
+		}
+}
+country_event = {
+	id = mag.18
+	title = mag.18.title
+	desc = mag.18.desc
+	picture = GFX_report_event_MAG_bamboo
+	is_triggered_only = no
+	fire_only_once = yes
+	trigger = {
+	tag = MAG
+	has_government = accelerationism
+	date > 1940.1.12
+	}
+	
+	option = {
+		name = mag.18.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = "TOOLTIP_RABEARIVELO_BAMBOO_FOR_TWO"
+		country_event = {
+		id = mag.19
+		days = 1
+		}
+		}
+}
+country_event = {
+	id = mag.19
+	title = mag.19.title
+	desc = mag.19.desc
+	picture = GFX_report_event_MAG_bird_talk
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mag.19.a
+		ai_chance = { factor = 100 }
+		country_event = {
+		id = mag.20
+		days = 1
+		}
+		}
+}
+country_event = {
+	id = mag.20
+	title = mag.20.title
+	desc = mag.20.desc
+	picture = GFX_report_event_MAG_bird_talk
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mag.20.a
+		ai_chance = { factor = 100 }
+		country_event = {
+		id = mag.21
+		days = 1
+		}
+		}
+}
+country_event = {
+	id = mag.21
+	title = mag.21.title
+	desc = mag.21.desc
+	picture = GFX_report_event_MAG_bird_talk
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mag.21.a
+		ai_chance = { factor = 100 }
+		add_political_power = 1
+		}
+}
+country_event = {
+	id = mag.22
+	title = mag.22.title
+	desc = mag.22.desc
+	picture = GFX_report_event_MAG_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mag.22.a
+		ai_chance = { factor = 100 }
+		add_political_power = -5
+		add_stability = -0.05
+		country_event = {
+		id = mag.23
+		days = 20
+		}
+		}
+}
+country_event = {
+	id = mag.23
+	title = mag.23.title
+	desc = mag.23.desc
+	picture = GFX_report_event_MAG_civilwar
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mag.23.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = {
+				id = news.53
+				days = 1
+			}
+			MAG = {
+				remove_unit_leader = 1340
+				remove_unit_leader = 1339
+				remove_unit_leader = 1338
+				remove_unit_leader = 1337
+			}
+			MG2 = {
+				create_corps_commander = {
+					name = "Monja Jaona"
+					id = 1340
+					picture = "portrait_monja_jaona.tga"
+					traits = { politically_connected adaptable commando war_hero }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Joseph Andrianavalona Ravoahangy"
+					id = 1339
+					picture = "portrait_joseph_andrianavalona_ravoahangy.tga"
+					traits = { politically_connected infantry_officer trait_engineer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_state_core = 1067
+				add_state_core = 1068
+				add_state_core = 543
+				transfer_state = 1067
+				load_oob = MG2_1936
+				declare_war_on = {
+					target = MG3
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = MAG
+					type = annex_everything
+				}
+			}
+			MG3 = {
+				create_corps_commander = {
+					name = "Joseph Raseta"
+					id = 1337
+					picture = "portrait_joseph_raseta.tga"
+					traits = { politically_connected defensive_doctrine war_hero }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Samuel Rakotondrabe"
+					id = 1338
+					picture = "portrait_samuel_rakotondrabe.tga"
+					traits = { politically_connected armor_officer }
+					skill = 1
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_state_core = 1067
+				add_state_core = 1068
+				add_state_core = 543
+				transfer_state = 1068
+				load_oob = MG3_1936
+				declare_war_on = {
+					target = MG2
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = MAG
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = mag.23.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+				country_event = {
+					id = news.53
+					days = 1
+				}
+				MAG = {
+					remove_unit_leader = 1340
+					remove_unit_leader = 1339
+					remove_unit_leader = 1338
+					remove_unit_leader = 1337
+				}
+				MG2 = {
+					create_corps_commander = {
+						name = "Monja Jaona"
+						id = 1340
+						picture = "portrait_monja_jaona.tga"
+						traits = { politically_connected adaptable commando war_hero }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 3
+						planning_skill = 2
+						logistics_skill = 3
+					}
+					create_corps_commander = {
+						name = "Joseph Andrianavalona Ravoahangy"
+						id = 1339
+						picture = "portrait_joseph_andrianavalona_ravoahangy.tga"
+						traits = { politically_connected infantry_officer trait_engineer }
+						skill = 2
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 2
+					}
+					add_state_core = 1067
+					add_state_core = 1068
+					add_state_core = 543
+					transfer_state = 1067
+					load_oob = MG2_1936
+					declare_war_on = {
+						target = MG3
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = MAG
+						type = annex_everything
+					}
+				}
+				MG3 = {
+				create_corps_commander = {
+					name = "Joseph Raseta"
+					id = 1337
+					picture = "portrait_joseph_raseta.tga"
+					traits = { politically_connected defensive_doctrine war_hero }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Samuel Rakotondrabe"
+					id = 1338
+					picture = "portrait_samuel_rakotondrabe.tga"
+					traits = { politically_connected armor_officer }
+					skill = 1
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_state_core = 1067
+				add_state_core = 1068
+				add_state_core = 543
+				transfer_state = 1068
+				load_oob = MG3_1936
+				declare_war_on = {
+					target = MG2
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = MAG
+					type = annex_everything
+				}
+			}
+			MG2 = {
+				change_tag_from = MAG
+			}
+		}
+	}
+	option = {
+		name = mag.23.c
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+				country_event = {
+					id = news.53
+					days = 1
+				}
+			MG2 = {
+				create_corps_commander = {
+					name = "Monja Jaona"
+					id = 1340
+					picture = "portrait_monja_jaona.tga"
+					traits = { politically_connected adaptable commando war_hero }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 3
+				}
+				create_corps_commander = {
+					name = "Joseph Andrianavalona Ravoahangy"
+					id = 1339
+					picture = "portrait_joseph_andrianavalona_ravoahangy.tga"
+					traits = { politically_connected infantry_officer trait_engineer }
+					skill = 2
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_state_core = 1067
+				add_state_core = 1068
+				add_state_core = 543
+				transfer_state = 1067
+				load_oob = MG2_1936
+				declare_war_on = {
+					target = MG3
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = MAG
+					type = annex_everything
+				}
+			}
+			MG3 = {
+				create_corps_commander = {
+					name = "Joseph Raseta"
+					id = 1337
+					picture = "portrait_joseph_raseta.tga"
+					traits = { politically_connected defensive_doctrine war_hero }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				create_corps_commander = {
+					name = "Samuel Rakotondrabe"
+					id = 1338
+					picture = "portrait_samuel_rakotondrabe.tga"
+					traits = { politically_connected armor_officer }
+					skill = 1
+					attack_skill = 2
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+				add_state_core = 1067
+				add_state_core = 1068
+				add_state_core = 543
+				transfer_state = 1068
+				load_oob = MG3_1936
+				declare_war_on = {
+					target = MG2
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = MAG
+					type = annex_everything
+				}
+			}
+			MG3 = {
+				change_tag_from = MAG
+			}
+		}
+	}

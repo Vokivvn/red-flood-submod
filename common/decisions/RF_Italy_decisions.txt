@@ -1,0 +1,5271 @@
+ITA_the_national_economy = {
+	ITA_decision_expand_military_complex = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_industry
+		visible = {
+			has_completed_focus = ITA_industrial_problem
+			NOT = {
+				check_variable = {
+				    var = ITA_decision_limit_1
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 60
+		remove_effect = {
+			add_to_variable = {
+       			var = ITA_decision_limit_1
+        		value = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_exploit_central_africa = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = rubber
+		visible = {
+			has_completed_focus = ITA_industrial_problem
+			NOT = {
+				check_variable = {
+				    var = ITA_decision_limit_2
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 60
+		remove_effect = {
+			add_to_variable = {
+       			var = ITA_decision_limit_2
+        		value = 1
+			}
+			add_resource = {
+    			type = rubber
+    			amount = 3
+    			state = 772
+			}
+			add_resource = {
+    			type = aluminium
+    			amount = 2
+    			state = 773
+			}
+			add_resource = {
+    			type = rubber
+    			amount = 3
+    			state = 539
+			}
+			add_resource = {
+    			type = oil
+    			amount = 1
+    			state = 661
+			}
+			add_resource = {
+    			type = oil
+    			amount = 1
+    			state = 662
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_interventional_works = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_industry
+		visible = {
+			has_completed_focus = ITA_industrial_problem
+			NOT = {
+				check_variable = {
+				    var = ITA_decision_limit_3
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 70
+		remove_effect = {
+			add_to_variable = {
+       			var = ITA_decision_limit_3
+        		value = 1
+			}
+		}
+		complete_effect = {
+			add_timed_idea = {
+				idea = ITA_idea_national_works
+				days = 70
+			}
+		}
+	}
+	ITA_decision_land_reform = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_demand
+		visible = {
+			has_completed_focus = ITA_farming_problem
+		}
+		fire_only_once = yes
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = ITA_lagging_south
+				add_idea = ITA_lagging_south_b1
+			}
+		}
+	}
+	ITA_decision_subsides_for_farmers = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		visible = {
+			has_completed_focus = ITA_farming_problem
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			add_ideas = ITA_idea_farmer_subsides_b
+		}
+	}
+	ITA_decision_regulate_banks = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		visible = {
+			has_completed_focus = ITA_financial_problem
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			add_ideas = ITA_idea_stabilizing_currency_b
+		}
+	}
+	ITA_decision_focus_on_export = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		visible = {
+			has_completed_focus = ITA_trade_problem
+		}
+		fire_only_once = yes
+		days_remove = 30
+		remove_effect = {
+			add_ideas = ITA_idea_focus_on_export_b
+		}
+	}
+	ITA_decision_stop_the_pirate_raids = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_completed_focus = ITA_trade_problem
+		}
+		fire_only_once = yes
+		days_remove = 45
+		remove_effect = {
+			FIU = {
+				add_opinion_modifier = {
+					target = ITA
+					modifier = small_decrease
+				}
+			}
+			navy_experience = 20
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_end_the_slump = {
+		cost = 100
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		visible = {
+			AND = {
+				has_completed_focus = ITA_trade_problem
+				has_completed_focus = ITA_financial_problem
+				has_completed_focus = ITA_farming_problem
+				has_completed_focus = ITA_industrial_problem
+				has_idea = ITA_idea_farmer_subsides_b
+				has_idea = ITA_idea_stabilizing_currency_b
+				has_idea = ITA_idea_focus_on_export_b
+			}
+		}
+		fire_only_once = yes
+		days_remove = 120
+		remove_effect = {
+			remove_ideas = ITA_the_slump
+			hidden_effect = {
+				remove_ideas = {
+					ITA_idea_farmer_subsides_b
+					ITA_idea_stabilizing_currency_b
+					ITA_idea_focus_on_export_b
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+}
+ITA_balbo_naval_base_expansion = {
+	ITA_decision_port_venice = {
+		allowed = { tag = ITA }
+		icon = generic_construction
+		visible = {
+			has_completed_focus = ITA_national_shipyards
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_venice_tt
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -75
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			160 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ITA_decision_port_sicily = {
+		allowed = { tag = ITA }
+		icon = generic_construction
+		visible = {
+			has_completed_focus = ITA_national_shipyards
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_venice_tt
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -75
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			115 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ITA_decision_port_sardinia = {
+		allowed = { tag = ITA }
+		icon = generic_construction
+		visible = {
+			has_completed_focus = ITA_national_shipyards
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_sardinia_tt
+		custom_cost_trigger = {
+			command_power > 44
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -45
+				add_political_power = -75	
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			114 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ITA_decision_port_rome = {
+		allowed = { tag = ITA }
+		icon = generic_construction
+		visible = {
+			has_completed_focus = ITA_national_shipyards
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_rome_tt	
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 89
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -80
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			2 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ITA_decision_base_rhodes = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = ITA_necessary_bases
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_base_rhodes_tt
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 39
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -40
+			}
+		}
+		days_remove = 35
+		remove_effect = {
+			164 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 10007
+				}
+			}
+		}
+	}
+	ITA_decision_base_naples = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = ITA_necessary_bases
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_base_rhodes_tt
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 39
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -40
+			}
+		}
+		days_remove = 35
+		remove_effect = {
+			117 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 819
+				}
+			}
+		}
+	}
+	ITA_decision_base_tripoli = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = ITA_necessary_bases
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_base_tripoli_tt	
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30
+				add_political_power = -50	
+			}
+		}
+		days_remove = 35
+		remove_effect = {
+			448 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 1149
+				}
+			}
+		}
+	}
+	ITA_decision_base_tobruk = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = ITA_necessary_bases
+		}
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_base_tripoli_tt	
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -30	
+				add_political_power = -50	
+			}
+		}
+		days_remove = 35
+		remove_effect = {
+			451 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 1130
+				}
+			}
+		}
+	}
+}
+ITA_but_it_just_might_work = {
+	ITA_launch_bounaparte = {
+		allowed = { tag = ITA }
+		icon = generic_ignite_civil_war
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+		}
+		activation = {
+			has_completed_focus = ITA_operation_buonaparte
+		}
+		available = {
+			has_country_flag = bounaparte_flag
+		}
+		fire_only_once = yes
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 90
+		complete_effect = {
+		}
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_buonaparte_chance
+    						value = 0.2
+    						compare = less_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.34
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_buonaparte_chance
+    						value = 0.2
+	    					compare = greater_than
+						}
+						check_variable = {
+    						var = ITA_buonaparte_chance
+    						value = 0.85
+    						compare = less_than
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.35
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_buonaparte_chance
+    						value = 0.85
+    						compare = greater_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.36
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ITA_prepare_the_special_unit = {
+		allowed = { tag = ITA }
+		icon = generic_intelligence_operation
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+			NOT = {
+				OR = {
+					has_country_flag = ITA_buonaparte_over
+					has_country_flag = ITA_buonaparte_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_prepare_special_unit_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_army_experience > 24
+			command_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -2000
+				army_experience = -25
+				add_command_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0.1
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+		}
+	}
+	ITA_propagandize = {
+		allowed = { tag = ITA }
+		icon = eng_propaganda_campaigns
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+			NOT = {
+				OR = {
+					has_country_flag = ITA_buonaparte_over
+					has_country_flag = ITA_buonaparte_over_war
+				}
+			}
+		}
+		cost = 70
+		complete_effect = {
+			add_to_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0.05
+			}
+		}
+		days_remove = 31
+		remove_effect = {
+			
+		}
+	}
+	ITA_distribute_weapons = {
+		allowed = { tag = ITA }
+		icon = ger_military_buildup
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+			NOT = {
+				OR = {
+					has_country_flag = ITA_buonaparte_over
+					has_country_flag = ITA_buonaparte_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_distribute_weapons_tt
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0.1
+			}
+		}
+		days_remove = 45
+		remove_effect = {
+			
+		}
+	}
+	ITA_train_locals = {
+		allowed = { tag = ITA }
+		icon = generic_nationalism
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+			NOT = {
+				OR = {
+					has_country_flag = ITA_buonaparte_over
+					has_country_flag = ITA_buonaparte_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_train_the_locals_tt
+		custom_cost_trigger = {
+			has_army_experience > 29
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -30
+				add_political_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0.15
+			}
+		}
+		days_remove = 40
+		remove_effect = {
+			
+		}
+	}
+	ITA_prepare_navy = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_completed_focus = ITA_operation_buonaparte
+			NOT = {
+				OR = {
+					has_country_flag = ITA_buonaparte_over
+					has_country_flag = ITA_buonaparte_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_prepare_navy_tt
+		custom_cost_trigger = {
+			has_navy_experience > 29
+			command_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -30
+				add_command_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_buonaparte_chance
+			    value = 0.15
+			}
+		}
+		fire_only_once = yes
+		remove_effect = {
+			
+		}
+	}
+
+	ITA_mission_war_over_corsica = {
+		allowed = { tag = ITA }
+		icon = generic_ignite_civil_war
+		visible = {
+			has_country_flag = ITA_buonaparte_over_war
+		}
+		activation = {
+			has_country_flag = ITA_buonaparte_over_war
+		}
+		available = {
+			has_country_flag = bounaparte_flag
+		}
+		fire_only_once = yes
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 40
+		complete_effect = {
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					ITA = {
+						controls_state = 1
+					}
+				}
+				ITA = {
+					country_event = {
+						id = italy.37
+					}
+				}
+			}
+			else = {
+				ITA = {
+					country_event = {
+						id = italy.38
+					}
+				}
+			}
+		}
+	}
+}
+ITA_quaternion = {
+	ITA_launch_quaternion = {
+		allowed = { tag = ITA }
+		icon = generic_ignite_civil_war
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+		}
+		activation = {
+			has_completed_focus = ITA_operation_quaternion
+		}
+		available = {
+			has_country_flag = quaternion_flag
+		}
+		fire_only_once = yes
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 120
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.2
+    						compare = less_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.43
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.2
+    						compare = greater_than
+						}
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.4
+    						compare = less_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.44
+						}
+						country_event = {
+							id = italy.48
+							days = 1
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.4
+    						compare = greater_than
+						}
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.6
+    						compare = less_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.44
+						}
+						country_event = {
+							id = italy.45
+							days = 1
+						}
+						country_event = {
+							id = italy.48
+							days = 2
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.6
+    						compare = greater_than
+						}
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.8
+    						compare = less_than_or_equals
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.44
+						}
+						country_event = {
+							id = italy.45
+							days = 1
+						}
+						country_event = {
+							id = italy.46
+							days = 2
+						}
+						country_event = {
+							id = italy.48
+							days = 3
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+    						var = ITA_quaternion_chance
+    						value = 0.8
+    						compare = greater_than
+						}
+					}
+					ITA = {
+						country_event = {
+							id = italy.44
+						}
+						country_event = {
+							id = italy.45
+							days = 1
+						}
+						country_event = {
+							id = italy.46
+							days = 2
+						}
+						country_event = {
+							id = italy.47
+							days = 3
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+
+	ITA_inflame_cypriot_tensions = {
+		allowed = { tag = ITA }
+		icon = generic_political_rally
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 75
+		complete_effect = {
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_turn_the_spaniards = {
+		allowed = { tag = ITA }
+		icon = generic_political_discourse
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_turn_the_spaniards_tt
+		custom_cost_trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -25
+				add_political_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_train_the_marines = {
+		allowed = { tag = ITA }
+		icon = generic_intelligence_operation
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_train_the_marines_tt
+		custom_cost_trigger = {
+			has_manpower > 2499
+			has_navy_experience > 9
+			command_power > 29
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -2500
+				navy_experience = -10
+				add_command_power = -30
+			}
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		days_remove = 41
+		remove_effect = {
+		}
+	}
+	ITA_extensive_manuevers = {
+		allowed = { tag = ITA }
+		icon = hol_draw_up_staff_plans
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_extensive_manuevers_tt
+		custom_cost_trigger = {
+			has_army_experience > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -25
+				add_political_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+		}
+	}
+	ITA_grease_the_wheels = {
+		allowed = { tag = ITA }
+		icon = generic_tank
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_grease_the_wheels_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 44
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -45
+			}
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+		}
+	}
+	ITA_ready_air = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_completed_focus = ITA_operation_quaternion
+			NOT = {
+				OR = {
+					has_country_flag = ITA_quaternion_over
+					has_country_flag = ITA_quaternion_over_war
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_ready_air_tt
+		custom_cost_trigger = {
+			has_air_experience > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -25
+				add_political_power = -50
+			}
+			add_to_variable = {
+			    var = ITA_quaternion_chance
+			    value = 0.1
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_mission_italian_british_war = {
+		allowed = { tag = ITA }
+		icon = generic_ignite_civil_war
+		visible = {
+			has_country_flag = ITA_quaternion_over_war
+		}
+		activation = {
+			has_country_flag = ITA_quaternion_over_war
+		}
+		available = {
+			has_country_flag = quaternion_flag
+		}
+		fire_only_once = yes
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 60
+		complete_effect = {
+		}
+		timeout_effect = {
+			ITA = {
+				country_event = {
+					id = italy.49
+				}
+			}
+		}
+	}
+}
+ITA_balbos_war = {
+	balbo_delay = {
+		allowed = { tag = ITA }
+		icon = hol_war_on_pacifism
+		available = { 
+			ITA = {
+				has_war = yes
+			} 
+		}
+		activation = {
+			ITA = {
+				has_war = no
+			}
+			has_completed_focus = ITA_seize_day
+		}
+		is_good = no
+		days_mission_timeout = 40
+		timeout_effect = {
+			add_war_support = -0.30
+			add_stability = -0.3
+		}
+		complete_effect = {
+		}
+	}
+	balbo_montenegro = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=MNT}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_yugoslavia = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=YUG}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_bulgaria = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=BUL}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_straits = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=MAR}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_romania = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=ROM}
+			create_wargoal = {type=annex_everything target=TRS}
+			create_wargoal = {type=annex_everything target=MOL}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_france = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=FRA}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_germany = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=GER}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_hungary = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=HUN}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_britain = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=ENG}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_iberia = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=SPA}
+			create_wargoal = {type=annex_everything target=SPR}
+			create_wargoal = {type=annex_everything target=CNT}
+			create_wargoal = {type=annex_everything target=FAL}
+			create_wargoal = {type=annex_everything target=POR}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_benelux = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=HOL}
+			create_wargoal = {type=annex_everything target=WLL}
+			create_wargoal = {type=annex_everything target=LUX}
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_scandinavia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=SWE}
+			create_wargoal = {type=annex_everything target=DEN}
+			create_wargoal = {type=annex_everything target=NOR}
+			create_wargoal = {type=annex_everything target=NRO}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_intermarium = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		available = {
+			has_completed_focus = ITA_seize_day
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=LIT}
+			create_wargoal = {type=annex_everything target=UKR}
+			create_wargoal = {type=annex_everything target=BLR}
+			create_wargoal = {type=annex_everything target=POL}
+			create_wargoal = {type=annex_everything target=PRS}
+			add_stability = -0.1
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+	balbo_russia = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		available = {
+			has_completed_focus = ITA_seize_day
+			OR = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = RUS
+					}
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = SRU
+					}
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = DKB
+					}
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = WRU
+					}
+				}
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = FIN
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = ITA_seize_day
+		}
+		complete_effect  = {
+			create_wargoal = {type=annex_everything target=RUS}
+			create_wargoal = {type=annex_everything target=DKB}
+			create_wargoal = {type=annex_everything target=SRU}
+			create_wargoal = {type=annex_everything target=WRU}
+			create_wargoal = {type=annex_everything target=FIN}
+			create_wargoal = {type=annex_everything target=FIR}
+			add_stability = -0.15
+		}
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+}
+
+ITA_decisions_rbfpw = {
+	ITA_decision_build_roads_1 = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_construction
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			158 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			161 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_roads_2 = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_construction
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			160 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			39 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_roads_3 = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_construction
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			157 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			117 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_roads_4 = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_construction
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			156 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_civ_factories_bologna = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			161 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_civ_factories_tuscany = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			162 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_civ_factories_abruzzo = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			157 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_civ_factories_rome = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			2 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+}
+ITA_decisions_rbfmaa = {
+	ITA_decision_build_mil_factories_1 = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			39 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_mil_factories_2 = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			161 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_mil_factories_3 = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			157 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_build_mil_factories_4 = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = generic_industry
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			162 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_resources_oil = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = oil
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			add_resource = {
+    			type = oil
+    			amount = 2
+    			state = 448
+			}
+			add_resource = {
+    			type = oil
+    			amount = 2
+    			state = 449
+			}
+			add_resource = {
+    			type = oil
+    			amount = 2
+    			state = 663
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_resources_steel = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = steel
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			add_resource = {
+    			type = steel
+    			amount = 2
+    			state = 39
+			}
+			add_resource = {
+    			type = steel
+    			amount = 1
+    			state = 161
+			}
+			add_resource = {
+    			type = steel
+    			amount = 1
+    			state = 159
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_resources_aluminium = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = aluminium
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			add_resource = {
+    			type = aluminium
+    			amount = 2
+    			state = 159
+			}
+			add_resource = {
+    			type = aluminium
+    			amount = 1
+    			state = 162
+			}
+			add_resource = {
+    			type = aluminium
+    			amount = 1
+    			state = 157
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_resources_tungsten = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = tungsten
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			add_resource = {
+    			type = tungsten
+    			amount = 2
+    			state = 158
+			}
+			add_resource = {
+    			type = tungsten
+    			amount = 1
+    			state = 161
+			}
+			add_resource = {
+    			type = tungsten
+    			amount = 1
+    			state = 157
+			}
+		}
+		complete_effect = {
+		}
+	}
+}
+ITA_decisions_armed_services_reform = {
+	ITA_decision_submarine_research = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_1
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_submarine_research_tt
+		custom_cost_trigger = {
+			has_navy_experience > 4
+			command_power > 29
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -5
+				add_command_power = -30
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+	ITA_decision_destroyer_research = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_1
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_submarine_research_tt
+		custom_cost_trigger = {
+			has_navy_experience > 4
+			command_power > 29
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -5
+				add_command_power = -30
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+	}
+	ITA_decision_battleship_research = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_2
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_battleship_research_tt
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			command_power > 44
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -10
+				add_command_power = -45
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.7
+				uses = 2
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+	ITA_decision_carrier_research = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_2
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_battleship_research_tt
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			command_power > 44
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -10
+				add_command_power = -45
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cv_tech
+			}
+		}
+	}
+	ITA_decision_invasion_research = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_3
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_invasion_research_tt
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			command_power > 49
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -10
+				add_command_power = -50
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				category = tp_tech
+			}
+		}
+	}
+
+	ITA_decision_weapons_research = {
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_4
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_weapons_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 39
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -40
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+	ITA_decision_support_research = {
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_4
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_weapons_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 39
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -40
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	ITA_decision_artillery_research = {
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_5
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_artillery_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 44
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -45
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+	ITA_decision_tank_research = {
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_6
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_tank_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 49
+			has_political_power > 39
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -50
+				add_political_power = -40
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	ITA_decision_motorized_research = {
+		allowed = { tag = ITA }
+		icon = generic_prepare_civil_war
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_6
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_weapons_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 39
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -40
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	ITA_decision_fighter_research = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_7
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_fighter_research_tt
+		custom_cost_trigger = {
+			has_air_experience > 4
+			command_power > 34
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -5
+				add_command_power = -35
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+	ITA_decision_cas_research = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_7
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_fighter_research_tt
+		custom_cost_trigger = {
+			has_air_experience > 4
+			command_power > 34
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -5
+				add_command_power = -35
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+			}
+		}
+	}
+	ITA_decision_navbomber_research = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_8
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_navbomber_research_tt
+		custom_cost_trigger = {
+			has_air_experience > 9
+			command_power > 39
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -10
+				add_command_power = -40
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+	ITA_decision_tacbomber_research = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_9
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_navbomber_research_tt
+		custom_cost_trigger = {
+			has_air_experience > 9
+			command_power > 39
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -10
+				add_command_power = -40
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	ITA_decision_bomber_research = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_9
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_bomber_research_tt
+		custom_cost_trigger = {
+			has_air_experience > 9
+			command_power > 44
+			has_political_power > 29
+		}
+		fire_only_once = yes
+		days_remove = 20
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -10
+				add_command_power = -45
+				add_political_power = -30
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+	}
+	
+	ITA_decision_combined_total_excercises = {
+		allowed = { tag = ITA }
+		icon = generic_intelligence_operation
+		visible = {
+			has_country_flag = ITA_decisions_armed_services_reform_unlock_10
+		}
+		cost = 0
+		custom_cost_text = ITA_decision_combined_total_excercises_tt
+		custom_cost_trigger = {
+			has_navy_experience > 4
+			has_army_experience > 4
+			has_air_experience > 4
+			command_power > 99
+		}
+		fire_only_once = yes
+		days_remove = 60
+		remove_effect = {
+			hidden_effect = {
+				army_experience = -5
+				air_experience = -5
+				navy_experience = -5
+				add_command_power = -100
+			}
+			remove_ideas = ITA_ineffective_military_n1
+			add_war_support = 0.1
+		}
+	}
+}
+ITA_decisions_regiment_the_complex = {
+	ITA_decision_build_forts = {
+		allowed = { tag = ITA }
+		icon = generic_scorched_earth
+		cost = 0
+		custom_cost_text = ITA_decision_build_forts_tt
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 79
+		}
+		fire_only_once = no
+		days_remove = 210
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -80
+			}
+			add_timed_idea = {
+				idea = ITA_idea_fort_expansion_works
+				days = 90
+			}
+		}
+	}
+	ITA_decision_build_railways = {
+		cost = 80
+		allowed = { tag = ITA }
+		icon = hol_draw_up_staff_plans
+		fire_only_once = no
+		days_remove = 210
+		complete_effect = {
+			add_timed_idea = {
+				idea = ITA_idea_railway_expansion_works
+				days = 90
+			}
+		}
+	}
+	ITA_decision_moar_factories = {
+		cost = 80
+		allowed = { tag = ITA }
+		icon = generic_industry
+		visible = {
+			has_country_flag = ITA_decisions_regiment_the_complex_unlock
+			NOT = {
+				check_variable = {
+				    var = ITA_decision_limit_4
+				    value = 3
+				    compare = greater_than_or_equals
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 60
+		remove_effect = {
+			add_to_variable = {
+       			var = ITA_decision_limit_4
+        		value = 1
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		complete_effect = {
+		}
+	}
+	ITA_decision_airports = {
+		allowed = { tag = ITA }
+		icon = generic_air
+		cost = 0
+		custom_cost_text = ITA_decision_build_forts_tt
+		custom_cost_trigger = {
+			command_power > 19
+			has_political_power > 79
+		}
+		fire_only_once = yes
+		days_remove = 120
+		remove_effect = {
+			158 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			115 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			2 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -20
+				add_political_power = -80
+			}
+		}
+	}
+	ITA_decision_give_them_a_raise = {
+		cost = 100
+		allowed = { tag = ITA }
+		icon = generic_political_discourse
+		fire_only_once = no
+		days_remove = 210
+		complete_effect = {
+			add_timed_idea = {
+				idea = ITA_idea_industry_worker_incentives
+				days = 90
+			}
+		}
+	}
+}
+ITA_decisions_mediterranean_sec = {
+	ITA_decision_build_docks_1 = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_sardinia_tt
+		custom_cost_trigger = {
+			command_power > 44
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -45
+				add_political_power = -75	
+			}
+		}
+		days_remove = 70
+		remove_effect = {
+			114 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 11773
+				}
+			}
+		}
+	}
+	ITA_decision_build_docks_2 = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_sardinia_tt
+		custom_cost_trigger = {
+			command_power > 44
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -45
+				add_political_power = -75	
+			}
+		}
+		days_remove = 70
+		remove_effect = {
+			448 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 1149
+				}
+			}
+		}
+	}
+	ITA_decision_build_docks_3 = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_sardinia_tt
+		custom_cost_trigger = {
+			command_power > 44
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -45
+				add_political_power = -75	
+			}
+		}
+		days_remove = 70
+		remove_effect = {
+			451 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 1130
+				}
+			}
+		}
+	}
+	ITA_decision_build_docks_4 = {
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		cost = 0
+		custom_cost_text = ITA_decision_port_sardinia_tt
+		custom_cost_trigger = {
+			command_power > 44
+			has_political_power > 74
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -45
+				add_political_power = -75	
+			}
+		}
+		days_remove = 70
+		remove_effect = {
+			164 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 10007
+				}
+			}
+		}
+	}
+}
+ITA_decisions_toes = {
+	ITA_pact_with_germany = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			OR = {
+				GER = {
+					exists = yes
+					has_government = social_democratism
+					is_puppet = no
+				}
+			}
+		}
+		complete_effect  = {
+			GER = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_spain = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			SPR = {
+				exists = yes
+				has_government = social_democratism
+				is_puppet = no
+			}
+			NOT = { SPR = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			SPR = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_austria = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			AUS = {
+				exists = yes
+				OR = {
+					has_government = liberalism
+					has_government = social_democratism
+				}
+				is_puppet = no
+			}
+			NOT = { AUS = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			AUS = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_switzerland = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			SWI = {
+				exists = yes
+				has_government = liberalism
+				is_puppet = no
+			}
+			NOT = { SWI = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			SWI = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_portugal = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			POR = {
+				exists = yes
+				OR = {
+					has_government = liberalism
+					has_government = social_democratism
+				}
+				is_puppet = no
+			}
+			NOT = { POR = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			POR = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_invite_netherlands = {
+		visible = {
+			always = no
+		}
+	}
+	ITA_toes_bring_poland_round = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			POL = {
+				exists = yes
+				has_government = social_democratism
+				is_puppet = no
+			}
+			NOT = { POL = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			POL = {
+				country_event = {
+					id = italy.65
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_talks_with_ukraine = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			UKR = {
+				exists = yes
+				has_completed_focus = ukraine_information_fake
+				is_puppet = no
+			}
+			NOT = { UKR = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			UKR = {
+				country_event = {
+					id = italy.66
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_speak_with_belarus = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			BLR = {
+				exists = yes
+				has_completed_focus = BLR_belarussian_democracy
+				is_puppet = no
+			}
+			NOT = { BLR = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			BLR = {
+				country_event = {
+					id = italy.67
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_convince_lithuania = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			LIT = {
+				exists = yes
+				OR = {
+					has_government = conservatism
+					has_government = liberalism
+					has_government = social_democratism
+				}
+				is_puppet = no
+			}
+			NOT = { LIT = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			LIT = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_convince_finland = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			FIN = {
+				exists = yes
+				has_completed_focus = FIN_democratic_coup
+			}
+			NOT = { FIN = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			FIN = {
+				country_event = {
+					id = italy.69
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_latvia = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			LAT = {
+				exists = yes
+				has_government = social_democratism
+			}
+			NOT = { FIN = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			LAT = {
+				country_event = {
+					id = italy.69
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_toes_invite_estonia = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_paneuropean_alliance
+			EST = {
+				exists = yes
+				has_government = social_democratism
+			}
+			NOT = { FIN = { is_in_faction_with = ITA } }
+		}
+		complete_effect  = {
+			EST = {
+				country_event = {
+					id = italy.69
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+}
+ITA_decisions_soclib_wargoals = {
+	ITA_nitti_austria = {
+		icon = generic_prepare_civil_war
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					AUS = {
+						exists = yes
+						OR = {
+							has_government = despotism
+							has_government = reactionism
+							has_government = conservatism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					AUS = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+			}
+		}
+		cost = 0
+		custom_cost_text = ITA_nitti_austria_tt
+		custom_cost_trigger = {
+			command_power > 49
+			has_political_power > 99
+		}
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -50
+				add_political_power = -100
+			}
+			AUS = {
+				country_event = {
+					id = italy.70
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_france = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_crush_accelerationists
+			FRA = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FRA
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_germany = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			GER = {
+				exists = yes
+				NOT = {
+					has_government = social_democratism
+					is_in_faction_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GER
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_yugoslavia = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					YUG = {
+						exists = yes
+						has_government = reactionism
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					YUG = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = YUG
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_spain = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_take_down_vanguardists
+					OR = {
+						CNT = {
+							exists = yes
+						}
+						SPR = {
+							has_government = vanguard_socialism
+						}
+						FAL = {
+							has_government = vanguard_socialism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					SPA = {
+						exists = yes
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					FAL = {
+						exists = yes
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					SPA = {	exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SPA
+				}
+			}
+			if = {
+				limit = {
+					SPR = { has_government = vanguard_socialism }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SPR
+				}
+			}
+			if = {
+				limit = {
+					CNT = {	exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = CNT
+				}
+			}
+			if = {
+				limit = {
+					FAL = {	exists = yes }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FAL
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_greece = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_annihilate_reactionaries
+			GRE = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRE
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_albania = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			has_completed_focus = ITA_crush_accelerationists
+			has_completed_focus = ITA_annihilate_reactionaries
+			ALB = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_montenegro = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_crush_accelerationists
+			MNT = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = MNT
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_bulgaria = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			BUL = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = BUL
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_turkey = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_annihilate_reactionaries
+			TUR = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_armenia = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_annihilate_reactionaries
+			ARM = {
+				exists = yes
+				has_government = reactionism
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARM
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_romania = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_annihilate_reactionaries
+			OR = {
+				ROM = {
+					exists = yes
+				}
+				TRS = {
+					exists = yes
+				}
+				MOL = {
+					exists = yes
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MOL
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TRS
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_scandinavia = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			has_completed_focus = ITA_annihilate_reactionaries
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = NOR
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SWE
+			}
+			if = {
+				limit = {
+					FIN = {
+						NOT = {
+							has_completed_focus = FIN_democratic_coup
+						}
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FIN
+				}
+			}
+			if = {
+				limit = {
+					FIR = {
+						exists = yes
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FIR
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_netherlands = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					HOL = {
+						exists = yes
+						NOT = {
+							has_government = accelerationism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					HOL = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_prussia = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					PRS = {
+						exists = yes
+						NOT = {
+							has_government = accelerationism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					PRS = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					WRR = { exists = yes }
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRS
+			}
+			if = {
+				limit = { WRR = { exists = yes } }
+				create_wargoal = {
+					type = annex_everything
+					target = WRR
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_czechia = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_annihilate_reactionaries
+			CZE = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CZE
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_hungary = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			HUN = {
+				exists = yes
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HUN
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_poland = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					POL = {
+						exists = yes
+						OR = {
+							has_government = despotism
+							has_government = right_authoritarianism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					POL = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = POL
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_ukraine = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					UKR = {
+						exists = yes
+						has_completed_focus = ukraine_information_saves
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					UKR = {
+						exists = yes
+						has_completed_focus = ukraine_information_accelerationists
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = UKR
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_belarus = {
+		icon = generic_prepare_civil_war
+		cost = 45
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					BLR = {
+						exists = yes
+						OR = {
+							has_government = despotism
+							has_government = reactionism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					BLR = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_take_down_vanguardists
+					BLR = {
+						exists = yes
+						has_government = revisionist_socialism
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BLR
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_lithuania = {
+		icon = generic_prepare_civil_war
+		cost = 25
+		visible = {
+			OR = {
+				AND = {
+					has_completed_focus = ITA_annihilate_reactionaries
+					LIT = {
+						exists = yes
+						OR = {
+							has_government = despotism
+							has_government = right_authoritarianism
+							has_government = reactionism
+						}
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_crush_accelerationists
+					LIT = {
+						exists = yes
+						has_government = accelerationism
+					}
+				}
+				AND = {
+					has_completed_focus = ITA_take_down_vanguardists
+					LIT = {
+						exists = yes
+						has_government = libertarian_marxism
+					}
+				}
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_straits = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_completed_focus = ITA_take_down_vanguardists
+			has_completed_focus = ITA_crush_accelerationists
+			has_completed_focus = ITA_annihilate_reactionaries
+			MAR = {	exists = yes }
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAR
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_nitti_russia = {
+		icon = generic_prepare_civil_war
+		cost = 75
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+		}
+		complete_effect  = {
+			if = {
+				limit = {
+					RUS = { exists = yes }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = RUS
+				}
+			}
+			if = {
+				limit = {
+					SRU = { exists = yes }
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SRU
+				}
+			}
+			if = {
+				limit = {
+					ZHR = {
+						exists = yes
+						owns_state = 219
+						NOT = {
+							OR = {
+								has_completed_focus = ZHR_dawn_of_peoples_freedom
+							}
+						}
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ZHR
+				}
+			}
+			if = {
+				limit = {
+					SIB = {
+						exists = yes
+						owns_state = 219
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SIB
+				}
+			}
+			if = {
+				limit = {
+					ORE = {
+						exists = yes
+						owns_state = 219
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ORE
+				}
+			}
+			if = {
+				limit = {
+					STE = {
+						exists = yes
+						owns_state = 219
+					}
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = STE
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_baltic = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			OR = {
+				WRU = { exists = yes }
+				WRT = { exists = yes }
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = WRU
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WRT
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_latvia = {
+		icon = generic_prepare_civil_war
+		cost = 20
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			LAT = { exists = yes }
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = LAT
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_estonia = {
+		icon = generic_prepare_civil_war
+		cost = 20
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			EST = {
+				exists = yes
+				NOT = { has_government = social_democratism }
+			}
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = EST
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_donkuban = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			DKB = { exists = yes }
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = DKB
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_nitti_zhelto_befriend = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			ZHR = {
+				exists = yes
+				OR = {
+					has_completed_focus = ZHR_dawn_of_peoples_freedom
+				}
+				has_completed_focus = ZHR_youngrussiahailvictorious
+				NOT = { is_in_faction_with = ITA }
+			}
+			RUS = { exists = no }
+			SRU = { exists = no }
+		}
+		complete_effect  = {
+			ZHR = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_steppe_befriend = {
+		icon = hol_exchange_intelligence_data
+		cost = 30
+		visible = {
+			has_completed_focus = ITA_great_eurasian_war
+			STE = {
+				exists = yes
+				has_completed_focus = STE_governor_rules_forever
+				has_government = right_authoritarianism
+				has_country_leader = {
+				    name = "Lavr Kornilov"
+				    ruling_only = yes
+				}
+				owns_state = 219
+				NOT = { is_in_faction_with = ITA }
+			}
+			RUS = { exists = no }
+			SRU = { exists = no }
+		}
+		complete_effect  = {
+			STE = {
+				country_event = {
+					id = italy.64
+					days = 1
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_nitti_ethiopia = {
+		icon = generic_prepare_civil_war
+		cost = 60
+		visible = {
+			has_completed_focus = ITA_heart_of_darkness
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = ETH
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ET1
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ET2
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BET
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SML
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_nitti_congo = {
+		icon = generic_prepare_civil_war
+		cost = 60
+		visible = {
+			has_completed_focus = ITA_heart_of_darkness
+		}
+		complete_effect  = {
+			create_wargoal = {
+				type = annex_everything
+				target = NBE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KIV
+			}
+			if = {
+				limit = {
+					PCN = { has_government = reactionism }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = PCN
+				}
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_nitti_british_italian_war = {
+		visible = {
+			always = no
+		}
+	}
+}
+ITA_decisions_soclib_integration = {
+	ITA_recognise_languages = {
+		cost = 50
+		allowed = { tag = ITA }
+		icon = generic_political_discourse
+		fire_only_once = yes
+		available = {
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = not_equals
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_manpower
+				value = 0.1
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_stability
+				value = 0.01
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_attrition
+				value = -0.03
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_partisants
+				value = -0.05
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT"
+		}
+	}
+	ITA_crush_extremist_separatists = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = oppression
+		fire_only_once = yes
+		custom_cost_text = ITA_crush_extremist_separatists_tt
+		custom_cost_trigger = {
+			command_power > 39
+			has_army_experience > 14
+		}
+		available = {
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = not_equals
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -40
+				army_experience = -15
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_manpower
+				value = 0.1
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_stability
+				value = 0.01
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_attrition
+				value = -0.03
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_partisants
+				value = -0.05
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT"
+		}
+	}
+	ITA_cautious_autonomy = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_nationalism
+		fire_only_once = yes
+		custom_cost_text = ITA_cautious_autonomy_tt
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 79
+		}
+		available = {
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = not_equals
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_political_power = -80
+				add_command_power = -30
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_manpower
+				value = 0.1
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_stability
+				value = 0.01
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_attrition
+				value = -0.03
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_partisants
+				value = -0.05
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT"
+		}
+	}
+	ITA_propaganda_campaigns = {
+		cost = 70
+		allowed = { tag = ITA }
+		icon = eng_propaganda_campaigns
+		fire_only_once = yes
+		available = {
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = not_equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = not_equals
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_manpower
+				value = 0.1
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_stability
+				value = 0.01
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_attrition
+				value = -0.03
+			}
+			add_to_variable = {
+				var = ITA_occupation_resistance_idea_partisants
+				value = -0.05
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT"
+		}
+	}
+	ITA_albanian_integration = {
+		cost = 100
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 120
+		available = {
+			ITA = {
+				owns_state = 941
+				owns_state = 44
+				owns_state = 811
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 941
+				add_state_core = 44
+				add_state_core = 811
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_slovenia = {
+		cost = 100
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 120
+		available = {
+			ITA = {
+				owns_state = 102
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 102
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_croatia = {
+		cost = 120
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 150
+		available = {
+			ITA = {
+				owns_state = 109
+				owns_state = 103
+				owns_state = 899
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 109
+				add_state_core = 103
+				add_state_core = 899
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_bosnia = {
+		cost = 120
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 150
+		available = {
+			ITA = {
+				owns_state = 104
+				owns_state = 921
+				owns_state = 922
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 104
+				add_state_core = 921
+				add_state_core = 922
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_serbia = {
+		cost = 140
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 150
+		available = {
+			ITA = {
+				owns_state = 107
+				owns_state = 764
+				owns_state = 108
+				owns_state = 900
+				owns_state = 105
+				owns_state = 106
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 107
+				add_state_core = 764
+				add_state_core = 108
+				add_state_core = 900
+				add_state_core = 105
+				add_state_core = 106
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_greece = {
+		cost = 200
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 210
+		available = {
+			ITA = {
+				owns_state = 184
+				owns_state = 731
+				owns_state = 185
+				owns_state = 47
+				owns_state = 186
+				owns_state = 187
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 184
+				add_state_core = 731
+				add_state_core = 185
+				add_state_core = 47
+				add_state_core = 186
+				add_state_core = 187
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_bulgaria = {
+		cost = 200
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 210
+		available = {
+			ITA = {
+				owns_state = 812
+				owns_state = 48
+				owns_state = 212
+				owns_state = 341
+				owns_state = 211
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 812
+				add_state_core = 48
+				add_state_core = 212
+				add_state_core = 341
+				add_state_core = 211
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_republic_of_turkey = {
+		cost = 250
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_support
+		fire_only_once = yes
+		days_remove = 240
+		available = {
+			ITA = {
+				owns_state = 339
+				owns_state = 342
+				owns_state = 343
+				owns_state = 347
+				owns_state = 49
+				owns_state = 346
+				owns_state = 345
+				owns_state = 344
+				owns_state = 348
+				owns_state = 356
+				owns_state = 355
+				owns_state = 349
+				owns_state = 350
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_manpower
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+				var = ITA_occupation_resistance_idea_stability
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_attrition
+			    value = 0.00
+			    compare = equals
+			}
+			check_variable = {
+			    var = ITA_occupation_resistance_idea_partisants
+			    value = 0.00
+			    compare = equals
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 339
+				add_state_core = 342
+				add_state_core = 343
+				add_state_core = 347
+				add_state_core = 49
+				add_state_core = 346
+				add_state_core = 345
+				add_state_core = 344
+				add_state_core = 348
+				add_state_core = 356
+				add_state_core = 355
+				add_state_core = 349
+				add_state_core = 350
+			}
+			custom_effect_tooltip = "ITA_INTEGRATION_DECISION_EFFECT_TT_1"
+		}
+	}
+	ITA_solve_straits_problem = {
+		cost = 100
+		allowed = { tag = ITA }
+		icon = eng_trade_unions_demand
+		fire_only_once = yes
+		days_remove = 70
+		available = {
+			ITA = {
+				owns_state = 976
+				owns_state = 340
+			}
+		}
+		remove_effect = {
+			ITA = {
+				add_state_core = 986
+				add_state_core = 340
+			}
+			RUS = {	add_opinion_modifier = { target = ITA modifier = large_decrease }	}
+			SRU = {	add_opinion_modifier = { target = ITA modifier = large_decrease }	}
+		}
+	}
+}
+ITA_decisions_help_china = {
+	ITA_help_beiyang = {
+		cost = 20
+		allowed = { tag = ITA }
+		icon = generic_nationalism
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				has_country_flag = ITA_help_hunan
+				has_country_flag = ITA_help_taiwan
+			}
+		}
+		available = {
+			BYJ = {
+				exists = yes
+				is_puppet = no
+				OR = {
+					has_government = right_authoritarianism
+					has_government = liberalism
+					has_government = conservatism
+				}
+			}
+		}
+		complete_effect = {
+			ITA = {
+				set_country_flag = ITA_help_byj
+			}
+			custom_effect_tooltip = "ITA_decision_byj_tt"
+		}
+	}
+	ITA_help_hunan = {
+		cost = 20
+		allowed = { tag = ITA }
+		icon = generic_nationalism
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				has_country_flag = ITA_help_byj
+				has_country_flag = ITA_help_taiwan
+			}
+		}
+		available = {
+			XIA = {
+				exists = yes
+				is_puppet = no
+				OR = {
+					has_government = social_democratism
+				}
+			}
+		}
+		complete_effect = {
+			ITA = {
+				set_country_flag = ITA_help_hunan
+			}
+			custom_effect_tooltip = "ITA_decision_xia_tt"
+		}
+	}
+	ITA_help_taiwan = {
+		cost = 20
+		allowed = { tag = ITA }
+		icon = generic_nationalism
+		fire_only_once = yes
+		visible = {
+			NOT = {
+				has_country_flag = ITA_help_byj
+				has_country_flag = ITA_help_hunan
+			}
+		}
+		available = {
+			TAI = {
+				exists = yes
+				is_puppet = no
+				OR = {
+					has_government = social_democratism
+				}
+			}
+		}
+		complete_effect = {
+			ITA = {
+				set_country_flag = ITA_help_taiwan
+			}
+			custom_effect_tooltip = "ITA_decision_tai_tt"
+		}
+	}
+
+	ITA_supply_beiyang = {
+		cost = 30
+		icon = ger_military_buildup
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_byj
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+			has_equipment = {
+				support_equipment > 199
+			}
+			BYJ = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+				producer = ITA
+			}
+			BYJ = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ITA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	ITA_military_aid_to_beyiang = {
+		cost = 0
+		icon = generic_army_support
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_byj
+			}
+		}
+		available = {
+			BYJ = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		custom_cost_text = ITA_military_aid_to_beyiang_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			BYJ = {
+				add_timed_idea = {
+					idea = ITA_military_help_to_china
+					days = 250
+				}
+			}
+			hidden_effect = {
+				add_political_power = -30
+				add_command_power = -25
+				add_manpower = -2000
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_supply_hunan = {
+		cost = 30
+		icon = ger_military_buildup
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_hunan
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+			has_equipment = {
+				support_equipment > 199
+			}
+			XIA = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+				producer = ITA
+			}
+			XIA = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ITA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	ITA_military_aid_to_hunan = {
+		cost = 0
+		icon = generic_army_support
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_hunan
+			}
+		}
+		available = {
+			XIA = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		custom_cost_text = ITA_military_aid_to_beyiang_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			XIA = {
+				add_timed_idea = {
+					idea = ITA_military_help_to_china
+					days = 250
+				}
+			}
+			hidden_effect = {
+				add_political_power = -30
+				add_command_power = -25
+				add_manpower = -2000
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_supply_taiwan = {
+		cost = 30
+		icon = ger_military_buildup
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_taiwan
+			}
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+			has_equipment = {
+				support_equipment > 199
+			}
+			TAI = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+				producer = ITA
+			}
+			TAI = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ITA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	ITA_military_aid_to_taiwan = {
+		cost = 0
+		icon = generic_army_support
+		visible = {
+			ITA = {
+				has_country_flag = ITA_help_taiwan
+			}
+		}
+		available = {
+			TAI = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		custom_cost_text = ITA_military_aid_to_beyiang_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			TAI = {
+				add_timed_idea = {
+					idea = ITA_military_help_to_china
+					days = 250
+				}
+			}
+			hidden_effect = {
+				add_political_power = -30
+				add_command_power = -25
+				add_manpower = -2000
+			}
+		}
+		fire_only_once = yes
+	}
+}
+ITA_decisions_help_india = {
+	ITA_supply_bihar = {
+		cost = 30
+		icon = ger_military_buildup
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+			has_equipment = {
+				support_equipment > 199
+			}
+			BIH = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+				producer = ITA
+			}
+			BIH = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ITA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	ITA_military_aid_to_bihar = {
+		cost = 0
+		icon = generic_army_support
+		available = {
+			BIH = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		custom_cost_text = ITA_military_aid_to_beyiang_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			BIH = {
+				add_timed_idea = {
+					idea = ITA_military_help_to_china
+					days = 250
+				}
+			}
+			hidden_effect = {
+				add_political_power = -30
+				add_command_power = -25
+				add_manpower = -2000
+			}
+		}
+		fire_only_once = yes
+	}
+
+	ITA_supply_dinia = {
+		cost = 30
+		icon = ger_military_buildup
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				artillery_equipment > 199
+			}
+			has_equipment = {
+				support_equipment > 199
+			}
+			DIN = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = -200
+				producer = ITA
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -200
+				producer = ITA
+			}
+			DIN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1000
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = 200
+					producer = ITA
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 200
+					producer = ITA
+				}
+			}
+		}
+		days_re_enable = 30
+	}
+	ITA_military_aid_to_dinia = {
+		cost = 0
+		icon = generic_army_support
+		available = {
+			DIN = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		custom_cost_text = ITA_military_aid_to_beyiang_tt
+		custom_cost_trigger = {
+			has_manpower > 1999
+			has_political_power > 29
+			command_power > 24
+		}
+		complete_effect  = {
+			DIN = {
+				add_timed_idea = {
+					idea = ITA_military_help_to_china
+					days = 250
+				}
+			}
+			hidden_effect = {
+				add_political_power = -30
+				add_command_power = -25
+				add_manpower = -2000
+			}
+		}
+		fire_only_once = yes
+	}
+	ITA_unification_efforts_dinia = {
+		cost = 40
+		icon = jap_conquer_china
+		available = {
+			DIN = {
+				exists = yes
+				NOT = {
+					has_war_with = ITA
+				}
+			}
+		}
+		complete_effect  = {
+			DIN = {
+				create_wargoal = { type = annex_everything target = PNJ }
+			}
+		}
+		fire_only_once = yes
+	}
+}
+
+ITA_decisions_struzo_military_buildup = {
+	ITA_improve_the_royal_italian_army = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_army_support
+		fire_only_once = yes
+		days_remove = 90
+		custom_cost_text = ITA_decision_improve_regio_esercito_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 49
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -50
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			set_country_flag = ITA_army_improve_2_unlock
+			swap_ideas = {
+				remove_idea = ITA_ineffective_military
+				add_idea = ITA_ineffective_military_s1
+			}
+		}
+	}
+	ITA_improve_the_royal_italian_army_1 = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_army_support
+		visible = {
+			has_country_flag = ITA_army_improve_2_unlock
+		}
+		fire_only_once = yes
+		days_remove = 90
+		custom_cost_text = ITA_decision_improve_regio_esercito_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 49
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -50
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			set_country_flag = ITA_army_improve_3_unlock
+			swap_ideas = {
+				remove_idea = ITA_ineffective_military_s1
+				add_idea = ITA_ineffective_military_s2
+			}
+		}
+	}
+	ITA_improve_the_royal_italian_army_2 = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_army_support
+		visible = {
+			has_country_flag = ITA_army_improve_3_unlock
+		}
+		fire_only_once = yes
+		days_remove = 90
+		custom_cost_text = ITA_decision_improve_regio_esercito_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 49
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -50
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			remove_ideas = ITA_ineffective_military_s2
+		}
+	}
+	ITA_expand_research_on_firearms = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = ger_military_buildup
+		fire_only_once = yes
+		days_remove = 70
+		custom_cost_text = ITA_decision_struzo_firearm_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+	ITA_expand_research_on_vehicles = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_tank
+		fire_only_once = yes
+		days_remove = 70
+		custom_cost_text = ITA_decision_struzo_firearm_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 0.45
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	ITA_develop_army_doctrine = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = hol_draw_up_staff_plans
+		fire_only_once = yes
+		days_remove = 70
+		custom_cost_text = ITA_decision_struzo_firearm_research_tt
+		custom_cost_trigger = {
+			has_army_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	ITA_improve_regia_marina = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		days_remove = 70
+		custom_cost_text = ITA_decision_improve_regia_marina_tt
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			set_country_flag = ITA_ship_improve_unlock
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	ITA_ship_improvements = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		days_remove = 70
+		visible = {
+			has_country_flag = ITA_ship_improve_unlock
+		}
+		custom_cost_text = ITA_decision_improve_regia_marina_tt
+		custom_cost_trigger = {
+			has_navy_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				navy_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = ss_tech
+				category = dd_tech
+				category = cv_tech
+				category = cl_tech
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+	ITA_improve_regia_aeronautica = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_air
+		fire_only_once = yes
+		days_remove = 70
+		custom_cost_text = ITA_decision_improve_regia_aeronautica_tt
+		custom_cost_trigger = {
+			has_air_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			set_country_flag = ITA_plane_improve_unlock
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	ITA_air_improvements = {
+		cost = 0
+		allowed = { tag = ITA }
+		icon = generic_naval
+		fire_only_once = yes
+		days_remove = 70
+		visible = {
+			has_country_flag = ITA_plane_improve_unlock
+		}
+		custom_cost_text = ITA_decision_improve_regia_aeronautica_tt
+		custom_cost_trigger = {
+			has_air_experience > 9
+			command_power > 24
+			has_political_power > 49
+		}
+		complete_effect = {
+			hidden_effect = {
+				air_experience = -10
+				add_command_power = -25
+				add_political_power = -50	
+			}
+		}
+		remove_effect = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				category = light_fighter
+				category = tactical_bomber
+				category = cas_bomber
+				category = cat_strategic_bomber
+			}
+		}
+	}
+}

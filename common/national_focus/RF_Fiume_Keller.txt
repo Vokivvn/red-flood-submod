@@ -1,0 +1,12 @@
+focus_tree = {
+	id = FIU_keller
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3700 }
+	shared_focus = FIU_Poetry_In_Motion
+}

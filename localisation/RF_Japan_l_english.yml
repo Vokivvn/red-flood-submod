@@ -1,0 +1,1034 @@
+﻿#################################
+#	 IMP JAPANESE LOC - BABA	#
+#################################
+l_english:
+#COUNTRY NAME#
+
+#PARTIES#
+
+JAP_vanguard_socialism_party:0 "Nihon Rōdōtō(Kōa-ha)"
+JAP_libertarian_marxism_party:0 "Nihon Rōdōtō(Kakumaru-ha)"
+JAP_revolutionary_anarchism_party:0 "Rōdō Kumiai Sō Rengō"
+JAP_revisionist_socialism_party:0 "Rōdō Nōmintō"
+JAP_social_democratism_party:0 "Shakai Minshūtō"
+JAP_liberalism_party:0 "Rikken Minseitō"
+JAP_conservatism_party:0 "Rikken Seiyūkai"
+JAP_right_authoritarianism_party:0 "Chūō-ha"
+JAP_despotism_party:0 "Isshin-ha"
+JAP_reactionism_party:0 "Risshō Gokokukai"
+JAP_accelerationism_party:0 "Kakushin Kanryō"
+#JAP_accelerationism_party:0 "Kokumin Dōmei"
+JAP_vanguard_socialism_party_long:0 "Worker's Party of Japan(Pan-Asianists)"
+JAP_libertarian_marxism_party_long:0 "Worker's Party of Japan(Marxists)"
+JAP_revolutionary_anarchism_party_long:0 "All-Japan Confederation of Trade Unions"
+JAP_revisionist_socialism_party_long:0 "Labour Peasant Party"
+JAP_social_democratism_party_long:0 "Japanese Social People's Party"
+JAP_liberalism_party_long:0 "Constitutional Democratic Party"
+JAP_conservatism_party_long:0 "Constitutional Association of Political Friendship"
+JAP_right_authoritarianism_party_long:0 "Centralist Faction"
+JAP_despotism_party_long:0 "Restorationist Faction"
+JAP_reactionism_party_long:0 "Righteous National Defense Union"
+JAP_accelerationism_party_long:0 "Reformist Technocrats"
+#JAP_accelerationism_party_long:0 "National Alliance"
+
+#LEADER DESCRIPTIONS#
+POLITICS_YASUHITO_DESC:0 "Prince Chichibu was devastated at his brother's assassination. Ascending the throne in a time of turmoil as suspected terrorists were deported and the Army was reeling from its purge, he set about a ruthless campaign to bring Japan back from the brink of ruin through irridentist conquest of China. Will the young Eigen Emperor's ambitions to live up to his brother outstrip his Empire's limits?"
+POLITICS_KUMAZAWA_HIROMICHI:0 "The Pretender to the throne, a true student of the old-guard, Hiromichi has spent his life asserting his family's legitimacy to the Imperial throne. At last with the reactionary Military leaders having tired of Yasuhito's failures, he has been given the chance to become the Emperor of Japan."
+POLITICS_NOBUHITO_DESC:0 "The Emperor Yasuhito's younger brother, the more impressionable Prince Takamatsu. Nobuhito was always much more cool-headed than his brothers and more moderate too. Since the Empire has had its wings clipped, he has become the obvious choice to guide Japan to a more principled place in the Far-East co-operating with Commonwealth interests."
+#POLITICS_SEIGO_NAKANO_DESC:0 ""
+
+#IDEAS#
+
+#starting#
+JAP_yasuhito:0 "Yasuhito"
+JAP_yasuhito_desc:0 "Yasuhito"
+JAP_nobuhito:0 "Nobuhito"
+JAP_nobuhito_desc:0 "Nobuhito"
+JAP_hiromichi:0 "Hiromichi"
+JAP_hiromichi_desc:0 "Hiromichi"
+JAP_rural_backwater:0 "Rural Backwater"
+JAP_rural_backwater_desc:0 "Rural Backwater"
+JAP_zaib_dominion:0 "Zaibatsu Dominion"
+JAP_zaib_dominion_desc:0 "Zaibatsu Dominion"
+JAP_instability:0 "Political Instability"
+JAP_instability_desc:0 "Political Instability"
+JAP_inequality:0 "Severe Inequality"
+JAP_inequality_desc:0 "Severe Inequality"
+#divided_mil#
+JAP_divided_military_army:0 "Divided Military - Army Primacy"
+JAP_divided_military_army_desc:0 "Divided Military - Army Primacy"
+JAP_divided_military_navy:0 "Divided Military - Navy Primacy"
+JAP_divided_military_navy_desc:0 "Divided Military - Navy Primacy"
+#crash#
+JAP_sunset_crash:0 "Sunset Crash"
+JAP_sunset_crash_desc:0 "Sunset Crash"
+
+#miraculous#
+JAP_economic_miracle:0 "The Japanese Economic Miracle"
+JAP_economic_miracle_desc:0 "The Japanese Economic Miracle"
+#china#
+JAP_three_month_camp:0 "Three Month Campaign"
+JAP_three_month_camp_desc:0 "Three Month Campaign"
+JAP_tributary_act:0 "Tributary Act"
+JAP_tributary_act_desc:0 "Tributary Act"
+JAP_litigation_blockade:0 "Litigation Blockade"
+JAP_litigation_blockade_desc:0 "Litigation Blockade"
+
+#imperial economy#
+JAP_bail_out:0 "Zaibatsus Bailed Out"
+JAP_bail_out_desc:0 "Zaibatsus Bailed Out"
+JAP_no_bail_out:0 "Zaibatsus Fail"
+JAP_no_bail_out_desc:0 "Zaibatsus Fail"
+JAP_big_four:0 "New Tax Levy"
+JAP_big_four_desc:0 "New Tax Levy"
+JAP_small_four:0 "Tax Cuts"
+JAP_small_four_desc:0 "Tax Cuts"
+JAP_business_palace:0 "The Palace Reforms"
+JAP_business_palace_desc:0 "The Palace Reforms"
+JAP_zaibatsu_mic:0 "Reformed Economic Model"
+JAP_zaibatsu_mic_desc:0 "Reformed Economic Model"
+
+#Commies pt1#
+JAP_reform_economy:0 "Nationalisation Policy"
+JAP_reform_economy_desc:0 "Nationalisation Policy"
+JAP_worker_coop:0 "The New Worker"
+JAP_worker_coop_desc:0 "The New Worker"
+JAP_trial_zaib:0 "Collectivism Policy"
+JAP_trial_zaib_desc:0 "Collectivism Policy
+JAP_dismantled_zaib:0 "Agriculturalism Policy"
+JAP_dismantled_zaib_desc:0 "Agriculturalism Policy"
+JAP_wartime_prep:0 "Wartime Preparations"
+JAP_wartime_prep_desc:0 "Wartime Preparations"
+JPR_centralisation:0 "Centralised Commune System"
+JPR_centralisation_desc:0 "Centralised Commune System"
+JPR_NWB:0 "New Worker Bureau"
+JPR_NWB_desc:0 "New Worker Bureau"
+JPR_fujian:0 "Lessons From Fujian"
+JPR_fujian_desc:0 "Lessons From Fujian"
+JPR_egalitarianism:0 "Egalitarianism"
+JPR_egalitarianism_desc:0 "Egalitarianism"
+JPR_egalitarianism_plegal:0 "Egalitarianism - Prostituion Legal"
+JPR_egalitarianism_plegal_desc:0 ""
+JPR_egalitarianism_pillegal:0 "Egalitarianism - Prostituion Illegal"
+JPR_egalitarianism_pillegal_desc:0 ""
+JPR_general_strikes:0 "Youth Organisation"
+JPR_general_strikes_desc:0 "Organising the youth will cut into inductrial production but our priorities lie elsewhere"
+JPR_roads:0 "Improved Rail Connections"
+JPR_roads_desc:0 "The uniformity of gauges and build quality will ensure speedy connections across the Home Islands"
+JAP_colonial_management:0 "New Colonial Management Program"
+JAP_colonial_management_desc:0 "New Colonial Management Program"
+JAP_abolished_zaibs:0 "Monopolies Shattered"
+JAP_abolished_zaibs_desc:0 "Monopolies Shattered"
+JPR_abolished_zaibs:0 "Fixed Exchange Rates"
+JPR_abolished_zaibs_desc:0 "Fixed Exchange Rates"
+JAP_champions_day:0 "Champion's Day"
+JAP_champions_day_desc:0 "Champion's Day"
+JPR_sailors_union:0 "Sailor's Union"
+JPR_sailors_union_desc:0 ""
+JPR_officers:0 "Elected Officers"
+JPR_officers_desc:0 ""
+JPR_militias:0 "Organised Militias"
+JPR_militias_desc:0 ""
+JPR_formal_army:0 "Formal Army"
+JPR_formal_army_desc:0 ""
+JPR_red_flag:0 "The Red Flag"
+JPR_red_flag_desc:0 ""
+JPR_reduced_influence:0 "Controlled High Command"
+JPR_reduced_influence_desc:0 ""
+JPR_4revolution:0 "For The Revolution!"
+JPR_4revolution_desc:0 ""
+JPR_the_hero:0 "The Hero"
+JPR_the_hero_desc:0 ""
+JPR_raid_palaces:0 "Raids on the Palaces"
+JPR_raid_palaces_desc:0 ""
+JPR_hulls:0 "Hull Breaking"
+JPR_hulls_desc:0 ""
+JPR_conversion:0 "Converted Hulls"
+JPR_conversion_desc:0 ""
+JPR_screens:0 "Front-Line Screens"
+JPR_screens_desc:0 ""
+JPR_industrialisation:0 "Restarted Industrialisation"
+JPR_industrialisation_desc:0 ""
+JPR_wealth:0 "Wealth Redistributed"
+JPR_wealth_desc:0 ""
+JPR_reconstruction:0 "Reconstruction of the Countryside"
+JPR_reconstruction_desc:0 ""
+#industrial buff thing#
+JAP_war_machine:0 "Pacific War Machine"
+JAP_war_machine_desc:0 "Pacific War Machine"
+
+#manchuria#
+JPR_mantetsu:0 "Occupation of Mantetsu"
+JPR_mantetsu_desc:0 "Occupation of Mantetsu"
+
+#restoration#
+JAP_cabinet:0 "Emperor's Cabinet"
+JAP_cabinet_desc:0 "The Emperor's new cabinet is a close-nit and private collection of his most trusted ministers and advisors."
+JAP_cabinet2:0 "Puppet Ministers"
+JAP_cabinet2_desc:0 "Puppet Ministers are much easier to manipulate than men with ideas."
+JAP_closed_palace:0 "Closed Palace"
+JAP_closed_palace_desc:0 "The Imperial Palace is now closed to any and all outsiders. The guard has been escalated and only Royal Decrees are seen leaving in the hands of couriers."
+JAP_hegemony:0 "Pacific Hegemony"
+JAP_hegemony_desc:0 "Pacific Hegemony was, is and will continue to be the ultimate goal of the Empire."
+JAP_cut_red_tape:0 "Bureaucratic Streamlining"
+JAP_cut_red_tape_desc:0 "Bureaucratic Streamlining"
+JAP_lotus_act:0 "The Lotus Act"
+JAP_lotus_act_desc:0 "The Lotus Act"
+JAP_investigation:0 "Investigate the Zaibatsus"
+JAP_investigation_desc:0 "A thorough investigation into the Zaibatsus will help cleanse the chaff that contributed to our woes and the misgivings of the commoners."
+JAP_crackdown:0 "Crackdown on the Zaibatsus"
+JAP_crackdown_desc:0 "The only solution to the corporate mishandling of the economy is a crackdown."
+JAP_newhighcommand:0 "A New High Command"
+JAP_newhighcommand_desc:0 "A New High Command for a new military."
+JAP_pacify_military:0 "Pacified Military"
+JAP_pacify_military_desc:0 "With the Military pacified we are safe from further internal threats."
+
+#shogunate#
+JAP_bamboo:0 "Bamboo Circle"
+JAP_bamboo_desc:0 "The Bamboo Circle represents a clique of committed reactionary politicians, thinkers and military men. They desire above all, to reverse the supposed progress Japan has made and return the system to the old ways and revive the Shogunate."
+JAP_samurai_code:0 "Bushidō"
+JAP_samurai_code_desc:0 "Bushidō is the ancient way of the warrior, integral to Japanese society and its fighting spirit."
+JAP_army_loyalty:0 "Loyal Japanese Army"
+JAP_army_loyalty_desc:0 "The IJA's loyalty is now beyond question, the infighting and factionalism of the past is no more."
+JAP_army_loyalty_no_sadao:0 "Loyal Japanese Army"
+JAP_army_loyalty_no_sadao_desc:0 "The IJA's loyalty is now beyond question, the infighting and factionalism of the past is no more."
+JAP_loose_regs:0 "Loosened Regulations"
+JAP_loose_regs_desc:0 "The regulations our economy was beholden to were a noose with which it was slowly hanging itself. No more."
+JAP_frozen_banks:0 "Frozen Banks"
+JAP_frozen_banks_desc:0 "Manipulating the economy in the national interest requires a firm grip on the banks, lest they swindle the Government or the people."
+JAP_sunrise_kingdom:0 "The Sunrise Kingdom"
+JAP_sunrise_kingdom_desc:0 "An Empire once thought to be dying or dead is now back and stronger than ever."
+#colonial policy - imperial#
+JAP_colonial_incentives:0 "Colonial Incentives"
+JAP_colonial_incentives_desc:0 "Colonial Incentives"
+
+#tech ideas#
+JAP_emperors_soldiers:0 "Emperor's Soldiers"
+JAP_emperors_soldiers_desc:0 "Tennōheika Banzai!"
+JAP_idea_airforce_army_intergration:0 "Army-Air Force Integration"
+JAP_idea_airforce_army_intergration_desc:0 "Army-Air Force Integration is a major step towards achieving battlefield dominance."
+JAP_idea_SNLF:0 "Japanese Naval Landing Forces"
+JAP_idea_SNLF_desc:0 "The JNLF's role in securing the Pacific for the Empire is crucial, expanding its means and capacity is equally crucial."
+JAP_idea_50_destroyers_program_mtg:0 "50 Destroyers Program"
+JAP_idea_50_destroyers_program_mtg_desc:0 "The 50 Destroyers Program will bolster the nuber of support and screen ships the IJN can field to effectively cover our many amphibious operations."
+JAP_idea_50_destroyers_program_no_mtg:0 "50 Destroyers Program"
+JAP_idea_50_destroyers_program_no_mtg:0 "The 50 Destroyers Program will bolster the nuber of support and screen ships the IJN can field to effectively cover our many amphibious operations."
+JAP_navy_pay:0 "Navy Pay Reforms"
+JAP_navy_pay_desc:0 ""
+JAP_navy_pensions_desc:0 "Navy Pension Reforms provide a much needed reprieve to the dedicated sailors of the IJN."
+JAP_navy_pensions:0 "Navy Pension Reforms"
+JAP_navy_reform_commission:0 "Navy Reform Commission"
+JAP_navy_reform_commission_desc:0 "The Navy Reform Commission delegates compensation and claims to IJN sailors and officers."
+#EVENTS#
+japan.1.t:0 "The Sunset Crash"
+japan.1.d:0 "How terribly naive we were. The campaign was supposed to be easy, send in the best troops, mop up the Beiyang and ride the high of victory. It was supposed to be the morale boost we needed, to buoy the economy and prevent a crash. But it was a pipe dream. Stocks have plummeted, food prices have risen even higher than before, and business are closing across the country. The Big Four are already planning for massive layoffs, and there are reports of some shareholders killing themselves. The exact reasons for the crash are obvious to those within the Emperor's personal council; the massive investments in military industry and imperial development have left the home islands underfunded, neglected even. No one could say anything, because the philosophy of Sonnō-ha was inherently militaristic, and any attempt to divert spending from the army or the navy was interpreted as anti-patriotic and cowardly. Now, it seems they were cowards not to speak out. Japan's future is now uncertain, to say the least. The situation in China is still precarious and now the Patriotic Vanguard of Okawa Shūmei will most certainly seize on the crisis, so we will need to heavily monitor political activity within the army and the working classes, or else we will fall to communist agitation. The Emperor's reign is now more threatened than ever, and now we must wait to see what becomes of our nation."
+japan.1.a:0 "Everything Will Be Fine They Said..."
+japan.1.b:0 "Perhaps peace will see us through the worst."
+
+japan.103.t:0 "The Crisis Deepens"
+japan.103.d:0 "As the economic freefall continues across Japan, the immediate impact has yet to be felt among the aristocracy. Many military leaders, cabinet ministers and of course the Imperial Family, continue to live in relative oppulence. The people have begun to riot in the North, as grain stores run dry and prices soar. Fishermen in Kagoshima and across the Pacific territories are organising strikes at the direction of the Worker's Party agents. It would appear that Japan is past the tipping point. All will take to ignite the nation is a spark."
+japan.103.a:0 "Oh no."
+
+japan.2.t:0 "Drama on the Deck"
+japan.2.d:0 "It was one ordinary naval inspection aboard the 1st-class coastal defense ship Mikasa stationed at the Yokosuka Naval District, but a conflict between the military police and the sailors soon escalated to a brawl when sailor spat on the face of the inspecting naval military police and declared he, along with the sailors of the Mikasa, were going on strike, before leading an eviction of officers and inspectors back onto the port and sailing off. Since the battleship exited port, many have been analyzing the causes and the conditions of the incident, pointed towards indifference of the officers to the horrible living conditions of the sailors on this 35-year old warship, or extreme corruption within the corps lieutenants. The revolt is believed to be the accumulation of anger among the sailors and their radicalization by several crew members, who are now believed to be members of the Japanese Labor Party. While one revolt is not enough to grab the attention of the nation, many other sailors in Yokosuka are already rising up against their commanders and seizing control of their vessels. Within hours, sailors and dock workers secured the naval base, followed by riots in factories throughout the greater Kanto region later the day. The rebels declared the Provisional People's Council of Japan, and proceeded to march north into Tokyo. Caught off guard as the bulk of the Army is on Chinese front, the Imperial Army hastily ordered the Imperial Guard and the garrisons in Tokyo to crush the rebellion. However, a significant portion of the loyalist forces refused to follow orders due to the control of young officers sympathetic to the Socialist cause. Being bombarded by battleships from Yokosuka, which had been proclaimed the base of operations of the newly formed Japanese People's Navy, the loyalists were overwhelmed by socialists completely within a few hours. The revolutionaries met up in the industrial port of Yokohama where officers and local union leaders joined together. The Japanese revolution begins!"
+japan.2.a:0 "Fight to eradicate the communist threat!"
+japan.2.b:0 "It is too late for you, capitalists! (Switch to Revolutionary Japan)"
+
+japan.201.t:0 "Loyalist Victory"
+japan.201.d:0 "The Socialist pockets of resistance have been pacified, the traitors in the Navy have flown the white banner or been sunk and the Emperor reigns supreme once again."
+japan.201.a:0 "Long Live The Emperor"
+
+japan.202.t:0 "Revolutionary Victory"
+japan.202.d:0 "The Socialist Forces having taken the edge over Imperial loyalists, have managed to capture the key cities and destroy or win over the soldiers of the Imperial Army and Navy. The Emperor and Royal Family have fled, and the Royal institutions have been seized by People's Councils. The war is over and the Empire has fallen at long last!"
+japan.202.a:0 "Long Live The Revolution"
+
+japan.203.t:0 "The Unthinkable"
+japan.203.d:0 "At the onset of civil war it suddenly dawned on the Emperor's closest advisors that they may struggle to actually defeat the revolutionaries in a pitched war. While the Empire stands a decent chance of surviving if they can draw out the conflict and drain the will of the reds to fight, it is no guarantee. As such preparations are being made to evacuate the Imperial family, the question remains, where shall they flee?"
+japan.203.a:0 "Korea is our best option, call Kazushige. (Play as Imperial Korea)"
+japan.203.b:0 "Mantetsu is safest, Itagaki will keep control. (Play as Mantetsu)"
+japan.203.c:0 "We will not flee, we will not surrender."
+
+japan.2031.t:0 "The Empire Loses Faith"
+japan.2031.d:0 "Without the Emperor to bolster the men and their commanders, the siutation is quickly deteriorating for the Japanese Imperials, surrender is iminent and troops begin to desert their posts or hand their superiors over to the reds."
+japan.2031.a:0 "It is over..."
+
+japan.204.t:0 "The Revolution Falters"
+japan.204.d:0 "With the initial shock passing, our momentum is slowing down. Soon the more experienced and equipped IJA will overpower the militias. Unless we can secure the major cities soon, all will be lost, and countless sons and daighters of Japan will have died for naught."
+japan.204.a:0 "Forwards once more!"
+
+japan.205.t:0 "The Revolution's Fate"
+japan.205.d:0 "Despite our early progress, we have not managed to stem the tide of the IJA as it has returned home en-masse. Our lines are barely holding, perhaps it would be better to surrender now while we still can."
+japan.205.a:0 "Failure Eternal. (Game Over)"
+japan.205.b:0 "This whole thing was a mistake. (Play Imperial Japan)"
+japan.205.c:0 "We can still win this! (You survived!)"
+
+japan.206.t:0 "The Empire Loses Faith"
+japan.206.d:0 "The Revolution may not have been a shock to the Japanese people or many of the junior officers, but the Chiefs of Staff were surprised. The floundering response has resulted in military loses and the occupation of much of Honshu by the reds, it seems defeat looms over the Imperial loyalists if they cannot salvage the situation soon."
+japan.206.a:0 "Time is running out."
+
+japan.207.t:0 "The Empire's Fate"
+japan.207.d:0 "Out of ammunition, out of reserves and out of hope, the IJA has tried desperately to turn the situation around, to little avail. The war rages on still and the reds still hold several cities, there is talk of desertion or even surrender among the conscripted men, their love for the Emperor is shaken."
+japan.207.a:0 "Failure Eternal. (Game Over)"
+japan.207.b:0 "This whole thing was a mistake. (Play Revolutionary Japan)"
+japan.207.c:0 "We can still win this! (You survived!)"
+
+japan.3.t:0 "Peace of Beijing"
+japan.3.desc:0 "Japan offers us terms in their time of crisis. We need time to recover our forces and resist them, sign the peace and we will prepare our vengeance."
+japan.3.a:0 "Cede the border before they reach Shanxi!"
+japan.3.b:0 "Cede the border and Beijing, maybe they'll go away."
+japan.3.c:0 "We fight on!"
+japan.3.d:0 "The Border Stays!"
+
+japan.4.t:0 "Beiyang Folds"
+japan.4.d:0 "The Beiyang Government have accepted our terms, we will be back to finish them off but for now our domestic problems are top priority."
+japan.4.a:0 "Thank Goodness!"
+
+japan.401.t:0 "Beiyang Refuses"
+japan.401.d:0 "The Beiyang leadership has refused to even entertain our offer of peace, the envoy reports he was spat at by officers before he was even able to deliver the terms to the Government."
+japan.401.a:0 "Those fools, ready the guns!"
+
+japan.5.t:0 "The Fate of the New Japan"
+japan.5.d:0 "The revolution has brought not just a battle between the old monarchist order and the new radical one, but a struggle between fellow revolutionaries. Ōkawa Shūmei has been a strong proponent of a powerful leadership able to crush all dissent and opposition, and his Patriotic Vanguard has been the shock troops of our army during the revolution. He has faced fierce opposition, however, from Hitoshi Yamakawa, a libertarian Marxist and advocate of democratic institutions. He has consistently accused Shūmei of trying to subvert the democratic will of the people and assert his own violent ideology on Japan. In a way, he was right. Yamakawa was meeting with other government officials today when he heard gunshots outside the capitol building. When he looked outside, he saw members of the Patriotic Vanguard shooting at Red Army soldiers. Shūmei had declared the current regime counterrevolutionary and restorationist, and had called upon the Vanguard to overthrow Yamakawa and form a new government. Yamakawa saw Shūmei himself walk forward, ordering the troops forward and singing songs in dedication to the socialist fatherland. He seemed not to care that bullets where whizzing past him. They quickly pushed to the door of the building, and were greeted with more soldiers. They…"
+japan.5.a:0 "...were gunned down quickly, and Shūmei and his men stormed the building."
+japan.5.b:0 "...repelled the Vanguard, and shot Shūmei during the shootout."
+
+japan.6.t:0 "Presidential Election"
+japan.6.desc:0 "The first round of Presidential elections is taking place, up and down the country the people are queueing outside polling centres to vote. Municipal Council elections have already taken place, but this vote decides which party will lead the National Council and in turn select the Council President of Japan. In the past month, the councils have assembled and the candidates put their cases forward for leadership of the Revolution. With a wide choice from the Worker's Councilists to the Anarcho-Syndicalists, it is anyone's guess how the election will turn out."
+#
+japan.6.b:0 "Councilist Victory"
+japan.6.c:0 "Syndicalist Victory"
+japan.6.d:0 "Democratic Socialist Victory"
+
+japan.61.t:0 "Presidential Election"
+japan.61.desc:0 "Once more it is time for the councils to elect a President and choose the general program for the next few years. Once more the polling centres open and municipal councilors are selected by the proletariat. The National Council race is, as ever, hotly contested."
+japan.61.b:0 "Councilist Victory"
+japan.61.c:0 "Syndicalist Victory"
+japan.61.d:0 "Democratic Socialist Victory"
+
+japan.7.t:0 "Ma - Japanese Negotiations"
+japan.7.d:0 "The Japanese are offering the Ma Clique a stake in the war against Yan Xishan and the Beiyang. It is a risky move to march East with the more volatile regimes to our North stirring. Still, an opportunity is an opportunity."
+japan.7.a:0 "Very well, we accept"
+japan.7.b:0 "Never!"
+
+japan.8.t:0 "Ma Clique Accepts"
+japan.8.d:0 "The Ma Clique now marches to war on the western flank of the Beiyang. This should relieve our belegeured men and make the war progress that bit faster. The dreams the Generals had of a Three Month Campaign might just come true."
+japan.8.a:0 "Excellent!"
+
+japan.9.t:0 "Ma Clique Declines"
+japan.9.d:0 "The Ma Clique has refused to get involved in our war. The cowards have shyed away from the opportunity to topple the Shanxi and take a slice of the spoils for themselves. The warlords are clearly too attatched to their existing power to make a move on one-another."
+japan.9.a:0 "Curse Them!"
+
+japan.101.t:0 "Japanese Referendum"
+japan.101.d:0 "The Japanese have proposed a referendum on Korea's status, the referendum offers the choice between continued Korean autonomy, or a new special protectorate status under the Japanese Empire. In truth the choice is either to accept Japanese overlordship once again or to prepare for a war of defence."
+japan.101.a:0 "Very well, it is unlikely to produce the result they want."
+japan.101.b:0 "Tell them where they can shove their ballot."
+
+japan.102.t:0 "Ultimatum From Tokyo"
+japan.102.d:0 "The Japanese Empire wants us to once more bend the knee and hand control of Southern Manchuria to them. A new protectorate status has been suggested but ultimately it still means giving the reigns over to Japanese colonialism."
+japan.102.a:0 "We have no choice, they will simply invade anyway."
+japan.102.b:0 "They can have our bayonets if they please."
+
+japan.10.t:0 "Korean Referendum"
+japan.10.d:0 "Korea must be reintegrated to the Empire, permanently. A rigged ballot ought to suffice, the Governors will keep their places and simply take orders directly from Tokyo instead. Any civilian unrest can quickly be squashed by the military and our integration of Korea will make more loyal subjects of them in the long run."
+japan.10.a:0 "Rig the Ballot."
+
+japan.11.t:0 "Restoration of the Shogunate of Japan"
+japan.11.d:0 "The Restorationists didn't go far enough. The true way to glory for Japan was always to return power to the Shogun. The Emperor rules from the Palace and the Shogun rules from the hand of a sword."
+japan.11.a:0 "The Shogunate is Back"
+
+japan.12.t:0 "Colonial Management Re-Organised"
+japan.12.d:0 "The Revolution cannot simply remain in Japan. Our Comrades in China have already picked up the banner but the former territorial gains of the Japanese Empire remain capitalist and reactionary. They should be toppled and have more appropriate leaders installed."
+japan.12.a:0 "Revolutionary Guidance at its Finest"
+
+japan.13.t:0 "Zaibatsus Dismantled"
+japan.13.d:0 "The Big Four have dominated not just the Japanese economy but the politics as well for far too long. The monopolies must be outlawed and the assets of the companies redistributed to the worker councils."
+japan.13.a:0 "The Stain is Scrubbed Out"
+
+japan.14.t:0 "Champion's Day"
+japan.14.d:0 "On this day we mark the Victory of the Revolution against the Emperor, against the tyranny, repression and capitalist system that had kept the people of Japan on their knees. The Red Banners fly high in the wind and songs of Comradeship in face of death are sung at public parades around the country. Efigies of the Emperor are burned, the names of the fallen comrades revered, The Trimuph of the Revolution is theirs in memoriam."
+japan.14.a:0 "Heroes All."
+
+japan.141.t:0 "The Growth Of Esperanto In Japan"
+japan.141.d:0 "Among the socialist revolutionaries are many writers and scholars who advocate the use of Esperanto to better connect Japan and her ideas with the wider world. Esperanto being a constructed language designed as a universal secondary language for international communication. Some even go so far as to suggest it be taught as a native language in Japan, the intention being to eliminate Japan's historical closed and Imperial character by transforming it into an open and internationalist one. Sakai Toshihiko and Hasegawa Teruko are two of the more notable advocates, they have been distributing fliers and dictionaries across the country at an alarming rate, there is now high demand for Esperanto tutors in Tokyo and Hiroshima. It seems as though the two may be at the fore-front of a linguistic revolution in Japan. The interior ministry has done little to prevent this movement, many among its own staff are also advocates. Some of the more traditional members of the Socialist Worker's Unions have kicked up a fuss however, claiming that these students and petit-bourgeoise clerks are trying to eliminate Japanese culture and identity. Nonetheless the movement continues at pace."
+japan.141.a:0 "Bonan matenon Japanio!"
+
+japan.15.t:0 "Indochina demands border regions"
+japan.15.d:0 "The Japanese puppets in Hanoi have listed their demands for our border territories in the North and South. Laos and Cambodia suffered terribly under French rule and the Japanese are likely no different. The risk of a military provocation is very high however and Siam may not be able to weather the storm..."
+japan.15.a:0 "We Will Not Be Swayed."
+japan.15.b:0 "These Japanese Stooges Will Pay."
+
+japan.151.t:0 "Siam Conceeds"
+japan.151.d:0 "The Siamese Government has decided to cede Laos and Cambodia to our Indochinese Subject. A wise choice. That's one less concern for the General Staff."
+japan.151.a:0 "Naturally"
+
+japan.152.t:0 "Siam Resists Japanese Pressure"
+japan.152.d:0 "The Siamese Government has decided not to cede Laos and Cambodia. The General Staff are commenting it was pointless to ask in the first place and we have wasted the element of surprise by asking them first."
+japan.152.a:0 "Curse Them!"
+
+japan.16.t:0 "Lotus Act"
+japan.16.d:0 "The corruption in the Big Four is purged and the Japanese economic outlook is stronger for it."
+japan.16.a:0 "The Flower Blooms"
+
+japan.17.t:0 "Investigation of the Zaibatsus"
+japan.17.d:0 "What started out as an audit into potential wartime miscalculations has spiralled out of control and now a full blown investigation has started. It turns out the guilty memebers of the Big Four are more numerous and the charges much more severe, some are on trial now for treason!"
+japan.17.a:0 "The Guilty Parties Will Suffer."
+
+japan.18.t:0 "Crackdown"
+japan.18.d:0 "The corruption scandal sweeps the country and some who supported the Emperor against the Socialists are beginning to second guess themselves. A widespread crackdown on the Zaibatsus and their leaders is necessary for stability."
+japan.18.a:0 "They Are Not Untouchable."
+
+japan.19.t:0 "Japanese Empire Re-Born"
+japan.19.d:0 "Our ambitions will not be scuppered this time! The Japanese Empire stands as the rightful master of the East!"
+japan.19.a:0 "Restored at Last"
+
+japan.20.t:0 "Divine Wind Coup"
+japan.20.d:0 "The failures of this government in stopping both the Chinese menace on the mainland and the communist threat at home has made clear the fact that things need to change immediately. Yasuhito is an honourable and good man, but he is no longer needed anymore. No, what is needed is a firm hand an a recommitment to imperialism. That means a change in management; a new Emperor, in other words. Pretender to the throne Kamazawa Hiromichi has volunteered himself as the new Emperor, soldiers loyal to us have stormed the royal palace and are starting to build defenses in case of counterattack. The defense was heavy, with some of the most fanatical loyalists of the Emperor standing guard. Our soldiers were able to blast through their fortifications with explosives, but with a lot of casualties on both sides. Police officers loyal to the Military Faction have also been working around the clock to preserve order and ensure that rioting and civil unrest is kept at a minimum; we can't allow the enemies of Japan any chances to destroy our nation, be it without or within. Now, all we have to do is hold out and wait for Hiromichi to come to Kyoto. Yasuhito has been surprisingly cooperative; he isn't happy with the situation, but he hasn't been doing anything to resist either. In the meantime, we shall hold on to the last man, for in these desperate times, everything must be done for the sake of the Emperor and the nation."
+japan.20.a:0 "Revere the Emperor, destroy the traitors!"
+
+japan.21.t:0 "Peace of Beijing"
+japan.21.d:0 "The war in China has left our forces battered and in disarray, with our side barely gaining much of any ground against the warlords. Furthermore, the total economic crash we've been dealing with is doing us no favors; dissent is growing at home, and soldiers are having a harder and harder time getting the supplies they need to fight. Only the delusional fail to recognize that this needs to end. However, that doesn't mean we can't end this to favor us. The proposal known as the Beijing Compromise, would annex territory up to and including Beijing, giving us a solid base on the Chinese mainland. It also ends the war and gives the warlords the illusion of victory. A win-win! Of course, not everyone is happy with this. The military is still under the belief that they can win this in no time at all, as if the last couple months haven't proven otherwise. Although total victory over the warlords is alluring, as far away as it is.."
+japan.21.a:0 "Send the demands."
+japan.21.b:0 "We Don't Stop Until They're Dead."
+
+japan.211.t:0 "A Peace Offer From Japan"
+japan.211.d:0 "The war has clearly not gone in Japan's favour. Our brave troops have been able to hold the line and repel attack after attack, and now the Japanese are experiencing the consequences of their actions. An offer has come forward from the Japanese government offering control of everything up to and including Beijing in return for ending our war. A tempting offer, for sure, for the war has been brutal. Some generals are quite confident in pushing them off the mainland entirely, however, and are hostile to this idea."
+japan.211.a:0 "We Accept! Victory is Ours!"
+japan.211.b:0 "What Cowards! We Shall Drive Them From All China!"
+
+japan.212.t:0 "Peace Offer Rejected"
+japan.212.d:0 "Sadly our opponents do not feel the same about our propposed peace deal."
+japan.212.a:0 "Such A Waste"
+
+japan.22.t:0 "Colonial Governments Sue For Peace"
+japan.22.d:0 "The Japanese puppet states have sued for peace with the Shanxi, they wish no further part in a war they no longer have a stake in. As Japan collapses the governors have declared their nations indpendent and their armies no longer follow the directions of the Palace."
+japan.22.a:0 "Who Can Blame Them?"
+
+japan.23.t:0 "Colonial Posessions Break Away!"
+japan.23.d:0 "Our colonial posessions have been siezed, whether by popular uprising against the Government or by occupation by neighbouring powers that lay claim to these lands they are no-longer under Japanese control. Our former colonies have taken the liberty of occupying our overseas enclaves on their borders too, the Empire is in a state of collapse."
+japan.23.a:0 "Curse Them!"
+
+japan.24.t:0 "Loyalists Rise Up"
+japan.24.d:0 "Militias of loyalists, former soldiers, policemen and volunteer patriots have risen up to defend the Empire against the Red traitors."
+japan.24.a:0 "For The Emperor!"
+
+japan.25.t:0 "Taiwan Breaks Free"
+japan.25.d:0 "Taiwan was a model colony of Japan, but recently nativist rebellion has increased. Seeing an opportunity in the collapse of the Japanese Empire the colonial administration has been taken over by local leaders. They all have wildly different ideas about how Taiwan ought to proceed, but they do agree on Independence from Japan. Thus as their first act they have claimed Formosa as their own, though the Japanese already present are 'Welcome to stay' most have already fled to Ryukyu. It seems the island will now attempt to make its own way in these turbulent times."
+japan.25.a:0 "Curse them!"
+japan.25.b:0 "Screw this, I'm moving to Taipei."
+
+japan.26.t:0 "The Three Month Campaign"
+japan.26.d:0 "The war on the Chinese mainland should go easily say the Generals. Just send in our best divisions, wipe up any resistance and set up some governments loyal to us on the mainland. Starting with the Shanxi. The victory and triumph could aleiviate the feeling of dread and anger amongst the working classes from their misfortunes. We could continue to ride forth through China, and then Asia, as the bearers of a new order."
+japan.26.a:0 "Let us hope they are right."
+japan.26.b:0 ""
+
+japan.27.t:0 "The Tributary Act"
+japan.27.d:0 "The Tributary Act is a new emergency measure signed by the Emperor to permit further economic exploitation throughout the colonies, while intended to expedite the war in China, the act is a risky measure with so many troops away from their garrisons."
+japan.27.a:0 "Risky Business."
+japan.27.b:0 ""
+
+japan.271.t:0 "The Litigation Blockade"
+japan.271.d:0 "Lengthy legal proceedures are a mere hinderance to our bureeaucracy, a litigation blockade must be set up to postpone legal action between businesses and the state for the duration of the all-important campaign in China."
+japan.271.a:0 "We could draft the lawyers..."
+japan.271.b:0 ""
+
+japan.28.t:0 "Negotiations with Ma"
+japan.28.d:0 "The Ma are a black sheep in Western China, eager to defy the central Government in Beijing they could be easily persuaded to invade the Shanxi valley and relive our frontlines. A delegation has been tasked with soliciting their help, though concerns over the Ma's ability to repel the Beiyang Armies cast a shadow over the proceedings."
+japan.28.a:0 "The enemy of my enemy..."
+japan.28.b:0 ""
+
+japan.29.t:0 "The Beijing Compromise"
+japan.29.d:0 "While the campaign in China hasn't been a disaster, it can hardly be said to have succeeded. In the three months that were promised, Japanese boots have scarcely been seen in Shanxi. As the situation in Japan itself in deteriorating and the economic problems begin to tell, it is becoming an untenable situation. Peace must be called for."
+japan.29.a:0 "Seppuku may be too good for some."
+japan.29.b:0 ""
+
+japan.30.t:0 "Empire Pushes For Integration"
+japan.30.d:0 "Imperial Japan is attempting to consolidate it's control in Northern China. Starting with us. They have demanded our direct integration into their Empire, under threat of invasion and forced subjugation. While we may be able to mount a defence it would be a costly endeavour, there are some who suggest accepting Japanese rule for the time being, assuming that they will soon be toppled by the West."
+japan.30.a:0 "Accept their demands."
+japna.30.b:0 "Reject their demands."
+
+japan.301.t:0 "Integration Accepted"
+japan.301.d:0 "South Manchuria returns to the fold! The governors of south Manchuria have accepted Japanese control and turned over the levers of power to our ministers."
+japan.301.a:0 "Fantastic!"
+
+japan.302.t:0 "Intregration Rejected"
+japan.302.d:0 "South Manchuria has boldly decided to reject Japanese suzerainity and will attempt to defy our armies alone. Brave, but foolish."
+japan.302.a:0 "Alas they shall join us at gunpoint."
+
+japan.31.t:0 "The Issue of the Palaces"
+japan.31.d:0 "Though few of the Palaces in Japan weathered the Civil War unscathed, very few were totally destroyed, even to the revolutionaries they represent a strong component of Japanese culture and ceremony. The issue now is what to do with them, they have laid empty for months, gathering dust and squatters. Some believe they shoud be removed as symbols of the people's oppression, with the many artworks and artefacts being removed to museums first. Some believe that the Palaces themselves should become national museums, celebrating Japanese culture and documenting our history including the revolution itself. There are also some Worker's Party members who have suggested the Palaces be used as private residences for the Municipal Governors and Party Secretaries, though this idea has been met with accusations of Bourgois behaviour and counter-revolutionary thought."
+japan.31.a:0 "Burn them."
+japan.31.b:0 "Turn them into Museums."
+japan.31.c:0 "They should become political residences."
+
+japan.32.t:0 "The Prostitution Debate"
+japan.32.d:0 "It was not a question or issue that was at the forefront of people's thoughts when the revolution against the old regime first began, but recently more and more people from across Japan have raised questions about the policy of this new Japan on prostitution.\nWhile some people (mainly more conservative groups from rural areas in Japan) have made arguments against prostitution appealing to conservative thought and putting an end to so-called degeneracy, these constitute the minority. The centre of the debate is focused on the idea of two women. Itō Noe and Yamakawa Kikue.\nItō takes the stance of keeping prostitution legal so that women across Japan may feel a sense of sexual liberation as well as opposition to traditional and exploitative roles imposed on women by the more conservative aspects of society which shame them (and in many cases kill them in cases of “honour killings”) for simply having sexual relations with other people.\nKikue however, views prostitution as a despicable institution which oppresses hundreds of millions of women across the globe. The idea of sexually liberated women to fall under the servitude of men is contradictory with the views of the revolution which supports rights for women.”"
+japan.32.a:0 "The debate begins."
+
+japan.321.t:0 "Itō Noe Takes The Stand"
+japan.321.d:0 "“Comrades, let us reaffirm what the nature of this revolution is. It is a movement that came from the peasantry in the countryside and the workers in the city. Those who stood up against the reactionary and neo-feudal remnants of our Bourgeois past so that we may be free from the chafing bonds of Capitalist and reactionary oppression! Thus, one of the staple parts of our movement, by its very nature, must be the rejection of reactionary views on the woman and on sex!\nSo, I ask you. What is there, more reactionary, more oppressive towards us than the standards and expectations of bourgeois society that have for so many centuries been placed upon us? I have heard many accounts of people in our beloved homeland and people in far away lands being killed in the streets simply for the pursuit of their own joy and desires or (perhaps even more atrociously) due to their need to try and relieve that crushing weight of poverty that came to them through the damnable evils  of Bourgeois oppression. Here we see a system that actively damages those who live under it when they do nothing against it and strikes out with greater ferocity when any attempt of escape is made! I have seen this system be rightfully condemned by all of you here. But one disturbing remnant of our bourgeoise past remains in an unsettlingly high amount of the people among us. And that remnant is the same thing behind the savage murders of countless innocent people! Traditionalism!\nMake no mistake, I do not believe in the eradication of our nation's culture. But we must recognise that reactionary views that actively suppress the rights and livelihoods of women have no place in our new nation! We must free women of the traditionalist roles imposed on them. If they wish to go to bed with someone out of love before they are married or for the sake of money or for the sake of the very thrill of the act, who are we to say that they shouldn't? Let alone shun them and kill them!\nIt is because of this, that I say that it is essential for us, if we are to stay true to our revolutionary spirit that we oppose any attempt at the abolition of prostitution! And in doing so, finally reject the traditionalist reactionary notions of the past to pave the way for our Socialist state!”"
+japan.321.a:0 "Let us now here from Yamakawa."
+
+japan.322.t:0 "Yamakawa Kikue takes the stand"
+japan.322.d:0 "“Let us make no mistake. One of the principle parts of our movement must be the liberation of women and putting an end to the oppressive restraints placed upon us by the past. It is most important that we oppose it in all its forms. And to me, it seems undeniable that one of these forms is prostititution.\nHistorically speaking, prostitution has never been kind towards women. As my opponent rightfully said, women have been killed for being prostitutes, though what she has ignored is that there are numerable times when the people they are serving are the ones who kill them! Whether this is to escape from the responsibility of paying for their services or out of sadistic perversions does not matter, because either way it shows us that the very act of prostitution will always subjugate the woman. Throughout history, in practically every civilisation, women have been placed in subservient roles to men and the abuse and humiliation that women endure as a result must be something that we must be staunchly opposed to no matter what! If we are to make a nation of revolutionaries and to dismantle the oppression of the pitiful remnants of Imperialist and Capitalist thought, then prostitution must be outlawed!\nBut it is not the women who we must punish. It is those who, at every moment, seeked to exploit their suffering for profit. The panderers, the procurers. These petty bourgeoisie dogs must be sent to the wall just the same as everyone else we have taken up arms against! We must work to better the lives of former prostitutes to prevent any want or need to return to such a life. Once we do so, I am confident that there shall be no need or examples of exploitation within our new Socialist homeland! It is undeniable that if we wish to prevent hypocrisy and to prevent becoming the same as the pigs before us, then it is imperative that we take this great step onwards to establishing a caring and utopian society. So let us, comrades, stand together to end this madness! Let us stand opposed to the exploitation of women, strike down poverty and therefore strike down the exploitation of women, strike down the petty bourgeois that poison our streets and finally form a society free of all traces of Capitalism and Imperialism!”"
+japan.322.a:0 "Itō Noe is right. Legalise It."
+japan.322.b:0 "Yamakawa Kikue is right. Restrict It."
+
+japan.33.t:0 "The Vanguard Establishes the High Council"
+japan.33.d:0 "In the late morning in Japan, the council of the reformed Japanese Diet quietly swarm into the former imperial assembly. Quiet bumbling can be heard from the crowd congregating in an important day in Japanese history. The room has a dusty wooden smell and is decorated with new socialist symbolism. Ōkawa Shūmei steps in, guarded by big-looking officers, and greets the eager diet. The feeling of optimism was in the air, while signa previous imperial occupation has been filtered out. Discussions of taxation and gun rights will be discussed, while some council members make snarky jabs at the former imperial government. A new frontier of peace and fruitfulness is awaiting the newly socialist Land of the Rising Sun."
+japan.33.a:0 "To a new beginning."
+
+japan.331.t:0 "JDIA Established"
+japan.331.d:0 "Due to the continued expansion of socialist influence in Asia, Ōkawa Shūmei has seen it prudent to establish the JDIA (Japanese Deparment of Islamic Affairs) in order to establish positive relations with Hui, Uyghur and Central Asian Muslim communities, and push their politics further towards a socialist pan-asian program. The department will also set about translating Islamic works into Japanese and Japanese works into Arabic, Urdu, Farsi and various Turkic languages spoken across Asia. Shūmei has also encouraged the disemination of other Asian religions into religious studies courses in Japan, using the JDIA as a resource hub and source of expertise in the field. He has suggested that the department's role will become crucial to the nation and the revolution in the near future."
+japan.331.a:0 "Saramu Araikumu."
+
+japan.34.t:0 "The New National Diet"
+japan.34.d:0 "One of the major stipulations of the revolution was a reform of the parliament into a truly representative body. With the country now under control the New National Diet can now be built and its officials elected, the new council elections will preceed an expected leadership election in the next few years."
+japan.34.a:0 "The people have their say."
+
+japan.341.t:0 "The Council of Religious Matters"
+japan.341.d:0 "As the newly formed councils crop up across Japan to govern, there comes a nagging problem; religion in Japan has a sordid history, with Shintō, various forms of Buddhism and Christianity each competing for their place in Japanese society. The Imperial government placed special emphasis on Shintō at the expense of other minority religions. Now, without the Emperor, Japanese society must reconcile its religious allegiances. There are many among the internationalist westernised academics at the head of the revolution that advocate atheism. In contrast, the popular sentiment towards these faiths from the general workers and farmers is that they represent the cultural core of Japanese society. In order to keep these ties from fraying, a council of religious matters ought to be formed to resolve internal disputes and make the case of each minority faith and position to the supreme national council."
+japan.341.a:0 "Rebuild the national creed."
+japan.341.b:0 "Permit free assoication."
+japan.341.c:0 "Discourage superstitious practises."
+
+japan.35.t:0 "New Socialist Hegemon"
+japan.35.d:0 "The Revolutionary Republic has rebuilt the nation and found strength that the Empire lacked, it now looks out beyond its immediate surroundings to export its ideas and liberate the workers of nations near and far. Where the Imperials sought to spread their reign and expand the power of the Emperor, we seek to give people freedom from the shackles of Capitalist Imperialism, we need only give the people the means to overthrow their masters..."
+japan.35.a:0 "The Next Domino to Fall."
+
+japan.36.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.36.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.36.a:0 "Very well."
+japan.36.b:0 "Never!"
+
+japan.37.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.37.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.37.a:0 "Very well."
+japan.37.b:0 "Never!"
+
+japan.371.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.371.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.371.a:0 "Very well."
+japan.371.b:0 "Never!"
+
+japan.372.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.372.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.372.a:0 "Very well."
+japan.372.b:0 "Never!"
+
+japan.38.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.38.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.38.a:0 "Very well."
+japan.38.b:0 "Never!"
+
+japan.39.t:0 "Pan-Asian Japan Demands Federalisation"
+japan.39.d:0 "While the Japanese Empire may have died, the Pan-Asian ambitions of the Sunset Isles lives on in their revolutionary cause. The Pan-Asianist Vanguard is pursuing a policy of domination throuhout the East, forging a socialist Empire. Their offer is simple, join their revolutionary cause or be toppled."
+japan.39.a:0 "Very well."
+japan.39.b:0 "Never!"
+
+japan.40.t:0 "Japan Offers Membership in the PWL"
+japan.40.d:0 "The Japanese have announced the establishment of their new diplomatic initiative, the Pacific Workers League is a formal diplomatic and political venture to tie the socialist naitons of the Pacific regions together for mutual defence. If we join we would have to adjust our foreign policy to adapt to Japan's, if we don't, we risk attracting their ire."
+japan.40.a:0 "Of course!"
+japan.40.b:0 "No, thank you."
+
+japan.41.t:0 "IJN Reforms Proposed"
+japan.41.d:0 "The mutiny of the IJN has left a deep scar in the admiralty. The general sense that something must change lingers over each meeting, each telephone call. The decision as to how to correct the IJN's past mistakes is looming, the admiralty must choose how to proceed. They could, as the sailors had demanded during the great Drama on the Deck, increase the pay and improve conditions of sailors both voluntary and conscripted. They could guarantee more limited service tours and better pension schemes. Or they could set up a formal commission to handle complaints on a case-by-case basis."
+japan.41.a:0 "Grant better pay and conditions."
+japan.41.b:0 "Limit service tours and improve pensions."
+japan.41.c:0 "Set up a reform commission to handle complaints."
+
+japan.42.t:0 "Dealing With The Zaibatsus"
+japan.42.d:0 "The Zaibatsus have suffered terribly in the crash. Millions of Yen in assets and bonds are now rendered worthless as production plummets and lay-offs spike, we have been asked to help buoy the companies with government bail-out funds and new borrowing. We could leave them to the market forces but the recovery may be harsher for their many employees..."
+japan.42.a:0 "Bail them out."
+japan.42.b:0 "Let them fail."
+
+japan.43.t:0 "New Tax Proposals"
+japan.43.d:0 "In order to finance the new recovery initiatives a new levy tax has been proposed against some of the middle and upper tax brackets. Detractors have claimed that such moves will stifle the recovery as spending fails to outstrip the recession due to reduced disposable income. Meanwhile the extra tax revenue could be used to re-vitalise key services and sectors in order to boost employment and net income across tax brackets. The detractors have described such moves as the very sorts of socialist policies the civil war was fought to prevent. The choice remains..."
+japan.43.a:0 "Short term pain for long term gain."
+japan.43.b:0 "We are hurting enough as it is."
+
+japan.431.t:0 "New Tax Proposals"
+japan.431.d:0 "In order to finance the new recovery initiatives a new levy tax has been proposed against some of the middle and upper tax brackets. Detractors have claimed that such moves will stifle the recovery as spending fails to outstrip the recession due to reduced disposable income. Meanwhile the extra tax revenue could be used to re-vitalise key services and sectors in order to boost employment and net income across tax brackets. The detractors have described such moves as the very sorts of socialist policies the civil war was fought to prevent. The choice remains..."
+japan.431.a:0 "Short term pain for long term gain."
+japan.431.b:0 "We are hurting enough as it is."
+
+japan.44.t:0 "The Debt Crisis"
+japan.44.d:0 "The banks are growing weary of our lack of payments, with little sympathy being reserved for the war damages. To have any hope of paying back, a debt restructuring is required, the banks will have their money eventually either way."
+japan.44.a:0 "We'll have to dig our way out of this."
+
+japan.45.t:0 "The Palace Reforms"
+japan.45.d:0 "After much toil and hardship, the economy is now recovering well. Government revenues must now be invested into new economic programs in order to make debt payments, the question is into which sector should the money be invested? The military companies are aching to stay afloat and are stoking revanchist factions to promote their cause, meanwhile many civilian sectors are still in the process of recovery and re-building."
+japan.45.a:0 "Invest in arms to make the payments"
+japan.45.b:0 "Invest in civilian goods to make the payments"
+
+japan.46.t:0 "The New Economic School"
+japan.46.d:0 "The economic crisis has pushed a number of aspiring young students into financial studies. Their new ideas and the shortage in the civil service means many are being fast-tracked into new positions, there are still conflicting ideas about where investments into recovery should go. There are those that warn against re-starting the military-economic dependencies but equally those factory jobs are good for the employment rate."
+japan.46.a:0 "Continue domestic market development."
+japan.46.b:0 "Divert funds to re-start arms industry."
+#CUSTOM TOOLTIPS AND FLAGS#
+JAP_SETTING_SUN_DESC:0 "The Empire of Japan is a glass cannon. Since it's close defeat to a bloodied and hubristic Russia in 1905 the military has been the relief valve on an increasingly divided society. Conquests in the pacific and exploitation in China are propping up a fragile economy. The young Emperor Yasuhito has doubled down on the ultra-nationalist policies his late brother was wary of, embracing the likes of Araki Sadao and killing or exiling the reformists. A war to bring Beijing to heel has now begun in earnest, but if the campaign fails, Japan risks the Patriotic Vanguard and Worker's Party rising up against the ruling Restorationists and starting a civil war..."
+
+JAP_beijing_peace:0 "Japanese peace treaty with Beiyang"
+red_sun_rising:0 "Red Sun Rising"
+JAP_GEACPS:0 "Dai Tōa Kyōeiken"
+JAP_revolution:0 "Japanese Civil War"
+JAP_KOR_annexed:0 "Annexation of Korea"
+JPR_Navy_Defectors_tooltip:0 "Rebels in the Navy will join the Revolution"
+
+JAP_shogunate_reactionary:0 "Shogunate of Japan"
+JAP_shogunate_reactionary_DEF:0 "The Shogunate of Japan"
+JAP_shogunate_reactionary_ADJ:0 "Japanese"
+
+JAP_empire_despotism:0 "Empire of Japan"
+JAP_empire_despotism_DEF:0 "The Empire of Japan"
+JAP_empire_despotism_ADJ:0 "Japanese"
+
+IKR_exile_tooltip:0 "The Family will exile to Korea."
+MAN_exile_tooltip:0 "The Family will exile to Mantetsu."
+JAP_no_surrender:0 "The Family will not exile, damn the consequences."
+
+#MINISTERS#
+JAP_sadao_araki_hog:0 "Araki Sadao"
+JAP_seigo_nakano_hog:0 "Nakano Seigō"
+JAP_okada_keisuke_hog:0 "Okada Keisuke"
+JAP_koki_hirota_hog:0 "Hirota Kōki"
+JAP_fumimaro_konoe_hog:0 "Konoe Fumimaro"
+
+JAP_kijuro_shidehara_for:0 "Shidehara Kijūrō"
+JAP_yosuke_matsuoka_for:0 "Matusoka Yōsuke"
+
+JAP_machida_chuji_eco:0 "Machida Chūji"
+JAP_gotaro_ogawa_eco:0 "Ogawa Gōtarō"
+JAP_gujiro_fujiwara_eco:0 "Fujiwara Gujirō"
+
+JAP_araki_cos:0 "Araki Sadao"
+JAP_fushimi_hiroyasu_con:0 "Fushimi Hiroyasu"
+
+#COMPANIES
+#ind
+kawasaki:0 "Kawasaki"
+sumitomo:0 "Sumitomo"
+idemitsu_kosan:0 "Idemitsu Kosan"
+#weapons
+nambu_arms:0 "Nambu Arms"
+tokyo_arsenal:0 "Tokyo Arsenal"
+osaka_arsenal:0 "Osaka Arsenal"
+#air
+yokosuka_air:0 "Yokosuka Aeronautics"
+mitsubishi:0 "Mitsubishi"
+nakajima:0 "Nakajima"
+aichi:0 "Aichi"
+#naval
+maizura:0 "Maizura"
+kure:0 "Kure Naval Works"
+osaka_iron_works:0 "Osaka Iron Works"
+#heavy
+osaka_arsenal_arty:0 "Osaka Arsenal"
+nissan_motor:0 "Nippon Motor Company"
+ishikawajima_motor_works:0 "Ishikawajima Motor Works"
+hino_motors:0 "Hino Motors"
+
+#DECISIONS (1.5 Update)#
+
+#FOCUSES#
+
+#far-right path#
+JAP_imperial_decree:0 "Imperial Decree"
+JAP_imperial_decree_desc:0 "The Imperial Decree is integral to the current Adminstration, and in the wake of Hirohito's assassination, we must maintain the succession of the Emperor, lest Japan be tossed into chaos!"
+
+JAP_eigen_restoration:0 "Eigen Restoration"
+JAP_eigen_restoration_desc:0 "With the current administration, our Emperor is restrained, he is a god among men, the people's Emperor. He ought to be respected as such."
+
+JAP_emperors_cabinet:0 "Emperor's Cabinet"
+JAP_emperors_cabinet_desc:0 "The cabinet is an important part of the Imperial Government, they are the eyes, ears, arms, and legs of the Emperor, without them, he is unable to influence his people, god or not."
+
+JAP_close_the_imperial_palace:0 "Close the Imperial Palace"
+JAP_close_the_imperial_palace_desc:0 "For too long, foreigners, commoners, and dangerous political ideas have found their way through the doors of the Palace. This ends now! We must shut the palace down, and keep a larger guard presence around the Palace as well. The only thing exiting that temple, is the will of the Emperor."
+
+JAP_cut_out_the_red_tape:0 "Cut the Red Tape"
+JAP_cut_out_the_red_tape_desc:0 "The main issue with the current government is the sheer amount of bureaucratic oversight, we must take steps to cut out the red tape, and reduce the bureaucratic influence over the current government."
+
+JAP_puppet_ministers:0 "Ministerial Puppeteering"
+JAP_puppet_ministers_desc:0 "Outside of the cabinet, many ministers have a variety of different agendas, however some may prove harmful to the stability of Japan, we must sway them over to our side through payment, blackmail, or some good old threats."
+
+JAP_elevate_sadao:0 "Promote Sadao"
+JAP_elevate_sadao_desc:0 "Araki Sadao is a very capable general, and an ardent nationalist, he serves as a shining example to all soldiers and officers. We should promote him to the Army General Staff."
+
+JAP_arrest_sadao:0 "Arrest Sadao"
+JAP_arrest_sadao_desc:0 "Araki Sadao, while a capable officer, is dangerously ambitious, and with the support of the Army on his side, he may very well coup the government, we must arrest him and find a way for him to disappear… quietly."
+
+JAP_appoint_a_new_high_command:0 "Appoint New High Command"
+JAP_appoint_a_new_high_command_desc:0 "A New High Command is what's needed, we need fresh, young officers that are ready to bring our armies to new conquests and new victories. The days of the old guard are behind us."
+
+JAP_pacify_the_military:0 "Pacify the Military"
+JAP_pacify_the_military_desc:0 "The Military hold much sway and influence within Japan, and we must take steps to placate them, let them know they are appreciated greatly, and all should be happy to live and fight for the Emperor."
+
+JAP_proclaim_the_japenese_empire:0 "Proclaim the Japanese Empire"
+JAP_proclaim_the_japenese_empire_desc:0 "For the longest time, our Nation has been seen as little more than a backwater trying to copy the Western countries, trying our best to catch the setting sun. Now we have done just that, we have caught the sun, and we shall hoist it above the rest of Asia, all shall bend their knee before the Japanese Empire."
+
+JAP_crackdown_on_the_zaibatsu:0 "Crack Down on the Zaibatsus"
+JAP_crackdown_on_the_zaibatsu_desc:0 "While the big four companies are a great assest to the Japanese Empire, their practises have harmed the people and caused us great unrest. It greatly hurts our public image to conduct dealings with such companies, therefore a series of legal investigations should begin to clean up their act."
+
+JAP_dorogonsupai:0 "Dorogonsupai"
+JAP_dorogonsupai_desc:0 "This is part of an investigation to find out just what sort of illicit and illegal dealings are going on under the surface. No amount of Corporate officers will stop crack imperial investigators."
+
+JAP_lotus_act:0 "Lotus Act"
+JAP_lotus_act_desc:0 "After conducting our investgations, we have concluded that there is a massive amount of freedom we give the Zaibatzeus, too much freedom, we believe. In the name of the Emperor, we shall reduce the influence these companies once had."
+
+JAP_pacific_hegemony:0 "Pacific Hegemony"
+JAP_pacific_hegemony_desc:0 "It is destiny for the Empire of Japan to rule all of Asia, the flag of our nation must extend from China all the way to Java, and everywhere inbetween."
+#colonial empire#
+JAP_tokyo_colonization_society:0 "Tokyo Colonial Society"
+JAP_tokyo_colonization_society_desc:0 "The creation of a colonial society models much of the kinds found within England and France. Japanese Aristocrats will help in making these colonial socities a normal thing in all parts of our empire."
+
+JAP_korean_referendum:0 "The Korean Question"
+JAP_korean_referendum_desc:0 "The Korean peninsula is vital to Japan's security and properity, we must re-establish ourselves there."
+
+JAP_loyalty_tests:0 "Loyalty Tests"
+JAP_loyalty_tests_desc:0 "To ensure that corruption does not become an issue in our colonial adminstrations, we shall force any prospective employees to take Loyalty tests to ensure that they have Japan's best interests in mind."
+
+JAP_seoul_development_scheme:0 "Seoul Development Scheme"
+JAP_seoul_development_scheme_desc:0 "Seoul appears to be the most developed of all parts of Korea, if we encourage the Zaibatsus to invest and develop in the city, we can help sway and influence it even more, helping in the overall pacification of the country."
+
+JAP_new_prefectures:0 "New Prefectures"
+JAP_new_prefectures_desc:0 "Some administrative reorganisation is required in certain colonial regions. The coastal cities on the mainland for one, census data and municipal restructuring should help keep them in line in future."
+
+JAP_expand_the_rubber_trade:0 "Expand the Rubber Trade"
+JAP_expand_the_rubber_trade_desc:0 "The one resource Japan lacks the most is rubber, and for the Imperial army to thrive, rubber is necessary, we must open our markets and look for various suppliers like the Dutch, British, and Americans."
+
+JAP_indochinese_management:0 "Indochinese Management"
+JAP_indochinese_management_desc:0 "Indochina has a long history of resentment against occupier governments. One way for us to not fall victim to that is allow locals to take part in the management of the country. It's far easier to take orders from a Vietnamese officer compared to a Japanese one."
+
+JAP_fort_saigon:0 "Fort Saigon"
+JAP_fort_saigon_desc:0 "Saigon is an integral city in Southeastern Vietnam, sitting on the Saigon river, if we fortify it, it will show any resistance groups an example of our might, plus if a war does break out, the city will make an excellent fortress to hold off in."
+
+JAP_appoint_a_new_governor_general:0 "Appoint a New Governor-General"
+JAP_appoint_a_new_governor_general_desc:0 "Despite our best attempts at economic and military influence, we'll need a strong, dependable man to lead the colonial administration, lest we fall like the French, Chinese, and Mongols before them."
+
+JAP_mantetsuian_project:0 "Mantetsu Project"
+JAP_mantetsuian_project_desc:0 "The end goal in Manchuria is a railway that will connect our northern holdings in Manchuko with Korea and the rest of the Empire, we need to set aside funds and resources to get this project started."
+
+JAP_expand_the_mantetsu_railways:0 "Expand the Mantetsu Railways"
+JAP_expand_the_mantetsu_railways_desc:0 "The railways, at the moment, are bustling, but some portions of the railway are barren, or do not exist at all. Through the Mantetsu, we shall bring civilization to these folk!"
+
+JAP_colonial_incentives_program:0 "Colonial Incentives Program"
+JAP_colonial_incentives_program_desc:0 "Members of the colonial government may find their position less than desireable, living in an area with an opposition to us, however we must find ways to incentivize their staying and working there to promote efficiency in the colonies."
+
+JAP_manchurian_integration:0 "Mantetsu Integration"
+JAP_manchurian_integration_desc:0 "The time has come to integrate the Mantetsu from a private company into a full, state-regulated one, expanding our influence on Fengtian and Northern China as a whole."
+
+JAP_finish_the_campaign:0 "Finish the Campaign"
+JAP_finish_the_campaign_desc:0 "We have unfinished business in China, the Hebei campaign failed once, it will not fail again. We will seize Beijing and subjugate China once and for all."
+
+JAP_kokutaiseitai:0 "Kokutai-seitai"
+JAP_kokutaiseitai_desc:0 "Kokutai-seitai is a summary phrase that captures the essence of Japanese Sovereign Governance, the structure and nature of Japanese Imperialism, its traditions and culture, its ambitions and of course - the Emperor himself. A formal organisation for the projection of Japanese power and the Kokutai-seitai is crucial to our success."
+
+JAP_reclaim_taiwan:0 "Reclaim Taiwan"
+JAP_reclaim_taiwan_desc:0 "Taiwan broke away as soon as the Empire was in trouble, clearly we didn't instil our virtues in its people correctly, we should seek to correct this error and re-incorporate them completely."
+
+#china#
+#JAP_three_month_campaign:0 "Three Month Campaign"
+#JAP_three_month_campaign_desc:0 "The war on the Chinese mainland should go easily say the Generals. Just send in our best divisions, wipe up any resistance and set up some governments loyal to us on the mainland. Starting with the Shanxi. The victory and triumph could aleiviate the feeling of dread and anger amongst the working classes from their misfortunes. We could continue to ride forth through China, and then Asia, as the bearers of a new order."
+
+#JAP_tributary_act:0 "The Tributary Act"
+#JAP_tributary_act_desc:0 "With all of our puppets, we must figure out how to export their resources most efficiently to Japan, the resources are better off here anyway. This is shaping up like some new age Mercantilism, but we do it the best here in Japan!"
+
+#JAP_negotiations_with_the_ma_clique:0 "Negotiations with Ma Clique"
+#JAP_negotiations_with_the_ma_clique_desc:0 "The Ma's of China seem to be the black sheep, predominantly muslim types that stay in the far west of China, seemingly isolated from the Chinese factions closer to the coast, if we could establish friendly relations, we may have an ally in the interior."
+
+#JAP_beijing_compromise:0 "The Beijing Compromise"
+#JAP_beijing_compromise_desc:0 "Of course, not everyone is happy with this. The military is still under the belief that they can win this in no time at all, as if the last couple months haven't proven otherwise. Although, total victory over the warlords is alluring, as far away as it is."
+
+#JAP_renew_the_litagation_blockcade:0 "Renewed Litigation Blockade"
+#JAP_renew_the_litagation_blockcade_desc:0 "The Blockade set up against the Chinese was suspended to allow our economy to recover and make amends with some of the more sympathetic regimes in China. No more."
+
+#JAP_central_region_strategy:0 "Central Region Strategy"
+#JAP_central_region_strategy_desc:0 "The Central Region, the heart of China, the key to total domination in Asia. The apple of our eye. We should secure it for the glory of Japan!"
+
+#JAP_support_the_communists:0 "Support the Socialists"
+#JAP_support_the_communists_desc:0 "We must support our comrades in Hunan! Mao has been making himself out as an ally in the race to control China."
+
+#JAP_intervene_in_the_chinese_civil_war:0 "Intervene in the Chinese Civil War"
+#JAP_intervene_in_the_chinese_civil_war_desc:0 "We could attempt to intervene in the Chinese Civil War and bring about peace in the region ourselves. Of course the warlords won't be happy we are picking them off and may put aside their differences to push us out. It is a risk worth considering for control of the region."
+
+#Rising Sun Path#
+JAP_rising_sun:0 "The Rising Sun"
+JAP_rising_sun_desc:0 "Just as the Sun sets, so it shall rise come the morning, the night is darkest just before the dawn."
+
+JAP_bamboo_circle:0 "The Bamboo Circle"
+JAP_bamboo_circle_desc:0 "The Restorationists have lost the trust of some important people, a new group of dissident leaders have convened the so-called 'Bamboo Circle'. The trees may be uprooted and fall in a storm, but the bamboo merely flexes, bends and springs back into place. It is this spirit of resilience and weathering the greatest hardships that these men swear by."
+
+JAP_loosen_regulations:0 "Loosen Regulations"
+JAP_loosen_regulations_desc:0 "Where the economy needed freedom to operate most it was castrated by the regulations of the Government, in order to promote growth and prevent another disaster the regulations are being stripped back a bit."
+
+JAP_infiltrate_the_palace:0 "Infiltrate the Palace"
+JAP_infiltrate_the_palace_desc:0 "The Circle has become a shadow government within the walls of the Imperial Palace. No-one knows who exactly belongs to the secretive group, the Emperor will hear nothing of it in his presence. But the Circle is there, they are everywhere..."
+
+JAP_samurai_codes:0 "Revive the Bushidō"
+JAP_samurai_codes_desc:0 "The ancient ways of the Samurai were all but lost as Japan leapt forwards into the modern world, the spiritual strength of the Nation has been dashed. It must be revived and re-introduced to our military doctrines to steel our people against their enemies."
+
+JAP_teikokunoi_ha:0 "Teikokunoi-ho"
+JAP_teikokunoi_ha_desc:0 "Teikokunoi-ho, The Imperial Guard, like the Kamikaze (Divine Wind), the eternal guardian of Japan. Many an Invader has perished to the winds, now the Imperial Guards shall do the same and save Japan from within."
+
+JAP_emperor_nobuhito:0 "Emperor Hiromichi"
+JAP_emperor_nobuhito_desc:0 "Our path must be corrected under the guidance of a new Emperor, Hiromichi has the confidence of the Circle, they will form his cabinet and lead Japan back to greatness."
+
+JAP_secure_army_loyalty:0 "Secure the Army's Loyalty"
+JAP_secure_army_loyalty_desc:0 "Some within the Army had their loyalties tested in the recent upheaval, they must become reliable, dependable even, if we are to maintain the course."
+
+JAP_restore_the_shogunate:0 "Restore the Shogunate"
+JAP_restore_the_shogunate_desc:0 "The old ways served Japan better, the Parliament was a waste of time, the Shogun must be revived, a Military Governor of the Empire, leader of the Armed Forces and 2nd only to the Emperor himself."
+
+JAP_execute_sadao:0 "Execute Sadao"
+JAP_execute_sadao_desc:0 "Araki has served us well bless his soul, but he has now outlived his usefulness, the Circle wishes him gone and so it shall be."
+
+JAP_freeze_the_banks:0 "Freeze the Banks"
+JAP_freeze_the_banks_desc:0 "The Banks have been a constant thorn in the sides of the Zaibatsus and Economic Ministry for years, the capitalist markets we profit from have hampered our ability to exploit our full economic power, freezing interest rates and limiting the issue of bonds will keep things stable while we recover ourselves."
+
+JAP_support_the_zaibatsu:0 "Support the Zaibatsus"
+JAP_support_the_zaibatsu_desc:0 "The Big Four have served the nation well in its time of hardship, the company executives have a good working relationship with the Government and it is time we repaid them the debt of gratitude we owe them."
+
+JAP_the_future_of_the_sunrise_kingdom:0 "Future of the Sunrise Kingdom"
+JAP_the_future_of_the_sunrise_kingdom_desc:0 "Future of the Sunrise Kingdom"
+
+#commies#
+#JAP_will_of_the_people:0 "Will of the People"
+#JAP_will_of_the_people_desc:0 "The Revolution has arrived at long last in the Sunrise Kingdom. The decadence of the Imperial Government will fall and the Worker's liberation is at hand at long last Comrades!"
+
+#JAP_down_with_the_emperor:0 "Down with the Emperor"
+#JAP_down_with_the_emperor_desc:0 "The chants can be heard in the streets of several major cities, people have turned out in the millions to protest, the chants go on and on. 'Down with the Emperor'"
+
+#JAP_organizer_the_ricers:0 "Organise the Ricers"
+#JAP_organizer_the_ricers_desc:0 "Workers of the Rice Paddies Unite!"
+
+#JAP_weapons_stockpiling:0 "Weapon Stockpiling"
+#JAP_weapons_stockpiling_desc:0 "Raiding Royal Armouries has proven quite profitable for the rebellion, until more stable manufacturing can be secured these guns will have to suffice."
+
+#JAP_general_strikes:0 "General Strikes"
+#JAP_general_strikes_desc:0 "The Workers in Imperial territory should organise a mass-strike to cripple our opposition, many are loyal to the Emperor out of fear of his Army, we must show them the path to liberation!"
+
+#JAP_victory_in_the_civil_war:0 "Victory in the Civil War"
+#JAP_victory_in_the_civil_war_desc:0 "As the dust settles and the cities rebuilt, Fathers and Sons buried, crops resewn, a new dawn arrives. The Revolutionary Republic of Japan has achieved the impossible and defeated the Emperor. His Empire is dissolving and the people he oppressed go free, now the Republic must set about its path of liberation through all of Asia."
+
+#JAP_colonial_management:0 "Colonial Management"
+#JAP_colonial_management_desc:0 "The former Colonies of the Empire will not easily accept more Japanese rule, we must show them our intentions are benevolent, if the leaders do not see sense the people of their oppresive regimes will."
+
+#JAP_liberate_korea:0 "Liberate Korea"
+#JAP_liberate_korea_desc:0 "Joseon must be free from depots and the evils of Colonialism"
+
+#JAP_liberate_vietnam:0 "Liberate Vietnam"
+#JAP_liberate_vietnam_desc:0 "The Viet have good proletarian spirit among them, the former governors could barely contain the good workers of Hanoi. Indochina will fall with ease."
+
+#JAP_pacific_workers_league:0 "Pacific Worker's League"
+#JAP_pacific_workers_league_desc:0 "In order to unite the Vanguards and Councils of the East a new Alliance must be formed. We of course will guide the way to socialist revolution for our friends."
+
+#JAP_reclaim_mantetsu:0 "Reclaim Mantetsu"
+#JAP_reclaim_mantetsu_desc:0 "The so-called Mantetsu State is really more a capitalist venture in statecraft, built upon the bones of an exploitative company on the Far-East Railway the Mantetsu regime must fall and a people's council of Manchuria established."
+
+#JAP_free_the_mantetsus:0 "Free Mantetsu"
+#JAP_free_the_mantetsus_desc:0 "The Manchus will be free to unite the North for themselves, under our supervision. We couldn't hope to hold onto those unstable lands on our own without problems anyway."
+
+#JAP_japanese_oversight:0 "Japanese Oversight"
+#JAP_japanese_oversight_desc:0 "The Manchus must be guided more closely than others, their lands are in disarray with banditry being rife in the countryside. We must occupy the area for now and pacify it by force and by word of the revolution, class consciousness for the Manchus!"
+
+#JAP_rebuild_the_nation:0 "Rebuild the Nation"
+#JAP_rebuild_the_nation_desc:0 "The Revolution may have been gloriously won with blood, grit and steel, but the Nation was left damaged none-the-less. A recinstruction initiative will help get the economy repaired and create work for the people in more devastated regions."
+
+#JAP_roadway_repair:0 "Roadway Repairs"
+#JAP_roadway_repair_desc:0 "Road and Rail connections must be restored to full and collective-owned working order, it will better facilitate our recovery comrades!"
+
+#JAP_sieze_factories:0 "Seize the Factories"
+#JAP_sieze_factories_desc:0 "The capitalists and land-owners who kept the profits of industry for themselves will have their property redistributed, a compensation will be paid to those who accept our generous terms, consquences await those who refuse..."
+
+#JAP_devalue_the_zen:0 "Devalue the Zen"
+#JAP_devalue_the_zen_desc:0 "In order to improve the conditions of the people we should take the drastic measure of printing Zen in large quantities, distribute the money to the people and take advantage of the new lower exhange rate to encourage business from our comrades abroad."
+
+#JAP_abolish_the_zaibatsu:0 "Abolish the Zaibatsus"
+#JAP_abolish_the_zaibatsu_desc:0 "The Zaibatsus were the beating heart of the exploitative capitalist machine that drove Japan into chaos, they must never return! The companies are hearby dissolved, their assets re-distributed and their structure made illegal so that the mistakes may never be repeated."
+
+#JAP_champions_day:0 "Champion's Day"
+#JAP_champions_day_desc:0 "A new naitonal day of commemoration, mourning, rememberance and celebration, Champion's Day, the day of the Revolution's Victory."
+
+#crash tree#
+JAP_sunset_stock_crash:0 "Sunset Stock Crash"
+JAP_sunset_stock_crash_desc:0 ""
+
+JAP_pro_zaibatsu_focus_1:0 "Dealing With The Zaibatsus"
+JAP_pro_zaibatsu_focus_1_desc:0 ""
+
+JAP_pro_zaibatsu_focus_2:0 "Of Death And Taxes"
+JAP_pro_zaibatsu_focus_2_desc:0 ""
+
+JAP_pro_zaibatsu_focus_3:0 "Debts To Be Paid"
+JAP_pro_zaibatsu_focus_3_desc:0 ""
+
+JAP_pro_zaibatsu_focus_4:0 "Institute the Palace Reforms"
+JAP_pro_zaibatsu_focus_4_desc:0 ""
+
+JAP_pro_zaibatsu_focus_5:0 "The New Economic School"
+JAP_pro_zaibatsu_focus_5_desc:0 ""
+
+#JAP_anti_zaibatsu_focus_1:0 "Reform the Economy"
+#JAP_anti_zaibatsu_focus_1_desc:0 "Reform the Economy"
+
+#JAP_anti_zaibatsu_focus_2:0 "Co-Operate with the Workers"
+#JAP_anti_zaibatsu_focus_2_desc:0 "Co-Operate with the Workers"
+
+#JAP_anti_zaibatsu_focus_3:0 "Anti-Zaibatsu Campaigns"
+#JAP_anti_zaibatsu_focus_3_desc:0 "Anti-Zaibatsu Campaigns"
+
+#JAP_anti_zaibatsu_focus_4:0 "Trial the Guilty"
+#JAP_anti_zaibatsu_focus_4_desc:0 "Trial the Guilty"
+
+#JAP_anti_zaibatsu_focus_5:0 "Dismantle the Monopolies"
+#JAP_anti_zaibatsu_focus_5_desc:0 "Dismantle the Monopolies"
+
+JAP_finish_sunset_repairs:0 "Finish the Sunset Repairs"
+JAP_finish_sunset_repairs_desc:0 "Finish the Sunset Repairs"
+
+#industry tree#
+JAP_industrial_revitilization:0 "Industrial Revitalisation"
+JAP_industrial_revitilization_desc:0 "Industrial Revitalisation"
+
+JAP_CCP:0 "Coastal Construction Programs"
+JAP_CCP_desc:0 "Coastal Construction Programs"
+
+JAP_hirohito_memorial_railway:0 "Hirohito Memorial Railway"
+JAP_hirohito_memorial_railway_desc:0 "Hirohito Memorial Railway"
+
+JAP_wartime_preperations:0 "Wartime Preparations"
+JAP_wartime_preperations_desc:0 "Wartime Preparations"
+
+JAP_government_grants:0 "Government Grants"
+JAP_government_grants_desc:0 "Government Grants"
+
+JAP_invest_in_factories:0 "Industrial Investment"
+JAP_invest_in_factories_desc:0 "Industrial Investment"
+
+JAP_pacific_war_machine:0 "Pacific War Machine"
+JAP_pacific_war_machine_desc:0 "Pacific War Machine"
+
+JAP_costal_defense:0 "Coastal Defense"
+JAP_costal_defense_desc:0 "Coastal Defense"
+
+JAP_machines_of_the_future:0 "Machines of the Future"
+JAP_machines_of_the_future_desc:0 "Machines of the Future"
+
+JAP_kiniro_no_council:0 "Kin'iro-no Council"
+JAP_kiniro_no_council_desc:0 "Kin'iro-no Council"
+
+JAP_kaku_bakudan:0 "Kaku Bakudan"
+JAP_kaku_bakudan_desc:0 "Kaku Bakudan"
+
+JAP_economic_miracle:0 "Economic Miracle"
+JAP_economic_miracle_desc:0 "Economic Miracle"
+
+JAP_refinery_research:0 "Refinery Research"
+JAP_refinery_research_desc:0 "Refinery Research"
+
+JAP_synthetic_oil:0 "Synthetic Oil"
+JAP_synthetic_oil_desc:0 "Synthetic Oil"
+
+JAP_fuel_stockpiles:0 "Fuel Stockpiles"
+JAP_fuel_stockpiles_desc:0 "Fuel Stockpiles"
+
+JAP_rubber_plants:0 "Rubber Plants"
+JAP_rubber_plants_desc:0 "Rubber Plants"
+
+#military#
+JAP_modernize_the_army:0 "Modernise the Army"
+JAP_modernize_the_army_desc:0 "Modernise the Army"
+
+JAP_a_gun_in_every_hand:0 "A Gun in Every Hand"
+JAP_a_gun_in_every_hand_desc:0 "A Gun in Every Hand"
+
+JAP_devise_new_tactics:0 "Devise New Tactics"
+JAP_devise_new_tactics_desc:0 "Devise New Tactics"
+
+JAP_artillery_support:0 "Artillery Support"
+JAP_artillery_support_desc:0 "Artillery Support"
+
+JAP_motorization:0 "Motorisation"
+JAP_motorization_desc:0 "Motorisation"
+
+JAP_light_tank_effort:0 "Light Tank Development"
+JAP_light_tank_effort_desc:0 "Light Tank Development"
+
+JAP_mount_fiji_training_camp:0 "Mount Fuji Training Camp"
+JAP_mount_fiji_training_camp_desc:0 "Mount Fuji Training Camp"
+
+JAP_anti_tank_production:0 "Anti-Tank Production"
+JAP_anti_tank_production_desc:0 "Anti-Tank Production"
+
+JAP_design_new_firearms:0 "Design New Firearms"
+JAP_design_new_firearms_desc:0 "New designs for new times and new wars, modern combat takes place at close range, it is prudent to prioritise compact firepower over long-range accuracy."
+
+JAP_the_emperors_soldiers:0 "Emperor's Soldiers"
+JAP_the_emperors_soldiers_desc:0 "The loyal soldiers of the Emperor exert his will wherever he desires."
+
+JAP_imperial_airforce:0 "Japanese Air Force"
+JAP_imperial_airforce_desc:0 "Japanese Air Force"
+
+JAP_air_land_battle:0 "Air-Land Battle"
+JAP_air_land_battle_desc:0 "Air-Land Battle"
+
+JAP_naval_assualt:0 "Naval Assault"
+JAP_naval_assualt_desc:0 "Naval Assault"
+
+JAP_fighter_effort:0 "Fighter Development"
+JAP_fighter_effort_desc:0 "Fighter Development"
+
+JAP_airforce_army_intergration:0 "Air Force - Army Integration"
+JAP_airforce_army_intergration_desc:0 "Air Force - Army Integration"
+
+JAP_CAS_effort:0 "CAS Development"
+JAP_CAS_effort_desc:0 "CAS Development"
+
+JAP_carrier_fighter_effort:0 "Carrier Fighter Development"
+JAP_carrier_fighter_effort_desc:0 "Carrier Fighter Development"
+
+JAP_long_range_bombing_raids:0 "Long Range Bombing Raids"
+JAP_long_range_bombing_raids_desc:0 "Long Range Bombing Raids"
+
+JAP_prioritize_military_targets:0 "Prioritise Military Targets"
+JAP_prioritize_military_targets_desc:0 "Prioritise Military Targets"
+
+JAP_planes_of_the_future:0 "Planes of the Future"
+JAP_planes_of_the_future_desc:0 "Planes of the Future"
+
+JAP_naval_bomber_effort:0 "Naval Bomber Development"
+JAP_naval_bomber_effort_desc:0 "Naval Bomber Development"
+
+JAP_expand_the_navy:0 "Reform the Imperial Navy"
+JAP_expand_the_navy_desc:0 "The mutiny of the civil war is a betrayal that shall not be forgotten. We must enact sweeping reforms to keep the IJN in line in future."
+
+JAP_floating_fortresses:0 "Floating Fortresses"
+JAP_floating_fortresses_desc:0 "Floating Fortresses"
+
+JAP_naval_bombardment:0 "Naval Bombardment"
+JAP_naval_bombardment_desc:0 "Naval Bombardment"
+
+JAP_carrier_focus:0 "Carrier Focus"
+JAP_carrier_focus_desc:0 "Carrier Focus"
+
+JAP_battleship_focus:0 "Battleship Focus"
+JAP_battleship_focus_desc:0 "Battleship Focus"
+
+JAP_50_destroyer_program:0 "50 Destroyer Program"
+JAP_50_destroyer_program_desc:0 "50 Destroyer Program"
+
+JAP_light_crusier_production:0 "Light Cruiser Production"
+JAP_light_crusier_production_desc:0 "Light Cruiser Production"
+
+JAP_heavy_cruiser_production:0 "Heavy Cruiser Production"
+JAP_heavy_cruiser_production_desc:0 "Heavy Cruiser Production"
+
+JAP_undersea_destruction:0 "Undersea Destruction"
+JAP_undersea_destruction_desc:0 "Undersea Destruction"
+
+JAP_SNLF:0 "JNLF"
+JAP_SNLF_desc:0 "JNLF"
+
+JAP_troop_transport_effort:0 "Troop Transport Development"
+JAP_troop_transport_effort_desc:0 "Troop Transport Development"
+
+#END FOCUSES#

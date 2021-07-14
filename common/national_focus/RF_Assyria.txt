@@ -1,0 +1,1677 @@
+focus_tree = {
+	id = ASY
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ASY
+		}
+	}
+	continuous_focus_position = { x = 150 y = 2000 }
+	#Army of Descendants of Ashurbanipal
+	focus = {
+		id = ASY_army_of_descendants_of_ashurbanipal
+		icon = GFX_focus_army_of_descenants_of_ashubainrapal
+		x = 26
+		y = 0
+		cost = 10
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+	focus = {
+		id = ASY_air_corp
+		icon = GFX_focus_assyrian_air_corp
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_army_of_descendants_of_ashurbanipal
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = ASY_russian_advisors
+		icon = GFX_focus_russian_advisors
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_army_of_descendants_of_ashurbanipal
+		}
+		mutually_exclusive = {
+			focus = ASY_british_advisors
+		}
+		completion_reward = {
+			army_experience = 40
+			add_opinion_modifier = {
+				target = RUS
+				modifier = ASY_requested_advisors
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_requested_advisors
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_british_advisors
+		icon = GFX_focus_british_advisors
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_army_of_descendants_of_ashurbanipal
+		}
+		mutually_exclusive = {
+			focus = ASY_russian_advisors
+		}
+		completion_reward = {
+			army_experience = 40
+			add_opinion_modifier = {
+				target = ENG
+				modifier = ASY_requested_advisors
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_requested_advisors
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_incorporate_tribal_militias
+		icon = GFX_focus_incorporate_tribal_militias
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_russian_advisors
+			focus = ASY_british_advisors
+		}
+		completion_reward = {
+			add_ideas = ASY_regular_army
+		}
+	}
+	focus = {
+		id = ASY_study_the_great_war
+		icon = GFX_focus_study_the_great_war
+		relative_position_id = ASY_incorporate_tribal_militias
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_incorporate_tribal_militias
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_war_support = 0.05
+			army_experience = 15
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				uses = 1
+				technology = motorised_infantry
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	focus = {
+		id = ASY_buy_weapons
+		icon = GFX_focus_buy_weapons
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_army_of_descendants_of_ashurbanipal
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+		}
+	}
+	focus = {
+		id = ASY_import_artillery
+		icon = GFX_focus_import_artillery
+		relative_position_id = ASY_buy_weapons
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_buy_weapons
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+			}
+		}
+	}
+	focus = {
+		id = ASY_mountaineers_of_assyria
+		icon = GFX_focus_mountaineers_of_assyria
+		relative_position_id = ASY_army_of_descendants_of_ashurbanipal
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_army_of_descendants_of_ashurbanipal
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				category = mountaineers_tech
+			}
+			add_war_support = 0.05
+		}
+	}
+	#Liberate the homeland
+	focus = {
+		id = ASY_liberate_the_homeland
+		icon = GFX_focus_liberate_the_homeland
+		x = 20
+		y = 0
+		cost = 10
+		available = {
+			NOT = {
+				has_completed_focus = ASY_the_russian_rule_is_reestablished
+			}
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.2
+		}
+	}
+	focus = {
+		id = ASY_adobt_greater_assyria_plan
+		icon = GFX_focus_adopt_greater_assyria_plan
+		relative_position_id = ASY_liberate_the_homeland
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_liberate_the_homeland
+		}
+		mutually_exclusive = {
+			focus = ASY_return_that_is_ours
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			1051 = { add_claim_by = ROOT }
+			807 = { add_claim_by = ROOT }
+			675 = { add_claim_by = ROOT }
+			676 = { add_claim_by = ROOT }
+			680 = { add_claim_by = ROOT }
+			888 = { add_claim_by = ROOT }
+		}
+	}
+	focus = {
+		id = ASY_return_that_is_ours
+		icon = GFX_focus_return_what_is_ours
+		relative_position_id = ASY_liberate_the_homeland
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_liberate_the_homeland
+		}
+		mutually_exclusive = {
+			focus = ASY_adobt_greater_assyria_plan
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			1051 = { add_claim_by = ROOT }
+			807 = { add_claim_by = ROOT }
+		}
+	}
+	focus = {
+		id = ASY_administration_of_liberated_territories
+		icon = GFX_focus_administration_of_liberated_territories
+		relative_position_id = ASY_liberate_the_homeland
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_adobt_greater_assyria_plan
+			focus = ASY_return_that_is_ours
+		}
+		available = {
+			has_full_control_of_state = 807
+			has_full_control_of_state = 1051
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			1051 = { add_core_of = ROOT }
+			807 = { add_core_of = ROOT }
+			675 = { add_core_of = ROOT }
+			676 = { add_core_of = ROOT }
+			680 = { add_core_of = ROOT }
+			888 = { add_core_of = ROOT }
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = ASY_found_the_assyrian_academy_of_sciences
+		icon = GFX_focus_fund_the_assyrian_academy_of_sciences
+		relative_position_id = ASY_administration_of_liberated_territories
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_administration_of_liberated_territories
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = ASY_fair_land_redistribution
+		icon = GFX_focus_fair_land_redistribution
+		relative_position_id = ASY_administration_of_liberated_territories
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_administration_of_liberated_territories
+		}
+		available = {
+			has_full_control_of_state = 807
+			has_full_control_of_state = 1051
+		}
+		completion_reward = {
+			1051 = { add_extra_state_shared_building_slots = 2 }
+			807 = { add_extra_state_shared_building_slots = 2 }
+			352 = { add_extra_state_shared_building_slots = 2 }
+			889 = { add_extra_state_shared_building_slots = 2 }
+		}
+	}
+	focus = {
+		id = ASY_support_the_assyrian_colonists
+		icon = GFX_focus_support_the_assyrian_colonists
+		relative_position_id = ASY_administration_of_liberated_territories
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_administration_of_liberated_territories
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+			every_state = {
+				limit = {
+					is_owned_by = ASY
+				}
+				add_manpower = 5000
+			}
+		}
+	}
+	focus = {
+		id = ASY_seek_armenian_support
+		icon = GFX_focus_seek_armenian_support
+		relative_position_id = ASY_administration_of_liberated_territories
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_administration_of_liberated_territories
+		}
+		available = {
+			ARM = {
+				OR = {
+					has_government = revisionist_socialism
+					has_government = social_democratism
+				}
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ARM
+				modifier = large_increase
+			}
+			ARM = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = large_increase
+				}
+			}
+			country_event = {
+				id = asy.8
+			}
+		}
+	}
+	focus = {
+		id = ASY_back_to_the_nineveh_plains
+		icon = GFX_focus_back_to_nineveh_plains
+		relative_position_id = ASY_administration_of_liberated_territories
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_fair_land_redistribution
+		}
+		prerequisite = {
+			focus = ASY_support_the_assyrian_colonists
+		}
+		available = {
+			has_full_control_of_state = 807
+			has_war = no
+			is_subject = no
+		}
+		completion_reward = {
+			set_capital = 807
+			807 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	#Tax Reform
+	focus = {
+		id = ASY_tax_reform
+		icon = GFX_focus_tax_reform
+		relative_position_id = ASY_back_to_the_nineveh_plains
+		x = 0
+		y = 1
+		cost = 10
+		completion_reward = {
+			352 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			889 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			add_ideas = ASY_tax_reform_1
+		}
+	}
+	focus = {
+		id = ASY_invite_the_russian_capitalists
+		icon = GFX_focus_invite_russian_capitalists
+		relative_position_id = ASY_tax_reform
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_tax_reform
+		}
+		mutually_exclusive = {
+			focus = ASY_make_concessions_to_the_british_companies
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_tax_reform_1
+				add_idea = ASY_tax_reform_2
+			}
+		}
+	}
+	focus = {
+		id = ASY_make_concessions_to_the_british_companies
+		icon = GFX_focus_make_concessions_to_the_british_companies
+		relative_position_id = ASY_tax_reform
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_tax_reform
+		}
+		mutually_exclusive = {
+			focus = ASY_invite_the_russian_capitalists
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_tax_reform_1
+				add_idea = ASY_tax_reform_3
+			}
+		}
+	}
+	focus = {
+		id = ASY_attract_foreign_assyrians
+		icon = GFX_focus_attract_foreign_assyrians
+		relative_position_id = ASY_tax_reform
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_tax_reform
+		}
+		completion_reward = {
+			add_ideas = ASY_assyrian_repatriation
+		}
+	}
+	focus = {
+		id = ASY_invest_in_agriculture
+		icon = GFX_focus_invest_in_agriculture
+		relative_position_id = ASY_tax_reform
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_tax_reform
+		}
+		completion_reward = {
+			add_political_power = 50
+			352 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_support_manufactures
+		icon = GFX_focus_support_manufacturers
+		relative_position_id = ASY_invest_in_agriculture
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_invest_in_agriculture
+		}
+		completion_reward = {
+			352 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			889 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_form_the_hakkari_arsenal
+		icon = GFX_focus_found_the_hakkari_arsenal
+		relative_position_id = ASY_tax_reform
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_invite_the_russian_capitalists
+			focus = ASY_make_concessions_to_the_british_companies
+		}
+		completion_reward = {
+			352 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_build_hakkari_urmia_railway
+		icon = GFX_focus_build_hukami_urmia_railway
+		relative_position_id = ASY_form_the_hakkari_arsenal
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_form_the_hakkari_arsenal
+		}
+		completion_reward = {
+			352 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+			889 = {
+				if = {
+					limit = {
+						is_controlled_by = ROOT
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	#His Holiness is Dead!
+	focus = {
+		id = ASY_his_holiness_is_dead
+		icon = GFX_focus_his_holiness_is_dead
+		x = 7
+		y = 0
+		cost = 0
+		available = {
+			always = no
+		}
+	}
+	focus = {
+		id = ASY_new_patriarch_is_elected
+		icon = GFX_focus_new_patriarch_is_elected
+		relative_position_id = ASY_his_holiness_is_dead
+		x = -6
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = ASY_his_holiness_is_dead
+		}
+		mutually_exclusive = {
+			focus = ASY_agha_petros_introduces_the_martial_law
+			focus = ASY_the_russian_rule_is_reestablished
+		}
+		completion_reward = {
+			country_event = { id = asy.3 }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hakkari_war_tt
+				has_country_flag = hakkari_solved
+			}
+			has_country_leader = {
+				name = "Shimun XXI Eshai"
+				ruling_only = yes
+			}
+		}
+	}
+	focus = {
+		id = ASY_support_from_ASY_brothers_in_faith
+		icon = GFX_focus_support_from_brothers_in_faith
+		relative_position_id = ASY_new_patriarch_is_elected
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_new_patriarch_is_elected
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_opinion_modifier = {
+				target = ARM
+				modifier = ASY_brothers_in_faith
+			}
+			ARM = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			add_opinion_modifier = {
+				target = CCD
+				modifier = ASY_brothers_in_faith
+			}
+			CCD = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+			add_opinion_modifier = {
+				target = DKB
+				modifier = ASY_brothers_in_faith
+			}
+			DKB = {
+				add_opinion_modifier = {
+					target = ASY
+					modifier = ASY_brothers_in_faith
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_destroy_the_internal_opposition
+		icon = GFX_focus_destroy_the_internal_opposition
+		relative_position_id = ASY_new_patriarch_is_elected
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_new_patriarch_is_elected
+		}
+		completion_reward = {
+			add_stability = -0.05
+			352 = { add_manpower = -3000 }
+			889 = { add_manpower = -2000 }
+		}
+	}
+	focus = {
+		id = ASY_negotiate_with_tribal_leaders
+		icon = GFX_focus_negotiate_with_tribal_leaders
+		relative_position_id = ASY_new_patriarch_is_elected
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_new_patriarch_is_elected
+		}
+		completion_reward = {
+			add_political_power = 50
+			create_corps_commander = {
+				name = "Yusuf Malek"
+				picture = "Portrait_Assyria_Yusuf_Malek3.dds"
+				traits = { politically_connected }
+				skill = 2
+			}
+		}
+	}
+	focus = {
+		id = ASY_holy_rule_is_secured
+		icon = GFX_focus_holy_rule_is_secured
+		relative_position_id = ASY_new_patriarch_is_elected
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_support_from_ASY_brothers_in_faith
+		}
+		prerequisite = {
+			focus = ASY_destroy_the_internal_opposition
+		}
+		prerequisite = {
+			focus = ASY_negotiate_with_tribal_leaders
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			
+		}
+	}
+	focus = {
+		id = ASY_promote_conversion_of_muslims
+		icon = GFX_focus_promote_conversions_of_muslims
+		relative_position_id = ASY_holy_rule_is_secured
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_holy_rule_is_secured
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ASY_dominance_of_the_assyrian_church_of_the_east_3
+				}
+				swap_ideas = {
+					remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_3
+					add_idea = ASY_dominance_of_the_assyrian_church_of_the_east_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_1
+					add_idea = ASY_dominance_of_the_assyrian_church_of_the_east_2
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_church_school_network
+		icon = GFX_focus_church_school_network
+		relative_position_id = ASY_holy_rule_is_secured
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_holy_rule_is_secured
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ASY_dominance_of_the_assyrian_church_of_the_east_2
+				}
+				swap_ideas = {
+					remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_2
+					add_idea = ASY_dominance_of_the_assyrian_church_of_the_east_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_1
+					add_idea = ASY_dominance_of_the_assyrian_church_of_the_east_3
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_help_the_poor
+		icon = GFX_focus_help_the_poor
+		relative_position_id = ASY_holy_rule_is_secured
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_holy_rule_is_secured
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	focus = {
+		id = ASY_agha_petros_introduces_the_martial_law
+		icon = GFX_focus_agha_petros_introduces_martial_law
+		relative_position_id = ASY_his_holiness_is_dead
+		x = 0
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = ASY_his_holiness_is_dead
+		}
+		mutually_exclusive = {
+			focus = ASY_new_patriarch_is_elected
+			focus = ASY_the_russian_rule_is_reestablished
+		}
+		completion_reward = {
+			country_event = { id = asy.4 }
+			set_party_name = {
+				ideology = despotism 
+				long_name = ASY_despotism_2_party_long
+				name = ASY_despotism_2_party 
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hakkari_war_tt
+				has_country_flag = hakkari_solved
+			}
+			has_country_leader = {
+				name = "Yusuf Malek"
+				ruling_only = yes
+			}
+		}
+	}
+	focus = {
+		id = ASY_republic_is_proclaimed
+		icon = GFX_focus_republic_proclaimed
+		relative_position_id = ASY_agha_petros_introduces_the_martial_law
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_agha_petros_introduces_the_martial_law
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = ASY_crush_the_kurdish_uprising
+		icon = GFX_focus_crush_the_kurdish_uprising
+		relative_position_id = ASY_republic_is_proclaimed
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ASY_republic_is_proclaimed
+		}
+		completion_reward = {
+			add_stability = -0.15
+			every_state = {
+				limit = {
+					is_owned_by = ASY
+				}
+				add_manpower = -5000
+			}
+		}
+	}
+	focus = {
+		id = ASY_terms_of_elections
+		icon = GFX_focus_terms_of_election
+		relative_position_id = ASY_republic_is_proclaimed
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = ASY_republic_is_proclaimed
+		}
+		completion_reward = {
+			country_event = { id = asy.6 }
+		}
+	}
+	focus = {
+		id = ASY_elections
+		icon = GFX_focus_elections
+		relative_position_id = ASY_republic_is_proclaimed
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = {
+			focus = ASY_crush_the_kurdish_uprising
+		}
+		prerequisite = {
+			focus = ASY_terms_of_elections
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			country_event = { id = asy.7 }
+		}
+	}
+	focus = {
+		id = ASY_gad_wins
+		icon = GFX_focus_gad_wins
+		relative_position_id = ASY_elections
+		x = -2
+		y = 1
+		cost = 0
+		prerequisite = {
+			focus = ASY_elections
+		}
+		mutually_exclusive = {
+			focus = ASY_gsa_wins
+		}
+		available = {
+			always = no
+			is_subject = no
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.3
+			}
+			hidden_effect = {
+				retire_country_leader = yes
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = 0.1
+			}
+			set_politics = {
+				ruling_party = conservatism
+				elections_allowed = yes
+			}
+			hidden_effect = {
+				retire_ideology_leader = despotism
+				create_country_leader = {
+					name = "Yusuf Malek"
+					desc = "POLITICS_YUSUF_MALEK_DESC"
+					picture = "Portrait_Assyria_Yusuf_Malek2.dds"
+					expire = "1965.1.1"
+					ideology = national_conservatism
+				}
+			}
+			add_ideas = ASY_yusuf_malek_hog
+		}
+	}
+	focus = {
+		id = ASY_make_concessions_to_tribal_leaders
+		icon = GFX_focus_make_concessions_to_tribal_leaders
+		relative_position_id = ASY_gad_wins
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_gad_wins
+		}
+		mutually_exclusive = {
+			focus = ASY_distribute_wealth_of_disloyal_tribal_leaders
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = ASY_distribute_wealth_of_disloyal_tribal_leaders
+		icon = GFX_focus_distribute_wealth_of_disloyal_tribal_leaders
+		relative_position_id = ASY_gad_wins
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_gad_wins
+		}
+		mutually_exclusive = {
+			focus = ASY_make_concessions_to_tribal_leaders
+		}
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = ASY_assyrian_church_preserves_its_status
+		icon = GFX_focus_assyrian_church_preserves_its_status
+		relative_position_id = ASY_gad_wins
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_make_concessions_to_tribal_leaders
+			focus = ASY_distribute_wealth_of_disloyal_tribal_leaders
+		}
+		mutually_exclusive = {
+			focus = ASY_secularize_the_state
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_1
+				add_idea = ASY_dominance_of_the_assyrian_church_of_the_east_5
+			}
+		}
+	}
+	focus = {
+		id = ASY_secularize_the_state
+		icon = GFX_focus_secularise_the_state
+		relative_position_id = ASY_gad_wins
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_make_concessions_to_tribal_leaders
+			focus = ASY_distribute_wealth_of_disloyal_tribal_leaders
+			focus = ASY_proclaim_equality_of_all_citizens
+		}
+		mutually_exclusive = {
+			focus = ASY_assyrian_church_preserves_its_status
+		}
+		available = {
+			OR = {
+				has_government = conservatism
+				has_government = social_democratism
+				has_government = revisionist_socialism
+			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ASY_dominance_of_the_assyrian_church_of_the_east_1
+				add_idea = ASY_secular_state
+			}
+		}
+	}
+	focus = {
+		id = ASY_censor_the_press
+		icon = GFX_focus_censor_the_press
+		relative_position_id = ASY_gad_wins
+		x = 0
+		y = 3
+		cost = 10
+		available = {
+			has_government = conservatism
+		}
+		prerequisite = {
+			focus = ASY_assyrian_church_preserves_its_status
+			focus = ASY_secularize_the_state
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 200
+			add_ideas = ASY_press_censorship
+		}
+	}
+	focus = {
+		id = ASY_gsa_wins
+		icon = GFX_focus_gsa_wins
+		relative_position_id = ASY_elections
+		x = 2
+		y = 1
+		cost = 0
+		prerequisite = {
+			focus = ASY_elections
+		}
+		mutually_exclusive = {
+			focus = ASY_gad_wins
+		}
+		available = {
+			always = no
+			is_subject = no
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.3
+			}
+			#if = {
+			#	limit = {
+			#		is_guaranteed_by = ARM
+			#		ARM = {
+			#			has_government = revisionist_socialism
+			#		}
+			#	}
+			#	hidden_effect = {
+			#		retire_country_leader = yes
+			#	}
+			#	add_popularity = {
+			#		ideology = social_democratism
+			#		popularity = -1
+			#	}
+			#	add_popularity = {
+			#		ideology = revisionist_socialism
+			#		popularity = 0.4
+			#	}
+			#	add_popularity = {
+			#		ideology = conservatism
+			#		popularity = 0.1
+			#	}
+			#	set_politics = {
+			#		ruling_party = revisionist_socialism
+			#		elections_allowed = yes
+			#	}
+			#	create_country_leader = {
+			#		name = "Freydun Atturaya"
+			#		desc = "POLITICS_FREYDUN_ATTURAYA_DESC"
+			#		picture = "Portrait_Assyria_Freydun_RevSoc.dds"
+			#		expire = "1965.1.1"
+			#		ideology = democratic_socialism
+			#	}
+			#}
+			#else = {
+				hidden_effect = {
+					retire_country_leader = yes
+				}
+				add_popularity = {
+					ideology = social_democratism
+					popularity = 0.2
+				}
+				add_popularity = {
+					ideology = conservatism
+					popularity = 0.1
+				}
+				set_politics = {
+					ruling_party = social_democratism
+					elections_allowed = yes
+				}
+				create_country_leader = {
+					name = "Freydun Atturaya"
+					desc = "POLITICS_FREYDUN_ATTURAYA_DESC"
+					picture = "Portrait_Assyria_Freydun_SocDem.dds"
+					expire = "1965.1.1"
+					ideology = left_nationalism
+				}
+			#}
+			add_ideas = ASY_freydun_atturaya_hog
+		}
+	}
+	focus = {
+		id = ASY_proclaim_equality_of_all_citizens
+		icon = GFX_focus_proclaim_equality_of_all_citizens
+		relative_position_id = ASY_gsa_wins
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_gsa_wins
+		}
+		completion_reward = {
+			add_stability = 0.2
+			if = {
+				limit = {
+					has_government = revisionist_socialism
+				}
+				add_popularity = {
+					ideology = revisionist_socialism
+					popularity = 0.1
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = social_democratism
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_socialize_the_land
+		icon = GFX_focus_socialise_the_land
+		relative_position_id = ASY_gsa_wins
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_gsa_wins
+		}
+		completion_reward = {
+			add_ideas = ASY_gsa_reforms
+		}
+	}
+	focus = {
+		id = ASY_progressive_taxation
+		icon = GFX_focus_progressive_taxation
+		relative_position_id = ASY_socialize_the_land
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_socialize_the_land
+		}
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = ASY_the_russian_rule_is_reestablished
+		icon = GFX_focus_the_russian_rule_is_reestablished
+		relative_position_id = ASY_his_holiness_is_dead
+		x = 6
+		y = 1
+		cost = 1
+		prerequisite = {
+			focus = ASY_his_holiness_is_dead
+		}
+		mutually_exclusive = {
+			focus = ASY_new_patriarch_is_elected
+			focus = ASY_agha_petros_introduces_the_martial_law
+		}
+		completion_reward = {
+			country_event = { id = asy.5 }
+			set_party_name = {
+				ideology = despotism 
+				long_name = ASY_despotism_3_party_long
+				name = ASY_despotism_3_party 
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = hakkari_war_tt
+				has_country_flag = hakkari_solved
+			}
+			has_country_leader = {
+				name = "Nikolai Baratov"
+				ruling_only = yes
+			}
+		}
+	}
+	focus = {
+		id = ASY_pacify_the_country_side
+		icon = GFX_focus_pacify_the_countryside
+		relative_position_id = ASY_the_russian_rule_is_reestablished
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_the_russian_rule_is_reestablished
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.15
+			}
+		}
+	}
+	focus = {
+		id = ASY_request_help_from_russia
+		icon = GFX_focus_request_help_from_russia
+		relative_position_id = ASY_pacify_the_country_side
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_pacify_the_country_side
+		}
+		completion_reward = {
+			capital_scope = { add_manpower = 10000 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1200
+				producer = RUS
+			}
+		}
+	}
+	focus = {
+		id = ASY_reorganize_the_caucasian_voluntary_army
+		icon = GFX_focus_reorganise_caucasian_voluntary_army
+		relative_position_id = ASY_pacify_the_country_side
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_pacify_the_country_side
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			add_war_support = 0.05
+			if = {
+				limit = {
+					has_idea = ASY_veterans_of_the_caucasian_volunteer_army_3
+				}
+				swap_ideas = {
+					remove_idea = ASY_veterans_of_the_caucasian_volunteer_army_3
+					add_idea = ASY_veterans_of_the_caucasian_volunteer_army_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ASY_veterans_of_the_caucasian_volunteer_army_1
+					add_idea = ASY_veterans_of_the_caucasian_volunteer_army_2
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_expand_the_conscriptions
+		icon = GFX_focus_expand_the_conscriptions
+		relative_position_id = ASY_pacify_the_country_side
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_pacify_the_country_side
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ASY_veterans_of_the_caucasian_volunteer_army_2
+				}
+				swap_ideas = {
+					remove_idea = ASY_veterans_of_the_caucasian_volunteer_army_2
+					add_idea = ASY_veterans_of_the_caucasian_volunteer_army_4
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = ASY_veterans_of_the_caucasian_volunteer_army_1
+					add_idea = ASY_veterans_of_the_caucasian_volunteer_army_3
+				}
+			}
+		}
+	}
+	focus = {
+		id = ASY_start_the_caucasus_liberation_campaign
+		icon = GFX_focus_start_caucasus_liberation_campaign
+		relative_position_id = ASY_pacify_the_country_side
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_request_help_from_russia
+		}
+		prerequisite = {
+			focus = ASY_reorganize_the_caucasian_voluntary_army
+		}
+		prerequisite = {
+			focus = ASY_expand_the_conscriptions
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.4
+			353 = { add_claim_by = ASY }
+			354 = { add_claim_by = ASY }
+			230 = { add_claim_by = ASY }
+			890 = { add_claim_by = ASY }
+			891 = { add_claim_by = ASY }
+			955 = { add_claim_by = ASY }
+			create_wargoal = {
+				target = ARM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = ARM
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = ASY_return_baku
+		icon = GFX_focus_return_baku
+		relative_position_id = ASY_start_the_caucasus_liberation_campaign
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_start_the_caucasus_liberation_campaign
+		}
+		bypass = {
+			CCD = {
+				is_subject_of = RUS
+			}
+		}
+		available = {
+			controls_state = 229
+			is_subject = no
+		}
+		completion_reward = {
+			229 = { add_claim_by = ASY }
+		}
+	}
+	focus = {
+		id = ASY_put_end_to_the_kavkazs_madness
+		icon = GFX_focus_put_end_to_kavkaz_madness
+		relative_position_id = ASY_start_the_caucasus_liberation_campaign
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_start_the_caucasus_liberation_campaign
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			231 = { add_claim_by = ASY }
+			create_wargoal = {
+				target = KAV
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KAV
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = ASY_end_of_the_caucasian_tatars_freedom
+		icon = GFX_focus_end_the_caucasian_tatar_freedom
+		relative_position_id = ASY_start_the_caucasus_liberation_campaign
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = ASY_start_the_caucasus_liberation_campaign
+		}
+		bypass = {
+			AZR = { exists = no }
+		}
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			419 = { add_claim_by = ASY }
+			420 = { add_claim_by = ASY }
+			960 = { add_claim_by = ASY }
+			create_wargoal = {
+				target = AZR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = AZR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = ASY_mother_russia_greets_her_sons
+		icon = GFX_focus_mother_russia_greats_her_sons
+		relative_position_id = ASY_start_the_caucasus_liberation_campaign
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = {
+			focus = ASY_return_baku
+		}
+		prerequisite = {
+			focus = ASY_put_end_to_the_kavkazs_madness
+		}
+		prerequisite = {
+			focus = ASY_end_of_the_caucasian_tatars_freedom
+		}
+		available = {
+			controls_state = 353
+			controls_state = 354
+			controls_state = 230
+			controls_state = 890
+			controls_state = 891
+			controls_state = 955
+			controls_state = 229
+			controls_state = 231
+			controls_state = 419
+			controls_state = 420
+			controls_state = 960
+			ARM = { exists = no }
+			CCD = { exists = no }
+			KAV = { exists = no }
+			AZR = { exists = no }
+			OR = {
+				any_neighbor_country = { original_tag = RUS }
+				AND = {
+					any_neighbor_country = { original_tag = DKB }
+					DKB = { is_subject_of = RUS }
+				}
+			}
+			has_war = no
+			is_subject = no
+		}
+		completion_reward = {
+			add_political_power = 300
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+				}
+				RUS = {
+					set_autonomy = {
+						target = ASY
+						autonomous_state = autonomy_dominion
+						#freedom_level = 0.5
+					}
+				}
+			}
+			else = {
+				RUS = {
+					puppet = ASY
+				}
+			}
+			every_owned_state = {
+				limit = {
+					NOT = { is_core_of = ASY }
+					is_claimed_by = ASY
+				}
+				add_core_of = ASY
+			}
+		}
+	}
+}

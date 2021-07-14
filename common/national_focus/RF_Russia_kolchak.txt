@@ -1,0 +1,1783 @@
+focus_tree = {
+	id = rus_kolchak
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 20
+			tag = RUS
+		}
+	}
+	continuous_focus_position = { x = 5800 y = 1000 }
+	shared_focus = RUS_anewrussianarmy
+	shared_focus = RUS_transpolarflights
+	shared_focus = RUS_expandpetrogradnavalacademy
+	shared_focus = RUS_unify_empire
+	
+	default = no
+
+	focus = {	
+		id = RUS_kolchak_continues
+		icon = GFX_focus_RUS_kolchak_continues
+		available = {
+		}
+		bypass = {
+		}	
+		x = 19
+		y = 0
+		cost = 1
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_kolchak_continues"
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	focus = {	
+		id = RUS_national_assembly
+		icon = GFX_focus_RUS_national_assembly
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_kolchak_continues 
+		}
+		bypass = {
+		}	
+		x = 19
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_national_assembly"
+			remove_ideas = unstable_political_system
+			add_ideas = RUS_kolchak_assembly
+			set_party_name = { 
+				ideology = despotism 
+				long_name = RUS_despotism_party_emperor_long 
+				name = RUS_despotism_party_emperor 
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_eternal_regent
+		icon = GFX_focus_RUS_eternal_regent
+		available = {
+			
+		}
+		prerequisite = { 
+		    focus = RUS_national_assembly
+		}
+		mutually_exclusive = {
+			focus = RUS_tsar_puppet
+		}
+		bypass = {
+		}	
+		x = 22
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_eternal_regent"
+			add_stability = -0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.05
+			}
+			add_ideas = RUS_kolchak_cult
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = RUS_kolchakdead
+					}
+					create_country_leader = {
+	    			    name = "Ivan Romanovsky"
+	    			    desc = "POLITICS_Ivan_Romanovsky_DESC"
+	    			    picture = "Portrait_RUS_Ivan_Romanovsky_despotic.tga"
+	    			    expire = "1965.1.1"
+	    			    ideology = military_dictatorship
+	    			}
+				}
+				else = {
+					create_country_leader = {
+						name = "Aleksandr Kolchak"
+						desc = "POLITICS_ALEXANDR_KOLCHAK_DESC"
+						picture = "Portrait_Russia_Alexandr_Kolchak_despotic.tga"
+						expire = "1965.1.1"
+						ideology = military_dictatorship
+						traits = {
+						}
+					}
+				}
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_expand_okhrana
+		icon = GFX_focus_RUS_expand_okhrana
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_eternal_regent
+		}
+		bypass = {
+		}	
+		x = 21
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_expand_okhrana"
+			add_ideas = RUS_okhrana_operations
+		}
+	}
+	focus = {	
+		id = RUS_expand_osvag
+		icon = GFX_focus_RUS_expand_osvag
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_eternal_regent
+		}
+		bypass = {
+		}	
+		x = 23
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_expand_osvag"
+			swap_ideas = {
+				remove_idea = RUS_kolchak_cult
+				add_idea = RUS_kolchak_cult_1
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_cult_kolchak
+		icon = GFX_focus_RUS_cult_kolchak
+		available = {
+		}
+		prerequisite = { 
+				focus = RUS_expand_osvag
+		}
+		prerequisite = { 
+				focus = RUS_expand_okhrana			
+		}
+		bypass = {
+		}	
+		x = 22
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			NOT = { has_country_flag = RUS_kolchakdead }
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_cult_kolchak"
+			swap_ideas = {
+				remove_idea = RUS_kolchak_cult_1
+				add_idea = RUS_kolchak_cult_2
+			}
+		}
+	}
+	focus = {	
+		id = RUS_tsar_puppet
+		icon = GFX_focus_RUS_tsar_puppet
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_national_assembly
+		}
+		mutually_exclusive = {
+			focus = RUS_eternal_regent
+		}
+		bypass = {
+		}	
+		x = 16
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_tsar_puppet"
+			add_stability = 0.1
+			add_ideas = RUS_emperor_return
+			country_event = {
+				id = russia.10
+			}
+			hidden_effect = {
+				every_country = {
+					limit = { is_ai = no }
+					country_event = {
+						id = news.29
+						days = 2
+					}
+				}
+			}
+		}
+	}
+	focus = {	
+		id = RUS_reign_not_rule
+		icon = GFX_focus_RUS_reign_not_rule
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_tsar_puppet		
+		}
+		bypass = {
+		}	
+		x = 15
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_reign_not_rule"
+			swap_ideas = {
+				remove_idea = RUS_emperor_return
+				add_idea = RUS_emperor_return_1
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_reorganize_council
+		icon = GFX_focus_RUS_reorganize_council
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_tsar_puppet		
+		}
+		bypass = {
+		}	
+		x = 17
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_reorganize_council"
+			swap_ideas = {
+				remove_idea = RUS_kolchak_assembly
+				add_idea = RUS_kolchak_assembly_1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_illusion_order
+		icon = GFX_focus_RUS_illusion_order
+		available = {
+		}
+		prerequisite = { 
+				focus = RUS_reorganize_council
+		}
+		prerequisite = { 
+				focus = RUS_reign_not_rule
+		}
+		bypass = {
+		}	
+		x = 16
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_illusion_order"
+			swap_ideas = {
+				remove_idea = RUS_emperor_return_1
+				add_idea = RUS_emperor_return_2
+			}
+		}
+	}
+	focus = {	
+		id = RUS_revise_policy
+		icon = GFX_focus_RUS_revise_policy
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_tsar_puppet
+			focus = RUS_eternal_regent
+		}
+		bypass = {
+		}	
+		x = 19
+		y = 4
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_revise_policy"
+			add_political_power = -100
+			every_state = {
+				limit = {
+					is_core_of = SRU
+				}
+				add_core_of = RUS
+			}
+		}
+	}
+######################################################LIBERALIZATION##############################################################	
+	focus = {	
+		id = RUS_liberalization_lead_prosperity
+		icon = GFX_focus_RUS_liberalization_lead_prosperity
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_revise_policy
+		}
+		mutually_exclusive = {
+			focus = RUS_alt_black_bloc
+		}
+		bypass = {
+		}	
+		x = 30
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_liberalization_lead_prosperity"
+			add_dynamic_modifier = {
+				modifier = RUS_neo_stolypinism
+				scope = RUS
+			}
+			set_politics = {
+				ruling_party = right_authoritarianism
+			}
+		}
+	}
+	focus = {	
+		id = RUS_trip_braykevich_europe
+		icon = GFX_focus_RUS_trip_braykevich_europe
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_liberalization_lead_prosperity
+		}
+		bypass = {
+		}	
+		x = 25
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {	
+		id = RUS_gentlemen_london
+		icon = GFX_focus_RUS_gentlemen_london
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_trip_braykevich_europe
+		}
+		bypass = {
+		}	
+		x = 23
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			add_to_variable = {
+				var = RUS_neo_stolypinism_consumer_goods
+				value = -0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_consumer_goods_tooltip"
+		}
+	}
+	focus = {	
+		id = RUS_good_friends_low_countries
+		icon = GFX_focus_RUS_good_friends_low_countries
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_gentlemen_london
+		}
+		bypass = {
+		}	
+		x = 23
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			HOL = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			add_to_variable = {
+				var = RUS_neo_stolypinism_speed_bunker
+				value = 0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_speed_bunker_tooltip"
+		}
+	}
+	focus = {	
+		id = RUS_scandinavia_beautiful
+		icon = GFX_focus_RUS_scandinavia_beautiful
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_trip_braykevich_europe
+		}
+		bypass = {
+		}	
+		x = 25
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			FIN = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			give_guarantee = FIN
+			SWE = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			give_guarantee = SWE
+		}
+	}
+	focus = {	
+		id = RUS_financial_giant_usa
+		icon = GFX_focus_RUS_financial_giant_usa
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_good_friends_low_countries
+		}
+		prerequisite = { 
+		    focus = RUS_scandinavia_beautiful
+		}
+		prerequisite = { 
+		    focus = RUS_brothers_czechoslovaks
+		}
+		bypass = {
+		}	
+		x = 25
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			add_to_variable = {
+				var = RUS_neo_stolypinism_consumer_goods
+				value = -0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_consumer_goods_tooltip_0"
+			add_ideas = free_trade
+		}
+	}
+	focus = {	
+		id = RUS_attract_foreign_talents
+		icon = GFX_focus_RUS_attract_foreign_talents
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_financial_giant_usa
+		}
+		bypass = {
+		}	
+		x = 25
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_migration
+		}
+	}
+	focus = {	
+		id = RUS_all_roads_lead_rome
+		icon = GFX_focus_RUS_all_roads_lead_rome
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_trip_braykevich_europe
+		}
+		bypass = {
+		}	
+		x = 27
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+			add_to_variable = {
+				var = RUS_neo_stolypinism_speed_industrial_complex
+				value = 0.05
+			}
+			add_to_variable = {
+				var = RUS_neo_stolypinism_speed_infrastructure
+				value = 0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_speed_industrial_complex_tooltip_1"
+		}
+	}
+	focus = {	
+		id = RUS_brothers_czechoslovaks
+		icon = GFX_focus_RUS_brothers_czechoslovaks
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_all_roads_lead_rome
+		}
+		bypass = {
+		}	
+		x = 27
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			CZE = {
+				add_opinion_modifier = {
+					modifier = huge_increase
+					target = RUS
+				}
+			}
+		}
+	}
+	focus = {	
+		id = RUS_abolish_peasant_communities
+		icon = GFX_focus_RUS_abolish_peasant_communities
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_liberalization_lead_prosperity
+		}
+		bypass = {
+		}	
+		x = 30
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_stability = -0.05
+		}
+	}
+	focus = {	
+		id = RUS_available_loans
+		icon = GFX_focus_RUS_available_loans
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_abolish_peasant_communities
+		}
+		bypass = {
+		}	
+		x = 29
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_peasant_loans
+		}
+	}	
+	focus = {	
+		id = RUS_empower_kulaks
+		icon = GFX_focus_RUS_empower_kulaks
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_available_loans
+		}
+		bypass = {
+		}	
+		x = 29
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_neo_stolypinism_speed_infrastructure
+				value = 0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_speed_infrastructure_tooltip"
+		}
+	}	
+	focus = {	
+		id = RUS_free_universal_education
+		icon = GFX_focus_RUS_free_universal_education
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_abolish_peasant_communities
+		}
+		bypass = {
+		}	
+		x = 31
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+	focus = {	
+		id = RUS_agritechnical_stations
+		icon = GFX_focus_RUS_agritechnical_stations
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_free_universal_education
+		}
+		bypass = {
+		}	
+		x = 31
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_support_migration_outskirts
+		icon = GFX_focus_RUS_support_migration_outskirts
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_empower_kulaks
+		}
+		prerequisite = { 
+		    focus = RUS_agritechnical_stations
+		}
+		bypass = {
+		}	
+		x = 30
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_industrial_migration
+		}
+	}	
+	focus = {	
+		id = RUS_eliminate_malcontented_politicians
+		icon = GFX_focus_RUS_eliminate_malcontented_politicians
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_liberalization_lead_prosperity
+		}
+		bypass = {
+		}
+		x = 33
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_neo_stolypinism_drift_defense
+				value = -0.05
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.25
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.25
+			}
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.25
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.25
+			}
+		}
+	}
+	focus = {	
+		id = RUS_cultural_authonomy_minorities
+		icon = GFX_focus_RUS_cultural_authonomy_minorities
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_eliminate_malcontented_politicians
+		}
+		bypass = {
+		}
+		x = 33
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.15
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {	
+		id = RUS_end_discrimination_jews
+		icon = GFX_focus_RUS_end_discrimination_jews
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_cultural_authonomy_minorities
+		}
+		bypass = {
+		}
+		x = 33
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.05
+			}
+			add_political_power = 100
+		}
+	}
+	focus = {	
+		id = RUS_ban_paramilitaries
+		icon = GFX_focus_RUS_ban_paramilitaries
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_end_discrimination_jews
+		}
+		bypass = {
+		}
+		x = 33
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_ban_on_paramilitaries
+		}
+	}
+	focus = {	
+		id = RUS_expand_power_duma
+		icon = GFX_focus_RUS_expand_power_duma
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_ban_paramilitaries
+		}
+		bypass = {
+		}
+		x = 33
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_strenghten_duma
+		}
+	}
+	focus = {	
+		id = RUS_oligarchic_connections
+		icon = GFX_focus_RUS_oligarchic_connections
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_liberalization_lead_prosperity
+		}
+		bypass = {
+		}
+		x = 36
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			remove_ideas = monopolized_industry
+		}
+	}
+	focus = {	
+		id = RUS_deregulation
+		icon = GFX_focus_RUS_deregulation
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_oligarchic_connections
+		}
+		bypass = {
+		}
+		x = 35
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_neo_stolypinism_consumer_goods
+				value = -0.05
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_consumer_goods_tooltip_1"
+		}
+	}
+	focus = {	
+		id = RUS_toughen_penalties
+		icon = GFX_focus_RUS_toughen_penalties
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_deregulation
+		}
+		bypass = {
+		}
+		x = 35
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_harsh_penalties
+		}
+	}
+	focus = {	
+		id = RUS_adjusting_structures
+		icon = GFX_focus_RUS_adjusting_structures
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_oligarchic_connections
+		}
+		bypass = {
+		}
+		x = 36
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_to_variable = {
+				var = RUS_neo_stolypinism_speed_buildings
+				value = 0.1
+			}
+			custom_effect_tooltip = "RUS_neo_stolypinism_speed_buildings_tooltip"
+		}
+	}
+	focus = {	
+		id = RUS_resource_export
+		icon = GFX_focus_RUS_resource_export
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_oligarchic_connections
+		}
+		bypass = {
+		}
+		x = 37
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_exportfocus
+		}
+	}
+	focus = {	
+		id = RUS_oil_flow
+		icon = GFX_focus_RUS_oil_flow
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_resource_export
+		}
+		bypass = {
+		}
+		x = 37
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = RUS_oil_must_flow
+		}
+	}
+#######################################################BLACK BLOC#################################################################
+
+	focus = {	
+		id = RUS_alt_black_bloc
+		icon = GFX_focus_RUS_black_bloc
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_revise_policy
+		}
+		mutually_exclusive = {
+			focus = RUS_liberalization_lead_prosperity
+		}
+		bypass = {
+		}	
+		x = 8
+		y = 5
+		cost = 1
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_black_bloc"
+			set_politics = {
+				ruling_party = despotism
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {	
+		id = RUS_alt_preparations_for_war
+		icon = GFX_focus_RUS_preparations_for_war
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_black_bloc
+		}
+		bypass = {
+		}	
+		x = 3
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_preparations_for_war"
+			add_war_support = 0.1
+			add_manpower = 100000
+		}
+	}
+	focus = {	
+		id = RUS_alt_black_hundreds_countryside
+		icon = GFX_focus_RUS_black_hundreds_countryside
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_preparations_for_war
+		}
+		bypass = {
+		}	
+		x = 2
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_black_hundreds_countryside"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_close_opposition_press
+		icon = GFX_focus_RUS_close_opposition_press
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_preparations_for_war
+		}
+		bypass = {
+		}	
+		x = 4
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_close_opposition_press"
+			add_popularity = {
+				ideology = liberalism
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = conservatism
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = accelerationism
+				popularity = -0.10
+			}
+			hidden_effect = {
+				country_event = {
+					id = russia.481
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_introduce_martial_law
+		icon = GFX_focus_RUS_introduce_martial_law 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_black_hundreds_countryside
+		}
+		prerequisite = { 
+		    focus = RUS_alt_close_opposition_press
+		}
+		bypass = {
+		}	
+		x = 3
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_introduce_martial_law"
+			add_political_power = -100
+			add_stability = -0.15
+		}
+	}
+	focus = {	
+		id = RUS_alt_drumhead_court-martial
+		icon = GFX_focus_RUS_drumhead_court-martial
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_introduce_martial_law
+		}
+		bypass = {
+		}	
+		x = 2
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_drumhead_court-martial"
+			add_ideas = RUS_drumhead_court_martial
+		}
+	}	
+	focus = {	
+		id = RUS_alt_death_revolutionaries
+		icon = GFX_focus_RUS_death_revolutionaries
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_drumhead_court-martial
+		}
+		bypass = {
+		}	
+		x = 1
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_death_revolutionaries"
+			add_ideas = SRU_black_terror
+		}
+	}
+	focus = {	
+		id = RUS_alt_patriotism_in_press
+		icon = GFX_focus_RUS_patriotism_in_press 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_introduce_martial_law
+		}
+		bypass = {
+		}	
+		x = 3
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_patriotism_in_press"
+			add_timed_idea = {
+				idea = RUS_state_propaganda
+				days = 140
+			}  
+		}
+	}
+	focus = {	
+		id = RUS_alt_nationalize_war_industry
+		icon = GFX_focus_RUS_nationalize_war_industry
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_introduce_martial_law
+		}
+		bypass = {
+		}	
+		x = 4
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_nationalize_war_industry"
+			random_owned_controlled_state = {
+				limit = {
+				free_building_slots = {
+				building = arms_factory size > 0 include_locked = yes }
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory level = 2 instant_build = yes 
+				} 
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_observe_industry
+		icon = GFX_focus_RUS_observe_industry 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_nationalize_war_industry
+		}
+		bypass = {
+		}	
+		x = 5
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_observe_industry"
+			add_political_power = 100
+			add_stability = 0.05
+			add_ideas = SRU_industry_supervising
+			
+		}
+	}
+	focus = {	
+		id = RUS_alt_militarization_nation
+		icon = GFX_focus_RUS_militarization_nation
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_death_revolutionaries
+		}
+		prerequisite = { 
+		    focus = RUS_alt_patriotism_in_press
+		}
+		prerequisite = { 
+		    focus = RUS_alt_observe_industry
+		}
+		bypass = {
+		}	
+		x = 3
+		y = 11
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+			}
+		}
+
+	}
+	focus = {	
+		id = RUS_alt_solve_jewish_problem
+		icon = GFX_focus_RUS_solve_jewish_problem
+		prerequisite = { 
+		    focus = RUS_alt_black_bloc
+		}
+		bypass = {
+		}	
+		x = 6
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			ISR = {
+				exists = yes
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_solve_jewish_problem"
+			add_political_power = 100
+			add_manpower = -22115
+			country_event = { id = russia.17 }
+		}
+	}
+	focus = {	
+		id = RUS_alt_emigration_palestine
+		icon = GFX_focus_RUS_emigration_palestine 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_solve_jewish_problem
+		}
+		bypass = {
+		}	
+		x = 6
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_emigration_palestine"
+			add_political_power = 100
+			add_stability = 0.1
+			add_manpower = -43324
+			ISR = {
+				add_manpower = 65439
+				add_timed_idea = {
+					idea = isr_rus_migration
+					days = 730
+				}
+			}
+			country_event = { id = russia.18 }
+		}
+	}
+	focus = {	
+		id = RUS_alt_improve_life_conditions
+		icon = GFX_focus_RUS_improve_life_conditions
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_black_bloc
+		}
+		bypass = {
+		}	
+		x = 10
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_improve_life_conditions"
+			add_political_power = -100
+			add_stability = 0.15
+			add_popularity = {
+			ideology = despotism
+			popularity = 0.15
+			}
+
+		}
+	}
+	focus = {	
+		id = RUS_alt_sell_state_lands
+		icon = GFX_focus_RUS_sell_state_lands 
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_improve_life_conditions
+		}
+		bypass = {
+		}	
+		x = 8
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_sell_state_lands"
+			random_owned_controlled_state = { 
+				limit = { arms_factory > 0 }
+				remove_building = { type = arms_factory  level = 1 }				
+			}
+			add_political_power = 150
+		}
+	}
+	focus = {	
+		id = RUS_alt_support_our_bisons
+		icon = GFX_focus_RUS_support_our_bisons
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_sell_state_lands
+		}
+		bypass = {
+		}	
+		x = 8
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_support_our_bisons"
+			add_war_support = 0.10
+			add_political_power = -50
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_nationalist_education
+		icon = GFX_focus_RUS_nationalist_education
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_improve_life_conditions
+		}
+		bypass = {
+		}	
+		x = 10
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_nationalist_education"
+			add_research_slot = 1
+		}
+	}
+	focus = {	
+		id = RUS_alt_promote_triune_formula
+		icon = GFX_focus_RUS_promote_triune_formula
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_nationalist_education
+		}
+		bypass = {
+		}	
+		x = 10
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_promote_triune_formula"
+			add_ideas = SRU_triune_formula
+		}
+	}
+	focus = {	
+		id = RUS_alt_national_capitalism
+		icon = GFX_focus_RUS_national_capitalism
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_improve_life_conditions
+		}
+		bypass = {
+		}	
+		x = 12
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_national_capitalism"
+			add_ideas = SRU_national_capitalism
+		}
+	}
+	focus = {	
+		id = RUS_alt_restrict_foreign_capital
+		icon = GFX_focus_RUS_restrict_foreign_capital
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_national_capitalism
+		}
+		bypass = {
+		}	
+		x = 12
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_restrict_foreign_capital"
+			add_political_power = -50
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = SRU_national_capitalism
+				add_idea = SRU_national_capitalism1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_collapse_coalition
+		icon = GFX_focus_RUS_collapse_coalition
+		available = {
+			has_stability < 0.4
+		}
+		prerequisite = { 
+		    focus = RUS_alt_black_bloc
+		}
+		bypass = {
+		}	
+		x = 16
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_collapse_coalition"
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.15
+			}
+			add_stability = -0.10
+		}
+	}
+	focus = {	
+		id = RUS_alt_VNGP_coaltion
+		icon = GFX_focus_RUS_VNGP_coaltion
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_collapse_coalition
+		}
+		mutually_exclusive = {
+			focus = RUS_alt_SRNO_coaltion
+		}
+		bypass = {
+		}	
+		x = 14
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_VNGP_coaltion"
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_new_restrictions
+		icon = GFX_focus_RUS_new_restrictions
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_VNGP_coaltion
+		}
+		bypass = {
+		}	
+		x = 14
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_new_restrictions"
+			add_political_power = 100
+			add_war_support = 0.10
+			add_stability = 0.05
+		}
+	}
+	focus = {	
+		id = RUS_alt_SRNO_coaltion
+		icon = GFX_focus_RUS_SRNO_coaltion
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_collapse_coalition
+		}
+		mutually_exclusive = {
+			focus = RUS_alt_VNGP_coaltion
+		}
+		bypass = {
+		}	
+		x = 18
+		y = 7
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_SRNO_coaltion"
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.10
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_remove_restrictions
+		icon = GFX_focus_RUS_remove_restrictions
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_SRNO_coaltion
+		}
+		bypass = {
+		}	
+		x = 18
+		y = 8
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_remove_restrictions"
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.1
+			}
+			add_political_power = 100
+			add_stability = -0.1
+		}
+	}
+	focus = {	
+		id = RUS_alt_decentralize_state
+		icon = GFX_focus_RUS_decentralize_state
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_new_restrictions
+			focus = RUS_alt_remove_restrictions
+		}
+		bypass = {
+		}	
+		x = 16
+		y = 9
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_decentralize_state"
+			add_ideas = SRU_decentralized
+		}
+	}
+	focus = {	
+		id = RUS_alt_give_lands
+		icon = GFX_focus_RUS_give_lands
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_new_restrictions
+		}
+		prerequisite = { 
+		    focus = RUS_alt_decentralize_state
+		}
+		bypass = {
+		}	
+		x = 14
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_give_lands"
+			add_political_power = -50
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory size > 0 include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+			}
+		}
+	}
+	focus = {	
+		id = RUS_alt_national_kagal
+		icon = GFX_focus_RUS_national_kagal
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_alt_remove_restrictions
+		}
+		prerequisite = { 
+		    focus = RUS_alt_decentralize_state
+		}
+		bypass = {
+		}	
+		x = 18
+		y = 10
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_national_kagal"
+			add_ideas = SRU_national_kagal
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,237 @@
+﻿division_template = {
+	name = "Bo Binh" # Default
+	division_names_group = VIN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = { }
+}
+division_template = {
+	name = "Phao Binh" # Default with Artilleries
+	division_names_group = VIN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Cong Binh" # Default with Light Tanks
+	division_names_group = VIN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		light_armor = { x = 3 y = 0 }
+	}
+	support = { }
+}
+division_template = {
+	name = "Hien Binh Hoang Gia" # Imperial Guard Unit
+	division_names_group = VIN_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Thuy Quan" #Marines
+	division_names_group = VIN_MAR_01
+	regiments = {
+		marine = { x = 0 y = 0 }
+		marine = { x = 0 y = 1 }
+		marine = { x = 0 y = 2 }
+		marine = { x = 1 y = 0 }
+		marine = { x = 1 y = 1 }
+		marine = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Ky Binh"	#Cavalry
+	division_names_group = VIN_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Bo Binh Co Gioi" #Motorized
+	division_names_group = VIN_CAV_01
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+division_template = {
+	name = "Tang - Thiet giap" #Armored
+	division_names_group = VIN_CAV_01
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = { }
+	priority = 2
+}
+units = {
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4379
+		division_template = "Ky Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Bo Binh Co Gioi"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Hien Binh Hoang Gia"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4075
+		division_template = "Hien Binh Hoang Gia"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 4379
+		division_template = "Cong Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1469
+		division_template = "Cong Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12433
+		division_template = "Cong Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7075
+		division_template = "Phao Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1390
+		division_template = "Phao Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		division_name = { # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1374
+		division_template = "Phao Binh"
+		start_experience_factor = 0.20
+	}
+	division = {
+		name = "Lu doan 1 Linh kho do Nam ky"
+		location = 4401
+		division_template = "Tang - Thiet giap"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}
+air_wings = {
+	816 = {
+		fighter_equipment_0 = {
+			owner = "DAI" 
+			amount = 150
+		}
+	}
+}

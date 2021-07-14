@@ -1,0 +1,22 @@
+
+state={
+	id=583
+	name="STATE_583" # Kustanay
+	manpower = 181384
+
+	state_category = rural
+
+	history={
+		owner = STE
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = STE
+		#add_core_of = KAZ
+	}
+
+	provinces={
+		1272 1276 1303 1331 1363 4337 4369 7357 10312 12115 12143 12257 12266 12285
+	}
+}

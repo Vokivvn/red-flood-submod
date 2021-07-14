@@ -1,0 +1,187 @@
+bookmarks = {
+	bookmark = {
+		name = "SETTING_SUN_NAME"
+		desc = "SETTING_SUN_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "JAP"
+		default = yes
+		"JAP"={
+			history = "JAP_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				JAP_sunset_crash
+				JAP_economic_miracle
+				JAP_colonial_management
+			}
+			focuses = {
+				JAP_eigen_restoration
+				JAP_rising_sun
+				JAP_kokutaiseitai
+			}
+		}
+		"ZHR"={
+			history = "ZHR_SETTING_SUN_DESC"
+			ideology = social_democratism
+			ideas = {
+				ZHR_famine
+				ZHR_permanent_revolution
+				ZHR_We
+			}
+			focuses = {
+				ZHR_we
+				ZHR_soberuptheworkers
+				ZHR_atlasshruggednomore
+			}
+		}
+		"UPI"={
+			history = "UPI_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				UPI_brutal_putdowns
+				UPI_shadow_gallipoli
+				UPI_alone_unsupplied_cutoff
+			}
+			focuses = {
+				UPI_old_british_values
+				UPI_churchill_contemplation
+				UPI_new_declarations
+			}
+		}
+		"MAN"={
+			history = "MAN_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+			
+			}
+			focuses = {
+				MAN_end_zongchangs_house_arrest
+				MAN_corporate_review
+				MAN_freedom
+			}
+		}
+		"MON"={
+			history = "MON_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+				MON_recordcorrected 
+				MON_nomadshock 
+				MON_acespades 
+			}
+			focuses = {
+				Mongolia_opposethemadbaron
+				Mongolia_chineseempire
+				Mongolia_nomadshocktroops
+			}
+		}
+		"KOR"={
+			history = "KOR_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				KOR_jap_colony
+				KOR_nationalists_divided
+				KOR_republicanism
+			}
+			focuses = {
+				IKR_making_the_best_of_the_worst
+				IKR_status_of_cultural_preservation
+				IKR_amend_the_japanese_migration_policy
+			}
+		}
+		"PER"={
+			history = "PER_SETTING_SUN_DESC"
+			ideology = right_authoritarianism
+			ideas = {
+				
+			}
+			focuses = {
+				
+			}
+		}
+		"TAN"={
+			minor = yes
+			history = "TAN_SETTING_SUN_DESC"
+			ideology = reactionism
+			ideas = {
+				TAN_eurasian_army
+				TAN_industrial_dinosaur
+				TAN_Uyighur_defectors
+			}
+			focuses = {
+				TAN_mongolbrutality
+				TAN_hirerussianrefugees
+				TAN_ungernexpress
+			}
+		}
+		"MO2"={
+			minor = yes
+			history = "MO2_SETTING_SUN_DESC"
+			ideology = despotism
+			ideas = {
+				MO2_border_raids
+				MO2_wild_far_east
+				MO2_white_expats
+			}
+			focuses = {
+				Transbaikal_thetrial
+				Transbaikal_expandtherailway
+				Transbaikal_theminorities
+			}
+		}
+		"ALT"={
+			minor = yes
+			history = "ALT_DESC_MENU"
+			ideology = right_authoritarianism
+			ideas = {
+				ALT_chaos
+			}
+			focuses = {
+				ALT_tsaristmythos
+				ALT_kagyrodovsurvives
+				ALT_millenariancult
+			}
+		}
+		"KCK"={
+			minor = yes
+			history = "KCK_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				KCK_the_britannia_scheme
+				KCK_proclaim_empire_in_exile
+				KCK_news_from_central_russia
+			}
+		}
+		"SIB"={
+			minor = yes
+			history = "SIB_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				SIB_europe_of_our_own
+				SIB_long_live_governor_general
+				SIB_age_of_solidarity
+			}
+		}
+		"STE"={
+			minor = yes
+			history = "STE_DESC_MENU"
+			ideology = despotism
+			ideas = {
+				
+			}
+			focuses = {
+				STE_governor_rules_forever
+				STE_ukrainian_demonstrations
+				STE_annenkovs_cossack_rage
+			}
+		}
+        "---"={
+			history = "OTHER_THE_SETTING_SUN_DESC"
+		}
+}
+}

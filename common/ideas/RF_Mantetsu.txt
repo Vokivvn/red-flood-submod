@@ -1,0 +1,853 @@
+#####################
+#	Mantetsu - Baba	#
+#####################
+
+ideas = {
+	country = {
+		MAN_corporate_playground = {
+			picture = jap_zaibatsu
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_factor = -0.07
+				stability_factor = -0.12
+			}
+		}
+		MAN_manchurian_guerillas = {
+			picture = chi_army_corruption2
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				political_power_gain = -0.2
+				army_org_factor = -0.04
+				army_core_attack_factor = -0.08
+				army_core_defence_factor = -0.08
+			}
+		}
+		MAN_kwantung_abuses = {
+			picture = chi_war_of_resistance2
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.05
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = 0.15
+				
+			}
+		}
+		MAN_harbin_refugees = {
+			picture = prc_low_popular_support2
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.1
+				conscription_factor = 0.01
+			}
+		}
+		MAN_imperial_base = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+			
+			}
+		}
+		MAN_families = {
+			picture = jap_zaibatsu_ally
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		MAN_new_blood = {
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				conscription_factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+		MAN_odysseus = {
+			picture = generic_coastal_navy
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				navy_max_range_factor = 0.15
+				navy_fuel_consumption_factor = -0.05
+			}
+		}
+		MAN_reach = {
+			picture = generic_air_research
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				air_range_factor = 0.15
+				air_fuel_consumption_factor = -0.05
+			}
+		}
+		MAN_fighters = {
+			picture = generic_fighter_production_diverted
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		MAN_profesh = {
+			picture = generic_infantry_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				army_org_factor = 0.1
+				army_org_regain = 0.05
+			}
+		}
+		MAN_spirits = {
+			picture = strategic_bombing_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				air_strategic_bomber_bombing_factor = 0.05
+				air_strategic_bomber_night_penalty = -0.05
+			}
+		}
+		MAN_bones = {
+			picture = air_war_plans_division_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				air_close_air_support_attack_factor = 0.05
+				air_strategic_bomber_attack_factor = 0.05
+			}
+		}
+		MAN_tanks = {
+			picture = generic_armor
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+			}
+		}
+		MAN_com_off = {
+			picture = tfv_can_conscription_crisis
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				experience_gain_army_factor = -0.1
+				training_time_army_factor = 0.1
+				promote_cost_factor = -0.5
+			}
+		}
+		MAN_jldg = {
+			picture = man_militarism
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				planning_speed = 0.1
+				army_org_regain = 0.05
+			}
+		}
+		MAN_crews = {
+			picture = generic_air_payment
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				air_mission_efficiency = 0.2
+			}
+		}
+		MAN_no_mtg_mines = {
+			picture = generic_sea_focused_navy
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+				not = { has_dlc = "Man the Guns" }
+			}
+			modifier = {
+				screening_efficiency = 0.1
+			}
+		}
+		MAN_foreign_exp = {
+			picture = generic_reserve_divisions
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+				not = { has_dlc = "Man the Guns" }
+			}
+			modifier = {
+				license_air_purchase_cost = -0.15
+			}
+		}
+		MAN_born_leaders = {
+			picture = generic_army_war_college
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				political_power_gain = 0.25
+				experience_loss_factor = -0.1
+			}
+		}
+		MAN_kenpetai = {
+			picture = generic_oppression
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				boost_resistance_factor = 0.2
+			}
+		}
+		MAN_civil_admin = {
+			picture = generic_neutrality_drift_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				political_power_gain = 0.25
+				right_authoritarianism_drift = 0.04
+			}
+		}
+		MAN_marshal_model = {
+			picture = general_staff
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				political_power_gain = -0.25
+				despotism_drift = 0.04
+			}
+		}
+		MAN_corporatocracy = {
+			picture = generic_political_support
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				accelerationism_drift = 0.04
+				drift_defence_factor = 0.1
+				research_speed_factor = 0.03
+			}
+		}
+		MAN_racial = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				non_core_manpower = 0.25
+				stability_factor = 0.1
+				surrender_limit = -0.1
+			}
+		}
+		MAN_chinese_officers = {
+			picture = generic_reserve_divisions
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				promote_cost_factor = -0.25
+				army_morale_factor = 0.1
+			}
+		}
+		MAN_buildfaster = {
+			picture = ast_all_in
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		MAN_business = {
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		MAN_agri_inv = {
+			picture = generic_agrarian_reform
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				monthly_population = 0.03
+				production_factory_efficiency_gain_factor = -0.05
+				conscription_factor = 0.01
+				stability_factor = 0.03
+			}
+		}
+		japs_b_gone = {
+			picture = generic_secret_police
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				monthly_population = -0.03
+				stability_factor = -0.03
+				conscription_factor = -0.03
+			}
+		}
+		MAN_schools = {
+			picture = jap_supremacy_of_technology
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		MAN_three_month = {
+			picture = FRA_national_mobilization_focus
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			targeted_modifier = {
+				tag = BYJ
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.2
+			}
+		}
+		MAN_loyal_home = {
+			picture = jap_militarism_showa
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				despotism_drift = 0.04
+				stability_factor = -0.1
+			}
+		}
+		MAN_conscription = {
+			picture = chi_army_corruption3
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				conscription_factor = 0.03
+			}
+		}
+		MAN_corporate_restraint = {
+			picture = jap_zaibatsu_control
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.03
+				stability_factor = 0.06
+			}
+		}
+		MAN_education_board = {
+			picture = jap_supremacy_of_will
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				research_speed_factor = 0.06
+			}
+		}
+		MAN_meritocracy = {
+			picture = office_of_strategic_services
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+			}
+			modifier = {
+				research_speed_factor = 0.1
+				stability_factor = 0.02
+				political_power_gain = 0.04
+			}
+		}
+		MAN_yasuhito = {
+			picture = GFX_idea_JAP_yasuhito
+			removal_cost = -1
+			allowed = {
+				original_tag = MAN
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = revisionist_socialism
+						has_government = libertarian_marxism
+						has_government = revolutionary_anarchism
+					}
+				}
+			}
+			modifier = {
+				army_org_factor = 0.10
+				justify_war_goal_time = -0.25
+				political_power_gain = -0.1
+			}
+		}
+		MAN_nobuhito = {
+			removal_cost = -1
+			allowed = {
+				original_tag = JAP
+				NOT = {
+					OR = {
+						has_government = vanguard_socialism
+						has_government = revisionist_socialism
+						has_government = libertarian_marxism
+						has_government = revolutionary_anarchism
+					}
+				}
+			}
+			modifier = {
+				stability_factor = 0.10
+				justify_war_goal_time = 0.25
+				political_power_gain = 0.1
+			}
+		}
+	}
+	##################Gov't################################
+
+	head_of_government = {
+		MAN_zhang_jinghui_hog = {	#jap
+			picture = jinghui
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+			}
+			visible = {
+				
+			}
+			traits = { 
+				head_of_government
+				hog_old_general
+			}
+		}
+		MAN_zuolin_hog = {	#feng
+			picture = zuolin
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_government = despotism
+			}
+			visible = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				head_of_government
+				hog_old_general
+			}
+		}
+		MAN_minobe_hog = {	#techno
+			picture = minobe
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = accelerationism
+					has_government = liberalism
+					has_government = conservatism
+					has_government = social_democratism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+		MAN_nobosuke_kishi_hog = {	#jap
+			picture = kishi
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				head_of_government
+				hedonist
+			}
+		}
+	}
+	foreign_minister = {
+		MAN_yanqing_for = {	#jap
+			picture = yangqing
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				
+			}
+			visible = {
+				has_country_flag = MAN_exiles_here
+			}
+			traits = { 
+				foreign_minister
+				
+			}
+		}
+		MAN_yosuke_matsuoka_for = {	#jap
+			picture = matsuoka
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+	}
+	economy_minister = {
+		MAN_nobosuke_kishi_eco = {	#jap
+			picture = kishi
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = right_authoritarianism
+					has_government = despotism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_planned_economy_proponent
+			}
+		}
+		MAN_takuo_godo_eco = {	#jap
+			picture = godo
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_steel_magnate
+			}
+		}
+		MAN_ikeda_shigeaki_eco = {	#jap
+			picture = ikeda
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_bank_president
+			}
+		}
+		MAN_yosuke_matsuoka_eco = {	#jap
+			picture = matsuoka
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			visible = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				economy_minister
+				eco_oil_baron
+			}
+		}
+	}
+	security_minister = {
+		MAN_dogmeat_sec = {	#feng
+			picture = chongchan
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_completed_focus = MAN_end_zongchangs_house_arrest
+			}
+			visible = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+	}
+	head_of_intel = {
+		MAN_X_int = {
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+	}
+	#Military
+	chief_of_staff = {
+		MAN_jinghui_cos = {	#jap
+			picture = jinghui
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+		MAN_itagaki_cos = {	#jap
+			picture = itagaki
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				OR = {
+					has_government = despotism
+					has_government = right_authoritarianism
+					has_government = accelerationism
+				}
+				NOT = {
+					has_completed_focus = MAN_chase_out_the_japanese
+				}
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+		MAN_xueliang_cos = {	#feng
+			picture = shueliang
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				cos_school_of_manoeuvre
+			}
+		}
+		MAN_haipeng_cos = {	#feng
+			picture = haipeng
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+	}
+	chief_of_army = {
+		MAN_ishiwara_cao = {	#jap
+			picture = ishiwara
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = {
+				carm_armoured_spearhead_doctrine
+			}
+		}
+		MAN_doihara_cao = {	#jap
+			picture = doihara
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				carm_decisive_battle_doctrine
+			}
+		}
+		MAN_kanin_cao = {	#jap
+			picture = kotohito
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_japan
+			}
+			traits = { 
+				carm_guns_and_butter_doctrine
+			}
+		}
+		MAN_xueliang_cao = {	#feng
+			picture = shueliang
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				carm_armoured_spearhead_doctrine
+			}
+		}
+		MAN_haipeng_cao = {	#feng
+			picture = haipeng
+			allowed = {
+				original_tag = MAN
+			}
+			available = {
+				has_country_flag = MAN_fengtian_govt
+			}
+			traits = { 
+				carm_guns_and_butter_doctrine
+			}
+		}
+	}
+	chief_of_navy = {
+		MAN_con = {
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				cnav_base_control_doctrine
+			}
+		}
+	}
+	chief_of_air_force = {
+		MAN_caof = {
+			allowed = {
+				original_tag = MAN
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+}

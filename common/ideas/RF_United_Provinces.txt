@@ -1,0 +1,891 @@
+ideas = {
+	country = {
+		UPI_brutal_putdowns = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -0.15
+				conscription = -0.005
+			}
+			picture = UPI_brutal_putdowns
+		}
+		UPI_shadow_gallipoli = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_org_factor = -0.1
+			}
+			picture = UPI_shadow_gallipoli
+		}
+		UPI_alone_unsupplied_cutoff = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.05 
+				}
+			}
+			picture = UPI_alone_unsupplied_cutoff
+		}
+
+		#Democratic Ideas
+
+		UPI_civil_obedience = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.05
+			}
+			picture = UPI_civil_obedience
+		}
+		UPI_freedom_assembly = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.05
+			}
+			picture = UPI_freedom_assembly
+		}
+		UPI_unificationcomitee = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_target = -0.1
+			}
+		}
+		UPI_indian_guard = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				defence = 0.1
+				planning_speed = 0.1
+			}
+			picture = UPI_indian_guard
+		}
+		UPI_indianimprovementassociation = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			 	industrial_capacity_factory = 0.05
+			}
+		}
+		UPI_chaos_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -1
+				war_support_factor -0.5
+				political_power_gain = -2
+				training_time_factor = 3
+				industrial_capacity_factory = -1
+				research_speed_factor = -1
+				army_org_factor = -0.9
+			}
+		}
+
+		#Doomer Ideas
+
+		UPI_harsh_repressions = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -0.1
+				monthly_population = -0.05
+				political_power_factor = 0.08
+				stability_weekly = 0.01
+			}
+		}
+		UPI_repressions = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -0.05
+				monthly_population = -0.03
+				political_power_factor = 0.05
+				stability_weekly = 0.01
+			}
+		}
+		UPI_chamicalweapons = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				monthly_population = -0.05
+			}
+		}
+		UPI_chamicalweapons1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				monthly_population = -0.15
+				air_strategic_bomber_bombing_factor = 0.09
+				air_close_air_support_attack_factor = 0.02
+			}
+		}
+		UPI_chamicalweapons2 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.2
+				monthly_population = -0.3
+				attrition = 0.3
+				air_strategic_bomber_bombing_factor = 0.1
+				air_close_air_support_attack_factor = 0.05
+				stability_factor = -0.15
+			}
+		}
+		UPI_newstrategy = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_morale_factor = 0.1
+				planning_speed = 0.15
+			}
+		}
+		UPI_expandedconscription = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.05
+				training_time_factor = 0.05
+			}
+		}
+		UPI_expandedconscription1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.03
+				training_time_factor = 0.05
+				army_attack_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+		UPI_siegeofluckow = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				out_of_supply_factor = 0.5
+			 	consumer_goods_factor = 0.08
+				industrial_capacity_factory = -0.2
+			}
+		}
+		UPI_siegeofluckow1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				out_of_supply_factor = 0.9
+			 	consumer_goods_factor = 0.04
+				industrial_capacity_factory = -0.1
+			}
+		}
+		UPI_martiallaw = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+			}
+		}
+		UPI_martiallaw1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = -0.2
+				resistance_target = -0.2
+				monthly_population = -0.15
+			}
+		}
+
+		#Imperial Ideas
+
+		UPI_new_british_india = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		UPI_new_british_india1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+		UPI_new_british_india2 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = 0.2
+				stability_factor = -0.1
+				monthly_population = -0.05
+			}
+		}
+		UPI_new_british_india3 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = -0.3
+				stability_factor = -0.1
+				stability_weekly = -0.02
+				monthly_population = -0.05
+			}
+		}
+		UPI_forced_labour = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.1
+				}
+			}
+			picture = UPI_forced_labour
+		}
+		UPI_forced_labour_1 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.15
+				}
+			}
+			picture = UPI_forced_labour
+		}
+		UPI_production_quotas = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.12
+				}
+			}
+			picture = UPI_production_quotas
+		}
+		UPI_reunion_fervour = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			picture = UPI_reunion_fervour
+		}
+		UPI_british_tigers = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.02
+			}
+			picture = UPI_british_tigers
+		}
+		UPI_british_tigers1 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.03
+			}
+			picture = UPI_british_tigers
+		}
+		UPI_new_indian = {
+			removal_cost = -1
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.03
+				MONTHLY_POPULATION = 0.15
+			}
+			picture = UPI_new_indian
+		}
+		UPI_censorship = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				encryption = 75
+				stability_factor = 0.07
+			}
+		}
+
+		UPI_punished_army = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				attrition = 0.2
+				army_morale_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		}
+		UPI_punished_police = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				despotism_drift = -0.03
+				political_power_factor = -0.2
+				root_out_resistance_effectiveness_factor = -0.1
+			}
+		}
+		UPI_labor_camps = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				monthly_population = -0.1
+				industrial_capacity_factory = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes reliability = -0.15
+				}
+			}
+		}
+		UPI_racial_segregation = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				consumer_goods_factor = -0.07
+				conscription = -0.005
+				political_power_factor = 0.05
+				compliance_gain = -0.2
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		UPI_crackdowns = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				encryption = 100
+				stability_factor = 0.12
+				revisionist_socialism_drift = -0.1
+				libertarian_marxism_drift = -0.1
+			}
+		}
+		UPI_terror = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				encryption = 100
+				stability_factor = 0.05
+				revisionist_socialism_drift = -0.1
+				libertarian_marxism_drift = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+			}
+		}
+		UPI_brutal_putdowns1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -0.2
+				conscription = -0.005
+				political_power_factor = 0.05
+				monthly_population = -0.03
+			}
+			picture = UPI_brutal_putdowns
+		}
+		UPI_terror1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				encryption = 100
+				stability_factor = 0.05
+				revisionist_socialism_drift = -0.1
+				libertarian_marxism_drift = -0.1
+				resistance_target = -0.1
+				monthly_population = -0.05
+				drift_defence_factor = 2
+			}
+		}
+		UPI_defend_defend = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_defence_factor = 0.25
+			 	army_speed_factor = 0.05
+			}
+		}
+		UPI_defend_defend1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_defence_factor = 0.35
+				army_speed_factor = 0.05
+				attrition = -0.2
+			}
+		}
+		UPI_attack_attack = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.2
+				army_speed_factor = 0.05
+			}
+		}
+		UPI_attack_attack1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.3
+				army_speed_factor = 0.05
+				army_core_attack_factor = 0.05
+				enemy_army_bonus_air_superiority_factor = -0.05
+			}
+		}
+
+		#Kali ideas
+
+		UPI_holy_flames = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		UPI_holy_flames1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.35
+				research_speed_factor = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes soft_attack = 0.05
+				}
+			}
+		}
+		UPI_holy_flames2 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.35
+				no_supply_grace = 24
+				monthly_population = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes build_cost_ic = -0.3
+				}
+				infantry_equipment = {
+					instant = yes soft_attack = 0.05
+				}
+			}
+		}
+		UPI_warrior_priests_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		UPI_marches = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_speed_factor = 0.1
+				army_morale_factor = -0.05
+			}
+		}
+		UPI_chemical_weapons_kali = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+			 	attrition = 0.1
+			 	army_attack_factor = 0.1
+			}
+		}
+		UPI_endless_legions = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription = 0.3
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.1
+				army_morale_factor = -0.05
+			}
+		}
+		UPI_divine_mission_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		UPI_end_of_time_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				training_time_factor = -0.15
+			}
+		}
+		UPI_end_of_space_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_speed_factor = 0.1
+			}
+		}
+		UPI_divine_mission_idea1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				political_power_factor = 0.1
+				industrial_capacity_factory = 0.1
+				training_time_factor = -0.1
+				army_speed_factor = 0.1
+				army_attack_factor = 0.1
+			}
+		}
+		UPI_mitahara_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		UPI_human_sacrifice_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				stability_factor = -0.15
+				monthly_population = -0.05
+			}
+		}
+		UPI_himsa_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.05
+				research_speed_factor = -0.1
+			}
+		}
+		UPI_warrior_godess_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.05
+			}
+		}
+		UPI_warrior_godess_idea1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.05
+				drift_defence_factor = 0.5
+			}
+		}
+		UPI_godess_of_blood_idea = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				war_support_factor = 0.1
+			}
+		}
+		UPI_godess_of_blood_idea1 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				war_support_factor = 0.1
+				planning_speed = 0.1
+				conscription_factor = 0.05
+			}
+		}
+		UPI_godess_of_blood_idea2 = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				war_support_factor = 0.1
+				planning_speed = 0.1
+				conscription_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes breakthrough = 0.1
+				}
+			}
+		}
+		UPI_annihilation_of_evil = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				reactionism_drift = 0.1
+				monthly_population = -3
+			}
+		}
+	}
+
+	hidden_ideas = {
+		UPI_wargoal_block = {
+			allowed = {
+				original_tag = UPI
+			}
+			modifier = {
+				justify_war_goal_time = 10
+			}
+		}
+	}
+
+	head_of_government = {
+		UPI_Winston_Churchill_hog = {
+			allowed = { original_tag = UPI }
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			cancel_if_invalid = yes
+		}
+		UPI_Asit_Mukheri_hog = {
+			picture = GFX_idea_UPI_Asit_Mukheri_hog
+			allowed = {
+				original_tag = UPI
+			}
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	foreign_minister = {
+		UPI_Maurice_Hallett = {
+			allowed = { original_tag = UPI }
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			traits = {
+				foreign_minister
+				for_apologetic_clerk
+			}
+			cancel_if_invalid = yes
+		}
+		UPI_Mahanambrata_Brahmachari = {
+			picture = GFX_idea_UPI_Mahanambrata_Brahmachari
+			allowed = {
+				original_tag = UPI
+			}
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	economy_minister = {
+		UPI_Harry_Graham_Haig = {
+			allowed = { original_tag = UPI }
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			traits = {
+				economy_minister
+				eco_balanced_budget_economy
+			}
+			cancel_if_invalid = yes
+		}
+		UPI_Savitri_Devi_eco = {
+			picture = GFX_idea_UPI_Savitri_Devi_eco
+			allowed = {
+				original_tag = UPI
+			}
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				economy_minister
+				eco_corrupt_kleptocrat
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	security_minister = {
+		UPI_Orde_Wingate = {
+			allowed = { original_tag = UPI }
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			traits = {
+				security_minister
+				sec_prince_of_terror
+			}
+			cancel_if_invalid = yes
+		}
+		UPI_Bangalore_Venkata_Raman = {
+			picture = GFX_idea_UPI_Bangalore_Venkata_Raman
+			allowed = {
+				original_tag = UPI
+			}
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				security_minister
+				sec_media_magnate
+			}
+			cancel_if_invalid = yes
+		}
+	}
+	
+	head_of_intel = {
+		UPI_Michael_O_Dwyer = {
+			allowed = { original_tag = UPI }
+			available = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			visible = {
+				NOT = { has_country_flag = Winston_Churchill_dead }
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			cancel_if_invalid = yes
+		}
+		UPI_Savitri_Devi_ntl = {
+			picture = GFX_idea_UPI_Savitri_Devi_ntl
+			allowed = {
+				original_tag = UPI
+			}
+			available = {
+				has_government = reactionism
+			}
+			visible = {
+				has_government = reactionism
+			}
+			traits = {
+				economy_minister
+				int_dismal_enigma
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

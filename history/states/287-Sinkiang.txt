@@ -1,0 +1,29 @@
+
+state={
+	id=287
+	name="STATE_287"
+	resources={
+		oil=2
+	}
+
+	history={
+		owner = ETS
+		add_core_of = ETS
+
+		victory_points = {
+			4682 2
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		7792 10545 7702 4770 1703 4682 7949 4828
+	}
+	manpower=526777
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

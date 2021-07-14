@@ -1,0 +1,191 @@
+ideas = {
+	country = {
+		TUA_statelesness = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = -1
+				war_support_factor = -0.3
+				political_power_gain = -0.5
+			}
+			picture = TUA_stateless
+		}
+		TUA_clan_military = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				conscription_factor = -0.5
+				training_time_factor = 0.3
+			}
+			picture = TUA_clanmil
+		}
+		TUA_saharan_slave_trade = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = -0.1
+				MONTHLY_POPULATION = 0.1
+			}
+			picture = TUA_slave
+		}
+		TUA_warrior_culture = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				war_support_factor = 0.10
+				army_speed_factor = 0.05
+			}
+			picture = TUA_warriorculture
+		}
+		TUA_warrior_culture_1 = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				war_support_factor = 0.1
+				army_speed_factor = 0.1
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+			picture = TUA_finmil
+		}
+		TUA_tuareg_identity = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+			}
+			picture = TUA_trulyfree
+		}
+		TUA_islamic_faith = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				conscription = 0.05
+			}
+			picture = TUA_islam
+		}
+		TUA_faith_in_amenukal = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				conscription = 0.1
+			}
+			picture = TUA_unitedunder
+		}
+		TUA_bureaucracy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = 0.1
+				political_power_cost = -0.20
+			}
+			picture = TUA_bureaucracy
+		}
+		TUA_corrupted_bureaucracy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				stability_factor = -0.1
+				political_power_cost = -0.40
+			}
+			picture = TUA_corruptbureaucracy
+		}
+		TUA_one_party = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				drift_defence_factor = 0.5
+			}
+			picture = TUA_prezforlife
+		}
+		TUA_planned_economy = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.20
+			}
+			picture = TUA_plannedecon
+		}
+		TUA_esoteric_artaudism = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			picture = TUA_esotericartaudism
+		}
+		TUA_black_order_of_coche = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = 0.1
+			}
+			picture = TUA_blackorder
+		}
+		TUA_future_raiders = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = 0.1
+				cavalry_attack_factor = 0.15
+			}
+			picture = TUA_druggedout
+		}
+		TUA_truly_free = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				drift_defence_factor = 1
+			}
+			picture = TUA_trulyfree
+		}
+		TUA_slave_workers = {
+			removal_cost = -1
+			allowed = {
+				original_tag = TUA
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.2
+			}
+			picture = TUA_slave_workers
+		}
+		
+	}

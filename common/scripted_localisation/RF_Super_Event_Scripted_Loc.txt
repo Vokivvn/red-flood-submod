@@ -1,0 +1,513 @@
+defined_text = { #SUPER EVENT TITLES
+    name = get_super_event_title
+    
+    text = { 
+        trigger = {
+            has_global_flag = JAP_japanese_invasion_of_china_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_japanese_invasion_of_china"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = BRA_brazil_collapse_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_brazil_collapse"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_rosenbaum"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_chapayev"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_gastev"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_trotsky"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_kerensky"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_blackbloc"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_novykurs"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_mladorossi"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_diterikhs"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_PCN_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_PCN_unification"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_PCN_Brody_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_PCN_unification_brody"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_KIV_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_KIV_unification"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_CFS_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_CFS_unification"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_NBE_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_NBE_unification"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = etat_irreal_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_etat_irreal"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = UPI_Churchill_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_UPI_Churchill"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = UPI_Kali_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_UPI_Kali"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = RUS_uni_savinkov_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_savinkov"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_ruthenia"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = DOR_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_dor"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = USA_collapse_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_USA_collapse"
+    }
+	text = {
+		trigger = {
+			has_global_flag = DEV_civil_war_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_DEV_civil_war"
+	}
+	text = {
+		trigger = {
+			has_global_flag = SPA_civil_war_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_SPA_civil_war"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_blackhundreds_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_blackhundreds"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_solidarists_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_solidarists"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_scythia_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_scythia"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_eurasia_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_eurasia"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_kornilov_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_kornilov"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_gulidov_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_gulidov"
+	}
+	text = {
+		trigger = {
+			has_global_flag = ww2_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_ww2"
+	}
+    text = {
+        trigger = {
+            has_global_flag = ITA_victory_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_0"
+    }
+    text = {
+        trigger = {
+            has_global_flag = ITA_balbo_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_1"
+    }
+    text = {
+        trigger = {
+            has_global_flag = ITA_nitti_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_2"
+    }
+	text = {
+        trigger = {
+            has_global_flag = usauni_bodin_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_usauni_bodin"
+    }
+	text = {
+        trigger = {
+            has_global_flag = usauni_sinclair_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_usauni_sinclair"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Libs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_libs"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Oln_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_oln"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Tri_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_tri"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_kamenev"
+    }
+    text = {
+        trigger = {
+            has_global_flag = YUG_hyperborea_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_yugoslavia_hyperborea"
+    }
+}
+
+defined_text = { #SUPER EVENT QUOTES
+    name = get_superevent_quote
+    
+    text = { 
+        trigger = {
+            has_global_flag = JAP_japanese_invasion_of_china_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_japanese_invasion_of_china_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = BRA_brazil_collapse_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_brazil_collapse_TEXT"
+    }  
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_rosenbaum_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_rosenbaum_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_chapayev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_chapayev_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_trotsky_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_trotsky_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_gastev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_gastev_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_kerensky_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_kerensky_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_blackbloc_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_blackbloc_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_novykurs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_novykurs_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_mladorossi_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_mladorossi_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = ZHR_rusuni_diterikhs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_diterikhs_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_PCN_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_PCN_unification_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_PCN_Brody_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_PCN_unification_brody_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_KIV_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_KIV_unification_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_CFS_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_CFS_unification_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = CONGO_NBE_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_NBE_unification_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = etat_irreal_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_etat_irreal_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = UPI_Churchill_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_UPI_Churchill_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = UPI_Kali_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_UPI_Kali_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = RUS_uni_savinkov_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_savinkov_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = RUS_uni_ruthenia_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_ruthenia_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = DOR_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_dor_TEXT"
+    }
+    text = { 
+        trigger = {
+            has_global_flag = USA_collapse_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_USA_collapse_TEXT"
+    }
+	text = {
+		trigger = {
+			has_global_flag = DEV_civil_war_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_DEV_civil_war_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = SPA_civil_war_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_SPA_civil_war_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_blackhundreds_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_blackhundreds_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_solidarists_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_solidarists_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_scythia_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_scythia_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_eurasia_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_eurasia_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_kornilov_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_kornilov_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = RUS_uni_gulidov_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_rusuni_gulidov_TEXT"
+	}
+	text = {
+		trigger = {
+			has_global_flag = ww2_Super_Event_Visible
+		}
+		localization_key = "GFX_SPEVNT_ww2_TEXT"
+	}
+    text = {
+        trigger = {
+            has_global_flag = ITA_victory_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_0_TEXT"
+    }
+    text = {
+        trigger = {
+            has_global_flag = ITA_balbo_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_1_TEXT"
+    }
+    text = {
+        trigger = {
+            has_global_flag = ITA_nitti_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_ITA_2_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = usauni_bodin_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_usauni_bodin_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = usauni_sinclair_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_usauni_sinclair_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Libs_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_libs_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Oln_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_oln_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Tri_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_tri_TEXT"
+    }
+	text = {
+        trigger = {
+            has_global_flag = RUS_uni_Kamenev_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_rusuni_kamenev_TEXT"
+    }
+    text = {
+        trigger = {
+            has_global_flag = YUG_hyperborea_Super_Event_Visible
+        }
+        localization_key = "GFX_SPEVNT_yugoslavia_hyperborea_TEXT"
+    }
+}

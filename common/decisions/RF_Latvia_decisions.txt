@@ -1,0 +1,138 @@
+LAT_diplomatic_decisions = {
+	LAT_war_with_estonia = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_conquest_of_baltic_sea
+		}
+		available = {
+			is_neighbor_of = EST
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = EST
+			}
+			add_state_core = 13
+			add_state_core = 191
+		}
+	}
+	LAT_war_with_lithuania = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_conquest_of_baltic_sea
+		}
+		available = {
+			is_neighbor_of = LIT
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = LIT
+			}
+			add_state_core = 96
+			add_state_core = 11
+			add_state_core = 189
+			add_state_core = 933
+		}
+	}
+	LAT_war_with_prussia = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_conquest_of_baltic_sea
+		}
+		available = {
+			is_neighbor_of = PRS
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = PRS
+			}
+			add_state_core = 188
+			add_state_core = 763
+			add_state_core = 5
+		}
+	}
+
+	LAT_uproot_lithuania = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_lithuanian_question
+			LIT = { 
+				has_government = libertarian_marxism 
+				is_in_faction_with = POL
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					POL = {
+						has_government = accelerationism
+					}
+				}
+				POL = {
+					country_event = {
+						id = latvia.1
+						days = 1
+					}
+				}
+			}
+			else = {
+				LIT = {
+					country_event = {
+						id = latvia.2
+						days = 1
+					}
+				}
+			}
+		}
+	}
+	LAT_attack_lithuania = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_lithuanian_question
+			LIT = { 
+				NOT = { has_government = libertarian_marxism }
+				is_in_faction_with = POL
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			POL = {
+				country_event = {
+					id = latvia.3
+					days = 1
+				}
+			}
+		}
+	}
+	LAT_conquer_lithuania = {
+		icon = generic_prepare_civil_war
+		allowed = { tag = LAT }
+		visible = {
+			has_completed_focus = LAT_lithuanian_question
+			LIT = { 
+				NOT = { is_in_faction_with = POL }
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			create_wargoal = { type = annex_everything target = LIT }
+		}
+	}
+}

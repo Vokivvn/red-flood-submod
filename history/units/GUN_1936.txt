@@ -1,0 +1,29 @@
+﻿division_template = {
+	name = "Provisional Militia"
+	division_names_group = SPAN_INFB_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	    cavalry = { x = 1 y = 4 }
+	}
+	support = {
+  	      engineer = { x = 0 y = 0 }
+ 	}
+}
+
+
+units = {
+	division= {
+		name = "Provisional Militia"
+		location = 1909
+		division_template = "Provisional Militia"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

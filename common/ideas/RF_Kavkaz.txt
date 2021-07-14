@@ -1,0 +1,983 @@
+#####################
+#	Kavkaz - Baba	#
+#####################
+
+ideas = {
+	country = {
+		KAV_globe_society = {
+			removal_cost = -1
+			picture = KAV_society_globe
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				justify_war_goal_time = -0.1
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+		}
+		KAV_zaum = {
+			picture = KAV_zaum
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				encryption_factor = 1
+				decryption_factor = 1
+				political_power_factor = 0.1
+				research_speed_factor = 0.05
+			}
+		}
+		KAV_reformed_complex = {
+			picture = KAV_reformed_complex
+			allowed = {
+				original_tag = KAV
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+
+		KAV_futurist_poetry = {
+			removal_cost = -1
+			picture = KAV_poetry
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				political_power_factor = 0.1
+				justify_war_goal_time = -0.05
+				drift_defence_factor = 0.15
+			}
+		}
+		KAV_prole_thought = {
+			removal_cost = -1
+			picture = KAV_poetry
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				political_power_factor = 0.1
+				justify_war_goal_time = -0.05
+				drift_defence_factor = 0.15
+				research_speed_factor = 0.05
+			}
+		}
+
+		KAV_council_reform = {
+			removal_cost = -1
+			picture = KAV_council_reforms
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.1
+				justify_war_goal_time = -0.1
+			}
+		}
+		KAV_fast_social = {
+			removal_cost = -1
+			picture = KAV_fast_state
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_dockyard = 0.2
+				industrial_capacity_factory = 0.2
+				consumer_goods_factor = -0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+				artillery_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		KAV_poetic_education = {
+			removal_cost = -1
+			picture = KAV_council_reforms
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.15
+				justify_war_goal_time = -0.1
+				research_speed_factor = 0.05
+				trade_opinion_factor = 0.1
+			}
+		}
+		KAV_innovative_spirit = {
+			removal_cost = -1
+            picture = KAV_innovation
+            allowed = {
+                original_tag = KAV
+            }
+            modifier = {
+				research_speed_factor = 0.1
+            }
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+				}
+				artillery_equipment = {
+					reliability = 0.1
+				}
+			}
+        }
+        KAV_beyond_nat = {
+			removal_cost = -1
+			picture = KAV_beyond_nat
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				justify_war_goal_time = -0.2
+			}
+		}
+
+		KAV_modernist_prose = {
+			removal_cost = -1
+			picture = KAV_modernist_prose
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				stability_weekly = 0.005
+				justify_war_goal_time = -0.05
+				drift_defence_factor = 0.2
+			}
+		}
+		KAV_boyars = {
+			removal_cost = -1
+			picture = KAV_boyars
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				cavalry_attack_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+
+		KAV_knights = {
+			removal_cost = -1
+			picture = KAV_knights
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				conscription = 0.05
+				surrender_limit = 0.05
+				cavalry_attack_factor = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}
+			}
+		}
+		KAV_knights1 = {
+			removal_cost = -1
+			picture = KAV_knights
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				conscription = 0.05
+				surrender_limit = 0.10
+				cavalry_attack_factor = 0.1
+				non_core_manpower = 0.5
+				resistance_target = -0.25
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}
+			}
+		}
+		KAV_knights2 = {
+			removal_cost = -1
+			picture = KAV_knights
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				conscription = 0.05
+				surrender_limit = 0.15
+				cavalry_attack_factor = 0.1
+				non_core_manpower = 0.5
+				resistance_target = -0.25
+				political_power_factor = 0.25
+				accelerationism_drift = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.20 instant = yes
+				}
+			}
+		}
+		KAV_rome_colchis = {
+			picture = KAV_rome_colchis
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				army_speed_factor = 0.1
+				special_forces_cap = 0.05
+			}
+			equipment_bonus = {
+				tank_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+			targeted_modifier = {
+				tag = ITA
+				license_armor_purchase_cost = -0.8
+			}
+			targeted_modifier = {
+				tag = FIU
+				license_armor_purchase_cost = -0.8
+			}
+		}
+		KAV_austrian_advisors = {
+			picture = KAV_austrian_mission
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = AUS
+				license_armor_purchase_cost = -0.8
+			}
+		}
+
+		KAV_futurist_hegemony = {
+			#picture = 
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				justify_war_goal_time = -0.25
+			}
+		}
+
+		KAV_dyn_cap = {
+			picture = KAV_dynamic_cap
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				min_export = 0.05
+			}
+		}
+		KAV_dyn_cap1 = {
+			picture = KAV_dynamic_cap
+			removal_cost = -1
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				min_export = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		KAV_prole_corp = {
+			removal_cost = -1
+			picture = KAV_prole_corp
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		KAV_prole_corp1 = {
+			removal_cost = -1
+			picture = KAV_prole_corp
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.05
+				political_power_factor = 0.1
+			}
+		}
+		KAV_indep_unions = {
+			removal_cost = -1
+			picture = KAV_indep_union
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.1
+				compliance_gain = 0.30
+			}
+		}
+		KAV_trade_union = {
+			removal_cost = -1
+			picture = KAV_trade_union
+			allowed = {
+				original_tag = KAV
+			}
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				conversion_cost_civ_to_mil_factor = -0.15
+				political_power_factor = 0.2
+			}
+		}
+	}
+	
+	################Gov't###############################
+
+	head_of_government = {
+		KAV_Severyanin_hog = {
+			picture = KAV_minister_Severyanin
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_mayakovsky_asserts_dominance
+			}
+			traits = { 
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+		}
+		KAV_Eisenstein_hog = {
+			picture = KAV_minister_Eisenstein
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_tolstoy_wins_the_contest
+			}
+			traits = { 
+				head_of_government
+				hog_pragmatic_statesman
+			}
+		}
+		KAV_Kruchyonykh_hog = {
+			picture = KAV_minister_Kruchyonykh
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_velimir_khlebnikov_proclaimed_a_chairman
+			}
+			traits = { 
+				head_of_government
+				hog_reformist_soldier
+			}
+		}
+		KAV_Shershenevich_hog = {
+			picture = Vadim_Shershenevich
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_government
+				hog_happy_amateur
+			}
+		}
+		KAV_Larionov_hog = {
+			picture = KAV_minister_Larionov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_government
+				hog_naive_optimist
+			}
+		}
+		KAV_Burliuk_hog = {
+			picture = KAV_minister_Burliuk
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+		}
+		KAV_Council_hog = {
+			picture = KAV_minister_Council
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				head_of_government
+				hog_corporate_suit
+			}
+		}
+	}
+	
+	foreign_minister = {
+		KAV_Livshits_for = {
+			picture = KAV_minister_Livshits
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_mayakovsky_asserts_dominance
+			}
+			traits = { 
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		KAV_Blok_for = {
+			picture = KAV_minister_Blok
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_tolstoy_wins_the_contest
+			}
+			traits = { 
+				foreign_minister
+				for_iron_fisted_brute
+			}
+		}
+		KAV_Burliuk_for = {
+			picture = KAV_minister_Burliuk2
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_velimir_khlebnikov_proclaimed_a_chairman
+			}
+			traits = { 
+				foreign_minister
+				for_great_compromiser
+			}
+		}
+		KAV_Kolodzinski_for = {
+			picture = KAV_minister_Kolodzinski
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				foreign_minister
+				for_iron_fisted_brute
+			}
+		}
+		KAV_Ekster_for = {
+			picture = KAV_minister_Ekster
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				foreign_minister
+				for_ideological_crusader
+			}
+		}
+		KAV_Kvinitadze_for = {
+			picture = KAV_minister_Kvinitadze
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				foreign_minister
+				for_general_staffer
+			}
+		}
+		KAV_Council_for = {
+			picture = KAV_minister_Council
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				head_of_government
+				for_apologetic_clerk
+			}
+		}
+	}
+	
+	economy_minister = {
+		KAV_Arkhipenko_eco = {
+			picture = KAV_minister_Arkhipenko
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_mayakovsky_asserts_dominance
+			}
+			traits = { 
+				economy_minister
+				eco_industrialiser
+			}
+		}
+		KAV_Kojeve_eco = {
+			picture = KAV_minister_Kojeve
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_tolstoy_wins_the_contest
+			}
+			traits = { 
+				economy_minister
+				eco_mixed_economy
+			}
+		}
+		KAV_Kandinsky_eco = {
+			picture = KAV_minister_Kandinsky
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_velimir_khlebnikov_proclaimed_a_chairman
+			}
+			traits = { 
+				economy_minister
+				eco_reformer
+			}
+		}
+		KAV_Tatlin_eco = {
+			picture = KAV_minister_Tatlin
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				economy_minister
+				eco_construction_magnate
+			}
+		}
+		KAV_Rogov_eco = {
+			picture = KAV_minister_Rogov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				economy_minister
+				eco_naval_aviation_proponent
+			}
+		}
+		KAV_Bagramyan_eco = {
+			picture = KAV_minister_Bagramyan
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				economy_minister
+				eco_infantry_proponent
+			}
+		}
+		KAV_Council_eco = {
+			picture = KAV_minister_Council
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				head_of_government
+				eco_corrupt_kleptocrat
+			}
+		}
+	}
+	
+	security_minister = {
+		KAV_Luncharsky_sec = {
+			picture = KAV_minister_Lunacharsky
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_mayakovsky_asserts_dominance
+			}
+			traits = { 
+				security_minister
+				sec_silent_lawyer
+			}
+		}
+		KAV_Popova_sec = {
+			picture = KAV_minister_Popova
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_tolstoy_wins_the_contest
+			}
+			traits = { 
+				security_minister
+				sec_health_and_safety
+			}
+		}
+		KAV_Goldschmidt_sec = {
+			picture = KAV_minister_Goldschmidt
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_velimir_khlebnikov_proclaimed_a_chairman
+			}
+			traits = { 
+				security_minister
+				sec_man_of_the_people
+			}
+		}
+		KAV_Vertov_sec = {
+			picture = KAV_minister_Vertov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				security_minister
+				sec_media_magnate
+			}
+		}
+		KAV_Shebuyev_sec = {
+			picture = KAV_minister_Shebuyev
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				security_minister
+				sec_media_magnate
+			}
+		}
+		KAV_Slavorossov_sec = {
+			picture = KAV_minister_Slavorossov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				security_minister
+				sec_prince_of_terror
+			}
+		}
+		KAV_Council_sec = {
+			picture = KAV_minister_Council
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				head_of_government
+				sec_crooked_kleptocrat
+			}
+		}
+	}
+	
+	head_of_intel = {
+		KAV_Delaunay_int = {
+			picture = KAV_minister_Delaunay
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_mayakovsky_asserts_dominance
+			}
+			traits = { 
+				head_of_intel
+				int_dismal_enigma
+			}
+		}
+		KAV_Diulgheroff_int = {
+			picture = KAV_minister_Diulgheroff
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_tolstoy_wins_the_contest
+			}
+			traits = { 
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		KAV_Gvaladze_int = {
+			picture = KAV_minister_Gvaladze
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_completed_focus = KAV_velimir_khlebnikov_proclaimed_a_chairman
+			}
+			traits = { 
+				head_of_intel
+				int_logistics_specialist
+			}
+		}
+		KAV_Antonych_int = {
+			picture = KAV_minister_Antonych
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_intel
+				int_political_specialist
+			}
+		}
+		KAV_Lominadze_int = {
+			picture = KAV_minister_Lominadze
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_intel
+				int_industrial_specialist
+			}
+		}
+		KAV_Mamuliya_int = {
+			picture = KAV_minister_Mamuliya
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				has_government = accelerationism
+			}
+			traits = { 
+				head_of_intel
+				int_technical_specialist
+			}
+		}
+		KAV_Council_int = {
+			picture = KAV_minister_Council
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+			traits = { 
+				head_of_government
+				int_naval_intelligence_specialist
+			}
+		}
+	}
+	
+	#Military
+	chief_of_staff = {
+		KAV_Machabeli_cof = {
+			picture = KAV_cos_Machabeli
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_mass_combat
+			}
+		}
+		KAV_Balyuev_cof = {
+			picture = KAV_cos_Baluyev
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cos_school_of_psychology
+			}
+		}
+
+	}
+	
+	chief_of_army = {
+		KAV_Makaev_coa = {
+			picture = KAV_coa_Makaev
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = {
+				carm_commando_doctrine
+			}
+		}
+		KAV_Chkheidze_coa = {
+			picture = KAV_coa_Chkheidze
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = {
+				carm_elastic_defence_doctrine
+			}
+		}
+	}
+	
+	chief_of_navy = {
+		KAV_Vladimirsky_con = {
+			picture = KAV_con_Vladimirsky
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cnav_power_projection_doctrine
+			}
+		}
+		KAV_Rogov_con = {
+			picture = KAV_minister_Rogov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cnav_open_seas_doctrine
+			}
+		}
+	}
+	
+	chief_of_air_force = {
+		KAV_Slavorossov_coaf = {
+			picture = KAV_minister_Slavorossov
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cair_carpet_bombing_doctrine
+			}
+		}
+		KAV_Shakhovskaya_coaf = {
+			picture = KAV_coaf_Shakhovskaya
+			allowed = {
+				original_tag = KAV
+			}
+			available = {
+				
+			}
+			traits = { 
+				cair_battlefield_support_doctrine
+			}
+		}
+	}
+	theorist = {
+		KAV_Gekker_theorist = {
+			picture = KAV_theorist_Gekker
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				mass_assault_theorist
+			}
+			research_bonus = {
+				cat_mass_assault = 0.1
+			}
+		}
+		KAV_Bagramyan_theorist = {
+			picture = KAV_minister_Bagramyan
+			allowed = {
+				original_tag = KAV
+			}
+			traits = { 
+				mobile_warfare_theorist
+			}
+			research_bonus = {
+				cat_mobile_warfare = 0.1
+			}
+		}
+	}
+}

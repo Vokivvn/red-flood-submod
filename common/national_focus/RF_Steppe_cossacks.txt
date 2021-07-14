@@ -1,0 +1,262 @@
+focus_tree = {
+	id = RF_Steppe_Cossacks
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			original_tag = STE
+		}
+	}
+	continuous_focus_position = { x = 50 y = 2500 }
+	shared_focus = STE_army_effort
+	shared_focus = STE_aviation_effort
+	shared_focus = STE_naval_effort
+	shared_focus = STE_industrial_effort
+
+	############### COSSACKS ###############
+
+	focus = {
+		id = STE_cossack_uprising
+		icon = GFX_goal_STE_cossack_uprising
+		cost = 5
+		x = 7
+		y = 0
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_war_support = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = STE_realm_of_semirechye
+		icon = GFX_goal_STE_realm_of_semirechye
+		cost = 10
+		relative_position_id = STE_cossack_uprising
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_cossack_uprising
+		}
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = STE_subjugate_non_cossacks
+		icon = GFX_goal_STE_subjugate_non_cossacks
+		cost = 10
+		relative_position_id = STE_realm_of_semirechye
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = STE_realm_of_semirechye
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = STE_cossack_supremacy
+		}
+	}
+	focus = {
+		id = STE_plunder_econoomy
+		icon = GFX_goal_STE_plunder_econoomy
+		cost = 10
+		relative_position_id = STE_realm_of_semirechye
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_realm_of_semirechye
+		}
+		completion_reward = {
+			add_stability = -0.15
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = STE_steppe_feudalism
+		icon = GFX_goal_STE_steppe_feudalism
+		cost = 10
+		relative_position_id = STE_subjugate_non_cossacks
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_subjugate_non_cossacks
+		}
+		prerequisite = {
+			focus = STE_plunder_econoomy
+		}
+		mutually_exclusive = {
+			focus = STE_organize_regular_raids
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_ideas = STE_cossack_feudalism
+			custom_effect_tooltip = "STE_COSSACKS_CORES_TT"
+		}
+	}
+	focus = {
+		id = STE_organize_regular_raids
+		icon = GFX_goal_STE_organize_regular_raids
+		cost = 10
+		relative_position_id = STE_plunder_econoomy
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_subjugate_non_cossacks
+		}
+		prerequisite = {
+			focus = STE_plunder_econoomy
+		}
+		mutually_exclusive = {
+			focus = STE_steppe_feudalism
+		}
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = STE_cossack_banditry
+			custom_effect_tooltip = "STE_COSSACKS_SACKING_TT"
+		}
+	}
+	focus = {
+		id = STE_entrenched_despotism
+		icon = GFX_goal_STE_entrenched_despotism
+		cost = 10
+		relative_position_id = STE_organize_regular_raids
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_steppe_feudalism
+			focus = STE_organize_regular_raids
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STE_cossack_supremacy
+				add_idea = STE_cossack_supremacy1
+			}
+		}
+	}
+
+	focus = {
+		id = STE_loyal_to_annenkov
+		icon = GFX_goal_STE_loyal_to_annenkov
+		cost = 10
+		relative_position_id = STE_realm_of_semirechye
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = STE_realm_of_semirechye
+		}
+		completion_reward = {
+			remove_unit_leader = 9019
+			create_corps_commander = {
+				name = "Boris Annenkov"
+				portrait_path = "gfx/leaders/STE/Portrait_Boris_Annenkov.dds"
+				traits = { cavalry_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			add_country_leader_trait = dictator
+			add_ideas = STE_annenkovs_dictatorship
+		}
+	}
+	focus = {
+		id = STE_no_matter_the_language
+		icon = GFX_goal_STE_no_matter_the_language
+		cost = 10
+		relative_position_id = STE_loyal_to_annenkov
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_loyal_to_annenkov
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			swap_ideas = {
+				remove_idea = STE_annenkovs_dictatorship
+				add_idea = STE_annenkovs_dictatorship1
+			}
+		}
+	}
+	focus = {
+		id = STE_no_matter_your_wealth
+		icon = GFX_goal_STE_no_matter_your_wealth
+		cost = 10
+		relative_position_id = STE_no_matter_the_language
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = STE_no_matter_the_language
+		}
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = revisionist_socialism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = social_democratism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.1
+			}
+			swap_ideas = {
+				remove_idea = STE_annenkovs_dictatorship1
+				add_idea = STE_annenkovs_dictatorship2
+			}
+		}
+	}
+
+	focus = {
+		id = STE_bandit_state
+		icon = GFX_goal_STE_bandit_state
+		cost = 10
+		relative_position_id = STE_no_matter_your_wealth
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = STE_entrenched_despotism
+		}
+		prerequisite = {
+			focus = STE_no_matter_your_wealth
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = STE_bandit_state_idea
+		}
+	}
+}

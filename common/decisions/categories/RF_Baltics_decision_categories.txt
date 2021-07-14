@@ -1,0 +1,81 @@
+WRT_black_horse_category = {
+	#icon = GFX_KAV_diplomacy_icon
+	allowed = {
+		original_tag = WRT
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = WRT_black_horse
+	}
+}
+WRT_white_horse_category = {
+	#icon = GFX_KAV_diplomacy_icon
+	allowed = {
+		original_tag = WRT
+	}
+	priority = 190
+	visible = {
+		has_completed_focus = WRT_white_horse
+	}
+}
+WRT_red_horse_category = {
+	#icon = GFX_KAV_diplomacy_icon
+	allowed = {
+		original_tag = WRT
+	}
+	priority = 180
+	visible = {
+		has_completed_focus = WRT_red_horse
+	}
+}
+WRT_constituent_republics = {
+	icon = sov_great_patriotic_war
+	allowed = {
+		original_tag = WRT
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = WRT_international_nationalism
+	}
+}
+
+WRR_pact_of_iron = {
+	icon = generic_fascism
+	allowed = {
+		original_tag = WRR
+	}
+	priority = 200
+	visible = {
+		has_completed_focus = WRR_save_our_brothers
+	}
+}
+WRR_reichskomissariats_category = {
+	icon = ger_reichskommissariats
+	allowed = {
+		original_tag = WRR
+	}
+	priority = 190
+	visible = {
+		has_completed_focus = WRR_question_of_reichskommissariats
+	}
+}
+WRR_hvm_category = {
+	icon = generic_industry
+	allowed = {
+		original_tag = WRR
+	}
+	priority = 180
+	visible = {
+		has_completed_focus = WRR_der_ostarbeiter
+	}
+}
+WRR_terra_mariana_category = {
+	icon = MTG_naval_treaties
+	allowed = {
+		original_tag = WRR
+	}
+	priority = 170
+	visible = {
+		has_completed_focus = WRR_aircraft_carrier_terra_mariana
+	}
+}

@@ -1,0 +1,295 @@
+focus_tree = {
+    id = rus_base
+
+    country = {
+        factor = 0
+
+        modifier = {
+            add = 5000
+            tag = RUS
+        }
+    }
+	continuous_focus_position = { x = 5800 y = 1000 }
+    default = no
+	
+	shared_focus = RUS_anewrussianarmy
+	shared_focus = RUS_transpolarflights
+	shared_focus = RUS_expandpetrogradnavalacademy
+	shared_focus = RUS_unify_empire
+
+	default = no
+
+	focus = {
+		id = RUS_november_strike
+		icon = GFX_focus_RUS_november_strike
+		available = {
+		}
+		prerequisite = { 
+		}
+		bypass = {
+		}	
+		x = 40
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_november_strike"
+			country_event = {
+				id = russia.7
+			}
+		}
+	}
+	focus = {	
+		id = RUS_dismiss_nechvolodov
+		icon = GFX_focus_RUS_dismiss_nechvolodov
+		prerequisite = { 
+		    focus = RUS_november_strike
+		}
+		bypass = {
+		}
+		relative_position_id = RUS_november_strike
+		x = 0
+		y = 1
+		cost = 1
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_dismiss_nechvolodov"
+			remove_ideas = RUS_alexander_nechvolodov_hog_aut
+			add_ideas = RUS_alexander_guchkov_hog_aut
+			add_political_power = 50
+		}
+	}
+	focus = {	
+		id = RUS_subsidize_black_hundreds
+		icon = GFX_focus_RUS_subsidize_black_hundreds
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_dismiss_nechvolodov
+		}
+		bypass = {
+		}
+		relative_position_id = RUS_dismiss_nechvolodov
+		x = 0
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_subsidize_black_hundreds"
+			add_political_power = -50
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.03
+			}
+		}
+	}	
+	focus = {	
+		id = RUS_osvag_campaign
+		icon = GFX_focus_RUS_osvag_campaign
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_dismiss_nechvolodov
+		}
+		relative_position_id = RUS_dismiss_nechvolodov
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_osvag_campaign"
+			add_timed_idea = {
+				idea = RUS_OSVAG_concessions
+				days = 90
+			}
+			add_popularity = {
+				ideology = revolutionary_anarchism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = vanguard_socialism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = libertarian_marxism
+				popularity = -0.03
+			}
+		}
+	}
+	focus = {	
+		id = RUS_investigate_strike
+		icon = GFX_focus_RUS_investigate_strike
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_dismiss_nechvolodov
+		}
+		relative_position_id = RUS_dismiss_nechvolodov
+		x = 2
+		y = 1
+		cost = 3
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_investigate_strike"
+			country_event = {
+				id = russia.8
+			}
+		}
+	}
+	focus = {	
+		id = RUS_last_session_duma
+		icon = GFX_focus_RUS_last_session_duma
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_osvag_campaign
+		}
+		prerequisite = { 
+		    focus = RUS_subsidize_black_hundreds
+		}
+		prerequisite = { 
+		    focus = RUS_investigate_strike
+		}
+		relative_position_id = RUS_subsidize_black_hundreds
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_last_session_duma"
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_equipment
+			}
+			add_timed_idea = {
+				idea = RUS_increased_naval_budget
+				days = 90
+			}
+		}
+	}
+	focus = {	
+		id = RUS_prepare_fleet
+		icon = GFX_focus_RUS_prepare_fleet
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_last_session_duma
+		}
+		relative_position_id = RUS_last_session_duma
+		x = 0
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_prepare_fleet"
+			navy_experience = 20
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {	
+		id = RUS_admiral_vacation
+		icon = GFX_focus_RUS_admiral_vacation
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_prepare_fleet
+		}
+		relative_position_id = RUS_prepare_fleet
+		x = 0
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_admiral_vacation"
+			country_event = {
+				id = russia.1
+				days = 1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_like_a_dream
+		icon = GFX_focus_RUS_like_a_dream
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_admiral_vacation
+		}
+		bypass = {
+		}	
+		relative_position_id = RUS_admiral_vacation
+		x = 0
+		y = 1
+		cost = 12
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_like_a_dream"
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = unstable_political_system
+				add_idea = unstable_political_system_1
+			}
+		}
+	}
+	focus = {	
+		id = RUS_ix_duma_election
+		icon = GFX_focus_RUS_ix_duma_election
+		available = {
+		}
+		prerequisite = { 
+		    focus = RUS_like_a_dream
+		}
+		bypass = {
+		}	
+		relative_position_id = RUS_like_a_dream
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RUS_ix_duma_election"
+			country_event = {
+				id = russia.9
+			}
+		}
+	}	
+}

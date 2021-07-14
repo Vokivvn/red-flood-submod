@@ -1,0 +1,27 @@
+
+state={
+	id=402
+	name="STATE_402"
+	manpower = 392265
+	state_category = rural
+
+	resources={
+		chromium=15 # was: 20
+	}
+
+	history={
+		owner = ORE
+		victory_points = {
+			7370 1 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = ORE
+	}
+
+	provinces={
+		475 554 576 642 1220 1247 1290 1314 1318 1371 3502 4254 4294 4351 4394 6615 7313 7322 7341 7370 7438 9453 9462 9528 10131 10253 10262 10264 11480 11442 11510 11591 12108 12163 12179 12235 12254 12294 13008
+	}
+}

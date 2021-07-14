@@ -1,0 +1,544 @@
+ideas = {
+	country = {
+		FIR_punakaartidominance = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+				political_power_cost = -0.10
+				out_of_supply_factor = -0.20
+				army_morale_factor = 0.20
+				vanguard_socialism_drift = 0.05
+			}
+		picture = FIR_punakaartidominance
+		}
+		FIR_agricultural_collectivization = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			global_building_slots_factor = 0.2
+			production_speed_buildings_factor = 0.1
+			}
+		picture = FIR_agricultural_collectivization
+		}
+		FIR_defending = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			libertarian_marxism_drift = 0.05
+			offence = 0.1
+			}
+		picture = FIR_defending_revolution
+		}
+		FIR_workplace_democracy_idea = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_start_efficiency_factor = 0.2
+			conscription = 0.03
+			}
+		picture = FIR_workplace_democracy_idea
+		}
+		FIR_militias = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			conscription = 0.05
+			revolutionary_anarchism_drift = 0.05
+			offence  = -0.20
+			}
+		picture = FIR_militias
+		}
+		FIR_social_contracts = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			political_power_gain = 0.10
+			stability_weekly = 0.02
+			offence = -0.2
+			}
+		picture = FIR_social_contracts
+		}
+		FIR_autonomous_economy = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			production_factory_start_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = -0.3
+			equipment_capture_factor = 0.5
+			industrial_capacity_factory = 0.1
+			}
+		picture = FIR_autonomous_economy
+		}
+		FIR_workers_autonomy_idea = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			production_factory_start_efficiency_factor = 0.1
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = -0.3
+			equipment_capture_factor = 0.5
+			industrial_capacity_factory = 0.1
+			revolutionary_anarchism_drift = 0.05
+			}
+		picture = FIR_autonomous_economy
+		}
+		FIR_free_markets = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			trade_opinion_factor = 0.20
+			consumer_goods_factor = -0.10
+			global_building_slots_factor = 0.2
+			}
+		picture = FIR_free_markets
+		}
+		FIR_egoist_army = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			defence = 0.1
+			offence = 0.1
+			non_core_manpower = 0.5
+			}
+		picture = FIR_egoist_army
+		}
+		FIR_egoist_army_1 = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			defence = 0.1
+			offence = 0.1
+			non_core_manpower = 0.5
+			mobilization_speed = 0.4
+			local_supplies = 0.4
+			conscription = 0.02
+			}
+		picture = FIR_egoist_army
+		}
+		FIR_fed_of_soldiers = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			revolutionary_anarchism_drift = 0.01
+			political_power_gain = 0.05
+			}
+		picture = FIR_fed_of_soldiers
+		}
+		FIR_universal_military_suffrage_idea = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			revolutionary_anarchism_drift = 0.01
+			conscription = 0.06
+			}
+		picture = FIR_universal_military_suffrage_idea
+		}
+		FIR_bandit_econ = {
+			allowed = {
+				original_tag = FIR
+			}
+			modifier = {
+			local_resources_factor = 0.5
+			non_core_manpower = 0.15
+			}
+		picture = FIR_bandit_econ
+		}
+	}
+
+	head_of_government = {
+		FIR_arvo_tuminen = {
+			picture = FIR_arvo_tuminen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_ambitious_union_boss
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+		FIR_waino_wuolijoki = {
+			picture = FIR_waino_wuolijoki
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_pragmatic_statesman
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+		FIR_carl_paivio = {
+			picture = FIR_carl_paivio
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+		FIR_harry_jarv = {
+			picture = FIR_harry_jarv
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_government
+				hog_respected_war_hero
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+	foreign_minister = {
+		FIR_aimo_aaltonen = {
+			picture = FIR_aimo_aaltonen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				OR = {
+					has_completed_focus = FIR_sirola_secures_chairmanship
+					has_completed_focus = FIR_tokoi_secures_chairmanship
+				}
+			}
+		}
+		FIR_hiski_salomaa = {
+			picture = FIR_hiski_salomaa
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+		FIR_gust_aakula = {
+			picture = FIR_gust_aakula
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				foreign_minister
+				for_general_staffer
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+	economy_minister = {
+		FIR_ville_pessi = {
+			picture = FIR_ville_pessi
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_industrialiser
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+		FIR_johan_helo = {
+			picture = FIR_johan_helo
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_mixed_economy
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+		FIR_gust_alonen = {
+			picture = FIR_gust_alonen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_infantry_proponent
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+		FIR_ere_kolu = {
+			picture = FIR_ere_kolu
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				economy_minister
+				eco_industrial_chemist
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+	security_minister = {
+		FIR_adolf_taimi = {
+			picture = FIR_adolf_taimi
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+		FIR_julius_ailio = {
+			picture = FIR_julius_ailio
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_compassionate_gentleman
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+		FIR_jack_ujanen = {
+			picture = FIR_jack_ujanen
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+		FIR_karl_gustaf_nyman = {
+			picture = FIR_karl_gustaf_nyman
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				security_minister
+				sec_illegalist_terrorist
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+	head_of_intel = {
+		FIR_eino_rahja = {
+			picture = FIR_eino_rahja
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_completed_focus = FIR_sirola_secures_chairmanship
+			}
+		}
+		FIR_matti_paasivuori = {
+			picture = FIR_matti_paasivuori
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_completed_focus = FIR_tokoi_secures_chairmanship
+			}
+		}
+		FIR_fred_jaakkola = {
+			picture = FIR_fred_jaakkola
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_naval_intelligence_specialist
+			}
+			available = {
+				has_completed_focus = FIR_paivio_secures_chairmanship
+			}
+		}
+		FIR_juho_henrik_uoti = {
+			picture = FIR_juho_henrik_uoti
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+				head_of_intel
+				int_iron_fisted_renegade
+			}
+			available = {
+				has_completed_focus = FIR_helsinki_veterans_association_seizes_power
+			}
+		}
+	}
+
+	chief_of_staff = {
+		FIR_akseli_anttila_cos = {
+			picture = FIR_akseli_anttila_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cos_school_of_mass_combat
+			}
+		}
+		FIR_oskari_kumpu_cos = {
+			picture = FIR_oskari_kumpu_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cos_school_of_psychology
+			}
+		}
+		FIR_otto_wille_kuusinen_cos = {
+			picture = FIR_otto_wille_kuusinen_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cos_school_of_manoeuvre
+			}
+		}
+		FIR_tuure_lehen_cos = {
+			picture = FIR_tuure_lehen_cos
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cos_school_of_commando_operations
+			}
+		}
+	}
+	chief_of_army = {
+		FIR_jukka_rahja_carm = {
+			picture = FIR_jukka_rahja_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			carm_decisive_battle_doctrine
+			
+			}
+		}
+		FIR_harry_jarv_carm = {
+			picture = FIR_harry_jarv_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			carm_commando_doctrine	
+			}
+		}
+		FIR_armas_aikia_carm = {
+			picture = FIR_armas_aikia_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			carm_armoured_spearhead_doctrine
+			}
+		}
+		FIR_paavo_prokkonen_carm = {
+			picture = FIR_paavo_prokkonen_carm
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			carm_elastic_defence_doctrine
+			}
+		}
+	}
+	chief_of_navy = {
+		FIR_hugo_meurer_cnav = {
+			picture = FIR_hugo_meurer_cnav
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cnav_open_seas_doctrine
+			}
+		}
+		FIR_adrian_nepenin_cnav = {
+			picture = FIR_adrian_nepenin_cnav
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cnav_decisive_battle_doctrine	
+			}
+		}
+	}
+	chief_of_air_force = {
+		FIR_verner_lehtimaki_cair = {
+			picture = FIR_verner_lehtimaki_cair
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cair_battlefield_support_doctrine
+			}
+		}
+		FIR_otto_kalvitsa_cair = {
+			picture = FIR_otto_kalvitsa_cair
+			allowed = {
+				original_tag = FIR
+			}
+			traits = {
+			cair_naval_aviation_doctrine
+			}
+		}
+	}
+	theorist = {
+		
+	}
+}

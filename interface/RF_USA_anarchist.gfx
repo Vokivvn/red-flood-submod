@@ -1,0 +1,1675 @@
+spriteTypes = { 
+	##Icon For: Increase the Corporate Tax
+	SpriteType = { 
+		name = "GFX_USA_increase_the_corporate_tax-37040"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_increase_the_corporate_tax-37040.dds"
+	}
+
+	##Icon Shine For: Increase the Corporate Tax
+	SpriteType = { 
+		name = "GFX_USA_increase_the_corporate_tax-37040_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_increase_the_corporate_tax-37040.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_increase_the_corporate_tax-37040.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_increase_the_corporate_tax-37040.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Libraries of Knowledge
+	SpriteType = { 
+		name = "GFX_USA_libraries_of_knowledge-34425"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_knowledge-34425.dds"
+	}
+
+	##Icon Shine For: Libraries of Knowledge
+	SpriteType = { 
+		name = "GFX_USA_libraries_of_knowledge-34425_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_knowledge-34425.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_knowledge-34425.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_knowledge-34425.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Intimidate the Senate
+	SpriteType = { 
+		name = "GFX_USA_intimidate_the_senate-37042"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_intimidate_the_senate-37042.dds"
+	}
+
+	##Icon Shine For: Intimidate the Senate
+	SpriteType = { 
+		name = "GFX_USA_intimidate_the_senate-37042_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_intimidate_the_senate-37042.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_intimidate_the_senate-37042.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_intimidate_the_senate-37042.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Democracy at Home
+	SpriteType = { 
+		name = "GFX_USA_democracy_at_home-34432"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_democracy_at_home-34432.dds"
+	}
+
+	##Icon Shine For: Democracy at Home
+	SpriteType = { 
+		name = "GFX_USA_democracy_at_home-34432_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_democracy_at_home-34432.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_democracy_at_home-34432.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_democracy_at_home-34432.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Right to Information
+	SpriteType = { 
+		name = "GFX_USA_right_to_information-37045"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_right_to_information-37045.dds"
+	}
+
+	##Icon Shine For: Right to Information
+	SpriteType = { 
+		name = "GFX_USA_right_to_information-37045_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_right_to_information-37045.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_right_to_information-37045.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_right_to_information-37045.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Close Down the Prison System
+	SpriteType = { 
+		name = "GFX_USA_close_down_the_prison_system-34436"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_close_down_the_prison_system-34436.dds"
+	}
+
+	##Icon Shine For: Close Down the Prison System
+	SpriteType = { 
+		name = "GFX_USA_close_down_the_prison_system-34436_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_close_down_the_prison_system-34436.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_close_down_the_prison_system-34436.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_close_down_the_prison_system-34436.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: A Better America
+	SpriteType = { 
+		name = "GFX_USA_a_better_america-34439"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_better_america-34439.dds"
+	}
+
+	##Icon Shine For: A Better America
+	SpriteType = { 
+		name = "GFX_USA_a_better_america-34439_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_better_america-34439.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_better_america-34439.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_better_america-34439.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Let the Land Rest
+	SpriteType = { 
+		name = "GFX_USA_let_the_land_rest-37028"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_let_the_land_rest-37028.dds"
+	}
+
+	##Icon Shine For: Let the Land Rest
+	SpriteType = { 
+		name = "GFX_USA_let_the_land_rest-37028_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_let_the_land_rest-37028.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_let_the_land_rest-37028.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_let_the_land_rest-37028.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Crush the Backlash
+	SpriteType = { 
+		name = "GFX_USA_crush_the_backlash-34437"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_crush_the_backlash-34437.dds"
+	}
+
+	##Icon Shine For: Crush the Backlash
+	SpriteType = { 
+		name = "GFX_USA_crush_the_backlash-34437_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_crush_the_backlash-34437.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_crush_the_backlash-34437.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_crush_the_backlash-34437.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: End of the Police
+	SpriteType = { 
+		name = "GFX_USA_end_of_the_police-34435"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_police-34435.dds"
+	}
+
+	##Icon Shine For: End of the Police
+	SpriteType = { 
+		name = "GFX_USA_end_of_the_police-34435_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_police-34435.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_police-34435.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_police-34435.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: And in the Work Place
+	SpriteType = { 
+		name = "GFX_USA_and_in_the_work_place-34434"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_in_the_work_place-34434.dds"
+	}
+
+	##Icon Shine For: And in the Work Place
+	SpriteType = { 
+		name = "GFX_USA_and_in_the_work_place-34434_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_in_the_work_place-34434.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_in_the_work_place-34434.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_in_the_work_place-34434.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Libraries of Tools
+	SpriteType = { 
+		name = "GFX_USA_libraries_of_tools-34424"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_tools-34424.dds"
+	}
+
+	##Icon Shine For: Libraries of Tools
+	SpriteType = { 
+		name = "GFX_USA_libraries_of_tools-34424_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_tools-34424.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_tools-34424.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_libraries_of_tools-34424.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: End the Price System
+	SpriteType = { 
+		name = "GFX_USA_end_the_price_system-34433"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_the_price_system-34433.dds"
+	}
+
+	##Icon Shine For: End the Price System
+	SpriteType = { 
+		name = "GFX_USA_end_the_price_system-34433_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_the_price_system-34433.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_the_price_system-34433.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_the_price_system-34433.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Civil Rights for All
+	SpriteType = { 
+		name = "GFX_USA_civil_rights_for_all-34431"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_civil_rights_for_all-34431.dds"
+	}
+
+	##Icon Shine For: Civil Rights for All
+	SpriteType = { 
+		name = "GFX_USA_civil_rights_for_all-34431_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_civil_rights_for_all-34431.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_civil_rights_for_all-34431.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_civil_rights_for_all-34431.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Stabilize the Coalition
+	SpriteType = { 
+		name = "GFX_USA_stabilize_the_coalition-37048"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_stabilize_the_coalition-37048.dds"
+	}
+
+	##Icon Shine For: Stabilize the Coalition
+	SpriteType = { 
+		name = "GFX_USA_stabilize_the_coalition-37048_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_stabilize_the_coalition-37048.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_stabilize_the_coalition-37048.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_stabilize_the_coalition-37048.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Education for All
+	SpriteType = { 
+		name = "GFX_USA_education_for_all-37030"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_education_for_all-37030.dds"
+	}
+
+	##Icon Shine For: Education for All
+	SpriteType = { 
+		name = "GFX_USA_education_for_all-37030_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_education_for_all-37030.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_education_for_all-37030.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_education_for_all-37030.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Extreme Welfare
+	SpriteType = { 
+		name = "GFX_USA_extreme_welfare-37035"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_extreme_welfare-37035.dds"
+	}
+
+	##Icon Shine For: Extreme Welfare
+	SpriteType = { 
+		name = "GFX_USA_extreme_welfare-37035_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_extreme_welfare-37035.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_extreme_welfare-37035.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_extreme_welfare-37035.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Fund the Radio Stations
+	SpriteType = { 
+		name = "GFX_USA_fund_the_radio_stations-37037"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_fund_the_radio_stations-37037.dds"
+	}
+
+	##Icon Shine For: Fund the Radio Stations
+	SpriteType = { 
+		name = "GFX_USA_fund_the_radio_stations-37037_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_fund_the_radio_stations-37037.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_fund_the_radio_stations-37037.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_fund_the_radio_stations-37037.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Pensions for the Old
+	SpriteType = { 
+		name = "GFX_USA_pensions_for_the_old-37044"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_pensions_for_the_old-37044.dds"
+	}
+
+	##Icon Shine For: Pensions for the Old
+	SpriteType = { 
+		name = "GFX_USA_pensions_for_the_old-37044_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_pensions_for_the_old-37044.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_pensions_for_the_old-37044.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_pensions_for_the_old-37044.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: And Medicine for the Sick
+	SpriteType = { 
+		name = "GFX_USA_and_medicine_for_the_sick-34423"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_medicine_for_the_sick-34423.dds"
+	}
+
+	##Icon Shine For: And Medicine for the Sick
+	SpriteType = { 
+		name = "GFX_USA_and_medicine_for_the_sick-34423_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_medicine_for_the_sick-34423.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_medicine_for_the_sick-34423.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_and_medicine_for_the_sick-34423.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Stringent Regulation
+	SpriteType = { 
+		name = "GFX_USA_stringent_regulation-37049"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_stringent_regulation-37049.dds"
+	}
+
+	##Icon Shine For: Stringent Regulation
+	SpriteType = { 
+		name = "GFX_USA_stringent_regulation-37049_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_stringent_regulation-37049.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_stringent_regulation-37049.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_stringent_regulation-37049.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Frogs in a Frying Pan
+	SpriteType = { 
+		name = "GFX_USA_frogs_in_a_frying_pan-37036"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_frogs_in_a_frying_pan-37036.dds"
+	}
+
+	##Icon Shine For: Frogs in a Frying Pan
+	SpriteType = { 
+		name = "GFX_USA_frogs_in_a_frying_pan-37036_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_frogs_in_a_frying_pan-37036.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_frogs_in_a_frying_pan-37036.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_frogs_in_a_frying_pan-37036.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Communal Food
+	SpriteType = { 
+		name = "GFX_USA_communal_food-34394"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_food-34394.dds"
+	}
+
+	##Icon Shine For: Communal Food
+	SpriteType = { 
+		name = "GFX_USA_communal_food-34394_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_food-34394.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_food-34394.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_food-34394.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Communal Housing
+	SpriteType = { 
+		name = "GFX_USA_communal_housing-34395"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_housing-34395.dds"
+	}
+
+	##Icon Shine For: Communal Housing
+	SpriteType = { 
+		name = "GFX_USA_communal_housing-34395_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_housing-34395.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_housing-34395.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_communal_housing-34395.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Flynn's Presidency
+	SpriteType = { 
+		name = "GFX_USA_flynns_presidency-34391"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_flynns_presidency-34391.dds"
+	}
+
+	##Icon Shine For: Flynn's Presidency
+	SpriteType = { 
+		name = "GFX_USA_flynns_presidency-34391_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_flynns_presidency-34391.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_flynns_presidency-34391.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_flynns_presidency-34391.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Bread Basket Once More
+	SpriteType = { 
+		name = "GFX_USA_bread_basket_once_more-37055"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_bread_basket_once_more-37055.dds"
+	}
+
+	##Icon Shine For: Bread Basket Once More
+	SpriteType = { 
+		name = "GFX_USA_bread_basket_once_more-37055_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_bread_basket_once_more-37055.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_bread_basket_once_more-37055.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_bread_basket_once_more-37055.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Dust Begins to Settle
+	SpriteType = { 
+		name = "GFX_USA_dust_begins_to_settle-37029"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_dust_begins_to_settle-37029.dds"
+	}
+
+	##Icon Shine For: Dust Begins to Settle
+	SpriteType = { 
+		name = "GFX_USA_dust_begins_to_settle-37029_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_dust_begins_to_settle-37029.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_dust_begins_to_settle-37029.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_dust_begins_to_settle-37029.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: End of the Dustbowl
+	SpriteType = { 
+		name = "GFX_USA_end_of_the_dustbowl-37032"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_dustbowl-37032.dds"
+	}
+
+	##Icon Shine For: End of the Dustbowl
+	SpriteType = { 
+		name = "GFX_USA_end_of_the_dustbowl-37032_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_dustbowl-37032.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_dustbowl-37032.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_end_of_the_dustbowl-37032.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Supreme Court Shuffle
+	SpriteType = { 
+		name = "GFX_USA_supreme_court_shuffle-37050"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_supreme_court_shuffle-37050.dds"
+	}
+
+	##Icon Shine For: Supreme Court Shuffle
+	SpriteType = { 
+		name = "GFX_USA_supreme_court_shuffle-37050_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_supreme_court_shuffle-37050.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_supreme_court_shuffle-37050.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_supreme_court_shuffle-37050.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Transfer the Means of Production
+	SpriteType = { 
+		name = "GFX_USA_transfer_the_means_of_production-37051"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_transfer_the_means_of_production-37051.dds"
+	}
+
+	##Icon Shine For: Transfer the Means of Production
+	SpriteType = { 
+		name = "GFX_USA_transfer_the_means_of_production-37051_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_transfer_the_means_of_production-37051.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_transfer_the_means_of_production-37051.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_transfer_the_means_of_production-37051.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Union Dominance
+	SpriteType = { 
+		name = "GFX_USA_union_dominance-37053"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_union_dominance-37053.dds"
+	}
+
+	##Icon Shine For: Union Dominance
+	SpriteType = { 
+		name = "GFX_USA_union_dominance-37053_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_union_dominance-37053.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_union_dominance-37053.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_union_dominance-37053.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Empower the Farming Unions
+	SpriteType = { 
+		name = "GFX_USA_empower_the_farming_unions-37031"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_empower_the_farming_unions-37031.dds"
+	}
+
+	##Icon Shine For: Empower the Farming Unions
+	SpriteType = { 
+		name = "GFX_USA_empower_the_farming_unions-37031_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_empower_the_farming_unions-37031.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_empower_the_farming_unions-37031.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_empower_the_farming_unions-37031.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Slum Improvements
+	SpriteType = { 
+		name = "GFX_USA_slum_improvements-37046"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_slum_improvements-37046.dds"
+	}
+
+	##Icon Shine For: Slum Improvements
+	SpriteType = { 
+		name = "GFX_USA_slum_improvements-37046_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_slum_improvements-37046.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_slum_improvements-37046.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_slum_improvements-37046.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Use Cox's Legacy
+	SpriteType = { 
+		name = "GFX_USA_use_coxs_legacy-34430"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_use_coxs_legacy-34430.dds"
+	}
+
+	##Icon Shine For: Use Cox's Legacy
+	SpriteType = { 
+		name = "GFX_USA_use_coxs_legacy-34430_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_use_coxs_legacy-34430.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_use_coxs_legacy-34430.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_use_coxs_legacy-34430.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Crop Rotations
+	SpriteType = { 
+		name = "GFX_USA_crop_rotations-37054"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_crop_rotations-37054.dds"
+	}
+
+	##Icon Shine For: Crop Rotations
+	SpriteType = { 
+		name = "GFX_USA_crop_rotations-37054_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_crop_rotations-37054.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_crop_rotations-37054.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_crop_rotations-37054.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Soil Conservation
+	SpriteType = { 
+		name = "GFX_USA_soil_conservation-37047"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_soil_conservation-37047.dds"
+	}
+
+	##Icon Shine For: Soil Conservation
+	SpriteType = { 
+		name = "GFX_USA_soil_conservation-37047_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_soil_conservation-37047.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_soil_conservation-37047.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_soil_conservation-37047.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Aid the Dust Migrants
+	SpriteType = { 
+		name = "GFX_USA_aid_the_dust_migrants-34392"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_aid_the_dust_migrants-34392.dds"
+	}
+
+	##Icon Shine For: Aid the Dust Migrants
+	SpriteType = { 
+		name = "GFX_USA_aid_the_dust_migrants-34392_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_aid_the_dust_migrants-34392.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_aid_the_dust_migrants-34392.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_aid_the_dust_migrants-34392.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Community Help Schemes
+	SpriteType = { 
+		name = "GFX_USA_community_help_schemes-34393"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_community_help_schemes-34393.dds"
+	}
+
+	##Icon Shine For: Community Help Schemes
+	SpriteType = { 
+		name = "GFX_USA_community_help_schemes-34393_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_community_help_schemes-34393.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_community_help_schemes-34393.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_community_help_schemes-34393.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Housing Building Projects
+	SpriteType = { 
+		name = "GFX_USA_housing_building_projects-37039"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_housing_building_projects-37039.dds"
+	}
+
+	##Icon Shine For: Housing Building Projects
+	SpriteType = { 
+		name = "GFX_USA_housing_building_projects-37039_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_housing_building_projects-37039.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_housing_building_projects-37039.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_housing_building_projects-37039.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Executive Order for Federal Funding
+	SpriteType = { 
+		name = "GFX_USA_executive_order_for_federal_funding-37033"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_executive_order_for_federal_funding-37033.dds"
+	}
+
+	##Icon Shine For: Executive Order for Federal Funding
+	SpriteType = { 
+		name = "GFX_USA_executive_order_for_federal_funding-37033_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_executive_order_for_federal_funding-37033.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_executive_order_for_federal_funding-37033.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_executive_order_for_federal_funding-37033.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Level the Playing Field
+	SpriteType = { 
+		name = "GFX_USA_level_the_playing_field-37043"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_level_the_playing_field-37043.dds"
+	}
+
+	##Icon Shine For: Level the Playing Field
+	SpriteType = { 
+		name = "GFX_USA_level_the_playing_field-37043_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_level_the_playing_field-37043.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_level_the_playing_field-37043.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_level_the_playing_field-37043.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: The Right to a Job
+	SpriteType = { 
+		name = "GFX_USA_the_right_to_a_job-37052"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_the_right_to_a_job-37052.dds"
+	}
+
+	##Icon Shine For: The Right to a Job
+	SpriteType = { 
+		name = "GFX_USA_the_right_to_a_job-37052_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_the_right_to_a_job-37052.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_the_right_to_a_job-37052.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_the_right_to_a_job-37052.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: Healthcare for All
+	SpriteType = { 
+		name = "GFX_USA_healthcare_for_all-37038"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_healthcare_for_all-37038.dds"
+	}
+
+	##Icon Shine For: Healthcare for All
+	SpriteType = { 
+		name = "GFX_USA_healthcare_for_all-37038_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_healthcare_for_all-37038.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_healthcare_for_all-37038.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_healthcare_for_all-37038.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+	##Icon For: A Fairer America
+	SpriteType = { 
+		name = "GFX_USA_a_fairer_america-34438"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_fairer_america-34438.dds"
+	}
+
+	##Icon Shine For: A Fairer America
+	SpriteType = { 
+		name = "GFX_USA_a_fairer_america-34438_shine"
+		texturefile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_fairer_america-34438.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_fairer_america-34438.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/USA/anarchist/GFX_USA_a_fairer_america-34438.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+
+ 
+ }

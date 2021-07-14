@@ -1,0 +1,2246 @@
+focus_tree = { 
+	id = MON_focus
+	country = { 
+		factor = 0 
+		modifier = { 
+			add = 10 
+			tag = MON
+		} 
+	}
+	
+	default = no
+	continuous_focus_position = { x = 50 y = 1500 }
+	
+	#Focus for Army of Exiles
+	focus = { 
+		id = Mongolia_armyofexiles
+		icon = GFX_focus_armyofexiles
+		x = 4
+		y = 0
+		cost = 5
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 100
+		} 
+		completion_reward = {
+			add_political_power = 50
+		}
+	} 
+
+	#Focus for Peace and Happiness Club
+	focus = { 
+		id = Mongolia_peaceandhappinessclub
+		icon = GFX_focus_peaceandhappinessclub
+		x = 12
+		y = 0
+		cost = 5
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.1
+			}
+			add_stability = 0.1
+		}
+	} 
+
+	#Focus for Reorganise the Düüregs
+	focus = { 
+		id = Mongolia_reorganisethedregs
+		icon = GFX_focus_reorganisetheduuregs
+		x = 21
+		y = 0
+		cost = 10
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+			}
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1
+				uses = 2
+				category = industry		
+			}
+		}
+	} 
+
+	#Focus for Oppose the Mad Baron
+	focus = { 
+		id = Mongolia_opposethemadbaron
+		icon = GFX_focus_opposethemadbaron
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_armyofexiles } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			#claim TAN
+			add_state_claim = 329
+			add_state_claim = 961
+			add_state_claim = 962
+		}
+	} 
+
+	#Focus for Oppose the Rogue Officer
+	focus = { 
+		id = Mongolia_opposetherogueofficer
+		icon = GFX_focus_opposetherogueofficer
+		x = 2
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_armyofexiles } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			#claim MO2
+			add_state_claim = 563
+			add_state_claim = 564
+			add_state_claim = 964
+		}
+	} 
+
+	#Focus for Consolidate Outer Mongolia
+	focus = { 
+		id = Mongolia_consolidateoutermongolia
+		icon = GFX_focus_consolidateoutermongolia
+		x = 6
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_armyofexiles } 
+		available = {
+			TAN = {
+				exists = no
+			}
+			MO2 = {
+				exists = no
+			}
+			ALT = {
+				exists = no
+			}
+			is_subject = no
+		}
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_brokenarmy
+				add_idea = MON_brokenarmy2
+			}
+		}
+	}
+
+	#Focus for The Southern Expedition
+	focus = { 
+		id = Mongolia_thesouthernexpedition
+		icon = GFX_focus_thesouthernexpedition
+		x = 6
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_consolidateoutermongolia }
+		available = { 
+			is_subject = no
+		}
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			#inner mongolia
+			add_state_core = 621
+			add_state_core = 611
+			add_state_core = 746
+			add_state_core = 837
+			
+			division_template = {
+				name = "Southern Expeditionaries"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Southern Expeditionaries\" division_template = \"Southern Expeditionaries\" start_experience_factor = 0.75 start_equipment_factor = 1.00"
+					owner = MON
+				}
+				create_unit = {
+					division = "name = \"Southern Expeditionaries\" division_template = \"Southern Expeditionaries\" start_experience_factor = 0.75 start_equipment_factor = 1.00"
+					owner = MON
+				}
+			}
+			
+		}
+	} 
+
+	#Focus for Prepare the Defences
+	focus = { 
+		id = Mongolia_preparethedefences
+		icon = GFX_focus_preparethedefences
+		x = 0
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_opposethemadbaron } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			330 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4801
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4862
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4732
+				}
+			}
+		}
+	} 
+
+	#Focus for Buryat Guerillas
+	focus = { 
+		id = Mongolia_buryatguerillas
+		icon = GFX_focus_buryatguerillas
+		x = 2
+		y = 2
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_opposetherogueofficer } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			division_template = {
+					name = "Buryat Guerillas"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+					}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Buryat Guerillas\" division_template = \"Buryat Guerillas\" start_experience_factor = 0.75 start_equipment_factor = 0.75"
+					owner = MON
+				}
+			}
+		}
+	} 
+
+	#Focus for Breach the Stronghold
+	focus = { 
+		id = Mongolia_breachthestronghold
+		icon = GFX_focus_breachthestronghold
+		x = 0
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_preparethedefences } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TAN
+			}
+		}
+	} 
+
+	#Focus for Russian Republicans
+	focus = { 
+		id = Mongolia_russianrepublicans
+		icon = GFX_focus_russianrepublicans
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_buryatguerillas } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			division_template = {
+				name = "Russian Republicans"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+				}
+			}
+			random_owned_state = {
+				create_unit = {
+					division = "name = \"Russian Republicans\" division_template = \"Russian Republicans\" start_experience_factor = 0.75 start_equipment_factor = 0.75"
+					owner = MON
+				}
+			}
+			army_experience = 25
+		}
+	} 
+
+	#Focus for Oppose the Shanxi
+	focus = { 
+		id = Mongolia_opposetheshanxi
+		icon = GFX_focus_opposetheshanxi
+		x = 7
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_thesouthernexpedition } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BYJ
+			}
+		}
+	} 
+
+	#Focus for Defend the Republic!
+	focus = { 
+		id = Mongolia_defendtherepublic
+		icon = GFX_focus_defendtherepublic
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_breachthestronghold focus = Mongolia_russianrepublicans } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = ZHR
+				modifier = offered_support
+			}
+			ZHR = {
+				add_opinion_modifier = {
+					target = MON
+					modifier = offered_support
+				}
+			}
+			diplomatic_relation = {
+				country = ZHR
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	} 
+
+	#Focus for Reincorporate the Frontier
+	focus = { 
+		id = Mongolia_reincorporatethefrontier
+		icon = GFX_focus_reincorporatethefrontier
+		x = 0
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_defendtherepublic } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			#core TAN
+			add_state_core = 962
+			add_state_core = 329
+			add_state_core = 961
+		}
+	} 
+
+	#Focus for Occupy Transbaijkal
+	focus = { 
+		id = Mongolia_occupytransbaijkal
+		icon = GFX_focus_occupytransbaijkal
+		x = 2
+		y = 5
+		cost = 5
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_defendtherepublic } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = { 
+			create_wargoal = {
+				type = annex_everything
+				target = MO2
+			}
+		}
+	} 
+
+	#Focus for Greater Mongolia
+	focus = { 
+		id = Mongolia_greatermongolia
+		icon = GFX_focus_greatermongolia
+		x = 1
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_reincorporatethefrontier } 
+		prerequisite = { focus = Mongolia_occupytransbaijkal } 
+		ai_will_do = { 
+			factor = 500
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			#cores on MO2
+			add_state_core = 563
+			add_state_core = 564
+			add_state_core = 964
+			#SIK
+			add_state_claim = 760
+			add_state_claim = 617
+			add_state_claim = 618
+			add_state_claim = 793
+			#ALT
+			add_state_core = 838
+			add_state_core = 898
+			add_state_core = 654
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+		}
+	} 
+
+	#Focus for Secure the Coast
+	focus = { 
+		id = Mongolia_securethecoast
+		icon = GFX_focus_securethecoast
+		x = 6
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_pickoffweakwarlords focus = Mongolia_opposetheshanxi } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SHA
+			}
+		}
+	} 
+
+	#Focus for Secure the Interior
+	focus = { 
+		id = Mongolia_securetheinterior
+		icon = GFX_focus_securetheinterior
+		x = 6
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_securethecoast } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = XIA
+			}
+		}
+	} 
+
+	#Focus for Maritime China
+	focus = { 
+		id = Mongolia_maritimechina
+		icon = GFX_focus_maritimechina
+		x = 5
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_securetheinterior } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GDP
+			}
+		}
+	} 
+
+	#Focus for Western Autonomies
+	focus = { 
+		id = Mongolia_westernautonomies
+		icon = GFX_focus_westernautonomies
+		x = 7
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_securetheinterior } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ETS
+			}
+		}
+	} 
+
+	#Focus for Correct the Record
+	focus = { 
+		id = Mongolia_correcttherecord
+		icon = GFX_focus_correcttherecord
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_maritimechina } 
+		prerequisite = { focus = Mongolia_westernautonomies } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			has_full_control_of_state = 608
+			is_subject = no
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MON_humiliation
+				add_idea =	MON_recordcorrected
+			}
+			set_country_flag = corrected_the_record
+			#claim the cities
+			add_state_core = 743
+			add_state_core = 839
+			add_state_core = 729
+			add_state_core = 326
+			add_state_core = 862
+			add_state_core = 928
+		}
+	} 
+
+	#Focus for Yuan Shikai Dollar
+	focus = { 
+		id = Mongolia_yuanshikaidollar
+		icon = GFX_focus_yuanshikaidollar
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_peaceandhappinessclub } 
+		ai_will_do = { 
+			factor = 100
+		} 
+		completion_reward = {
+			add_ideas = {
+				MON_yuanshikai
+			}
+		}
+	} 
+
+	#Focus for Anhui Revival
+	focus = { 
+		id = Mongolia_anhuirevival
+		icon = GFX_focus_anhuirevival
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_yuanshikaidollar } 
+		ai_will_do = { 
+			factor = 100
+		} 
+		completion_reward = {
+			add_ideas = {
+				MON_anhuirevival
+			}
+		}
+	} 
+
+	#Focus for President
+	focus = { 
+		id = Mongolia_president
+		icon = GFX_focus_president
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_anhuirevival } 
+		mutually_exclusive = { focus = Mongolia_emperor } 
+		mutually_exclusive = { focus = Mongolia_parliament }  
+		ai_will_do = { 
+			factor = 100
+		} 
+		completion_reward = {
+			MON = { 
+				country_event = { id = anhui.1 days = 5 }
+			}
+		}
+	} 
+
+	#Focus for Emperor
+	focus = { 
+		id = Mongolia_emperor
+		icon = GFX_focus_emperor
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_anhuirevival } 
+		mutually_exclusive = { focus = Mongolia_parliament } 
+		mutually_exclusive = { focus = Mongolia_president }  
+		ai_will_do = { 
+			factor = 10
+		} 
+		completion_reward = {
+			MON = { 
+				country_event = { id = anhui.2 days = 3 }
+			}
+		}
+	}
+
+	#Focus for Trade by Rail
+	focus = { 
+		id = Mongolia_tradebyrail
+		icon = GFX_focus_tradebyrail
+		x = 19
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_bayandevelopment } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	} 
+
+	#Focus for Parliament
+	focus = { 
+		id = Mongolia_parliament
+		icon = GFX_focus_parliament
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_anhuirevival } 
+		mutually_exclusive = { focus = Mongolia_president } 
+		mutually_exclusive = { focus = Mongolia_emperor } 
+		ai_will_do = { 
+			factor = 50
+		} 
+		completion_reward = {
+			MON = { 
+				country_event = { id = anhui.3 days = 7 }
+			}
+		}
+	} 
+
+	#Focus for Autarky
+	focus = { 
+		id = Mongolia_autarky
+		icon = GFX_focus_autarky
+		x = 23
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_khreedevelopment } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+		}
+	} 
+
+	#Focus for Autocrat
+	focus = { 
+		id = Mongolia_autocrat
+		icon = GFX_focus_autocrat
+		x = 10
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_president } 
+		ai_will_do = { 
+		factor = 1
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = 0.2
+			}
+		}
+	} 
+
+	#Focus for Civil Liberites
+	focus = { 
+		id = Mongolia_civilliberites
+		icon = GFX_focus_civilliberties
+		x = 14
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_autonomy } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_stability = 0.25
+			add_ideas = {
+				MON_democracy
+			}
+			add_popularity = {
+				ideology = right_authoritarianism
+				popularity = -0.2
+			}
+		}
+	} 
+
+	#Focus for Mandate of Heaven
+	focus = { 
+		id = Mongolia_mandateofheaven
+		icon = GFX_focus_mandateofheaven
+		x = 12
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_emperor } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_popularity = {
+				ideology = reactionism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = despotism
+				popularity = 0.1
+			}
+		}
+	} 
+
+	#Focus for Confucian Empire
+	focus = { 
+		id = Mongolia_confucianempire
+		icon = GFX_focus_confucianempire
+		x = 12
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_mandateofheaven } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_ideas = {
+				MON_empire
+			}
+		}
+	} 
+
+	#Focus for Destroy the KMT
+	focus = { 
+		id = Mongolia_destroythekmt
+		icon = GFX_focus_destroythekmt
+		x = 11
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_militaryjunta focus = Mongolia_confucianempire } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		bypass = {
+			KMT = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			FJN = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KMT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = FJN
+			}
+		}
+	} 
+
+	#Focus for Compromise with the KMT
+	focus = { 
+		id = Mongolia_compromisewiththekmt
+		icon = GFX_focus_compromisewiththekmt
+		x = 14
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_civilliberites } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		#plebicite for control of KMT, GDP and FJN
+		bypass = {
+			OR = {
+				KMT = {
+					OR = {
+						is_puppet = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = MON }
+						}
+					}
+				}
+				MON = {
+					owns_state = 600
+					owns_state = 749
+					owns_state = 613
+					owns_state = 929
+					owns_state = 861
+					owns_state = 863
+					owns_state = 596
+				}
+				GDP = {
+					OR = {
+						is_puppet = yes
+						exists = no 
+						AND = {
+							is_in_faction = yes
+							NOT = { is_in_faction_with = MON }
+						}
+					}
+				}
+				MON = {
+					owns_state = 594
+					owns_state = 876
+					owns_state = 599
+					owns_state = 836
+					owns_state = 925
+					owns_state = 593
+					owns_state = 592
+					owns_state = 594
+					owns_state = 926
+					owns_state = 877
+					owns_state = 728
+					owns_state = 591
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					KMT = {
+						exists = yes
+						is_puppet = no
+						OR = {
+							owns_state = 600
+							owns_state = 749
+							owns_state = 613
+							owns_state = 929
+							owns_state = 861
+							owns_state = 863
+							owns_state = 596
+						}
+					}
+				}
+				KMT = {
+					country_event = anhui.5
+				}				
+			}
+			if = {
+				limit = {
+					country_exists = GDP
+					GDP = {
+						has_civil_war = no
+						OR = {
+							owns_state = 876
+							owns_state = 594
+							owns_state = 599
+							owns_state = 836
+							owns_state = 925
+							owns_state = 593
+							owns_state = 926
+							owns_state = 592
+						}
+					}
+				}
+				GDP = {
+					country_event = anhui.11
+				}				
+			}
+		}
+	}
+
+	#Focus for Chinese Empire
+	focus = { 
+		id = Mongolia_chineseempire
+		icon = GFX_focus_chineseempire
+		x = 11
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_destroythekmt } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_country_flag = corrected_the_record
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_chinese_reclaimation
+			set_cosmetic_tag = MON_china_empire
+			hidden_effect = {
+				#claim japanese canton
+				add_state_core = 877
+				add_state_core = 728
+				add_state_core = 591
+				
+				add_state_core = 524
+				add_state_core = 1023
+				#cores on BYJ
+				add_state_core = 621
+				add_state_core = 611
+				add_state_core = 615
+				add_state_core = 837
+				add_state_core = 609
+				add_state_core = 608
+				add_state_core = 860
+				add_state_core = 866
+				add_state_core = 614
+				add_state_core = 871
+				add_state_core = 872
+				add_state_core = 792
+				add_state_core = 870
+				add_state_core = 868
+				add_state_core = 878
+				add_state_core = 606
+				add_state_core = 879
+				add_state_core = 622
+				add_state_core = 744
+				add_state_core = 746
+				add_state_core = 607
+				add_state_core = 917
+				add_state_core = 620
+				#cores on Mao/hunan
+				add_state_core = 896
+				add_state_core = 932
+				add_state_core = 795
+				add_state_core = 897
+				add_state_core = 867
+				add_state_core = 750
+				add_state_core = 874
+				add_state_core = 602
+				add_state_core = 892
+				add_state_core = 934
+				#cores on KMT
+				add_state_core = 600
+				add_state_core = 749
+				add_state_core = 613
+				add_state_core = 929
+				add_state_core = 861
+				add_state_core = 863
+				add_state_core = 596
+				#cores on FJN
+				add_state_core = 869
+				add_state_core = 595
+				add_state_core = 864
+				add_state_core = 931
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				#cores on MAN
+				add_state_core = 610
+				add_state_core = 715
+				add_state_core = 328
+				add_state_core = 717
+				add_state_core = 809
+				add_state_core = 716
+				add_state_core = 789
+				#cores on TIB
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 757
+				add_state_core = 434
+				add_state_core = 601
+				add_state_core = 604
+				#cores on ETS
+				add_state_core = 935
+				add_state_core = 843
+				add_state_core = 287
+				add_state_core = 619
+				#cores on SIK
+				add_state_core = 617
+				add_state_core = 760
+				add_state_core = 793
+				add_state_core = 618
+				#STE
+				add_state_core = 794
+				add_state_core = 842
+				add_state_core = 586
+				#cores on XSM
+				add_state_core = 755
+				add_state_core = 759
+				add_state_core = 756
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 754
+				#cores on SZC
+				add_state_core = 605
+				add_state_core = 753
+				add_state_core = 752
+				add_state_core = 751
+				add_state_core = 791
+				add_state_core = 790
+				add_state_core = 748
+				#cores on YUN
+				add_state_core = 603
+				add_state_core = 325
+				add_state_core = 924
+				add_state_core = 887
+				add_state_core = 886
+				add_state_core = 747
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				add_state_core = 593
+				add_state_core = 926
+				add_state_core = 592
+				#cores on SHA
+				add_state_core = 918
+				add_state_core = 597
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 893
+				add_state_core = 598
+			}
+		}
+		#cores on china, claims on formosa, tibet, etc.
+	} 
+
+	#Focus for New Beiyang Republic
+	focus = { 
+		id = Mongolia_newbeiyangrepublic
+		icon = GFX_focus_newbeiyangrepublic
+		x = 14
+		y = 7
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_compromisewiththekmt } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_country_flag = corrected_the_record
+			}
+			is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = MON_chinese_reclaimation
+			set_cosmetic_tag = MON_china_republic
+			hidden_effect = {
+				#claim japanese canton
+				add_state_core = 877
+				add_state_core = 728
+				add_state_core = 591
+				add_state_core = 745
+				add_state_core = 524
+				add_state_core = 1023
+				#cores on BYJ
+				add_state_core = 621
+				add_state_core = 611
+				add_state_core = 615
+				add_state_core = 837
+				add_state_core = 609
+				add_state_core = 608
+				add_state_core = 860
+				add_state_core = 866
+				add_state_core = 614
+				add_state_core = 871
+				add_state_core = 872
+				add_state_core = 792
+				add_state_core = 870
+				add_state_core = 868
+				add_state_core = 878
+				add_state_core = 606
+				add_state_core = 879
+				add_state_core = 622
+				add_state_core = 744
+				add_state_core = 746
+				add_state_core = 607
+				add_state_core = 917
+				add_state_core = 620
+				#core Mao/hunan
+				add_state_core = 896
+				add_state_core = 932
+				add_state_core = 795
+				add_state_core = 897
+				add_state_core = 867
+				add_state_core = 750
+				add_state_core = 874
+				add_state_core = 602
+				add_state_core = 892
+				add_state_core = 934
+				#cores on MAN
+				add_state_core = 610
+				add_state_core = 715
+				add_state_core = 328
+				add_state_core = 717
+				add_state_core = 809
+				add_state_core = 716
+				add_state_core = 789
+				#cores on TIB
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 757
+				add_state_core = 434
+				add_state_core = 601
+				add_state_core = 604
+				#cores on ETS
+				add_state_core = 935
+				add_state_core = 843
+				add_state_core = 287
+				add_state_core = 619
+				#cores on SIK
+				add_state_core = 617
+				add_state_core = 760
+				add_state_core = 793
+				add_state_core = 618
+				#cores on XSM
+				add_state_core = 755
+				add_state_core = 759
+				add_state_core = 756
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 754
+				#cores on SZC
+				add_state_core = 605
+				add_state_core = 753
+				add_state_core = 752
+				add_state_core = 751
+				add_state_core = 791
+				add_state_core = 790
+				add_state_core = 748
+				#cores on YUN
+				add_state_core = 603
+				add_state_core = 325
+				add_state_core = 924
+				add_state_core = 887
+				add_state_core = 886
+				add_state_core = 747
+				#cores on GDP
+				add_state_core = 876
+				add_state_core = 594
+				add_state_core = 599
+				add_state_core = 836
+				add_state_core = 925
+				add_state_core = 593
+				add_state_core = 926
+				add_state_core = 592
+				#cores on SHA
+				add_state_core = 918
+				add_state_core = 597
+				add_state_core = 873
+				add_state_core = 865
+				add_state_core = 893
+				add_state_core = 598				
+			}
+		}
+#cores on china, claims on formosa, tibet, etc.
+	} 
+
+	#Focus for Bayan Tümen Development
+	focus = { 
+		id = Mongolia_bayandevelopment
+		icon = GFX_focus_bayantumendevelopment
+		x = 19
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_reorganisethedregs } 
+		mutually_exclusive = { focus = Mongolia_khreedevelopment } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			914 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	} 
+
+	#Focus for Found the National University
+	focus = { 
+		id = Mongolia_foundthenationaluniversity
+		icon = GFX_focus_foundthenationaluniversity
+		x = 23
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_autarky } 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 1
+				uses = 1
+				category = nuclear
+			}
+		}
+
+	} 
+
+	#Focus for National Geological Survey
+	focus = { 
+		id = Mongolia_nationalgeologicalsurvey
+		icon = GFX_focus_nationalgeologicalsurvey
+		x = 23
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_foundthenationaluniversity } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = synth_resources
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 330
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 330
+			}
+		}
+	} 
+
+	#Focus for Trade with the Cliques
+	focus = { 
+		id = Mongolia_tradewiththecliques
+		icon = GFX_focus_tradewiththecliques
+		x = 18
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_tradebyrail } 
+		mutually_exclusive = { focus = Mongolia_tradewithjapan } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			NOT = { has_war_with = SZC }
+			NOT = { has_war_with = GDP }
+		}
+		bypass = {
+			SZC = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+			GDP = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = SZC
+				modifier = aided_industry
+			}
+			add_opinion_modifier = {
+				target = GDP
+				modifier = aided_industry
+			}
+			add_offsite_building = { type = industrial_complex level = 3 }
+			add_offsite_building = { type = arms_factory level = 1 }
+		}
+	} 
+
+	#Focus for Trade with Japan
+	focus = { 
+		id = Mongolia_tradewithjapan
+		icon = GFX_focus_tradewithjapan
+		x = 20
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_tradebyrail } 
+		mutually_exclusive = { focus = Mongolia_tradewiththecliques } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			NOT = { has_war_with = JAP }
+			JAP = {
+				exists = yes
+			}
+		}
+		bypass = {
+			JAP = {
+				OR = {
+					exists = no
+					is_subject = yes			
+					AND = {
+						is_subject = no
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = JAP
+				modifier = aided_industry
+			}
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 3 }
+		}
+	} 
+
+	#Focus for National Library Liason Commitee
+	focus = { 
+		id = Mongolia_nationallibraryliasoncommitee
+		icon = GFX_focus_nationallibraryliasoncommitee
+		x = 19
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_tradewithjapan focus = Mongolia_tradewiththecliques } 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+	} 
+
+	#Focus for Chinese Economic Policy
+	focus = { 
+		id = Mongolia_chineseeconomicpolicy
+		icon = GFX_focus_chineseeconomicpolicy
+		available = {
+			MON = {
+				owns_state = 608
+			}
+			is_subject = no
+		}
+		x = 21
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_nationallibraryliasoncommitee focus = Mongolia_nationalgeologicalsurvey } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			remove_ideas = {
+				MON_agrarianeconomy
+			}
+			country_event = {
+				id = anhui.4
+			}
+		}
+	} 
+
+	#Focus for Reform the Exiles
+	focus = { 
+		id = Mongolia_reformtheexiles
+		icon = GFX_focus_reformtheexiles
+		x = 30
+		y = 0
+		cost = 10
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			army_experience = 25
+		}
+	} 
+
+	#Focus for Establish Permanent Air Wings
+	focus = { 
+		id = Mongolia_establishpermanentairwings
+		icon = GFX_focus_establishpermanentairwings
+		x = 35
+		y = 0
+		cost = 10
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = { 
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1
+				uses = 1
+				category = light_air
+			}
+		}
+	} 
+
+	#Focus for Submarine Bases
+	focus = { 
+		id = Mongolia_submarinebases
+		icon = GFX_focus_submarinebases
+		x = 40
+		y = 0
+		cost = 10
+		available_if_capitulated = yes 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		completion_reward = { 
+			navy_experience = 20
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	} 
+
+	#Focus for New Conscription
+	focus = { 
+		id = Mongolia_newconscription
+		icon = GFX_focus_newconscription
+		x = 30
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_reformtheexiles } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_ideas = {
+				MON_conscription
+			}
+		}
+	} 
+
+	#Focus for Octane Cavalry
+	focus = { 
+		id = Mongolia_octanecavalry
+		icon = GFX_focus_octanecavalry
+		x = 29
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_newconscription } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1
+				uses = 1
+				category = motorized_equipment
+			}
+		} 
+	} 
+
+	#Focus for Nomad Shock Troops
+	focus = { 
+		id = Mongolia_nomadshocktroops
+		icon = GFX_focus_nomadshocktroops
+		x = 31
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_newconscription } 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				MON_nomadshock
+			}
+		}
+	} 
+
+	#Focus for Mechanical Horde
+	focus = { 
+		id = Mongolia_mechanicalhorde
+		icon = GFX_focus_mechanicalhorde
+		x = 29
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_octanecavalry } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 1
+				uses = 2
+				category = cat_mechanized_equipment
+			}
+		} 
+	} 
+
+	#Focus for Bombardment
+	focus = { 
+		id = Mongolia_bombardment
+		icon = GFX_focus_bombardment
+		x = 31
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_nomadshocktroops } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1
+				uses = 2
+				category = artillery
+			}
+		}
+	} 
+
+	#Focus for Apolitical Officers
+	focus = { 
+		id = Mongolia_apoliticalofficers
+		icon = GFX_focus_apoliticalofficers
+		x = 30
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_mechanicalhorde } 
+		prerequisite = { focus = Mongolia_bombardment } 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = {
+				MON_apolitical_officers
+			}
+		}
+	} 
+
+	#Focus for Officer School
+	focus = { 
+		id = Mongolia_officerschool
+		icon = GFX_focus_officerschool
+		x = 30
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_apoliticalofficers } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	#Focus for New Beiyang Army
+	focus = { 
+		id = Mongolia_beiyangarmy
+		icon = GFX_focus_newbeiyangarmy
+		x = 30
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_officerschool } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = {
+			has_completed_focus = Mongolia_consolidateoutermongolia
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = MON_brokenarmy2
+				add_idea = MON_newarmy
+			}
+		}
+	} 
+
+	#Focus for Expand Air Bases
+	focus = { 
+		id = Mongolia_expandairbases
+		icon = GFX_focus_expandairbases
+		x = 35
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_establishpermanentairwings } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			random_owned_controlled_state = {
+				limit = {
+					air_base > 0
+					free_building_slots = {
+						building = air_base
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	} 
+
+	#Focus for Ravens!
+	focus = { 
+		id = Mongolia_ravens
+		icon = GFX_focus_ravens
+		x = 34
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_expandairbases } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	} 
+
+	#Focus for Eagles!
+	focus = { 
+		id = Mongolia_eagles
+		icon = GFX_focus_eagles
+		x = 36
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_expandairbases } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	} 
+
+	#Focus for Ace of Spades
+	focus = { 
+		id = Mongolia_aceofspades
+		icon = GFX_focus_aceofspades
+		x = 34
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_ravens } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+			add_ideas = {
+				MON_acespades
+			}
+		}
+	} 
+
+	#Focus for Ace of Hearts
+	focus = { 
+		id = Mongolia_aceofhearts
+		icon = GFX_focus_aceofhearts
+		x = 36
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_eagles } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 1
+				category = air_doctrine
+			}
+			add_ideas = {
+				MON_acehearts
+			}
+		}
+	} 
+
+	#Focus for Scout Signals
+	focus = { 
+		id = Mongolia_scoutsignals
+		icon = GFX_focus_scoutsignals
+		x = 35
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_aceofspades } 
+		prerequisite = { focus = Mongolia_aceofhearts } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	} 
+
+	#Focus for Radar Training
+	focus = { 
+		id = Mongolia_radartraining
+		icon = GFX_focus_radartraining
+		x = 35
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_scoutsignals } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1
+				uses = 2
+				category = radar_tech
+			}
+		} 
+	} 
+
+	#Focus for New Chinese Air Force
+	focus = { 
+		id = Mongolia_newairforce
+		icon = GFX_focus_newchineseairforce
+		x = 35
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_radartraining } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1
+				uses = 2
+				category = jet_technology
+			}
+		}
+	} 
+
+	#Focus for Giant Slayers
+	focus = { 
+		id = Mongolia_giantslayers
+		icon = GFX_focus_giantslayers
+		x = 40
+		y = 2
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_gatekeepers } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1
+				uses = 2
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1
+				uses = 1
+				category = naval_air
+			}
+		}
+	} 
+
+	#Focus for Dragon Fleet
+	focus = { 
+		id = Mongolia_dragonfleet
+		icon = GFX_focus_dragonfleet
+		x = 39
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_newbattleships } 
+		mutually_exclusive = { focus = Mongolia_heronfleet } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1
+				uses = 2
+				category = cl_tech
+			}
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1
+				uses = 1
+				category = ca_tech
+			}
+		}
+	} 
+
+	#Focus for New Admiralty
+	focus = { 
+		id = Mongolia_newadmiralty
+		icon = GFX_focus_newadmiralty
+		x = 40
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_dragonfleet focus = Mongolia_heronfleet } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			navy_experience = 50
+		}
+	}
+	
+	#Focus for Beiyang Fleet
+	focus = {
+		id = Mongolia_beiyangfleet
+		icon = GFX_focus_beiyangfleet
+		x = 40
+		y = 6
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_newadmiralty } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = nav_doc_bonus
+				bonus = 1
+				uses = 2
+				category = naval_doctrine
+			}
+			navy_experience = 75
+		}
+	} 
+
+	#Focus for Underdog Navy
+	focus = { 
+		id = Mongolia_underdognavy
+		icon = GFX_focus_underdognavy
+		x = 41
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_giantslayers } 
+		mutually_exclusive = { focus = Mongolia_newbattleships } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	} 
+
+	#Focus for Heron Fleet
+	focus = { 
+		id = Mongolia_heronfleet
+		icon = GFX_focus_heronfleet
+		x = 41
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_underdognavy } 
+		mutually_exclusive = { focus = Mongolia_dragonfleet } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+	} 
+
+	#Focus for Pick off Weak Warlords
+	focus = { 
+		id = Mongolia_pickoffweakwarlords
+		icon = GFX_focus_pickoffweakwarlords
+		x = 5
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_thesouthernexpedition } 
+		ai_will_do = { 
+			factor = 1
+		}
+		available = { 
+			is_subject = no
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = XSM
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = ALT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+	} 
+
+	#Focus for Military Junta
+	focus = { 
+		id = Mongolia_militaryjunta
+		icon = GFX_focus_militaryjunta
+		x = 10
+		y = 5
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_autocrat } 
+		ai_will_do = { 
+			factor = 1
+		}
+		completion_reward = {
+			add_ideas = {
+				MON_militarygovt
+			}
+		}
+	} 
+
+	#Focus for Autonomy
+	focus = { 
+		id = Mongolia_autonomy
+		icon = GFX_focus_autonomy
+		x = 14
+		y = 4
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_parliament } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = -0.1
+			add_popularity = {
+				ideology = despotism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = reactionism
+				popularity = -0.1
+			}
+			add_political_power = 100
+		}
+	} 
+
+	#Focus for Khüree Development
+	focus = { 
+		id = Mongolia_khreedevelopment
+		icon = GFX_focus_khureedevelopment
+		x = 23
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_reorganisethedregs } 
+		mutually_exclusive = { focus = Mongolia_bayandevelopment } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		available = {
+			has_full_control_of_state = 330
+		}
+		completion_reward = { 
+			330 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			} 
+		}
+	} 
+
+	#Focus for Gatekeepers
+	focus = { 
+		id = Mongolia_gatekeepers
+		icon = GFX_focus_gatekeepers
+		x = 40
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_submarinebases } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1
+				uses = 2
+				category = ss_tech
+			}
+		}
+	} 
+
+	#Focus for New Battleships
+	focus = { 
+		id = Mongolia_newbattleships
+		icon = GFX_focus_newbattleships
+		x = 39
+		y = 3
+		cost = 10
+		available_if_capitulated = yes 
+		prerequisite = { focus = Mongolia_giantslayers } 
+		mutually_exclusive = { focus = Mongolia_underdognavy } 
+		ai_will_do = { 
+			factor = 1
+		} 
+		completion_reward = { 
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1
+				uses = 2
+				category = bb_tech
+			}
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+	#End of focuses 
+}

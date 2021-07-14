@@ -1,0 +1,16 @@
+units= {
+	fleet = {
+		name = "Cretan Fleet"		
+		naval_base = 9940
+		task_force = {		
+			name = "Cretan Squadron"			
+			location = 9940
+			ship = { name = "Unnamed British Ship One" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Unnamed British Ship Two" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Unnamed British Ship Three" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = KCK } } }
+			ship = { name = "Greek Ship in Exile" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = KCK } } }				
+		}	
+	}
+}
+
+# Please change names as nescessary

@@ -1,0 +1,684 @@
+spriteTypes = {
+	SpriteType = {
+			name = "GFX_goal_WRU_avalov_fief"
+			texturefile = "gfx/interface/goals/WRU/WRU_avalov_fief.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_making_gains"
+			texturefile = "gfx/interface/goals/WRU/WRU_making_gains.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_russification"
+			texturefile = "gfx/interface/goals/WRU/WRU_russification.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_reward_army_loyalty"
+			texturefile = "gfx/interface/goals/WRU/WRU_reward_army_loyalty.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_reward_freikorps"
+			texturefile = "gfx/interface/goals/WRU/WRU_reward_freikorps.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_army_with_the_state"
+			texturefile = "gfx/interface/goals/WRU/WRU_army_with_the_state.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_encourage_settlement"
+			texturefile = "gfx/interface/goals/WRU/WRU_encourage_settlement.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_cultural_societies"
+			texturefile = "gfx/interface/goals/WRU/WRU_cultural_societies.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_central_gov_contracts"
+			texturefile = "gfx/interface/goals/WRU/WRU_central_gov_contracts.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_export_econ"
+			texturefile = "gfx/interface/goals/WRU/WRU_export_econ.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_mon13"
+			texturefile = "gfx/interface/goals/WRU/WRU_mon13.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_wartime_measures"
+			texturefile = "gfx/interface/goals/WRU/WRU_wartime_measures.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_ask_military_support"
+			texturefile = "gfx/interface/goals/WRU/WRU_ask_military_support.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_wartime_econ"
+			texturefile = "gfx/interface/goals/WRU/WRU_wartime_econ.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_expand_paramilitaries"
+			texturefile = "gfx/interface/goals/WRU/WRU_expand_paramilitaries.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_avalov_fief"
+			texturefile = "gfx/interface/goals/WRU/WRU_avalov_fief.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_making_gains"
+			texturefile = "gfx/interface/goals/WRU/WRU_making_gains.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_russification"
+			texturefile = "gfx/interface/goals/WRU/WRU_russification.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_reward_army_loyalty"
+			texturefile = "gfx/interface/goals/WRU/WRU_reward_army_loyalty.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_army_with_the_state"
+			texturefile = "gfx/interface/goals/WRU/WRU_army_with_the_state.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_encourage_settlement"
+			texturefile = "gfx/interface/goals/WRU/WRU_encourage_settlement.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_cultural_societies"
+			texturefile = "gfx/interface/goals/WRU/WRU_cultural_societies.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_export_econ"
+			texturefile = "gfx/interface/goals/WRU/WRU_export_econ.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_mon13"
+			texturefile = "gfx/interface/goals/WRU/WRU_mon13.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_wartime_measures"
+			texturefile = "gfx/interface/goals/WRU/WRU_wartime_measures.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_ask_military_support"
+			texturefile = "gfx/interface/goals/WRU/WRU_ask_military_support.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_wartime_econ"
+			texturefile = "gfx/interface/goals/WRU/WRU_wartime_econ.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_expand_paramilitaries"
+			texturefile = "gfx/interface/goals/WRU/WRU_expand_paramilitaries.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_alliance_w_russian_minorities"
+			texturefile = "gfx/interface/goals/WRU/WRU_alliance_w_russian_minorities.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_patrol_the_forests"
+			texturefile = "gfx/interface/goals/WRU/WRU_patrol_the_forests.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_freikorps_support"
+			texturefile = "gfx/interface/goals/WRU/WRU_freikorps_support.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_reward_loyal"
+			texturefile = "gfx/interface/goals/WRU/WRU_reward_loyal.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_ask_prussia_help"
+			texturefile = "gfx/interface/goals/WRU/WRU_ask_prussia_help.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_russian_support"
+			texturefile = "gfx/interface/goals/WRU/WRU_russian_support.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_united_under_avalov"
+			texturefile = "gfx/interface/goals/WRU/WRU_united_under_avalov.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_call_to_fatherland"
+			texturefile = "gfx/interface/goals/WRU/WRU_call_to_fatherland.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_nationalize_union"
+			texturefile = "gfx/interface/goals/WRU/WRU_nationalize_union.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_radio_for_army"
+			texturefile = "gfx/interface/goals/WRU/WRU_radio_for_army.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_nationalize_riga_shipyard"
+			texturefile = "gfx/interface/goals/WRU/WRU_nationalize_riga_shipyard.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_standing_fleet"
+			texturefile = "gfx/interface/goals/WRU/WRU_standing_fleet.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_food_supplies_for_years_to_come"
+			texturefile = "gfx/interface/goals/WRU/WRU_food_supplies_for_years_to_come.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_economic_security"
+			texturefile = "gfx/interface/goals/WRU/WRU_economic_security.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_victory"
+			texturefile = "gfx/interface/goals/WRU/WRU_victory.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_parade"
+			texturefile = "gfx/interface/goals/WRU/WRU_parade.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_russophiles_in_gov"
+			texturefile = "gfx/interface/goals/WRU/WRU_russophiles_in_gov.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_autonomous_communes"
+			texturefile = "gfx/interface/goals/WRU/WRU_autonomous_communes.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_sovet_whatever_zemel"
+			texturefile = "gfx/interface/goals/WRU/WRU_sovet_whatever_zemel.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_restructuring_state"
+			texturefile = "gfx/interface/goals/WRU/WRU_restructuring_state.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_signs_of_relief"
+			texturefile = "gfx/interface/goals/WRU/WRU_signs_of_relief.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_death_of_avalov"
+			texturefile = "gfx/interface/goals/WRU/WRU_death_of_avalov.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_autonomy_within_russia"
+			texturefile = "gfx/interface/goals/WRU/WRU_autonomy_within_russia.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_invite_BORT"
+			texturefile = "gfx/interface/goals/WRU/WRU_invite_BORT.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_retvrn_rights_to_german_aristocracy"
+			texturefile = "gfx/interface/goals/WRU/WRU_retvrn_rights_to_german_aristocracy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_purge_partisan_remnants"
+			texturefile = "gfx/interface/goals/WRU/WRU_purge_partisan_remnants.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_visit_to_prussia"
+			texturefile = "gfx/interface/goals/WRU/WRU_visit_to_prussia.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_grey_pact"
+			texturefile = "gfx/interface/goals/WRU/WRU_grey_pact.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_cement_legitimacy"
+			texturefile = "gfx/interface/goals/WRU/WRU_cement_legitimacy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_german_contracts"
+			texturefile = "gfx/interface/goals/WRU/WRU_german_contracts.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_invite_germans"
+			texturefile = "gfx/interface/goals/WRU/WRU_invite_germans.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_riga_shipyard_useful"
+			texturefile = "gfx/interface/goals/WRU/WRU_riga_shipyard_useful.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_steady_as_it_goes"
+			texturefile = "gfx/interface/goals/WRU/WRU_steady_as_it_goes.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_expand_agricultural_sector"
+			texturefile = "gfx/interface/goals/WRU/WRU_expand_agricultural_sector.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_agricultural_communes"
+			texturefile = "gfx/interface/goals/WRU/WRU_agricultural_communes.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_modern_agriculture"
+			texturefile = "gfx/interface/goals/WRU/WRU_modern_agriculture.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_prepare_soldiers"
+			texturefile = "gfx/interface/goals/WRU/WRU_prepare_soldiers.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_propaganda"
+			texturefile = "gfx/interface/goals/WRU/WRU_propaganda.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_making_profits"
+			texturefile = "gfx/interface/goals/WRU/WRU_making_profits.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_tank_shipments"
+			texturefile = "gfx/interface/goals/WRU/WRU_tank_shipments.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_teutonic_charge"
+			texturefile = "gfx/interface/goals/WRU/WRU_teutonic_charge.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_kettler_the_second"
+			texturefile = "gfx/interface/goals/WRU/WRU_kettler_the_second.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRU_wartime_measures"
+			texturefile = "gfx/interface/goals/WRU/WRU_wartime_measures.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_brotherhood_coup"
+			texturefile = "gfx/interface/goals/WRT/WRT_brotherhood_coup.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_state_orthodoxy"
+			texturefile = "gfx/interface/goals/WRT/WRT_state_orthodoxy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_purge_germans"
+			texturefile = "gfx/interface/goals/WRT/WRT_purge_germans.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_destroy_german_aristocracy"
+			texturefile = "gfx/interface/goals/WRT/WRT_destroy_german_aristocracy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_oppose_luther"
+			texturefile = "gfx/interface/goals/WRT/WRT_oppose_luther.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_reconcile_w_paramilitaries"
+			texturefile = "gfx/interface/goals/WRT/WRT_reconcile_w_paramilitaries.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_prepare_for_coming_storm"
+			texturefile = "gfx/interface/goals/WRT/WRT_prepare_for_coming_storm.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_intensify_russification"
+			texturefile = "gfx/interface/goals/WRT/WRT_intensify_russification.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_brotherhood_coup"
+			texturefile = "gfx/interface/goals/WRT/WRT_brotherhood_coup.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_state_orthodoxy"
+			texturefile = "gfx/interface/goals/WRT/WRT_state_orthodoxy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_purge_germans"
+			texturefile = "gfx/interface/goals/WRT/WRT_purge_germans.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_destroy_german_aristocracy"
+			texturefile = "gfx/interface/goals/WRT/WRT_destroy_german_aristocracy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_oppose_luther"
+			texturefile = "gfx/interface/goals/WRT/WRT_oppose_luther.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_reconcile_w_paramilitaries"
+			texturefile = "gfx/interface/goals/WRT/WRT_reconcile_w_paramilitaries.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_prepare_for_coming_storm"
+			texturefile = "gfx/interface/goals/WRT/WRT_prepare_for_coming_storm.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_intensify_russification"
+			texturefile = "gfx/interface/goals/WRT/WRT_intensify_russification.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_colonize_dvinsk"
+			texturefile = "gfx/interface/goals/WRT/WRT_colonize_dvinsk.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_colonize_yuriev"
+			texturefile = "gfx/interface/goals/WRT/WRT_colonize_yuriev.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_black_horse"
+			texturefile = "gfx/interface/goals/WRT/WRT_black_horse.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_white_horse"
+			texturefile = "gfx/interface/goals/WRT/WRT_white_horse.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_red_horse"
+			texturefile = "gfx/interface/goals/WRT/WRT_red_horse.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_reclaim_lithuania"
+			texturefile = "gfx/interface/goals/WRT/WRT_reclaim_lithuania.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_punish_prussia"
+			texturefile = "gfx/interface/goals/WRT/WRT_punish_prussia.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_attack_belarus"
+			texturefile = "gfx/interface/goals/WRT/WRT_attack_belarus.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_industrialize_belarus"
+			texturefile = "gfx/interface/goals/WRT/WRT_industrialize_belarus.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_anti_polish_crusade"
+			texturefile = "gfx/interface/goals/WRT/WRT_anti_polish_crusade.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_enlightened_feudalism"
+			texturefile = "gfx/interface/goals/WRT/WRT_enlightened_feudalism.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_promote_pre_western_society"
+			texturefile = "gfx/interface/goals/WRT/WRT_promote_pre_western_society.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_outlaw_republicanism"
+			texturefile = "gfx/interface/goals/WRT/WRT_outlaw_republicanism.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_renovate_the_russo_balt"
+			texturefile = "gfx/interface/goals/WRT/WRT_renovate_the_russo_balt.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_investigate_deep_battle"
+			texturefile = "gfx/interface/goals/WRT/WRT_investigate_deep_battle.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_a_new_baltic_military"
+			texturefile = "gfx/interface/goals/WRT/WRT_a_new_baltic_military.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_punish_red_devil"
+			texturefile = "gfx/interface/goals/WRT/WRT_punish_red_devil.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_reward_orthodox_workers"
+			texturefile = "gfx/interface/goals/WRT/WRT_reward_orthodox_workers.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_reorganize_navy"
+			texturefile = "gfx/interface/goals/WRT/WRT_reorganize_navy.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_holy_russian_armada"
+			texturefile = "gfx/interface/goals/WRT/WRT_holy_russian_armada.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_replace_germans_in_air_force"
+			texturefile = "gfx/interface/goals/WRT/WRT_replace_germans_in_air_force.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_air_doctrine_debate"
+			texturefile = "gfx/interface/goals/WRT/WRT_air_doctrine_debate.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_baltic_russian_identity"
+			texturefile = "gfx/interface/goals/WRT/WRT_baltic_russian_identity.dds"
+		}
+	SpriteType = {
+			name = "GFX_goal_WRT_truth_is_safe"
+			texturefile = "gfx/interface/goals/WRT/WRT_truth_is_safe.dds"
+		}
+
+	SpriteType = {
+		name = "GFX_goal_WRT_baltic_sfsr"
+		texturefile = "gfx/interface/goals/WRT/WRT_baltic_sfsr.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_international_nationalism"
+		texturefile = "gfx/interface/goals/WRT/WRT_international_nationalism.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_five_year_plan"
+		texturefile = "gfx/interface/goals/WRT/WRT_five_year_plan.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_foundation_of_ubeg"
+		texturefile = "gfx/interface/goals/WRT/WRT_foundation_of_ubeg.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_militarization_of_economy"
+		texturefile = "gfx/interface/goals/WRT/WRT_militarization_of_economy.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_build_power_plant_on_daugava"
+		texturefile = "gfx/interface/goals/WRT/WRT_build_power_plant_on_daugava.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_wealth_redistribution"
+		texturefile = "gfx/interface/goals/WRT/WRT_wealth_redistribution.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_continue_five_year_plan"
+		texturefile = "gfx/interface/goals/WRT/WRT_continue_five_year_plan.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_workers_paradise"
+		texturefile = "gfx/interface/goals/WRT/WRT_workers_paradise.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_baltic_red_army"
+		texturefile = "gfx/interface/goals/WRT/WRT_baltic_red_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_baltic_german_doctrine_cooperation"
+		texturefile = "gfx/interface/goals/WRT/WRT_baltic_german_doctrine_cooperation.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_equipment_modernization"
+		texturefile = "gfx/interface/goals/WRT/WRT_equipment_modernization.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_patriotic_lessons"
+		texturefile = "gfx/interface/goals/WRT/WRT_patriotic_lessons.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_patriotic_warfare"
+		texturefile = "gfx/interface/goals/WRT/WRT_patriotic_warfare.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_our_plane_in_the_world"
+		texturefile = "gfx/interface/goals/WRT/WRT_our_plane_in_the_world.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_delegation_to_third_international"
+		texturefile = "gfx/interface/goals/WRT/WRT_delegation_to_third_international.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_shelter_political_refugees"
+		texturefile = "gfx/interface/goals/WRT/WRT_shelter_political_refugees.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_message_to_lithuania"
+		texturefile = "gfx/interface/goals/WRT/WRT_message_to_lithuania.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRT_freeing_baltic_workers"
+		texturefile = "gfx/interface/goals/WRT/WRT_freeing_baltic_workers.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_WRR_black_dawn"
+		texturefile = "gfx/interface/goals/WRR/WRR_black_dawn.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_cut_ties_to_russia"
+		texturefile = "gfx/interface/goals/WRR/WRR_cut_ties_to_russia.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_monitor_former_russian_officers"
+		texturefile = "gfx/interface/goals/WRR/WRR_monitor_former_russian_officers.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_crusaders_in_pskov"
+		texturefile = "gfx/interface/goals/WRR/WRR_crusaders_in_pskov.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_break_any_resistance"
+		texturefile = "gfx/interface/goals/WRR/WRR_break_any_resistance.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_establish_sicherheitssektion"
+		texturefile = "gfx/interface/goals/WRR/WRR_establish_sicherheitssektion.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_truly_united_duchy"
+		texturefile = "gfx/interface/goals/WRR/WRR_truly_united_duchy.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_appease_the_masses"
+		texturefile = "gfx/interface/goals/WRR/WRR_appease_the_masses.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_positive_christianity"
+		texturefile = "gfx/interface/goals/WRR/WRR_positive_christianity.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_carrot_and_stick_germanization"
+		texturefile = "gfx/interface/goals/WRR/WRR_carrot_and_stick_germanization.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_save_our_brothers"
+		texturefile = "gfx/interface/goals/WRR/WRR_save_our_brothers.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_host_baltic_security_conference"
+		texturefile = "gfx/interface/goals/WRR/WRR_host_baltic_security_conference.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_bypass_lithuania"
+		texturefile = "gfx/interface/goals/WRR/WRR_bypass_lithuania.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_backstab_prussia"
+		texturefile = "gfx/interface/goals/WRR/WRR_backstab_prussia.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_contacts_with_pagan_socialists"
+		texturefile = "gfx/interface/goals/WRR/WRR_contacts_with_pagan_socialists.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_never_fight_on_two_fronts"
+		texturefile = "gfx/interface/goals/WRR/WRR_never_fight_on_two_fronts.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_reclaim_germanic_patrimony"
+		texturefile = "gfx/interface/goals/WRR/WRR_reclaim_germanic_patrimony.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_tod_in_flandern"
+		texturefile = "gfx/interface/goals/WRR/WRR_tod_in_flandern.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_opposite_direction"
+		texturefile = "gfx/interface/goals/WRR/WRR_opposite_direction.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_infiltrate_peterburg"
+		texturefile = "gfx/interface/goals/WRR/WRR_infiltrate_peterburg.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_prepare_quick_strike"
+		texturefile = "gfx/interface/goals/WRR/WRR_prepare_quick_strike.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_get_scandinavian_help"
+		texturefile = "gfx/interface/goals/WRR/WRR_get_scandinavian_help.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_be_certain_of_belarus"
+		texturefile = "gfx/interface/goals/WRR/WRR_be_certain_of_belarus.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_meshchera_crusade"
+		texturefile = "gfx/interface/goals/WRR/WRR_meshchera_crusade.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_question_of_reichskommissariats"
+		texturefile = "gfx/interface/goals/WRR/WRR_question_of_reichskommissariats.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_ducal_economy"
+		texturefile = "gfx/interface/goals/WRR/WRR_ducal_economy.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_land_grants_to_german_veterans"
+		texturefile = "gfx/interface/goals/WRR/WRR_land_grants_to_german_veterans.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_der_ostarbeiter"
+		texturefile = "gfx/interface/goals/WRR/WRR_der_ostarbeiter.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_subsidize_civilian_industry"
+		texturefile = "gfx/interface/goals/WRR/WRR_subsidize_civilian_industry.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_form_vhtn"
+		texturefile = "gfx/interface/goals/WRR/WRR_form_vhtn.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_entrench_corporatism"
+		texturefile = "gfx/interface/goals/WRR/WRR_entrench_corporatism.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_prepare_for_total_war"
+		texturefile = "gfx/interface/goals/WRR/WRR_prepare_for_total_war.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_baltic_german_military"
+		texturefile = "gfx/interface/goals/WRR/WRR_baltic_german_military.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_balanced_ground_army"
+		texturefile = "gfx/interface/goals/WRR/WRR_balanced_ground_army.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_paratroopers_and_air_doctrine"
+		texturefile = "gfx/interface/goals/WRR/WRR_paratroopers_and_air_doctrine.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_form_elite_osel_marines"
+		texturefile = "gfx/interface/goals/WRR/WRR_form_elite_osel_marines.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_discuss_naval_doctrine"
+		texturefile = "gfx/interface/goals/WRR/WRR_discuss_naval_doctrine.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_aircraft_carrier_terra_mariana"
+		texturefile = "gfx/interface/goals/WRR/WRR_aircraft_carrier_terra_mariana.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_expand_military_industry"
+		texturefile = "gfx/interface/goals/WRR/WRR_expand_military_industry.tga"
+	}
+	SpriteType = {
+		name = "GFX_goal_WRR_rosenbergs_germania"
+		texturefile = "gfx/interface/goals/WRR/WRR_rosenbergs_germania.tga"
+	}
+}

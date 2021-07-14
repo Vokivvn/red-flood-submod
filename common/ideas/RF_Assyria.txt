@@ -1,0 +1,406 @@
+ideas = {
+	country = {
+		ASY_dominance_of_the_assyrian_church_of_the_east_1 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					consumer_goods_factor = 0.05
+				}
+				picture = ASY_assyrian_church
+		}
+		ASY_dominance_of_the_assyrian_church_of_the_east_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					despotism_drift = 0.05
+				}
+				picture = ASY_assyrian_church
+		}
+		ASY_dominance_of_the_assyrian_church_of_the_east_3 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					research_speed_factor = 0.05
+				}
+				picture = ASY_assyrian_church
+		}
+		ASY_dominance_of_the_assyrian_church_of_the_east_4 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					despotism_drift = 0.05
+					research_speed_factor = 0.05
+				}
+				picture = ASY_assyrian_church
+		}
+		ASY_dominance_of_the_assyrian_church_of_the_east_5 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					conservatism_drift = 0.05
+					research_speed_factor = 0.05
+				}
+				picture = ASY_assyrian_church
+		}
+		ASY_veterans_of_the_caucasian_volunteer_army_1 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					training_time_army_factor = -0.1
+				}
+				picture = ASY_caucasian_volunteer
+		}
+		ASY_veterans_of_the_caucasian_volunteer_army_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					training_time_army_factor = -0.15
+					army_core_attack_factor = 0.1
+					army_core_defence_factor = 0.1
+					production_factory_max_efficiency_factor = 0.03
+				}
+				picture = ASY_caucasian_volunteer
+		}
+		ASY_veterans_of_the_caucasian_volunteer_army_3 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					training_time_army_factor = -0.15
+					conscription = 0.04
+				}
+				picture = ASY_caucasian_volunteer
+		}
+		ASY_veterans_of_the_caucasian_volunteer_army_4 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					training_time_army_factor = -0.2
+					conscription = 0.04
+					army_core_attack_factor = 0.1
+					army_core_defence_factor = 0.1
+					production_factory_max_efficiency_factor = 0.03
+				}
+				picture = ASY_caucasian_volunteer
+		}
+		ASY_secular_state = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					research_speed_factor = 0.1
+					conservatism_drift = 0.05
+					social_democratism_drift = 0.05
+					revisionist_socialism_drift = 0.05
+				}
+				picture = ASY_secular
+		}
+		ASY_gsa_reforms = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+					revisionist_socialism_drift = 0.05
+				}
+				picture = ASY_reforms
+		}
+		ASY_tax_reform_1 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					consumer_goods_factor = -0.05
+				}
+				picture = ASY_tax_reform
+		}
+		ASY_tax_reform_2 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				targeted_modifier = { tag = RUS  license_purchase_cost = -0.5 }
+				modifier = {
+					consumer_goods_factor = -0.05
+					trade_opinion_factor = 0.1
+				}
+				picture = ASY_tax_reform
+		}
+		ASY_tax_reform_3 = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				targeted_modifier = { tag = ENG  license_purchase_cost = -0.5 }
+				modifier = {
+					consumer_goods_factor = -0.05
+					trade_opinion_factor = 0.1
+				}
+				picture = ASY_tax_reform
+		}
+		ASY_press_censorship = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					conservatism_drift = 0.05
+				}
+				picture = ASY_censorship
+		}
+		ASY_regular_army = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					conscription = 0.02
+					army_org_factor = 0.2
+				}
+				picture = ASY_regular_army
+		}
+		ASY_assyrian_repatriation = {
+			removal_cost = -1
+				allowed = {
+					original_tag = ASY
+				}
+				modifier = {
+					MONTHLY_POPULATION = 0.1
+					political_power_factor = 0.05
+				}
+				picture = ASY_repatriation
+		}
+	}
+	head_of_government = {
+		ASY_benyamin_xix_hog = {
+			#picture = FRA_georges_bataille
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_government = despotism
+				has_country_leader = {
+					name = "Benyamin XIX Shimun"
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		ASY_shimun_xxi_hog = {
+			#picture = FRA_georges_bataille
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_government = despotism
+				has_country_leader = {
+					name = "Shimun XXI Eshai"
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_spiritual_leader
+				head_of_government
+			}
+		}
+		ASY_yusuf_malek_hog = {
+			#picture = FRA_georges_bataille
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_government = conservatism
+				has_country_leader = {
+					name = "Yusuf Malek"
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_pragmatic_statesman
+				head_of_government
+			}
+		}
+		ASY_freydun_atturaya_hog = {
+			#picture = FRA_georges_bataille
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				OR = {
+					has_government = social_democratism
+					has_government = revisionist_socialism
+				}
+				has_country_leader = {
+					name = "Freydun Atturaya"
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_ambitious_union_boss
+				head_of_government
+			}
+		}
+		ASY_nikolai_baratov_hog = {
+			#picture = FRA_georges_bataille
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+				has_government = despotism
+				has_country_leader = {
+					name = "Nikolai Baratov"
+					ruling_only = yes
+				}
+			}
+			traits = {
+				hog_old_general
+				head_of_government
+			}
+		}
+	}
+	foreign_minister = {
+		ASY_nikolai_yudenich_for = {
+			#picture = FRA_abel_bonnard
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+			}
+			traits = {
+				for_general_staffer
+				foreign_minister
+			}
+		}
+	}
+	economy_minister = {
+		ASY_freydun_atturaya_eco = {
+			#picture = FRA_hubert_lagardelle
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+			}
+			traits = { 
+			    eco_mixed_economy
+				economy_minister
+			}
+		}
+	}
+	security_minister = {
+		ASY_shimun_xxi_sec = {
+			#picture = FRA_marcel_bucard
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+			}
+			traits = { 
+				sec_health_and_safety
+				security_minister
+			}
+		}
+	}
+	head_of_intel = {
+		ASY_agha_petros_int = {
+			#picture = FRA_Xavier_Vallat
+			allowed = {
+				original_tag = ASY
+			}
+			available = {
+			}
+			traits = { 
+				int_dismal_enigma
+				head_of_intel
+			}
+		}
+	}
+	chief_of_staff = {
+		ASY_nikolai_baratov = {
+			#picture = FRA_francois_darlan
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { cos_school_of_psychology }
+		}
+		ASY_agha_petros_cos = {
+			#picture = FRA_marcel_deat
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { cos_school_of_mass_combat }
+		}
+	}
+	chief_of_army = {
+		ASY_nikolai_yudenich_coa = {
+			#picture = FRA_edgar_puaud
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { carm_doctrine_of_autonomy }
+		}
+		ASY_agha_petros_coa = {
+			#picture = FRA_neven_henaff
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { carm_elastic_defence_doctrine }
+		}
+	}
+	chief_of_navy = {
+		ASY_bureau_of_patrol_boats = {
+			#picture = FRA_eugene_deloncle
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { cnav_base_control_doctrine }
+		}
+	}
+	chief_of_air_force = {
+		ASY_ministry_of_aviation = {
+			#picture = FRA_eugene_deloncle
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { cair_air_superiority_doctrine }
+		}
+	}
+	theorist = {
+		ASY_nikolai_yudenich_the = {
+			#picture = FRA_eugene_deloncle
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { mass_assault_theorist }
+		}
+		ASY_agha_petros_the = {
+			#picture = FRA_eugene_deloncle
+			allowed = {
+				original_tag = ASY
+			}
+			traits = { mobile_warfare_theorist }
+		}
+	}
+}

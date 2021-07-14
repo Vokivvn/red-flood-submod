@@ -1,0 +1,71 @@
+add_namespace = finland_border_conflict
+
+country_event = {
+	id = finland_border_conflict.1
+	title = finland_border_conflict.1.t
+	desc = finland_border_conflict.1.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = finland_border_conflict.1.a
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+				producer = RUS
+			}
+	}
+}
+country_event = {
+	id = finland_border_conflict.2
+	title = finland_border_conflict.2.t
+	desc = finland_border_conflict.2.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = finland_border_conflict.2.a
+		add_political_power = -50
+		add_war_support = -0.05
+	}
+}
+country_event = {
+	id = finland_border_conflict.3
+	title = finland_border_conflict.3.t
+	desc = finland_border_conflict.3.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = finland_border_conflict.2.a
+		add_political_power = -50
+	}
+}
+country_event = {
+	id = finland_border_conflict.4
+	title = finland_border_conflict.4.t
+	desc = finland_border_conflict.4.desc
+	#picture = GFX_report_event_thecat
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = finland_border_conflict.4.a
+		add_political_power = 50
+		transfer_state = 722
+		transfer_state = 147
+		transfer_state = 216
+			722 = {
+				add_core_of = FIR
+			}
+			147 = {
+				add_core_of = FIN
+			}
+			216 = {
+				add_core_of = FIN
+			}
+	}
+}

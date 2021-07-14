@@ -1,0 +1,121 @@
+##### Division Templates #####
+division_template = {
+	name = "Strilets'ka Dyviziya"			# Rifle Division
+	division_names_group = UKR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co
+		artillery = { x = 0 y = 1 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Kavaleriys'ka Dyviziya"	# Cavarly Division
+	division_names_group = UKR_CAV_01
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+##### OOB #####
+units = {
+	division = {
+		name = "1sha Turkestans'ka Strilets'ka Dyviziya" #(HQ-Verny)
+		location = 1591
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2ha Turkestans'ka Strilets'ka Dyviziya" #(HQ-Turkestan)
+		location = 10508
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "4ta Turkestans'ka Strilets'ka Dyviziya" #(HQ-Verny)
+		location = 1591
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6ta Turkestans'ka Strilets'ka Dyviziya" #(HQ-Przhevalsk)
+		location = 4768
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1sha Turkestans'ka Kozacha Bryhada" #(HQ-Verny)
+		location = 1591
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Sybirs'ka Kozacha Bryhada" #(HQ-Kokshetau)
+		location = 1662
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "1sha Strilets'ka Dyviziya" #(HQ-Semipalatinsk)
+		location = 10584
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2ha Strilets'ka Dyviziya" #(HQ-Omsk)
+		location = 10696
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Chervonopraporna Udarna Dyviziya" #(HQ-Akmolinsk)
+		location = 4333
+		division_template = "Strilets'ka Dyviziya"
+		start_experience_factor = 0.7
+	}
+	division = {
+		name = "Sirozhupanna Kozacha Dyviziya" #(HQ-Omsk)
+		location = 10696
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Dobrovol'cha Syniozhupanna Kozacha Dyviziya" #(HQ-Akmolinsk)
+		location = 4333
+		division_template = "Kavaleriys'ka Dyviziya"
+		start_experience_factor = 0.3
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+		}
+		requested_factories = 1
+		progress = 0.82
+		efficiency = 100
+	}
+}

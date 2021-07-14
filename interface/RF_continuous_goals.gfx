@@ -1,0 +1,34 @@
+spriteTypes = {
+	SpriteType = { 
+	name = "GFX_focus_continuous_aircraft" 
+	texturefile = "gfx/interface/goals/continuous/aircraft.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_construct" 
+	texturefile = "gfx/interface/goals/continuous/construct.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_naval_production" 
+	texturefile = "gfx/interface/goals/continuous/naval_production.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_raise_autonomy" 
+	texturefile = "gfx/interface/goals/continuous/raise_autonomy.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_repair" 
+	texturefile = "gfx/interface/goals/continuous/repair.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_restrict_freedom" 
+	texturefile = "gfx/interface/goals/continuous/restrict_freedom.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_suppression" 
+	texturefile = "gfx/interface/goals/continuous/suppression.tga" 
+	}
+	SpriteType = { 
+	name = "GFX_focus_continuous_training" 
+	texturefile = "gfx/interface/goals/continuous/training.tga" 
+	}
+}

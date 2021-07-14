@@ -1,0 +1,12 @@
+focus_tree = {
+	id = FIU_marinetti
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = FIU
+		}
+	}
+	continuous_focus_position = { x = 50 y = 3000 }
+	shared_focus = FIU_The_Engine_of_Man
+}

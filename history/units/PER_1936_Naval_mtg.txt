@@ -1,0 +1,24 @@
+﻿units = {
+	##### NAVAL UNITS #####
+	### Persian FLEET ###			
+	fleet = {
+		name = "Persian Gulf Command"
+		naval_base = 12832 # ahvaz
+		task_force = {
+			name = "Persian Fleet"
+			location = 12832 # ahvaz
+			### 4th Destroyer Flotilla
+			ship = { name = "HMS Duncan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }			
+			# Destroyer Division 7
+			ship = { name = "HMS Decoy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }			# to RCN as Kootenay, 1943
+			ship = { name = "HMS Defender" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }
+			ship = { name = "HMS Duchess" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }	
+			ship = { name = "HMS Delight" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }			
+			# Destroyer Division 8
+			ship = { name = "HMS Dainty" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }	
+			ship = { name = "HMS Daring" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }	
+			ship = { name = "HMS Diamond" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }	
+			ship = { name = "HMS Diana" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = PER version_name = "A/B/C/D Class" } } }			# to RCN as Margaree, 1940	
+		}							
+	}
+}

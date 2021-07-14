@@ -1,0 +1,128 @@
+France_druidist = {
+	name = "France Druidist Plan"
+	desc = "Celtic France"
+
+	enable = {
+		original_tag = FRA
+		OR = {
+			has_game_rule = {
+				rule = FRA_ai_route
+				option = DRUIDISTS
+			}
+			has_country_flag = FRA_ai_path_3
+		}
+	}
+	abort = {
+	
+	}
+
+	ai_national_focuses = {
+		#Highest Priority first
+		FRA_adventure_in_spain
+		FRA_artistic_state
+		FRA_howling_with_wolves
+		FRA_celtic_state
+		FRA_full_speed_world
+		FRA_rattachisme
+		FRA_reconquest_of_the_forests
+		FRA_igne_natura
+		FRA_hurray_for_greenshirts
+		FRA_compromise_with_dorgeres
+		FRA_victorious_unions
+		FRA_natural_catholicism
+		FRA_le_conseil_grand_du_peuple_francais_libre
+		FRA_le_pain_le_nature_la_terre
+		FRA_happiness_for_everybody
+		FRA_burn_old_testament_influence
+		FRA_reject_private_property
+		FRA_we_own_everything
+		FRA_unite_with_nature
+		FRA_establish_druidist_order
+		FRA_old_gods
+		FRA_hate_the_cities
+		FRA_archeofuturism
+		FRA_decentralise_industry
+		FRA_french_factories
+		FRA_tribal_democracy
+		FRA_end_catholic_dominion
+		FRA_la_fourrure
+		FRA_spiritual_revolution
+		FRA_new_spirit
+		FRA_question_status_quo
+		FRA_against_councilism
+		FRA_roman_pantheon
+		FRA_give_them_the_voice
+		FRA_bulgarian_coup
+		FRA_hyperborean_mythos
+		FRA_side_with_true_germany
+		FRA_culture_of_the_north
+		FRA_return_to_the_tradition
+		FRA_support_finland
+		FRA_arms_to_mayakovsky
+		FRA_opportunities_in_india
+		FRA_deal_with_anglo_devil
+		FRA_end_communism
+	}
+
+	research = {
+		infantry_weapons = 50.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+	}
+
+	ideas = {
+
+	}
+
+	traits = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = 10
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+FRA_minor_allies = { #used to make minor European nations like France more
+	name = "Minor French Allies"
+
+	enable = {
+		OR = {
+			has_government = accelerationism
+			accelerationism > 0.5
+		}
+		is_in_faction = no
+		FRA = {
+			has_government = accelerationism
+		}
+	}
+	abort = {
+		FRA = {
+			NOT = {
+				has_government = accelerationism
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "FRA"
+		value = 100
+	}
+}

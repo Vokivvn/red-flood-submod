@@ -1,0 +1,47 @@
+﻿capital = 325
+
+oob = "YUN_1936"
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = despotism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	vanguard_socialism = 3
+	libertarian_marxism = 25
+	revolutionary_anarchism = 0
+	revisionist_socialism = 0
+	social_democratism = 2
+	liberalism = 6
+	conservatism = 2
+	right_authoritarianism = 30
+	despotism = 0
+	reactionism = 5
+	accelerationism = 27
+}
+add_ideas = CHI_shared_economy
+create_country_leader = {
+	name = "Tang Jiyao"
+	desc = ""
+	picture = "gfx/leaders/YUN/Portrait_YUN_Tang_Jiyao.tga"
+	expire = "1965.1.1"
+	ideology = military_dictatorship
+	traits = {
+		#
+	}
+}

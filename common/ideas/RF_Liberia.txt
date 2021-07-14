@@ -1,0 +1,595 @@
+ideas = {
+
+#################
+# Country ideas #
+#################
+
+	country = {
+		LIB_african_migration = {
+			modifier = {
+				stability_weekly = -0.05
+				war_support_factor = -0.2
+				MONTHLY_POPULATION = 3
+			}
+			picture = generic_disjointed_gov
+		}
+		LIB_investors = {
+			modifier = {
+				stability_weekly = 0.01
+				political_power_cost = -0.10
+				consumer_goods_factor = -0.03
+				trade_opinion_factor = 0.20
+			}
+			picture = generic_goods_red_bonus
+		}
+		LIB_international_agreements = {
+			modifier = {
+				stability_weekly = -0.01
+				political_power_cost = -0.15
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.50
+				war_support_weekly = 0.01
+			}
+			picture = generic_spy_intel
+		}
+		LIB_monrovia_agreements = {
+			modifier = {
+				stability_weekly = 0.01
+				conservatism_drift = 0.05
+				war_support_weekly = 0.01
+			}
+			picture = neutrality_idea
+		}
+		LIB_african_liberation = {
+			modifier = {
+			justify_war_goal_time = -0.30
+			army_attack_factor = 0.15
+			conscription = 0.05
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+		LIB_african_migration1 = {
+			modifier = {
+				stability_weekly = 0.02
+				war_support_factor = 0.1
+				accelerationism_drift = 0.03
+				MONTHLY_POPULATION = 3
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+		LIB_PCA = {
+			modifier = {
+				encryption_factor = 2
+				non_core_manpower = 0.20
+				army_defence_factor = 0.10
+				army_org = 0.10
+			}
+			picture = nkvd_2
+		}
+		LIB_forcedlabor = {
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.15
+				stability_factor = -0.10
+			}
+			picture = generic_production_bonus
+		}
+		LIB_new_african_enlightnement = {
+			modifier = {
+				research_speed_factor = 0.10
+				stability_factor = -0.05
+				production_speed_buildings_factor = 0.10
+			}
+			picture = generic_production_bonus
+		}
+		LIB_colonialism = {
+			modifier = {
+				MONTHLY_POPULATION = 1
+				stability_weekly = -0.01
+			}
+			picture = vittoria_mutilata
+		}
+		LIB_monopoly = {
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_infrastructure_factor = 0.15
+				stability_weekly = 0.01
+			}
+			picture = generic_goods_red_bonus
+		}
+		
+		LIB_MoPE = {
+			modifier = {
+			encryption_factor = 1
+			}
+			picture = generic_democratic_drift_bonus
+		}
+		LIB_beacon = {
+			modifier = {
+			conservatism_drift = 0.05
+			stability_weekly = 0.05
+			}
+			picture = generic_democratic_drift_bonus
+		}
+		LIB_patriotwelfare = {
+			modifier = {
+			production_speed_infrastructure_factor = 0.07
+			consumer_goods_factor = 0.02
+			political_power_cost = 0.02
+			}
+			picture = generic_goods_red_bonus
+		}
+		LIB_dissenter_labor = {
+			modifier = {
+			production_speed_infrastructure_factor = 0.07
+			consumer_goods_factor = -0.04
+			political_power_cost = -0.05
+			stability_factor = -0.05
+			}
+			picture = generic_goods_red_bonus
+		}
+		LIB_antipartisans = {
+			modifier = {
+			right_authoritarianism_drift = 0.02
+			stability_weekly = 0.02
+			foreign_subversive_activites = 0.20
+			root_out_resistance_effectiveness_factor = 0.30
+			}
+			picture = generic_spy_coup
+		}
+		LIB_destroying_the_nation = {
+			modifier = {
+			stability_factor = -0.10
+			right_authoritarianism_drift = -0.01
+			political_power_cost = 0.20
+			}
+			picture = anti_soviet_pact
+		}
+		WAF_brit_neutrality = {
+			modifier = {
+			ai_call_ally_desire_factor = -9999
+			stability_factor = 0.10
+			}
+			picture = neutrality_idea
+		}
+###########
+#MINISTERS#
+###########
+
+		}
+	head_of_government = {
+		LIB_allen_yancy_hog = {
+			picture = GFX_idea_LIB_allen_yancy_hog
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_corporate_suit
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		LIB_amy_jacques_garvey_hog = {
+			picture = GFX_idea_LIB_amy_jacques_garvey_hog
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_flamboyant_tough_guy
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_george_weston_hog = {
+			picture = GFX_idea_LIB_george_weston_hog
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_smiling_oilman
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		LIB_cyril_briggs_hog = {
+			picture = GFX_idea_LIB_cyril_briggs_hog
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_government
+				hog_silent_workhorse
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+	}
+	economy_minister = {
+		LIB_william_henry_ferris_eco = {
+			picture = GFX_idea_LIB_william_henry_ferris_eco
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_administrative_genius
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_elizabeth_parke_firestone_eco = {
+			picture = GFX_idea_LIB_elizabeth_parke_firestone_eco
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_laissez_faire_capitalist
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		LIB_william_tubman_eco = {
+			picture = GFX_idea_LIB_william_tubman_eco
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_railway_magnate
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		LIB_otto_huiswoud_eco = {
+			picture = GFX_idea_LIB_otto_huiswoud_eco
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				economy_minister
+				eco_planned_economy_proponent
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+	}
+	foreign_minister = {
+		LIB_robert_lincoln_poston_for = {
+			picture = GFX_idea_LIB_robert_lincoln_poston_for
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_ideological_crusader
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_martha_firestone_ford_for = {
+			picture = GFX_idea_LIB_martha_firestone_ford_for
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_great_compromiser
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		LIB_ralph_de_boisierre_for = {
+			picture = GFX_idea_LIB_ralph_de_boisierre_for
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_the_cloak_n_dagger_schemer
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		LIB_momolu_massaquoi_for = {
+			picture = GFX_idea_LIB_momolu_massaquoi_for
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				foreign_minister
+				for_biased_intellectual
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+	}
+	security_minister = {
+		LIB_grand_lion_inter = {
+			picture = GFX_idea_LIB_grand_lion
+			allowed = {
+			has_country_flag = LIB_grandlion
+			original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_duse_mohammad_ali_sec = {
+			picture = GFX_idea_LIB_duse_mohammad_ali_sec
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_secret_police_chief
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_elizabeth_parke_firestone_sec = {
+			picture = GFX_idea_LIB_elizabeth_parke_firestone_eco
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_crime_fighter
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		LIB_cyril_lionel_robert_james_sec = {
+			picture = GFX_idea_LIB_cyril_lionel_robert_james_sec
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_efficient_sociopath
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		LIB_george_henry_andrews_sec = {
+			picture = GFX_idea_LIB_george_henry_andrews_sec
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				security_minister
+				sec_health_and_safety
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+		
+	}
+	head_of_intel = {
+		LIB_maymie_de_mena_int = {
+			picture = GFX_idea_LIB_maymie_de_mena_int
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_political_specialist
+			}
+			available = {
+				has_government = accelerationism
+			}
+			cancel = { 
+				NOT = {
+					has_government = accelerationism
+				}
+			}
+		}
+		LIB_benson_ford_sr_int = {
+			picture = GFX_idea_LIB_benson_ford_sr_int
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_industrial_specialist
+			}
+			available = {
+				has_government = right_authoritarianism
+			}
+			cancel = { 
+				NOT = {
+					has_government = right_authoritarianism
+				}
+			}
+		}
+		LIB_claudia_jones_int = {
+			picture = GFX_idea_LIB_claudia_jones_int
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_dismal_enigma
+			}
+			available = {
+				has_government = vanguard_socialism
+			}
+			cancel = { 
+				NOT = {
+					has_government = vanguard_socialism
+				}
+			}
+		}
+		LIB_james_skirving_smith_jr_int = {
+			picture = GFX_idea_LIB_james_skirving_smith_jr_int
+			allowed = {
+			original_tag = LIB
+			}
+			traits = {
+				head_of_intel
+				int_logistics_specialist
+			}
+			available = {
+				has_government = conservatism
+			}
+			cancel = { 
+				NOT = {
+					has_government = conservatism
+				}
+			}
+		}
+	}
+	industrial_concern = {
+		Hampton_Heaven_Industries = {
+			allowed = {
+				original_tag = LIB
+			}
+			available = {
+				original_tag = LIB
+			}
+			traits = {
+				industrial_manufacturer
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.07
+			}
+			equipment_bonus = {
+				infantry_weapons = {
+					reliability = 0.01
+				}
+			}
+			research_bonus = {
+			
+			}
+		}
+	}
+	weapons_manufacturer = {
+		designer = yes
+		Liberian_Arms_Company = {
+			allowed = {
+				original_tag = LIB
+			}
+			available = {
+				original_tag = LIB
+			}
+			traits = {
+				artillery_producer_mass_1
+			}
+			modifier = {
+				
+			}
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+}

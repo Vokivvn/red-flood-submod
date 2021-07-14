@@ -1,0 +1,1903 @@
+add_namespace = steppe
+
+# All is well in Akmolinsk #
+country_event = {
+	id = steppe.1
+	title = steppe.1.t
+	desc = steppe.1.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+
+		add_to_variable = {
+			var = STE_influence_points_urban_kornilov
+			value = 3
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_kornilov
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_kornilov
+			value = 1
+		}
+
+		add_to_variable = {
+			var = STE_influence_points_urban_ukrainian
+			value = 2
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_ukrainian
+			value = 3
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_ukrainian
+			value = 1
+		}
+
+		add_to_variable = {
+			var = STE_influence_points_urban_alash
+			value = 2
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_alash
+			value = 2
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_alash
+			value = 1
+		}
+
+		add_to_variable = {
+			var = STE_influence_points_urban_cossack
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_cossack
+			value = 2
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_cossack
+			value = 2
+		}
+
+		add_to_variable = {
+			var = STE_influence_points_urban_nomads
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_nomads
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_nomads
+			value = 3
+		}
+	}
+
+	option = {
+		name = steppe.1.a
+		hidden_effect = {
+			country_event = {
+				id = steppe.2
+				days = 7
+			}
+		}
+		set_country_flag = STE_factionalism_visible
+	}
+}
+
+# Border Clash #
+country_event = {
+	id = steppe.2
+	title = steppe.2.t
+	desc = steppe.2.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.2.a
+	}
+}
+
+# Slavic but not Russian? #
+country_event = {
+	id = steppe.3
+	title = steppe.3.t
+	desc = steppe.3.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.3.a
+		add_stability = -0.05
+		add_political_power = 25
+	}
+	option = {
+		name = steppe.3.b
+		add_stability = 0.07
+		add_political_power = -50
+	}
+}
+
+# Offer to Nomads #
+country_event = {
+	id = steppe.4
+	title = steppe.4.t
+	desc = steppe.4.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.4.a
+	}
+}
+
+# 1936 Budget #
+country_event = {
+	id = steppe.5
+	title = steppe.5.t
+	desc = steppe.5.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.5.a
+		586 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 14960
+		}
+		842 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 15040
+		}
+	}
+	option = {
+		name = steppe.5.b
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 14050
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 15950
+		}
+	}	
+	option = {
+		name = steppe.5.c
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 16020
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_manpower = 13980
+		}
+	}
+	option = {
+		name = steppe.5.d
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+# Alone in the Dark #
+country_event = {
+	id = steppe.6
+	title = steppe.6.t
+	desc = steppe.6.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.6.a
+	}
+}
+
+# Deciding Faction #
+country_event = {
+	id = steppe.7
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		if = { #Kornilov
+			limit = {
+				check_variable = {
+					var = STE_influence_ukrainian_total
+					value = 7
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_alash_total
+					value = 7
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_kornilov_total
+					value = 7
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_cossack_total
+					value = 7
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_nomads_total
+					value = 7
+					compare = less_than
+				}
+			}
+			set_country_flag = STE_kornilov_forever_unlock
+		}
+
+		else_if = { #Ukrainians
+			limit = {
+				check_variable = {
+					var = STE_influence_ukrainian_total
+					value = 7
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = STE_gery_ukraine_unlock
+		}
+
+		else_if = { #Alash
+			limit = {
+				check_variable = {
+					var = STE_influence_alash_total
+					value = 7
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = STE_alash_republic_unlock
+		}
+
+		else_if = { #Gulidov
+			limit = {
+				check_variable = {
+					var = STE_influence_kornilov_total
+					value = 7
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = STE_gulidov_coup_unlock
+		}
+
+		else_if = { #Cossacks
+			limit = {
+				check_variable = {
+					var = STE_influence_cossack_total
+					value = 7
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = STE_cossack_host_unlock
+		}
+		
+		else_if = { #Nomads
+			limit = {
+				check_variable = {
+					var = STE_influence_nomads_total
+					value = 7
+					compare = greater_than_or_equals
+				}
+			}
+			set_country_flag = STE_kirghiz_khanate_unlock
+		}
+	}
+}
+
+# The Scarlet Revolution #
+country_event = {
+	id = steppe.8
+	title = steppe.8.t
+	desc = steppe.8.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.8.a
+		load_focus_tree = {
+			tree = RF_Steppe_Ukrainian
+			keep_completed = yes
+		}
+	}
+}
+
+# Birth of Alash State #
+country_event = {
+	id = steppe.9
+	title = steppe.9.t
+	desc = steppe.9.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.9.a
+		load_focus_tree = {
+			tree = RF_Steppe_Alash
+			keep_completed = yes
+		}
+	}
+}
+
+# All is well, once more and forever #
+country_event = {
+	id = steppe.10
+	title = steppe.10.t
+	desc = steppe.10.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.10.a
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.5
+		}
+		add_war_support = 0.1
+	}
+}
+
+# Gulidov's Coup #
+country_event = {
+	id = steppe.11
+	title = steppe.11.t
+	desc = steppe.11.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.11.a
+		load_focus_tree = {
+			tree = RF_Steppe_Division
+			keep_completed = yes
+		}
+	}
+}
+
+# Another Border Clash - Cossack Side #
+country_event = {
+	id = steppe.12
+	title = steppe.12.t
+	desc = steppe.12.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.12.a
+		load_focus_tree = {
+			tree = RF_Steppe_Cossacks
+			keep_completed = yes
+		}
+		set_cosmetic_tag = "STE_cossack"
+		set_party_name = { 
+			ideology = despotism
+			name = STE_despotism_party_dynamic
+			long_name = STE_despotism_party_dynamic_long 
+		}
+		create_country_leader = {
+			name = "Boris Annenkov"
+			#desc = ""
+			picture = "Portrait_Boris_Annenkov.dds"
+			expire = "1965.1.1"
+			ideology = military_dictatorship
+			traits = {
+			}
+		}
+		hidden_effect = {
+			set_popularities = {
+				revolutionary_anarchism = 15
+				revisionist_socialism = 15
+				social_democratism = 15
+				right_authoritarianism = 15
+				despotism = 40
+			}
+			MO6 = {
+				add_state_core = 571
+				add_state_core = 588
+				add_state_core = 590
+				add_state_core = 583
+				add_state_core = 404
+				add_state_core = 589
+				add_state_core = 842
+				add_state_core = 586
+				add_state_core = 794
+				transfer_state = 794
+				transfer_state = 586
+				set_politics = {
+					ruling_party = reactionism
+				}
+				set_popularities  = {
+					reactionism = 100
+				}
+				load_oob = MO6_1936
+				declare_war_on = {
+				    target = STE
+					type = annex_everything
+				}
+			}
+		}
+		custom_effect_tooltip = "STE_CIVIL_WAR_TOOLTIP_1"
+	}
+}
+
+# Another Border Clash - Nomad Side #
+country_event = {
+	id = steppe.13
+	title = steppe.13.t
+	desc = steppe.13.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.13.a
+		load_focus_tree = {
+			tree = RF_Steppe_Nomads
+			keep_completed = yes
+		}
+		set_politics = {
+			ruling_party = reactionism
+		}
+		add_popularity = {
+			ideology = reactionism
+			popularity = 0.1
+		}
+		hidden_effect = {
+			MO6 = {
+				add_state_core = 571
+				add_state_core = 588
+				add_state_core = 590
+				add_state_core = 583
+				add_state_core = 404
+				add_state_core = 589
+				add_state_core = 842
+				add_state_core = 586
+				add_state_core = 794
+				transfer_state = 794
+				transfer_state = 586
+				set_popularities  = {
+					revolutionary_anarchism = 20
+					right_authoritarianism = 20
+					despotism = 60
+				}
+				load_oob = MO6_1936
+				declare_war_on = {
+				    target = STE
+					type = annex_everything
+				}
+			}
+		}
+		custom_effect_tooltip = "STE_CIVIL_WAR_TOOLTIP_2"
+	}
+}
+
+# Crown an Emperor #
+country_event = {
+	id = steppe.14
+	title = steppe.14.t
+	desc = steppe.14.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Crown Rostislav Romanov
+		name = steppe.14.a
+		create_country_leader = {
+			name = "Rostislav I"
+			#desc = ""
+			picture = "Portrait_STE_Rostislav_Romanov.tga"
+			expire = "1965.1.1"
+			ideology = absolute_monarchy
+			traits = {
+			}
+		}
+		set_politics = {
+			ruling_party = despotism
+		}
+		add_popularity = {
+			ideology = despotism
+			popularity = 0.8
+		}
+		add_ideas = SRU_league_of_russian_culture
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.70
+					days = 1
+				}
+			}
+		}
+	}
+	option = { # Eternal Regent Gulidov
+		name = steppe.14.b
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = news.70
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+# Russia Annex Event #
+country_event = {
+	id = steppe.69
+	title = steppe.69.t
+	hidden = yes
+	fire_only_once = no
+	is_triggered_only = yes
+
+	immediate = {
+		STE = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		annex_country = {
+			target = STE
+			transfer_troops = yes
+		}
+		every_state = {
+			limit = {
+				is_core_of = STE
+			}
+			add_core_of = ROOT
+		}
+	}
+}
+
+# Ukraine Annex Event #
+country_event = {
+	id = steppe.1991
+	title = steppe.1991.t
+	hidden = yes
+	fire_only_once = yes
+	
+	trigger = {
+	    original_tag = STE
+		STE = {
+				has_government = revisionist_socialism
+				exists = yes
+			        }
+		AND = {
+			OR = {
+				AND = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = UKR
+					}
+				}
+				DKB = { exists = no }
+				}
+				AND = {
+				any_owned_state = {
+					any_neighbor_state = {
+						is_owned_and_controlled_by = DKB
+					}
+				}
+				DKB = { is_subject_of = UKR }
+				}
+			}
+			OR = {
+			UKR = {
+				OR = {
+					has_full_control_of_state = 406
+					has_full_control_of_state = 402
+					has_full_control_of_state = 582
+					has_full_control_of_state = 652
+					has_full_control_of_state = 572
+					has_full_control_of_state = 732
+				}
+			}
+			STE = {
+				OR = {
+					has_full_control_of_state = 406
+					has_full_control_of_state = 402
+					has_full_control_of_state = 582
+					has_full_control_of_state = 652
+					has_full_control_of_state = 572
+					has_full_control_of_state = 732
+				}
+			}
+			DKB = {
+				OR = {
+					has_full_control_of_state = 406
+					has_full_control_of_state = 402
+					has_full_control_of_state = 582
+					has_full_control_of_state = 652
+					has_full_control_of_state = 572
+					has_full_control_of_state = 732
+				}
+			}
+			}
+			ORE = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
+			}
+		}
+	}
+
+
+	option = {
+name = steppe.1991.a
+			if = {
+				limit = {
+				    NOT = {
+					DKB = {
+				    is_subject_of = UKR
+					has_government = right_authoritarianism
+				    exists = yes
+			        }
+					UKR = {
+							OR = {
+								has_government = social_democratism
+								has_government = liberalism
+								has_government = conservatism
+								has_government = revisionist_socialism
+							}
+					}
+					}
+				}
+				STE = {
+				every_unit_leader = {
+				set_nationality = UKR
+				}
+				}
+				UKR = {
+					change_tag_from = STE
+					annex_country = {
+					target = STE
+					transfer_troops = yes
+					}
+					if = {
+						limit = {
+							UKR = {
+								has_government = accelerationism
+							}
+						}
+						add_popularity = {
+							ideology = accelerationism
+							popularity = 0.05
+						}
+					}
+					else = {
+						add_popularity = {
+							ideology = revisionist_socialism
+							popularity = 0.05
+						}
+					}
+				}
+				every_state = {
+				limit = {
+				is_core_of = STE
+				}
+				add_core_of = UKR
+				}
+			}
+			else = {
+				UKR = {
+					puppet = STE
+				}
+				hidden_effect = {
+					STE = {
+						set_politics = {
+							ruling_party = revisionist_socialism
+						}
+						set_popularities = {
+							revisionist_socialism = 40
+							social_democratism = 20
+							liberalism = 20
+							conservatism = 20
+						}
+					}
+				}
+			}
+		}
+}
+
+
+
+########## FACTIONALISM EVENTS ##########
+
+country_event = {
+	id = steppe.100
+	title = steppe.100.t
+	desc = steppe.100.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.100.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_urban_kornilov
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_kornilov
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.100.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban_kornilov
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_kornilov
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.100.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.101
+	title = steppe.101.t
+	desc = steppe.101.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.101.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_rular_kornilov
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_kornilov
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.101.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular_kornilov
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_kornilov
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.101.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.102
+	title = steppe.102.t
+	desc = steppe.102.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.102.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_steppe_kornilov
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_kornilov
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.102.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe_kornilov
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_kornilov
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.102.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+
+country_event = {
+	id = steppe.103
+	title = steppe.103.t
+	desc = steppe.103.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.103.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_urban_ukrainian
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_ukrainian
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.103.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban_ukrainian
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_ukrainian
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.103.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.104
+	title = steppe.104.t
+	desc = steppe.104.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.104.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_rular_ukrainian
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_ukrainian
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.104.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular_ukrainian
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_ukrainian
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.104.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.105
+	title = steppe.105.t
+	desc = steppe.105.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.105.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_steppe_ukrainian
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_ukrainian
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.105.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe_ukrainian
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_ukrainian
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.105.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+
+country_event = {
+	id = steppe.106
+	title = steppe.106.t
+	desc = steppe.106.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.106.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_urban_alash
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_alash
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.106.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban_alash
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_alash
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.106.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.107
+	title = steppe.107.t
+	desc = steppe.107.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.107.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_rular_alash
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_alash
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.107.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular_alash
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_alash
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.107.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.108
+	title = steppe.108.t
+	desc = steppe.108.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.108.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_steppe_alash
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_alash
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.108.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe_alash
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_alash
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.108.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+
+country_event = {
+	id = steppe.109
+	title = steppe.109.t
+	desc = steppe.109.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.109.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_urban_cossack
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_cossack
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.109.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban_cossack
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_cossack
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.109.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.110
+	title = steppe.110.t
+	desc = steppe.110.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.110.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_rular_cossack
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_cossack
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.110.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular_cossack
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_cossack
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.110.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.111
+	title = steppe.111.t
+	desc = steppe.111.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.111.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_steppe_cossack
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_cossack
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.111.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe_cossack
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_cossack
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.111.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+
+country_event = {
+	id = steppe.112
+	title = steppe.112.t
+	desc = steppe.112.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.112.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_urban_nomads
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_urban
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_nomads
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.112.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban_nomads
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban_nomads
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_urban
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.112.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_urban
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.113
+	title = steppe.113.t
+	desc = steppe.113.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.113.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_rular_nomads
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_rular
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_nomads
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.113.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular_nomads
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular_nomads
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_rular
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.113.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_rular
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+country_event = {
+	id = steppe.114
+	title = steppe.114.t
+	desc = steppe.114.desc
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.114.a
+		trigger = {
+			AND = {
+				check_variable = {
+					var = STE_influence_points_steppe_nomads
+					value = 3
+					compare = less_than
+				}
+				check_variable = {
+					var = STE_influence_points_steppe
+					value = 1
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_nomads
+			value = 1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = -1
+		}
+	}
+	option = {
+		name = steppe.114.b
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe_nomads
+				value = 1
+				compare = greater_than
+			}
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe_nomads
+			value = -1
+		}
+		add_to_variable = {
+			var = STE_influence_points_steppe
+			value = 1
+		}
+	}
+	option = {
+		name = steppe.114.c
+		trigger = {
+			check_variable = {
+				var = STE_influence_points_steppe
+				value = 0
+				compare = equals
+			}
+		}
+	}
+}
+
+####### DIVISION SPAWN #######
+country_event = {
+	id = steppe.1000
+	hidden = yes
+	fire_only_once = yes
+
+	immediate = {
+		586 = {
+			create_unit = {
+				division = "name = \"1ya Turkestanskaya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 1591
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"4ya Turkestanskaya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 1591
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"6ya Turkestanskaya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 4768
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"1ya Turkestanskaya Kazachya Brigada\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 1591
+				owner = STE
+				id = 1000
+			}
+		}
+		404 = {
+			create_unit = {
+				division = "name = \"2ya Turkestanskaya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 10508
+				owner = STE
+				id = 1000
+			}
+		}
+		571 = {
+			create_unit = {
+				division = "name = \"Sibirskaya Kazachya Brigada\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 1662
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"2ya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 10696
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"Omskaya Kazachya Diviziya\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 10696
+				owner = STE
+				id = 1000
+			}
+		}
+		588 = {
+			create_unit = {
+				division = "name = \"1ya Strelkovaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 10584
+				owner = STE
+				id = 1000
+			}
+		}
+		590 = {
+			create_unit = {
+				division = "name = \"Kornilovskaya Udarnaya Diviziya\" division_template = \"Strelkovaya Diviziya\" start_experience_factor = 0.7"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 4333
+				owner = STE
+				id = 1000
+			}
+			create_unit = {
+				division = "name = \"Dobrovol'cheskaya Kazachya Diviziya\" division_template = \"Kavaleriyskaya Diviziya\" start_experience_factor = 0.3"
+				allow_spawning_on_enemy_provs = yes
+				prioritize_location = 4333
+				owner = STE
+				id = 1000
+			}
+		}
+	}
+}
+
+##### Factionalism Timer #####
+country_event = {
+	id = steppe.999
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = STE_steady_as_she_goes
+				}
+			}
+			unlock_national_focus = STE_review_1935
+			unlock_national_focus = STE_question_peasants_russianess
+			unlock_national_focus = STE_end_triune_nation_policy
+			unlock_national_focus = STE_draft_1936_budget
+			unlock_national_focus = STE_help_nomads_settle_down
+			unlock_national_focus = STE_cooperate_with_orda
+			unlock_national_focus = STE_kornilovs_day_alone
+			complete_national_focus = STE_news_from_european_russia
+			complete_national_focus = STE_steady_as_she_goes
+		}
+		else = {
+		}
+	}
+}
+
+##### Factionalism for AI #####
+country_event = {
+	id = steppe.998
+	title = steppe.998.t
+	desc = steppe.998.desc
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = steppe.998.a
+		set_country_flag = STE_kornilov_forever_unlock
+		ai_chance = {
+			factor = 30
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_KORNILOV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = steppe.998.b
+		set_country_flag = STE_gery_ukraine_unlock
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_GREY_UKRAINE
+				}
+			}
+		}
+	}
+
+	option = {
+		name = steppe.998.c
+		set_country_flag = STE_alash_republic_unlock
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_ALASH
+				}
+			}
+		}
+	}
+
+	option = {
+		name = steppe.998.d
+		set_country_flag = STE_cossack_host_unlock
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_COSSACKS
+				}
+			}
+		}
+	}
+
+	option = {
+		name = steppe.998.e
+		set_country_flag = STE_kirghiz_khanate_unlock
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_NOMADS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = steppe.998.f
+		set_country_flag = STE_gulidov_coup_unlock
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 1000
+				has_game_rule = {
+					rule = STE_ai_route
+					option = STE_DIVISION
+				}
+			}
+		}
+	}
+}

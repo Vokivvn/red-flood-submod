@@ -1,0 +1,50 @@
+﻿division_template = { 
+	name = "Arditi Militia" 
+	division_names_group = ITA_INF_01 
+
+	regiments = { 
+		infantry = { x = 0 y = 0 } 												
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 1 y = 0 } 
+		infantry = { x = 1 y = 1 } 
+	} 
+	support = { 
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 }
+		recon = { x = 0 y = 1 }
+	} 
+}
+units = {
+	division = {
+		location = 3943
+		division_template = "Arditi Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	
+	}
+	division = {
+		location = 11595
+		division_template = "Arditi Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division = {
+		location = 11564
+		division_template = "Arditi Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 6626
+		division_template = "Arditi Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		location = 11564
+		division_template = "Arditi Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}
+	
